@@ -71,7 +71,7 @@ export function SiteHeader({
         </Link>
       </div>
       <nav
-        className="flex gap-3 overflow-x-auto border-t border-cream/5 px-4 py-2 text-xs text-cream/75 md:hidden"
+        className="flex flex-wrap gap-x-3 gap-y-2 border-t border-cream/5 px-4 py-2 text-xs text-cream/75 md:hidden"
         aria-label="Mobile primary"
       >
         {items.map((item) => (
