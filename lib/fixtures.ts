@@ -24,7 +24,7 @@ export const FIXTURES: Fixture[] = [
     homeTeam: "Elche",
     awayTeam: "Real Madrid",
     date: "2026-09-15",
-    // kickoffMadrid omitted — not verified
+    kickoffMadrid: "21:30",
   },
 ];
 
