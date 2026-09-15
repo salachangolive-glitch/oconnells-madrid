@@ -34,7 +34,7 @@ export const FACTS = {
 /** Domain TBD — override with NEXT_PUBLIC_SITE_URL after deploy/auth. */
 export function getSiteUrl(): string {
   const fromEnv = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "");
-  return fromEnv || "https://www.oconnellstmadrid.com";
+  return fromEnv || "https://oconnells-madrid.vercel.app";
 }
 
 export const EN_PATHS = [
