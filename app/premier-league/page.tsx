@@ -14,7 +14,7 @@ export const metadata = buildMetadata({
 
 export default function PremierLeaguePage() {
   return (
-    <PageShell locale="en">
+    <PageShell locale="en" altLangHref="/es/premier-league">
       <PageHero
         eyebrow="Premier League"
         title={`PL screens at ${SITE_NAME}`}

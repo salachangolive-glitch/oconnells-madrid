@@ -25,6 +25,8 @@ const MUST_NOT_DISALLOW = [
   "/es",
   "/es/sports",
   "/es/watch-football-madrid",
+  "/es/premier-league",
+  "/es/champions-league",
   "/es/erasmus",
   "/es/thursday-1-euro-shots",
   "/es/about",

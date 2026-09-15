@@ -52,4 +52,4 @@ Photo slots use the marker **`NEED_REAL_PHOTO`**.
 
 **EN:** `/` `/sports` `/watch-football-madrid` `/premier-league` `/champions-league` `/erasmus` `/thursday-1-euro-shots` `/about` `/location` `/whats-on`
 
-**ES mirrors:** `/es` `/es/sports` `/es/watch-football-madrid` `/es/erasmus` `/es/thursday-1-euro-shots` `/es/about` `/es/location`
+**ES mirrors:** `/es` `/es/sports` `/es/watch-football-madrid` `/es/premier-league` `/es/champions-league` `/es/erasmus` `/es/thursday-1-euro-shots` `/es/about` `/es/location`

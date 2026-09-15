@@ -57,6 +57,14 @@ export default function EsHomePage() {
           >
             Ver fútbol en Madrid
           </Link>
+          {" · "}
+          <Link href="/es/premier-league" className="text-cream underline">
+            Premier League
+          </Link>
+          {" · "}
+          <Link href="/es/champions-league" className="text-cream underline">
+            Champions League
+          </Link>
         </p>
       </Section>
       <Section title="Jueves chupitos €1">

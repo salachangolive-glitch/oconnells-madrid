@@ -3,7 +3,7 @@ import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
 import { PhotoPlaceholder } from "@/components/PhotoPlaceholder";
 import { buildMetadata } from "@/lib/seo";
-import { PHONE_DISPLAY, PHONE_TEL, SITE_NAME } from "@/lib/venue";
+import { MAPS_URL, PHONE_DISPLAY, PHONE_TEL, SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
   title: "What's on — sport & Thursday €1 shots",
@@ -18,12 +18,31 @@ export default function WhatsOnPage() {
       <PageHero
         eyebrow="What's on"
         title={`This week at ${SITE_NAME}`}
-        lead="We keep this page factual: sport on the screens, Thursday €1 shots as the Erasmus priority, and no invented ticketed events or live-music calendar."
+        lead="We keep this page factual: recurring sport and Thursday €1 shots. There is no dated fixture list here — confirm screens on arrival, and follow the Google Business Profile for short updates."
       />
       <PhotoPlaceholder
         label="Night in the pub — NEED_REAL_PHOTO"
         className="mb-10"
       />
+      <Section title="Tonight's screens">
+        <p>
+          No dated kick-off list on this site. If a specific match matters,
+          confirm the screens when you arrive, or call{" "}
+          <a href={PHONE_TEL} className="text-cream underline">
+            {PHONE_DISPLAY}
+          </a>
+          . For short-notice posts, follow the{" "}
+          <a
+            href={MAPS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-cream underline"
+          >
+            Google Business Profile
+          </a>{" "}
+          listing — we do not invent fixtures here.
+        </p>
+      </Section>
       <Section title="Recurring">
         <ul className="list-disc space-y-2 pl-5">
           <li>

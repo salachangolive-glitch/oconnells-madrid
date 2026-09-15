@@ -41,12 +41,16 @@ export default function EsWatchFootballPage() {
           </li>
         </ul>
         <p>
-          <Link href="/es/sports" className="text-cream underline">
-            Deportes
+          <Link href="/es/premier-league" className="text-cream underline">
+            Premier League
           </Link>
           {" · "}
-          <Link href="/es/location" className="text-cream underline">
-            Ubicación
+          <Link href="/es/champions-league" className="text-cream underline">
+            Champions League
+          </Link>
+          {" · "}
+          <Link href="/es/sports" className="text-cream underline">
+            Deportes
           </Link>
         </p>
       </Section>

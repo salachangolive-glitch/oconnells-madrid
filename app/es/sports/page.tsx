@@ -35,6 +35,14 @@ export default function EsSportsPage() {
           >
             ver fútbol en Madrid
           </Link>
+          ,{" "}
+          <Link href="/es/premier-league" className="text-cream underline">
+            Premier League
+          </Link>{" "}
+          y{" "}
+          <Link href="/es/champions-league" className="text-cream underline">
+            Champions League
+          </Link>
           .
         </p>
       </Section>

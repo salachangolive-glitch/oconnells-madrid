@@ -14,7 +14,7 @@ export const metadata = buildMetadata({
 
 export default function ChampionsLeaguePage() {
   return (
-    <PageShell locale="en">
+    <PageShell locale="en" altLangHref="/es/champions-league">
       <PageHero
         eyebrow="UEFA Champions League"
         title={`UCL at ${SITE_NAME}`}
