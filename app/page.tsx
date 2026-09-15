@@ -1,11 +1,11 @@
 import Link from "next/link";
 import { PageShell } from "@/components/PageShell";
-import { PageHero, Section } from "@/components/Prose";
-import { PhotoPlaceholder } from "@/components/PhotoPlaceholder";
+import { HighlightCards, PageHero, Section } from "@/components/Prose";
+import { VenueHero } from "@/components/VenueHero";
 import { buildMetadata } from "@/lib/seo";
 import {
   ADDRESS,
-  FACTS,
+  HOURS,
   MAPS_URL,
   PHONE_DISPLAY,
   PHONE_TEL,
@@ -15,7 +15,7 @@ import {
 export const metadata = buildMetadata({
   title: `${SITE_NAME} Madrid — Irish pub & sports bar near Puerta del Sol`,
   description:
-    "O'Connell St: Irish pub and sports bar at Calle de Espoz y Mina 7, near Puerta del Sol. Football screens (PL, UCL, LaLiga), NFL/NBA when shown, Thursday €1 shots.",
+    "O'Connell St: Irish sports pub at Calle de Espoz y Mina 7, Madrid Centro near Puerta del Sol. Watch Premier League, Champions League & LaLiga. Thursday €1 shots for Erasmus & travellers.",
   path: "/",
 });
 
@@ -23,35 +23,58 @@ export default function HomePage() {
   return (
     <PageShell locale="en" altLangHref="/es">
       <PageHero
-        eyebrow="Madrid · Sol"
-        title={`${SITE_NAME}: Irish pub & sports bar near Puerta del Sol`}
-        lead="Central match nights and Erasmus-friendly Thursday €1 shots — a short walk from Sol, indoors only."
+        eyebrow="Irish sports pub · Sol · Madrid Centro"
+        title={`${SITE_NAME} — watch football near Puerta del Sol`}
+        lead="Central Irish pub with the big screens on for Premier League, Champions League and LaLiga — plus Thursday €1 shots that draw Erasmus, internationals and weekend travellers."
       />
-      <PhotoPlaceholder
-        label="Exterior / bar interior — NEED_REAL_PHOTO"
+      <VenueHero
+        src="/images/oconnell-fachada.jpg"
+        alt="Facade of O'Connell St Irish pub, Calle de Espoz y Mina 7, near Puerta del Sol"
         className="mb-10"
         aspect="wide"
       />
-      <Section title="What we are">
+      <HighlightCards
+        items={[
+          {
+            href: "/sports",
+            title: "Sports & screens",
+            blurb: "PL, Champions League, LaLiga — NFL & NBA when shown.",
+          },
+          {
+            href: "/whats-on",
+            title: "What's on",
+            blurb: "Tonight's confirmed fixtures and weekly nights.",
+          },
+          {
+            href: "/thursday-1-euro-shots",
+            title: "Thursday €1 shots",
+            blurb: "The night for Erasmus, tourists and friend groups.",
+          },
+          {
+            href: "/erasmus",
+            title: "Erasmus & internationals",
+            blurb: "Easy meetup near Sol — English-friendly pub energy.",
+          },
+          {
+            href: "/location",
+            title: "Location",
+            blurb: "Calle de Espoz y Mina 7, 28012 Madrid.",
+          },
+          {
+            href: MAPS_URL,
+            title: "Directions",
+            blurb: "Open Google Maps — short walk from Puerta del Sol.",
+          },
+        ]}
+      />
+      <Section title="Watch football in Madrid Centro">
         <p>
-          {SITE_NAME} is an Irish pub and sports bar at {ADDRESS.full},{" "}
-          {FACTS.type.toLowerCase()} near Puerta del Sol. Come for the screens,
-          a pint, and a central spot that stays focused on sport — not a
-          terrace, not a live-music venue.
+          Planning a trip and searching for somewhere to watch football near
+          Sol? {SITE_NAME} is an Irish sports pub a short walk from Puerta del
+          Sol — Premier League Saturdays, Champions League midweeks, and LaLiga
+          nights on the screens, with NFL and NBA when those games are on.
         </p>
-      </Section>
-      <Section title="Sport on the screens">
         <p>
-          Football coverage centres on the Premier League, UEFA Champions
-          League, and LaLiga. NFL and NBA appear when those games are shown.
-          We are not an official club or league partner — just a pub with
-          screens for the fixtures people ask for.
-        </p>
-        <p>
-          <Link href="/sports" className="text-cream underline">
-            Sports overview
-          </Link>
-          {" · "}
           <Link href="/watch-football-madrid" className="text-cream underline">
             Watch football in Madrid
           </Link>
@@ -65,45 +88,41 @@ export default function HomePage() {
           </Link>
         </p>
       </Section>
-      <Section title="Thursday €1 shots">
+      <Section title="Thursday €1 shots" featured>
         <p>
-          Thursday is our commercial priority for Erasmus nights: €1 shots.
-          Wednesday €1 shots also exist; if you are choosing one night for
-          students and internationals, start with Thursday.
+          Thursdays mean €1 shots — the easy night out for Erasmus students,
+          internationals and anyone exploring Madrid Centro. Wednesday €1 shots
+          are on too; Thursday is the one everyone talks about.
         </p>
         <p>
           <Link
             href="/thursday-1-euro-shots"
-            className="text-cream underline"
+            className="inline-flex rounded-md bg-cream px-4 py-2 font-semibold text-pub-green hover:bg-cream/90"
           >
-            Thursday €1 shots details
-          </Link>
-          {" · "}
-          <Link href="/erasmus" className="text-cream underline">
-            Erasmus nights
+            Thursday €1 details
           </Link>
         </p>
       </Section>
       <Section title="Find us">
         <p>
-          {ADDRESS.full}. No terrace — seating is indoors. Call{" "}
+          {ADDRESS.full}. Call{" "}
           <a href={PHONE_TEL} className="text-cream underline">
             {PHONE_DISPLAY}
           </a>{" "}
-          or open{" "}
+          or get{" "}
           <a
             href={MAPS_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="text-cream underline"
           >
-            Google Maps directions
+            directions on Google Maps
           </a>
-          .
+          . {HOURS.summaryEn}.
         </p>
         <p>
           <Link href="/location" className="text-cream underline">
-            Location & how to get here
+            Location
           </Link>
           {" · "}
           <Link href="/whats-on" className="text-cream underline">

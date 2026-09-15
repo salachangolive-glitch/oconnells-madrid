@@ -1,14 +1,14 @@
 import Link from "next/link";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
-import { PhotoPlaceholder } from "@/components/PhotoPlaceholder";
+import { VenueHero } from "@/components/VenueHero";
 import { buildMetadata } from "@/lib/seo";
 import { SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
-  title: "Premier League on screens in Madrid",
+  title: "Premier League on screens in Madrid near Sol",
   description:
-    "Watch Premier League football at O'Connell St Irish sports bar near Puerta del Sol. Screens for PL fixtures — not an official club partner.",
+    "Watch Premier League football at O'Connell St Irish sports bar near Puerta del Sol. PL screens for travellers and locals in Madrid Centro.",
   path: "/premier-league",
 });
 
@@ -16,25 +16,21 @@ export default function PremierLeaguePage() {
   return (
     <PageShell locale="en" altLangHref="/es/premier-league">
       <PageHero
-        eyebrow="Premier League"
+        eyebrow="Premier League · Madrid Centro"
         title={`PL screens at ${SITE_NAME}`}
-        lead="English football is a regular ask at this Sol-area Irish sports pub. We put Premier League fixtures on the screens — without claiming official club or league status."
+        lead="English football is a regular ask at this Sol-area Irish sports pub. Come for Premier League afternoons and nights on the big screens — pints ready, centre of Madrid."
       />
-      <PhotoPlaceholder
-        label="PL match on screen — NEED_REAL_PHOTO"
-        className="mb-10"
-      />
+      <VenueHero className="mb-10" aspect="video" caption="Premier League · Sol" />
       <Section title="Planning a PL afternoon or night">
         <p>
-          Big Saturday and Sunday cards fill the centre early. If your group
-          cares about a specific kick-off, call the bar to confirm it&apos;s on.
-          Pair match day with{" "}
-          <Link href="/location" className="text-cream underline">
-            directions from Sol
-          </Link>{" "}
-          or browse{" "}
+          Big Saturday and Sunday cards fill Madrid Centro early. If your group
+          cares about a specific kick-off, check{" "}
           <Link href="/whats-on" className="text-cream underline">
             what&apos;s on
+          </Link>{" "}
+          or call the bar. Pair match day with{" "}
+          <Link href="/location" className="text-cream underline">
+            directions from Sol
           </Link>
           .
         </p>

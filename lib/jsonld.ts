@@ -2,6 +2,7 @@ import {
   ADDRESS,
   FACTS,
   getSiteUrl,
+  HOURS,
   MAPS_URL,
   PHONE_DISPLAY,
   SITE_NAME,
@@ -23,21 +24,34 @@ export function barOrPubJsonLd() {
       postalCode: ADDRESS.postalCode,
       addressCountry: ADDRESS.country,
     },
-    geo: undefined,
     hasMap: MAPS_URL,
     servesCuisine: "Irish pub",
-    priceRange: undefined,
-    smokingAllowed: undefined,
+    image: `${getSiteUrl()}/images/oconnell-fachada.jpg`,
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday"],
+        opens: HOURS.monThu.open,
+        closes: HOURS.monThu.close,
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Friday", "Saturday"],
+        opens: HOURS.friSat.open,
+        closes: HOURS.friSat.close,
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: "Sunday",
+        opens: HOURS.sun.open,
+        closes: HOURS.sun.close,
+      },
+    ],
     amenityFeature: [
       {
         "@type": "LocationFeatureSpecification",
         name: "Sports screens",
         value: true,
-      },
-      {
-        "@type": "LocationFeatureSpecification",
-        name: "Terrace",
-        value: false,
       },
     ],
   };

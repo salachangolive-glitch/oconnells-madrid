@@ -1,10 +1,11 @@
 import Link from "next/link";
 import { PageShell } from "@/components/PageShell";
-import { PageHero, Section } from "@/components/Prose";
-import { PhotoPlaceholder } from "@/components/PhotoPlaceholder";
+import { HighlightCards, PageHero, Section } from "@/components/Prose";
+import { VenueHero } from "@/components/VenueHero";
 import { buildMetadata } from "@/lib/seo";
 import {
   ADDRESS,
+  HOURS,
   MAPS_URL,
   PHONE_DISPLAY,
   PHONE_TEL,
@@ -14,7 +15,7 @@ import {
 export const metadata = buildMetadata({
   title: `${SITE_NAME} Madrid — Pub irlandés y sports bar cerca de Sol`,
   description:
-    "O'Connell St: pub irlandés y sports bar en Calle de Espoz y Mina 7, cerca de Puerta del Sol. Pantallas de fútbol (PL, UCL, LaLiga), NFL/NBA cuando se emiten, jueves chupitos €1.",
+    "O'Connell St: pub irlandés y sports bar en Calle de Espoz y Mina 7, Madrid Centro cerca de Puerta del Sol. Premier League, Champions League y LaLiga. Jueves chupitos €1 para Erasmus y viajeros.",
   path: "/es",
   locale: "es",
 });
@@ -23,34 +24,58 @@ export default function EsHomePage() {
   return (
     <PageShell locale="es" altLangHref="/">
       <PageHero
-        eyebrow="Madrid · Sol"
-        title={`${SITE_NAME}: pub irlandés y sports bar cerca de Puerta del Sol`}
-        lead="Noches de partido en el centro y jueves de chupitos €1 pensados para Erasmus — a pocos minutos de Sol, solo interior."
+        eyebrow="Pub irlandés · Sol · Madrid Centro"
+        title={`${SITE_NAME} — ver fútbol cerca de Puerta del Sol`}
+        lead="Pub irlandés céntrico con pantallas para Premier League, Champions League y LaLiga — y jueves de chupitos €1 que llenan de Erasmus, internacionales y viajeros."
       />
-      <PhotoPlaceholder
-        label="Exterior / interior del bar — NEED_REAL_PHOTO"
+      <VenueHero
+        src="/images/oconnell-fachada.jpg"
+        alt="Fachada de O'Connell St, Calle de Espoz y Mina 7, cerca de Puerta del Sol"
         className="mb-10"
         aspect="wide"
       />
-      <Section title="Qué somos">
+      <HighlightCards
+        items={[
+          {
+            href: "/es/sports",
+            title: "Deportes y pantallas",
+            blurb: "PL, Champions League, LaLiga — NFL y NBA cuando tocan.",
+          },
+          {
+            href: "/whats-on",
+            title: "What's on",
+            blurb: "Partidos confirmados y noches semanales.",
+          },
+          {
+            href: "/es/thursday-1-euro-shots",
+            title: "Jueves chupitos €1",
+            blurb: "La noche para Erasmus, turistas y grupos de amigos.",
+          },
+          {
+            href: "/es/erasmus",
+            title: "Erasmus e internacionales",
+            blurb: "Quedar fácil cerca de Sol — ambiente friendly.",
+          },
+          {
+            href: "/es/location",
+            title: "Ubicación",
+            blurb: "Calle de Espoz y Mina 7, 28012 Madrid.",
+          },
+          {
+            href: MAPS_URL,
+            title: "Cómo llegar",
+            blurb: "Abre Google Maps — a poca distancia de Sol.",
+          },
+        ]}
+      />
+      <Section title="Ver fútbol en Madrid Centro">
         <p>
-          {SITE_NAME} es un pub irlandés y sports bar en {ADDRESS.full}, cerca
-          de Puerta del Sol. Ven por las pantallas, una pinta y un sitio
-          céntrico centrado en el deporte — sin terraza y sin música en vivo
-          habitual.
+          ¿Buscas dónde ver fútbol cerca de Sol? {SITE_NAME} es un sports bar
+          irlandés a pocos minutos de Puerta del Sol — Premier League los fines
+          de semana, Champions League entre semana y LaLiga en pantallas, con
+          NFL y NBA cuando se emiten.
         </p>
-      </Section>
-      <Section title="Deporte en pantallas">
         <p>
-          Fútbol: Premier League, UEFA Champions League y LaLiga. NFL y NBA
-          cuando se emiten esos partidos. No somos partner oficial de clubes ni
-          ligas — solo un pub con pantallas.
-        </p>
-        <p>
-          <Link href="/es/sports" className="text-cream underline">
-            Deportes
-          </Link>
-          {" · "}
           <Link
             href="/es/watch-football-madrid"
             className="text-cream underline"
@@ -67,28 +92,24 @@ export default function EsHomePage() {
           </Link>
         </p>
       </Section>
-      <Section title="Jueves chupitos €1">
+      <Section title="Jueves chupitos €1" featured>
         <p>
-          El jueves es la prioridad comercial para Erasmus: chupitos a €1. Los
-          miércoles también hay chupitos €1; si eliges una noche semanal para
-          estudiantes e internacionales, empieza por el jueves.
+          Los jueves son chupitos a €1 — la noche fácil para Erasmus,
+          internacionales y quien explore Madrid Centro. También hay miércoles
+          €1; el jueves es el que todo el mundo menciona.
         </p>
         <p>
           <Link
             href="/es/thursday-1-euro-shots"
-            className="text-cream underline"
+            className="inline-flex rounded-md bg-cream px-4 py-2 font-semibold text-pub-green hover:bg-cream/90"
           >
-            Jueves €1
-          </Link>
-          {" · "}
-          <Link href="/es/erasmus" className="text-cream underline">
-            Erasmus
+            Detalles del jueves €1
           </Link>
         </p>
       </Section>
       <Section title="Cómo llegar">
         <p>
-          {ADDRESS.full}. Sin terraza. Llama al{" "}
+          {ADDRESS.full}. Llama al{" "}
           <a href={PHONE_TEL} className="text-cream underline">
             {PHONE_DISPLAY}
           </a>{" "}
@@ -101,11 +122,15 @@ export default function EsHomePage() {
           >
             Google Maps
           </a>
-          .
+          . {HOURS.summaryEs}.
         </p>
         <p>
           <Link href="/es/location" className="text-cream underline">
             Ubicación
+          </Link>
+          {" · "}
+          <Link href="/whats-on" className="text-cream underline">
+            What&apos;s on
           </Link>
           {" · "}
           <Link href="/es/about" className="text-cream underline">

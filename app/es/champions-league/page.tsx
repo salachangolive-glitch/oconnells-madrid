@@ -1,14 +1,14 @@
 import Link from "next/link";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
-import { PhotoPlaceholder } from "@/components/PhotoPlaceholder";
+import { VenueHero } from "@/components/VenueHero";
 import { buildMetadata } from "@/lib/seo";
 import { SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
   title: "Noches de Champions League en el centro de Madrid",
   description:
-    "UEFA Champions League en las pantallas de O'Connell St, cerca de Puerta del Sol. Sports bar irlandés interior — no es un local oficial de la UCL.",
+    "UEFA Champions League en las pantallas de O'Connell St, cerca de Puerta del Sol. Sports bar irlandés en Madrid Centro para noches europeas.",
   path: "/es/champions-league",
   locale: "es",
 });
@@ -18,18 +18,19 @@ export default function EsChampionsLeaguePage() {
     <PageShell locale="es" altLangHref="/champions-league">
       <PageHero
         eyebrow="UEFA Champions League"
-        title={`UCL en ${SITE_NAME}`}
-        lead="Las noches europeas entre semana piden pantallas. Mostramos interés de Champions League cuando hay partidos — como pub, no como partner oficial."
+        title={`Noches de UCL en ${SITE_NAME}`}
+        lead="El fútbol europeo entre semana pide pantallas grandes. Únete al público de este pub irlandés cerca de Puerta del Sol para las noches de Champions League en Madrid Centro."
       />
-      <PhotoPlaceholder
-        label="Ambiente de noche UCL — NEED_REAL_PHOTO"
-        className="mb-10"
-      />
+      <VenueHero className="mb-10" aspect="video" caption="Champions League · Sol" />
       <Section title="Antes de venir">
         <p>
-          Confirma que se emite el partido si tu noche depende de un cruce.
-          Estamos en interior cerca de Sol, sin terraza y sin música en vivo
-          habitual — la noche es el partido y el público.
+          Confirma los cruces de esta noche en{" "}
+          <Link href="/whats-on" className="text-cream underline">
+            what&apos;s on
+          </Link>{" "}
+          si tu plan depende de un partido. Estamos a poca distancia de Sol —
+          fácil para viajeros y locales que entran a Madrid Centro para el
+          pitido.
         </p>
         <p>
           <Link href="/es/premier-league" className="text-cream underline">

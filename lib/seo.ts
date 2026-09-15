@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { getSiteUrl, HREFLANG_PAIRS, SITE_NAME } from "./venue";
+import { getSiteUrl, HREFLANG_PAIRS, isPreviewHost, SITE_NAME } from "./venue";
 
 type BuildMetaOpts = {
   title: string;
@@ -23,6 +23,7 @@ export function buildMetadata({
   const canonical = absoluteUrl(path);
   const fullTitle =
     title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME} Madrid`;
+  const preview = isPreviewHost();
 
   const languages: Record<string, string> = {};
   const enPath =
@@ -42,9 +43,7 @@ export function buildMetadata({
     description,
     alternates: {
       canonical,
-      ...(Object.keys(languages).length
-        ? { languages }
-        : undefined),
+      ...(Object.keys(languages).length ? { languages } : undefined),
     },
     openGraph: {
       title: fullTitle,
@@ -59,9 +58,10 @@ export function buildMetadata({
       title: fullTitle,
       description,
     },
-    robots: {
-      index: true,
-      follow: true,
-    },
+    // Preview (*.vercel.app): noindex so it never consolidates as the permanent site.
+    // Custom domain: index,follow.
+    robots: preview
+      ? { index: false, follow: false }
+      : { index: true, follow: true },
   };
 }

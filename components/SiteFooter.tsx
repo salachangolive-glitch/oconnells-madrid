@@ -1,6 +1,8 @@
 import Link from "next/link";
 import {
   ADDRESS,
+  HOURS,
+  MAPS_URL,
   PHONE_DISPLAY,
   PHONE_TEL,
   SITE_NAME,
@@ -21,47 +23,74 @@ export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
               {PHONE_DISPLAY}
             </a>
           </p>
+          <p className="mt-3 text-cream/55">
+            {isEs ? HOURS.summaryEs : HOURS.summaryEn}
+          </p>
         </div>
         <div>
           <p className="mb-2 font-semibold uppercase tracking-wide text-cream/90">
-            {isEs ? "Enlaces" : "Explore"}
+            {isEs ? "Explorar" : "Explore"}
           </p>
           <ul className="space-y-1">
             <li>
-              <Link href={isEs ? "/es/sports" : "/sports"} className="hover:text-cream">
+              <Link
+                href={isEs ? "/es/sports" : "/sports"}
+                className="hover:text-cream"
+              >
                 {isEs ? "Deportes" : "Sports"}
               </Link>
             </li>
             <li>
+              <Link href="/whats-on" className="hover:text-cream">
+                What&apos;s on
+              </Link>
+            </li>
+            <li>
               <Link
-                href={isEs ? "/es/thursday-1-euro-shots" : "/thursday-1-euro-shots"}
+                href={
+                  isEs ? "/es/thursday-1-euro-shots" : "/thursday-1-euro-shots"
+                }
                 className="hover:text-cream"
               >
                 {isEs ? "Jueves chupitos €1" : "Thursday €1 shots"}
               </Link>
             </li>
             <li>
-              <Link href={isEs ? "/es/location" : "/location"} className="hover:text-cream">
+              <Link
+                href={isEs ? "/es/erasmus" : "/erasmus"}
+                className="hover:text-cream"
+              >
+                Erasmus
+              </Link>
+            </li>
+            <li>
+              <Link
+                href={isEs ? "/es/location" : "/location"}
+                className="hover:text-cream"
+              >
                 {isEs ? "Ubicación" : "Location"}
               </Link>
             </li>
-            {!isEs && (
-              <li>
-                <Link href="/whats-on" className="hover:text-cream">
-                  What&apos;s on
-                </Link>
-              </li>
-            )}
+            <li>
+              <a
+                href={MAPS_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-cream"
+              >
+                {isEs ? "Cómo llegar" : "Directions"}
+              </a>
+            </li>
           </ul>
         </div>
         <div>
           <p className="mb-2 font-semibold uppercase tracking-wide text-cream/90">
-            {isEs ? "Nota" : "Note"}
+            {isEs ? "Madrid Centro" : "Madrid Centro"}
           </p>
           <p>
             {isEs
-              ? "Pub irlandés y sports bar cerca de Puerta del Sol. Sin terraza. Sin música en vivo habitual."
-              : "Irish pub and sports bar near Puerta del Sol. No terrace. No habitual live music."}
+              ? "Pub irlandés y sports bar cerca de Puerta del Sol — fútbol en pantallas, pintas y jueves €1."
+              : "Irish pub & sports bar near Puerta del Sol — football screens, pints, and Thursday €1 shots."}
           </p>
         </div>
       </div>

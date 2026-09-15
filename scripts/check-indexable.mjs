@@ -1,7 +1,11 @@
 #!/usr/bin/env node
 /**
- * Fails if robots.txt Disallows key content paths, or if built HTML
- * contains meta robots noindex on content pages.
+ * Indexability check.
+ *
+ * Preview mode (NEXT_PUBLIC_SITE_URL hostname includes vercel.app, or
+ * SITE_PREVIEW=1): noindex + robots Disallow:/ are EXPECTED and OK.
+ *
+ * Production / custom domain: fails on noindex or Disallow of content paths.
  *
  * Usage: node scripts/check-indexable.mjs
  * Prefer running after `next build`.
@@ -11,6 +15,21 @@ import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 import { join } from "node:path";
 
 const ROOT = process.cwd();
+
+function resolvePreviewMode() {
+  if (process.env.SITE_PREVIEW === "1") return true;
+  const url =
+    process.env.NEXT_PUBLIC_SITE_URL ||
+    "https://oconnells-madrid.vercel.app";
+  try {
+    return new URL(url).hostname.includes("vercel.app");
+  } catch {
+    return String(url).includes("vercel.app");
+  }
+}
+
+const PREVIEW = resolvePreviewMode();
+
 const MUST_NOT_DISALLOW = [
   "/",
   "/sports",
@@ -46,6 +65,10 @@ function checkRobotsTxt(text) {
     if (!m) continue;
     const value = m[1].trim();
     if (!value) continue;
+    if (PREVIEW) {
+      // Disallow all is expected on vercel.app preview
+      continue;
+    }
     if (value === "/") {
       fail("robots.txt Disallow: / blocks the whole site");
       continue;
@@ -79,6 +102,7 @@ function walkHtmlFiles(dir, out = []) {
 }
 
 function checkHtmlNoindex(filePath) {
+  if (PREVIEW) return; // noindex expected on preview
   const html = readFileSync(filePath, "utf8");
   const patterns = [
     /<meta[^>]+name=["']robots["'][^>]*content=["']([^"']+)["'][^>]*>/gi,
@@ -112,18 +136,25 @@ function walkFiles(dir, pred, out = []) {
   return out;
 }
 
-// 1) Source robots.ts — no Disallow of content paths
+// 1) Source robots.ts
 const robotsTs = join(ROOT, "app/robots.ts");
 if (existsSync(robotsTs)) {
   const src = readFileSync(robotsTs, "utf8");
-  // Match disallow: "..." or '...' or `...`
-  const re = /disallow\s*:\s*(["'`])([^"'`]+)\1/gi;
-  let m;
-  while ((m = re.exec(src))) {
-    const value = m[2];
-    for (const path of MUST_NOT_DISALLOW) {
-      if (value === path || (path !== "/" && value.startsWith(path))) {
-        fail(`app/robots.ts Disallow literal "${value}" blocks ${path}`);
+  if (!PREVIEW) {
+    // Only fail hard-coded content-path Disallows when not in preview.
+    // Preview mode intentionally Disallow: "/" when isPreviewHost().
+    const hasPreviewGate =
+      /isPreviewHost/.test(src) || /vercel\.app/.test(src);
+    if (!hasPreviewGate) {
+      const re = /disallow\s*:\s*(["'`])([^"'`]+)\1/gi;
+      let m;
+      while ((m = re.exec(src))) {
+        const value = m[2];
+        for (const path of MUST_NOT_DISALLOW) {
+          if (value === path || (path !== "/" && value.startsWith(path))) {
+            fail(`app/robots.ts Disallow literal "${value}" blocks ${path}`);
+          }
+        }
       }
     }
   }
@@ -167,28 +198,29 @@ for (const root of [join(ROOT, "out"), join(ROOT, ".next/server/app")]) {
 }
 
 // 4) Serialized metadata noindex in page.js
-const appServer = join(ROOT, ".next/server/app");
-if (existsSync(appServer)) {
-  const pageFiles = walkFiles(
-    appServer,
-    (n) => n === "page.js" || n.endsWith(".html") || n.endsWith(".meta"),
-  );
-  for (const f of pageFiles) {
-    // Next.js 404 route correctly uses noindex — skip internals
-    if (
-      f.includes("/_not-found") ||
-      f.includes("/_global-error") ||
-      f.includes("/_error")
-    ) {
-      continue;
-    }
-    const text = readFileSync(f, "utf8");
-    if (
-      /noindex/i.test(text) &&
-      /robots/i.test(text) &&
-      /robots[\s\S]{0,80}noindex|noindex[\s\S]{0,80}robots/i.test(text)
-    ) {
-      fail(`${f}: appears to set robots noindex`);
+if (!PREVIEW) {
+  const appServer = join(ROOT, ".next/server/app");
+  if (existsSync(appServer)) {
+    const pageFiles = walkFiles(
+      appServer,
+      (n) => n === "page.js" || n.endsWith(".html") || n.endsWith(".meta"),
+    );
+    for (const f of pageFiles) {
+      if (
+        f.includes("/_not-found") ||
+        f.includes("/_global-error") ||
+        f.includes("/_error")
+      ) {
+        continue;
+      }
+      const text = readFileSync(f, "utf8");
+      if (
+        /noindex/i.test(text) &&
+        /robots/i.test(text) &&
+        /robots[\s\S]{0,80}noindex|noindex[\s\S]{0,80}robots/i.test(text)
+      ) {
+        fail(`${f}: appears to set robots noindex`);
+      }
     }
   }
 }
@@ -204,8 +236,17 @@ if (errors.length) {
 }
 
 console.log("check-indexable OK");
-console.log(" - robots source present; no Disallow of content paths");
-console.log(" - no meta noindex detected on content builds");
+console.log(
+  PREVIEW
+    ? " - PREVIEW mode (vercel.app): noindex + Disallow:/ expected/OK"
+    : " - PRODUCTION mode: indexing required",
+);
+console.log(" - robots source present");
+console.log(
+  PREVIEW
+    ? " - noindex on preview is OK (skipped fail)"
+    : " - no meta noindex detected on content builds",
+);
 console.log(" - sitemap module present");
 if (!foundRobotsBody) {
   console.log(

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function PageHero({
   eyebrow,
   title,
@@ -8,17 +10,17 @@ export function PageHero({
   lead?: string;
 }) {
   return (
-    <header className="mb-8 max-w-2xl">
+    <header className="mb-8 max-w-3xl">
       {eyebrow ? (
-        <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-pub-green-light">
+        <p className="mb-2 text-xs font-semibold uppercase tracking-[0.22em] text-pub-green-light">
           {eyebrow}
         </p>
       ) : null}
-      <h1 className="font-serif text-3xl font-bold leading-tight text-cream sm:text-4xl">
+      <h1 className="font-serif text-3xl font-bold leading-tight text-cream sm:text-4xl lg:text-[2.75rem]">
         {title}
       </h1>
       {lead ? (
-        <p className="mt-4 text-base leading-relaxed text-cream/75 sm:text-lg">
+        <p className="mt-4 text-base leading-relaxed text-cream/80 sm:text-lg">
           {lead}
         </p>
       ) : null}
@@ -29,18 +31,68 @@ export function PageHero({
 export function Section({
   title,
   children,
+  featured,
 }: {
   title?: string;
   children: React.ReactNode;
+  featured?: boolean;
 }) {
   return (
-    <section className="mb-10">
+    <section
+      className={
+        featured
+          ? "mb-10 rounded-xl border border-pub-green-light/40 bg-pub-green/40 p-5 sm:p-6"
+          : "mb-10"
+      }
+    >
       {title ? (
         <h2 className="mb-3 font-serif text-xl font-semibold text-cream sm:text-2xl">
           {title}
         </h2>
       ) : null}
-      <div className="space-y-3 text-cream/75 leading-relaxed">{children}</div>
+      <div className="space-y-3 text-cream/80 leading-relaxed">{children}</div>
     </section>
+  );
+}
+
+export function HighlightCards({
+  items,
+}: {
+  items: { href: string; title: string; blurb: string }[];
+}) {
+  return (
+    <ul className="mb-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      {items.map((item) => {
+        const className =
+          "block h-full rounded-xl border border-cream/15 bg-black/50 p-4 transition hover:border-pub-green-light hover:bg-pub-green/30";
+        const inner = (
+          <>
+            <p className="font-serif text-lg font-semibold text-cream">
+              {item.title}
+            </p>
+            <p className="mt-1 text-sm text-cream/70">{item.blurb}</p>
+          </>
+        );
+        const external = /^https?:\/\//i.test(item.href);
+        return (
+          <li key={item.href}>
+            {external ? (
+              <a
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={className}
+              >
+                {inner}
+              </a>
+            ) : (
+              <Link href={item.href} className={className}>
+                {inner}
+              </Link>
+            )}
+          </li>
+        );
+      })}
+    </ul>
   );
 }

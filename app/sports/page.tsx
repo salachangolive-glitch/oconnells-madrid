@@ -1,14 +1,14 @@
 import Link from "next/link";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
-import { PhotoPlaceholder } from "@/components/PhotoPlaceholder";
+import { VenueHero } from "@/components/VenueHero";
 import { buildMetadata } from "@/lib/seo";
 import { FACTS, SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
-  title: "Sports bar screens — football, NFL & NBA",
+  title: "Sports bar Madrid — football, NFL & NBA near Sol",
   description:
-    "O'Connell St Madrid sports bar: Premier League, Champions League, LaLiga on screens; NFL and NBA when shown. Near Puerta del Sol.",
+    "O'Connell St sports bar near Puerta del Sol: Premier League, Champions League, LaLiga on screens; NFL and NBA when shown. Irish pub in Madrid Centro.",
   path: "/sports",
 });
 
@@ -16,43 +16,46 @@ export default function SportsPage() {
   return (
     <PageShell locale="en" altLangHref="/es/sports">
       <PageHero
-        eyebrow="Sports bar"
+        eyebrow="Sports bar · Madrid Centro"
         title={`Watch sport at ${SITE_NAME}`}
-        lead="Screens for the big football competitions — plus NFL and NBA when those fixtures are on."
+        lead="Big screens for Premier League, Champions League and LaLiga — plus NFL and NBA when those fixtures are on — a short walk from Puerta del Sol."
       />
-      <PhotoPlaceholder
-        label="TV wall / match night crowd — NEED_REAL_PHOTO"
-        className="mb-10"
-      />
+      <VenueHero className="mb-10" aspect="video" caption="Screens · pints · Sol" />
       <Section title="Football">
         <p>
-          Regular football interest: {FACTS.football.join(", ")}. For
-          match-day planning see{" "}
+          Travellers searching for somewhere to watch football in Madrid Centro
+          land here for {FACTS.football.join(", ")}. Match days fill early —
+          grab a pint and a good seat while you still can.
+        </p>
+        <p>
           <Link href="/watch-football-madrid" className="text-cream underline">
-            watch football in Madrid
+            Watch football in Madrid
           </Link>
-          ,{" "}
+          {" · "}
           <Link href="/premier-league" className="text-cream underline">
             Premier League
           </Link>
-          , and{" "}
+          {" · "}
           <Link href="/champions-league" className="text-cream underline">
             Champions League
           </Link>
-          .
+          {" · "}
+          <Link href="/whats-on" className="text-cream underline">
+            What&apos;s on
+          </Link>
         </p>
       </Section>
       <Section title="NFL & NBA">
         <p>
           {FACTS.otherSports.join(" and ")} appear when those games are shown —
-          ask at the bar for the night&apos;s lineup. We do not claim official
-          team or league status.
+          ask at the bar for the night&apos;s lineup.
         </p>
       </Section>
-      <Section title="Match atmosphere">
+      <Section title="Irish pub atmosphere">
         <p>
-          Indoor sports bar near Sol — no terrace, no habitual live music. The
-          focus is screens, pints, and the fixture.
+          An Irish sports pub near Sol built around the screens and the crowd —
+          easy for groups, internationals and anyone who wants the match without
+          leaving Madrid Centro.
         </p>
       </Section>
     </PageShell>

@@ -1,14 +1,14 @@
 import Link from "next/link";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
-import { PhotoPlaceholder } from "@/components/PhotoPlaceholder";
+import { VenueHero } from "@/components/VenueHero";
 import { buildMetadata } from "@/lib/seo";
-import { ADDRESS, SITE_NAME } from "@/lib/venue";
+import { ADDRESS, MAPS_URL, SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
   title: "Watch football in Madrid near Puerta del Sol",
   description:
-    "Watch Premier League, Champions League and LaLiga at O'Connell St, Calle de Espoz y Mina 7, near Puerta del Sol. Indoor Irish sports pub.",
+    "Watch Premier League, Champions League and LaLiga at O'Connell St, Calle de Espoz y Mina 7, near Puerta del Sol. Irish sports pub in Madrid Centro.",
   path: "/watch-football-madrid",
 });
 
@@ -16,37 +16,47 @@ export default function WatchFootballPage() {
   return (
     <PageShell locale="en" altLangHref="/es/watch-football-madrid">
       <PageHero
-        eyebrow="Football in Madrid"
-        title="A central spot to watch the match"
-        lead={`${SITE_NAME} sits at ${ADDRESS.street}, a short walk from Puerta del Sol — useful when you want screens without leaving the centre.`}
+        eyebrow="Watch football · Madrid"
+        title="A central Irish pub for the big match"
+        lead={`${SITE_NAME} sits at ${ADDRESS.street}, a short walk from Puerta del Sol — ideal when you want Premier League, Champions League or LaLiga on the screens without leaving Madrid Centro.`}
       />
-      <PhotoPlaceholder
-        label="Football screens — NEED_REAL_PHOTO"
-        className="mb-10"
-      />
+      <VenueHero className="mb-10" aspect="video" caption="Football near Sol" />
       <Section title="What gets shown">
         <p>
-          Expect Premier League, UEFA Champions League, and LaLiga interest on
-          the screens. Kick-off times vary; call ahead if a specific fixture
-          matters to your group.
+          Expect Premier League weekends, Champions League midweeks, and LaLiga
+          nights on the screens. Searching before you arrive? We&apos;re the
+          Sol-area Irish sports pub travellers book into their itinerary for
+          kick-off.
+        </p>
+        <p>
+          See{" "}
+          <Link href="/whats-on" className="text-cream underline">
+            what&apos;s on tonight
+          </Link>{" "}
+          for confirmed fixtures, or call ahead if one match is make-or-break
+          for your group.
         </p>
       </Section>
-      <Section title="Practical notes">
-        <ul className="list-disc space-y-2 pl-5">
-          <li>Indoors only — no terrace.</li>
-          <li>Not a habitual live-music venue; match nights are about the TVs.</li>
-          <li>
-            Not an official club pub — we show football, we don&apos;t represent
-            teams or leagues.
-          </li>
-        </ul>
+      <Section title="Getting here for kick-off">
+        <p>
+          Aim for Puerta del Sol, then walk to Calle de Espoz y Mina.{" "}
+          <a
+            href={MAPS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-cream underline"
+          >
+            Open directions
+          </a>
+          .
+        </p>
         <p>
           <Link href="/premier-league" className="text-cream underline">
-            Premier League page
+            Premier League
           </Link>
           {" · "}
           <Link href="/champions-league" className="text-cream underline">
-            Champions League page
+            Champions League
           </Link>
           {" · "}
           <Link href="/sports" className="text-cream underline">

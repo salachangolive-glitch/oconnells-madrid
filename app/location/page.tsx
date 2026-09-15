@@ -1,10 +1,11 @@
 import Link from "next/link";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
-import { PhotoPlaceholder } from "@/components/PhotoPlaceholder";
+import { VenueHero } from "@/components/VenueHero";
 import { buildMetadata } from "@/lib/seo";
 import {
   ADDRESS,
+  HOURS,
   MAPS_URL,
   PHONE_DISPLAY,
   PHONE_TEL,
@@ -14,7 +15,7 @@ import {
 export const metadata = buildMetadata({
   title: "Location — Calle de Espoz y Mina 7, near Sol",
   description:
-    "Find O'Connell St at Calle de Espoz y Mina 7, 28012 Madrid, near Puerta del Sol. Google Maps directions. Phone +34 915 32 79 56. No terrace.",
+    "Find O'Connell St at Calle de Espoz y Mina 7, 28012 Madrid, near Puerta del Sol. Google Maps directions. Phone +34 915 32 79 56.",
   path: "/location",
 });
 
@@ -22,13 +23,15 @@ export default function LocationPage() {
   return (
     <PageShell locale="en" altLangHref="/es/location">
       <PageHero
-        eyebrow="Location"
+        eyebrow="Location · Madrid Centro"
         title={`How to find ${SITE_NAME}`}
         lead={`${ADDRESS.full} — a short walk from Puerta del Sol.`}
       />
-      <PhotoPlaceholder
-        label="Street / entrance — NEED_REAL_PHOTO"
+      <VenueHero
+        src="/images/oconnell-fachada.jpg"
+        alt="O'Connell St facade on Calle de Espoz y Mina near Puerta del Sol"
         className="mb-10"
+        aspect="wide"
       />
       <Section title="Address & contact">
         <p>{ADDRESS.full}</p>
@@ -38,6 +41,11 @@ export default function LocationPage() {
             {PHONE_DISPLAY}
           </a>
         </p>
+        <ul className="list-none space-y-1">
+          {HOURS.linesEn.map((line) => (
+            <li key={line}>{line}</li>
+          ))}
+        </ul>
         <p>
           <a
             href={MAPS_URL}
@@ -51,13 +59,22 @@ export default function LocationPage() {
       </Section>
       <Section title="Getting here">
         <p>
-          Aim for Puerta del Sol, then walk to Calle de Espoz y Mina. The pub
-          is indoors only — there is no terrace. For match nights and Thursday
-          €1 shots, see{" "}
+          Aim for Puerta del Sol, then walk to Calle de Espoz y Mina. Perfect
+          before a Premier League, Champions League or LaLiga kick-off — or for
+          Thursday €1 shots with your Erasmus crew.
+        </p>
+        <p>
           <Link href="/whats-on" className="text-cream underline">
-            what&apos;s on
+            What&apos;s on
           </Link>
-          .
+          {" · "}
+          <Link href="/sports" className="text-cream underline">
+            Sports
+          </Link>
+          {" · "}
+          <Link href="/thursday-1-euro-shots" className="text-cream underline">
+            Thursday €1
+          </Link>
         </p>
       </Section>
     </PageShell>

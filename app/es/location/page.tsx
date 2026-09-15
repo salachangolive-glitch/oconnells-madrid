@@ -1,10 +1,11 @@
 import Link from "next/link";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
-import { PhotoPlaceholder } from "@/components/PhotoPlaceholder";
+import { VenueHero } from "@/components/VenueHero";
 import { buildMetadata } from "@/lib/seo";
 import {
   ADDRESS,
+  HOURS,
   MAPS_URL,
   PHONE_DISPLAY,
   PHONE_TEL,
@@ -14,7 +15,7 @@ import {
 export const metadata = buildMetadata({
   title: "Ubicación — Calle de Espoz y Mina 7, cerca de Sol",
   description:
-    "Encuentra O'Connell St en Calle de Espoz y Mina 7, 28012 Madrid, cerca de Puerta del Sol. Cómo llegar en Google Maps. Tel. +34 915 32 79 56. Sin terraza.",
+    "Encuentra O'Connell St en Calle de Espoz y Mina 7, 28012 Madrid, cerca de Puerta del Sol. Cómo llegar en Google Maps. Tel. +34 915 32 79 56.",
   path: "/es/location",
   locale: "es",
 });
@@ -23,13 +24,15 @@ export default function EsLocationPage() {
   return (
     <PageShell locale="es" altLangHref="/location">
       <PageHero
-        eyebrow="Ubicación"
+        eyebrow="Ubicación · Madrid Centro"
         title={`Cómo llegar a ${SITE_NAME}`}
         lead={`${ADDRESS.full} — a poca distancia de Puerta del Sol.`}
       />
-      <PhotoPlaceholder
-        label="Calle / entrada — NEED_REAL_PHOTO"
+      <VenueHero
+        src="/images/oconnell-fachada.jpg"
+        alt="Fachada de O'Connell St en Calle de Espoz y Mina cerca de Sol"
         className="mb-10"
+        aspect="wide"
       />
       <Section title="Dirección y contacto">
         <p>{ADDRESS.full}</p>
@@ -39,6 +42,11 @@ export default function EsLocationPage() {
             {PHONE_DISPLAY}
           </a>
         </p>
+        <ul className="list-none space-y-1">
+          {HOURS.linesEs.map((line) => (
+            <li key={line}>{line}</li>
+          ))}
+        </ul>
         <p>
           <a
             href={MAPS_URL}
@@ -52,20 +60,25 @@ export default function EsLocationPage() {
       </Section>
       <Section title="Cómo llegar">
         <p>
-          Dirígete a Puerta del Sol y camina hasta Calle de Espoz y Mina. El
-          local es solo interior — no hay terraza. Para partidos y jueves €1,
-          mira también{" "}
+          Dirígete a Puerta del Sol y camina hasta Calle de Espoz y Mina. Ideal
+          antes de un partido de Premier League, Champions League o LaLiga — o
+          para los jueves de chupitos €1 con tu grupo Erasmus.
+        </p>
+        <p>
+          <Link href="/whats-on" className="text-cream underline">
+            What&apos;s on
+          </Link>
+          {" · "}
           <Link href="/es/sports" className="text-cream underline">
-            deportes
-          </Link>{" "}
-          y{" "}
+            Deportes
+          </Link>
+          {" · "}
           <Link
             href="/es/thursday-1-euro-shots"
             className="text-cream underline"
           >
-            jueves chupitos
+            Jueves €1
           </Link>
-          .
         </p>
       </Section>
     </PageShell>

@@ -5,12 +5,14 @@
   --pub-green-light: #1a6b4f;
   --cream: #f5f0e6;
   --black: #0a0a0a;
+  --gold: #c4a35a;
 }
 
 @theme inline {
   --color-pub-green: var(--pub-green);
   --color-pub-green-light: var(--pub-green-light);
   --color-cream: var(--cream);
+  --color-gold: var(--gold);
   --color-background: var(--black);
   --color-foreground: var(--cream);
   --font-sans: var(--font-geist-sans);

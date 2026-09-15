@@ -1,14 +1,14 @@
 import Link from "next/link";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
-import { PhotoPlaceholder } from "@/components/PhotoPlaceholder";
+import { VenueHero } from "@/components/VenueHero";
 import { buildMetadata } from "@/lib/seo";
-import { ADDRESS, PHONE_DISPLAY, PHONE_TEL, SITE_NAME } from "@/lib/venue";
+import { ADDRESS, HOURS, PHONE_DISPLAY, PHONE_TEL, SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
   title: "Sobre O'Connell St Madrid",
   description:
-    "Sobre O'Connell St: pub irlandés y sports bar en Calle de Espoz y Mina 7, 28012 Madrid, cerca de Puerta del Sol. Sin terraza; sin música en vivo habitual.",
+    "Sobre O'Connell St: pub irlandés y sports bar en Calle de Espoz y Mina 7, 28012 Madrid, cerca de Puerta del Sol. Pantallas de fútbol y jueves chupitos €1.",
   path: "/es/about",
   locale: "es",
 });
@@ -19,24 +19,27 @@ export default function EsAboutPage() {
       <PageHero
         eyebrow="Sobre nosotros"
         title={SITE_NAME}
-        lead="Pub irlandés y sports bar en el centro de Madrid — pantallas de fútbol y deporte USA seleccionado, jueves chupitos €1 para Erasmus."
+        lead="Pub irlandés y sports bar en el corazón de Madrid — Premier League, Champions League y LaLiga en pantallas, jueves chupitos €1 para Erasmus e internacionales."
       />
-      <PhotoPlaceholder
-        label="Retrato del bar / sala — NEED_REAL_PHOTO"
+      <VenueHero
+        src="/images/oconnell-fachada.jpg"
+        alt="Pub irlandés O'Connell St cerca de Puerta del Sol"
         className="mb-10"
+        aspect="wide"
       />
       <Section title="En resumen">
         <p>
-          Estamos en {ADDRESS.full}, cerca de Puerta del Sol. Teléfono:{" "}
+          Estamos en {ADDRESS.full}, cerca de Puerta del Sol en Madrid Centro.
+          Teléfono:{" "}
           <a href={PHONE_TEL} className="text-cream underline">
             {PHONE_DISPLAY}
           </a>
-          .
+          . {HOURS.summaryEs}.
         </p>
         <p>
-          No somos terraza, ni local de música en vivo habitual, ni partner
-          oficial de equipos o ligas. Sí somos un pub/sports bar irlandés
-          céntrico para partidos, pintas y jueves €1.
+          Ven por el partido, la pinta y los jueves €1 — un sports bar irlandés
+          céntrico para viajeros, estudiantes y locales que quieren pantallas
+          cerca de Sol.
         </p>
         <p>
           <Link href="/es/location" className="text-cream underline">
@@ -52,6 +55,10 @@ export default function EsAboutPage() {
             className="text-cream underline"
           >
             Jueves €1
+          </Link>
+          {" · "}
+          <Link href="/whats-on" className="text-cream underline">
+            What&apos;s on
           </Link>
         </p>
       </Section>

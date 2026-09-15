@@ -1,14 +1,14 @@
 import Link from "next/link";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
-import { PhotoPlaceholder } from "@/components/PhotoPlaceholder";
+import { VenueHero } from "@/components/VenueHero";
 import { buildMetadata } from "@/lib/seo";
-import { ADDRESS, PHONE_DISPLAY, PHONE_TEL, SITE_NAME } from "@/lib/venue";
+import { ADDRESS, HOURS, PHONE_DISPLAY, PHONE_TEL, SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
   title: "About O'Connell St Madrid",
   description:
-    "About O'Connell St: Irish pub and sports bar at Calle de Espoz y Mina 7, 28012 Madrid, near Puerta del Sol. No terrace; no habitual live music.",
+    "About O'Connell St: Irish pub and sports bar at Calle de Espoz y Mina 7, 28012 Madrid, near Puerta del Sol. Football screens and Thursday €1 shots.",
   path: "/about",
 });
 
@@ -18,24 +18,26 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About"
         title={SITE_NAME}
-        lead="An Irish pub and sports bar in the heart of Madrid — screens for football and selected US sports, Thursday €1 shots for Erasmus nights."
+        lead="An Irish pub and sports bar in the heart of Madrid — Premier League, Champions League and LaLiga on the screens, Thursday €1 shots for Erasmus and internationals."
       />
-      <PhotoPlaceholder
-        label="Bar portrait / room — NEED_REAL_PHOTO"
+      <VenueHero
+        src="/images/oconnell-fachada.jpg"
+        alt="O'Connell St Irish pub near Puerta del Sol"
         className="mb-10"
+        aspect="wide"
       />
       <Section title="The short version">
         <p>
-          We are at {ADDRESS.full}, near Puerta del Sol. Phone:{" "}
+          We are at {ADDRESS.full}, near Puerta del Sol in Madrid Centro. Phone:{" "}
           <a href={PHONE_TEL} className="text-cream underline">
             {PHONE_DISPLAY}
           </a>
-          .
+          . {HOURS.summaryEn}.
         </p>
         <p>
-          What we are not: a terrace venue, a habitual live-music club, or an
-          official team/league partner. What we are: a central Irish-style
-          sports pub for matches, pints, and Thursday €1 shots.
+          Come for the match, the pint, and Thursday €1 shots — a central Irish
+          sports pub built for travellers, students and locals who want Sol-area
+          screens without the fuss.
         </p>
         <p>
           <Link href="/location" className="text-cream underline">
@@ -48,6 +50,10 @@ export default function AboutPage() {
           {" · "}
           <Link href="/thursday-1-euro-shots" className="text-cream underline">
             Thursday €1
+          </Link>
+          {" · "}
+          <Link href="/whats-on" className="text-cream underline">
+            What&apos;s on
           </Link>
         </p>
       </Section>
