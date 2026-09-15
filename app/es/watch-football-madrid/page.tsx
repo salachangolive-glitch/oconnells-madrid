@@ -21,12 +21,12 @@ export default function EsWatchFootballPage() {
         title="Un pub irlandés céntrico para el partido"
         lead={`${SITE_NAME} está en ${ADDRESS.street}, a poca distancia de Puerta del Sol — ideal si quieres Premier League, Champions League o LaLiga en pantallas sin salir de Madrid Centro.`}
       />
-      <VenueHero className="mb-10" aspect="video" caption="Fútbol cerca de Sol" />
+      <VenueHero variant="secondary" className="mb-10" />
       <Section title="Qué se emite">
         <p>
           Fines de semana de Premier League, midweeks de Champions League y
           noches de LaLiga en pantallas. ¿Lo buscas antes de llegar? Somos el
-          sports bar irlandés de la zona de Sol que los viajeros apuntan para el
+          pub irlandés de la zona de Sol que los viajeros apuntan para el
           pitido inicial.
         </p>
         <p>

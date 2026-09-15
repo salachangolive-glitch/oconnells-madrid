@@ -55,7 +55,7 @@ export default function EsHomePage() {
           </h2>
           <div className="pub-rule my-3" />
           <p className="text-sm text-cream-muted sm:text-base">
-            Quedar fácil cerca de Sol — ambiente friendly, pantallas y el jueves
+            Quedar fácil cerca de Sol — ambiente cercano, pantallas y el jueves
             como la noche que se nota.
           </p>
           <p className="mt-3">

@@ -18,7 +18,7 @@ const copy = {
     unavailable:
       "The contact form is being activated. Please try again later or call the pub.",
     privacy:
-      "We use your details only to reply to this enquiry. Legal entity details: pending internal confirmation.",
+      "We use your details only to reply to this enquiry. Full legal entity details will appear here once confirmed.",
     required: "Please fill in all fields.",
   },
   es: {
@@ -33,7 +33,7 @@ const copy = {
     unavailable:
       "El formulario se está activando. Prueba más tarde o llama al pub.",
     privacy:
-      "Usamos tus datos solo para responder a esta consulta. Datos de la entidad legal: pendiente de confirmación interna.",
+      "Usamos tus datos solo para responder a esta consulta. Los datos legales completos se añadirán aquí cuando estén confirmados.",
     required: "Completa todos los campos.",
   },
 } as const;

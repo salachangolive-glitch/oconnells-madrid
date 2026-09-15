@@ -21,7 +21,7 @@ export default function EsChampionsLeaguePage() {
         title={`Noches de UCL en ${SITE_NAME}`}
         lead="El fútbol europeo entre semana pide pantallas grandes. Únete al público de este pub irlandés cerca de Puerta del Sol para las noches de Champions League en Madrid Centro."
       />
-      <VenueHero className="mb-10" aspect="video" caption="Champions League · Sol" />
+      <VenueHero variant="secondary" className="mb-10" />
       <Section title="Antes de venir">
         <p>
           Confirma los cruces de esta noche en{" "}

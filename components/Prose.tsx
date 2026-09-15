@@ -64,7 +64,7 @@ export function HighlightCards({
     <ul className="mb-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
       {items.map((item) => {
         const className =
-          "block h-full rounded-xl border border-cream/15 bg-black/50 p-4 transition hover:border-pub-green-light hover:bg-pub-green/30";
+          "block h-full border-b border-gold/20 pb-4 transition hover:border-gold";
         const inner = (
           <>
             <p className="font-serif text-lg font-semibold text-cream">

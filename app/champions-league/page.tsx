@@ -20,7 +20,7 @@ export default function ChampionsLeaguePage() {
         title={`UCL nights at ${SITE_NAME}`}
         lead="Midweek European football belongs on the big screens. Join the crowd at this Irish sports pub near Puerta del Sol for Champions League nights in Madrid Centro."
       />
-      <VenueHero className="mb-10" aspect="video" caption="Champions League · Sol" />
+      <VenueHero variant="secondary" className="mb-10" />
       <Section title="Before you come">
         <p>
           Confirm tonight&apos;s ties on{" "}

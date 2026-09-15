@@ -19,7 +19,7 @@ export default function EsAboutPage() {
       <PageHero
         eyebrow="Sobre nosotros"
         title={SITE_NAME}
-        lead="Pub irlandés y sports bar en el corazón de Madrid — Premier League, Champions League y LaLiga en pantallas, jueves chupitos a 1 € para Erasmus e internacionales."
+        lead="Pub irlandés y bar de deportes en el corazón de Madrid — Premier League, Champions League y LaLiga en pantallas, jueves chupitos a 1 € para Erasmus e internacionales."
       />
       <VenueHero variant="secondary" className="mb-10" />
       <Section title="En resumen">
@@ -32,7 +32,7 @@ export default function EsAboutPage() {
           . {HOURS.summaryEs}.
         </p>
         <p>
-          Ven por el partido, la pinta y los jueves €1 — un sports bar irlandés
+          Ven por el partido, la pinta y los jueves de chupitos a 1 € — un pub irlandés
           céntrico para viajeros, estudiantes y locales que quieren pantallas
           cerca de Sol.
         </p>

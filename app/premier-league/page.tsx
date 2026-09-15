@@ -20,7 +20,7 @@ export default function PremierLeaguePage() {
         title={`PL screens at ${SITE_NAME}`}
         lead="English football is a regular ask at this Sol-area Irish sports pub. Come for Premier League afternoons and nights on the big screens — pints ready, centre of Madrid."
       />
-      <VenueHero className="mb-10" aspect="video" caption="Premier League · Sol" />
+      <VenueHero variant="secondary" className="mb-10" />
       <Section title="Planning a PL afternoon or night">
         <p>
           Big Saturday and Sunday cards fill Madrid Centro early. If your group

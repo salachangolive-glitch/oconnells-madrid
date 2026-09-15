@@ -21,7 +21,7 @@ export default function EsPremierLeaguePage() {
         title={`Pantallas de PL en ${SITE_NAME}`}
         lead="El fútbol inglés es una petición habitual en este pub irlandés de la zona de Sol. Ven por las tardes y noches de Premier League en pantallas — pintas listas, centro de Madrid."
       />
-      <VenueHero className="mb-10" aspect="video" caption="Premier League · Sol" />
+      <VenueHero variant="secondary" className="mb-10" />
       <Section title="Planificar una tarde o noche de PL">
         <p>
           Las jornadas grandes de sábado y domingo llenan Madrid Centro pronto.

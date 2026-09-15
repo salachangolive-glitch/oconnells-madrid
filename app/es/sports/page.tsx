@@ -8,7 +8,7 @@ import { SITE_NAME } from "@/lib/venue";
 export const metadata = buildMetadata({
   title: "Sports bar Madrid — fútbol, NFL y NBA cerca de Sol",
   description:
-    "O'Connell St sports bar cerca de Sol: Premier League, Champions League, LaLiga en pantallas; NFL y NBA cuando tocan.",
+    "O'Connell St bar de deportes cerca de Sol: Premier League, Champions League, LaLiga en pantallas; NFL y NBA cuando tocan.",
   path: "/es/sports",
   locale: "es",
 });

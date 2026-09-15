@@ -20,7 +20,7 @@ export default function WatchFootballPage() {
         title="A central Irish pub for the big match"
         lead={`${SITE_NAME} sits at ${ADDRESS.street}, a short walk from Puerta del Sol — ideal when you want Premier League, Champions League or LaLiga on the screens without leaving Madrid Centro.`}
       />
-      <VenueHero className="mb-10" aspect="video" caption="Football near Sol" />
+      <VenueHero variant="secondary" className="mb-10" />
       <Section title="What gets shown">
         <p>
           Expect Premier League weekends, Champions League midweeks, and LaLiga
