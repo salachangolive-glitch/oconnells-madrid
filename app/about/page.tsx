@@ -1,7 +1,7 @@
 import Link from "next/link";
+import { InteriorPhoto } from "@/components/InteriorPhoto";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
-import { VenueHero } from "@/components/VenueHero";
 import { buildMetadata } from "@/lib/seo";
 import { ADDRESS, HOURS, SITE_NAME } from "@/lib/venue";
 
@@ -20,7 +20,11 @@ export default function AboutPage() {
         title={SITE_NAME}
         lead="An Irish pub and sports bar in the heart of Madrid — Premier League, Champions League and LaLiga on the screens, Thursday €1 shots for Erasmus and internationals."
       />
-      <VenueHero variant="secondary" className="mb-10" />
+      <InteriorPhoto
+        src="/images/interior/about-salon.webp"
+        alt="Wood tables, barrel seating and classic Irish pub décor inside O'Connell St"
+        position="object-center"
+      />
       <Section title="The short version">
         <p>
           We are at {ADDRESS.full}, near Puerta del Sol in Madrid Centro.{" "}

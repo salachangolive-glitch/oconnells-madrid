@@ -1,7 +1,7 @@
 import Link from "next/link";
+import { InteriorPhoto } from "@/components/InteriorPhoto";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
-import { VenueHero } from "@/components/VenueHero";
 import { buildMetadata } from "@/lib/seo";
 import { ADDRESS, MAPS_URL, SITE_NAME } from "@/lib/venue";
 
@@ -21,7 +21,11 @@ export default function EsWatchFootballPage() {
         title="Un pub irlandés céntrico para el partido"
         lead={`${SITE_NAME} está en ${ADDRESS.street}, a poca distancia de Puerta del Sol — ideal si quieres Premier League, Champions League o LaLiga en pantallas sin salir de Madrid Centro.`}
       />
-      <VenueHero variant="secondary" className="mb-10" />
+      <InteriorPhoto
+        src="/images/interior/football-seating.webp"
+        alt="Zona de mesas de madera y pantalla grande para deportes en directo en O'Connell St"
+        position="object-[center_20%]"
+      />
       <Section title="Qué se emite">
         <p>
           Fines de semana de Premier League, midweeks de Champions League y
@@ -32,9 +36,9 @@ export default function EsWatchFootballPage() {
         <p>
           Mira{" "}
           <Link href="/es/whats-on" className="text-cream underline">
-            what&apos;s on
+            la cartelera
           </Link>{" "}
-          para partidos confirmados, o llama si un partido concreto es
+          para partidos confirmados, o pregunta si un partido concreto es
           imprescindible.
         </p>
       </Section>

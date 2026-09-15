@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { FixtureStrip } from "@/components/FixtureStrip";
+import { InteriorPhoto } from "@/components/InteriorPhoto";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
 import { buildMetadata } from "@/lib/seo";
@@ -21,6 +22,11 @@ export default function EsSportsPage() {
         title={`Noches de partido en ${SITE_NAME}`}
         lead="Premier League los sábados, Champions entre semana, LaLiga cuando importa — y NFL o NBA cuando se emiten."
       />
+      <InteriorPhoto
+        src="/images/interior/sports-aisle.webp"
+        alt="Pasillo con varias pantallas de deportes en O'Connell St, con DAZN e iluminación verde"
+        position="object-[center_15%]"
+      />
       <FixtureStrip locale="es" />
       <Section title="Primero el fútbol">
         <p>
@@ -41,6 +47,11 @@ export default function EsSportsPage() {
           </Link>
         </p>
       </Section>
+      <InteriorPhoto
+        src="/images/interior/sports-corridor.webp"
+        alt="Pasillo con mesas y pantallas en la pared mostrando fútbol en directo"
+        position="object-[center_25%]"
+      />
       <Section title="NFL y NBA">
         <p>
           Fútbol americano y baloncesto cuando tocan — pregunta en barra por la

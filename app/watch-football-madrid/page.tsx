@@ -1,7 +1,7 @@
 import Link from "next/link";
+import { InteriorPhoto } from "@/components/InteriorPhoto";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
-import { VenueHero } from "@/components/VenueHero";
 import { buildMetadata } from "@/lib/seo";
 import { ADDRESS, MAPS_URL, SITE_NAME } from "@/lib/venue";
 
@@ -20,7 +20,11 @@ export default function WatchFootballPage() {
         title="A central Irish pub for the big match"
         lead={`${SITE_NAME} sits at ${ADDRESS.street}, a short walk from Puerta del Sol — ideal when you want Premier League, Champions League or LaLiga on the screens without leaving Madrid Centro.`}
       />
-      <VenueHero variant="secondary" className="mb-10" />
+      <InteriorPhoto
+        src="/images/interior/football-seating.webp"
+        alt="Seating area with wooden tables and a large screen for live sports at O'Connell St"
+        position="object-[center_20%]"
+      />
       <Section title="What gets shown">
         <p>
           Expect Premier League weekends, Champions League midweeks, and LaLiga

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { FixtureStrip } from "@/components/FixtureStrip";
 import { HomeCtaBand } from "@/components/HomeCtaBand";
+import { InteriorGallery, InteriorPhoto } from "@/components/InteriorPhoto";
 import { PageShell } from "@/components/PageShell";
 import { Section } from "@/components/Prose";
 import { VenueHero } from "@/components/VenueHero";
@@ -29,6 +30,12 @@ export default function EsHomePage() {
         <>
           <VenueHero variant="hero" />
           <HomeCtaBand locale="es" />
+          <InteriorPhoto
+            variant="editorial"
+            priority
+            src="/images/interior/bar-corner.webp"
+            alt="Rincón de la barra de madera en el pub irlandés O'Connell St, con taburetes, estanterías rojas y luz cálida"
+          />
         </>
       }
     >
@@ -82,6 +89,31 @@ export default function EsHomePage() {
           </p>
         </div>
       </section>
+
+      <InteriorGallery
+        items={[
+          {
+            src: "/images/interior/bar-taps.webp",
+            alt: "Grifos de cerveza y barra de madera en O'Connell St",
+            position: "object-center",
+          },
+          {
+            src: "/images/interior/sports-aisle.webp",
+            alt: "Pasillo con varias pantallas de deportes e iluminación verde",
+            position: "object-[center_20%]",
+          },
+          {
+            src: "/images/interior/about-salon.webp",
+            alt: "Mesas de madera y decoración de pub irlandés en el salón",
+            position: "object-center",
+          },
+          {
+            src: "/images/interior/football-seating.webp",
+            alt: "Mesas y sillas bajo luz ambiental con pantalla en la pared",
+            position: "object-[center_30%]",
+          },
+        ]}
+      />
 
       <Section title="Cómo encontrarnos">
         <p>

@@ -1,7 +1,7 @@
 import Link from "next/link";
+import { InteriorPhoto } from "@/components/InteriorPhoto";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
-import { VenueHero } from "@/components/VenueHero";
 import { buildMetadata } from "@/lib/seo";
 import { SITE_NAME } from "@/lib/venue";
 
@@ -20,7 +20,11 @@ export default function ChampionsLeaguePage() {
         title={`UCL nights at ${SITE_NAME}`}
         lead="Midweek European football belongs on the big screens. Join the crowd at this Irish sports pub near Puerta del Sol for Champions League nights in Madrid Centro."
       />
-      <VenueHero variant="secondary" className="mb-10" />
+      <InteriorPhoto
+        src="/images/interior/sports-aisle.webp"
+        alt="Wide aisle with multiple big screens ready for Champions League nights"
+        position="object-[center_45%]"
+      />
       <Section title="Before you come">
         <p>
           Confirm tonight&apos;s ties on{" "}

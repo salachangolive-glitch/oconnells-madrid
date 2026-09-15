@@ -1,7 +1,7 @@
 import Link from "next/link";
+import { InteriorPhoto } from "@/components/InteriorPhoto";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
-import { VenueHero } from "@/components/VenueHero";
 import { buildMetadata } from "@/lib/seo";
 import { SITE_NAME } from "@/lib/venue";
 
@@ -21,12 +21,16 @@ export default function EsChampionsLeaguePage() {
         title={`Noches de UCL en ${SITE_NAME}`}
         lead="El fútbol europeo entre semana pide pantallas grandes. Únete al público de este pub irlandés cerca de Puerta del Sol para las noches de Champions League en Madrid Centro."
       />
-      <VenueHero variant="secondary" className="mb-10" />
+      <InteriorPhoto
+        src="/images/interior/sports-aisle.webp"
+        alt="Pasillo amplio con varias pantallas grandes para noches de Champions League"
+        position="object-[center_45%]"
+      />
       <Section title="Antes de venir">
         <p>
           Confirma los cruces de esta noche en{" "}
           <Link href="/es/whats-on" className="text-cream underline">
-            what&apos;s on
+            la cartelera
           </Link>{" "}
           si tu plan depende de un partido. Estamos a poca distancia de Sol —
           fácil para viajeros y locales que entran a Madrid Centro para el
