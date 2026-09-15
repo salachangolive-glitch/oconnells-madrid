@@ -3,58 +3,58 @@ import { MAPS_URL } from "@/lib/venue";
 
 type Locale = "en" | "es";
 
-const labels = {
-  en: {
-    whatsOn: "What's on",
-    directions: "Directions",
-    thursday: "Thursday €1",
-  },
-  es: {
-    whatsOn: "What's on",
-    directions: "Cómo llegar",
-    thursday: "Jueves €1",
-  },
-} as const;
-
-/** Conversion strip directly under the clean facade photo (Home only). */
+/** Under the clean facade: discreet links + Thursday €1 as the visual hook. */
 export function HomeCtaBand({ locale = "en" }: { locale?: Locale }) {
-  const t = labels[locale];
   const thursdayHref =
     locale === "es" ? "/es/thursday-1-euro-shots" : "/thursday-1-euro-shots";
+  const whatsLabel = "What's on";
+  const dirLabel = locale === "es" ? "Cómo llegar" : "Directions";
+  const thuTop = locale === "es" ? "JUEVES" : "THURSDAY";
+  const thuBottom = locale === "es" ? "CHUPITOS" : "SHOTS";
 
   return (
-    <nav
-      className="border-y border-cream/15 bg-pub-green/90"
-      aria-label={locale === "es" ? "Acciones de portada" : "Home actions"}
-    >
-      <ul className="mx-auto flex max-w-5xl items-stretch justify-center divide-x divide-cream/20 text-center text-xs font-semibold uppercase tracking-[0.14em] text-cream sm:text-sm">
-        <li className="flex-1">
+    <div className="border-y border-gold-soft/30 bg-gradient-to-b from-pub-burgundy-deep to-pub-green">
+      <div className="mx-auto flex max-w-5xl flex-col items-stretch gap-0 sm:flex-row sm:items-center sm:justify-between sm:gap-6 sm:px-4 sm:py-3">
+        <nav
+          className="flex items-center justify-center gap-6 border-b border-cream/10 px-4 py-3 text-sm tracking-wide text-cream-muted sm:border-0 sm:py-0 sm:justify-start"
+          aria-label={locale === "es" ? "Acciones" : "Actions"}
+        >
           <Link
             href="/whats-on"
-            className="flex min-h-11 items-center justify-center px-2 py-3 hover:bg-cream/10"
+            className="border-b border-transparent pb-0.5 transition hover:border-gold hover:text-cream"
           >
-            {t.whatsOn}
+            {whatsLabel}
           </Link>
-        </li>
-        <li className="flex-1">
+          <span className="text-gold-soft/50" aria-hidden>
+            ·
+          </span>
           <a
             href={MAPS_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex min-h-11 items-center justify-center px-2 py-3 hover:bg-cream/10"
+            className="border-b border-transparent pb-0.5 transition hover:border-gold hover:text-cream"
           >
-            {t.directions}
+            {dirLabel}
           </a>
-        </li>
-        <li className="flex-1">
-          <Link
-            href={thursdayHref}
-            className="flex min-h-11 items-center justify-center bg-cream/10 px-2 py-3 hover:bg-cream/20"
-          >
-            {t.thursday}
-          </Link>
-        </li>
-      </ul>
-    </nav>
+        </nav>
+
+        <Link
+          href={thursdayHref}
+          className="group flex items-center justify-center gap-4 bg-pub-burgundy/80 px-4 py-4 sm:rounded-sm sm:border sm:border-gold/40 sm:bg-pub-burgundy sm:px-6 sm:py-3"
+        >
+          <div className="text-right leading-none">
+            <p className="font-serif text-[10px] font-bold tracking-[0.28em] text-gold sm:text-xs">
+              {thuTop}
+            </p>
+            <p className="mt-1 font-serif text-xs tracking-[0.2em] text-cream/85">
+              {thuBottom}
+            </p>
+          </div>
+          <p className="font-serif text-4xl font-bold leading-none text-gold transition group-hover:text-cream sm:text-5xl">
+            €1
+          </p>
+        </Link>
+      </div>
+    </div>
   );
 }

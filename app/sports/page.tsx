@@ -1,9 +1,9 @@
 import Link from "next/link";
+import { FixtureStrip } from "@/components/FixtureStrip";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
-import { VenueHero } from "@/components/VenueHero";
 import { buildMetadata } from "@/lib/seo";
-import { FACTS, SITE_NAME } from "@/lib/venue";
+import { SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
   title: "Sports bar Madrid — football, NFL & NBA near Sol",
@@ -16,46 +16,34 @@ export default function SportsPage() {
   return (
     <PageShell locale="en" altLangHref="/es/sports">
       <PageHero
-        eyebrow="Sports bar · Madrid Centro"
-        title={`Watch sport at ${SITE_NAME}`}
-        lead="Big screens for Premier League, Champions League and LaLiga — plus NFL and NBA when those fixtures are on — a short walk from Puerta del Sol."
+        eyebrow="Screens · pints · Sol"
+        title={`Match nights at ${SITE_NAME}`}
+        lead="Premier League Saturdays, Champions League midweeks, LaLiga when it matters — plus NFL and NBA when those games are on."
       />
-      <VenueHero className="mb-10" aspect="video" caption="Screens · pints · Sol" />
-      <Section title="Football">
+      <FixtureStrip locale="en" />
+      <Section title="Football first">
         <p>
-          Travellers searching for somewhere to watch football in Madrid Centro
-          land here for {FACTS.football.join(", ")}. Match days fill early —
-          grab a pint and a good seat while you still can.
+          The pub fills around the screens. Grab a pint, claim a seat, and watch
+          the night with the room — a short walk from Puerta del Sol.
         </p>
         <p>
-          <Link href="/watch-football-madrid" className="text-cream underline">
+          <Link href="/watch-football-madrid" className="text-gold underline">
             Watch football in Madrid
           </Link>
           {" · "}
-          <Link href="/premier-league" className="text-cream underline">
+          <Link href="/premier-league" className="text-gold underline">
             Premier League
           </Link>
           {" · "}
-          <Link href="/champions-league" className="text-cream underline">
+          <Link href="/champions-league" className="text-gold underline">
             Champions League
-          </Link>
-          {" · "}
-          <Link href="/whats-on" className="text-cream underline">
-            What&apos;s on
           </Link>
         </p>
       </Section>
       <Section title="NFL & NBA">
         <p>
-          {FACTS.otherSports.join(" and ")} appear when those games are shown —
-          ask at the bar for the night&apos;s lineup.
-        </p>
-      </Section>
-      <Section title="Irish pub atmosphere">
-        <p>
-          An Irish sports pub near Sol built around the screens and the crowd —
-          easy for groups, internationals and anyone who wants the match without
-          leaving Madrid Centro.
+          American football and basketball when those fixtures are showing — ask
+          at the bar for the night&apos;s lineup.
         </p>
       </Section>
     </PageShell>

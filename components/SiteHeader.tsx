@@ -3,7 +3,6 @@ import { SITE_NAME } from "@/lib/venue";
 
 type Locale = "en" | "es";
 
-/** Hero emphasis: Sports / What's On / Thursday €1 / Erasmus / Location */
 const nav = {
   en: [
     { href: "/sports", label: "Sports" },
@@ -38,44 +37,47 @@ export function SiteHeader({
   const switchHref = altLangHref || (locale === "es" ? "/" : "/es");
 
   return (
-    <header className="sticky top-0 z-40 border-b border-cream/10 bg-black/95 backdrop-blur-md">
+    <header className="sticky top-0 z-40 border-b border-gold/25 bg-black/90 backdrop-blur-md">
       <div className="mx-auto flex max-w-5xl items-center justify-between gap-3 px-4 py-3">
-        <Link
-          href={home}
-          className="shrink-0 font-serif text-lg font-bold tracking-tight text-cream sm:text-xl"
-        >
-          {SITE_NAME}
-          <span className="ml-1 text-sm font-sans font-normal text-pub-green-light">
+        <Link href={home} className="shrink-0 leading-tight">
+          <span className="font-serif text-lg font-bold tracking-tight text-cream sm:text-xl">
+            {SITE_NAME}
+          </span>
+          <span className="ml-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-gold">
             Madrid
           </span>
         </Link>
         <nav
-          className="hidden items-center gap-4 text-sm text-cream/80 lg:flex"
+          className="hidden items-center gap-5 text-sm text-cream-muted lg:flex"
           aria-label="Primary"
         >
           {items.map((item) => (
-            <Link key={item.href} href={item.href} className="hover:text-cream">
+            <Link
+              key={item.href}
+              href={item.href}
+              className="hover:text-gold"
+            >
               {item.label}
             </Link>
           ))}
         </nav>
         <Link
           href={switchHref}
-          className="rounded border border-cream/30 px-2 py-1 text-xs font-semibold uppercase tracking-wider text-cream hover:bg-cream/10"
+          className="rounded-sm border border-gold/40 px-2 py-1 text-xs font-semibold uppercase tracking-wider text-gold hover:bg-gold/10"
           hrefLang={locale === "es" ? "en" : "es"}
         >
           {switchLabel}
         </Link>
       </div>
       <nav
-        className="flex flex-wrap gap-x-3 gap-y-2 border-t border-cream/5 px-4 py-2 text-xs text-cream/75 lg:hidden"
+        className="flex flex-wrap gap-x-3 gap-y-2 border-t border-cream/5 px-4 py-2 text-xs text-cream-muted lg:hidden"
         aria-label="Mobile primary"
       >
         {items.map((item) => (
           <Link
             key={item.href}
             href={item.href}
-            className="whitespace-nowrap hover:text-cream"
+            className="whitespace-nowrap hover:text-gold"
           >
             {item.label}
           </Link>

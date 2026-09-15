@@ -23,14 +23,14 @@ export function StickyCta({ locale = "en" }: { locale?: Locale }) {
 
   return (
     <nav
-      className="fixed inset-x-0 bottom-0 z-50 border-t border-cream/15 bg-pub-green/95 backdrop-blur-md safe-bottom"
+      className="fixed inset-x-0 bottom-0 z-50 border-t border-gold/30 bg-pub-burgundy-deep/95 backdrop-blur-md safe-bottom"
       aria-label={locale === "es" ? "Acciones rápidas" : "Quick actions"}
     >
       <ul className="mx-auto grid max-w-3xl grid-cols-3 gap-1 px-2 py-2 text-center text-[11px] font-semibold uppercase tracking-wide text-cream sm:text-xs">
         <li>
           <a
             href={PHONE_TEL}
-            className="flex min-h-12 flex-col items-center justify-center rounded-md px-1 py-1 hover:bg-cream/10"
+            className="flex min-h-12 flex-col items-center justify-center rounded-sm px-1 py-1 hover:bg-cream/10"
           >
             <span aria-hidden>📞</span>
             {t.call}
@@ -39,7 +39,7 @@ export function StickyCta({ locale = "en" }: { locale?: Locale }) {
         <li>
           <Link
             href="/whats-on"
-            className="flex min-h-12 flex-col items-center justify-center rounded-md px-1 py-1 hover:bg-cream/10"
+            className="flex min-h-12 flex-col items-center justify-center rounded-sm px-1 py-1 hover:bg-cream/10"
           >
             <span aria-hidden>📅</span>
             {t.whatsOn}
@@ -48,7 +48,7 @@ export function StickyCta({ locale = "en" }: { locale?: Locale }) {
         <li>
           <Link
             href={thursdayHref}
-            className="flex min-h-12 flex-col items-center justify-center rounded-md bg-cream/15 px-1 py-1 text-cream hover:bg-cream/25"
+            className="flex min-h-12 flex-col items-center justify-center rounded-sm bg-gold/20 px-1 py-1 text-gold hover:bg-gold/30"
           >
             <span aria-hidden>🍻</span>
             {t.thursday}

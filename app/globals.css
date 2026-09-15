@@ -1,22 +1,31 @@
 @import "tailwindcss";
 
 :root {
-  --pub-green: #0b3d2e;
-  --pub-green-light: #1a6b4f;
-  --cream: #f5f0e6;
-  --black: #0a0a0a;
-  --gold: #c4a35a;
+  /* Facade-inspired: deep burgundy, pub green, cream, soft gold */
+  --pub-burgundy: #5c1218;
+  --pub-burgundy-deep: #3a0c10;
+  --pub-green: #0d2f24;
+  --pub-green-light: #1f5c45;
+  --cream: #f3ead8;
+  --cream-muted: #d9cbb3;
+  --black: #0c0a09;
+  --gold: #c9a227;
+  --gold-soft: #a88b3d;
 }
 
 @theme inline {
+  --color-pub-burgundy: var(--pub-burgundy);
+  --color-pub-burgundy-deep: var(--pub-burgundy-deep);
   --color-pub-green: var(--pub-green);
   --color-pub-green-light: var(--pub-green-light);
   --color-cream: var(--cream);
+  --color-cream-muted: var(--cream-muted);
   --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
   --color-background: var(--black);
   --color-foreground: var(--cream);
-  --font-sans: var(--font-geist-sans);
-  --font-serif: var(--font-geist-sans);
+  --font-sans: var(--font-source-sans);
+  --font-serif: var(--font-libre-baskerville);
   --font-mono: var(--font-geist-mono);
 }
 
@@ -25,7 +34,7 @@ html {
 }
 
 body {
-  background: var(--black);
+  background: radial-gradient(ellipse at top, #1a0f10 0%, var(--black) 55%);
   color: var(--cream);
   font-family: var(--font-sans), system-ui, sans-serif;
 }
@@ -35,5 +44,16 @@ body {
 }
 
 a {
-  text-underline-offset: 2px;
+  text-underline-offset: 3px;
+}
+
+/* Irish-pub rule line */
+.pub-rule {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--gold-soft),
+    transparent
+  );
 }

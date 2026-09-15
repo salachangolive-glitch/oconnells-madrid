@@ -40,7 +40,7 @@ export function VenueHero({
   if (mode === "hero") {
     return (
       <div
-        className={`relative w-full overflow-hidden bg-[#0a2f24] aspect-[16/9] sm:aspect-[2/1] ${className}`}
+        className={`relative w-full overflow-hidden bg-pub-burgundy-deep aspect-[16/9] sm:aspect-[2/1] ${className}`}
       >
         <Image
           src="/images/hero-fachada-desktop.webp"

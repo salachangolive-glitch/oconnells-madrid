@@ -1,7 +1,9 @@
 import Link from "next/link";
+import { FixtureStrip } from "@/components/FixtureStrip";
 import { HomeCtaBand } from "@/components/HomeCtaBand";
 import { PageShell } from "@/components/PageShell";
-import { HighlightCards, Section } from "@/components/Prose";
+import { Section } from "@/components/Prose";
+import { ThursdayFeature } from "@/components/ThursdayFeature";
 import { VenueHero } from "@/components/VenueHero";
 import { buildMetadata } from "@/lib/seo";
 import {
@@ -32,114 +34,67 @@ export default function HomePage() {
         </>
       }
     >
-      <header className="mb-8 max-w-3xl">
-        <h1 className="font-serif text-3xl font-bold leading-tight text-cream sm:text-4xl lg:text-[2.75rem]">
+      <header className="mb-10 max-w-2xl">
+        <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.28em] text-gold">
+          Espoz y Mina · Puerta del Sol
+        </p>
+        <h1 className="font-serif text-3xl font-bold leading-tight text-cream sm:text-4xl">
           Irish pub & sports bar in Madrid Centro
         </h1>
-        <p className="mt-4 text-base leading-relaxed text-cream/80 sm:text-lg">
+        <p className="mt-4 text-base leading-relaxed text-cream-muted sm:text-lg">
           Big screens for football, Thursday €1 shots and a short walk from
           Puerta del Sol.
         </p>
       </header>
-      <HighlightCards
-        items={[
-          {
-            href: "/sports",
-            title: "Sports & screens",
-            blurb: "PL, Champions League, LaLiga — NFL & NBA when shown.",
-          },
-          {
-            href: "/whats-on",
-            title: "What's on",
-            blurb: "Tonight's confirmed fixtures and weekly nights.",
-          },
-          {
-            href: "/thursday-1-euro-shots",
-            title: "Thursday €1 shots",
-            blurb: "The night for Erasmus, tourists and friend groups.",
-          },
-          {
-            href: "/erasmus",
-            title: "Erasmus & internationals",
-            blurb: "Easy meetup near Sol — English-friendly pub energy.",
-          },
-          {
-            href: "/location",
-            title: "Location",
-            blurb: "Calle de Espoz y Mina 7, 28012 Madrid.",
-          },
-          {
-            href: MAPS_URL,
-            title: "Directions",
-            blurb: "Open Google Maps — short walk from Puerta del Sol.",
-          },
-        ]}
-      />
-      <Section title="Watch football in Madrid Centro">
-        <p>
-          Planning a trip and searching for somewhere to watch football near
-          Sol? {SITE_NAME} is an Irish sports pub a short walk from Puerta del
-          Sol — Premier League Saturdays, Champions League midweeks, and LaLiga
-          nights on the screens, with NFL and NBA when those games are on.
-        </p>
-        <p>
-          <Link href="/watch-football-madrid" className="text-cream underline">
-            Watch football in Madrid
-          </Link>
-          {" · "}
-          <Link href="/premier-league" className="text-cream underline">
-            Premier League
-          </Link>
-          {" · "}
-          <Link href="/champions-league" className="text-cream underline">
-            Champions League
-          </Link>
-        </p>
-      </Section>
-      <Section title="Thursday €1 shots" featured>
-        <p>
-          Thursdays mean €1 shots — the easy night out for Erasmus students,
-          internationals and anyone exploring Madrid Centro. Wednesday €1 shots
-          are on too; Thursday is the one everyone talks about.
-        </p>
-        <p>
-          <Link
-            href="/thursday-1-euro-shots"
-            className="inline-flex rounded-md bg-cream px-4 py-2 font-semibold text-pub-green hover:bg-cream/90"
-          >
-            Thursday €1 details
-          </Link>
-        </p>
-      </Section>
+
+      <FixtureStrip locale="en" />
+      <ThursdayFeature locale="en" />
+
+      <section className="mb-12 grid gap-8 sm:grid-cols-2">
+        <div>
+          <h2 className="font-serif text-xl font-bold text-cream">Erasmus nights</h2>
+          <div className="pub-rule my-3" />
+          <p className="text-cream-muted">
+            An easy meetup near Sol — English-friendly, screens on, and Thursday
+            as the night everyone remembers.
+          </p>
+          <p className="mt-3">
+            <Link href="/erasmus" className="text-sm text-gold hover:text-cream">
+              Erasmus at O&apos;Connell&apos;s →
+            </Link>
+          </p>
+        </div>
+        <div>
+          <h2 className="font-serif text-xl font-bold text-cream">Find the door</h2>
+          <div className="pub-rule my-3" />
+          <p className="text-cream-muted">
+            {ADDRESS.full}. Red facade, green trim, gold lettering — you will
+            know it when you see it.
+          </p>
+          <p className="mt-3">
+            <Link href="/location" className="text-sm text-gold hover:text-cream">
+              Location &amp; hours →
+            </Link>
+          </p>
+        </div>
+      </section>
+
       <Section title="Find us">
         <p>
-          {ADDRESS.full}. Call{" "}
-          <a href={PHONE_TEL} className="text-cream underline">
+          Call{" "}
+          <a href={PHONE_TEL} className="text-gold underline">
             {PHONE_DISPLAY}
           </a>{" "}
-          or get{" "}
+          or open{" "}
           <a
             href={MAPS_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-cream underline"
+            className="text-gold underline"
           >
-            directions on Google Maps
+            Google Maps
           </a>
           . {HOURS.summaryEn}.
-        </p>
-        <p>
-          <Link href="/location" className="text-cream underline">
-            Location
-          </Link>
-          {" · "}
-          <Link href="/whats-on" className="text-cream underline">
-            What&apos;s on
-          </Link>
-          {" · "}
-          <Link href="/about" className="text-cream underline">
-            About
-          </Link>
         </p>
       </Section>
     </PageShell>

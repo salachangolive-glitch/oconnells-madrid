@@ -1,14 +1,14 @@
 import Link from "next/link";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
-import { VenueHero } from "@/components/VenueHero";
+import { ThursdayFeature } from "@/components/ThursdayFeature";
 import { buildMetadata } from "@/lib/seo";
 import { SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
   title: "Noches Erasmus cerca de Puerta del Sol",
   description:
-    "Pub irlandés friendly para Erasmus cerca de Sol: jueves chupitos €1, pantallas de fútbol, quedar fácil en Madrid Centro. O'Connell St, Espoz y Mina 7.",
+    "Pub irlandés friendly para Erasmus cerca de Sol: jueves chupitos €1, pantallas de fútbol, quedar fácil en Madrid Centro.",
   path: "/es/erasmus",
   locale: "es",
 });
@@ -17,42 +17,27 @@ export default function EsErasmusPage() {
   return (
     <PageShell locale="es" altLangHref="/erasmus">
       <PageHero
-        eyebrow="Erasmus · Internacionales · Madrid"
-        title={`Noches para estudiantes en ${SITE_NAME}`}
-        lead="Pub irlandés céntrico y fácil para internacionales — jueves de chupitos €1, fútbol en pantallas y un punto de encuentro que todo el mundo encuentra cerca de Puerta del Sol."
+        eyebrow="Erasmus · Internacionales"
+        title={`Tu noche en ${SITE_NAME}`}
+        lead="Quedar cerca de Sol, ver el partido y quedarte al jueves €1 — el ambiente de un Irish pub de verdad en Madrid Centro."
       />
-      <VenueHero className="mb-10" aspect="video" caption="Noches Erasmus · Sol" />
-      <Section title="Haz del jueves tu noche" featured>
+      <ThursdayFeature locale="es" />
+      <Section title="Por qué funciona">
         <p>
-          Los jueves de chupitos €1 son el ritual semanal fácil para Erasmus e
-          internacionales. También hay miércoles €1 — el jueves es el que va al
-          grupo de WhatsApp.
+          Central para que todo el mundo llegue. Friendly en barra. Pantallas
+          cuando hay partido gordo. Pon el jueves en el grupo y el resto se
+          organiza solo.
         </p>
         <p>
-          <Link
-            href="/es/thursday-1-euro-shots"
-            className="inline-flex rounded-md bg-cream px-4 py-2 font-semibold text-pub-green hover:bg-cream/90"
-          >
-            Jueves chupitos €1
-          </Link>
-        </p>
-      </Section>
-      <Section title="Por qué Sol">
-        <p>
-          Cerca de Puerta del Sol facilita quedar en grupo — seas nuevo en
-          Madrid Centro o enseñes la ciudad a amigos. Mira Premier League,
-          Champions League o LaLiga en pantallas y quédate la noche.
-        </p>
-        <p>
-          <Link href="/es/sports" className="text-cream underline">
+          <Link href="/es/sports" className="text-gold underline">
             Deportes
           </Link>
           {" · "}
-          <Link href="/es/location" className="text-cream underline">
+          <Link href="/es/location" className="text-gold underline">
             Ubicación
           </Link>
           {" · "}
-          <Link href="/whats-on" className="text-cream underline">
+          <Link href="/whats-on" className="text-gold underline">
             What&apos;s on
           </Link>
         </p>

@@ -12,7 +12,7 @@ export function PageHero({
   return (
     <header className="mb-8 max-w-3xl">
       {eyebrow ? (
-        <p className="mb-2 text-xs font-semibold uppercase tracking-[0.22em] text-pub-green-light">
+        <p className="mb-2 text-xs font-semibold uppercase tracking-[0.22em] text-gold">
           {eyebrow}
         </p>
       ) : null}

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist_Mono, Libre_Baskerville, Source_Sans_3 } from "next/font/google";
 import { JsonLd } from "@/components/JsonLd";
 import { barOrPubJsonLd } from "@/lib/jsonld";
 import {
@@ -10,9 +10,16 @@ import {
 } from "@/lib/venue";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const sourceSans = Source_Sans_3({
+  variable: "--font-source-sans",
   subsets: ["latin"],
+  weight: ["400", "600", "700"],
+});
+
+const libreBaskerville = Libre_Baskerville({
+  variable: "--font-libre-baskerville",
+  subsets: ["latin"],
+  weight: ["400", "700"],
 });
 
 const geistMono = Geist_Mono({
@@ -42,9 +49,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${sourceSans.variable} ${libreBaskerville.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="flex min-h-full flex-col bg-black text-cream">
+      <body className="flex min-h-full flex-col text-cream">
         <JsonLd data={barOrPubJsonLd()} />
         {children}
       </body>
