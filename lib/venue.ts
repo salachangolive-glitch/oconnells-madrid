@@ -84,6 +84,7 @@ export const EN_PATHS = [
   "/about",
   "/location",
   "/whats-on",
+  "/contact",
 ] as const;
 
 export const ES_PATHS = [
@@ -97,6 +98,7 @@ export const ES_PATHS = [
   "/es/about",
   "/es/location",
   "/es/whats-on",
+  "/es/contact",
 ] as const;
 
 export const ALL_CONTENT_PATHS = [...EN_PATHS, ...ES_PATHS] as const;
@@ -113,4 +115,5 @@ export const HREFLANG_PAIRS: Record<string, string | undefined> = {
   "/about": "/es/about",
   "/location": "/es/location",
   "/whats-on": "/es/whats-on",
+  "/contact": "/es/contact",
 };

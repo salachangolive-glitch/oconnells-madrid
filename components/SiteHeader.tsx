@@ -12,6 +12,7 @@ const nav = {
     { href: "/location", label: "Location" },
     { href: "/watch-football-madrid", label: "Football" },
     { href: "/about", label: "About" },
+    { href: "/contact", label: "Contact" },
   ],
   es: [
     { href: "/es/sports", label: "Deportes" },
@@ -21,6 +22,7 @@ const nav = {
     { href: "/es/location", label: "Ubicación" },
     { href: "/es/watch-football-madrid", label: "Fútbol" },
     { href: "/es/about", label: "Sobre nosotros" },
+    { href: "/es/contact", label: "Contacto" },
   ],
 } as const;
 

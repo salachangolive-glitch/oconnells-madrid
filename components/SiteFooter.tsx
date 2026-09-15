@@ -75,6 +75,14 @@ export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
               </Link>
             </li>
             <li>
+              <Link
+                href={isEs ? "/es/contact" : "/contact"}
+                className="hover:text-gold"
+              >
+                {isEs ? "Contacto" : "Contact"}
+              </Link>
+            </li>
+            <li>
               <a
                 href={MAPS_URL}
                 target="_blank"
