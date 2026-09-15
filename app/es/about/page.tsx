@@ -21,12 +21,7 @@ export default function EsAboutPage() {
         title={SITE_NAME}
         lead="Pub irlandés y sports bar en el corazón de Madrid — Premier League, Champions League y LaLiga en pantallas, jueves chupitos €1 para Erasmus e internacionales."
       />
-      <VenueHero
-        src="/images/oconnell-fachada.jpg"
-        alt="Pub irlandés O'Connell St cerca de Puerta del Sol"
-        className="mb-10"
-        aspect="wide"
-      />
+      <VenueHero variant="secondary" className="mb-10" />
       <Section title="En resumen">
         <p>
           Estamos en {ADDRESS.full}, cerca de Puerta del Sol en Madrid Centro.

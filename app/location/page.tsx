@@ -28,10 +28,9 @@ export default function LocationPage() {
         lead={`${ADDRESS.full} — a short walk from Puerta del Sol.`}
       />
       <VenueHero
-        src="/images/oconnell-fachada.jpg"
-        alt="O'Connell St facade on Calle de Espoz y Mina near Puerta del Sol"
+        variant="secondary"
+        alt="O'Connell St on Calle de Espoz y Mina near Puerta del Sol"
         className="mb-10"
-        aspect="wide"
       />
       <Section title="Address & contact">
         <p>{ADDRESS.full}</p>

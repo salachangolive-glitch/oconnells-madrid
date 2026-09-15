@@ -1,26 +1,35 @@
 import Image from "next/image";
 
 type Props = {
-  /** When set, shows the real facade (or other public image). */
-  src?: string;
+  variant?: "hero" | "secondary" | "gradient";
   alt?: string;
   className?: string;
+  /** @deprecated kept for call sites — maps to gradient */
   aspect?: "video" | "square" | "wide";
-  /** Overlay eyebrow text for gradient-only heroes */
   caption?: string;
+  src?: string;
 };
 
 /**
- * Hero media: real venue photo when available, otherwise a tasteful
- * Irish-pub green gradient — never NEED_REAL_PHOTO / fake stock.
+ * Real O'Connell St facade for home/location, or green gradient for other pages.
+ * Hero: desktop wide vs mobile entrance+sign crops. Soft overlay. priority, no lazy.
  */
 export function VenueHero({
-  src,
-  alt = "O'Connell St Irish pub near Puerta del Sol, Madrid",
+  variant,
+  alt = "O'Connell St Irish pub facade, Calle de Espoz y Mina 7, Madrid",
   className = "",
   aspect = "wide",
   caption,
+  src,
 }: Props) {
+  const mode =
+    variant ||
+    (src?.includes("fachada") || src?.includes("hero")
+      ? "hero"
+      : src
+        ? "secondary"
+        : "gradient");
+
   const aspectClass =
     aspect === "square"
       ? "aspect-square"
@@ -28,20 +37,50 @@ export function VenueHero({
         ? "aspect-[21/9]"
         : "aspect-video";
 
-  if (src) {
+  if (mode === "hero") {
     return (
       <div
-        className={`relative overflow-hidden rounded-xl border border-cream/15 shadow-lg shadow-black/40 ${aspectClass} ${className}`}
+        className={`relative overflow-hidden rounded-xl border border-cream/15 shadow-lg shadow-black/40 aspect-[4/5] sm:aspect-[2/1] ${className}`}
       >
         <Image
-          src={src}
+          src="/images/hero-fachada-mobile.webp"
           alt={alt}
           fill
           priority
-          sizes="(max-width: 1024px) 100vw, 1024px"
-          className="object-cover"
+          fetchPriority="high"
+          sizes="100vw"
+          className="object-cover object-center sm:hidden"
+          quality={85}
         />
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-black/20" />
+        <Image
+          src="/images/hero-fachada-desktop.webp"
+          alt={alt}
+          fill
+          priority
+          fetchPriority="high"
+          sizes="(max-width: 1280px) 100vw, 1200px"
+          className="hidden object-cover object-center sm:block"
+          quality={85}
+        />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-black/10" />
+      </div>
+    );
+  }
+
+  if (mode === "secondary") {
+    return (
+      <div
+        className={`relative aspect-[16/9] overflow-hidden rounded-xl border border-cream/15 shadow-lg shadow-black/40 ${className}`}
+      >
+        <Image
+          src="/images/fachada-secondary.webp"
+          alt={alt}
+          fill
+          sizes="(max-width: 768px) 100vw, 800px"
+          className="object-cover object-center"
+          quality={80}
+        />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
       </div>
     );
   }

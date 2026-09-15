@@ -28,12 +28,7 @@ export default function EsLocationPage() {
         title={`Cómo llegar a ${SITE_NAME}`}
         lead={`${ADDRESS.full} — a poca distancia de Puerta del Sol.`}
       />
-      <VenueHero
-        src="/images/oconnell-fachada.jpg"
-        alt="Fachada de O'Connell St en Calle de Espoz y Mina cerca de Sol"
-        className="mb-10"
-        aspect="wide"
-      />
+      <VenueHero variant="secondary" alt="O'Connell St en Calle de Espoz y Mina, cerca de Sol" className="mb-10" />
       <Section title="Dirección y contacto">
         <p>{ADDRESS.full}</p>
         <p>

@@ -24,16 +24,11 @@ export default function EsHomePage() {
   return (
     <PageShell locale="es" altLangHref="/">
       <PageHero
-        eyebrow="Pub irlandés · Sol · Madrid Centro"
-        title={`${SITE_NAME} — ver fútbol cerca de Puerta del Sol`}
-        lead="Pub irlandés céntrico con pantallas para Premier League, Champions League y LaLiga — y jueves de chupitos €1 que llenan de Erasmus, internacionales y viajeros."
+        eyebrow="Espoz y Mina · Puerta del Sol"
+        title="Pub irlandés y sports bar en Madrid Centro"
+        lead="Pantallas para el fútbol. Jueves chupitos €1. A un paso de Sol."
       />
-      <VenueHero
-        src="/images/oconnell-fachada.jpg"
-        alt="Fachada de O'Connell St, Calle de Espoz y Mina 7, cerca de Puerta del Sol"
-        className="mb-10"
-        aspect="wide"
-      />
+      <VenueHero variant="hero" className="mb-8" />
       <HighlightCards
         items={[
           {

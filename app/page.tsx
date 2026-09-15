@@ -23,16 +23,11 @@ export default function HomePage() {
   return (
     <PageShell locale="en" altLangHref="/es">
       <PageHero
-        eyebrow="Irish sports pub · Sol · Madrid Centro"
-        title={`${SITE_NAME} — watch football near Puerta del Sol`}
-        lead="Central Irish pub with the big screens on for Premier League, Champions League and LaLiga — plus Thursday €1 shots that draw Erasmus, internationals and weekend travellers."
+        eyebrow="Espoz y Mina · Puerta del Sol"
+        title="Irish pub & sports bar in Madrid Centro"
+        lead="Big screens for the football. Thursday €1 shots. A short walk from Sol."
       />
-      <VenueHero
-        src="/images/oconnell-fachada.jpg"
-        alt="Facade of O'Connell St Irish pub, Calle de Espoz y Mina 7, near Puerta del Sol"
-        className="mb-10"
-        aspect="wide"
-      />
+      <VenueHero variant="hero" className="mb-8" />
       <HighlightCards
         items={[
           {

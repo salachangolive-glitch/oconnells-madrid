@@ -20,12 +20,7 @@ export default function AboutPage() {
         title={SITE_NAME}
         lead="An Irish pub and sports bar in the heart of Madrid — Premier League, Champions League and LaLiga on the screens, Thursday €1 shots for Erasmus and internationals."
       />
-      <VenueHero
-        src="/images/oconnell-fachada.jpg"
-        alt="O'Connell St Irish pub near Puerta del Sol"
-        className="mb-10"
-        aspect="wide"
-      />
+      <VenueHero variant="secondary" className="mb-10" />
       <Section title="The short version">
         <p>
           We are at {ADDRESS.full}, near Puerta del Sol in Madrid Centro. Phone:{" "}
