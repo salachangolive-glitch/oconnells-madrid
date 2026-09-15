@@ -12,7 +12,9 @@ type Props = {
 
 /**
  * Real O'Connell St facade for home/location, or green gradient for other pages.
- * Hero: desktop wide vs mobile entrance+sign crops. Soft overlay. priority, no lazy.
+ * Hero: same wide facade photo; mobile uses a low horizontal frame so the full
+ * width (and O'CONNELL ST.) stays readable — no aggressive portrait crop.
+ * Soft overlay. priority, no lazy.
  */
 export function VenueHero({
   variant,
@@ -40,29 +42,20 @@ export function VenueHero({
   if (mode === "hero") {
     return (
       <div
-        className={`relative overflow-hidden rounded-xl border border-cream/15 shadow-lg shadow-black/40 aspect-[4/5] sm:aspect-[2/1] ${className}`}
+        className={`relative overflow-hidden rounded-xl border border-cream/15 shadow-lg shadow-black/40 bg-gradient-to-br from-[#0a2f24] via-black to-[#061a14] aspect-[16/9] sm:aspect-[2/1] ${className}`}
       >
-        <Image
-          src="/images/hero-fachada-mobile.webp"
-          alt={alt}
-          fill
-          priority
-          fetchPriority="high"
-          sizes="100vw"
-          className="object-cover object-center sm:hidden"
-          quality={85}
-        />
+        {/* Mobile + desktop: same wide facade asset — horizontal frame, contain so full width & sign stay visible */}
         <Image
           src="/images/hero-fachada-desktop.webp"
           alt={alt}
           fill
           priority
           fetchPriority="high"
-          sizes="(max-width: 1280px) 100vw, 1200px"
-          className="hidden object-cover object-center sm:block"
+          sizes="(max-width: 640px) 100vw, (max-width: 1280px) 100vw, 1200px"
+          className="object-contain object-center sm:object-cover"
           quality={85}
         />
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-black/10" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-black/10" />
       </div>
     );
   }
