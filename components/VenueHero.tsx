@@ -11,10 +11,8 @@ type Props = {
 };
 
 /**
- * Real O'Connell St facade for home/location, or green gradient for other pages.
- * Hero: same wide facade photo; mobile uses a low horizontal frame so the full
- * width (and O'CONNELL ST.) stays readable — no aggressive portrait crop.
- * Soft overlay. priority, no lazy.
+ * Real O'Connell St facade. Hero = clean photo only (no text/buttons/dark
+ * overlays on the image). Wide horizontal frame so O'CONNELL ST. stays readable.
  */
 export function VenueHero({
   variant,
@@ -42,20 +40,18 @@ export function VenueHero({
   if (mode === "hero") {
     return (
       <div
-        className={`relative overflow-hidden rounded-xl border border-cream/15 shadow-lg shadow-black/40 bg-gradient-to-br from-[#0a2f24] via-black to-[#061a14] aspect-[16/9] sm:aspect-[2/1] ${className}`}
+        className={`relative w-full overflow-hidden bg-[#0a2f24] aspect-[16/9] sm:aspect-[2/1] ${className}`}
       >
-        {/* Mobile + desktop: same wide facade asset — horizontal frame, contain so full width & sign stay visible */}
         <Image
           src="/images/hero-fachada-desktop.webp"
           alt={alt}
           fill
           priority
           fetchPriority="high"
-          sizes="(max-width: 640px) 100vw, (max-width: 1280px) 100vw, 1200px"
-          className="object-contain object-center sm:object-cover"
+          sizes="100vw"
+          className="object-contain object-center"
           quality={85}
         />
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-black/10" />
       </div>
     );
   }
@@ -73,7 +69,6 @@ export function VenueHero({
           className="object-cover object-center"
           quality={80}
         />
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
       </div>
     );
   }

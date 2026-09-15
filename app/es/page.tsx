@@ -1,6 +1,7 @@
 import Link from "next/link";
+import { HomeCtaBand } from "@/components/HomeCtaBand";
 import { PageShell } from "@/components/PageShell";
-import { HighlightCards, PageHero, Section } from "@/components/Prose";
+import { HighlightCards, Section } from "@/components/Prose";
 import { VenueHero } from "@/components/VenueHero";
 import { buildMetadata } from "@/lib/seo";
 import {
@@ -22,13 +23,25 @@ export const metadata = buildMetadata({
 
 export default function EsHomePage() {
   return (
-    <PageShell locale="es" altLangHref="/">
-      <PageHero
-        eyebrow="Espoz y Mina · Puerta del Sol"
-        title="Pub irlandés y sports bar en Madrid Centro"
-        lead="Pantallas para el fútbol. Jueves chupitos €1. A un paso de Sol."
-      />
-      <VenueHero variant="hero" className="mb-8" />
+    <PageShell
+      locale="es"
+      altLangHref="/"
+      cover={
+        <>
+          <VenueHero variant="hero" />
+          <HomeCtaBand locale="es" />
+        </>
+      }
+    >
+      <header className="mb-8 max-w-3xl">
+        <h1 className="font-serif text-3xl font-bold leading-tight text-cream sm:text-4xl lg:text-[2.75rem]">
+          Pub irlandés y sports bar en Madrid Centro
+        </h1>
+        <p className="mt-4 text-base leading-relaxed text-cream/80 sm:text-lg">
+          Pantallas para el fútbol, jueves chupitos €1 y a un paso de Puerta del
+          Sol.
+        </p>
+      </header>
       <HighlightCards
         items={[
           {
@@ -89,8 +102,8 @@ export default function EsHomePage() {
       </Section>
       <Section title="Jueves chupitos €1" featured>
         <p>
-          Los jueves son chupitos a €1 — la noche fácil para Erasmus,
-          internacionales y quien explore Madrid Centro. También hay miércoles
+          Los jueves son chupitos €1 — la noche fácil para Erasmus,
+          internacionales y quien explora Madrid Centro. También hay miércoles
           €1; el jueves es el que todo el mundo menciona.
         </p>
         <p>
@@ -102,7 +115,7 @@ export default function EsHomePage() {
           </Link>
         </p>
       </Section>
-      <Section title="Cómo llegar">
+      <Section title="Cómo encontrarnos">
         <p>
           {ADDRESS.full}. Llama al{" "}
           <a href={PHONE_TEL} className="text-cream underline">
@@ -115,7 +128,7 @@ export default function EsHomePage() {
             rel="noopener noreferrer"
             className="text-cream underline"
           >
-            Google Maps
+            cómo llegar en Google Maps
           </a>
           . {HOURS.summaryEs}.
         </p>

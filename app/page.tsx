@@ -1,6 +1,7 @@
 import Link from "next/link";
+import { HomeCtaBand } from "@/components/HomeCtaBand";
 import { PageShell } from "@/components/PageShell";
-import { HighlightCards, PageHero, Section } from "@/components/Prose";
+import { HighlightCards, Section } from "@/components/Prose";
 import { VenueHero } from "@/components/VenueHero";
 import { buildMetadata } from "@/lib/seo";
 import {
@@ -21,13 +22,25 @@ export const metadata = buildMetadata({
 
 export default function HomePage() {
   return (
-    <PageShell locale="en" altLangHref="/es">
-      <PageHero
-        eyebrow="Espoz y Mina · Puerta del Sol"
-        title="Irish pub & sports bar in Madrid Centro"
-        lead="Big screens for the football. Thursday €1 shots. A short walk from Sol."
-      />
-      <VenueHero variant="hero" className="mb-8" />
+    <PageShell
+      locale="en"
+      altLangHref="/es"
+      cover={
+        <>
+          <VenueHero variant="hero" />
+          <HomeCtaBand locale="en" />
+        </>
+      }
+    >
+      <header className="mb-8 max-w-3xl">
+        <h1 className="font-serif text-3xl font-bold leading-tight text-cream sm:text-4xl lg:text-[2.75rem]">
+          Irish pub & sports bar in Madrid Centro
+        </h1>
+        <p className="mt-4 text-base leading-relaxed text-cream/80 sm:text-lg">
+          Big screens for football, Thursday €1 shots and a short walk from
+          Puerta del Sol.
+        </p>
+      </header>
       <HighlightCards
         items={[
           {
