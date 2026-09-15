@@ -25,7 +25,7 @@ function resolvePreviewMode() {
   if (process.env.SITE_PREVIEW === "1") return true;
   const url =
     process.env.NEXT_PUBLIC_SITE_URL ||
-    "https://oconnells-madrid.vercel.app";
+    "https://oconnells-madrid.pages.dev";
   try {
     return isPreviewHostname(new URL(url).hostname);
   } catch {

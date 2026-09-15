@@ -71,7 +71,8 @@ export function isPreviewHost(url = getSiteUrl()): boolean {
 /** Domain TBD — override with NEXT_PUBLIC_SITE_URL after custom domain. */
 export function getSiteUrl(): string {
   const fromEnv = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "");
-  return fromEnv || "https://oconnells-madrid.vercel.app";
+  // Live interim host is Cloudflare Pages until custom domain is set.
+  return fromEnv || "https://oconnells-madrid.pages.dev";
 }
 
 export const EN_PATHS = [
