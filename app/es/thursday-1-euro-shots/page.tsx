@@ -28,7 +28,7 @@ export default function EsThursdayShotsPage() {
         </p>
         <p>También hay miércoles a 1 €. El jueves es el que más se nota.</p>
       </Section>
-      <Section title="Buenas saberlo">
+      <Section title="Bueno saberlo">
         <ul className="list-disc space-y-2 pl-5">
           <li>Cerca de Sol — fácil para grupos mezclados y viajeros.</li>
           <li>Pregunta en barra qué se sirve esa noche.</li>
