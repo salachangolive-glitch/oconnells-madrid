@@ -2,12 +2,12 @@ import Link from "next/link";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
 import { buildMetadata } from "@/lib/seo";
-import { MAPS_URL, PHONE_DISPLAY, PHONE_TEL, SITE_NAME } from "@/lib/venue";
+import { MAPS_URL, SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
   title: "Jueves chupitos a 1 € cerca de Puerta del Sol",
   description:
-    "Jueves chupitos a 1 € en O'Connell St Madrid — Erasmus, internacionales, turistas y grupos cerca de Sol. También miércoles a 1 €. Tel. +34 915 32 79 56.",
+    "Jueves chupitos a 1 € en O'Connell St Madrid — Erasmus, internacionales, turistas y grupos cerca de Sol. También miércoles a 1 €.",
   path: "/es/thursday-1-euro-shots",
   locale: "es",
 });
@@ -41,11 +41,7 @@ export default function EsThursdayShotsPage() {
           </li>
         </ul>
         <p>
-          ¿Dudas? Llama al{" "}
-          <a href={PHONE_TEL} className="text-gold underline">
-            {PHONE_DISPLAY}
-          </a>
-          .{" "}
+          ¿Dudas? <Link href="/es/contact" className="text-gold underline">Escríbenos</Link>. {" "}
           <a
             href={MAPS_URL}
             target="_blank"

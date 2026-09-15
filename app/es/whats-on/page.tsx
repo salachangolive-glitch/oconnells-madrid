@@ -8,7 +8,7 @@ import {
   RECURRING,
 } from "@/lib/fixtures";
 import { buildMetadata } from "@/lib/seo";
-import { MAPS_URL, PHONE_DISPLAY, PHONE_TEL, SITE_NAME } from "@/lib/venue";
+import { MAPS_URL, SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
   title: "Partidos — fútbol y jueves chupitos a 1 €",
@@ -60,10 +60,10 @@ export default function EsWhatsOnPage() {
           </ul>
         ) : (
           <p>
-            Aún no hay partido fechado para hoy. Llama al{" "}
-            <a href={PHONE_TEL} className="text-gold underline">
-              {PHONE_DISPLAY}
-            </a>{" "}
+            Aún no hay partido fechado para hoy.{" "}
+            <Link href="/es/contact" className="text-gold underline">
+              Escríbenos
+            </Link>{" "}
             si necesitas confirmar un partido concreto.
           </p>
         )}

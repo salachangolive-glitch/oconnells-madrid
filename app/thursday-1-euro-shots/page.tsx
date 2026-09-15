@@ -2,12 +2,12 @@ import Link from "next/link";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
 import { buildMetadata } from "@/lib/seo";
-import { MAPS_URL, PHONE_DISPLAY, PHONE_TEL, SITE_NAME } from "@/lib/venue";
+import { MAPS_URL, SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
   title: "Thursday €1 shots near Puerta del Sol",
   description:
-    "Thursday €1 shots at O'Connell St Madrid — Erasmus, internationals, tourists and friend groups near Sol. Wednesday €1 shots also on. Call +34 915 32 79 56.",
+    "Thursday €1 shots at O'Connell St Madrid — Erasmus, internationals, tourists and friend groups near Sol. Wednesday €1 shots also on.",
   path: "/thursday-1-euro-shots",
 });
 
@@ -40,10 +40,10 @@ export default function ThursdayShotsPage() {
           </li>
         </ul>
         <p>
-          Questions? Call{" "}
-          <a href={PHONE_TEL} className="text-gold underline">
-            {PHONE_DISPLAY}
-          </a>
+          Questions?{" "}
+          <Link href="/contact" className="text-gold underline">
+            Contact us
+          </Link>
           .{" "}
           <a
             href={MAPS_URL}

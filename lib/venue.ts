@@ -12,7 +12,7 @@ export const ADDRESS = {
   full: "Calle de Espoz y Mina, 7, 28012 Madrid",
 } as const;
 
-/** Live GBP phone — NOT 915 22 75 09 */
+/** GBP phone only — DO NOT show on the new website (web contact = form / future info@). NOT 915 22 75 09 */
 export const PHONE_DISPLAY = "+34 915 32 79 56";
 export const PHONE_TEL = "tel:+34915327956";
 

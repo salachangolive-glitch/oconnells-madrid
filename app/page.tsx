@@ -9,8 +9,6 @@ import {
   ADDRESS,
   HOURS,
   MAPS_URL,
-  PHONE_DISPLAY,
-  PHONE_TEL,
   SITE_NAME,
 } from "@/lib/venue";
 
@@ -81,11 +79,7 @@ export default function HomePage() {
 
       <Section title="Find us">
         <p>
-          Call{" "}
-          <a href={PHONE_TEL} className="text-gold underline">
-            {PHONE_DISPLAY}
-          </a>{" "}
-          or open{" "}
+          Open{" "}
           <a
             href={MAPS_URL}
             target="_blank"
@@ -93,6 +87,10 @@ export default function HomePage() {
             className="text-gold underline"
           >
             Google Maps
+          </a>{" "}
+          or{" "}
+          <a href="/contact" className="text-gold underline">
+            contact us
           </a>
           . {HOURS.summaryEn}.
         </p>

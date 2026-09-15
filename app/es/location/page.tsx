@@ -7,15 +7,13 @@ import {
   ADDRESS,
   HOURS,
   MAPS_URL,
-  PHONE_DISPLAY,
-  PHONE_TEL,
   SITE_NAME,
 } from "@/lib/venue";
 
 export const metadata = buildMetadata({
   title: "Ubicación — Calle de Espoz y Mina 7, cerca de Sol",
   description:
-    "Encuentra O'Connell St en Calle de Espoz y Mina 7, 28012 Madrid, cerca de Puerta del Sol. Cómo llegar en Google Maps. Tel. +34 915 32 79 56.",
+    "Encuentra O'Connell St en Calle de Espoz y Mina 7, 28012 Madrid, cerca de Puerta del Sol. Cómo llegar en Google Maps.",
   path: "/es/location",
   locale: "es",
 });
@@ -29,12 +27,11 @@ export default function EsLocationPage() {
         lead={`${ADDRESS.full} — a poca distancia de Puerta del Sol.`}
       />
       <VenueHero variant="secondary" alt="O'Connell St en Calle de Espoz y Mina, cerca de Sol" className="mb-10" />
-      <Section title="Dirección y contacto">
+      <Section title="Dirección y horarios">
         <p>{ADDRESS.full}</p>
         <p>
-          Teléfono:{" "}
-          <a href={PHONE_TEL} className="text-cream underline">
-            {PHONE_DISPLAY}
+          <a href="/es/contact" className="text-cream underline">
+            Contacto
           </a>
         </p>
         <ul className="list-none space-y-1">

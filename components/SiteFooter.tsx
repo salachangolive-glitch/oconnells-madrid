@@ -3,8 +3,6 @@ import {
   ADDRESS,
   HOURS,
   MAPS_URL,
-  PHONE_DISPLAY,
-  PHONE_TEL,
   SITE_NAME,
 } from "@/lib/venue";
 
@@ -18,11 +16,6 @@ export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
         <div>
           <p className="font-serif text-lg text-cream">{SITE_NAME}</p>
           <p className="mt-2">{ADDRESS.full}</p>
-          <p className="mt-1">
-            <a href={PHONE_TEL} className="hover:text-gold">
-              {PHONE_DISPLAY}
-            </a>
-          </p>
           <p className="mt-3 text-cream/55">
             {isEs ? HOURS.summaryEs : HOURS.summaryEn}
           </p>

@@ -7,15 +7,13 @@ import {
   ADDRESS,
   HOURS,
   MAPS_URL,
-  PHONE_DISPLAY,
-  PHONE_TEL,
   SITE_NAME,
 } from "@/lib/venue";
 
 export const metadata = buildMetadata({
   title: "Location — Calle de Espoz y Mina 7, near Sol",
   description:
-    "Find O'Connell St at Calle de Espoz y Mina 7, 28012 Madrid, near Puerta del Sol. Google Maps directions. Phone +34 915 32 79 56.",
+    "Find O'Connell St at Calle de Espoz y Mina 7, 28012 Madrid, near Puerta del Sol. Google Maps directions.",
   path: "/location",
 });
 
@@ -32,12 +30,11 @@ export default function LocationPage() {
         alt="O'Connell St on Calle de Espoz y Mina near Puerta del Sol"
         className="mb-10"
       />
-      <Section title="Address & contact">
+      <Section title="Address & hours">
         <p>{ADDRESS.full}</p>
         <p>
-          Phone:{" "}
-          <a href={PHONE_TEL} className="text-cream underline">
-            {PHONE_DISPLAY}
+          <a href="/contact" className="text-cream underline">
+            Contact
           </a>
         </p>
         <ul className="list-none space-y-1">

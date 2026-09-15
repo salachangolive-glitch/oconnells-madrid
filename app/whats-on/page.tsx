@@ -8,7 +8,7 @@ import {
   RECURRING,
 } from "@/lib/fixtures";
 import { buildMetadata } from "@/lib/seo";
-import { MAPS_URL, PHONE_DISPLAY, PHONE_TEL, SITE_NAME } from "@/lib/venue";
+import { MAPS_URL, SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
   title: "Fixtures — football & Thursday €1 shots",
@@ -59,10 +59,10 @@ export default function WhatsOnPage() {
           </ul>
         ) : (
           <p>
-            No dated fixture listed for tonight yet. Call{" "}
-            <a href={PHONE_TEL} className="text-gold underline">
-              {PHONE_DISPLAY}
-            </a>{" "}
+            No dated fixture listed for tonight yet.{" "}
+            <Link href="/contact" className="text-gold underline">
+              Contact us
+            </Link>{" "}
             if you need a specific match confirmed.
           </p>
         )}

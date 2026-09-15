@@ -4,7 +4,6 @@ import {
   getSiteUrl,
   HOURS,
   MAPS_URL,
-  PHONE_DISPLAY,
   SITE_NAME,
   SITE_TAGLINE,
 } from "./venue";
@@ -16,7 +15,6 @@ export function barOrPubJsonLd() {
     name: SITE_NAME,
     description: `${SITE_NAME} — ${SITE_TAGLINE}. Screens for ${FACTS.football.join(", ")}; ${FACTS.otherSports.join(" / ")} when shown. ${FACTS.thursdayShots}.`,
     url: getSiteUrl(),
-    telephone: PHONE_DISPLAY,
     address: {
       "@type": "PostalAddress",
       streetAddress: ADDRESS.street,

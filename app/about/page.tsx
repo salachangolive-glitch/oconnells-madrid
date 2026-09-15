@@ -3,7 +3,7 @@ import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
 import { VenueHero } from "@/components/VenueHero";
 import { buildMetadata } from "@/lib/seo";
-import { ADDRESS, HOURS, PHONE_DISPLAY, PHONE_TEL, SITE_NAME } from "@/lib/venue";
+import { ADDRESS, HOURS, SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
   title: "About O'Connell St Madrid",
@@ -23,11 +23,8 @@ export default function AboutPage() {
       <VenueHero variant="secondary" className="mb-10" />
       <Section title="The short version">
         <p>
-          We are at {ADDRESS.full}, near Puerta del Sol in Madrid Centro. Phone:{" "}
-          <a href={PHONE_TEL} className="text-cream underline">
-            {PHONE_DISPLAY}
-          </a>
-          . {HOURS.summaryEn}.
+          We are at {ADDRESS.full}, near Puerta del Sol in Madrid Centro.{" "}
+          {HOURS.summaryEn}.
         </p>
         <p>
           Come for the match, the pint, and Thursday €1 shots — a central Irish

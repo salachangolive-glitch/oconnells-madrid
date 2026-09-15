@@ -3,7 +3,7 @@ import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
 import { VenueHero } from "@/components/VenueHero";
 import { buildMetadata } from "@/lib/seo";
-import { ADDRESS, HOURS, PHONE_DISPLAY, PHONE_TEL, SITE_NAME } from "@/lib/venue";
+import { ADDRESS, HOURS, SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
   title: "Sobre O'Connell St Madrid",
@@ -25,11 +25,7 @@ export default function EsAboutPage() {
       <Section title="En resumen">
         <p>
           Estamos en {ADDRESS.full}, cerca de Puerta del Sol en Madrid Centro.
-          Teléfono:{" "}
-          <a href={PHONE_TEL} className="text-cream underline">
-            {PHONE_DISPLAY}
-          </a>
-          . {HOURS.summaryEs}.
+           {HOURS.summaryEs}.
         </p>
         <p>
           Ven por el partido, la pinta y los jueves de chupitos a 1 € — un pub irlandés
