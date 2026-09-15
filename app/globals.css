@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+:root {
+  --pub-green: #0b3d2e;
+  --pub-green-light: #1a6b4f;
+  --cream: #f5f0e6;
+  --black: #0a0a0a;
+}
+
+@theme inline {
+  --color-pub-green: var(--pub-green);
+  --color-pub-green-light: var(--pub-green-light);
+  --color-cream: var(--cream);
+  --color-background: var(--black);
+  --color-foreground: var(--cream);
+  --font-sans: var(--font-geist-sans);
+  --font-serif: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--black);
+  color: var(--cream);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0);
+}
+
+a {
+  text-underline-offset: 2px;
+}
