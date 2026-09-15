@@ -26,7 +26,7 @@ export default function EsPremierLeaguePage() {
         <p>
           Las jornadas grandes de sábado y domingo llenan Madrid Centro pronto.
           Si a tu grupo le importa un horario concreto, mira{" "}
-          <Link href="/whats-on" className="text-cream underline">
+          <Link href="/es/whats-on" className="text-cream underline">
             what&apos;s on
           </Link>{" "}
           o llama al bar. Combina el día de partido con{" "}

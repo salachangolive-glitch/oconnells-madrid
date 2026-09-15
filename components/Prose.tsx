@@ -12,15 +12,15 @@ export function PageHero({
   return (
     <header className="mb-8 max-w-3xl">
       {eyebrow ? (
-        <p className="mb-2 text-xs font-semibold uppercase tracking-[0.22em] text-gold">
+        <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-gold">
           {eyebrow}
         </p>
       ) : null}
-      <h1 className="font-serif text-3xl font-bold leading-tight text-cream sm:text-4xl lg:text-[2.75rem]">
+      <h1 className="font-serif text-2xl font-bold leading-snug text-cream sm:text-3xl lg:text-4xl">
         {title}
       </h1>
       {lead ? (
-        <p className="mt-4 text-base leading-relaxed text-cream/80 sm:text-lg">
+        <p className="mt-3 text-sm leading-relaxed text-cream-muted sm:mt-4 sm:text-base lg:text-lg">
           {lead}
         </p>
       ) : null}
@@ -41,7 +41,7 @@ export function Section({
     <section
       className={
         featured
-          ? "mb-10 rounded-xl border border-pub-green-light/40 bg-pub-green/40 p-5 sm:p-6"
+          ? "mb-10 border-l-2 border-gold pl-4 sm:pl-5"
           : "mb-10"
       }
     >

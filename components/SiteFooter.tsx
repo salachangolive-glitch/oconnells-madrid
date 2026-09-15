@@ -13,13 +13,13 @@ type Locale = "en" | "es";
 export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
   const isEs = locale === "es";
   return (
-    <footer className="mt-auto border-t border-cream/10 bg-black px-4 py-10 pb-28 text-sm text-cream/70">
+    <footer className="mt-auto border-t border-gold/15 bg-black px-4 py-10 pb-28 text-sm text-cream-muted">
       <div className="mx-auto grid max-w-5xl gap-8 sm:grid-cols-3">
         <div>
           <p className="font-serif text-lg text-cream">{SITE_NAME}</p>
           <p className="mt-2">{ADDRESS.full}</p>
           <p className="mt-1">
-            <a href={PHONE_TEL} className="hover:text-cream">
+            <a href={PHONE_TEL} className="hover:text-gold">
               {PHONE_DISPLAY}
             </a>
           </p>
@@ -35,14 +35,17 @@ export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
             <li>
               <Link
                 href={isEs ? "/es/sports" : "/sports"}
-                className="hover:text-cream"
+                className="hover:text-gold"
               >
                 {isEs ? "Deportes" : "Sports"}
               </Link>
             </li>
             <li>
-              <Link href="/whats-on" className="hover:text-cream">
-                What&apos;s on
+              <Link
+                href={isEs ? "/es/whats-on" : "/whats-on"}
+                className="hover:text-gold"
+              >
+                {isEs ? "Partidos" : "Fixtures"}
               </Link>
             </li>
             <li>
@@ -50,15 +53,15 @@ export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
                 href={
                   isEs ? "/es/thursday-1-euro-shots" : "/thursday-1-euro-shots"
                 }
-                className="hover:text-cream"
+                className="hover:text-gold"
               >
-                {isEs ? "Jueves chupitos €1" : "Thursday €1 shots"}
+                {isEs ? "Jueves chupitos a 1 €" : "Thursday €1 shots"}
               </Link>
             </li>
             <li>
               <Link
                 href={isEs ? "/es/erasmus" : "/erasmus"}
-                className="hover:text-cream"
+                className="hover:text-gold"
               >
                 Erasmus
               </Link>
@@ -66,7 +69,7 @@ export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
             <li>
               <Link
                 href={isEs ? "/es/location" : "/location"}
-                className="hover:text-cream"
+                className="hover:text-gold"
               >
                 {isEs ? "Ubicación" : "Location"}
               </Link>
@@ -76,7 +79,7 @@ export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
                 href={MAPS_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-cream"
+                className="hover:text-gold"
               >
                 {isEs ? "Cómo llegar" : "Directions"}
               </a>
@@ -85,11 +88,11 @@ export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
         </div>
         <div>
           <p className="mb-2 font-semibold uppercase tracking-wide text-cream/90">
-            {isEs ? "Madrid Centro" : "Madrid Centro"}
+            Madrid Centro
           </p>
           <p>
             {isEs
-              ? "Pub irlandés y sports bar cerca de Puerta del Sol — fútbol en pantallas, pintas y jueves €1."
+              ? "Irish pub y sports bar junto a Puerta del Sol — fútbol en pantallas, pintas y jueves de chupitos a 1 €."
               : "Irish pub & sports bar near Puerta del Sol — football screens, pints, and Thursday €1 shots."}
           </p>
         </div>

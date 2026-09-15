@@ -11,25 +11,26 @@ import { buildMetadata } from "@/lib/seo";
 import { MAPS_URL, PHONE_DISPLAY, PHONE_TEL, SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
-  title: "Fixtures — football & Thursday €1 shots",
+  title: "Partidos — fútbol y jueves chupitos a 1 €",
   description:
-    "Fixtures at O'Connell St Madrid near Sol: confirmed football matches, Premier League / Champions League / LaLiga screens, Thursday €1 shots.",
-  path: "/whats-on",
+    "Partidos en O'Connell St Madrid cerca de Sol: fútbol confirmado, Premier League / Champions League / LaLiga en pantallas, jueves chupitos a 1 €.",
+  path: "/es/whats-on",
+  locale: "es",
 });
 
-export default function WhatsOnPage() {
+export default function EsWhatsOnPage() {
   const tonight = getTonightFixtures();
   const upcoming = getUpcomingFixtures();
 
   return (
-    <PageShell locale="en" altLangHref="/es/whats-on">
+    <PageShell locale="es" altLangHref="/whats-on">
       <PageHero
-        eyebrow="Fixtures"
-        title={`This week at ${SITE_NAME}`}
-        lead="Confirmed matches when we have them, plus the weekly nights that keep the pub busy."
+        eyebrow="Partidos"
+        title={`Esta semana en ${SITE_NAME}`}
+        lead="Partidos confirmados cuando los tenemos, y las noches fijas del pub."
       />
 
-      <Section title="Tonight">
+      <Section title="Hoy">
         {tonight.length > 0 ? (
           <ul className="space-y-6">
             {tonight.map((f) => (
@@ -41,8 +42,8 @@ export default function WhatsOnPage() {
                   {f.homeTeam} vs {f.awayTeam}
                 </p>
                 <p className="mt-2 text-cream-muted">
-                  {formatFixtureDay(f.date, "en")}
-                  {f.kickoffMadrid ? ` · ${f.kickoffMadrid} Madrid` : null}
+                  {formatFixtureDay(f.date, "es")}
+                  {f.kickoffMadrid ? ` · ${f.kickoffMadrid} hora Madrid` : null}
                 </p>
                 <p className="mt-4">
                   <a
@@ -51,7 +52,7 @@ export default function WhatsOnPage() {
                     rel="noopener noreferrer"
                     className="text-sm text-gold hover:text-cream"
                   >
-                    Directions →
+                    Cómo llegar →
                   </a>
                 </p>
               </li>
@@ -59,17 +60,17 @@ export default function WhatsOnPage() {
           </ul>
         ) : (
           <p>
-            No dated fixture listed for tonight yet. Call{" "}
+            Aún no hay partido fechado para hoy. Llama al{" "}
             <a href={PHONE_TEL} className="text-gold underline">
               {PHONE_DISPLAY}
             </a>{" "}
-            if you need a specific match confirmed.
+            si necesitas confirmar un partido concreto.
           </p>
         )}
       </Section>
 
       {upcoming.length > tonight.length ? (
-        <Section title="Coming up">
+        <Section title="Próximamente">
           <ul className="space-y-4">
             {upcoming
               .filter((f) => !tonight.some((t) => t.id === f.id))
@@ -79,7 +80,7 @@ export default function WhatsOnPage() {
                   {" — "}
                   {f.homeTeam} vs {f.awayTeam}
                   {" · "}
-                  {formatFixtureDay(f.date, "en")}
+                  {formatFixtureDay(f.date, "es")}
                   {f.kickoffMadrid ? ` · ${f.kickoffMadrid}` : null}
                 </li>
               ))}
@@ -87,16 +88,19 @@ export default function WhatsOnPage() {
         </Section>
       ) : null}
 
-      <Section title="Every week">
+      <Section title="Cada semana">
         <ul className="list-disc space-y-2 pl-5">
-          <li>{RECURRING.football.en}</li>
+          <li>{RECURRING.football.es}</li>
           <li>
-            {RECURRING.thursdayShots.en} —{" "}
-            <Link href="/thursday-1-euro-shots" className="text-gold underline">
-              Thursday €1 shots
+            {RECURRING.thursdayShots.es} —{" "}
+            <Link
+              href="/es/thursday-1-euro-shots"
+              className="text-gold underline"
+            >
+              Jueves chupitos a 1 €
             </Link>
           </li>
-          <li>{RECURRING.wednesdayShots.en}</li>
+          <li>{RECURRING.wednesdayShots.es}</li>
         </ul>
       </Section>
     </PageShell>

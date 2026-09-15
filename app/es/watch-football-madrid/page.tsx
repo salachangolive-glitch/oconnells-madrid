@@ -31,7 +31,7 @@ export default function EsWatchFootballPage() {
         </p>
         <p>
           Mira{" "}
-          <Link href="/whats-on" className="text-cream underline">
+          <Link href="/es/whats-on" className="text-cream underline">
             what&apos;s on
           </Link>{" "}
           para partidos confirmados, o llama si un partido concreto es

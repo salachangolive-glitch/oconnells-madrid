@@ -32,11 +32,11 @@ export const FIXTURES: Fixture[] = [
 export const RECURRING = {
   thursdayShots: {
     en: "Thursday €1 shots — the night for Erasmus, internationals and friends near Sol",
-    es: "Jueves chupitos €1 — la noche para Erasmus, internacionales y amigos cerca de Sol",
+    es: "Jueves chupitos a 1 € — la noche para Erasmus, internacionales y amigos cerca de Sol",
   },
   wednesdayShots: {
     en: "Wednesday €1 shots also on",
-    es: "También miércoles chupitos €1",
+    es: "También miércoles chupitos a 1 €",
   },
   football: {
     en: "Premier League, Champions League & LaLiga on the screens",

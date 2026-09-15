@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
-import { VenueHero } from "@/components/VenueHero";
 import { buildMetadata } from "@/lib/seo";
 import { MAPS_URL, PHONE_DISPLAY, PHONE_TEL, SITE_NAME } from "@/lib/venue";
 
@@ -16,20 +15,17 @@ export default function ThursdayShotsPage() {
   return (
     <PageShell locale="en" altLangHref="/es/thursday-1-euro-shots">
       <PageHero
-        eyebrow="€1 shots · Thursday"
-        title="Thursday €1 shots"
-        lead={`At ${SITE_NAME}, Thursday is the night for €1 shots — Erasmus students, internationals, tourists and anyone who wants an easy, loud Madrid Centro night near Sol.`}
+        eyebrow="Thursday · €1"
+        title="Thursday · €1 shots"
+        lead={`At ${SITE_NAME}, Thursday is the night for €1 shots — Erasmus students, internationals, tourists and anyone who wants an easy Madrid Centro night near Sol.`}
       />
-      <VenueHero className="mb-10" aspect="video" caption="Thursday €1 · Erasmus" />
-      <Section title="Why Thursday" featured>
+      <Section title="Why Thursday">
         <p>
           €1 shots, a short walk from Puerta del Sol, Irish pub energy — it is
           the night groups actually show up for. Bring your Erasmus flatmates,
           your hostel friends, or the WhatsApp crew exploring Madrid.
         </p>
-        <p>
-          Wednesday €1 shots are on too. Thursday is the hero night.
-        </p>
+        <p>Wednesday €1 shots are on too. Thursday is the one everyone talks about.</p>
       </Section>
       <Section title="Good to know">
         <ul className="list-disc space-y-2 pl-5">
@@ -37,15 +33,15 @@ export default function ThursdayShotsPage() {
           <li>Ask at the bar for what is pouring that night.</li>
           <li>
             Pair it with a match from{" "}
-            <Link href="/whats-on" className="text-cream underline">
-              what&apos;s on
+            <Link href="/whats-on" className="text-gold underline">
+              Fixtures
             </Link>
             .
           </li>
         </ul>
         <p>
           Questions? Call{" "}
-          <a href={PHONE_TEL} className="text-cream underline">
+          <a href={PHONE_TEL} className="text-gold underline">
             {PHONE_DISPLAY}
           </a>
           .{" "}
@@ -53,13 +49,13 @@ export default function ThursdayShotsPage() {
             href={MAPS_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-cream underline"
+            className="text-gold underline"
           >
             Directions
           </a>
           {" · "}
-          <Link href="/erasmus" className="text-cream underline">
-            Erasmus
+          <Link href="/location" className="text-gold underline">
+            Location
           </Link>
         </p>
       </Section>

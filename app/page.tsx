@@ -3,7 +3,6 @@ import { FixtureStrip } from "@/components/FixtureStrip";
 import { HomeCtaBand } from "@/components/HomeCtaBand";
 import { PageShell } from "@/components/PageShell";
 import { Section } from "@/components/Prose";
-import { ThursdayFeature } from "@/components/ThursdayFeature";
 import { VenueHero } from "@/components/VenueHero";
 import { buildMetadata } from "@/lib/seo";
 import {
@@ -38,23 +37,24 @@ export default function HomePage() {
         <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.28em] text-gold">
           Espoz y Mina · Puerta del Sol
         </p>
-        <h1 className="font-serif text-3xl font-bold leading-tight text-cream sm:text-4xl">
-          Irish pub & sports bar in Madrid Centro
+        <h1 className="font-serif text-2xl font-bold leading-snug text-cream sm:text-3xl lg:text-4xl">
+          Your Irish pub in the heart of Madrid
         </h1>
-        <p className="mt-4 text-base leading-relaxed text-cream-muted sm:text-lg">
-          Big screens for football, Thursday €1 shots and a short walk from
+        <p className="mt-3 text-sm leading-relaxed text-cream-muted sm:mt-4 sm:text-base">
+          Big screens for the football, Thursday €1 shots, and a short walk from
           Puerta del Sol.
         </p>
       </header>
 
       <FixtureStrip locale="en" />
-      <ThursdayFeature locale="en" />
 
-      <section className="mb-12 grid gap-8 sm:grid-cols-2">
+      <section className="mb-12 grid gap-10 sm:grid-cols-2">
         <div>
-          <h2 className="font-serif text-xl font-bold text-cream">Erasmus nights</h2>
+          <h2 className="font-serif text-xl font-bold text-cream">
+            Erasmus nights
+          </h2>
           <div className="pub-rule my-3" />
-          <p className="text-cream-muted">
+          <p className="text-sm text-cream-muted sm:text-base">
             An easy meetup near Sol — English-friendly, screens on, and Thursday
             as the night everyone remembers.
           </p>
@@ -67,7 +67,7 @@ export default function HomePage() {
         <div>
           <h2 className="font-serif text-xl font-bold text-cream">Find the door</h2>
           <div className="pub-rule my-3" />
-          <p className="text-cream-muted">
+          <p className="text-sm text-cream-muted sm:text-base">
             {ADDRESS.full}. Red facade, green trim, gold lettering — you will
             know it when you see it.
           </p>

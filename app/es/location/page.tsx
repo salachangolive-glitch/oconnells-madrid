@@ -57,11 +57,11 @@ export default function EsLocationPage() {
         <p>
           Dirígete a Puerta del Sol y camina hasta Calle de Espoz y Mina. Ideal
           antes de un partido de Premier League, Champions League o LaLiga — o
-          para los jueves de chupitos €1 con tu grupo Erasmus.
+          para los jueves de chupitos a 1 € con tu grupo Erasmus.
         </p>
         <p>
-          <Link href="/whats-on" className="text-cream underline">
-            What&apos;s on
+          <Link href="/es/whats-on" className="text-cream underline">
+            Partidos
           </Link>
           {" · "}
           <Link href="/es/sports" className="text-cream underline">
@@ -72,7 +72,7 @@ export default function EsLocationPage() {
             href="/es/thursday-1-euro-shots"
             className="text-cream underline"
           >
-            Jueves €1
+            Jueves 1 €
           </Link>
         </p>
       </Section>

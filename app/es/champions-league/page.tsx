@@ -25,7 +25,7 @@ export default function EsChampionsLeaguePage() {
       <Section title="Antes de venir">
         <p>
           Confirma los cruces de esta noche en{" "}
-          <Link href="/whats-on" className="text-cream underline">
+          <Link href="/es/whats-on" className="text-cream underline">
             what&apos;s on
           </Link>{" "}
           si tu plan depende de un partido. Estamos a poca distancia de Sol —

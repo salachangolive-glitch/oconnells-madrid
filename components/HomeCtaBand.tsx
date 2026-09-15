@@ -3,58 +3,70 @@ import { MAPS_URL } from "@/lib/venue";
 
 type Locale = "en" | "es";
 
-/** Under the clean facade: discreet links + Thursday €1 as the visual hook. */
+/**
+ * Under facade: PARTIDOS | CÓMO LLEGAR, then the single Thursday promo strip.
+ * No duplicate €1 blocks elsewhere on Home.
+ */
 export function HomeCtaBand({ locale = "en" }: { locale?: Locale }) {
-  const thursdayHref =
-    locale === "es" ? "/es/thursday-1-euro-shots" : "/thursday-1-euro-shots";
-  const whatsLabel = "What's on";
-  const dirLabel = locale === "es" ? "Cómo llegar" : "Directions";
-  const thuTop = locale === "es" ? "JUEVES" : "THURSDAY";
-  const thuBottom = locale === "es" ? "CHUPITOS" : "SHOTS";
+  const isEs = locale === "es";
+  const fixturesHref = isEs ? "/es/whats-on" : "/whats-on";
+  const thursdayHref = isEs
+    ? "/es/thursday-1-euro-shots"
+    : "/thursday-1-euro-shots";
+  const fixturesLabel = isEs ? "Partidos" : "Fixtures";
+  const dirLabel = isEs ? "Cómo llegar" : "Directions";
 
   return (
-    <div className="border-y border-gold-soft/30 bg-gradient-to-b from-pub-burgundy-deep to-pub-green">
-      <div className="mx-auto flex max-w-5xl flex-col items-stretch gap-0 sm:flex-row sm:items-center sm:justify-between sm:gap-6 sm:px-4 sm:py-3">
-        <nav
-          className="flex items-center justify-center gap-6 border-b border-cream/10 px-4 py-3 text-sm tracking-wide text-cream-muted sm:border-0 sm:py-0 sm:justify-start"
-          aria-label={locale === "es" ? "Acciones" : "Actions"}
-        >
-          <Link
-            href="/whats-on"
-            className="border-b border-transparent pb-0.5 transition hover:border-gold hover:text-cream"
-          >
-            {whatsLabel}
-          </Link>
-          <span className="text-gold-soft/50" aria-hidden>
-            ·
-          </span>
-          <a
-            href={MAPS_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="border-b border-transparent pb-0.5 transition hover:border-gold hover:text-cream"
-          >
-            {dirLabel}
-          </a>
-        </nav>
-
+    <div className="bg-pub-burgundy-deep">
+      <nav
+        className="flex items-center justify-center gap-8 px-4 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-cream-muted"
+        aria-label={isEs ? "Acciones" : "Actions"}
+      >
         <Link
-          href={thursdayHref}
-          className="group flex items-center justify-center gap-4 bg-pub-burgundy/80 px-4 py-4 sm:rounded-sm sm:border sm:border-gold/40 sm:bg-pub-burgundy sm:px-6 sm:py-3"
+          href={fixturesHref}
+          className="transition hover:text-gold"
         >
-          <div className="text-right leading-none">
-            <p className="font-serif text-[10px] font-bold tracking-[0.28em] text-gold sm:text-xs">
-              {thuTop}
-            </p>
-            <p className="mt-1 font-serif text-xs tracking-[0.2em] text-cream/85">
-              {thuBottom}
-            </p>
-          </div>
-          <p className="font-serif text-4xl font-bold leading-none text-gold transition group-hover:text-cream sm:text-5xl">
-            €1
-          </p>
+          {fixturesLabel}
         </Link>
-      </div>
+        <span className="text-gold/40" aria-hidden>
+          |
+        </span>
+        <a
+          href={MAPS_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="transition hover:text-gold"
+        >
+          {dirLabel}
+        </a>
+      </nav>
+
+      <Link
+        href={thursdayHref}
+        className="group block border-t border-gold/25 bg-gradient-to-r from-pub-burgundy via-pub-burgundy-deep to-pub-green px-4 py-5 text-center transition hover:brightness-110 sm:py-6"
+      >
+        {isEs ? (
+          <>
+            <p className="font-serif text-xs font-bold tracking-[0.35em] text-gold">
+              JUEVES
+            </p>
+            <p className="mt-2 font-serif text-xl font-bold tracking-wide text-cream sm:text-2xl">
+              Chupitos a{" "}
+              <span className="text-gold group-hover:text-cream">1&nbsp;€</span>
+            </p>
+          </>
+        ) : (
+          <>
+            <p className="font-serif text-xs font-bold tracking-[0.35em] text-gold">
+              THURSDAY
+            </p>
+            <p className="mt-2 font-serif text-xl font-bold tracking-wide text-cream sm:text-2xl">
+              Shots from{" "}
+              <span className="text-gold group-hover:text-cream">€1</span>
+            </p>
+          </>
+        )}
+      </Link>
     </div>
   );
 }

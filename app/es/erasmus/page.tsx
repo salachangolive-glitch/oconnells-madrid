@@ -37,8 +37,8 @@ export default function EsErasmusPage() {
             Ubicación
           </Link>
           {" · "}
-          <Link href="/whats-on" className="text-gold underline">
-            What&apos;s on
+          <Link href="/es/whats-on" className="text-gold underline">
+            Partidos
           </Link>
         </p>
       </Section>

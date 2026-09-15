@@ -8,7 +8,7 @@ import { ADDRESS, HOURS, PHONE_DISPLAY, PHONE_TEL, SITE_NAME } from "@/lib/venue
 export const metadata = buildMetadata({
   title: "Sobre O'Connell St Madrid",
   description:
-    "Sobre O'Connell St: pub irlandés y sports bar en Calle de Espoz y Mina 7, 28012 Madrid, cerca de Puerta del Sol. Pantallas de fútbol y jueves chupitos €1.",
+    "Sobre O'Connell St: pub irlandés y sports bar en Calle de Espoz y Mina 7, 28012 Madrid, cerca de Puerta del Sol. Pantallas de fútbol y jueves chupitos a 1 €.",
   path: "/es/about",
   locale: "es",
 });
@@ -19,7 +19,7 @@ export default function EsAboutPage() {
       <PageHero
         eyebrow="Sobre nosotros"
         title={SITE_NAME}
-        lead="Pub irlandés y sports bar en el corazón de Madrid — Premier League, Champions League y LaLiga en pantallas, jueves chupitos €1 para Erasmus e internacionales."
+        lead="Pub irlandés y sports bar en el corazón de Madrid — Premier League, Champions League y LaLiga en pantallas, jueves chupitos a 1 € para Erasmus e internacionales."
       />
       <VenueHero variant="secondary" className="mb-10" />
       <Section title="En resumen">
@@ -49,11 +49,11 @@ export default function EsAboutPage() {
             href="/es/thursday-1-euro-shots"
             className="text-cream underline"
           >
-            Jueves €1
+            Jueves 1 €
           </Link>
           {" · "}
-          <Link href="/whats-on" className="text-cream underline">
-            What&apos;s on
+          <Link href="/es/whats-on" className="text-cream underline">
+            Partidos
           </Link>
         </p>
       </Section>

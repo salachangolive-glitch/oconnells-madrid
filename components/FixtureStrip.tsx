@@ -10,7 +10,7 @@ type Locale = "en" | "es";
 
 function FixtureRow({ f, locale }: { f: Fixture; locale: Locale }) {
   return (
-    <article className="border-l-2 border-gold pl-4 sm:pl-5">
+    <article className="pl-0">
       <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-gold">
         {f.competition}
       </p>
@@ -31,25 +31,25 @@ function FixtureRow({ f, locale }: { f: Fixture; locale: Locale }) {
   );
 }
 
-/** Editorial sports block for Home / Sports — not generic cards. */
 export function FixtureStrip({ locale = "en" }: { locale?: Locale }) {
+  const isEs = locale === "es";
   const upcoming = getUpcomingFixtures().slice(0, 3);
-  const title = locale === "es" ? "En las pantallas" : "On the screens";
-  const empty =
-    locale === "es"
-      ? "Premier League, Champions League y LaLiga cuando tocan. Mira What’s on o pregunta en barra."
-      : "Premier League, Champions League and LaLiga when they’re on. Check What’s on or ask at the bar.";
-  const cta = locale === "es" ? "Cómo llegar" : "Get directions";
-  const more = "What's on";
+  const title = isEs ? "En las pantallas" : "On the screens";
+  const empty = isEs
+    ? "Premier League, Champions League y LaLiga cuando tocan. Mira Partidos o pregunta en barra."
+    : "Premier League, Champions League and LaLiga when they’re on. Check Fixtures or ask at the bar.";
+  const moreHref = isEs ? "/es/whats-on" : "/whats-on";
+  const more = isEs ? "Partidos" : "Fixtures";
+  const cta = isEs ? "Cómo llegar" : "Get directions";
 
   return (
     <section className="mb-12">
-      <div className="mb-5 flex items-end justify-between gap-4">
+      <div className="mb-4 flex items-end justify-between gap-4">
         <h2 className="font-serif text-2xl font-bold text-cream sm:text-3xl">
           {title}
         </h2>
         <Link
-          href="/whats-on"
+          href={moreHref}
           className="shrink-0 text-xs uppercase tracking-[0.18em] text-gold hover:text-cream"
         >
           {more}
@@ -57,7 +57,7 @@ export function FixtureStrip({ locale = "en" }: { locale?: Locale }) {
       </div>
       <div className="pub-rule mb-6" />
       {upcoming.length > 0 ? (
-        <ul className="space-y-6">
+        <ul className="space-y-7">
           {upcoming.map((f) => (
             <li key={f.id}>
               <FixtureRow f={f} locale={locale} />
@@ -67,14 +67,14 @@ export function FixtureStrip({ locale = "en" }: { locale?: Locale }) {
       ) : (
         <p className="text-cream-muted">{empty}</p>
       )}
-      <p className="mt-6">
+      <p className="mt-7">
         <a
           href={MAPS_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 border border-gold/50 px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-gold transition hover:bg-gold/10 hover:text-cream"
+          className="text-sm text-gold hover:text-cream"
         >
-          {cta}
+          {cta} →
         </a>
       </p>
     </section>

@@ -96,6 +96,7 @@ export const ES_PATHS = [
   "/es/thursday-1-euro-shots",
   "/es/about",
   "/es/location",
+  "/es/whats-on",
 ] as const;
 
 export const ALL_CONTENT_PATHS = [...EN_PATHS, ...ES_PATHS] as const;
@@ -111,4 +112,5 @@ export const HREFLANG_PAIRS: Record<string, string | undefined> = {
   "/thursday-1-euro-shots": "/es/thursday-1-euro-shots",
   "/about": "/es/about",
   "/location": "/es/location",
+  "/whats-on": "/es/whats-on",
 };
