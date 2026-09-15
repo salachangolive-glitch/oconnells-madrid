@@ -2,8 +2,8 @@
 /**
  * Indexability check.
  *
- * Preview mode (NEXT_PUBLIC_SITE_URL hostname includes vercel.app, or
- * SITE_PREVIEW=1): noindex + robots Disallow:/ are EXPECTED and OK.
+ * Preview mode (NEXT_PUBLIC_SITE_URL hostname includes vercel.app or
+ * pages.dev, or SITE_PREVIEW=1): noindex + robots Disallow:/ are EXPECTED and OK.
  *
  * Production / custom domain: fails on noindex or Disallow of content paths.
  *
@@ -16,15 +16,20 @@ import { join } from "node:path";
 
 const ROOT = process.cwd();
 
+function isPreviewHostname(hostnameOrUrl) {
+  const s = String(hostnameOrUrl);
+  return s.includes("vercel.app") || s.includes("pages.dev");
+}
+
 function resolvePreviewMode() {
   if (process.env.SITE_PREVIEW === "1") return true;
   const url =
     process.env.NEXT_PUBLIC_SITE_URL ||
     "https://oconnells-madrid.vercel.app";
   try {
-    return new URL(url).hostname.includes("vercel.app");
+    return isPreviewHostname(new URL(url).hostname);
   } catch {
-    return String(url).includes("vercel.app");
+    return isPreviewHostname(url);
   }
 }
 
@@ -66,7 +71,7 @@ function checkRobotsTxt(text) {
     const value = m[1].trim();
     if (!value) continue;
     if (PREVIEW) {
-      // Disallow all is expected on vercel.app preview
+      // Disallow all is expected on vercel.app / pages.dev preview
       continue;
     }
     if (value === "/") {
@@ -238,7 +243,7 @@ if (errors.length) {
 console.log("check-indexable OK");
 console.log(
   PREVIEW
-    ? " - PREVIEW mode (vercel.app): noindex + Disallow:/ expected/OK"
+    ? " - PREVIEW mode (vercel.app / pages.dev): noindex + Disallow:/ expected/OK"
     : " - PRODUCTION mode: indexing required",
 );
 console.log(" - robots source present");

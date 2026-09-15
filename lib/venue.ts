@@ -58,12 +58,13 @@ export const FACTS = {
   wednesdayShots: "Wednesday €1 shots",
 } as const;
 
-/** True when NEXT_PUBLIC_SITE_URL is a Vercel preview host — keep noindex. */
+/** True when NEXT_PUBLIC_SITE_URL is a preview host (Vercel or CF Pages) — keep noindex. */
 export function isPreviewHost(url = getSiteUrl()): boolean {
   try {
-    return new URL(url).hostname.includes("vercel.app");
+    const host = new URL(url).hostname;
+    return host.includes("vercel.app") || host.includes("pages.dev");
   } catch {
-    return url.includes("vercel.app");
+    return url.includes("vercel.app") || url.includes("pages.dev");
   }
 }
 

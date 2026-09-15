@@ -1,6 +1,8 @@
 import type { MetadataRoute } from "next";
 import { ALL_CONTENT_PATHS, getSiteUrl, isPreviewHost } from "@/lib/venue";
 
+export const dynamic = "force-static";
+
 export default function robots(): MetadataRoute.Robots {
   const base = getSiteUrl();
 
