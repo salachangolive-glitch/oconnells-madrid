@@ -27,14 +27,13 @@ export default function PremierLeaguePage() {
       />
       <Section title="Planning a PL afternoon or night">
         <p>
-          Busy Saturday and Sunday cards fill early. If your group cares about a
-          specific kick-off, check{" "}
+          Weekend cards get busy. For a specific kick-off, check{" "}
           <Link href="/whats-on" className="text-cream underline">
-            what&apos;s on
+            fixtures
           </Link>{" "}
-          or ask at the bar. Pair match day with{" "}
+          or ask at the bar.{" "}
           <Link href="/location" className="text-cream underline">
-            directions from Sol
+            Directions from Sol
           </Link>
           .
         </p>

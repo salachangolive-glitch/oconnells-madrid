@@ -19,7 +19,7 @@ export default function EsErasmusPage() {
       <PageHero
         eyebrow="Erasmus · Internacionales"
         title={`Tu noche en ${SITE_NAME}`}
-        lead="Quedar cerca de Sol, ver el partido y quedarte al jueves de chupitos a 1 € — un pub irlandés con ambiente internacional."
+        lead="Cerca de Sol: partido en pantallas y jueves de chupitos a 1 € — pub irlandés con ambiente internacional."
       />
       <ThursdayFeature locale="es" />
       <Section title="Por qué funciona">

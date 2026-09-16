@@ -28,14 +28,14 @@ export default function EsPremierLeaguePage() {
       />
       <Section title="Planificar una tarde o noche de PL">
         <p>
-          Las jornadas grandes de sábado y domingo llenan pronto. Si a tu grupo
-          le importa un horario concreto, mira{" "}
+          Los fines de semana se llenan. Si te importa un horario concreto,
+          mira{" "}
           <Link href="/es/whats-on" className="text-cream underline">
-            la cartelera
+            Partidos
           </Link>{" "}
-          o pregunta en barra. Combina el día de partido con{" "}
+          o pregunta en barra.{" "}
           <Link href="/es/location" className="text-cream underline">
-            cómo llegar desde Sol
+            Cómo llegar desde Sol
           </Link>
           .
         </p>

@@ -30,10 +30,9 @@ export default function EsChampionsLeaguePage() {
         <p>
           Confirma los cruces de esta noche en{" "}
           <Link href="/es/whats-on" className="text-cream underline">
-            la cartelera
+            Partidos
           </Link>{" "}
-          si tu plan depende de un partido. Estamos a poca distancia de Sol —
-          cómodo para viajeros y locales que vienen a ver el partido.
+          si tu plan depende de un partido. A poca distancia de Sol.
         </p>
         <p>
           <Link href="/es/premier-league" className="text-cream underline">

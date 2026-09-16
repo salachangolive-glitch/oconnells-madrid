@@ -27,17 +27,15 @@ export default function WatchFootballPage() {
       />
       <Section title="What gets shown">
         <p>
-          Expect Premier League weekends, Champions League midweeks, and LaLiga
-          nights on the screens. Travellers and locals use us as a central spot
-          for kick-off.
+          Premier League weekends, Champions League nights, and LaLiga on the
+          screens — a central spot for the match.
         </p>
         <p>
           See{" "}
           <Link href="/whats-on" className="text-cream underline">
-            what&apos;s on tonight
+            fixtures
           </Link>{" "}
-          for confirmed fixtures, or ask at the bar if one match matters most
-          to your group.
+          for confirmed matches, or ask at the bar if one game matters most.
         </p>
       </Section>
       <Section title="Getting here">

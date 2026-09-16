@@ -35,10 +35,9 @@ export default function EsWatchFootballPage() {
         <p>
           Mira{" "}
           <Link href="/es/whats-on" className="text-cream underline">
-            la cartelera
+            Partidos
           </Link>{" "}
-          para partidos confirmados, o pregunta en barra si un partido concreto
-          es el que más te importa.
+          para fechas confirmadas, o pregunta en barra.
         </p>
       </Section>
       <Section title="Cómo llegar">

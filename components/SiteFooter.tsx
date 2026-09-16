@@ -93,8 +93,8 @@ export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
           </p>
           <p>
             {isEs
-              ? "Pub irlandés y bar deportivo junto a Sol — fútbol en pantallas, pintas y jueves de chupitos a 1 €."
-              : "Irish pub and sports bar near Sol — football on the screens, pints, and Thursday €1 shots."}
+              ? "Pub irlandés cerca de Sol · Madrid Centro."
+              : "Irish pub near Sol · Madrid Centro."}
           </p>
         </div>
       </div>

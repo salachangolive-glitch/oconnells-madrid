@@ -19,7 +19,7 @@ export default function SportsPage() {
       <PageHero
         eyebrow="Screens · pints · Sol"
         title={`Match nights at ${SITE_NAME}`}
-        lead="Premier League Saturdays, Champions League midweeks, LaLiga when it matters — plus NFL and NBA when those games are on."
+        lead="Premier League Saturdays, Champions League nights, LaLiga when it matters — plus NFL and NBA when those games are on."
       />
       <InteriorPhoto
         src="/images/interior/sports-aisle.webp"
