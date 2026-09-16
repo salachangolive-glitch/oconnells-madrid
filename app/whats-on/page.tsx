@@ -13,7 +13,7 @@ import { MAPS_URL, SITE_NAME } from "@/lib/venue";
 export const metadata = buildMetadata({
   title: "Fixtures — football & Thursday €1 shots",
   description:
-    "Fixtures at O'Connell St Madrid near Sol: confirmed football matches, Premier League / Champions League / LaLiga screens, Thursday €1 shots.",
+    "Fixtures at O'Connell St Madrid: confirmed football matches, Premier League / Champions League / LaLiga on the screens, Thursday €1 shots.",
   path: "/whats-on",
 });
 

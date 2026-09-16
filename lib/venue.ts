@@ -1,6 +1,7 @@
 /** Venue NAP from GBP audit 2026-09-15 — do not invent prices, menu, or official status. */
 export const SITE_NAME = "O'Connell St";
-export const SITE_TAGLINE = "Irish pub & sports bar near Puerta del Sol";
+export const SITE_TAGLINE = "Irish pub & sports bar near Sol";
+export const SITE_TAGLINE_ES = "Pub irlandés y bar deportivo cerca de Sol";
 
 /** Canonical address as on GBP editor: Calle de Espoz y Mina, 7, 28012 Madrid */
 export const ADDRESS = {

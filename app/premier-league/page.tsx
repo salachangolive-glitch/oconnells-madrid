@@ -8,7 +8,7 @@ import { SITE_NAME } from "@/lib/venue";
 export const metadata = buildMetadata({
   title: "Premier League on screens in Madrid near Sol",
   description:
-    "Watch Premier League football at O'Connell St Irish sports bar near Puerta del Sol. PL screens for travellers and locals in Madrid Centro.",
+    "Watch Premier League football at O'Connell St near Sol. PL screens for travellers and locals in central Madrid.",
   path: "/premier-league",
 });
 
@@ -16,9 +16,9 @@ export default function PremierLeaguePage() {
   return (
     <PageShell locale="en" altLangHref="/es/premier-league">
       <PageHero
-        eyebrow="Premier League · Madrid Centro"
+        eyebrow="Premier League · Madrid"
         title={`PL screens at ${SITE_NAME}`}
-        lead="English football is a regular ask at this Sol-area Irish sports pub. Come for Premier League afternoons and nights on the big screens — pints ready, centre of Madrid."
+        lead="Premier League afternoons and nights on the big screens — pints ready, a short walk from Sol."
       />
       <InteriorPhoto
         src="/images/interior/sports-corridor.webp"
@@ -27,8 +27,8 @@ export default function PremierLeaguePage() {
       />
       <Section title="Planning a PL afternoon or night">
         <p>
-          Big Saturday and Sunday cards fill Madrid Centro early. If your group
-          cares about a specific kick-off, check{" "}
+          Busy Saturday and Sunday cards fill early. If your group cares about a
+          specific kick-off, check{" "}
           <Link href="/whats-on" className="text-cream underline">
             what&apos;s on
           </Link>{" "}

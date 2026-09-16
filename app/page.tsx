@@ -14,9 +14,9 @@ import {
 } from "@/lib/venue";
 
 export const metadata = buildMetadata({
-  title: `${SITE_NAME} Madrid — Irish pub & sports bar near Puerta del Sol`,
+  title: `${SITE_NAME} Madrid — Irish pub & sports bar near Sol`,
   description:
-    "O'Connell St: Irish sports pub at Calle de Espoz y Mina 7, Madrid Centro near Puerta del Sol. Watch Premier League, Champions League & LaLiga. Thursday €1 shots for Erasmus & travellers.",
+    "O'Connell St: Irish pub and sports bar at Calle de Espoz y Mina 7, near Sol. Premier League, Champions League & LaLiga on the screens. Thursday €1 shots.",
   path: "/",
 });
 
@@ -46,8 +46,7 @@ export default function HomePage() {
           Your Irish pub in the heart of Madrid
         </h1>
         <p className="mt-3 text-sm leading-relaxed text-cream-muted sm:mt-4 sm:text-base">
-          Big screens for the football, Thursday €1 shots, and a short walk from
-          Puerta del Sol.
+          Football on the screens, Thursday €1 shots, and a short walk from Sol.
         </p>
       </header>
 
@@ -60,8 +59,8 @@ export default function HomePage() {
           </h2>
           <div className="pub-rule my-3" />
           <p className="text-sm text-cream-muted sm:text-base">
-            An easy meetup near Sol — English-friendly, screens on, and Thursday
-            as the night everyone remembers.
+            An easy meetup near Sol — English-friendly at the bar, football on
+            the screens, and Thursday €1 shots to finish the night.
           </p>
           <p className="mt-3">
             <Link href="/erasmus" className="text-sm text-gold hover:text-cream">

@@ -8,7 +8,7 @@ import { SITE_NAME } from "@/lib/venue";
 export const metadata = buildMetadata({
   title: "Champions League nights in central Madrid",
   description:
-    "UEFA Champions League on the screens at O'Connell St near Puerta del Sol. Irish sports bar in Madrid Centro for midweek European nights.",
+    "UEFA Champions League on the screens at O'Connell St near Sol. Irish sports bar for midweek European nights in Madrid.",
   path: "/champions-league",
 });
 
@@ -18,7 +18,7 @@ export default function ChampionsLeaguePage() {
       <PageHero
         eyebrow="UEFA Champions League"
         title={`UCL nights at ${SITE_NAME}`}
-        lead="Midweek European football belongs on the big screens. Join the crowd at this Irish sports pub near Puerta del Sol for Champions League nights in Madrid Centro."
+        lead="Midweek European football on the big screens. Join the crowd at this Irish sports pub near Sol for Champions League nights."
       />
       <InteriorPhoto
         src="/images/interior/sports-aisle.webp"
@@ -32,7 +32,7 @@ export default function ChampionsLeaguePage() {
             what&apos;s on
           </Link>{" "}
           if your night depends on one match. We&apos;re a short walk from Sol —
-          easy for travellers and locals heading into Madrid Centro for kick-off.
+          handy for travellers and locals heading in for kick-off.
         </p>
         <p>
           <Link href="/premier-league" className="text-cream underline">

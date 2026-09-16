@@ -6,9 +6,9 @@ import { buildMetadata } from "@/lib/seo";
 import { ADDRESS, MAPS_URL, SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
-  title: "Ver fútbol en Madrid cerca de Puerta del Sol",
+  title: "Ver fútbol en Madrid cerca de Sol",
   description:
-    "Ver Premier League, Champions League y LaLiga en O'Connell St, Calle de Espoz y Mina 7, cerca de Puerta del Sol. Pub irlandés en Madrid Centro.",
+    "Ver Premier League, Champions League y LaLiga en O'Connell St, Calle de Espoz y Mina 7, cerca de Sol. Pub irlandés céntrico en Madrid.",
   path: "/es/watch-football-madrid",
   locale: "es",
 });
@@ -19,7 +19,7 @@ export default function EsWatchFootballPage() {
       <PageHero
         eyebrow="Ver fútbol · Madrid"
         title="Un pub irlandés céntrico para el partido"
-        lead={`${SITE_NAME} está en ${ADDRESS.street}, a poca distancia de Puerta del Sol — ideal si quieres Premier League, Champions League o LaLiga en pantallas sin salir de Madrid Centro.`}
+        lead={`${SITE_NAME} está en ${ADDRESS.street}, a poca distancia de Sol — Premier League, Champions League o LaLiga en pantallas sin salir del centro.`}
       />
       <InteriorPhoto
         src="/images/interior/football-seating.webp"
@@ -28,21 +28,20 @@ export default function EsWatchFootballPage() {
       />
       <Section title="Qué se emite">
         <p>
-          Fines de semana de Premier League, midweeks de Champions League y
-          noches de LaLiga en pantallas. ¿Lo buscas antes de llegar? Somos el
-          pub irlandés de la zona de Sol que los viajeros apuntan para el
-          pitido inicial.
+          Fines de semana de Premier League, Champions League entre semana y
+          noches de LaLiga en pantallas. Viajeros y locales nos usan como punto
+          céntrico para ver el partido.
         </p>
         <p>
           Mira{" "}
           <Link href="/es/whats-on" className="text-cream underline">
             la cartelera
           </Link>{" "}
-          para partidos confirmados, o pregunta si un partido concreto es
-          imprescindible.
+          para partidos confirmados, o pregunta en barra si un partido concreto
+          es el que más te importa.
         </p>
       </Section>
-      <Section title="Cómo llegar al pitido">
+      <Section title="Cómo llegar">
         <p>
           Dirígete a Puerta del Sol y camina hasta Calle de Espoz y Mina.{" "}
           <a

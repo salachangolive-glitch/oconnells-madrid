@@ -22,7 +22,7 @@ export default function LocationPage() {
   return (
     <PageShell locale="en" altLangHref="/es/location">
       <PageHero
-        eyebrow="Location · Madrid Centro"
+        eyebrow="Location · Madrid"
         title={`How to find ${SITE_NAME}`}
         lead={`${ADDRESS.full} — a short walk from Puerta del Sol.`}
       />
@@ -61,9 +61,9 @@ export default function LocationPage() {
       />
       <Section title="Getting here">
         <p>
-          Aim for Puerta del Sol, then walk to Calle de Espoz y Mina. Perfect
+          Aim for Puerta del Sol, then walk to Calle de Espoz y Mina. Handy
           before a Premier League, Champions League or LaLiga kick-off — or for
-          Thursday €1 shots with your Erasmus crew.
+          Thursday €1 shots with friends.
         </p>
         <p>
           <Link href="/whats-on" className="text-cream underline">

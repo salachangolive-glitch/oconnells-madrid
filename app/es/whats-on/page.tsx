@@ -13,7 +13,7 @@ import { MAPS_URL, SITE_NAME } from "@/lib/venue";
 export const metadata = buildMetadata({
   title: "Partidos — fútbol y jueves chupitos a 1 €",
   description:
-    "Partidos en O'Connell St Madrid cerca de Sol: fútbol confirmado, Premier League / Champions League / LaLiga en pantallas, jueves chupitos a 1 €.",
+    "Partidos en O'Connell St Madrid: fútbol confirmado, Premier League / Champions League / LaLiga en pantallas, jueves chupitos a 1 €.",
   path: "/es/whats-on",
   locale: "es",
 });

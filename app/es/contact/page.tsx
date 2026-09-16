@@ -7,7 +7,7 @@ import { SITE_NAME } from "@/lib/venue";
 export const metadata = buildMetadata({
   title: "Contacto O'Connell's Madrid",
   description:
-    "Contacta con O'Connell's Madrid cerca de Puerta del Sol — información general, grupos, deportes y partidos, o eventos.",
+    "Contacta con O'Connell's Madrid cerca de Sol — información general, grupos, deportes y partidos, o eventos.",
   path: "/es/contact",
   locale: "es",
 });

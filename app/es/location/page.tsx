@@ -23,7 +23,7 @@ export default function EsLocationPage() {
   return (
     <PageShell locale="es" altLangHref="/location">
       <PageHero
-        eyebrow="Ubicación · Madrid Centro"
+        eyebrow="Ubicación · Madrid"
         title={`Cómo llegar a ${SITE_NAME}`}
         lead={`${ADDRESS.full} — a poca distancia de Puerta del Sol.`}
       />
@@ -64,7 +64,7 @@ export default function EsLocationPage() {
         <p>
           Dirígete a Puerta del Sol y camina hasta Calle de Espoz y Mina. Ideal
           antes de un partido de Premier League, Champions League o LaLiga — o
-          para los jueves de chupitos a 1 € con tu grupo Erasmus.
+          para los jueves de chupitos a 1 € con amigos.
         </p>
         <p>
           <Link href="/es/whats-on" className="text-cream underline">

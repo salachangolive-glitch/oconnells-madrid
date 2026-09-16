@@ -5,9 +5,9 @@ import { buildMetadata } from "@/lib/seo";
 import { MAPS_URL, SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
-  title: "Jueves chupitos a 1 € cerca de Puerta del Sol",
+  title: "Jueves chupitos a 1 € cerca de Sol",
   description:
-    "Jueves chupitos a 1 € en O'Connell St Madrid — Erasmus, internacionales, turistas y grupos cerca de Sol. También miércoles a 1 €.",
+    "Jueves chupitos a 1 € en O'Connell St Madrid — Erasmus, internacionales, turistas y amigos cerca de Sol. También hay chupitos a 1 € los miércoles.",
   path: "/es/thursday-1-euro-shots",
   locale: "es",
 });
@@ -18,19 +18,22 @@ export default function EsThursdayShotsPage() {
       <PageHero
         eyebrow="Jueves · 1 €"
         title="Jueves · chupitos a 1 €"
-        lead={`En ${SITE_NAME}, el jueves es la noche de chupitos a 1 € — Erasmus, internacionales, turistas y quien quiera una noche fácil en Madrid Centro cerca de Sol.`}
+        lead={`En ${SITE_NAME}, el jueves son chupitos a 1 € — Erasmus, internacionales, turistas y quien quiera una buena noche cerca de Sol.`}
       />
       <Section title="Por qué el jueves">
         <p>
-          Chupitos a 1 €, a un paso de Puerta del Sol y ambiente de Irish pub —
-          la noche a la que los grupos sí vienen. Trae a tus compañeros Erasmus,
-          a la gente del hostel o al grupo de WhatsApp.
+          Chupitos a 1 € y a un paso de Sol — ambiente de pub irlandés para
+          compañeros Erasmus, gente del hostel o el grupo con el que sales por
+          Madrid.
         </p>
-        <p>También hay miércoles a 1 €. El jueves es el que más se nota.</p>
+        <p>
+          También hay chupitos a 1 € los miércoles. El jueves suele ser el más
+          animado.
+        </p>
       </Section>
-      <Section title="Bueno saberlo">
+      <Section title="Información útil">
         <ul className="list-disc space-y-2 pl-5">
-          <li>Cerca de Sol — fácil para grupos mezclados y viajeros.</li>
+          <li>Cerca de Sol — cómodo para grupos y viajeros.</li>
           <li>Pregunta en barra qué se sirve esa noche.</li>
           <li>
             Combínalo con un partido de{" "}

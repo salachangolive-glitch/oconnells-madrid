@@ -8,7 +8,7 @@ import { ADDRESS, HOURS, SITE_NAME } from "@/lib/venue";
 export const metadata = buildMetadata({
   title: "Sobre O'Connell St Madrid",
   description:
-    "Sobre O'Connell St: pub irlandés y sports bar en Calle de Espoz y Mina 7, 28012 Madrid, cerca de Puerta del Sol. Pantallas de fútbol y jueves chupitos a 1 €.",
+    "Sobre O'Connell St: pub irlandés y bar deportivo en Calle de Espoz y Mina 7, 28012 Madrid, cerca de Sol. Pantallas de fútbol y jueves chupitos a 1 €.",
   path: "/es/about",
   locale: "es",
 });
@@ -19,7 +19,7 @@ export default function EsAboutPage() {
       <PageHero
         eyebrow="Sobre nosotros"
         title={SITE_NAME}
-        lead="Pub irlandés y bar de deportes en el corazón de Madrid — Premier League, Champions League y LaLiga en pantallas, jueves chupitos a 1 € para Erasmus e internacionales."
+        lead="Pub irlandés y bar deportivo en el corazón de Madrid — Premier League, Champions League y LaLiga en pantallas, jueves chupitos a 1 € para Erasmus e internacionales."
       />
       <InteriorPhoto
         src="/images/interior/about-salon.webp"
@@ -28,13 +28,11 @@ export default function EsAboutPage() {
       />
       <Section title="En resumen">
         <p>
-          Estamos en {ADDRESS.full}, cerca de Puerta del Sol en Madrid Centro.{" "}
-          {HOURS.summaryEs}.
+          Estamos en {ADDRESS.full}, cerca de Puerta del Sol. {HOURS.summaryEs}.
         </p>
         <p>
           Ven por el partido, la pinta y los jueves de chupitos a 1 € — un pub
-          irlandés céntrico para viajeros, estudiantes y locales que quieren
-          pantallas cerca de Sol.
+          irlandés céntrico para viajeros, estudiantes y locales.
         </p>
         <p>
           <Link href="/es/location" className="text-cream underline">

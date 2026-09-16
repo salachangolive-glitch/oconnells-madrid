@@ -134,7 +134,7 @@ export function ContactForm({ locale = "en" }: { locale?: Locale }) {
       {/* Honeypot */}
       <div className="absolute -left-[9999px] opacity-0" aria-hidden="true">
         <label>
-          Company
+          {locale === "es" ? "Empresa" : "Company"}
           <input type="text" name="company" tabIndex={-1} autoComplete="off" />
         </label>
       </div>
