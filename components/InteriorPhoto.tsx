@@ -83,12 +83,14 @@ export function InteriorPhoto({
 export function InteriorGallery({
   items,
   className = "",
+  ariaLabel = "Interior photos",
 }: {
   items: { src: string; alt: string; position?: string }[];
   className?: string;
+  ariaLabel?: string;
 }) {
   return (
-    <section className={`mb-12 ${className}`} aria-label="Interior photos">
+    <section className={`mb-12 ${className}`} aria-label={ariaLabel}>
       <div className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4">
         {items.map((item) => (
           <InteriorPhoto

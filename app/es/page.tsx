@@ -28,7 +28,10 @@ export default function EsHomePage() {
       altLangHref="/"
       cover={
         <>
-          <VenueHero variant="hero" />
+          <VenueHero
+            variant="hero"
+            alt="Fachada del pub irlandés O'Connell St, Calle de Espoz y Mina 7, Madrid"
+          />
           <HomeCtaBand locale="es" />
           <InteriorPhoto
             variant="editorial"
@@ -91,6 +94,7 @@ export default function EsHomePage() {
       </section>
 
       <InteriorGallery
+        ariaLabel="Fotos del interior"
         items={[
           {
             src: "/images/interior/bar-taps.webp",
