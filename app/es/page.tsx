@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { FixtureStrip } from "@/components/FixtureStrip";
 import { HomeCtaBand } from "@/components/HomeCtaBand";
+import { InteriorGallery, InteriorPhoto } from "@/components/InteriorPhoto";
 import { PageShell } from "@/components/PageShell";
 import { Section } from "@/components/Prose";
 import { VenueHero } from "@/components/VenueHero";
@@ -13,9 +14,9 @@ import {
 } from "@/lib/venue";
 
 export const metadata = buildMetadata({
-  title: `${SITE_NAME} Madrid — Pub irlandés y sports bar cerca de Sol`,
+  title: `${SITE_NAME} Madrid — Pub irlandés y bar deportivo cerca de Sol`,
   description:
-    "O'Connell St: pub irlandés y sports bar en Calle de Espoz y Mina 7, Madrid Centro cerca de Puerta del Sol. Premier League, Champions League y LaLiga. Jueves chupitos a 1 € para Erasmus y viajeros.",
+    "O'Connell St: pub irlandés y bar deportivo en Calle de Espoz y Mina 7, cerca de Sol. Premier League, Champions League y LaLiga en pantallas. Jueves chupitos a 1 €.",
   path: "/es",
   locale: "es",
 });
@@ -27,8 +28,17 @@ export default function EsHomePage() {
       altLangHref="/"
       cover={
         <>
-          <VenueHero variant="hero" />
+          <VenueHero
+            variant="hero"
+            alt="Fachada del pub irlandés O'Connell St, Calle de Espoz y Mina 7, Madrid"
+          />
           <HomeCtaBand locale="es" />
+          <InteriorPhoto
+            variant="editorial"
+            priority
+            src="/images/interior/bar-corner.webp"
+            alt="Rincón de la barra de madera en el pub irlandés O'Connell St, con taburetes, estanterías rojas y luz cálida"
+          />
         </>
       }
     >
@@ -37,10 +47,10 @@ export default function EsHomePage() {
           Espoz y Mina · Puerta del Sol
         </p>
         <h1 className="font-serif text-2xl font-bold leading-snug text-cream sm:text-3xl lg:text-4xl">
-          Tu Irish pub junto a Puerta del Sol
+          Tu pub irlandés en el centro de Madrid
         </h1>
         <p className="mt-3 text-sm leading-relaxed text-cream-muted sm:mt-4 sm:text-base">
-          Pantallas para el fútbol, jueves de chupitos a 1 € y a un paso de Sol.
+          Fútbol en pantallas, jueves de chupitos a 1 € y a un paso de Sol.
         </p>
       </header>
 
@@ -53,8 +63,8 @@ export default function EsHomePage() {
           </h2>
           <div className="pub-rule my-3" />
           <p className="text-sm text-cream-muted sm:text-base">
-            Quedar fácil cerca de Sol — ambiente cercano, pantallas y el jueves
-            como la noche que se nota.
+            Punto de encuentro cerca de Sol: ambiente cercano, pantallas y
+            jueves de chupitos a 1 €.
           </p>
           <p className="mt-3">
             <Link
@@ -82,6 +92,32 @@ export default function EsHomePage() {
           </p>
         </div>
       </section>
+
+      <InteriorGallery
+        ariaLabel="Fotos del interior"
+        items={[
+          {
+            src: "/images/interior/bar-taps.webp",
+            alt: "Grifos de cerveza y barra de madera en O'Connell St",
+            position: "object-center",
+          },
+          {
+            src: "/images/interior/sports-aisle.webp",
+            alt: "Pasillo con varias pantallas de deportes e iluminación verde",
+            position: "object-[center_20%]",
+          },
+          {
+            src: "/images/interior/about-salon.webp",
+            alt: "Mesas de madera y decoración de pub irlandés en el salón",
+            position: "object-center",
+          },
+          {
+            src: "/images/interior/football-seating.webp",
+            alt: "Mesas y sillas bajo luz ambiental con pantalla en la pared",
+            position: "object-[center_30%]",
+          },
+        ]}
+      />
 
       <Section title="Cómo encontrarnos">
         <p>

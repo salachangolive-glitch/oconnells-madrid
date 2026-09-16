@@ -2,6 +2,10 @@
  * Ops-editable fixture list for What's On.
  * Update this file when confirmed matches change.
  * Times: only include kickoffMadrid when verified (Europe/Madrid). Omit if unknown.
+ *
+ * IMPORTANT: Do not call madridTodayYmd() / getTonightFixtures() / getUpcomingFixtures()
+ * at static build time for UI labels — use the client FixtureList / FixtureStrip so
+ * "Tonight"/"Hoy" track the visitor's Europe/Madrid calendar day.
  */
 
 export type Fixture = {
@@ -16,7 +20,7 @@ export type Fixture = {
   note?: string;
 };
 
-/** Confirmed fixtures (newest/relevant first). */
+/** Confirmed fixtures (newest/relevant first). Historical rows stay; client hides past days. */
 export const FIXTURES: Fixture[] = [
   {
     id: "2026-09-15-elche-real-madrid",
@@ -31,12 +35,12 @@ export const FIXTURES: Fixture[] = [
 /** Recurring weekly highlights (not dated fixtures). */
 export const RECURRING = {
   thursdayShots: {
-    en: "Thursday €1 shots — the night for Erasmus, internationals and friends near Sol",
-    es: "Jueves chupitos a 1 € — la noche para Erasmus, internacionales y amigos cerca de Sol",
+    en: "Thursday €1 shots — Erasmus, internationals and friends near Sol",
+    es: "Jueves chupitos a 1 € — Erasmus, internacionales y amigos cerca de Sol",
   },
   wednesdayShots: {
     en: "Wednesday €1 shots also on",
-    es: "También miércoles chupitos a 1 €",
+    es: "También hay chupitos a 1 € los miércoles",
   },
   football: {
     en: "Premier League, Champions League & LaLiga on the screens",
@@ -44,20 +48,21 @@ export const RECURRING = {
   },
 } as const;
 
-function madridTodayYmd(): string {
+/** Europe/Madrid calendar YYYY-MM-DD for a given instant (defaults to now). */
+export function madridTodayYmd(now = new Date()): string {
   return new Intl.DateTimeFormat("en-CA", {
     timeZone: "Europe/Madrid",
     year: "numeric",
     month: "2-digit",
     day: "2-digit",
-  }).format(new Date());
+  }).format(now);
 }
 
-export function getTonightFixtures(today = madridTodayYmd()): Fixture[] {
+export function getTonightFixtures(today: string): Fixture[] {
   return FIXTURES.filter((f) => f.date === today);
 }
 
-export function getUpcomingFixtures(today = madridTodayYmd()): Fixture[] {
+export function getUpcomingFixtures(today: string): Fixture[] {
   return FIXTURES.filter((f) => f.date >= today).sort((a, b) =>
     a.date.localeCompare(b.date),
   );

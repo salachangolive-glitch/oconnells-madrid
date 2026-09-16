@@ -1,6 +1,7 @@
 /** Venue NAP from GBP audit 2026-09-15 — do not invent prices, menu, or official status. */
 export const SITE_NAME = "O'Connell St";
-export const SITE_TAGLINE = "Irish pub & sports bar near Puerta del Sol";
+export const SITE_TAGLINE = "Irish pub & sports bar near Sol";
+export const SITE_TAGLINE_ES = "Pub irlandés y bar deportivo cerca de Sol";
 
 /** Canonical address as on GBP editor: Calle de Espoz y Mina, 7, 28012 Madrid */
 export const ADDRESS = {
@@ -58,19 +59,21 @@ export const FACTS = {
   wednesdayShots: "Wednesday €1 shots",
 } as const;
 
-/** True when NEXT_PUBLIC_SITE_URL is a Vercel preview host — keep noindex. */
+/** True when NEXT_PUBLIC_SITE_URL is a preview host (Vercel or CF Pages) — keep noindex. */
 export function isPreviewHost(url = getSiteUrl()): boolean {
   try {
-    return new URL(url).hostname.includes("vercel.app");
+    const host = new URL(url).hostname;
+    return host.includes("vercel.app") || host.includes("pages.dev");
   } catch {
-    return url.includes("vercel.app");
+    return url.includes("vercel.app") || url.includes("pages.dev");
   }
 }
 
 /** Domain TBD — override with NEXT_PUBLIC_SITE_URL after custom domain. */
 export function getSiteUrl(): string {
   const fromEnv = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "");
-  return fromEnv || "https://oconnells-madrid.vercel.app";
+  // Live interim host is Cloudflare Pages until custom domain is set.
+  return fromEnv || "https://oconnells-madrid.pages.dev";
 }
 
 export const EN_PATHS = [

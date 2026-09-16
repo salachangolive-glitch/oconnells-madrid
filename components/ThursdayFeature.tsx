@@ -19,8 +19,8 @@ export function ThursdayFeature({ locale = "en" }: { locale?: Locale }) {
       </h2>
       <p className="mt-3 max-w-lg text-cream-muted">
         {isEs
-          ? "Erasmus, internacionales y grupos cerca de Sol. El 1 € es la excusa; el ambiente es O’Connell’s."
-          : "Erasmus, internationals and friend groups near Sol. The €1 is the excuse — the room is O’Connell’s."}
+          ? "Erasmus, internacionales y amigos cerca de Sol. El 1 € es la excusa; el sitio es O’Connell’s."
+          : "Erasmus, internationals and friends near Sol. The €1 is the excuse — the pub is O’Connell’s."}
       </p>
       <p className="mt-5">
         <Link href={href} className="text-sm text-gold hover:text-cream">

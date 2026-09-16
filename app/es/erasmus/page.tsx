@@ -6,9 +6,9 @@ import { buildMetadata } from "@/lib/seo";
 import { SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
-  title: "Noches Erasmus cerca de Puerta del Sol",
+  title: "Noches Erasmus cerca de Sol",
   description:
-    "Pub irlandés para Erasmus cerca de Sol: jueves de chupitos a 1 €, pantallas de fútbol y quedar fácil en Madrid Centro.",
+    "Pub irlandés para Erasmus cerca de Sol: jueves de chupitos a 1 €, fútbol en pantallas y punto de encuentro céntrico.",
   path: "/es/erasmus",
   locale: "es",
 });
@@ -19,14 +19,14 @@ export default function EsErasmusPage() {
       <PageHero
         eyebrow="Erasmus · Internacionales"
         title={`Tu noche en ${SITE_NAME}`}
-        lead="Quedar cerca de Sol, ver el partido y quedarte al jueves de chupitos a 1 € — el ambiente de un Irish pub de verdad en Madrid Centro."
+        lead="Cerca de Sol: partido en pantallas y jueves de chupitos a 1 € — pub irlandés con ambiente internacional."
       />
       <ThursdayFeature locale="es" />
       <Section title="Por qué funciona">
         <p>
-          Central para que todo el mundo llegue. Ambiente fácil en barra. Pantallas
-          cuando hay partido gordo. Pon el jueves en el grupo y el resto se
-          organiza solo.
+          Céntrico para que todo el mundo llegue. Trato en inglés en barra.
+          Pantallas cuando hay partidos importantes. Los chupitos a 1 € del
+          jueves dan un plan claro.
         </p>
         <p>
           <Link href="/es/sports" className="text-gold underline">

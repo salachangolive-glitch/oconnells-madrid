@@ -1,14 +1,14 @@
 import Link from "next/link";
+import { InteriorPhoto } from "@/components/InteriorPhoto";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
-import { VenueHero } from "@/components/VenueHero";
 import { buildMetadata } from "@/lib/seo";
 import { SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
   title: "Noches de Champions League en el centro de Madrid",
   description:
-    "UEFA Champions League en las pantallas de O'Connell St, cerca de Puerta del Sol. Sports bar irlandés en Madrid Centro para noches europeas.",
+    "UEFA Champions League en las pantallas de O'Connell St, cerca de Sol. Bar deportivo irlandés para noches europeas en Madrid.",
   path: "/es/champions-league",
   locale: "es",
 });
@@ -19,18 +19,20 @@ export default function EsChampionsLeaguePage() {
       <PageHero
         eyebrow="UEFA Champions League"
         title={`Noches de UCL en ${SITE_NAME}`}
-        lead="El fútbol europeo entre semana pide pantallas grandes. Únete al público de este pub irlandés cerca de Puerta del Sol para las noches de Champions League en Madrid Centro."
+        lead="El fútbol europeo entre semana pide pantallas grandes. Únete al público de este pub irlandés cerca de Sol para las noches de Champions League."
       />
-      <VenueHero variant="secondary" className="mb-10" />
+      <InteriorPhoto
+        src="/images/interior/sports-aisle.webp"
+        alt="Pasillo amplio con varias pantallas grandes para noches de Champions League"
+        position="object-[center_45%]"
+      />
       <Section title="Antes de venir">
         <p>
           Confirma los cruces de esta noche en{" "}
           <Link href="/es/whats-on" className="text-cream underline">
-            what&apos;s on
+            Partidos
           </Link>{" "}
-          si tu plan depende de un partido. Estamos a poca distancia de Sol —
-          fácil para viajeros y locales que entran a Madrid Centro para el
-          pitido.
+          si tu plan depende de un partido. A poca distancia de Sol.
         </p>
         <p>
           <Link href="/es/premier-league" className="text-cream underline">

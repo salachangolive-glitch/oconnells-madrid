@@ -1,14 +1,14 @@
 import Link from "next/link";
+import { InteriorPhoto } from "@/components/InteriorPhoto";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
-import { VenueHero } from "@/components/VenueHero";
 import { buildMetadata } from "@/lib/seo";
 import { SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
   title: "Premier League on screens in Madrid near Sol",
   description:
-    "Watch Premier League football at O'Connell St Irish sports bar near Puerta del Sol. PL screens for travellers and locals in Madrid Centro.",
+    "Watch Premier League football at O'Connell St near Sol. PL screens for travellers and locals in central Madrid.",
   path: "/premier-league",
 });
 
@@ -16,21 +16,24 @@ export default function PremierLeaguePage() {
   return (
     <PageShell locale="en" altLangHref="/es/premier-league">
       <PageHero
-        eyebrow="Premier League · Madrid Centro"
+        eyebrow="Premier League · Madrid"
         title={`PL screens at ${SITE_NAME}`}
-        lead="English football is a regular ask at this Sol-area Irish sports pub. Come for Premier League afternoons and nights on the big screens — pints ready, centre of Madrid."
+        lead="Premier League afternoons and nights on the big screens — pints ready, a short walk from Sol."
       />
-      <VenueHero variant="secondary" className="mb-10" />
+      <InteriorPhoto
+        src="/images/interior/sports-corridor.webp"
+        alt="Pub corridor with screens showing football — Premier League viewing at O'Connell St"
+        position="object-[center_40%]"
+      />
       <Section title="Planning a PL afternoon or night">
         <p>
-          Big Saturday and Sunday cards fill Madrid Centro early. If your group
-          cares about a specific kick-off, check{" "}
+          Weekend cards get busy. For a specific kick-off, check{" "}
           <Link href="/whats-on" className="text-cream underline">
-            what&apos;s on
+            fixtures
           </Link>{" "}
-          or call the bar. Pair match day with{" "}
+          or ask at the bar.{" "}
           <Link href="/location" className="text-cream underline">
-            directions from Sol
+            Directions from Sol
           </Link>
           .
         </p>

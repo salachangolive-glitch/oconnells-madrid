@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && node scripts/check-indexable.mjs",
+    "build": "next build && node scripts/fix-es-lang.mjs && node scripts/check-indexable.mjs",
     "start": "next start",
     "lint": "eslint",
     "check:indexable": "node scripts/check-indexable.mjs"

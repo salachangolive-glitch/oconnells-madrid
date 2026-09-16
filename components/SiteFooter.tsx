@@ -89,12 +89,12 @@ export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
         </div>
         <div>
           <p className="mb-2 font-semibold uppercase tracking-wide text-cream/90">
-            Madrid Centro
+            {isEs ? "Centro de Madrid" : "Central Madrid"}
           </p>
           <p>
             {isEs
-              ? "Irish pub y sports bar junto a Puerta del Sol — fútbol en pantallas, pintas y jueves de chupitos a 1 €."
-              : "Irish pub & sports bar near Puerta del Sol — football screens, pints, and Thursday €1 shots."}
+              ? "Pub irlandés cerca de Sol · Madrid Centro."
+              : "Irish pub near Sol · Madrid Centro."}
           </p>
         </div>
       </div>

@@ -1,7 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { CONTACT_REASONS } from "@/lib/contact";
+import {
+  buildContactSubject,
+  CONTACT_REASONS,
+} from "@/lib/contact";
 
 type Locale = "en" | "es";
 
@@ -16,7 +19,7 @@ const copy = {
     ok: "Thanks — we’ve received your message and will get back to you as soon as possible.",
     fail: "We couldn’t send that just now. Please try again in a moment.",
     unavailable:
-      "The contact form is being activated. Please try again later or call the pub.",
+      "The contact form is being activated. Please try again later.",
     privacy:
       "We use your details only to reply to this enquiry. Full legal entity details will appear here once confirmed.",
     required: "Please fill in all fields.",
@@ -31,12 +34,14 @@ const copy = {
     ok: "Gracias — hemos recibido tu mensaje y te responderemos lo antes posible.",
     fail: "No hemos podido enviarlo ahora. Inténtalo de nuevo en un momento.",
     unavailable:
-      "El formulario se está activando. Prueba más tarde o llama al pub.",
+      "El formulario se está activando. Prueba más tarde.",
     privacy:
       "Usamos tus datos solo para responder a esta consulta. Los datos legales completos se añadirán aquí cuando estén confirmados.",
     required: "Completa todos los campos.",
   },
 } as const;
+
+const WEB3FORMS_URL = "https://api.web3forms.com/submit";
 
 export function ContactForm({ locale = "en" }: { locale?: Locale }) {
   const t = copy[locale];
@@ -48,36 +53,72 @@ export function ContactForm({ locale = "en" }: { locale?: Locale }) {
     e.preventDefault();
     const form = e.currentTarget;
     const fd = new FormData(form);
-    const payload = {
-      name: String(fd.get("name") || ""),
-      email: String(fd.get("email") || ""),
-      reason: String(fd.get("reason") || ""),
-      message: String(fd.get("message") || ""),
-      company: String(fd.get("company") || ""),
-      locale,
-    };
+    const name = String(fd.get("name") || "").trim();
+    const email = String(fd.get("email") || "").trim();
+    const reason = String(fd.get("reason") || "");
+    const message = String(fd.get("message") || "").trim();
+    const company = String(fd.get("company") || "");
+
+    // Honeypot: bots fill hidden fields — pretend success, do not send.
+    if (company.trim() !== "") {
+      setStatus("ok");
+      form.reset();
+      return;
+    }
+
     if (
-      !payload.name.trim() ||
-      !payload.email.trim() ||
-      !payload.reason ||
-      payload.message.trim().length < 10
+      !name ||
+      !email ||
+      !reason ||
+      message.length < 10 ||
+      !CONTACT_REASONS.some((r) => r.value === reason)
     ) {
       setStatus("fail");
       return;
     }
+
+    const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
+    if (!accessKey) {
+      setStatus("unavailable");
+      return;
+    }
+
     setStatus("sending");
+
+    const reasonLabel =
+      CONTACT_REASONS.find((r) => r.value === reason)?.[
+        locale === "es" ? "es" : "en"
+      ] || reason;
+    const subject = buildContactSubject(reason, name, locale);
+
+    const payload: Record<string, string> = {
+      access_key: accessKey,
+      subject,
+      from_name: "O'Connell's Madrid",
+      name,
+      email,
+      message:
+        `Venue: O'Connell's Madrid\n` +
+        `Locale: ${locale}\n` +
+        `Reason: ${reasonLabel}\n` +
+        `Name: ${name}\n` +
+        `Reply-To (customer): ${email}\n\n` +
+        `${message}`,
+    };
+
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch(WEB3FORMS_URL, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
         body: JSON.stringify(payload),
       });
-      if (res.status === 503) {
-        setStatus("unavailable");
-        return;
-      }
-      const data = (await res.json().catch(() => ({}))) as { ok?: boolean };
-      if (res.ok && data.ok) {
+      const data = (await res.json().catch(() => ({}))) as {
+        success?: boolean;
+      };
+      if (res.ok && data.success !== false) {
         setStatus("ok");
         form.reset();
         return;
@@ -93,7 +134,7 @@ export function ContactForm({ locale = "en" }: { locale?: Locale }) {
       {/* Honeypot */}
       <div className="absolute -left-[9999px] opacity-0" aria-hidden="true">
         <label>
-          Company
+          {locale === "es" ? "Empresa" : "Company"}
           <input type="text" name="company" tabIndex={-1} autoComplete="off" />
         </label>
       </div>

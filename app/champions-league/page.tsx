@@ -1,14 +1,14 @@
 import Link from "next/link";
+import { InteriorPhoto } from "@/components/InteriorPhoto";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
-import { VenueHero } from "@/components/VenueHero";
 import { buildMetadata } from "@/lib/seo";
 import { SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
   title: "Champions League nights in central Madrid",
   description:
-    "UEFA Champions League on the screens at O'Connell St near Puerta del Sol. Irish sports bar in Madrid Centro for midweek European nights.",
+    "UEFA Champions League on the screens at O'Connell St near Sol. Irish sports pub for European nights in Madrid.",
   path: "/champions-league",
 });
 
@@ -18,17 +18,20 @@ export default function ChampionsLeaguePage() {
       <PageHero
         eyebrow="UEFA Champions League"
         title={`UCL nights at ${SITE_NAME}`}
-        lead="Midweek European football belongs on the big screens. Join the crowd at this Irish sports pub near Puerta del Sol for Champions League nights in Madrid Centro."
+        lead="European football on the big screens. Join the crowd at this Irish sports pub near Sol for Champions League nights."
       />
-      <VenueHero variant="secondary" className="mb-10" />
+      <InteriorPhoto
+        src="/images/interior/sports-aisle.webp"
+        alt="Wide aisle with multiple big screens ready for Champions League nights"
+        position="object-[center_45%]"
+      />
       <Section title="Before you come">
         <p>
           Confirm tonight&apos;s ties on{" "}
           <Link href="/whats-on" className="text-cream underline">
-            what&apos;s on
+            fixtures
           </Link>{" "}
-          if your night depends on one match. We&apos;re a short walk from Sol —
-          easy for travellers and locals heading into Madrid Centro for kick-off.
+          if your night depends on one match. Short walk from Sol.
         </p>
         <p>
           <Link href="/premier-league" className="text-cream underline">

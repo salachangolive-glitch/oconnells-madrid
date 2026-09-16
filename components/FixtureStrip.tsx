@@ -1,7 +1,11 @@
+"use client";
+
 import Link from "next/link";
+import { useEffect, useMemo, useState } from "react";
 import {
   formatFixtureDay,
   getUpcomingFixtures,
+  madridTodayYmd,
   type Fixture,
 } from "@/lib/fixtures";
 import { MAPS_URL } from "@/lib/venue";
@@ -31,9 +35,23 @@ function FixtureRow({ f, locale }: { f: Fixture; locale: Locale }) {
   );
 }
 
+/**
+ * Home / Sports strip — client Madrid date so past fixtures never stick as "upcoming".
+ * SSR shows neutral empty copy until hydrate (no build-time fixture rows).
+ */
 export function FixtureStrip({ locale = "en" }: { locale?: Locale }) {
   const isEs = locale === "es";
-  const upcoming = getUpcomingFixtures().slice(0, 3);
+  const [today, setToday] = useState<string | null>(null);
+
+  useEffect(() => {
+    setToday(madridTodayYmd());
+  }, []);
+
+  const upcoming = useMemo(
+    () => (today ? getUpcomingFixtures(today).slice(0, 3) : []),
+    [today],
+  );
+
   const title = isEs ? "En las pantallas" : "On the screens";
   const empty = isEs
     ? "Premier League, Champions League y LaLiga cuando tocan. Mira Partidos o pregunta en barra."
@@ -56,7 +74,9 @@ export function FixtureStrip({ locale = "en" }: { locale?: Locale }) {
         </Link>
       </div>
       <div className="pub-rule mb-6" />
-      {upcoming.length > 0 ? (
+      {today === null ? (
+        <p className="text-cream-muted">{empty}</p>
+      ) : upcoming.length > 0 ? (
         <ul className="space-y-7">
           {upcoming.map((f) => (
             <li key={f.id}>

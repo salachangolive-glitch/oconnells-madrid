@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { InteriorPhoto } from "@/components/InteriorPhoto";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
 import { VenueHero } from "@/components/VenueHero";
@@ -22,11 +23,15 @@ export default function EsLocationPage() {
   return (
     <PageShell locale="es" altLangHref="/location">
       <PageHero
-        eyebrow="Ubicación · Madrid Centro"
+        eyebrow="Ubicación · Madrid"
         title={`Cómo llegar a ${SITE_NAME}`}
         lead={`${ADDRESS.full} — a poca distancia de Puerta del Sol.`}
       />
-      <VenueHero variant="secondary" alt="O'Connell St en Calle de Espoz y Mina, cerca de Sol" className="mb-10" />
+      <VenueHero
+        variant="secondary"
+        alt="O'Connell St en Calle de Espoz y Mina, cerca de Sol"
+        className="mb-10"
+      />
       <Section title="Dirección y horarios">
         <p>{ADDRESS.full}</p>
         <p>
@@ -50,11 +55,16 @@ export default function EsLocationPage() {
           </a>
         </p>
       </Section>
+      <InteriorPhoto
+        src="/images/interior/bar-taps.webp"
+        alt="Grifos de cerveza y barra roja-verde en el interior de O'Connell St cerca de Sol"
+        position="object-[center_40%]"
+      />
       <Section title="Cómo llegar">
         <p>
           Dirígete a Puerta del Sol y camina hasta Calle de Espoz y Mina. Ideal
           antes de un partido de Premier League, Champions League o LaLiga — o
-          para los jueves de chupitos a 1 € con tu grupo Erasmus.
+          para los jueves de chupitos a 1 € con amigos.
         </p>
         <p>
           <Link href="/es/whats-on" className="text-cream underline">

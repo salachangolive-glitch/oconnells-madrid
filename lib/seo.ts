@@ -58,7 +58,7 @@ export function buildMetadata({
       title: fullTitle,
       description,
     },
-    // Preview (*.vercel.app): noindex so it never consolidates as the permanent site.
+    // Preview (*.vercel.app / *.pages.dev): noindex so it never consolidates as the permanent site.
     // Custom domain: index,follow.
     robots: preview
       ? { index: false, follow: false }

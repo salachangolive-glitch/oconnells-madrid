@@ -5,7 +5,7 @@ import { buildMetadata } from "@/lib/seo";
 import { MAPS_URL, SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
-  title: "Thursday €1 shots near Puerta del Sol",
+  title: "Thursday €1 shots near Sol",
   description:
     "Thursday €1 shots at O'Connell St Madrid — Erasmus, internationals, tourists and friend groups near Sol. Wednesday €1 shots also on.",
   path: "/thursday-1-euro-shots",
@@ -17,19 +17,21 @@ export default function ThursdayShotsPage() {
       <PageHero
         eyebrow="Thursday · €1"
         title="Thursday · €1 shots"
-        lead={`At ${SITE_NAME}, Thursday is the night for €1 shots — Erasmus students, internationals, tourists and anyone who wants an easy Madrid Centro night near Sol.`}
+        lead={`At ${SITE_NAME}, Thursday means €1 shots — popular with Erasmus students, internationals, tourists and friend groups out near Sol.`}
       />
       <Section title="Why Thursday">
         <p>
-          €1 shots, a short walk from Puerta del Sol, Irish pub energy — it is
-          the night groups actually show up for. Bring your Erasmus flatmates,
-          your hostel friends, or the WhatsApp crew exploring Madrid.
+          €1 shots and a short walk from Sol — a lively Irish-pub night for
+          flatmates, hostel friends, or whoever you&apos;re out with in Madrid.
         </p>
-        <p>Wednesday €1 shots are on too. Thursday is the one everyone talks about.</p>
+        <p>
+          Wednesday €1 shots are on too. Thursday is still the busier of the
+          two.
+        </p>
       </Section>
       <Section title="Good to know">
         <ul className="list-disc space-y-2 pl-5">
-          <li>Near Puerta del Sol — easy for mixed groups and travellers.</li>
+          <li>Near Sol — straightforward for groups and travellers.</li>
           <li>Ask at the bar for what is pouring that night.</li>
           <li>
             Pair it with a match from{" "}

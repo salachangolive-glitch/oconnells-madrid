@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     default: `${SITE_NAME} Madrid | Irish pub & sports bar near Sol`,
     template: `%s | ${SITE_NAME} Madrid`,
   },
-  description: `${SITE_NAME} — ${SITE_TAGLINE}. Calle de Espoz y Mina 7. Watch football (Premier League, Champions League, LaLiga) in Madrid Centro. Thursday €1 shots.`,
+  description: `${SITE_NAME} — ${SITE_TAGLINE}. Calle de Espoz y Mina 7. Premier League, Champions League and LaLiga on the screens. Thursday €1 shots.`,
   robots: preview
     ? { index: false, follow: false }
     : { index: true, follow: true },
