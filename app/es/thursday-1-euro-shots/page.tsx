@@ -7,7 +7,7 @@ import { MAPS_URL, SITE_NAME } from "@/lib/venue";
 export const metadata = buildMetadata({
   title: "Jueves chupitos a 1 € cerca de Sol",
   description:
-    "Jueves chupitos a 1 € en O'Connell St Madrid — Erasmus, internacionales, turistas y amigos cerca de Sol. También hay chupitos a 1 € los miércoles.",
+    "Jueves chupitos a 1 € en O'Connell St Madrid — Erasmus, internacionales, turistas y amigos cerca de Sol. 1 € todos los jueves.",
   path: "/es/thursday-1-euro-shots",
   locale: "es",
 });
@@ -27,8 +27,8 @@ export default function EsThursdayShotsPage() {
           Madrid.
         </p>
         <p>
-          También hay chupitos a 1 € los miércoles. El jueves suele ser el más
-          animado.
+          Chupitos a 1 € todos los jueves. También hay chupitos a 1 € los
+          miércoles — el jueves suele ser el más animado.
         </p>
       </Section>
       <Section title="Información útil">
