@@ -30,7 +30,7 @@ export default function EsWhatsOnPage() {
           Mina 7. Retransmitimos grandes eventos deportivos en nuestras
           pantallas cuando están confirmados: fútbol, NFL, NBA, rugby, Fórmula 1,
           tenis y más. Consulta la agenda de hoy y de esta semana, o pregunta en
-          la barra si buscas un partido concreto.
+          la barra si buscas un evento concreto.
         </p>
       </Section>
 

@@ -54,7 +54,7 @@ export const RECURRING = {
   },
   liveSports: {
     en: "O'Connell St is an Irish pub by Puerta del Sol — Espoz y Mina 7. We put major live sport on our screens when it's confirmed: football, NFL, NBA, rugby, Formula 1, tennis and more. See Today and This week on this page, or ask at the bar if you're looking for a specific game.",
-    es: "O'Connell St es un pub irlandés junto a Puerta del Sol — Espoz y Mina 7. Retransmitimos grandes eventos deportivos en nuestras pantallas cuando están confirmados: fútbol, NFL, NBA, rugby, Fórmula 1, tenis y más. Consulta la agenda de hoy y de esta semana, o pregunta en la barra si buscas un partido concreto.",
+    es: "O'Connell St es un pub irlandés junto a Puerta del Sol — Espoz y Mina 7. Retransmitimos grandes eventos deportivos en nuestras pantallas cuando están confirmados: fútbol, NFL, NBA, rugby, Fórmula 1, tenis y más. Consulta la agenda de hoy y de esta semana, o pregunta en la barra si buscas un evento concreto.",
   },
 } as const;
 
