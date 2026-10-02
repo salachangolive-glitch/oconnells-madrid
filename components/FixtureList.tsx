@@ -20,8 +20,8 @@ const EMPTY = {
     es: "Hoy no hay nada listado — pregunta en la barra qué hay en pantallas.",
   },
   week: {
-    en: "This week's upcoming list will appear here when events are ready.",
-    es: "La agenda de próximos eventos aparecerá aquí cuando estén listos.",
+    en: "No other confirmed screenings listed for the rest of the week. Ask at the bar if you're looking for a specific game.",
+    es: "No hay más emisiones confirmadas listadas para el resto de la semana. Pregunta en la barra si buscas un partido concreto.",
   },
 } as const;
 
