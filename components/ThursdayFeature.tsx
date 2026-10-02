@@ -2,7 +2,7 @@ import Link from "next/link";
 
 type Locale = "en" | "es";
 
-/** Compact Thursday mention for inner pages — Home uses HomeCtaBand only. */
+/** Compact Thursday mention for Home and Erasmus. */
 export function ThursdayFeature({ locale = "en" }: { locale?: Locale }) {
   const href =
     locale === "es" ? "/es/thursday-1-euro-shots" : "/thursday-1-euro-shots";
@@ -19,8 +19,8 @@ export function ThursdayFeature({ locale = "en" }: { locale?: Locale }) {
       </h2>
       <p className="mt-3 max-w-lg text-cream-muted">
         {isEs
-          ? "Erasmus, internacionales y amigos cerca de Sol. El 1 € es la excusa; el sitio es O’Connell’s."
-          : "Erasmus, internationals and friends near Sol. The €1 is the excuse — the pub is O’Connell’s."}
+          ? "Chupitos a 1 € los jueves — Erasmus, internacionales y amigos cerca de Sol."
+          : "€1 shots every Thursday — Erasmus, internationals and friends near Sol."}
       </p>
       <p className="mt-5">
         <Link href={href} className="text-sm text-gold hover:text-cream">

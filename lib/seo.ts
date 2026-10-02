@@ -21,6 +21,8 @@ export function buildMetadata({
   locale = "en",
 }: BuildMetaOpts): Metadata {
   const canonical = absoluteUrl(path);
+  // Absolute title so root layout template never doubles the brand
+  // (e.g. "O'Connell St Madrid | O'Connell St Madrid").
   const fullTitle =
     title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME} Madrid`;
   const preview = isPreviewHost();
@@ -39,7 +41,7 @@ export function buildMetadata({
   }
 
   return {
-    title: fullTitle,
+    title: { absolute: fullTitle },
     description,
     alternates: {
       canonical,

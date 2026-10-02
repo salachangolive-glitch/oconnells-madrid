@@ -8,7 +8,7 @@ import { SITE_NAME } from "@/lib/venue";
 export const metadata = buildMetadata({
   title: "Erasmus nights near Sol",
   description:
-    "Erasmus-friendly Irish pub near Sol: Thursday €1 shots, football on the screens, easy meetups. O'Connell St, Espoz y Mina 7.",
+    "Erasmus-friendly Irish pub near Sol: Thursday €1 shots, live sports on the screens, easy meetups. O'Connell St, Espoz y Mina 7.",
   path: "/erasmus",
 });
 
@@ -18,7 +18,7 @@ export default function ErasmusPage() {
       <PageHero
         eyebrow="Erasmus · Internationals"
         title={`Your night at ${SITE_NAME}`}
-        lead="Meet near Sol, watch the football, stay for Thursday €1 shots — a proper Irish pub with an international crowd."
+        lead="Meet near Sol, catch confirmed sports on the screens, stay for Thursday €1 shots — a proper Irish pub with an international crowd."
       />
       <ThursdayFeature locale="en" />
       <Section title="Why it works">
@@ -29,7 +29,7 @@ export default function ErasmusPage() {
         </p>
         <p>
           <Link href="/sports" className="text-gold underline">
-            Sports
+            Live Sports
           </Link>
           {" · "}
           <Link href="/location" className="text-gold underline">

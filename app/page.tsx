@@ -17,7 +17,7 @@ import {
 export const metadata = buildMetadata({
   title: `${SITE_NAME} Madrid — Irish pub & sports bar near Sol`,
   description:
-    "O'Connell St: Irish pub and sports bar at Calle de Espoz y Mina 7, near Sol. Live sports on the screens. Thursday €1 shots.",
+    "Irish pub by Puerta del Sol with live sports on the screens and €1 shots on Thursdays. Calle de Espoz y Mina 7, Madrid.",
   path: "/",
 });
 
@@ -41,12 +41,11 @@ export default function HomePage() {
         <HomeCtaBand locale="en" />
       </div>
 
-      {/* Presentación */}
+      {/* Presentación — parallel to ES; Erasmus stays in its own section */}
       <section className="mb-12 max-w-2xl">
         <p className="text-sm leading-relaxed text-cream-muted sm:text-base">
-          An Irish pub a short walk from Puerta del Sol — live sports on the
-          screens when they&apos;re confirmed, pints at the bar, and Thursday €1
-          shots for Erasmus, travellers and friends out in the centre.
+          O&apos;Connell St is an Irish pub by Puerta del Sol, with live sports,
+          an international crowd, and €1 shots on Thursdays.
         </p>
       </section>
 
@@ -199,7 +198,7 @@ export default function HomePage() {
         <p>
           Questions about a match night or a group?{" "}
           <Link href="/contact" className="text-gold underline">
-            Contact us
+            Write to us via the form
           </Link>
           .
         </p>

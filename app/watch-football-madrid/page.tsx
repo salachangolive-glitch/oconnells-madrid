@@ -28,7 +28,8 @@ export default function WatchFootballPage() {
       <Section title="What gets shown">
         <p>
           Premier League weekends, Champions League nights, and LaLiga on the
-          screens — a central spot for the match.
+          screens when those matches are confirmed — a central spot for the
+          match.
         </p>
         <p>
           See{" "}
@@ -52,17 +53,19 @@ export default function WatchFootballPage() {
           .
         </p>
         <p>
+          More on{" "}
           <Link href="/premier-league" className="text-cream underline">
             Premier League
-          </Link>
-          {" · "}
+          </Link>{" "}
+          and{" "}
           <Link href="/champions-league" className="text-cream underline">
             Champions League
           </Link>
-          {" · "}
+          , or the wider{" "}
           <Link href="/sports" className="text-cream underline">
-            All sports
-          </Link>
+            live sports
+          </Link>{" "}
+          page.
         </p>
       </Section>
     </PageShell>

@@ -8,7 +8,7 @@ import { SITE_NAME } from "@/lib/venue";
 export const metadata = buildMetadata({
   title: "Noches Erasmus cerca de Sol",
   description:
-    "Pub irlandés para Erasmus cerca de Sol: jueves de chupitos a 1 €, fútbol en pantallas y punto de encuentro céntrico.",
+    "Pub irlandés para Erasmus cerca de Sol: chupitos a 1 € los jueves, deportes en directo y punto de encuentro céntrico.",
   path: "/es/erasmus",
   locale: "es",
 });
@@ -19,18 +19,18 @@ export default function EsErasmusPage() {
       <PageHero
         eyebrow="Erasmus · Internacionales"
         title={`Tu noche en ${SITE_NAME}`}
-        lead="Cerca de Sol: partido en pantallas y jueves de chupitos a 1 € — pub irlandés con ambiente internacional."
+        lead="Cerca de Sol: pantallas cuando hay deporte confirmado y chupitos a 1 € los jueves — pub irlandés con ambiente internacional."
       />
       <ThursdayFeature locale="es" />
       <Section title="Por qué funciona">
         <p>
-          Céntrico para que todo el mundo llegue. Trato en inglés en barra.
-          Pantallas cuando hay partidos importantes. Los chupitos a 1 € del
+          Céntrico para que todo el mundo llegue. Trato en inglés en la barra.
+          Pantallas cuando hay partidos importantes. Los chupitos a 1 € los
           jueves dan un plan claro.
         </p>
         <p>
           <Link href="/es/sports" className="text-gold underline">
-            Deportes
+            Deportes en directo
           </Link>
           {" · "}
           <Link href="/es/location" className="text-gold underline">
@@ -38,7 +38,7 @@ export default function EsErasmusPage() {
           </Link>
           {" · "}
           <Link href="/es/whats-on" className="text-gold underline">
-            Partidos
+            Agenda
           </Link>
         </p>
       </Section>

@@ -8,7 +8,7 @@ import { ADDRESS, HOURS, SITE_NAME } from "@/lib/venue";
 export const metadata = buildMetadata({
   title: "Sobre O'Connell St Madrid",
   description:
-    "Sobre O'Connell St: pub irlandés y bar deportivo en Calle de Espoz y Mina 7, 28012 Madrid, cerca de Sol. Pantallas de fútbol y jueves chupitos a 1 €.",
+    "Sobre O'Connell St: pub irlandés y bar deportivo en Calle de Espoz y Mina 7, 28012 Madrid, cerca de Sol. Deportes en directo y chupitos a 1 € los jueves.",
   path: "/es/about",
   locale: "es",
 });
@@ -19,7 +19,7 @@ export default function EsAboutPage() {
       <PageHero
         eyebrow="Sobre nosotros"
         title={SITE_NAME}
-        lead="Pub irlandés y bar deportivo en el corazón de Madrid — Premier League, Champions League y LaLiga en pantallas, jueves chupitos a 1 € para Erasmus e internacionales."
+        lead="Pub irlandés y bar deportivo en el centro de Madrid — pantallas para el deporte cuando está confirmado, y chupitos a 1 € los jueves."
       />
       <InteriorPhoto
         src="/images/interior/about-salon.webp"
@@ -32,7 +32,7 @@ export default function EsAboutPage() {
         </p>
         <p>
           Ven por el partido, la pinta y los jueves de chupitos a 1 € — un pub
-          irlandés céntrico para viajeros, estudiantes y locales.
+          irlandés céntrico.
         </p>
         <p>
           <Link href="/es/location" className="text-cream underline">
@@ -40,7 +40,7 @@ export default function EsAboutPage() {
           </Link>
           {" · "}
           <Link href="/es/sports" className="text-cream underline">
-            Deportes
+            Deportes en directo
           </Link>
           {" · "}
           <Link
@@ -51,7 +51,7 @@ export default function EsAboutPage() {
           </Link>
           {" · "}
           <Link href="/es/whats-on" className="text-cream underline">
-            Partidos
+            Agenda
           </Link>
         </p>
       </Section>

@@ -5,9 +5,9 @@ import { buildMetadata } from "@/lib/seo";
 import { MAPS_URL, SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
-  title: "Jueves chupitos a 1 € cerca de Sol",
+  title: "Chupitos a 1 € los jueves cerca de Sol",
   description:
-    "Jueves chupitos a 1 € en O'Connell St Madrid — Erasmus, internacionales, turistas y amigos cerca de Sol. 1 € todos los jueves.",
+    "Chupitos a 1 € los jueves en O'Connell St Madrid — Erasmus, internacionales y amigos cerca de Sol.",
   path: "/es/thursday-1-euro-shots",
   locale: "es",
 });
@@ -17,35 +17,38 @@ export default function EsThursdayShotsPage() {
     <PageShell locale="es" altLangHref="/thursday-1-euro-shots">
       <PageHero
         eyebrow="Jueves · 1 €"
-        title="Jueves · chupitos a 1 €"
-        lead={`En ${SITE_NAME}, el jueves son chupitos a 1 € — Erasmus, internacionales, turistas y quien quiera una buena noche cerca de Sol.`}
+        title="Chupitos a 1 € los jueves"
+        lead={`En ${SITE_NAME}, los jueves son chupitos a 1 € — un plan claro cerca de Sol para Erasmus, internacionales y quien quiera una buena noche.`}
       />
       <Section title="Por qué el jueves">
         <p>
-          Chupitos a 1 € y a un paso de Sol — ambiente de pub irlandés para
-          compañeros Erasmus, gente del hostel o el grupo con el que sales por
-          Madrid.
+          Chupitos a 1 € los jueves y a un paso de Sol — ambiente de pub
+          irlandés para compañeros Erasmus, gente del hostel o el grupo con el
+          que sales por Madrid.
         </p>
         <p>
-          Chupitos a 1 € todos los jueves — la noche de la semana en
-          O&apos;Connell&apos;s para Erasmus, internacionales y amigos cerca de
-          Sol.
+          Solo los jueves: no hay promoción de chupitos a 1 € otros días de la
+          semana.
         </p>
       </Section>
       <Section title="Información útil">
         <ul className="list-disc space-y-2 pl-5">
           <li>Cerca de Sol — cómodo para grupos y viajeros.</li>
-          <li>Pregunta en barra qué se sirve esa noche.</li>
+          <li>Pregunta en la barra qué se sirve esa noche.</li>
           <li>
-            Combínalo con un partido de{" "}
+            Combínalo con un partido de la{" "}
             <Link href="/es/whats-on" className="text-gold underline">
-              Partidos
+              Agenda
             </Link>
             .
           </li>
         </ul>
         <p>
-          ¿Dudas? <Link href="/es/contact" className="text-gold underline">Escríbenos</Link>. {" "}
+          ¿Dudas?{" "}
+          <Link href="/es/contact" className="text-gold underline">
+            Escríbenos
+          </Link>
+          .{" "}
           <a
             href={MAPS_URL}
             target="_blank"

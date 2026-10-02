@@ -47,11 +47,11 @@ export const FIXTURES: Fixture[] = [];
 export const RECURRING = {
   thursdayShots: {
     en: "Thursday €1 shots — Erasmus, internationals and friends near Sol",
-    es: "Jueves chupitos a 1 € — Erasmus, internacionales y amigos cerca de Sol",
+    es: "Chupitos a 1 € los jueves — Erasmus, internacionales y amigos cerca de Sol",
   },
   liveSports: {
     en: "Live sports on the screens when confirmed — football, NFL, NBA, rugby, F1, tennis and other big nights",
-    es: "Deportes en vivo en pantallas cuando están confirmados — fútbol, NFL, NBA, rugby, F1, tenis y otras noches grandes",
+    es: "Deportes en directo en pantallas cuando están confirmados — fútbol, NFL, NBA, rugby, F1, tenis y otras noches grandes",
   },
 } as const;
 

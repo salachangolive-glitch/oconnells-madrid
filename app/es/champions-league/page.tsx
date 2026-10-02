@@ -28,9 +28,9 @@ export default function EsChampionsLeaguePage() {
       />
       <Section title="Antes de venir">
         <p>
-          Confirma los cruces de esta noche en{" "}
+          Confirma los cruces de esta noche en la{" "}
           <Link href="/es/whats-on" className="text-cream underline">
-            Partidos
+            Agenda
           </Link>{" "}
           si tu plan depende de un partido. A poca distancia de Sol.
         </p>
@@ -40,7 +40,7 @@ export default function EsChampionsLeaguePage() {
           </Link>
           {" · "}
           <Link href="/es/sports" className="text-cream underline">
-            Deportes
+            Deportes en directo
           </Link>
           {" · "}
           <Link href="/es/location" className="text-cream underline">

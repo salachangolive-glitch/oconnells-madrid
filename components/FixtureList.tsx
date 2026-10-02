@@ -95,8 +95,8 @@ export function FixtureList({ locale = "en" }: { locale?: Locale }) {
   );
 
   const emptyUpcoming = isEs
-    ? "De momento no hay eventos confirmados. Pregunta en barra, vuelve aquí pronto o escríbenos."
-    : "Nothing confirmed for the diary right now. Ask at the bar, check back soon, or drop us a line.";
+    ? "De momento no hay eventos confirmados. Consulta la agenda o pregunta en la barra."
+    : "Nothing confirmed for the diary right now. Check What's On or ask at the bar.";
 
   // Pre-hydrate / SSR: week-neutral only — never hardcode Today with build-time data.
   if (today === null) {
@@ -133,15 +133,23 @@ export function FixtureList({ locale = "en" }: { locale?: Locale }) {
         ) : (
           <p>
             {emptyUpcoming}{" "}
-            <Link
-              href={isEs ? "/es/contact" : "/contact"}
-              className="text-gold underline"
-            >
-              {isEs ? "Escríbenos" : "Contact us"}
-            </Link>{" "}
-            {isEs
-              ? "si necesitas confirmar un partido o evento concreto."
-              : "if you need a specific match or event confirmed."}
+            {isEs ? (
+              <>
+                Si necesitas confirmar un partido concreto,{" "}
+                <Link href="/es/contact" className="text-gold underline">
+                  escríbenos
+                </Link>
+                .
+              </>
+            ) : (
+              <>
+                If you need a specific match confirmed,{" "}
+                <Link href="/contact" className="text-gold underline">
+                  contact us
+                </Link>
+                .
+              </>
+            )}
           </p>
         )}
       </Section>

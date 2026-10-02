@@ -29,15 +29,15 @@ export default function EsWatchFootballPage() {
       <Section title="Qué se emite">
         <p>
           Fines de semana de Premier League, Champions League entre semana y
-          noches de LaLiga en pantallas. Viajeros y locales nos usan como punto
-          céntrico para ver el partido.
+          noches de LaLiga en pantallas cuando están confirmadas. Viajeros y
+          locales nos usan como punto céntrico para ver el partido.
         </p>
         <p>
-          Mira{" "}
+          Consulta la{" "}
           <Link href="/es/whats-on" className="text-cream underline">
-            Partidos
+            Agenda
           </Link>{" "}
-          para fechas confirmadas, o pregunta en barra.
+          para fechas confirmadas, o pregunta en la barra.
         </p>
       </Section>
       <Section title="Cómo llegar">
@@ -54,17 +54,19 @@ export default function EsWatchFootballPage() {
           .
         </p>
         <p>
+          También hay páginas sobre{" "}
           <Link href="/es/premier-league" className="text-cream underline">
             Premier League
-          </Link>
-          {" · "}
+          </Link>{" "}
+          y{" "}
           <Link href="/es/champions-league" className="text-cream underline">
             Champions League
           </Link>
-          {" · "}
+          , o la vista general de{" "}
           <Link href="/es/sports" className="text-cream underline">
-            Deportes
+            deportes en directo
           </Link>
+          .
         </p>
       </Section>
     </PageShell>

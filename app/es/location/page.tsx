@@ -68,11 +68,11 @@ export default function EsLocationPage() {
         </p>
         <p>
           <Link href="/es/whats-on" className="text-cream underline">
-            Partidos
+            Agenda
           </Link>
           {" · "}
           <Link href="/es/sports" className="text-cream underline">
-            Deportes
+            Deportes en directo
           </Link>
           {" · "}
           <Link

@@ -58,12 +58,12 @@ export function FixtureStrip({ locale = "en" }: { locale?: Locale }) {
     [today],
   );
 
-  const title = isEs ? "Deportes en vivo" : "Live sports";
+  const title = isEs ? "Deportes en directo" : "Live sports";
   const empty = isEs
-    ? "Cuando hay un gran partido o evento confirmado (fútbol, NFL, NBA, rugby, F1, tenis…), lo verás aquí. Mira Partidos o pregunta en barra."
-    : "When a big match or event is confirmed (football, NFL, NBA, rugby, F1, tennis…), it shows up here. Check What’s On or ask at the bar.";
+    ? "Cuando hay un gran partido o evento confirmado (fútbol, NFL, NBA, rugby, F1, tenis…), lo verás aquí. Consulta la agenda o pregunta en la barra."
+    : "When a big match or event is confirmed (football, NFL, NBA, rugby, F1, tennis…), it shows up here. Check What's On or ask at the bar.";
   const moreHref = isEs ? "/es/whats-on" : "/whats-on";
-  const more = isEs ? "Partidos" : "What's On";
+  const more = isEs ? "Agenda" : "What's On";
   const cta = isEs ? "Cómo llegar" : "Get directions";
 
   return (

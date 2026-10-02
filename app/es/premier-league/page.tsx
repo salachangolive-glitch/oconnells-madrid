@@ -29,11 +29,11 @@ export default function EsPremierLeaguePage() {
       <Section title="Planificar una tarde o noche de PL">
         <p>
           Los fines de semana se llenan. Si te importa un horario concreto,
-          mira{" "}
+          consulta la{" "}
           <Link href="/es/whats-on" className="text-cream underline">
-            Partidos
+            Agenda
           </Link>{" "}
-          o pregunta en barra.{" "}
+          o pregunta en la barra.{" "}
           <Link href="/es/location" className="text-cream underline">
             Cómo llegar desde Sol
           </Link>

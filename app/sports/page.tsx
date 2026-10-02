@@ -9,7 +9,7 @@ import { SITE_NAME } from "@/lib/venue";
 export const metadata = buildMetadata({
   title: "Live sports Madrid — Irish pub near Sol",
   description:
-    "O'Connell St near Sol: live sports on the screens — football, NFL, NBA, rugby, F1, tennis and other big confirmed nights.",
+    "O'Connell St near Sol: live sports on the screens — football, NFL, NBA, rugby, F1, tennis and other big nights when they're confirmed.",
   path: "/sports",
 });
 
@@ -19,7 +19,7 @@ export default function SportsPage() {
       <PageHero
         eyebrow="Screens · pints · Sol"
         title={`Live sports at ${SITE_NAME}`}
-        lead="Football nights when they matter, plus NFL, NBA, rugby, F1, tennis and other big events when they’re confirmed and on — a short walk from Sol."
+        lead="Football nights when they matter, plus NFL, NBA, rugby, F1, tennis and other big events when they’re confirmed — a short walk from Sol. We don’t promise everything every night: check What’s On."
       />
       <InteriorPhoto
         src="/images/interior/sports-aisle.webp"
@@ -38,15 +38,15 @@ export default function SportsPage() {
           <Link href="/whats-on" className="text-gold underline">
             What&apos;s On
           </Link>
-          . League pages if you want a deeper dive:{" "}
+          . If you want a deeper dive into football:{" "}
           <Link href="/watch-football-madrid" className="text-gold underline">
             Watch football in Madrid
           </Link>
-          {" · "}
+          , including{" "}
           <Link href="/premier-league" className="text-gold underline">
             Premier League
-          </Link>
-          {" · "}
+          </Link>{" "}
+          and{" "}
           <Link href="/champions-league" className="text-gold underline">
             Champions League
           </Link>

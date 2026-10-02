@@ -11,7 +11,7 @@ export function HomeCtaBand({ locale = "en" }: { locale?: Locale }) {
   const isEs = locale === "es";
   const whatsOnHref = isEs ? "/es/whats-on" : "/whats-on";
   const contactHref = isEs ? "/es/contact" : "/contact";
-  const whatsOnLabel = isEs ? "Partidos" : "What's On";
+  const whatsOnLabel = isEs ? "Agenda" : "What's On";
   const dirLabel = isEs ? "Cómo llegar" : "Directions";
   const contactLabel = isEs ? "Contacto" : "Contact";
 

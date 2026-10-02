@@ -14,8 +14,8 @@ const nav = {
     { href: "/contact", label: "Contact" },
   ],
   es: [
-    { href: "/es/whats-on", label: "Partidos" },
-    { href: "/es/sports", label: "Deportes en vivo" },
+    { href: "/es/whats-on", label: "Agenda" },
+    { href: "/es/sports", label: "Deportes en directo" },
     { href: "/es/thursday-1-euro-shots", label: "Jueves 1 €" },
     { href: "/es/erasmus", label: "Erasmus" },
     { href: "/es/location", label: "Ubicación" },

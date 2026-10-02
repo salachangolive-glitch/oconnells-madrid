@@ -19,9 +19,9 @@ const copy = {
     ok: "Thanks — we’ve received your message and will get back to you as soon as possible.",
     fail: "We couldn’t send that just now. Please try again in a moment.",
     unavailable:
-      "The contact form is being activated. Please try again later.",
+      "The contact form is not available yet. Please try again later.",
     privacy:
-      "We use your details only to reply to this enquiry. Full legal entity details will appear here once confirmed.",
+      "We use your details only to reply to this enquiry.",
     required: "Please fill in all fields.",
   },
   es: {
@@ -34,9 +34,9 @@ const copy = {
     ok: "Gracias — hemos recibido tu mensaje y te responderemos lo antes posible.",
     fail: "No hemos podido enviarlo ahora. Inténtalo de nuevo en un momento.",
     unavailable:
-      "El formulario se está activando. Prueba más tarde.",
+      "El formulario no está disponible todavía. Prueba más tarde.",
     privacy:
-      "Usamos tus datos solo para responder a esta consulta. Los datos legales completos se añadirán aquí cuando estén confirmados.",
+      "Usamos tus datos solo para responder a esta consulta.",
     required: "Completa todos los campos.",
   },
 } as const;

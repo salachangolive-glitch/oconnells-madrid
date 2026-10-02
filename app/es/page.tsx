@@ -17,7 +17,7 @@ import {
 export const metadata = buildMetadata({
   title: `${SITE_NAME} Madrid — Pub irlandés y bar deportivo cerca de Sol`,
   description:
-    "O'Connell St: pub irlandés y bar deportivo en Calle de Espoz y Mina 7, cerca de Sol. Deportes en vivo en pantallas. Jueves chupitos a 1 €.",
+    "Pub irlandés junto a Puerta del Sol, con deportes en directo y chupitos a 1 € los jueves. Calle de Espoz y Mina 7, Madrid.",
   path: "/es",
   locale: "es",
 });
@@ -39,7 +39,7 @@ export default function EsHomePage() {
           O&apos;Connell St Madrid
         </h1>
         <p className="mt-2 text-sm tracking-wide text-cream-muted sm:text-base">
-          Pub irlandés · Sol · Deportes en vivo
+          Pub irlandés · Sol · Deportes en directo
         </p>
       </header>
       <div className="mb-10 border-y border-gold/20 bg-pub-burgundy-deep/80">
@@ -48,9 +48,9 @@ export default function EsHomePage() {
 
       <section className="mb-12 max-w-2xl">
         <p className="text-sm leading-relaxed text-cream-muted sm:text-base">
-          Un pub irlandés a un paso de Puerta del Sol — deportes en vivo en
-          pantallas cuando están confirmados, pintas en la barra y jueves de
-          chupitos a 1 € para Erasmus, viajeros y amigos por el centro.
+          O&apos;Connell St es un pub irlandés junto a Puerta del Sol, con
+          deportes en directo, ambiente internacional y chupitos a 1 € los
+          jueves.
         </p>
       </section>
 
@@ -138,14 +138,14 @@ export default function EsHomePage() {
           </div>
           <div>
             <dt className="font-semibold text-cream">
-              ¿Ponéis deportes en vivo?
+              ¿Ponéis deportes en directo?
             </dt>
             <dd className="mt-1 text-cream/80">
-              Sí. Los partidos y eventos confirmados están en{" "}
+              Sí. Los partidos y eventos confirmados están en la{" "}
               <Link href="/es/whats-on" className="text-gold underline">
-                Partidos
+                Agenda
               </Link>
-              ; pregunta en barra por la noche.
+              ; pregunta en la barra por la noche.
             </dd>
           </div>
           <div>
@@ -203,7 +203,7 @@ export default function EsHomePage() {
         <p>
           ¿Dudas sobre una noche de partido o un grupo?{" "}
           <Link href="/es/contact" className="text-gold underline">
-            Escríbenos
+            Escríbenos por el formulario
           </Link>
           .
         </p>

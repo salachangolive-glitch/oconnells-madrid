@@ -21,7 +21,7 @@ export function StickyCta({ locale = "en" }: { locale?: Locale }) {
             className="flex min-h-11 flex-col items-center justify-center gap-0.5 px-1 py-1.5 hover:text-gold"
           >
             <ScreenIcon />
-            {isEs ? "Partidos" : "What's On"}
+            {isEs ? "Agenda" : "What's On"}
           </Link>
         </li>
         <li>

@@ -30,7 +30,7 @@ export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
                 href={isEs ? "/es/sports" : "/sports"}
                 className="hover:text-gold"
               >
-                {isEs ? "Deportes en vivo" : "Live Sports"}
+                {isEs ? "Deportes en directo" : "Live Sports"}
               </Link>
             </li>
             <li>
@@ -38,7 +38,7 @@ export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
                 href={isEs ? "/es/whats-on" : "/whats-on"}
                 className="hover:text-gold"
               >
-                {isEs ? "Partidos" : "What's On"}
+                {isEs ? "Agenda" : "What's On"}
               </Link>
             </li>
             <li>
@@ -48,7 +48,7 @@ export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
                 }
                 className="hover:text-gold"
               >
-                {isEs ? "Jueves chupitos a 1 €" : "Thursday €1 shots"}
+                {isEs ? "Chupitos a 1 € los jueves" : "Thursday €1 shots"}
               </Link>
             </li>
             <li>
