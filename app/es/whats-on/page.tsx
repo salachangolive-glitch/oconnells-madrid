@@ -29,7 +29,7 @@ export default function EsWhatsOnPage() {
           O&apos;Connell St es un pub irlandés junto a Puerta del Sol — Espoz y
           Mina 7. Ponemos grandes eventos deportivos en nuestras pantallas cuando
           están confirmados: fútbol, NFL, NBA, rugby, Fórmula 1, tenis y más.
-          Consulta la Agenda arriba para esta semana, o pregunta en la barra si
+          Mira Hoy y Esta semana en esta página, o pregunta en la barra si
           buscas un partido concreto.
         </p>
       </Section>

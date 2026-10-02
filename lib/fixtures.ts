@@ -50,11 +50,11 @@ export const FIXTURES: Fixture[] = [];
 export const RECURRING = {
   thursdayShots: {
     en: "Every Thursday: €1 shots at the pub. Ask at the bar when you arrive.",
-    es: "Todos los jueves: chupitos a 1 € en el pub. Pregunta en barra al llegar.",
+    es: "Todos los jueves: chupitos a 1 € en el pub. Pregunta en la barra al llegar.",
   },
   liveSports: {
-    en: "O'Connell St is an Irish pub by Puerta del Sol — Espoz y Mina 7. We put major live sport on our screens when it's confirmed: football, NFL, NBA, rugby, Formula 1, tennis and more. Check What's On above for this week's schedule, or ask at the bar if you're looking for a specific game.",
-    es: "O'Connell St es un pub irlandés junto a Puerta del Sol — Espoz y Mina 7. Ponemos grandes eventos deportivos en nuestras pantallas cuando están confirmados: fútbol, NFL, NBA, rugby, Fórmula 1, tenis y más. Consulta la Agenda arriba para esta semana, o pregunta en barra si buscas un partido concreto.",
+    en: "O'Connell St is an Irish pub by Puerta del Sol — Espoz y Mina 7. We put major live sport on our screens when it's confirmed: football, NFL, NBA, rugby, Formula 1, tennis and more. See Today and This week on this page, or ask at the bar if you're looking for a specific game.",
+    es: "O'Connell St es un pub irlandés junto a Puerta del Sol — Espoz y Mina 7. Ponemos grandes eventos deportivos en nuestras pantallas cuando están confirmados: fútbol, NFL, NBA, rugby, Fórmula 1, tenis y más. Mira Hoy y Esta semana en esta página, o pregunta en la barra si buscas un partido concreto.",
   },
 } as const;
 

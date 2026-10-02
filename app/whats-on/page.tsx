@@ -27,8 +27,7 @@ export default function WhatsOnPage() {
         <p>
           O&apos;Connell St is an Irish pub by Puerta del Sol — Espoz y Mina 7.
           We put major live sport on our screens when it&apos;s confirmed:
-          football, NFL, NBA, rugby, Formula 1, tennis and more. Check What&apos;s
-          On above for this week&apos;s schedule, or ask at the bar if you&apos;re
+          football, NFL, NBA, rugby, Formula 1, tennis and more. See Today and This week on this page, or ask at the bar if you&apos;re
           looking for a specific game.
         </p>
       </Section>
