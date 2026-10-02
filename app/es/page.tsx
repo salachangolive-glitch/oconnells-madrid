@@ -151,8 +151,7 @@ export default function EsHomePage() {
           <div>
             <dt className="font-semibold text-cream">¿Se puede reservar mesa?</dt>
             <dd className="mt-1 text-cream/80">
-              No hacemos reservas — entrada libre, por orden de llegada. Los
-              días de partido grande conviene llegar pronto.
+              No se reservan mesas. Atendemos por orden de llegada.
             </dd>
           </div>
           <div>

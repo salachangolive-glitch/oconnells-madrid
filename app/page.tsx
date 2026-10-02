@@ -144,8 +144,7 @@ export default function HomePage() {
           <div>
             <dt className="font-semibold text-cream">Can I book a table?</dt>
             <dd className="mt-1 text-cream/80">
-              No booking — walk in, first come, first served. Arrive early on
-              busy match nights.
+              No table reservations — walk in, first come, first served.
             </dd>
           </div>
           <div>
