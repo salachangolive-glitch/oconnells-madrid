@@ -7,7 +7,7 @@ import { MAPS_URL, SITE_NAME } from "@/lib/venue";
 export const metadata = buildMetadata({
   title: "Thursday €1 shots near Sol",
   description:
-    "Thursday €1 shots at O'Connell St Madrid — Erasmus, internationals and friends near Sol. €1 every Thursday.",
+    "Thursday €1 shots at O'Connell St Madrid near Sol. €1 every Thursday — ask at the bar when you arrive.",
   path: "/thursday-1-euro-shots",
 });
 
@@ -17,7 +17,7 @@ export default function ThursdayShotsPage() {
       <PageHero
         eyebrow="Thursday · €1"
         title="Thursday · €1 shots"
-        lead={`At ${SITE_NAME}, Thursday means €1 shots — a clear plan near Sol for Erasmus, internationals and whoever you're out with.`}
+        lead={`At ${SITE_NAME}, Thursday means €1 shots. Ask at the bar when you arrive.`}
       />
       <Section title="Why Thursday">
         <p>

@@ -7,7 +7,7 @@ import { MAPS_URL, SITE_NAME } from "@/lib/venue";
 export const metadata = buildMetadata({
   title: "Chupitos a 1 € los jueves cerca de Sol",
   description:
-    "Chupitos a 1 € los jueves en O'Connell St Madrid — Erasmus, internacionales y amigos cerca de Sol.",
+    "Chupitos a 1 € los jueves en O'Connell St Madrid cerca de Sol. Pregunta en barra al llegar.",
   path: "/es/thursday-1-euro-shots",
   locale: "es",
 });
@@ -18,13 +18,13 @@ export default function EsThursdayShotsPage() {
       <PageHero
         eyebrow="Jueves · 1 €"
         title="Chupitos a 1 € los jueves"
-        lead={`En ${SITE_NAME}, los jueves son chupitos a 1 € — un plan claro cerca de Sol para Erasmus, internacionales y quien quiera una buena noche.`}
+        lead={`En ${SITE_NAME}, los jueves son chupitos a 1 €. Pregunta en barra al llegar.`}
       />
       <Section title="Por qué el jueves">
         <p>
           Chupitos a 1 € los jueves y a un paso de Sol — ambiente de pub
-          irlandés para compañeros Erasmus, gente del hostel o el grupo con el
-          que sales por Madrid.
+          irlandés para grupos, gente del hostel o quien quiera una buena noche
+          en Madrid.
         </p>
         <p>
           Solo los jueves: no hay promoción de chupitos a 1 € otros días de la

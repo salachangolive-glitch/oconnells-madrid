@@ -9,7 +9,7 @@ import { SITE_NAME } from "@/lib/venue";
 export const metadata = buildMetadata({
   title: "Live sports Madrid — Irish pub near Sol",
   description:
-    "O'Connell St near Sol: live sports on the screens — football, NFL, NBA, rugby, F1, tennis and other big nights when they're confirmed.",
+    "O'Connell St near Sol: live sports on the screens — football, NFL, NBA, rugby, F1, tennis and more when confirmed.",
   path: "/sports",
 });
 
