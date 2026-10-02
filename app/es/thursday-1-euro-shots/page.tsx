@@ -7,7 +7,7 @@ import { MAPS_URL, SITE_NAME } from "@/lib/venue";
 export const metadata = buildMetadata({
   title: "Chupitos a 1 € los jueves cerca de Sol",
   description:
-    "Chupitos a 1 € los jueves en O'Connell St Madrid cerca de Sol. Pregunta en barra al llegar.",
+    "Chupitos a 1 € los jueves en O'Connell St Madrid cerca de Sol. Pregunta en la barra al llegar.",
   path: "/es/thursday-1-euro-shots",
   locale: "es",
 });
@@ -18,7 +18,7 @@ export default function EsThursdayShotsPage() {
       <PageHero
         eyebrow="Jueves · 1 €"
         title="Chupitos a 1 € los jueves"
-        lead={`En ${SITE_NAME}, los jueves son chupitos a 1 €. Pregunta en barra al llegar.`}
+        lead={`En ${SITE_NAME}, los jueves son chupitos a 1 €. Pregunta en la barra al llegar.`}
       />
       <Section title="Por qué el jueves">
         <p>

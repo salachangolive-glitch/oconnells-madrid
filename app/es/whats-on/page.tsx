@@ -24,19 +24,19 @@ export default function EsWhatsOnPage() {
 
       <FixtureList locale="es" />
 
-      <Section title="Cada semana">
+      <Section title="Deportes en directo en O'Connell St">
         <p>
           O&apos;Connell St es un pub irlandés junto a Puerta del Sol — Espoz y
           Mina 7. Ponemos grandes eventos deportivos en nuestras pantallas cuando
           están confirmados: fútbol, NFL, NBA, rugby, Fórmula 1, tenis y más.
-          Consulta la Agenda arriba para esta semana, o pregunta en barra si
+          Consulta la Agenda arriba para esta semana, o pregunta en la barra si
           buscas un partido concreto.
         </p>
       </Section>
 
       <Section title="Chupitos a 1 € los jueves">
         <p>
-          Todos los jueves: chupitos a 1 € en el pub. Pregunta en barra al llegar.{" "}
+          Todos los jueves: chupitos a 1 € en el pub. Pregunta en la barra al llegar.{" "}
           <Link
             href="/es/thursday-1-euro-shots"
             className="text-gold underline"

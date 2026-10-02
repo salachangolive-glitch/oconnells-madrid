@@ -23,7 +23,7 @@ export default function WhatsOnPage() {
 
       <FixtureList locale="en" />
 
-      <Section title="Every week">
+      <Section title="Live sports at O'Connell St">
         <p>
           O&apos;Connell St is an Irish pub by Puerta del Sol — Espoz y Mina 7.
           We put major live sport on our screens when it&apos;s confirmed:

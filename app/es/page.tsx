@@ -95,8 +95,8 @@ export default function EsHomePage() {
         </h2>
         <div className="pub-rule my-3" />
         <p className="text-sm text-cream-muted sm:text-base">
-          Punto de encuentro cerca de Sol: ambiente cercano, pantallas y jueves
-          de chupitos a 1 €.
+          Quedada cerca de Sol: barra en inglés, deportes en pantallas y
+          chupitos a 1 € los jueves si te quedas.
         </p>
         <p className="mt-3">
           <Link
@@ -151,11 +151,8 @@ export default function EsHomePage() {
           <div>
             <dt className="font-semibold text-cream">¿Se puede reservar mesa?</dt>
             <dd className="mt-1 text-cream/80">
-              Escríbenos por{" "}
-              <Link href="/es/contact" className="text-gold underline">
-                Contacto
-              </Link>{" "}
-              y te respondemos — las noches de partido grande se llenan.
+              No hacemos reservas — entrada libre, por orden de llegada. Los
+              días de partido grande conviene llegar pronto.
             </dd>
           </div>
           <div>

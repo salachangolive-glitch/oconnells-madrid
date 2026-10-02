@@ -23,10 +23,6 @@ const EMPTY = {
     en: "This week's upcoming list will appear here when events are ready.",
     es: "La agenda de próximos eventos aparecerá aquí cuando estén listos.",
   },
-  note: {
-    en: "Times are Madrid time. Confirmed = showing on our screens.",
-    es: "Horarios en hora de Madrid. Confirmado = se emite en nuestras pantallas.",
-  },
 } as const;
 
 function FixtureDetail({ f, locale }: { f: Fixture; locale: Locale }) {
@@ -111,8 +107,6 @@ export function FixtureList({ locale = "en" }: { locale?: Locale }) {
 
   const emptyToday = EMPTY.today[locale];
   const emptyWeek = EMPTY.week[locale];
-  const note = EMPTY.note[locale];
-
   // Pre-hydrate / SSR: always show Today + This week with empty copy — never "…".
   if (today === null) {
     return (
@@ -123,7 +117,6 @@ export function FixtureList({ locale = "en" }: { locale?: Locale }) {
         </Section>
         <Section title={isEs ? "Esta semana" : "This week"}>
           <p className="text-cream-muted">{emptyWeek}</p>
-          <p className="mt-3 text-sm text-cream/55">{note}</p>
         </Section>
       </>
     );
@@ -153,7 +146,6 @@ export function FixtureList({ locale = "en" }: { locale?: Locale }) {
         ) : (
           <p className="text-cream-muted">{emptyWeek}</p>
         )}
-        <p className="mt-3 text-sm text-cream/55">{note}</p>
       </Section>
     </>
   );

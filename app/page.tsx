@@ -93,8 +93,8 @@ export default function HomePage() {
         </h2>
         <div className="pub-rule my-3" />
         <p className="text-sm text-cream-muted sm:text-base">
-          An easy meetup near Sol — English-friendly at the bar, sports on the
-          screens, and Thursday €1 shots to finish the night.
+          Meet near Sol for a drink — English-friendly bar, sports on the
+          screens, and Thursday €1 shots if you stay late.
         </p>
         <p className="mt-3">
           <Link href="/erasmus" className="text-sm text-gold hover:text-cream">
@@ -144,11 +144,8 @@ export default function HomePage() {
           <div>
             <dt className="font-semibold text-cream">Can I book a table?</dt>
             <dd className="mt-1 text-cream/80">
-              Drop us a note via{" "}
-              <Link href="/contact" className="text-gold underline">
-                Contact
-              </Link>{" "}
-              and we&apos;ll get back to you — big match nights fill up.
+              No booking — walk in, first come, first served. Arrive early on
+              busy match nights.
             </dd>
           </div>
           <div>
