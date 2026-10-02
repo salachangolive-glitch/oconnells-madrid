@@ -23,7 +23,7 @@ export default function EsPremierLeaguePage() {
       />
       <InteriorPhoto
         src="/images/interior/sports-corridor.webp"
-        alt="Pasillo del pub con pantallas de fútbol — ambiente Premier League en O'Connell St"
+        alt="Televisiones de deportes en O'Connell St — noches de Premier League cerca de Sol"
         position="object-[center_40%]"
       />
       <Section title="Planificar una tarde o noche de PL">

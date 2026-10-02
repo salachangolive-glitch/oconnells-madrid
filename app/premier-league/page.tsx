@@ -22,7 +22,7 @@ export default function PremierLeaguePage() {
       />
       <InteriorPhoto
         src="/images/interior/sports-corridor.webp"
-        alt="Pub corridor with screens showing football — Premier League viewing at O'Connell St"
+        alt="Sports TVs including live racing at O'Connell St — Premier League nights near Sol"
         position="object-[center_40%]"
       />
       <Section title="Planning a PL afternoon or night">

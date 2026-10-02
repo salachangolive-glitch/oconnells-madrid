@@ -22,7 +22,7 @@ export default function AboutPage() {
       />
       <InteriorPhoto
         src="/images/interior/about-salon.webp"
-        alt="Wood tables, barrel seating and classic Irish pub décor inside O'Connell St"
+        alt="Tables and wall TVs in the seating area at O'Connell St near Sol"
         position="object-center"
       />
       <Section title="The short version">

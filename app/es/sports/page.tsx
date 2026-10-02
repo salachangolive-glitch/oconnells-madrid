@@ -24,7 +24,7 @@ export default function EsSportsPage() {
       />
       <InteriorPhoto
         src="/images/interior/sports-aisle.webp"
-        alt="Pasillo con varias pantallas de deportes en O'Connell St, con DAZN e iluminación verde"
+        alt="Pantallas de deportes y pasillo de asientos en el pub irlandés O'Connell St cerca de Sol"
         position="object-[center_15%]"
       />
       <FixtureStrip locale="es" />
@@ -49,7 +49,7 @@ export default function EsSportsPage() {
       </Section>
       <InteriorPhoto
         src="/images/interior/sports-corridor.webp"
-        alt="Pasillo con mesas y pantallas en la pared mostrando fútbol en directo"
+        alt="Interior con F1 y deportes en las televisiones de O'Connell St"
         position="object-[center_25%]"
       />
       <Section title="NFL y NBA">

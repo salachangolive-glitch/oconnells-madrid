@@ -22,7 +22,7 @@ export default function ChampionsLeaguePage() {
       />
       <InteriorPhoto
         src="/images/interior/sports-aisle.webp"
-        alt="Wide aisle with multiple big screens ready for Champions League nights"
+        alt="Multi-screen sports aisle at O'Connell St ready for Champions League nights"
         position="object-[center_45%]"
       />
       <Section title="Before you come">

@@ -33,7 +33,7 @@ export default function HomePage() {
             variant="editorial"
             priority
             src="/images/interior/bar-corner.webp"
-            alt="Wooden corner bar at O'Connell St Irish pub with stools, red bottle shelves and warm pendant lights"
+            alt="Bar at O'Connell St Irish pub near Sol — wooden counter, stools and warm lights"
           />
         </>
       }
@@ -87,23 +87,23 @@ export default function HomePage() {
         items={[
           {
             src: "/images/interior/bar-taps.webp",
-            alt: "Beer taps and polished wooden bar counter at O'Connell St",
+            alt: "Long wooden bar and beer taps at O'Connell St",
             position: "object-center",
           },
           {
             src: "/images/interior/sports-aisle.webp",
-            alt: "Aisle view with multiple sports screens and green ceiling lights",
+            alt: "Sports screens and seating aisle inside O'Connell St near Sol",
             position: "object-[center_20%]",
           },
           {
             src: "/images/interior/about-salon.webp",
-            alt: "Wooden tables and Irish pub décor in the seating area",
+            alt: "Tables with wall TVs in the O'Connell St seating area",
             position: "object-center",
           },
           {
-            src: "/images/interior/football-seating.webp",
-            alt: "Tables and chairs under atmospheric lighting with a wall screen",
-            position: "object-[center_30%]",
+            src: "/images/interior/stairs-levels.webp",
+            alt: "Stairs between levels at O'Connell St Irish pub",
+            position: "object-center",
           },
         ]}
       />

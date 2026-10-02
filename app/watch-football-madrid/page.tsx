@@ -22,7 +22,7 @@ export default function WatchFootballPage() {
       />
       <InteriorPhoto
         src="/images/interior/football-seating.webp"
-        alt="Seating area with wooden tables and a large screen for live sports at O'Connell St"
+        alt="Barrel seating and sports screens at O'Connell St Irish pub near Sol"
         position="object-[center_20%]"
       />
       <Section title="What gets shown">

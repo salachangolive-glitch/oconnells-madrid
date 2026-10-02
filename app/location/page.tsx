@@ -55,8 +55,8 @@ export default function LocationPage() {
         </p>
       </Section>
       <InteriorPhoto
-        src="/images/interior/bar-taps.webp"
-        alt="Bar taps and red-green back bar inside O'Connell St near Sol"
+        src="/images/interior/stairs-levels.webp"
+        alt="Stairs between floors at O'Connell St Irish pub near Sol"
         position="object-[center_40%]"
       />
       <Section title="Getting here">

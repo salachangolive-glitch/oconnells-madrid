@@ -23,7 +23,7 @@ export default function SportsPage() {
       />
       <InteriorPhoto
         src="/images/interior/sports-aisle.webp"
-        alt="Multi-screen sports aisle at O'Connell St with DAZN displays and green ceiling lights"
+        alt="Live sports screens and seating aisle at O'Connell St Irish pub near Sol"
         position="object-[center_15%]"
       />
       <FixtureStrip locale="en" />
@@ -48,7 +48,7 @@ export default function SportsPage() {
       </Section>
       <InteriorPhoto
         src="/images/interior/sports-corridor.webp"
-        alt="Corridor seating with wall-mounted screens showing live football"
+        alt="Interior with F1 and sports on the TVs at O'Connell St"
         position="object-[center_25%]"
       />
       <Section title="NFL & NBA">

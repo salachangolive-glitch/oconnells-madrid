@@ -23,7 +23,7 @@ export default function EsChampionsLeaguePage() {
       />
       <InteriorPhoto
         src="/images/interior/sports-aisle.webp"
-        alt="Pasillo amplio con varias pantallas grandes para noches de Champions League"
+        alt="Pasillo con varias pantallas de deportes en O'Connell St para noches de Champions"
         position="object-[center_45%]"
       />
       <Section title="Antes de venir">

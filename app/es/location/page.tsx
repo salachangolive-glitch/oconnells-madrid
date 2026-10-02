@@ -56,8 +56,8 @@ export default function EsLocationPage() {
         </p>
       </Section>
       <InteriorPhoto
-        src="/images/interior/bar-taps.webp"
-        alt="Grifos de cerveza y barra roja-verde en el interior de O'Connell St cerca de Sol"
+        src="/images/interior/stairs-levels.webp"
+        alt="Escaleras entre plantas del pub irlandés O'Connell St cerca de Sol"
         position="object-[center_40%]"
       />
       <Section title="Cómo llegar">

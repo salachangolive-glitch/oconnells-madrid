@@ -23,7 +23,7 @@ export default function EsAboutPage() {
       />
       <InteriorPhoto
         src="/images/interior/about-salon.webp"
-        alt="Mesas de madera, barriles y decoración clásica de pub irlandés en O'Connell St"
+        alt="Mesas y televisiones en el salón de O'Connell St cerca de Sol"
         position="object-center"
       />
       <Section title="En resumen">

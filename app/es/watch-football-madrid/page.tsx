@@ -23,7 +23,7 @@ export default function EsWatchFootballPage() {
       />
       <InteriorPhoto
         src="/images/interior/football-seating.webp"
-        alt="Zona de mesas de madera y pantalla grande para deportes en directo en O'Connell St"
+        alt="Asientos con barriles y pantallas de deportes en O'Connell St cerca de Sol"
         position="object-[center_20%]"
       />
       <Section title="Qué se emite">

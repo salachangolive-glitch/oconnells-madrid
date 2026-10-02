@@ -37,7 +37,7 @@ export default function EsHomePage() {
             variant="editorial"
             priority
             src="/images/interior/bar-corner.webp"
-            alt="Rincón de la barra de madera en el pub irlandés O'Connell St, con taburetes, estanterías rojas y luz cálida"
+            alt="Barra del pub irlandés O'Connell St cerca de Sol — madera, taburetes y luz cálida"
           />
         </>
       }
@@ -98,23 +98,23 @@ export default function EsHomePage() {
         items={[
           {
             src: "/images/interior/bar-taps.webp",
-            alt: "Grifos de cerveza y barra de madera en O'Connell St",
+            alt: "Barra larga de madera y grifos en O'Connell St",
             position: "object-center",
           },
           {
             src: "/images/interior/sports-aisle.webp",
-            alt: "Pasillo con varias pantallas de deportes e iluminación verde",
+            alt: "Pantallas de deportes y pasillo de asientos en O'Connell St",
             position: "object-[center_20%]",
           },
           {
             src: "/images/interior/about-salon.webp",
-            alt: "Mesas de madera y decoración de pub irlandés en el salón",
+            alt: "Mesas con televisiones en el salón de O'Connell St",
             position: "object-center",
           },
           {
-            src: "/images/interior/football-seating.webp",
-            alt: "Mesas y sillas bajo luz ambiental con pantalla en la pared",
-            position: "object-[center_30%]",
+            src: "/images/interior/stairs-levels.webp",
+            alt: "Escaleras entre plantas del pub irlandés O'Connell St",
+            position: "object-center",
           },
         ]}
       />
