@@ -1,7 +1,13 @@
 /**
  * Ops-editable fixture list for What's On.
  * Update this file when confirmed matches change.
- * Times: only include kickoffMadrid when verified (Europe/Madrid). Omit if unknown.
+ *
+ * Gate (FASE2): only list IMPORTANT, confirmed events with BOTH
+ *   - date (YYYY-MM-DD, Madrid calendar day)
+ *   - kickoffMadrid (HH:mm Europe/Madrid, verified)
+ * Empty array is OK when nothing is confirmed for the next days.
+ * Competitions: PL / CL / LaLiga, Irish rugby, major NFL — when confirmed.
+ * Do not invent kickoff times; do not leave stale past fixtures in the list.
  *
  * IMPORTANT: Do not call madridTodayYmd() / getTonightFixtures() / getUpcomingFixtures()
  * at static build time for UI labels — use the client FixtureList / FixtureStrip so
@@ -15,22 +21,20 @@ export type Fixture = {
   awayTeam: string;
   /** ISO date YYYY-MM-DD in Madrid calendar day */
   date: string;
-  /** Optional Madrid local time HH:mm — omit if unknown */
+  /**
+   * Madrid local time HH:mm — REQUIRED for public display.
+   * Rows without kickoffMadrid are treated as unconfirmed and filtered out.
+   */
   kickoffMadrid?: string;
   note?: string;
 };
 
-/** Confirmed fixtures (newest/relevant first). Historical rows stay; client hides past days. */
-export const FIXTURES: Fixture[] = [
-  {
-    id: "2026-09-15-elche-real-madrid",
-    competition: "LaLiga",
-    homeTeam: "Elche",
-    awayTeam: "Real Madrid",
-    date: "2026-09-15",
-    kickoffMadrid: "21:30",
-  },
-];
+/**
+ * Confirmed fixtures only (newest/relevant first).
+ * Cleared 2026-10-02: removed Elche–Real Madrid 2026-09-15 (past).
+ * Add rows again when EVENTO + hora Madrid are verified.
+ */
+export const FIXTURES: Fixture[] = [];
 
 /** Recurring weekly highlights (not dated fixtures). */
 export const RECURRING = {
@@ -43,8 +47,8 @@ export const RECURRING = {
     es: "También hay chupitos a 1 € los miércoles",
   },
   football: {
-    en: "Premier League, Champions League & LaLiga on the screens",
-    es: "Premier League, Champions League y LaLiga en pantallas",
+    en: "Premier League, Champions League & LaLiga on the screens when they’re on",
+    es: "Premier League, Champions League y LaLiga en pantallas cuando tocan",
   },
 } as const;
 
@@ -58,14 +62,21 @@ export function madridTodayYmd(now = new Date()): string {
   }).format(now);
 }
 
+/** True when a fixture has a verified Madrid kickoff time. */
+export function isConfirmedFixture(f: Fixture): boolean {
+  return Boolean(f.kickoffMadrid && /^\d{2}:\d{2}$/.test(f.kickoffMadrid));
+}
+
 export function getTonightFixtures(today: string): Fixture[] {
-  return FIXTURES.filter((f) => f.date === today);
+  return FIXTURES.filter(
+    (f) => isConfirmedFixture(f) && f.date === today,
+  );
 }
 
 export function getUpcomingFixtures(today: string): Fixture[] {
-  return FIXTURES.filter((f) => f.date >= today).sort((a, b) =>
-    a.date.localeCompare(b.date),
-  );
+  return FIXTURES.filter(
+    (f) => isConfirmedFixture(f) && f.date >= today,
+  ).sort((a, b) => a.date.localeCompare(b.date));
 }
 
 export function formatFixtureDay(date: string, locale: "en" | "es" = "en"): string {

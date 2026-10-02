@@ -54,8 +54,8 @@ export function FixtureStrip({ locale = "en" }: { locale?: Locale }) {
 
   const title = isEs ? "En las pantallas" : "On the screens";
   const empty = isEs
-    ? "Premier League, Champions League y LaLiga cuando tocan. Mira Partidos o pregunta en barra."
-    : "Premier League, Champions League and LaLiga when they’re on. Check Fixtures or ask at the bar.";
+    ? "Deportes en vivo cuando hay partidos importantes confirmados (PL, Champions, LaLiga…). Mira Partidos o pregunta en barra."
+    : "Live sports when major fixtures are confirmed (PL, Champions, LaLiga…). Check Fixtures or ask at the bar.";
   const moreHref = isEs ? "/es/whats-on" : "/whats-on";
   const more = isEs ? "Partidos" : "Fixtures";
   const cta = isEs ? "Cómo llegar" : "Get directions";

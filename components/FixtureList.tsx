@@ -84,8 +84,8 @@ export function FixtureList({ locale = "en" }: { locale?: Locale }) {
   );
 
   const emptyUpcoming = isEs
-    ? "No hay partidos fechados próximos. Pregunta en barra o mira Partidos más adelante."
-    : "No dated fixtures coming up. Ask at the bar or check back here.";
+    ? "De momento no hay partidos importantes confirmados. Pregunta en barra o vuelve aquí cuando actualicemos."
+    : "No major confirmed fixtures listed right now. Ask at the bar or check back when we update.";
 
   // Pre-hydrate / SSR: upcoming-neutral only — never hardcode Tonight with build-time data.
   if (today === null) {

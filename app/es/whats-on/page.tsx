@@ -20,7 +20,7 @@ export default function EsWhatsOnPage() {
       <PageHero
         eyebrow="Partidos"
         title={`Esta semana en ${SITE_NAME}`}
-        lead="Partidos confirmados cuando los tenemos, y las noches fijas del pub."
+        lead="Partidos importantes confirmados con hora Madrid cuando los tenemos — y las noches fijas del pub."
       />
 
       <FixtureList locale="es" />

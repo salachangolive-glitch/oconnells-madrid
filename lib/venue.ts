@@ -24,7 +24,7 @@ export const MAPS_URL =
 export const NEIGHBOURHOOD = "near Puerta del Sol";
 
 /**
- * Opening hours from GBP editor/public card (audit 2026-09-15).
+ * Opening hours — aligned with GBP live card (re-verified 2026-10-02).
  * Mon–Thu 18:00–03:00; Fri–Sat 16:00–03:30; Sun 14:00–03:00 (Madrid local).
  */
 export const HOURS = {

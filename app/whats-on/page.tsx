@@ -19,7 +19,7 @@ export default function WhatsOnPage() {
       <PageHero
         eyebrow="Fixtures"
         title={`This week at ${SITE_NAME}`}
-        lead="Confirmed matches when we have them, plus the weekly nights that keep the pub busy."
+        lead="Major confirmed fixtures with Madrid kickoff times when we have them — plus the weekly nights that keep the pub busy."
       />
 
       <FixtureList locale="en" />
