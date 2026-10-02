@@ -37,7 +37,7 @@ export default function ErasmusPage() {
           </Link>
           {" · "}
           <Link href="/whats-on" className="text-gold underline">
-            Fixtures
+            What&apos;s On
           </Link>
         </p>
       </Section>

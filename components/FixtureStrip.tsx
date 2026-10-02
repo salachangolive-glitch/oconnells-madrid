@@ -13,10 +13,16 @@ import { MAPS_URL } from "@/lib/venue";
 type Locale = "en" | "es";
 
 function FixtureRow({ f, locale }: { f: Fixture; locale: Locale }) {
+  const isEs = locale === "es";
   return (
     <article className="pl-0">
       <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-gold">
         {f.competition}
+        {f.kickoffMadrid ? (
+          <span className="ml-2 tracking-[0.12em] text-cream-muted">
+            · {isEs ? "Confirmado" : "Confirmed"}
+          </span>
+        ) : null}
       </p>
       <h3 className="mt-1 font-serif text-xl font-bold text-cream sm:text-2xl">
         {f.homeTeam}{" "}
@@ -28,7 +34,7 @@ function FixtureRow({ f, locale }: { f: Fixture; locale: Locale }) {
       <p className="mt-1 text-sm text-cream-muted">
         {formatFixtureDay(f.date, locale)}
         {f.kickoffMadrid
-          ? ` · ${f.kickoffMadrid} ${locale === "es" ? "hora Madrid" : "Madrid"}`
+          ? ` · ${f.kickoffMadrid} ${isEs ? "hora Madrid" : "Madrid"}`
           : null}
       </p>
     </article>
@@ -36,7 +42,7 @@ function FixtureRow({ f, locale }: { f: Fixture; locale: Locale }) {
 }
 
 /**
- * Home / Sports strip — client Madrid date so past fixtures never stick as "upcoming".
+ * Home / Sports strip — client Madrid date so past rows never stick as "upcoming".
  * SSR shows neutral empty copy until hydrate (no build-time fixture rows).
  */
 export function FixtureStrip({ locale = "en" }: { locale?: Locale }) {
@@ -52,12 +58,12 @@ export function FixtureStrip({ locale = "en" }: { locale?: Locale }) {
     [today],
   );
 
-  const title = isEs ? "En las pantallas" : "On the screens";
+  const title = isEs ? "Deportes en vivo" : "Live sports";
   const empty = isEs
-    ? "Deportes en vivo cuando hay partidos importantes confirmados (PL, Champions, LaLiga…). Mira Partidos o pregunta en barra."
-    : "Live sports when major fixtures are confirmed (PL, Champions, LaLiga…). Check Fixtures or ask at the bar.";
+    ? "Cuando hay un gran partido o evento confirmado (fútbol, NFL, NBA, rugby, F1, tenis…), lo verás aquí. Mira Partidos o pregunta en barra."
+    : "When a big match or event is confirmed (football, NFL, NBA, rugby, F1, tennis…), it shows up here. Check What’s On or ask at the bar.";
   const moreHref = isEs ? "/es/whats-on" : "/whats-on";
-  const more = isEs ? "Partidos" : "Fixtures";
+  const more = isEs ? "Partidos" : "What's On";
   const cta = isEs ? "Cómo llegar" : "Get directions";
 
   return (

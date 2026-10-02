@@ -25,8 +25,8 @@ export default function ThursdayShotsPage() {
           flatmates, hostel friends, or whoever you&apos;re out with in Madrid.
         </p>
         <p>
-          €1 shots every Thursday. Wednesday €1 shots are on too — Thursday is
-          still the busier of the two.
+          €1 shots every Thursday — the night of the week at O&apos;Connell&apos;s
+          for Erasmus, internationals and friend groups near Sol.
         </p>
       </Section>
       <Section title="Good to know">
@@ -36,7 +36,7 @@ export default function ThursdayShotsPage() {
           <li>
             Pair it with a match from{" "}
             <Link href="/whats-on" className="text-gold underline">
-              Fixtures
+              What&apos;s On
             </Link>
             .
           </li>

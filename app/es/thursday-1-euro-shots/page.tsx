@@ -27,8 +27,9 @@ export default function EsThursdayShotsPage() {
           Madrid.
         </p>
         <p>
-          Chupitos a 1 € todos los jueves. También hay chupitos a 1 € los
-          miércoles — el jueves suele ser el más animado.
+          Chupitos a 1 € todos los jueves — la noche de la semana en
+          O&apos;Connell&apos;s para Erasmus, internacionales y amigos cerca de
+          Sol.
         </p>
       </Section>
       <Section title="Información útil">

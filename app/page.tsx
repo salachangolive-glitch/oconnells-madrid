@@ -4,6 +4,7 @@ import { HomeCtaBand } from "@/components/HomeCtaBand";
 import { InteriorGallery, InteriorPhoto } from "@/components/InteriorPhoto";
 import { PageShell } from "@/components/PageShell";
 import { Section } from "@/components/Prose";
+import { ThursdayFeature } from "@/components/ThursdayFeature";
 import { VenueHero } from "@/components/VenueHero";
 import { buildMetadata } from "@/lib/seo";
 import {
@@ -16,7 +17,7 @@ import {
 export const metadata = buildMetadata({
   title: `${SITE_NAME} Madrid — Irish pub & sports bar near Sol`,
   description:
-    "O'Connell St: Irish pub and sports bar at Calle de Espoz y Mina 7, near Sol. Premier League, Champions League & LaLiga on the screens. Thursday €1 shots.",
+    "O'Connell St: Irish pub and sports bar at Calle de Espoz y Mina 7, near Sol. Live sports on the screens. Thursday €1 shots.",
   path: "/",
 });
 
@@ -25,64 +26,39 @@ export default function HomePage() {
     <PageShell
       locale="en"
       altLangHref="/es"
-      cover={
-        <>
-          <VenueHero variant="hero" />
-          <HomeCtaBand locale="en" />
-          <InteriorPhoto
-            variant="editorial"
-            priority
-            src="/images/interior/bar-corner.webp"
-            alt="Bar at O'Connell St Irish pub near Sol — wooden counter, stools and warm lights"
-          />
-        </>
-      }
+      cover={<VenueHero variant="hero" />}
     >
-      <header className="mb-10 max-w-2xl">
-        <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.28em] text-gold">
-          Espoz y Mina · Puerta del Sol
-        </p>
+      {/* Hero text + CTAs */}
+      <header className="mb-8 max-w-2xl text-center sm:mx-auto">
         <h1 className="font-serif text-2xl font-bold leading-snug text-cream sm:text-3xl lg:text-4xl">
-          Your Irish pub in the heart of Madrid
+          O&apos;Connell St Madrid
         </h1>
-        <p className="mt-3 text-sm leading-relaxed text-cream-muted sm:mt-4 sm:text-base">
-          Football on the screens, Thursday €1 shots, and a short walk from Sol.
+        <p className="mt-2 text-sm tracking-wide text-cream-muted sm:text-base">
+          Irish pub · Sol · Live sports
         </p>
       </header>
+      <div className="mb-10 border-y border-gold/20 bg-pub-burgundy-deep/80">
+        <HomeCtaBand locale="en" />
+      </div>
 
-      <FixtureStrip locale="en" />
-
-      <section className="mb-12 grid gap-10 sm:grid-cols-2">
-        <div>
-          <h2 className="font-serif text-xl font-bold text-cream">
-            Erasmus nights
-          </h2>
-          <div className="pub-rule my-3" />
-          <p className="text-sm text-cream-muted sm:text-base">
-            An easy meetup near Sol — English-friendly at the bar, football on
-            the screens, and Thursday €1 shots to finish the night.
-          </p>
-          <p className="mt-3">
-            <Link href="/erasmus" className="text-sm text-gold hover:text-cream">
-              Erasmus at O&apos;Connell&apos;s →
-            </Link>
-          </p>
-        </div>
-        <div>
-          <h2 className="font-serif text-xl font-bold text-cream">Find the door</h2>
-          <div className="pub-rule my-3" />
-          <p className="text-sm text-cream-muted sm:text-base">
-            {ADDRESS.full}. Red facade, green trim, gold lettering — you will
-            know it when you see it.
-          </p>
-          <p className="mt-3">
-            <Link href="/location" className="text-sm text-gold hover:text-cream">
-              Location &amp; hours →
-            </Link>
-          </p>
-        </div>
+      {/* Presentación */}
+      <section className="mb-12 max-w-2xl">
+        <p className="text-sm leading-relaxed text-cream-muted sm:text-base">
+          An Irish pub a short walk from Puerta del Sol — live sports on the
+          screens when they&apos;re confirmed, pints at the bar, and Thursday €1
+          shots for Erasmus, travellers and friends out in the centre.
+        </p>
       </section>
 
+      {/* Live Sports / What's On */}
+      <FixtureStrip locale="en" />
+
+      {/* Inside / real photos */}
+      <InteriorPhoto
+        variant="editorial"
+        src="/images/interior/bar-corner.webp"
+        alt="Bar at O'Connell St Irish pub near Sol — wooden counter, stools and warm lights"
+      />
       <InteriorGallery
         items={[
           {
@@ -108,9 +84,99 @@ export default function HomePage() {
         ]}
       />
 
+      {/* Thursday €1 — once */}
+      <ThursdayFeature locale="en" />
+
+      {/* Erasmus */}
+      <section className="mb-12 max-w-2xl">
+        <h2 className="font-serif text-xl font-bold text-cream">
+          Erasmus nights
+        </h2>
+        <div className="pub-rule my-3" />
+        <p className="text-sm text-cream-muted sm:text-base">
+          An easy meetup near Sol — English-friendly at the bar, sports on the
+          screens, and Thursday €1 shots to finish the night.
+        </p>
+        <p className="mt-3">
+          <Link href="/erasmus" className="text-sm text-gold hover:text-cream">
+            Erasmus at O&apos;Connell&apos;s →
+          </Link>
+        </p>
+      </section>
+
+      {/* About brief — real facts only */}
+      <section className="mb-12 max-w-2xl">
+        <h2 className="font-serif text-xl font-bold text-cream">About</h2>
+        <div className="pub-rule my-3" />
+        <p className="text-sm text-cream-muted sm:text-base">
+          {SITE_NAME} is an Irish pub and sports bar at {ADDRESS.full}.{" "}
+          {HOURS.summaryEn}.
+        </p>
+        <p className="mt-3">
+          <Link href="/about" className="text-sm text-gold hover:text-cream">
+            More about us →
+          </Link>
+        </p>
+      </section>
+
+      {/* FAQ */}
+      <Section title="Quick answers">
+        <dl className="space-y-5">
+          <div>
+            <dt className="font-semibold text-cream">What are your hours?</dt>
+            <dd className="mt-1 text-cream/80">{HOURS.summaryEn}.</dd>
+          </div>
+          <div>
+            <dt className="font-semibold text-cream">Are you near Sol?</dt>
+            <dd className="mt-1 text-cream/80">
+              Yes — {ADDRESS.street}, a short walk from Puerta del Sol.
+            </dd>
+          </div>
+          <div>
+            <dt className="font-semibold text-cream">Do you show live sports?</dt>
+            <dd className="mt-1 text-cream/80">
+              Yes. Confirmed matches and events go on{" "}
+              <Link href="/whats-on" className="text-gold underline">
+                What&apos;s On
+              </Link>
+              ; ask at the bar for tonight&apos;s lineup.
+            </dd>
+          </div>
+          <div>
+            <dt className="font-semibold text-cream">Can I book a table?</dt>
+            <dd className="mt-1 text-cream/80">
+              Drop us a note via{" "}
+              <Link href="/contact" className="text-gold underline">
+                Contact
+              </Link>{" "}
+              and we&apos;ll get back to you — big match nights fill up.
+            </dd>
+          </div>
+          <div>
+            <dt className="font-semibold text-cream">
+              How do I get here from Metro Sol?
+            </dt>
+            <dd className="mt-1 text-cream/80">
+              Exit at Sol, walk to Calle de Espoz y Mina — look for the red
+              facade and gold lettering.{" "}
+              <a
+                href={MAPS_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gold underline"
+              >
+                Google Maps
+              </a>
+              .
+            </dd>
+          </div>
+        </dl>
+      </Section>
+
+      {/* Find us */}
       <Section title="Find us">
         <p>
-          Open{" "}
+          {ADDRESS.full}. Open{" "}
           <a
             href={MAPS_URL}
             target="_blank"
@@ -118,12 +184,24 @@ export default function HomePage() {
             className="text-gold underline"
           >
             Google Maps
-          </a>{" "}
-          or{" "}
-          <a href="/contact" className="text-gold underline">
-            contact us
           </a>
           . {HOURS.summaryEn}.
+        </p>
+        <p>
+          <Link href="/location" className="text-gold underline">
+            Location &amp; hours →
+          </Link>
+        </p>
+      </Section>
+
+      {/* Contact */}
+      <Section title="Contact">
+        <p>
+          Questions about a match night or a group?{" "}
+          <Link href="/contact" className="text-gold underline">
+            Contact us
+          </Link>
+          .
         </p>
       </Section>
     </PageShell>

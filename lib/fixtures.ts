@@ -1,17 +1,24 @@
 /**
- * Ops-editable fixture list for What's On.
- * Update this file when confirmed matches change.
+ * Ops-editable event list for What's On (user-facing name — never "Fixtures" in UI).
+ * Update this file when confirmed matches / events change.
  *
- * Gate (FASE2): only list IMPORTANT, confirmed events with BOTH
+ * Gate (permanent): only list IMPORTANT, confirmed events with BOTH
  *   - date (YYYY-MM-DD, Madrid calendar day)
  *   - kickoffMadrid (HH:mm Europe/Madrid, verified)
- * Empty array is OK when nothing is confirmed for the next days.
- * Competitions: PL / CL / LaLiga, Irish rugby, major NFL — when confirmed.
- * Do not invent kickoff times; do not leave stale past fixtures in the list.
+ * Plus: emission confirmed for the pub + pub expected open. Empty FIXTURES[] is OK.
+ *
+ * Competitions when confirmed: football (PL / CL / LaLiga / others), NFL, NBA,
+ * rugby, F1, tennis, and other big events with a real Madrid time.
+ *
+ * Ops cadence (permanent):
+ *   - Sunday: publish / refresh the week agenda
+ *   - 2–3 days out: reconfirm kickoff + emission
+ *   - Matchday: reminder check before doors
+ * Do not invent kickoff times; do not leave stale past rows in the list.
  *
  * IMPORTANT: Do not call madridTodayYmd() / getTonightFixtures() / getUpcomingFixtures()
  * at static build time for UI labels — use the client FixtureList / FixtureStrip so
- * "Tonight"/"Hoy" track the visitor's Europe/Madrid calendar day.
+ * "Today"/"Hoy" track the visitor's Europe/Madrid calendar day.
  */
 
 export type Fixture = {
@@ -30,25 +37,21 @@ export type Fixture = {
 };
 
 /**
- * Confirmed fixtures only (newest/relevant first).
+ * Confirmed events only (newest/relevant first).
  * Cleared 2026-10-02: removed Elche–Real Madrid 2026-09-15 (past).
- * Add rows again when EVENTO + hora Madrid are verified.
+ * Add rows again when EVENTO + hora Madrid + emisión are verified.
  */
 export const FIXTURES: Fixture[] = [];
 
-/** Recurring weekly highlights (not dated fixtures). */
+/** Recurring weekly highlights (not dated events). Thursday €1 only — no Wednesday promo. */
 export const RECURRING = {
   thursdayShots: {
     en: "Thursday €1 shots — Erasmus, internationals and friends near Sol",
     es: "Jueves chupitos a 1 € — Erasmus, internacionales y amigos cerca de Sol",
   },
-  wednesdayShots: {
-    en: "Wednesday €1 shots also on",
-    es: "También hay chupitos a 1 € los miércoles",
-  },
-  football: {
-    en: "Premier League, Champions League & LaLiga on the screens when they’re on",
-    es: "Premier League, Champions League y LaLiga en pantallas cuando tocan",
+  liveSports: {
+    en: "Live sports on the screens when confirmed — football, NFL, NBA, rugby, F1, tennis and other big nights",
+    es: "Deportes en vivo en pantallas cuando están confirmados — fútbol, NFL, NBA, rugby, F1, tenis y otras noches grandes",
   },
 } as const;
 

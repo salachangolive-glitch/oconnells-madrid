@@ -29,7 +29,7 @@ export default function ChampionsLeaguePage() {
         <p>
           Confirm tonight&apos;s ties on{" "}
           <Link href="/whats-on" className="text-cream underline">
-            fixtures
+            What&apos;s On
           </Link>{" "}
           if your night depends on one match. Short walk from Sol.
         </p>

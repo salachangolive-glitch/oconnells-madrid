@@ -29,7 +29,7 @@ export default function PremierLeaguePage() {
         <p>
           Weekend cards get busy. For a specific kick-off, check{" "}
           <Link href="/whats-on" className="text-cream underline">
-            fixtures
+            What&apos;s On
           </Link>{" "}
           or ask at the bar.{" "}
           <Link href="/location" className="text-cream underline">

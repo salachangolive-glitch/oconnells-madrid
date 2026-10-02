@@ -7,9 +7,9 @@ import { buildMetadata } from "@/lib/seo";
 import { SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
-  title: "Partidos — fútbol y jueves chupitos a 1 €",
+  title: "Partidos — deportes en vivo y jueves chupitos a 1 €",
   description:
-    "Partidos en O'Connell St Madrid: fútbol confirmado, Premier League / Champions League / LaLiga en pantallas, jueves chupitos a 1 €.",
+    "Qué hay en O'Connell St Madrid: deportes en vivo confirmados con hora Madrid, y jueves chupitos a 1 € cerca de Sol.",
   path: "/es/whats-on",
   locale: "es",
 });
@@ -20,14 +20,14 @@ export default function EsWhatsOnPage() {
       <PageHero
         eyebrow="Partidos"
         title={`Esta semana en ${SITE_NAME}`}
-        lead="Partidos importantes confirmados con hora Madrid cuando los tenemos — y las noches fijas del pub."
+        lead="Eventos confirmados con hora Madrid cuando los tenemos — fútbol y otras noches deportivas, más el jueves fijo del pub."
       />
 
       <FixtureList locale="es" />
 
       <Section title="Cada semana">
         <ul className="list-disc space-y-2 pl-5">
-          <li>{RECURRING.football.es}</li>
+          <li>{RECURRING.liveSports.es}</li>
           <li>
             {RECURRING.thursdayShots.es} —{" "}
             <Link
@@ -37,7 +37,6 @@ export default function EsWhatsOnPage() {
               Jueves chupitos a 1 €
             </Link>
           </li>
-          <li>{RECURRING.wednesdayShots.es}</li>
         </ul>
       </Section>
     </PageShell>

@@ -33,7 +33,7 @@ export default function WatchFootballPage() {
         <p>
           See{" "}
           <Link href="/whats-on" className="text-cream underline">
-            fixtures
+            What&apos;s On
           </Link>{" "}
           for confirmed matches, or ask at the bar if one game matters most.
         </p>

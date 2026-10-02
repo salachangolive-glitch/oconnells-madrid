@@ -7,9 +7,9 @@ import { buildMetadata } from "@/lib/seo";
 import { SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
-  title: "Bar deportivo Madrid — fútbol, NFL y NBA cerca de Sol",
+  title: "Deportes en vivo Madrid — pub irlandés cerca de Sol",
   description:
-    "O'Connell St bar deportivo cerca de Sol: Premier League, Champions League y LaLiga en pantallas; NFL y NBA cuando se emiten.",
+    "O'Connell St cerca de Sol: deportes en vivo en pantallas — fútbol, NFL, NBA, rugby, F1, tenis y otras noches grandes confirmadas.",
   path: "/es/sports",
   locale: "es",
 });
@@ -19,8 +19,8 @@ export default function EsSportsPage() {
     <PageShell locale="es" altLangHref="/sports">
       <PageHero
         eyebrow="Pantallas · pintas · Sol"
-        title={`Noches de partido en ${SITE_NAME}`}
-        lead="Premier League los sábados, Champions entre semana, LaLiga cuando importa — y NFL o NBA cuando se emiten."
+        title={`Deportes en vivo en ${SITE_NAME}`}
+        lead="Noches de fútbol cuando importan, más NFL, NBA, rugby, F1, tenis y otros eventos grandes cuando están confirmados — a un paso de Sol."
       />
       <InteriorPhoto
         src="/images/interior/sports-aisle.webp"
@@ -28,12 +28,18 @@ export default function EsSportsPage() {
         position="object-[center_15%]"
       />
       <FixtureStrip locale="es" />
-      <Section title="Primero el fútbol">
+      <Section title="Qué ponemos">
         <p>
           El pub se llena alrededor de las pantallas. Coge una pinta, busca un
-          sitio y disfruta del partido — a un paso de Sol.
+          sitio y disfruta — fútbol los fines de semana y noches europeas, y
+          otros deportes cuando hay un evento grande confirmado.
         </p>
         <p>
+          Para la agenda, mira{" "}
+          <Link href="/es/whats-on" className="text-gold underline">
+            Partidos
+          </Link>
+          . Más detalle:{" "}
           <Link href="/es/watch-football-madrid" className="text-gold underline">
             Ver fútbol en Madrid
           </Link>
@@ -45,6 +51,7 @@ export default function EsSportsPage() {
           <Link href="/es/champions-league" className="text-gold underline">
             Champions League
           </Link>
+          .
         </p>
       </Section>
       <InteriorPhoto
@@ -52,10 +59,14 @@ export default function EsSportsPage() {
         alt="Interior con F1 y deportes en las televisiones de O'Connell St"
         position="object-[center_25%]"
       />
-      <Section title="NFL y NBA">
+      <Section title="Más allá del fútbol">
         <p>
-          Fútbol americano y baloncesto cuando tocan — pregunta en barra por la
-          programación de partidos.
+          NFL y NBA cuando se emiten; rugby, F1 y tenis cuando hay una noche
+          grande confirmada. Pregunta en barra por la programación — o mira{" "}
+          <Link href="/es/whats-on" className="text-gold underline">
+            Partidos
+          </Link>
+          .
         </p>
       </Section>
     </PageShell>

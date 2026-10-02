@@ -54,9 +54,8 @@ export const HOURS = {
 export const FACTS = {
   type: "Irish pub and sports bar",
   football: ["Premier League", "UEFA Champions League", "LaLiga"] as const,
-  otherSports: ["NFL", "NBA"] as const,
+  otherSports: ["NFL", "NBA", "rugby", "F1", "tennis"] as const,
   thursdayShots: "Thursday €1 shots",
-  wednesdayShots: "Wednesday €1 shots",
 } as const;
 
 /** True when NEXT_PUBLIC_SITE_URL is a preview host (Vercel or CF Pages) — keep noindex. */

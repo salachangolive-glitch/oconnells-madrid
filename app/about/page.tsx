@@ -47,7 +47,7 @@ export default function AboutPage() {
           </Link>
           {" · "}
           <Link href="/whats-on" className="text-cream underline">
-            Fixtures
+            What&apos;s On
           </Link>
         </p>
       </Section>

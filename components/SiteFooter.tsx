@@ -30,7 +30,7 @@ export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
                 href={isEs ? "/es/sports" : "/sports"}
                 className="hover:text-gold"
               >
-                {isEs ? "Deportes" : "Sports"}
+                {isEs ? "Deportes en vivo" : "Live Sports"}
               </Link>
             </li>
             <li>
@@ -38,7 +38,7 @@ export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
                 href={isEs ? "/es/whats-on" : "/whats-on"}
                 className="hover:text-gold"
               >
-                {isEs ? "Partidos" : "Fixtures"}
+                {isEs ? "Partidos" : "What's On"}
               </Link>
             </li>
             <li>

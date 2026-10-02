@@ -7,9 +7,9 @@ import { buildMetadata } from "@/lib/seo";
 import { SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
-  title: "Sports bar Madrid — football, NFL & NBA near Sol",
+  title: "Live sports Madrid — Irish pub near Sol",
   description:
-    "O'Connell St sports bar near Sol: Premier League, Champions League and LaLiga on the screens; NFL and NBA when shown.",
+    "O'Connell St near Sol: live sports on the screens — football, NFL, NBA, rugby, F1, tennis and other big confirmed nights.",
   path: "/sports",
 });
 
@@ -18,8 +18,8 @@ export default function SportsPage() {
     <PageShell locale="en" altLangHref="/es/sports">
       <PageHero
         eyebrow="Screens · pints · Sol"
-        title={`Match nights at ${SITE_NAME}`}
-        lead="Premier League Saturdays, Champions League nights, LaLiga when it matters — plus NFL and NBA when those games are on."
+        title={`Live sports at ${SITE_NAME}`}
+        lead="Football nights when they matter, plus NFL, NBA, rugby, F1, tennis and other big events when they’re confirmed and on — a short walk from Sol."
       />
       <InteriorPhoto
         src="/images/interior/sports-aisle.webp"
@@ -27,12 +27,18 @@ export default function SportsPage() {
         position="object-[center_15%]"
       />
       <FixtureStrip locale="en" />
-      <Section title="Football first">
+      <Section title="What we put on">
         <p>
           The pub fills around the screens. Grab a pint, find a seat, and settle
-          in for the match — a short walk from Sol.
+          in — football most weekends and European nights, and other sports when
+          a big match is confirmed for the bar.
         </p>
         <p>
+          For the diary, see{" "}
+          <Link href="/whats-on" className="text-gold underline">
+            What&apos;s On
+          </Link>
+          . League pages if you want a deeper dive:{" "}
           <Link href="/watch-football-madrid" className="text-gold underline">
             Watch football in Madrid
           </Link>
@@ -44,6 +50,7 @@ export default function SportsPage() {
           <Link href="/champions-league" className="text-gold underline">
             Champions League
           </Link>
+          .
         </p>
       </Section>
       <InteriorPhoto
@@ -51,10 +58,15 @@ export default function SportsPage() {
         alt="Interior with F1 and sports on the TVs at O'Connell St"
         position="object-[center_25%]"
       />
-      <Section title="NFL & NBA">
+      <Section title="Beyond football">
         <p>
-          American football and basketball when those fixtures are showing — ask
-          at the bar for the night&apos;s lineup.
+          NFL and NBA when those games are showing; rugby, F1 and tennis when a
+          big night is confirmed. Ask at the bar for tonight&apos;s lineup — or
+          check{" "}
+          <Link href="/whats-on" className="text-gold underline">
+            What&apos;s On
+          </Link>
+          .
         </p>
       </Section>
     </PageShell>

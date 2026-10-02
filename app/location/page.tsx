@@ -67,7 +67,7 @@ export default function LocationPage() {
         </p>
         <p>
           <Link href="/whats-on" className="text-cream underline">
-            Fixtures
+            What&apos;s On
           </Link>
           {" · "}
           <Link href="/sports" className="text-cream underline">
