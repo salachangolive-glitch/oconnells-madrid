@@ -8,7 +8,7 @@
  * Plus: emission confirmed for the pub + pub expected open. Empty FIXTURES[] is OK.
  *
  * Competitions when confirmed: football (PL / CL / LaLiga / others), NFL, NBA,
- * rugby, F1, tennis, and other big events with a real Madrid time.
+ * rugby, Formula 1, tennis, and other big events with a real Madrid time.
  *
  * Ops cadence (permanent):
  *   - Sunday: publish / refresh the week agenda
@@ -43,15 +43,18 @@ export type Fixture = {
  */
 export const FIXTURES: Fixture[] = [];
 
-/** Recurring weekly highlights (not dated events). Thursday €1 only — no Wednesday promo. */
+/**
+ * Recurring weekly highlights (reference copy — What's On pages may inline).
+ * Thursday €1 only — no Wednesday promo. No Erasmus stuffing in the Thursday line.
+ */
 export const RECURRING = {
   thursdayShots: {
-    en: "Thursday €1 shots — Erasmus, internationals and friends near Sol",
-    es: "Chupitos a 1 € los jueves — Erasmus, internacionales y amigos cerca de Sol",
+    en: "Every Thursday: €1 shots at the pub. Ask at the bar when you arrive.",
+    es: "Todos los jueves: chupitos a 1 € en el pub. Pregunta en barra al llegar.",
   },
   liveSports: {
-    en: "Live sports on the screens when confirmed — football, NFL, NBA, rugby, F1, tennis and other big nights",
-    es: "Deportes en directo en pantallas cuando están confirmados — fútbol, NFL, NBA, rugby, F1, tenis y otras noches grandes",
+    en: "O'Connell St is an Irish pub by Puerta del Sol — Espoz y Mina 7. We put major live sport on our screens when it's confirmed: football, NFL, NBA, rugby, Formula 1, tennis and more. Check What's On above for this week's schedule, or ask at the bar if you're looking for a specific game.",
+    es: "O'Connell St es un pub irlandés junto a Puerta del Sol — Espoz y Mina 7. Ponemos grandes eventos deportivos en nuestras pantallas cuando están confirmados: fútbol, NFL, NBA, rugby, Fórmula 1, tenis y más. Consulta la Agenda arriba para esta semana, o pregunta en barra si buscas un partido concreto.",
   },
 } as const;
 

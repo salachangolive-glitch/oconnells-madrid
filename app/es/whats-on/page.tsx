@@ -2,14 +2,13 @@ import Link from "next/link";
 import { FixtureList } from "@/components/FixtureList";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
-import { RECURRING } from "@/lib/fixtures";
 import { buildMetadata } from "@/lib/seo";
 import { SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
-  title: "Agenda — deportes en directo y jueves chupitos a 1 €",
+  title: "Agenda — Deportes en directo | O'Connell St Madrid",
   description:
-    "Agenda de O'Connell St Madrid: deportes en directo confirmados con hora Madrid, y chupitos a 1 € los jueves cerca de Sol.",
+    "Agenda de O'Connell St Madrid: deportes en directo confirmados con hora de Madrid. Fútbol, NFL, NBA, rugby, Fórmula 1, tenis y más cuando aparecen como Confirmado.",
   path: "/es/whats-on",
   locale: "es",
 });
@@ -20,24 +19,31 @@ export default function EsWhatsOnPage() {
       <PageHero
         eyebrow="Agenda"
         title={`Esta semana en ${SITE_NAME}`}
-        lead="Eventos confirmados con hora Madrid cuando los tenemos — fútbol y otras noches deportivas, más el jueves fijo del pub."
+        lead="Consulta el deporte en directo esta semana en O'Connell St: fútbol, NFL, NBA, rugby, Fórmula 1, tenis y más. Horarios en hora de Madrid; solo las emisiones marcadas como Confirmado se emiten en nuestras pantallas."
       />
 
       <FixtureList locale="es" />
 
       <Section title="Cada semana">
-        <ul className="list-disc space-y-2 pl-5">
-          <li>{RECURRING.liveSports.es}</li>
-          <li>
-            {RECURRING.thursdayShots.es} —{" "}
-            <Link
-              href="/es/thursday-1-euro-shots"
-              className="text-gold underline"
-            >
-              Chupitos a 1 € los jueves
-            </Link>
-          </li>
-        </ul>
+        <p>
+          O&apos;Connell St es un pub irlandés junto a Puerta del Sol — Espoz y
+          Mina 7. Ponemos grandes eventos deportivos en nuestras pantallas cuando
+          están confirmados: fútbol, NFL, NBA, rugby, Fórmula 1, tenis y más.
+          Consulta la Agenda arriba para esta semana, o pregunta en barra si
+          buscas un partido concreto.
+        </p>
+      </Section>
+
+      <Section title="Chupitos a 1 € los jueves">
+        <p>
+          Todos los jueves: chupitos a 1 € en el pub. Pregunta en barra al llegar.{" "}
+          <Link
+            href="/es/thursday-1-euro-shots"
+            className="text-gold underline"
+          >
+            Chupitos a 1 € los jueves
+          </Link>
+        </p>
       </Section>
     </PageShell>
   );

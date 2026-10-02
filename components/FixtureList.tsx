@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import {
   FIXTURES,
@@ -14,6 +13,21 @@ import { MAPS_URL } from "@/lib/venue";
 import { Section } from "@/components/Prose";
 
 type Locale = "en" | "es";
+
+const EMPTY = {
+  today: {
+    en: "Nothing listed for today — ask at the bar what's on the screens.",
+    es: "Hoy no hay nada listado — pregunta en la barra qué hay en pantallas.",
+  },
+  week: {
+    en: "This week's upcoming list will appear here when events are ready.",
+    es: "La agenda de próximos eventos aparecerá aquí cuando estén listos.",
+  },
+  note: {
+    en: "Times are Madrid time. Confirmed = showing on our screens.",
+    es: "Horarios en hora de Madrid. Confirmado = se emite en nuestras pantallas.",
+  },
+} as const;
 
 function FixtureDetail({ f, locale }: { f: Fixture; locale: Locale }) {
   const isEs = locale === "es";
@@ -70,8 +84,9 @@ function ComingUpRow({ f, locale }: { f: Fixture; locale: Locale }) {
 }
 
 /**
- * Client-only Today / This week. SSR shell is neutral (no Today, no past rows).
- * Madrid calendar day is computed in the browser so static export cannot freeze labels.
+ * Client-only Today / This week. SSR shows both sections with empty-state copy
+ * (never an ellipsis). Madrid calendar day is computed in the browser so static
+ * export cannot freeze "Today"/"Hoy" labels.
  */
 export function FixtureList({ locale = "en" }: { locale?: Locale }) {
   const isEs = locale === "es";
@@ -94,34 +109,39 @@ export function FixtureList({ locale = "en" }: { locale?: Locale }) {
     [upcoming, tonight],
   );
 
-  const emptyUpcoming = isEs
-    ? "De momento no hay eventos confirmados. Consulta la agenda o pregunta en la barra."
-    : "Nothing confirmed for the diary right now. Check What's On or ask at the bar.";
+  const emptyToday = EMPTY.today[locale];
+  const emptyWeek = EMPTY.week[locale];
+  const note = EMPTY.note[locale];
 
-  // Pre-hydrate / SSR: week-neutral only — never hardcode Today with build-time data.
+  // Pre-hydrate / SSR: always show Today + This week with empty copy — never "…".
   if (today === null) {
     return (
-      <Section title={isEs ? "Esta semana" : "This week"}>
-        <p className="text-cream-muted" aria-hidden="true">
-          …
-        </p>
-        {/* Keep FIXTURES in the client bundle; do not render rows until Madrid today is known. */}
-        <span className="hidden" data-fixtures={FIXTURES.length} />
-      </Section>
+      <>
+        <Section title={isEs ? "Hoy" : "Today"}>
+          <p className="text-cream-muted">{emptyToday}</p>
+          <span className="hidden" data-fixtures={FIXTURES.length} />
+        </Section>
+        <Section title={isEs ? "Esta semana" : "This week"}>
+          <p className="text-cream-muted">{emptyWeek}</p>
+          <p className="mt-3 text-sm text-cream/55">{note}</p>
+        </Section>
+      </>
     );
   }
 
   return (
     <>
-      {tonight.length > 0 ? (
-        <Section title={isEs ? "Hoy" : "Today"}>
+      <Section title={isEs ? "Hoy" : "Today"}>
+        {tonight.length > 0 ? (
           <ul className="space-y-6">
             {tonight.map((f) => (
               <FixtureDetail key={f.id} f={f} locale={locale} />
             ))}
           </ul>
-        </Section>
-      ) : null}
+        ) : (
+          <p className="text-cream-muted">{emptyToday}</p>
+        )}
+      </Section>
 
       <Section title={isEs ? "Esta semana" : "This week"}>
         {comingUp.length > 0 ? (
@@ -131,27 +151,9 @@ export function FixtureList({ locale = "en" }: { locale?: Locale }) {
             ))}
           </ul>
         ) : (
-          <p>
-            {emptyUpcoming}{" "}
-            {isEs ? (
-              <>
-                Si necesitas confirmar un partido concreto,{" "}
-                <Link href="/es/contact" className="text-gold underline">
-                  escríbenos
-                </Link>
-                .
-              </>
-            ) : (
-              <>
-                If you need a specific match confirmed,{" "}
-                <Link href="/contact" className="text-gold underline">
-                  contact us
-                </Link>
-                .
-              </>
-            )}
-          </p>
+          <p className="text-cream-muted">{emptyWeek}</p>
         )}
+        <p className="mt-3 text-sm text-cream/55">{note}</p>
       </Section>
     </>
   );

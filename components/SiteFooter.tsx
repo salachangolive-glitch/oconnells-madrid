@@ -14,8 +14,13 @@ export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
     <footer className="mt-auto border-t border-gold/15 bg-black px-4 py-10 pb-28 text-sm text-cream-muted">
       <div className="mx-auto grid max-w-5xl gap-8 sm:grid-cols-3">
         <div>
-          <p className="font-serif text-lg text-cream">{SITE_NAME}</p>
-          <p className="mt-2">{ADDRESS.full}</p>
+          <p className="font-serif text-lg text-cream">
+            {SITE_NAME} Madrid
+          </p>
+          <p className="mt-2">Calle de Espoz y Mina 7</p>
+          <p className="mt-1 text-cream/55">
+            {ADDRESS.postalCode} {ADDRESS.city}
+          </p>
           <p className="mt-3 text-cream/55">
             {isEs ? HOURS.summaryEs : HOURS.summaryEn}
           </p>
@@ -89,12 +94,12 @@ export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
         </div>
         <div>
           <p className="mb-2 font-semibold uppercase tracking-wide text-cream/90">
-            {isEs ? "Centro de Madrid" : "Central Madrid"}
+            {isEs ? "Dónde estamos" : "Find us"}
           </p>
           <p>
             {isEs
-              ? "Pub irlandés cerca de Sol · Madrid Centro."
-              : "Irish pub near Sol · Madrid Centro."}
+              ? "Junto a Puerta del Sol."
+              : "Near Puerta del Sol."}
           </p>
         </div>
       </div>
