@@ -61,7 +61,7 @@ export function FixtureStrip({ locale = "en" }: { locale?: Locale }) {
   const title = isEs ? "Deportes en directo" : "Live sports";
   const empty = isEs
     ? "Cuando hay un gran partido o evento confirmado (fútbol, NFL, NBA, rugby, Fórmula 1, tenis), lo verás aquí. Consulta la agenda o pregunta en la barra."
-    : "When a big match or event is confirmed (football, NFL, NBA, rugby, Formula 1, tennis), it shows up here. Check What's On or ask at the bar.";
+    : "We show major live sport throughout the week — football, NFL, NBA, rugby, Formula 1 and tennis when confirmed. Check What’s On for this week’s schedule.";
   const moreHref = isEs ? "/es/whats-on" : "/whats-on";
   const more = isEs ? "Agenda" : "What's On";
   const cta = isEs ? "Cómo llegar" : "Get directions";

@@ -16,7 +16,7 @@ type Locale = "en" | "es";
 
 const EMPTY = {
   today: {
-    en: "Nothing listed for today — ask at the bar what's on the screens.",
+    en: "No confirmed screenings are listed for today. Looking for a specific game? Ask us at the bar.",
     es: "Hoy no hay nada listado — pregunta en la barra qué hay en pantallas.",
   },
   week: {

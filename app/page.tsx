@@ -93,8 +93,8 @@ export default function HomePage() {
         </h2>
         <div className="pub-rule my-3" />
         <p className="text-sm text-cream-muted sm:text-base">
-          Meet near Sol for a drink — English-friendly bar, sports on the
-          screens, and Thursday €1 shots if you stay late.
+          O’Connell St is just a short walk from Puerta del Sol and welcomes
+          an international crowd throughout the week.
         </p>
         <p className="mt-3">
           <Link href="/erasmus" className="text-sm text-gold hover:text-cream">

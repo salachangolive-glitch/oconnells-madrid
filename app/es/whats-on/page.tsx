@@ -19,7 +19,7 @@ export default function EsWhatsOnPage() {
       <PageHero
         eyebrow="Agenda"
         title={`Esta semana en ${SITE_NAME}`}
-        lead="Consulta el deporte en directo esta semana en O'Connell St: fútbol, NFL, NBA, rugby, Fórmula 1, tenis y más. Horarios en hora de Madrid; solo las emisiones marcadas como Confirmado se emiten en nuestras pantallas."
+        lead="Todos los horarios están indicados en hora de Madrid. Los eventos marcados como ‘Confirmado’ tienen prevista su emisión en nuestras pantallas."
       />
 
       <FixtureList locale="es" />
@@ -27,16 +27,16 @@ export default function EsWhatsOnPage() {
       <Section title="Deportes en directo en O'Connell St">
         <p>
           O&apos;Connell St es un pub irlandés junto a Puerta del Sol — Espoz y
-          Mina 7. Ponemos grandes eventos deportivos en nuestras pantallas cuando
-          están confirmados: fútbol, NFL, NBA, rugby, Fórmula 1, tenis y más.
-          Mira Hoy y Esta semana en esta página, o pregunta en la barra si
-          buscas un partido concreto.
+          Mina 7. Retransmitimos grandes eventos deportivos en nuestras
+          pantallas cuando están confirmados: fútbol, NFL, NBA, rugby, Fórmula 1,
+          tenis y más. Consulta la agenda de hoy y de esta semana, o pregunta en
+          la barra si buscas un partido concreto.
         </p>
       </Section>
 
       <Section title="Chupitos a 1 € los jueves">
         <p>
-          Todos los jueves: chupitos a 1 € en el pub. Pregunta en la barra al llegar.{" "}
+          Todos los jueves: chupitos a 1 € en el pub. Pregunta en la barra para más información.{" "}
           <Link
             href="/es/thursday-1-euro-shots"
             className="text-gold underline"

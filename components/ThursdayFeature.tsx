@@ -16,7 +16,7 @@ export function ThursdayFeature({ locale = "en" }: { locale?: Locale }) {
       </h2>
       <p className="mt-3 max-w-lg text-cream-muted">
         {isEs
-          ? "Todos los jueves: chupitos a 1 € en el pub. Pregunta en la barra al llegar."
+          ? "Todos los jueves: chupitos a 1 € en el pub. Pregunta en la barra para más información."
           : "Every Thursday: €1 shots at the pub. Ask at the bar when you arrive."}
       </p>
       <p className="mt-5">

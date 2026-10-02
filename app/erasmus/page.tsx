@@ -18,13 +18,13 @@ export default function ErasmusPage() {
       <PageHero
         eyebrow="Erasmus · Internationals"
         title={`Your night at ${SITE_NAME}`}
-        lead="Meet near Sol, catch confirmed sports on the screens, stay for Thursday €1 shots — a proper Irish pub with an international crowd."
+        lead="O’Connell St is just a short walk from Puerta del Sol and welcomes an international crowd throughout the week."
       />
       <ThursdayFeature locale="en" />
       <Section title="Why it works">
         <p>
-          Central enough that everyone finds the door. English-friendly at the
-          bar. Screens on for the big games. Thursday €1 shots give the night a
+          Central enough that everyone finds the door. A welcoming bar. Screens on
+          for the big games. Thursday €1 shots give the night a
           clear plan.
         </p>
         <p>

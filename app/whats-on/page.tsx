@@ -18,7 +18,7 @@ export default function WhatsOnPage() {
       <PageHero
         eyebrow="What's On"
         title={`This week at ${SITE_NAME}`}
-        lead="See this week's live sport at O'Connell St — football, NFL, NBA, rugby, Formula 1, tennis and more. Times are Madrid time; only screenings marked Confirmed are confirmed to show on our screens."
+        lead="All times are shown in Madrid time. Events marked ‘Confirmed’ are scheduled to be shown on our screens."
       />
 
       <FixtureList locale="en" />
