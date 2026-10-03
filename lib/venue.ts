@@ -13,9 +13,13 @@ export const ADDRESS = {
   full: "Calle de Espoz y Mina, 7, 28012 Madrid",
 } as const;
 
-/** GBP phone only — DO NOT show on the new website (web contact = form / future info@). NOT 915 22 75 09 */
+/** GBP phone only — DO NOT show on the new website (web contact = form + public email). NOT 915 22 75 09 */
 export const PHONE_DISPLAY = "+34 915 32 79 56";
 export const PHONE_TEL = "tel:+34915327956";
+
+/** Public inbox only. Internal Gmail must never appear on the site. */
+export const PUBLIC_EMAIL = "comunicacion@oconnellsmadrid.es";
+export const PUBLIC_EMAIL_MAILTO = "mailto:comunicacion@oconnellsmadrid.es";
 
 /** Search-based Maps link (no invented coordinates). */
 export const MAPS_URL =

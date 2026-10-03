@@ -3,6 +3,8 @@ import {
   ADDRESS,
   HOURS,
   MAPS_URL,
+  PUBLIC_EMAIL,
+  PUBLIC_EMAIL_MAILTO,
   SITE_NAME,
 } from "@/lib/venue";
 
@@ -23,6 +25,11 @@ export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
           </p>
           <p className="mt-3 text-cream/55">
             {isEs ? HOURS.summaryEs : HOURS.summaryEn}
+          </p>
+          <p className="mt-3">
+            <a href={PUBLIC_EMAIL_MAILTO} className="text-cream hover:text-gold">
+              {PUBLIC_EMAIL}
+            </a>
           </p>
         </div>
         <div>

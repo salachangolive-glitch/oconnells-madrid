@@ -37,11 +37,39 @@ export type Fixture = {
 };
 
 /**
- * Confirmed events only (newest/relevant first).
- * Cleared 2026-10-02: removed Elche–Real Madrid 2026-09-15 (past).
- * Add rows again when EVENTO + hora Madrid + emisión are verified.
+ * Confirmed screenings only.
+ * 2026-10-03: three UEFA Nations League matches the pub itself posted on
+ * Google (Localo/GBP, 2026-10-02) as "watch with us at O'Connell St",
+ * kickoffs checked against UEFA (CET/CEST clock = Madrid in October) and
+ * FAI/England FA. Pub hours cover all three.
+ * Not listed: other NL / friendlies that week — no venue screening source.
  */
-export const FIXTURES: Fixture[] = [];
+export const FIXTURES: Fixture[] = [
+  {
+    id: "2026-10-03-croatia-england",
+    competition: "UEFA Nations League",
+    homeTeam: "Croatia",
+    awayTeam: "England",
+    date: "2026-10-03",
+    kickoffMadrid: "18:00",
+  },
+  {
+    id: "2026-10-03-spain-czechia",
+    competition: "UEFA Nations League",
+    homeTeam: "Spain",
+    awayTeam: "Czechia",
+    date: "2026-10-03",
+    kickoffMadrid: "20:45",
+  },
+  {
+    id: "2026-10-04-ireland-israel",
+    competition: "UEFA Nations League",
+    homeTeam: "Republic of Ireland",
+    awayTeam: "Israel",
+    date: "2026-10-04",
+    kickoffMadrid: "20:45",
+  },
+];
 
 /**
  * Recurring weekly highlights (reference copy — What's On pages may inline).

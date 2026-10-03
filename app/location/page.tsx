@@ -8,6 +8,8 @@ import {
   ADDRESS,
   HOURS,
   MAPS_URL,
+  PUBLIC_EMAIL,
+  PUBLIC_EMAIL_MAILTO,
   SITE_NAME,
 } from "@/lib/venue";
 
@@ -34,6 +36,10 @@ export default function LocationPage() {
       <Section title="Address & hours">
         <p>{ADDRESS.full}</p>
         <p>
+          <a href={PUBLIC_EMAIL_MAILTO} className="text-cream underline">
+            {PUBLIC_EMAIL}
+          </a>
+          {" · "}
           <a href="/contact" className="text-cream underline">
             Contact
           </a>
