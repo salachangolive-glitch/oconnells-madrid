@@ -60,7 +60,7 @@ export function FixtureStrip({ locale = "en" }: { locale?: Locale }) {
 
   const title = isEs ? "Deportes en directo" : "Live sports";
   const empty = isEs
-    ? "Cuando hay un gran partido o evento confirmado (fútbol, NFL, NBA, rugby, Fórmula 1, tenis), lo verás aquí. Consulta la agenda o pregunta en la barra."
+    ? "Retransmitimos grandes eventos deportivos durante la semana — fútbol, NFL, NBA, rugby, Fórmula 1 y tenis cuando su emisión está confirmada. Consulta la Agenda para ver la programación."
     : "We show major live sport throughout the week — football, NFL, NBA, rugby, Formula 1 and tennis when confirmed. Check What’s On for this week’s schedule.";
   const moreHref = isEs ? "/es/whats-on" : "/whats-on";
   const more = isEs ? "Agenda" : "What's On";

@@ -25,7 +25,7 @@ export default function ThursdayShotsPage() {
           flatmates, hostel friends, or whoever you&apos;re out with in Madrid.
         </p>
         <p>
-          Thursdays only — there is no €1 shots promo on other weeknights.
+          Our current €1 shots promotion runs on Thursdays.
         </p>
       </Section>
       <Section title="Good to know">

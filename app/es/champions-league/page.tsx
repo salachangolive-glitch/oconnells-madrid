@@ -3,12 +3,12 @@ import { InteriorPhoto } from "@/components/InteriorPhoto";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
 import { buildMetadata } from "@/lib/seo";
-import { SITE_NAME } from "@/lib/venue";
+import { ADDRESS, HOURS, MAPS_URL, SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
   title: "Noches de Champions League en el centro de Madrid",
   description:
-    "UEFA Champions League en las pantallas de O'Connell St, cerca de Sol. Bar deportivo irlandés para noches europeas en Madrid.",
+    "Champions League en O'Connell St cerca de Sol cuando la emisión está confirmada. Horario, cómo llegar y Agenda.",
   path: "/es/champions-league",
   locale: "es",
 });
@@ -18,21 +18,35 @@ export default function EsChampionsLeaguePage() {
     <PageShell locale="es" altLangHref="/champions-league">
       <PageHero
         eyebrow="UEFA Champions League"
-        title={`Noches de UCL en ${SITE_NAME}`}
-        lead="El fútbol europeo entre semana pide pantallas grandes. Únete al público de este pub irlandés cerca de Sol para las noches de Champions League."
+        title={`Champions League en ${SITE_NAME}`}
+        lead="La Champions League se pone en las pantallas cuando la emisión está confirmada. Los horarios de esta semana están en la Agenda."
       />
       <InteriorPhoto
         src="/images/interior/sports-aisle.webp"
-        alt="Pasillo con varias pantallas de deportes en O'Connell St para noches de Champions"
+        alt="Pantallas de deportes en O'Connell St cerca de Sol"
         position="object-[center_45%]"
       />
       <Section title="Antes de venir">
         <p>
-          Confirma los cruces de esta noche en la{" "}
+          Consulta la{" "}
           <Link href="/es/whats-on" className="text-cream underline">
             Agenda
           </Link>{" "}
-          si tu plan depende de un partido. A poca distancia de Sol.
+          si tu plan depende de un partido. Si no figura como confirmado,
+          pregunta en la barra.
+        </p>
+        <p>
+          {ADDRESS.full}. {HOURS.summaryEs}. Desde Puerta del Sol se camina
+          hasta Calle de Espoz y Mina. No se reservan mesas.{" "}
+          <a
+            href={MAPS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-cream underline"
+          >
+            Cómo llegar
+          </a>
+          .
         </p>
         <p>
           <Link href="/es/premier-league" className="text-cream underline">

@@ -3,12 +3,12 @@ import { InteriorPhoto } from "@/components/InteriorPhoto";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
 import { buildMetadata } from "@/lib/seo";
-import { SITE_NAME } from "@/lib/venue";
+import { ADDRESS, HOURS, MAPS_URL, SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
   title: "Premier League en pantallas en Madrid cerca de Sol",
   description:
-    "Ver fútbol Premier League en O'Connell St, pub irlandés y bar deportivo cerca de Sol. Pantallas de PL en el centro de Madrid.",
+    "Premier League en O'Connell St cerca de Sol cuando la emisión está confirmada. Horario, cómo llegar y Agenda.",
   path: "/es/premier-league",
   locale: "es",
 });
@@ -18,26 +18,22 @@ export default function EsPremierLeaguePage() {
     <PageShell locale="es" altLangHref="/premier-league">
       <PageHero
         eyebrow="Premier League · Madrid"
-        title={`Pantallas de PL en ${SITE_NAME}`}
-        lead="Tardes y noches de Premier League en pantallas grandes — pintas listas, a un paso de Sol."
+        title={`Premier League en ${SITE_NAME}`}
+        lead="La Premier League se pone en las pantallas cuando la emisión está confirmada. Los horarios de esta semana están en la Agenda."
       />
       <InteriorPhoto
         src="/images/interior/sports-corridor.webp"
-        alt="Televisiones de deportes en O'Connell St — noches de Premier League cerca de Sol"
+        alt="Televisiones de deportes en O'Connell St cerca de Sol"
         position="object-[center_40%]"
       />
-      <Section title="Planificar una tarde o noche de PL">
+      <Section title="Partidos confirmados de esta semana">
         <p>
-          Los fines de semana se llenan. Si te importa un horario concreto,
-          consulta la{" "}
+          No publicamos un horario aquí si el pub no ha confirmado la emisión.
+          Abre la{" "}
           <Link href="/es/whats-on" className="text-cream underline">
             Agenda
           </Link>{" "}
-          o pregunta en la barra.{" "}
-          <Link href="/es/location" className="text-cream underline">
-            Cómo llegar desde Sol
-          </Link>
-          .
+          para ver la hora de Madrid, o pregunta en la barra.
         </p>
         <p>
           También{" "}
@@ -45,11 +41,28 @@ export default function EsPremierLeaguePage() {
             Champions League
           </Link>{" "}
           y{" "}
-          <Link
-            href="/es/watch-football-madrid"
+          <Link href="/es/watch-football-madrid" className="text-cream underline">
+            ver fútbol en Madrid
+          </Link>
+          .
+        </p>
+      </Section>
+      <Section title="Horario y cómo llegar">
+        <p>
+          {ADDRESS.full}. {HOURS.summaryEs}. No se reservan mesas.
+        </p>
+        <p>
+          <a
+            href={MAPS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-cream underline"
           >
-            ver fútbol en Madrid
+            Cómo llegar desde Puerta del Sol
+          </a>
+          {" · "}
+          <Link href="/es/location" className="text-cream underline">
+            Ubicación
           </Link>
           .
         </p>

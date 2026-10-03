@@ -95,8 +95,8 @@ export default function EsHomePage() {
         </h2>
         <div className="pub-rule my-3" />
         <p className="text-sm text-cream-muted sm:text-base">
-          Quedada cerca de Sol: barra en inglés, deportes en pantallas y
-          chupitos a 1 € los jueves si te quedas.
+          O&apos;Connell St está a pocos pasos de Puerta del Sol y recibe a
+          público internacional durante toda la semana.
         </p>
         <p className="mt-3">
           <Link

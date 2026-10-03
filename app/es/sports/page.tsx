@@ -9,7 +9,7 @@ import { SITE_NAME } from "@/lib/venue";
 export const metadata = buildMetadata({
   title: "Deportes en directo Madrid — pub irlandés cerca de Sol",
   description:
-    "O'Connell St cerca de Sol: deportes en directo en pantallas — fútbol, NFL, NBA, rugby, F1, tenis y otras noches grandes cuando están confirmadas.",
+    "O'Connell St cerca de Sol retransmite grandes eventos deportivos cuando su emisión está confirmada. Consulta la Agenda.",
   path: "/es/sports",
   locale: "es",
 });
@@ -20,7 +20,7 @@ export default function EsSportsPage() {
       <PageHero
         eyebrow="Pantallas · pintas · Sol"
         title={`Deportes en directo en ${SITE_NAME}`}
-        lead="Noches de fútbol cuando importan, más NFL, NBA, rugby, F1, tenis y otros eventos grandes cuando están confirmados — a un paso de Sol. No prometemos todo siempre: consulta la agenda."
+        lead="Retransmitimos grandes eventos deportivos cuando su emisión está confirmada. Consulta la Agenda para ver la programación de esta semana."
       />
       <InteriorPhoto
         src="/images/interior/sports-aisle.webp"
@@ -30,9 +30,9 @@ export default function EsSportsPage() {
       <FixtureStrip locale="es" />
       <Section title="Qué ponemos">
         <p>
-          El pub se llena alrededor de las pantallas. Coge una pinta, busca un
-          sitio y disfruta — fútbol los fines de semana y noches europeas, y
-          otros deportes cuando hay un evento grande confirmado.
+          Retransmitimos grandes eventos deportivos cuando su emisión está
+          confirmada: fútbol, NFL, NBA, rugby, Fórmula 1 y tenis. Un partido
+          solo aparece aquí cuando el pub ha confirmado la emisión.
         </p>
         <p>
           Para la agenda, mira{" "}
@@ -61,9 +61,8 @@ export default function EsSportsPage() {
       />
       <Section title="Más allá del fútbol">
         <p>
-          NFL y NBA cuando se emiten; rugby, F1 y tenis cuando hay una noche
-          grande confirmada. Pregunta en la barra por la programación — o
-          consulta la{" "}
+          Consulta la Agenda para ver la programación de esta semana, o
+          pregunta en la barra.{" "}
           <Link href="/es/whats-on" className="text-gold underline">
             Agenda
           </Link>

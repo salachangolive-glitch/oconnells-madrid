@@ -41,9 +41,9 @@ export type Fixture = {
  * Reviewed 2026-10-03 (window 3–10 Oct, Europe/Madrid).
  * Kickoffs for Nations League, LaLiga J8 and Premier League 10 Oct are real,
  * and the pub is open for the evening ones. No public O'Connell source
- * (site, Localo page, indexed Instagram) confirms those matches are on
- * the screens. A note that GBP posted them on 2026-10-02 could not be
- * checked against a live post. List stays empty until that source exists.
+ * confirms those matches are on the screens. A note that GBP posted them
+ * on 2026-10-02 could not be checked against a live post. List stays empty.
+ * Do not invent screenings.
  */
 export const FIXTURES: Fixture[] = [];
 

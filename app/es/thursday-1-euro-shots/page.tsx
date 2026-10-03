@@ -27,8 +27,7 @@ export default function EsThursdayShotsPage() {
           en Madrid.
         </p>
         <p>
-          Solo los jueves: no hay promoción de chupitos a 1 € otros días de la
-          semana.
+          La promoción actual de chupitos a 1 € es los jueves.
         </p>
       </Section>
       <Section title="Información útil">

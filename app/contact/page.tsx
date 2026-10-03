@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ContactForm } from "@/components/ContactForm";
 import { PageShell } from "@/components/PageShell";
 import { PageHero } from "@/components/Prose";
@@ -25,6 +26,11 @@ export default function ContactPage() {
           {PUBLIC_EMAIL}
         </a>
         , or use the form below. We don’t publish a phone number on this site.
+      </p>
+      <p className="mb-6 text-sm text-cream-muted">
+        <Link href="/privacy" className="text-gold underline">
+          Privacy notice
+        </Link>
       </p>
       <ContactForm locale="en" />
     </PageShell>

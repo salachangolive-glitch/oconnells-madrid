@@ -3,12 +3,12 @@ import { InteriorPhoto } from "@/components/InteriorPhoto";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
 import { buildMetadata } from "@/lib/seo";
-import { SITE_NAME } from "@/lib/venue";
+import { ADDRESS, HOURS, MAPS_URL, SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
   title: "Champions League nights in central Madrid",
   description:
-    "UEFA Champions League on the screens at O'Connell St near Sol. Irish sports pub for European nights in Madrid.",
+    "Champions League at O'Connell St near Sol when the screening is confirmed. Hours, directions and What's On.",
   path: "/champions-league",
 });
 
@@ -17,21 +17,35 @@ export default function ChampionsLeaguePage() {
     <PageShell locale="en" altLangHref="/es/champions-league">
       <PageHero
         eyebrow="UEFA Champions League"
-        title={`UCL nights at ${SITE_NAME}`}
-        lead="European football on the big screens. Join the crowd at this Irish sports pub near Sol for Champions League nights."
+        title={`Champions League at ${SITE_NAME}`}
+        lead="Champions League goes on the screens when that screening is confirmed. This week's times are on What's On."
       />
       <InteriorPhoto
         src="/images/interior/sports-aisle.webp"
-        alt="Multi-screen sports aisle at O'Connell St ready for Champions League nights"
+        alt="Sports screens at O'Connell St near Sol"
         position="object-[center_45%]"
       />
       <Section title="Before you come">
         <p>
-          Confirm tonight&apos;s ties on{" "}
+          Check{" "}
           <Link href="/whats-on" className="text-cream underline">
             What&apos;s On
           </Link>{" "}
-          if your night depends on one match. Short walk from Sol.
+          if your night depends on one tie. If it is not listed as confirmed,
+          ask at the bar.
+        </p>
+        <p>
+          {ADDRESS.full}. {HOURS.summaryEn}. Walk from Puerta del Sol to Calle
+          de Espoz y Mina. No table reservations.{" "}
+          <a
+            href={MAPS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-cream underline"
+          >
+            Directions
+          </a>
+          .
         </p>
         <p>
           <Link href="/premier-league" className="text-cream underline">
@@ -39,7 +53,7 @@ export default function ChampionsLeaguePage() {
           </Link>
           {" · "}
           <Link href="/sports" className="text-cream underline">
-            Sports overview
+            Live Sports
           </Link>
           {" · "}
           <Link href="/location" className="text-cream underline">

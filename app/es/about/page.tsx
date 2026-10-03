@@ -19,7 +19,7 @@ export default function EsAboutPage() {
       <PageHero
         eyebrow="Sobre nosotros"
         title={SITE_NAME}
-        lead="Pub irlandés y bar deportivo en el centro de Madrid — pantallas para el deporte cuando está confirmado, y chupitos a 1 € los jueves."
+        lead="Pub irlandés y bar deportivo en el centro de Madrid — deportes en directo cuando la emisión está confirmada, y chupitos a 1 € los jueves."
       />
       <InteriorPhoto
         src="/images/interior/about-salon.webp"

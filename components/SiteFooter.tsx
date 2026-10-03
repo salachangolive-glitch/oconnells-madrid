@@ -88,6 +88,14 @@ export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
               </Link>
             </li>
             <li>
+              <Link
+                href={isEs ? "/es/privacy" : "/privacy"}
+                className="hover:text-gold"
+              >
+                {isEs ? "Privacidad" : "Privacy"}
+              </Link>
+            </li>
+            <li>
               <a
                 href={MAPS_URL}
                 target="_blank"

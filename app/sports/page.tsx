@@ -9,7 +9,7 @@ import { SITE_NAME } from "@/lib/venue";
 export const metadata = buildMetadata({
   title: "Live sports Madrid — Irish pub near Sol",
   description:
-    "O'Connell St near Sol: live sports on the screens — football, NFL, NBA, rugby, F1, tennis and more when confirmed.",
+    "O'Connell St near Sol shows major live sport when confirmed: football, NFL, NBA, rugby, Formula 1 and tennis. Check What's On.",
   path: "/sports",
 });
 
@@ -19,7 +19,7 @@ export default function SportsPage() {
       <PageHero
         eyebrow="Screens · pints · Sol"
         title={`Live sports at ${SITE_NAME}`}
-        lead="Football nights when they matter, plus NFL, NBA, rugby, F1, tennis and other big events when they’re confirmed — a short walk from Sol. We don’t promise everything every night: check What’s On."
+        lead="We show major live sport throughout the week, including football, NFL, NBA, rugby, Formula 1 and tennis when confirmed."
       />
       <InteriorPhoto
         src="/images/interior/sports-aisle.webp"
@@ -29,9 +29,9 @@ export default function SportsPage() {
       <FixtureStrip locale="en" />
       <Section title="What we put on">
         <p>
-          The pub fills around the screens. Grab a pint, find a seat, and settle
-          in — football most weekends and European nights, and other sports when
-          a big match is confirmed for the bar.
+          We show major live sport throughout the week, including football,
+          NFL, NBA, rugby, Formula 1 and tennis when confirmed. A match appears
+          here only after the pub has confirmed the screening.
         </p>
         <p>
           For the diary, see{" "}
@@ -60,9 +60,8 @@ export default function SportsPage() {
       />
       <Section title="Beyond football">
         <p>
-          NFL and NBA when those games are showing; rugby, F1 and tennis when a
-          big night is confirmed. Ask at the bar for tonight&apos;s lineup — or
-          check{" "}
+          NFL, NBA, rugby, Formula 1 and tennis go on the screens when that
+          screening is confirmed. Check{" "}
           <Link href="/whats-on" className="text-gold underline">
             What&apos;s On
           </Link>

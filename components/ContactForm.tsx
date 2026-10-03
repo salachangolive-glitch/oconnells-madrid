@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import {
   buildContactSubject,
@@ -21,7 +22,9 @@ const copy = {
     unavailable:
       "The contact form is not available yet. Please try again later.",
     privacy:
-      "We use your details only to reply to this enquiry.",
+      "We use your name, email, reason and message only to reply to this enquiry.",
+    privacyHref: "/privacy",
+    privacyLink: "Privacy notice",
     required: "Please fill in all fields.",
   },
   es: {
@@ -36,7 +39,9 @@ const copy = {
     unavailable:
       "El formulario no está disponible todavía. Prueba más tarde.",
     privacy:
-      "Usamos tus datos solo para responder a esta consulta.",
+      "Usamos tu nombre, email, motivo y mensaje solo para responder a esta consulta.",
+    privacyHref: "/es/privacy",
+    privacyLink: "Aviso de privacidad",
     required: "Completa todos los campos.",
   },
 } as const;
@@ -203,7 +208,13 @@ export function ContactForm({ locale = "en" }: { locale?: Locale }) {
         />
       </div>
 
-      <p className="text-xs leading-relaxed text-cream/55">{t.privacy}</p>
+      <p className="text-xs leading-relaxed text-cream/55">
+        {t.privacy}{" "}
+        <Link href={t.privacyHref} className="text-gold underline">
+          {t.privacyLink}
+        </Link>
+        .
+      </p>
 
       <button
         type="submit"

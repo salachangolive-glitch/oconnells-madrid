@@ -3,12 +3,12 @@ import { InteriorPhoto } from "@/components/InteriorPhoto";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
 import { buildMetadata } from "@/lib/seo";
-import { ADDRESS, MAPS_URL, SITE_NAME } from "@/lib/venue";
+import { ADDRESS, HOURS, MAPS_URL, SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
   title: "Ver fútbol en Madrid cerca de Sol",
   description:
-    "Ver Premier League, Champions League y LaLiga en O'Connell St, Calle de Espoz y Mina 7, cerca de Sol. Pub irlandés céntrico en Madrid.",
+    "Fútbol confirmado en O'Connell St, Calle de Espoz y Mina 7, cerca de Sol. Horario, cómo llegar y Agenda.",
   path: "/es/watch-football-madrid",
   locale: "es",
 });
@@ -18,53 +18,57 @@ export default function EsWatchFootballPage() {
     <PageShell locale="es" altLangHref="/watch-football-madrid">
       <PageHero
         eyebrow="Ver fútbol · Madrid"
-        title="Un pub irlandés céntrico para el partido"
-        lead={`${SITE_NAME} está en ${ADDRESS.street}, a poca distancia de Sol — Premier League, Champions League o LaLiga en pantallas sin salir del centro.`}
+        title="Fútbol en un pub junto a Sol"
+        lead={`${SITE_NAME} está en ${ADDRESS.street}, a pocos pasos de Puerta del Sol. Los partidos confirmados están en la Agenda.`}
       />
       <InteriorPhoto
         src="/images/interior/football-seating.webp"
         alt="Asientos con barriles y pantallas de deportes en O'Connell St cerca de Sol"
         position="object-[center_20%]"
       />
-      <Section title="Qué se emite">
+      <Section title="Partidos confirmados">
         <p>
-          Fines de semana de Premier League, Champions League entre semana y
-          noches de LaLiga en pantallas cuando están confirmadas. Viajeros y
-          locales nos usan como punto céntrico para ver el partido.
-        </p>
-        <p>
+          Un partido figura como confirmado solo cuando el pub lo emite.
           Consulta la{" "}
           <Link href="/es/whats-on" className="text-cream underline">
             Agenda
           </Link>{" "}
-          para fechas confirmadas, o pregunta en la barra.
+          para la hora de Madrid. Si no está en la lista, pregunta en la barra:
+          no des por hecho que se retransmite.
+        </p>
+        <p>
+          Consulta la Agenda para ver los partidos confirmados y cómo llegar
+          desde Puerta del Sol. También:{" "}
+          <Link href="/es/premier-league" className="text-cream underline">
+            Premier League
+          </Link>
+          ,{" "}
+          <Link href="/es/champions-league" className="text-cream underline">
+            Champions League
+          </Link>{" "}
+          y{" "}
+          <Link href="/es/sports" className="text-cream underline">
+            deportes en directo
+          </Link>
+          .
         </p>
       </Section>
-      <Section title="Cómo llegar">
+      <Section title="Horario y cómo llegar">
+        <p>{ADDRESS.full}. {HOURS.summaryEs}.</p>
         <p>
-          Dirígete a Puerta del Sol y camina hasta Calle de Espoz y Mina.{" "}
+          Desde Metro Sol, camina hasta Calle de Espoz y Mina. Fachada roja y
+          rótulo dorado. No se reservan mesas: se atiende por orden de llegada.{" "}
           <a
             href={MAPS_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="text-cream underline"
           >
-            Abrir cómo llegar
+            Cómo llegar
           </a>
-          .
-        </p>
-        <p>
-          También hay páginas sobre{" "}
-          <Link href="/es/premier-league" className="text-cream underline">
-            Premier League
-          </Link>{" "}
-          y{" "}
-          <Link href="/es/champions-league" className="text-cream underline">
-            Champions League
-          </Link>
-          , o la vista general de{" "}
-          <Link href="/es/sports" className="text-cream underline">
-            deportes en directo
+          {" · "}
+          <Link href="/es/location" className="text-cream underline">
+            Ubicación
           </Link>
           .
         </p>
