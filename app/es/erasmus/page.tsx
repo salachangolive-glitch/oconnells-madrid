@@ -6,9 +6,9 @@ import { buildMetadata } from "@/lib/seo";
 import { SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
-  title: "Noches Erasmus cerca de Puerta del Sol",
+  title: "Noches Erasmus cerca de Sol",
   description:
-    "Pub irlandés para Erasmus cerca de Sol: jueves de chupitos a 1 €, pantallas de fútbol y quedar fácil en Madrid Centro.",
+    "Pub irlandés a pocos pasos de Puerta del Sol para estudiantes y público internacional. Jueves: chupitos a 1 €. Agenda con deportes confirmados.",
   path: "/es/erasmus",
   locale: "es",
 });
@@ -19,18 +19,19 @@ export default function EsErasmusPage() {
       <PageHero
         eyebrow="Erasmus · Internacionales"
         title={`Tu noche en ${SITE_NAME}`}
-        lead="Quedar cerca de Sol, ver el partido y quedarte al jueves de chupitos a 1 € — el ambiente de un Irish pub de verdad en Madrid Centro."
+        lead="Si estás de Erasmus en Madrid, O'Connell St queda a un paso de Sol. Se entra, se pide en inglés si quieres, y si hay partido confirmado se ve en las pantallas."
       />
       <ThursdayFeature locale="es" />
-      <Section title="Por qué funciona">
+      <Section title="Cómo es la noche">
         <p>
-          Central para que todo el mundo llegue. Ambiente fácil en barra. Pantallas
-          cuando hay partido gordo. Pon el jueves en el grupo y el resto se
-          organiza solo.
+          Queda céntrico, así que todo el mundo encuentra la puerta. En la
+          barra se habla inglés. Las pantallas se encienden cuando el partido
+          está confirmado, no porque sí. Y los jueves los chupitos a 1 € dan
+          un plan — pregunta al llegar, por si esa noche hay algún matiz.
         </p>
         <p>
           <Link href="/es/sports" className="text-gold underline">
-            Deportes
+            Deportes en directo
           </Link>
           {" · "}
           <Link href="/es/location" className="text-gold underline">
@@ -38,7 +39,7 @@ export default function EsErasmusPage() {
           </Link>
           {" · "}
           <Link href="/es/whats-on" className="text-gold underline">
-            Partidos
+            Agenda
           </Link>
         </p>
       </Section>

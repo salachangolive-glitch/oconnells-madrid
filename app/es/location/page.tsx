@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { InteriorPhoto } from "@/components/InteriorPhoto";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
 import { VenueHero } from "@/components/VenueHero";
@@ -7,6 +8,8 @@ import {
   ADDRESS,
   HOURS,
   MAPS_URL,
+  PUBLIC_EMAIL,
+  PUBLIC_EMAIL_MAILTO,
   SITE_NAME,
 } from "@/lib/venue";
 
@@ -22,14 +25,26 @@ export default function EsLocationPage() {
   return (
     <PageShell locale="es" altLangHref="/location">
       <PageHero
-        eyebrow="Ubicación · Madrid Centro"
+        eyebrow="Ubicación · Madrid"
         title={`Cómo llegar a ${SITE_NAME}`}
         lead={`${ADDRESS.full} — a poca distancia de Puerta del Sol.`}
       />
-      <VenueHero variant="secondary" alt="O'Connell St en Calle de Espoz y Mina, cerca de Sol" className="mb-10" />
+      <VenueHero
+        variant="secondary"
+        alt="O'Connell St en Calle de Espoz y Mina, cerca de Sol"
+        className="mb-10"
+      />
       <Section title="Dirección y horarios">
         <p>{ADDRESS.full}</p>
         <p>
+          <a
+            href={PUBLIC_EMAIL_MAILTO}
+            data-event="email_click"
+            className="text-cream underline"
+          >
+            {PUBLIC_EMAIL}
+          </a>
+          {" · "}
           <a href="/es/contact" className="text-cream underline">
             Contacto
           </a>
@@ -44,25 +59,31 @@ export default function EsLocationPage() {
             href={MAPS_URL}
             target="_blank"
             rel="noopener noreferrer"
+            data-event="directions"
             className="inline-flex rounded-md bg-pub-green px-4 py-2 font-semibold text-cream hover:bg-pub-green-light"
           >
             Abrir en Google Maps
           </a>
         </p>
       </Section>
+      <InteriorPhoto
+        src="/images/interior/stairs-levels.webp"
+        alt="Escaleras entre plantas del pub irlandés O'Connell St cerca de Sol"
+        position="object-[center_40%]"
+      />
       <Section title="Cómo llegar">
         <p>
           Dirígete a Puerta del Sol y camina hasta Calle de Espoz y Mina. Ideal
           antes de un partido de Premier League, Champions League o LaLiga — o
-          para los jueves de chupitos a 1 € con tu grupo Erasmus.
+          para los jueves de chupitos a 1 € con amigos.
         </p>
         <p>
           <Link href="/es/whats-on" className="text-cream underline">
-            Partidos
+            Agenda
           </Link>
           {" · "}
           <Link href="/es/sports" className="text-cream underline">
-            Deportes
+            Deportes en directo
           </Link>
           {" · "}
           <Link

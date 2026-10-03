@@ -3,10 +3,10 @@ import { MAPS_URL } from "@/lib/venue";
 
 type Locale = "en" | "es";
 
-/** Fixtures | Directions | Contact — no phone on the new website. */
+/** What's On | Directions | Contact — no phone on the new website. */
 export function StickyCta({ locale = "en" }: { locale?: Locale }) {
   const isEs = locale === "es";
-  const fixturesHref = isEs ? "/es/whats-on" : "/whats-on";
+  const whatsOnHref = isEs ? "/es/whats-on" : "/whats-on";
   const contactHref = isEs ? "/es/contact" : "/contact";
 
   return (
@@ -17,11 +17,12 @@ export function StickyCta({ locale = "en" }: { locale?: Locale }) {
       <ul className="mx-auto grid max-w-3xl grid-cols-3 px-1 py-1.5 text-center text-[10px] font-semibold uppercase tracking-[0.14em] text-cream-muted sm:text-[11px]">
         <li>
           <Link
-            href={fixturesHref}
+            href={whatsOnHref}
+            data-event="whats_on"
             className="flex min-h-11 flex-col items-center justify-center gap-0.5 px-1 py-1.5 hover:text-gold"
           >
             <ScreenIcon />
-            {isEs ? "Partidos" : "Fixtures"}
+            {isEs ? "Agenda" : "What's On"}
           </Link>
         </li>
         <li>
@@ -29,6 +30,7 @@ export function StickyCta({ locale = "en" }: { locale?: Locale }) {
             href={MAPS_URL}
             target="_blank"
             rel="noopener noreferrer"
+            data-event="directions"
             className="flex min-h-11 flex-col items-center justify-center gap-0.5 px-1 py-1.5 hover:text-gold"
           >
             <PinIcon />
@@ -38,6 +40,7 @@ export function StickyCta({ locale = "en" }: { locale?: Locale }) {
         <li>
           <Link
             href={contactHref}
+            data-event="contact"
             className="flex min-h-11 flex-col items-center justify-center gap-0.5 px-1 py-1.5 hover:text-gold"
           >
             <MailIcon />

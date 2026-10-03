@@ -5,22 +5,20 @@ type Locale = "en" | "es";
 
 const nav = {
   en: [
-    { href: "/sports", label: "Sports" },
-    { href: "/whats-on", label: "Fixtures" },
+    { href: "/whats-on", label: "What's On" },
+    { href: "/sports", label: "Live Sports" },
     { href: "/thursday-1-euro-shots", label: "Thursday €1" },
     { href: "/erasmus", label: "Erasmus" },
     { href: "/location", label: "Location" },
-    { href: "/watch-football-madrid", label: "Football" },
     { href: "/about", label: "About" },
     { href: "/contact", label: "Contact" },
   ],
   es: [
-    { href: "/es/sports", label: "Deportes" },
-    { href: "/es/whats-on", label: "Partidos" },
+    { href: "/es/whats-on", label: "Agenda" },
+    { href: "/es/sports", label: "Deportes en directo" },
     { href: "/es/thursday-1-euro-shots", label: "Jueves 1 €" },
     { href: "/es/erasmus", label: "Erasmus" },
     { href: "/es/location", label: "Ubicación" },
-    { href: "/es/watch-football-madrid", label: "Fútbol" },
     { href: "/es/about", label: "Sobre nosotros" },
     { href: "/es/contact", label: "Contacto" },
   ],
@@ -54,7 +52,18 @@ export function SiteHeader({
           aria-label="Primary"
         >
           {items.map((item) => (
-            <Link key={item.href} href={item.href} className="hover:text-gold">
+            <Link
+              key={item.href}
+              href={item.href}
+              className="hover:text-gold"
+              data-event={
+                item.href.includes("whats-on")
+                  ? "whats_on"
+                  : item.href.includes("/contact")
+                    ? "contact"
+                    : undefined
+              }
+            >
               {item.label}
             </Link>
           ))}
@@ -76,6 +85,13 @@ export function SiteHeader({
             key={item.href}
             href={item.href}
             className="whitespace-nowrap hover:text-gold"
+            data-event={
+              item.href.includes("whats-on")
+                ? "whats_on"
+                : item.href.includes("/contact")
+                  ? "contact"
+                  : undefined
+            }
           >
             {item.label}
           </Link>

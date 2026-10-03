@@ -6,9 +6,9 @@ import { buildMetadata } from "@/lib/seo";
 import { SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
-  title: "Erasmus nights near Puerta del Sol",
+  title: "Erasmus nights near Sol",
   description:
-    "Erasmus-friendly Irish pub near Sol: Thursday €1 shots, football screens, easy meetups in Madrid Centro. O'Connell St, Espoz y Mina 7.",
+    "Erasmus-friendly Irish pub near Sol: Thursday €1 shots, live sports on the screens, easy meetups. O'Connell St, Espoz y Mina 7.",
   path: "/erasmus",
 });
 
@@ -18,18 +18,18 @@ export default function ErasmusPage() {
       <PageHero
         eyebrow="Erasmus · Internationals"
         title={`Your night at ${SITE_NAME}`}
-        lead="Meet near Sol, watch the football, stay for Thursday €1 shots — the room that feels like a proper Irish pub in Madrid Centro."
+        lead="O’Connell St is just a short walk from Puerta del Sol and welcomes an international crowd throughout the week."
       />
       <ThursdayFeature locale="en" />
       <Section title="Why it works">
         <p>
-          Central enough that everyone finds the door. English-friendly at the
-          bar. Screens on when the big games are on. Put Thursday in the group
-          chat and the rest follows.
+          Central enough that everyone finds the door. A welcoming bar. Screens on
+          for the big games. Thursday €1 shots give the night a
+          clear plan.
         </p>
         <p>
           <Link href="/sports" className="text-gold underline">
-            Sports
+            Live Sports
           </Link>
           {" · "}
           <Link href="/location" className="text-gold underline">
@@ -37,7 +37,7 @@ export default function ErasmusPage() {
           </Link>
           {" · "}
           <Link href="/whats-on" className="text-gold underline">
-            Fixtures
+            What&apos;s On
           </Link>
         </p>
       </Section>
