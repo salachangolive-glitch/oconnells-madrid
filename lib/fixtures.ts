@@ -44,6 +44,9 @@ export type Fixture = {
  * Overnight US cards use the Madrid calendar day (ET+6).
  * Left out: doors closed (F1 Singapore sessions, MotoGP Japan, early kickoffs),
  * no published clock (Shanghai tennis, Il Lombardia), NL C/D.
+ * Delta 2026-10-03: reconfirmed 5–6 Oct NL/NFL kickoffs; fixed Commanders/Colts
+ * and Bears/Jets home sides (NFL.com); Madrid–Partizan tip 20:45 Madrid
+ * (18:45Z / Movistar Arena), not 18:45 local.
  */
 export const FIXTURES: Fixture[] = [
   { id: "2026-10-03-bristol-northampton", competition: "Premiership", homeTeam: "Bristol", awayTeam: "Northampton", date: "2026-10-03", kickoffMadrid: "16:05" },
@@ -55,11 +58,11 @@ export const FIXTURES: Fixture[] = [
   { id: "2026-10-03-spain-czechia", competition: "UEFA Nations League", homeTeam: "Spain", awayTeam: "Czechia", date: "2026-10-03", kickoffMadrid: "20:45" },
   { id: "2026-10-04-raptors-heat", competition: "NBA", homeTeam: "Toronto Raptors", awayTeam: "Miami Heat", date: "2026-10-04", kickoffMadrid: "01:00" },
   { id: "2026-10-04-ufc-332", competition: "UFC", homeTeam: "Silva", awayTeam: "Wang", date: "2026-10-04", kickoffMadrid: "02:00" },
-  { id: "2026-10-04-colts-commanders", competition: "NFL", homeTeam: "Indianapolis Colts", awayTeam: "Washington Commanders", date: "2026-10-04", kickoffMadrid: "15:30" },
+  { id: "2026-10-04-colts-commanders", competition: "NFL", homeTeam: "Washington Commanders", awayTeam: "Indianapolis Colts", date: "2026-10-04", kickoffMadrid: "15:30" },
   { id: "2026-10-04-saracens-sale", competition: "Premiership", homeTeam: "Saracens", awayTeam: "Sale", date: "2026-10-04", kickoffMadrid: "16:00" },
   { id: "2026-10-04-barca-madrid-ligaf", competition: "Liga F", homeTeam: "Barcelona", awayTeam: "Real Madrid", date: "2026-10-04", kickoffMadrid: "17:00" },
   { id: "2026-10-04-bills-patriots", competition: "NFL", homeTeam: "Buffalo Bills", awayTeam: "New England Patriots", date: "2026-10-04", kickoffMadrid: "19:00" },
-  { id: "2026-10-04-jets-bears", competition: "NFL", homeTeam: "New York Jets", awayTeam: "Chicago Bears", date: "2026-10-04", kickoffMadrid: "19:00" },
+  { id: "2026-10-04-jets-bears", competition: "NFL", homeTeam: "Chicago Bears", awayTeam: "New York Jets", date: "2026-10-04", kickoffMadrid: "19:00" },
   { id: "2026-10-04-murcia-barca", competition: "Liga ACB", homeTeam: "UCAM Murcia", awayTeam: "Barcelona", date: "2026-10-04", kickoffMadrid: "19:00" },
   { id: "2026-10-04-texans-cowboys", competition: "NFL", homeTeam: "Houston Texans", awayTeam: "Dallas Cowboys", date: "2026-10-04", kickoffMadrid: "19:00" },
   { id: "2026-10-04-greece-germany", competition: "UEFA Nations League", homeTeam: "Greece", awayTeam: "Germany", date: "2026-10-04", kickoffMadrid: "20:45" },
@@ -74,7 +77,7 @@ export const FIXTURES: Fixture[] = [
   { id: "2026-10-06-falcons-saints", competition: "NFL", homeTeam: "New Orleans Saints", awayTeam: "Atlanta Falcons", date: "2026-10-06", kickoffMadrid: "02:15" },
   { id: "2026-10-06-croatia-spain", competition: "UEFA Nations League", homeTeam: "Croatia", awayTeam: "Spain", date: "2026-10-06", kickoffMadrid: "20:45" },
   { id: "2026-10-06-england-czechia", competition: "UEFA Nations League", homeTeam: "England", awayTeam: "Czechia", date: "2026-10-06", kickoffMadrid: "20:45" },
-  { id: "2026-10-08-madrid-partizan", competition: "EuroLeague", homeTeam: "Real Madrid", awayTeam: "Partizan", date: "2026-10-08", kickoffMadrid: "18:45" },
+  { id: "2026-10-08-madrid-partizan", competition: "EuroLeague", homeTeam: "Real Madrid", awayTeam: "Partizan", date: "2026-10-08", kickoffMadrid: "20:45" },
   { id: "2026-10-09-barca-zalgiris", competition: "EuroLeague", homeTeam: "Barcelona", awayTeam: "Žalgiris", date: "2026-10-09", kickoffMadrid: "20:30" },
   { id: "2026-10-09-dortmund-werder", competition: "Bundesliga", homeTeam: "Dortmund", awayTeam: "Werder Bremen", date: "2026-10-09", kickoffMadrid: "20:30" },
   { id: "2026-10-09-glasgow-connacht", competition: "United Rugby Championship", homeTeam: "Glasgow", awayTeam: "Connacht", date: "2026-10-09", kickoffMadrid: "20:45" },
