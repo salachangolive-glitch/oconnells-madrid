@@ -3,12 +3,12 @@ import { InteriorPhoto } from "@/components/InteriorPhoto";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
 import { buildMetadata } from "@/lib/seo";
-import { HOURS, SITE_NAME } from "@/lib/venue";
+import { ADDRESS, HOURS, MAPS_URL, SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
   title: "Premier League en pantallas en Madrid cerca de Sol",
   description:
-    "Premier League en O'Connell St cerca de Sol cuando la emisión está confirmada. Horario, cómo llegar y Agenda.",
+    "Premier League en O'Connell St cerca de Sol cuando la emisión está confirmada. Horario, entrada sin reserva y Agenda.",
   path: "/es/premier-league",
   locale: "es",
 });
@@ -19,7 +19,7 @@ export default function EsPremierLeaguePage() {
       <PageHero
         eyebrow="Premier League · Madrid"
         title={`Premier League en ${SITE_NAME}`}
-        lead="La Premier League se pone en las pantallas cuando la emisión está confirmada. Los horarios de esta semana están en la Agenda."
+        lead="La Premier se pone cuando de verdad la vamos a emitir. Si quieres la hora de esta semana, está en la agenda, no aquí."
       />
       <InteriorPhoto
         src="/images/interior/sports-corridor.webp"
@@ -29,17 +29,11 @@ export default function EsPremierLeaguePage() {
       <Section title="Partidos confirmados de esta semana">
         <p>
           No publicamos un horario aquí si el pub no ha confirmado la emisión.
-          Abre la{" "}
-          <Link href="/es/whats-on" className="text-cream underline">
+          Mira la{" "}
+          <Link href="/es/whats-on" data-event="whats_on" className="text-cream underline">
             Agenda
           </Link>{" "}
-          para ver la hora de Madrid, o pregunta en la barra.
-        </p>
-        <p>
-          El pub está en Calle de Espoz y Mina 7, a un paso de Puerta del Sol.
-          {HOURS.summaryEs}. No se reservan mesas. Atendemos por orden de
-          llegada. Un partido solo entra en la agenda cuando se emite en
-          nuestras pantallas. Esta página no lista horarios de partidos.
+          o pregunta en la barra.
         </p>
         <p>
           También{" "}
@@ -55,13 +49,15 @@ export default function EsPremierLeaguePage() {
       </Section>
       <Section title="Horario y cómo llegar">
         <p>
-          {ADDRESS.full}. {HOURS.summaryEs}. No se reservan mesas.
+          {ADDRESS.full}, a un paso de Puerta del Sol. {HOURS.summaryEs}. No se
+          reservan mesas. Atendemos por orden de llegada.
         </p>
         <p>
           <a
             href={MAPS_URL}
             target="_blank"
             rel="noopener noreferrer"
+            data-event="directions"
             className="text-cream underline"
           >
             Cómo llegar desde Puerta del Sol

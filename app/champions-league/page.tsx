@@ -3,12 +3,12 @@ import { InteriorPhoto } from "@/components/InteriorPhoto";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
 import { buildMetadata } from "@/lib/seo";
-import { HOURS, SITE_NAME } from "@/lib/venue";
+import { ADDRESS, HOURS, MAPS_URL, SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
   title: "Champions League nights in central Madrid",
   description:
-    "Champions League at O'Connell St near Sol when the screening is confirmed. Hours, directions and What's On.",
+    "Champions League at O'Connell St near Sol when the screening is confirmed. Hours, walk-in, and What's On.",
   path: "/champions-league",
 });
 
@@ -18,7 +18,7 @@ export default function ChampionsLeaguePage() {
       <PageHero
         eyebrow="UEFA Champions League"
         title={`Champions League at ${SITE_NAME}`}
-        lead="Champions League goes on the screens when that screening is confirmed. This week's times are on What's On."
+        lead="European nights are busy when a tie is actually on our screens. If your plan hangs on one match, check What's On first."
       />
       <InteriorPhoto
         src="/images/interior/sports-aisle.webp"
@@ -28,31 +28,25 @@ export default function ChampionsLeaguePage() {
       <Section title="Before you come">
         <p>
           Check{" "}
-          <Link href="/whats-on" className="text-cream underline">
+          <Link href="/whats-on" data-event="whats_on" className="text-cream underline">
             What&apos;s On
           </Link>{" "}
           if your night depends on one tie. If it is not listed as confirmed,
-          ask at the bar.
+          ask at the bar. We do not invent kick-offs on this page.
         </p>
         <p>
-          {ADDRESS.full}. {HOURS.summaryEn}. Walk from Puerta del Sol to Calle
-          de Espoz y Mina. No table reservations.{" "}
+          {ADDRESS.full}. {HOURS.summaryEn}. No table reservations — walk in,
+          first come, first served.{" "}
           <a
             href={MAPS_URL}
             target="_blank"
             rel="noopener noreferrer"
+            data-event="directions"
             className="text-cream underline"
           >
-            Directions
+            Directions from Sol
           </a>
           .
-        </p>
-        <p>
-          We are at Calle de Espoz y Mina 7, beside Puerta del Sol.{" "}
-          {HOURS.summaryEn}. No table reservations — walk in, first come, first
-          served. Come for the tie that is actually on our screens, not every
-          European game on television. What&apos;s On is the list; we do not
-          invent kick-offs here.
         </p>
         <p>
           <Link href="/premier-league" className="text-cream underline">

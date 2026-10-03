@@ -3,12 +3,12 @@ import { InteriorPhoto } from "@/components/InteriorPhoto";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
 import { buildMetadata } from "@/lib/seo";
-import { HOURS, SITE_NAME } from "@/lib/venue";
+import { ADDRESS, HOURS, MAPS_URL, SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
   title: "Premier League on screens in Madrid near Sol",
   description:
-    "Premier League at O'Connell St near Sol when the screening is confirmed. Hours, directions and What's On.",
+    "Premier League at O'Connell St near Sol when the screening is confirmed. Hours, walk-in, and What's On.",
   path: "/premier-league",
 });
 
@@ -28,19 +28,13 @@ export default function PremierLeaguePage() {
       <Section title="This week's confirmed games">
         <p>
           We do not list a kick-off here unless the pub is showing it. Open{" "}
-          <Link href="/whats-on" className="text-cream underline">
+          <Link href="/whats-on" data-event="whats_on" className="text-cream underline">
             What&apos;s On
           </Link>{" "}
           for confirmed times in Madrid, or ask at the bar.
         </p>
         <p>
-          The pub is on Calle de Espoz y Mina 7, a short walk from Puerta del
-          Sol. {HOURS.summaryEn}. No table reservations — walk in, first come,
-          first served. A match only goes on What&apos;s On when it is on our
-          screens. This page does not list kick-offs.
-        </p>
-        <p>
-          Also see{" "}
+          Also{" "}
           <Link href="/champions-league" className="text-cream underline">
             Champions League
           </Link>{" "}
@@ -53,13 +47,15 @@ export default function PremierLeaguePage() {
       </Section>
       <Section title="Hours and directions">
         <p>
-          {ADDRESS.full}. {HOURS.summaryEn}. No table reservations.
+          {ADDRESS.full}, a short walk from Puerta del Sol. {HOURS.summaryEn}.
+          No table reservations — walk in, first come, first served.
         </p>
         <p>
           <a
             href={MAPS_URL}
             target="_blank"
             rel="noopener noreferrer"
+            data-event="directions"
             className="text-cream underline"
           >
             Directions from Puerta del Sol

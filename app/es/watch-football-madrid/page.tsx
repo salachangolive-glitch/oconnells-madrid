@@ -37,22 +37,6 @@ export default function EsWatchFootballPage() {
           no des por hecho que se retransmite.
         </p>
         <p>
-          Consulta la Agenda para ver los partidos confirmados y cómo llegar
-          desde Puerta del Sol. También:{" "}
-          <Link href="/es/premier-league" className="text-cream underline">
-            Premier League
-          </Link>
-          ,{" "}
-          <Link href="/es/champions-league" className="text-cream underline">
-            Champions League
-          </Link>{" "}
-          y{" "}
-          <Link href="/es/sports" className="text-cream underline">
-            deportes en directo
-          </Link>
-          .
-        </p>
-        <p>
           {HOURS.summaryEs}. No se reservan mesas. Atendemos por orden de
           llegada. El punto de referencia es Sol: Espoz y Mina 7 está a unos
           minutos andando. Solo damos un partido por confirmado cuando se ve
@@ -63,7 +47,7 @@ export default function EsWatchFootballPage() {
         <p>{ADDRESS.full}. {HOURS.summaryEs}.</p>
         <p>
           Desde Metro Sol, camina hasta Calle de Espoz y Mina. Fachada roja y
-          rótulo dorado. No se reservan mesas: se atiende por orden de llegada.{" "}
+          rótulo dorado. No se reservan mesas. Atendemos por orden de llegada.{" "}
           <a
             href={MAPS_URL}
             target="_blank"
@@ -76,6 +60,18 @@ export default function EsWatchFootballPage() {
           {" · "}
           <Link href="/es/location" className="text-cream underline">
             Ubicación
+          </Link>
+          . También{" "}
+          <Link href="/es/premier-league" className="text-cream underline">
+            Premier League
+          </Link>
+          ,{" "}
+          <Link href="/es/champions-league" className="text-cream underline">
+            Champions League
+          </Link>{" "}
+          y{" "}
+          <Link href="/es/sports" className="text-cream underline">
+            deportes en directo
           </Link>
           .
         </p>

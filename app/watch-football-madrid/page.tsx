@@ -70,27 +70,6 @@ export default function WatchFootballPage() {
           .
         </p>
       </Section>
-      <Section title="Hours and how to get here">
-        <p>{ADDRESS.full}. {HOURS.summaryEn}.</p>
-        <p>
-          From Metro Sol, walk to Calle de Espoz y Mina. The pub has a red
-          facade and gold lettering. No table reservations — first come, first
-          served.{" "}
-          <a
-            href={MAPS_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-cream underline"
-          >
-            Directions
-          </a>
-          {" · "}
-          <Link href="/location" className="text-cream underline">
-            Location
-          </Link>
-          .
-        </p>
-      </Section>
     </PageShell>
   );
 }
