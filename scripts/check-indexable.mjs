@@ -337,6 +337,29 @@ if (!existsSync(join(ROOT, "app/sitemap.ts"))) {
 
 checkSitemapAndRobotsHosts();
 
+// pages.dev must stay noindex at the edge even when this build is indexable.
+function checkPagesDevHeaders(filePath) {
+  if (!existsSync(filePath)) {
+    fail(`Missing ${filePath} (X-Robots-Tag noindex for oconnells-madrid.pages.dev)`);
+    return;
+  }
+  const body = readFileSync(filePath, "utf8");
+  if (!body.includes("https://oconnells-madrid.pages.dev/*")) {
+    fail(`${filePath}: missing host rule for oconnells-madrid.pages.dev`);
+  }
+  if (!/X-Robots-Tag:\s*noindex,\s*nofollow/i.test(body)) {
+    fail(`${filePath}: X-Robots-Tag must be noindex, nofollow`);
+  }
+  if (/^https:\/\/oconnellsmadrid\.es/m.test(body) || /^https:\/\/www\.oconnellsmadrid\.es/m.test(body)) {
+    fail(`${filePath}: must not attach X-Robots-Tag rules to the custom domain`);
+  }
+}
+checkPagesDevHeaders(join(ROOT, "public/_headers"));
+if (existsSync(join(ROOT, "out/index.html"))) {
+  checkPagesDevHeaders(join(ROOT, "out/_headers"));
+}
+
+
 if (errors.length) {
   console.error("check-indexable FAILED:\n");
   for (const e of errors) console.error(" -", e);

@@ -40,6 +40,8 @@ Confirm `out/` exists and contains `index.html`, `robots.txt`, `sitemap.xml`.
 
 Custom domain (not those suffixes) uses that host for SEO URLs, but stays **noindex** until `NEXT_PUBLIC_FORCE_NOINDEX=false`.
 
+The static export is the same file on every host. `public/_headers` (copied to `out/_headers`) sets `X-Robots-Tag: noindex, nofollow` only on `oconnells-madrid.pages.dev` and `*.oconnells-madrid.pages.dev`. That header does **not** apply to `oconnellsmadrid.es` or `www`. Do not remove it when go-live turns indexing on.
+
 ## Connect GitHub
 1. Cloudflare dashboard → Workers & Pages → Create → Pages → Connect to Git.
 2. Select `salachangolive-glitch/oconnells-madrid`.
