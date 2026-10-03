@@ -6,6 +6,7 @@ import {
   formatFixtureDay,
   getTonightFixtures,
   getUpcomingFixtures,
+  isConfirmedFixture,
   madridTodayYmd,
   type Fixture,
 } from "@/lib/fixtures";
@@ -81,9 +82,9 @@ function ComingUpRow({ f, locale }: { f: Fixture; locale: Locale }) {
 }
 
 /**
- * Client-only Today / This week. SSR shows both sections with empty-state copy
- * (never an ellipsis). Madrid calendar day is computed in the browser so static
- * export cannot freeze "Today"/"Hoy" labels.
+ * Today / This week. The static HTML includes the confirmed slate so the page
+ * is not empty before JavaScript. After mount, Madrid's calendar day splits
+ * Today from the rest of the week.
  */
 export function FixtureList({ locale = "en" }: { locale?: Locale }) {
   const isEs = locale === "es";
@@ -108,16 +109,42 @@ export function FixtureList({ locale = "en" }: { locale?: Locale }) {
 
   const emptyToday = EMPTY.today[locale];
   const emptyWeek = EMPTY.week[locale];
-  // Pre-hydrate / SSR: always show Today + This week with empty copy — never "…".
+  // Static HTML must include the slate. The Madrid "today" split runs after
+  // mount; until then show the earliest day as Today and the rest as This week
+  // so a no-JS or pre-hydrate view is never the empty sentence while rows exist.
   if (today === null) {
+    const all = FIXTURES.filter(isConfirmedFixture).sort(
+      (a, b) =>
+        a.date.localeCompare(b.date) ||
+        (a.kickoffMadrid ?? "").localeCompare(b.kickoffMadrid ?? ""),
+    );
+    const firstDay = all[0]?.date;
+    const first = all.filter((f) => f.date === firstDay);
+    const later = all.filter((f) => f.date !== firstDay);
     return (
       <>
         <Section title={isEs ? "Hoy" : "Today"}>
-          <p className="text-cream-muted">{emptyToday}</p>
+          {first.length > 0 ? (
+            <ul className="space-y-6">
+              {first.map((f) => (
+                <FixtureDetail key={f.id} f={f} locale={locale} />
+              ))}
+            </ul>
+          ) : (
+            <p className="text-cream-muted">{emptyToday}</p>
+          )}
           <span className="hidden" data-fixtures={FIXTURES.length} />
         </Section>
         <Section title={isEs ? "Esta semana" : "This week"}>
-          <p className="text-cream-muted">{emptyWeek}</p>
+          {later.length > 0 ? (
+            <ul className="space-y-4">
+              {later.map((f) => (
+                <ComingUpRow key={f.id} f={f} locale={locale} />
+              ))}
+            </ul>
+          ) : (
+            <p className="text-cream-muted">{emptyWeek}</p>
+          )}
         </Section>
       </>
     );
