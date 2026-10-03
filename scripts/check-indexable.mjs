@@ -2,10 +2,16 @@
 /**
  * Indexability check.
  *
- * Preview mode (NEXT_PUBLIC_SITE_URL hostname includes vercel.app or
- * pages.dev, or SITE_PREVIEW=1): noindex + robots Disallow:/ are EXPECTED and OK.
+ * Hold mode (noindex + robots Disallow:/ are EXPECTED and OK):
+ * - NEXT_PUBLIC_SITE_URL hostname includes vercel.app or pages.dev
+ * - SITE_PREVIEW=1
+ * - NEXT_PUBLIC_FORCE_NOINDEX unset or true (custom domain stays noindex until QA)
  *
- * Production / custom domain: fails on noindex or Disallow of content paths.
+ * Go-live mode (NEXT_PUBLIC_FORCE_NOINDEX=false on a non-preview host):
+ * fails on noindex or Disallow of content paths.
+ * 404 / not-found HTML may always be noindex.
+ *
+ * Canonical/sitemap hosts follow NEXT_PUBLIC_SITE_URL in every mode.
  *
  * Usage: node scripts/check-indexable.mjs
  * Prefer running after `next build`.
@@ -21,8 +27,21 @@ function isPreviewHostname(hostnameOrUrl) {
   return s.includes("vercel.app") || s.includes("pages.dev");
 }
 
+function envFalse(name) {
+  const raw = process.env[name];
+  if (raw == null || String(raw).trim() === "") return false;
+  const v = String(raw).trim().toLowerCase();
+  return v === "0" || v === "false" || v === "no";
+}
+
+/** Mirrors lib/venue.ts forceNoindex(): unset holds indexing. */
+function forceNoindex() {
+  return !envFalse("NEXT_PUBLIC_FORCE_NOINDEX");
+}
+
 function resolvePreviewMode() {
   if (process.env.SITE_PREVIEW === "1") return true;
+  if (forceNoindex()) return true;
   const url =
     process.env.NEXT_PUBLIC_SITE_URL ||
     "https://oconnells-madrid.pages.dev";
@@ -34,6 +53,28 @@ function resolvePreviewMode() {
 }
 
 const PREVIEW = resolvePreviewMode();
+
+function expectedOrigin() {
+  const raw = process.env.NEXT_PUBLIC_SITE_URL;
+  if (!raw) return null;
+  try {
+    return new URL(raw).origin;
+  } catch {
+    return null;
+  }
+}
+
+const EXPECTED_ORIGIN = expectedOrigin();
+
+function isNotFoundFile(filePath) {
+  const f = filePath.replace(/\\/g, "/");
+  return (
+    f.endsWith("/404.html") ||
+    f.endsWith("/404/index.html") ||
+    f.includes("/_not-found") ||
+    f.includes("/not-found")
+  );
+}
 
 const MUST_NOT_DISALLOW = [
   "/",
@@ -106,8 +147,64 @@ function walkHtmlFiles(dir, out = []) {
   return out;
 }
 
+function checkCanonicalHost(filePath) {
+  if (!EXPECTED_ORIGIN) return;
+  if (isNotFoundFile(filePath)) return;
+  const base = filePath.replace(/\\/g, "/");
+  // Spot-check key pages only (full walk would be noisy on thin pages).
+  const interesting =
+    base.endsWith("/out/index.html") ||
+    base.endsWith("/out/es.html") ||
+    base.endsWith("/out/es/index.html") ||
+    base.endsWith("/out/whats-on.html") ||
+    base.endsWith("/out/whats-on/index.html") ||
+    base.endsWith("/out/es/agenda.html") ||
+    base.endsWith("/out/es/agenda/index.html");
+  if (!interesting) return;
+  const html = readFileSync(filePath, "utf8");
+  const links = html.match(/<link[^>]+rel=["']canonical["'][^>]*>/gi) || [];
+  const hrefs = html.match(/<link[^>]+(?:hreflang|hrefLang)=[^>]*>/gi) || [];
+  const ogs = html.match(/<meta[^>]+property=["']og:url["'][^>]*>/gi) || [];
+  const blobs = [...links, ...hrefs, ...ogs];
+  if (!links.length) {
+    fail(`${filePath}: missing canonical link`);
+    return;
+  }
+  for (const tag of blobs) {
+    if (tag.includes("pages.dev") && !EXPECTED_ORIGIN.includes("pages.dev")) {
+      fail(`${filePath}: SEO URL still points at pages.dev (${tag.slice(0, 180)})`);
+    }
+    if (!tag.includes(EXPECTED_ORIGIN)) {
+      fail(`${filePath}: SEO URL is not ${EXPECTED_ORIGIN} (${tag.slice(0, 180)})`);
+    }
+  }
+}
+
+function checkSitemapAndRobotsHosts() {
+  if (!EXPECTED_ORIGIN) return;
+  const files = [
+    join(ROOT, "out/sitemap.xml"),
+    join(ROOT, "out/robots.txt"),
+    join(ROOT, "public/robots.txt"),
+  ];
+  for (const f of files) {
+    if (!existsSync(f)) continue;
+    const body = readFileSync(f, "utf8");
+    if (body.includes("pages.dev") && !EXPECTED_ORIGIN.includes("pages.dev")) {
+      fail(`${f}: still references pages.dev while NEXT_PUBLIC_SITE_URL is ${EXPECTED_ORIGIN}`);
+    }
+    if (f.endsWith("sitemap.xml") && !body.includes(EXPECTED_ORIGIN)) {
+      fail(`${f}: sitemap URLs are not under ${EXPECTED_ORIGIN}`);
+    }
+    if (f.endsWith("robots.txt") && body.includes("Sitemap:") && !body.includes(EXPECTED_ORIGIN)) {
+      fail(`${f}: Sitemap line is not under ${EXPECTED_ORIGIN}`);
+    }
+  }
+}
+
 function checkHtmlNoindex(filePath) {
-  if (PREVIEW) return; // noindex expected on preview
+  if (isNotFoundFile(filePath)) return; // 404 may always be noindex
+  if (PREVIEW) return; // noindex expected while held / preview
   const html = readFileSync(filePath, "utf8");
   const patterns = [
     /<meta[^>]+name=["']robots["'][^>]*content=["']([^"']+)["'][^>]*>/gi,
@@ -149,7 +246,10 @@ if (existsSync(robotsTs)) {
     // Only fail hard-coded content-path Disallows when not in preview.
     // Preview mode intentionally Disallow: "/" when isPreviewHost().
     const hasPreviewGate =
-      /isPreviewHost/.test(src) || /vercel\.app/.test(src);
+      /isPreviewHost/.test(src) ||
+      /shouldNoindex/.test(src) ||
+      /forceNoindex/.test(src) ||
+      /vercel\.app/.test(src);
     if (!hasPreviewGate) {
       const re = /disallow\s*:\s*(["'`])([^"'`]+)\1/gi;
       let m;
@@ -197,8 +297,9 @@ for (const f of walkFiles(join(ROOT, ".next"), (n) =>
 // 3) Built HTML noindex
 for (const root of [join(ROOT, "out"), join(ROOT, ".next/server/app")]) {
   for (const file of walkHtmlFiles(root)) {
-    if (file.includes("/_not-found")) continue;
+    if (isNotFoundFile(file)) continue;
     checkHtmlNoindex(file);
+    checkCanonicalHost(file);
   }
 }
 
@@ -234,6 +335,8 @@ if (!existsSync(join(ROOT, "app/sitemap.ts"))) {
   fail("Missing app/sitemap.ts");
 }
 
+checkSitemapAndRobotsHosts();
+
 if (errors.length) {
   console.error("check-indexable FAILED:\n");
   for (const e of errors) console.error(" -", e);
@@ -243,8 +346,8 @@ if (errors.length) {
 console.log("check-indexable OK");
 console.log(
   PREVIEW
-    ? " - PREVIEW mode (vercel.app / pages.dev): noindex + Disallow:/ expected/OK"
-    : " - PRODUCTION mode: indexing required",
+    ? " - HOLD/PREVIEW mode: noindex + Disallow:/ expected/OK (set NEXT_PUBLIC_FORCE_NOINDEX=false to require indexing)"
+    : " - GO-LIVE mode: indexing required (404.html may still be noindex)",
 );
 console.log(" - robots source present");
 console.log(

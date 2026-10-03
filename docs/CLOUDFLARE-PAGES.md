@@ -21,7 +21,8 @@ Workers / OpenNext (documented earlier in `CLOUDFLARE-HOSTING.md`) is **abandone
 | Name | Scope | Notes |
 |------|--------|--------|
 | `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` | Production + Preview | Free Web3Forms access key. Bound to internal inbox **only** in the Web3Forms dashboard — never publish Gmail on the site. |
-| `NEXT_PUBLIC_SITE_URL` | Production | Full canonical URL once custom domain is live (e.g. `https://www.example.com`). Until then, leave unset or set to the `*.pages.dev` preview URL (stays **noindex**). |
+| `NEXT_PUBLIC_SITE_URL` | Production | Canonical origin. Custom domain: `https://oconnellsmadrid.es` (no trailing slash). Updates canonical, hreflang, sitemap and OG. Does **not** by itself remove noindex. |
+| `NEXT_PUBLIC_FORCE_NOINDEX` | Production | Hold indexing until QA. Unset or `true` = `noindex` + `Disallow: /`. After QA PASS set `false` and redeploy. `404.html` stays noindex either way. |
 
 Do **not** set server-only `CONTACT_*` vars — the Node `/api/contact` route was removed.
 
@@ -37,7 +38,7 @@ Confirm `out/` exists and contains `index.html`, `robots.txt`, `sitemap.xml`.
 - HTML meta `robots: noindex,nofollow`
 - `robots.txt` Disallow `/`
 
-Custom domain (not those suffixes) → indexable.
+Custom domain (not those suffixes) uses that host for SEO URLs, but stays **noindex** until `NEXT_PUBLIC_FORCE_NOINDEX=false`.
 
 ## Connect GitHub
 1. Cloudflare dashboard → Workers & Pages → Create → Pages → Connect to Git.

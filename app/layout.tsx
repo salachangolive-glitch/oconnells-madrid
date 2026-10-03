@@ -4,7 +4,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { barOrPubJsonLd } from "@/lib/jsonld";
 import {
   getSiteUrl,
-  isPreviewHost,
+  shouldNoindex,
   SITE_NAME,
   SITE_TAGLINE,
 } from "@/lib/venue";
@@ -27,7 +27,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const preview = isPreviewHost();
+const preview = shouldNoindex();
 
 export const metadata: Metadata = {
   metadataBase: new URL(getSiteUrl()),

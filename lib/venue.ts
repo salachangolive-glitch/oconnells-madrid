@@ -68,6 +68,31 @@ export function isPreviewHost(url = getSiteUrl()): boolean {
   }
 }
 
+/**
+ * Hold indexing on the custom domain until explicit go-live QA.
+ *
+ * NEXT_PUBLIC_SITE_URL only sets canonical/hreflang/sitemap/OG hosts.
+ * It does not by itself allow indexing.
+ *
+ * - unset, "true", "1", "yes" → noindex (safe while QA is still open)
+ * - "false" / "0" / "no" → allow index,follow on a non-preview host
+ *
+ * Go-live after QA: set NEXT_PUBLIC_FORCE_NOINDEX=false and redeploy.
+ * Deleting the variable does not go live; unset stays held.
+ */
+export function forceNoindex(): boolean {
+  const raw = process.env.NEXT_PUBLIC_FORCE_NOINDEX;
+  if (raw == null || raw.trim() === "") return true;
+  const v = raw.trim().toLowerCase();
+  if (v === "0" || v === "false" || v === "no") return false;
+  return true;
+}
+
+/** Preview hosts always noindex. Custom domain noindex until FORCE_NOINDEX is explicitly false. */
+export function shouldNoindex(url = getSiteUrl()): boolean {
+  return isPreviewHost(url) || forceNoindex();
+}
+
 /** Domain TBD — override with NEXT_PUBLIC_SITE_URL after custom domain. */
 export function getSiteUrl(): string {
   const fromEnv = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "");

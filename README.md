@@ -41,15 +41,17 @@ When `NEXT_PUBLIC_SITE_URL` hostname **includes `vercel.app` or `pages.dev`** (p
 
 When you point a **custom domain** and set `NEXT_PUBLIC_SITE_URL` to it (no preview suffix):
 
-- meta robots → **`index, follow`**
-- `/robots.txt` → **Allow** content paths
-- `check:indexable` **requires** indexability (fails on noindex / Disallow of content)
+- canonical / hreflang / sitemap / `og:url` use that origin (not `pages.dev`)
+- indexing stays **off** until go-live: `NEXT_PUBLIC_FORCE_NOINDEX` unset or `true` → meta `noindex,nofollow` and `robots.txt` `Disallow: /`
+- `404.html` may always be `noindex`
+- go-live after QA PASS: set `NEXT_PUBLIC_FORCE_NOINDEX=false` and redeploy (deleting the variable does **not** enable indexing)
 
 Override for local checks:
 
 ```bash
-SITE_PREVIEW=1 npm run check:indexable   # force preview expectations
-NEXT_PUBLIC_SITE_URL=https://www.example.com npm run check:indexable  # prod expectations
+NEXT_PUBLIC_SITE_URL=https://oconnellsmadrid.es npm run build
+# still noindex (hold). To require indexability:
+NEXT_PUBLIC_FORCE_NOINDEX=false NEXT_PUBLIC_SITE_URL=https://oconnellsmadrid.es npm run check:indexable
 ```
 
 ## Ops: fixtures
