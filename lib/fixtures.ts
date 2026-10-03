@@ -37,15 +37,34 @@ export type Fixture = {
 };
 
 /**
- * Confirmed screenings only.
- * Reviewed 2026-10-03 (window 3–10 Oct, Europe/Madrid).
- * Kickoffs for Nations League, LaLiga J8 and Premier League 10 Oct are real,
- * and the pub is open for the evening ones. No public O'Connell source
- * confirms those matches are on the screens. A note that GBP posted them
- * on 2026-10-02 could not be checked against a live post. List stays empty.
- * Do not invent screenings.
+ * Confirmed screenings.
+ * Owner authorized publication of the reviewed 3–10 Oct 2026 agenda
+ * on 2026-10-03 (via DG). Gate for this list: real event, verified
+ * Madrid kickoff, pub open at kickoff. Marquee only (no NL C/D,
+ * no closed-door kickoffs, no minor league games).
+ * Times: UEFA / BBC / England Football / LaLiga / clubs / Premier League
+ * / NFL, Europe/Madrid. Do not add rows without a verified clock.
  */
-export const FIXTURES: Fixture[] = [];
+export const FIXTURES: Fixture[] = [
+  { id: "2026-10-03-croatia-england", competition: "UEFA Nations League", homeTeam: "Croatia", awayTeam: "England", date: "2026-10-03", kickoffMadrid: "18:00" },
+  { id: "2026-10-03-spain-czechia", competition: "UEFA Nations League", homeTeam: "Spain", awayTeam: "Czechia", date: "2026-10-03", kickoffMadrid: "20:45" },
+  { id: "2026-10-04-colts-commanders", competition: "NFL", homeTeam: "Indianapolis Colts", awayTeam: "Washington Commanders", date: "2026-10-04", kickoffMadrid: "15:30" },
+  { id: "2026-10-04-jets-bears", competition: "NFL", homeTeam: "New York Jets", awayTeam: "Chicago Bears", date: "2026-10-04", kickoffMadrid: "19:00" },
+  { id: "2026-10-04-portugal-norway", competition: "UEFA Nations League", homeTeam: "Portugal", awayTeam: "Norway", date: "2026-10-04", kickoffMadrid: "20:45" },
+  { id: "2026-10-04-ireland-israel", competition: "UEFA Nations League", homeTeam: "Republic of Ireland", awayTeam: "Israel", date: "2026-10-04", kickoffMadrid: "20:45" },
+  { id: "2026-10-04-greece-germany", competition: "UEFA Nations League", homeTeam: "Greece", awayTeam: "Germany", date: "2026-10-04", kickoffMadrid: "20:45" },
+  { id: "2026-10-04-netherlands-serbia", competition: "UEFA Nations League", homeTeam: "Netherlands", awayTeam: "Serbia", date: "2026-10-04", kickoffMadrid: "20:45" },
+  { id: "2026-10-04-wales-denmark", competition: "UEFA Nations League", homeTeam: "Wales", awayTeam: "Denmark", date: "2026-10-04", kickoffMadrid: "20:45" },
+  { id: "2026-10-05-france-belgium", competition: "UEFA Nations League", homeTeam: "France", awayTeam: "Belgium", date: "2026-10-05", kickoffMadrid: "20:45" },
+  { id: "2026-10-05-italy-turkey", competition: "UEFA Nations League", homeTeam: "Italy", awayTeam: "Turkey", date: "2026-10-05", kickoffMadrid: "20:45" },
+  { id: "2026-10-06-croatia-spain", competition: "UEFA Nations League", homeTeam: "Croatia", awayTeam: "Spain", date: "2026-10-06", kickoffMadrid: "20:45" },
+  { id: "2026-10-06-england-czechia", competition: "UEFA Nations League", homeTeam: "England", awayTeam: "Czechia", date: "2026-10-06", kickoffMadrid: "20:45" },
+  { id: "2026-10-10-chelsea-bournemouth", competition: "Premier League", homeTeam: "Chelsea", awayTeam: "Bournemouth", date: "2026-10-10", kickoffMadrid: "16:00" },
+  { id: "2026-10-10-alaves-atletico", competition: "LaLiga", homeTeam: "Alavés", awayTeam: "Atlético Madrid", date: "2026-10-10", kickoffMadrid: "16:15" },
+  { id: "2026-10-10-barcelona-getafe", competition: "LaLiga", homeTeam: "Barcelona", awayTeam: "Getafe", date: "2026-10-10", kickoffMadrid: "18:30" },
+  { id: "2026-10-10-united-tottenham", competition: "Premier League", homeTeam: "Manchester United", awayTeam: "Tottenham", date: "2026-10-10", kickoffMadrid: "18:30" },
+  { id: "2026-10-10-madrid-villarreal", competition: "LaLiga", homeTeam: "Real Madrid", awayTeam: "Villarreal", date: "2026-10-10", kickoffMadrid: "21:00" },
+];
 
 export const RECURRING = {
   thursdayShots: {
