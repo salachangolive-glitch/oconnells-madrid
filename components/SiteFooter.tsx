@@ -112,14 +112,6 @@ export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
                 {isEs ? "Cómo llegar" : "Directions"}
               </a>
             </li>
-            <li>
-              <Link
-                href={isEs ? "/es/privacy" : "/privacy"}
-                className="hover:text-gold"
-              >
-                {isEs ? "Privacidad" : "Privacy"}
-              </Link>
-            </li>
           </ul>
         </div>
         <div>
