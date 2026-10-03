@@ -47,13 +47,15 @@ export type Fixture = {
  * Delta 2026-10-03: reconfirmed 5–6 Oct NL/NFL kickoffs; fixed Commanders/Colts
  * and Bears/Jets home sides (NFL.com); Madrid–Partizan tip 20:45 Madrid
  * (18:45Z / Movistar Arena), not 18:45 local.
+ * Delta 2026-10-03 (2d review): Glasgow–Ulster kickoff 18:30 Madrid (5:30pm BST),
+ * not 20:45 — club moved from 7:45pm on 1 Sep 2026.
  */
 export const FIXTURES: Fixture[] = [
   { id: "2026-10-03-bristol-northampton", competition: "Premiership", homeTeam: "Bristol", awayTeam: "Northampton", date: "2026-10-03", kickoffMadrid: "16:05" },
   { id: "2026-10-03-croatia-england", competition: "UEFA Nations League", homeTeam: "Croatia", awayTeam: "England", date: "2026-10-03", kickoffMadrid: "18:00" },
   { id: "2026-10-03-gloucester-harlequins", competition: "Premiership", homeTeam: "Gloucester", awayTeam: "Harlequins", date: "2026-10-03", kickoffMadrid: "18:30" },
   { id: "2026-10-03-sharks-leinster", competition: "United Rugby Championship", homeTeam: "Sharks", awayTeam: "Leinster", date: "2026-10-03", kickoffMadrid: "18:30" },
-  { id: "2026-10-03-glasgow-ulster", competition: "United Rugby Championship", homeTeam: "Glasgow", awayTeam: "Ulster", date: "2026-10-03", kickoffMadrid: "20:45" },
+  { id: "2026-10-03-glasgow-ulster", competition: "United Rugby Championship", homeTeam: "Glasgow", awayTeam: "Ulster", date: "2026-10-03", kickoffMadrid: "18:30" },
   { id: "2026-10-03-munster-bulls", competition: "United Rugby Championship", homeTeam: "Munster", awayTeam: "Bulls", date: "2026-10-03", kickoffMadrid: "20:45" },
   { id: "2026-10-03-spain-czechia", competition: "UEFA Nations League", homeTeam: "Spain", awayTeam: "Czechia", date: "2026-10-03", kickoffMadrid: "20:45" },
   { id: "2026-10-04-raptors-heat", competition: "NBA", homeTeam: "Toronto Raptors", awayTeam: "Miami Heat", date: "2026-10-04", kickoffMadrid: "01:00" },
