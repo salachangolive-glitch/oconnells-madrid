@@ -19,7 +19,7 @@ export default function SportsPage() {
       <PageHero
         eyebrow="Screens · pints · Sol"
         title={`Live sports at ${SITE_NAME}`}
-        lead="We show major live sport throughout the week, including football, NFL, NBA, rugby, Formula 1 and tennis when confirmed."
+        lead="Come for the pint and stay for whatever is actually on. Football when the night calls for it, and NFL, NBA, rugby, F1 or tennis when we’ve confirmed it — a short walk from Sol. We don’t promise every game. Check What’s On."
       />
       <InteriorPhoto
         src="/images/interior/sports-aisle.webp"
@@ -29,9 +29,10 @@ export default function SportsPage() {
       <FixtureStrip locale="en" />
       <Section title="What we put on">
         <p>
-          We show major live sport throughout the week, including football,
-          NFL, NBA, rugby, Formula 1 and tennis when confirmed. A match appears
-          here only after the pub has confirmed the screening.
+          You come for a pint and end up watching whatever is actually on.
+          Football most weekends and on European nights, and other sport when
+          we’ve confirmed a big game for the bar. We don’t fill the diary with
+          matches we aren’t showing.
         </p>
         <p>
           For the diary, see{" "}
@@ -60,8 +61,9 @@ export default function SportsPage() {
       />
       <Section title="Beyond football">
         <p>
-          NFL, NBA, rugby, Formula 1 and tennis go on the screens when that
-          screening is confirmed. Check{" "}
+          NFL and NBA when those games are on our screens; rugby, F1 and
+          tennis on the nights we’ve confirmed. If you need one specific
+          match, ask at the bar or check{" "}
           <Link href="/whats-on" className="text-gold underline">
             What&apos;s On
           </Link>

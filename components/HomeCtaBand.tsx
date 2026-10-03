@@ -20,7 +20,7 @@ export function HomeCtaBand({ locale = "en" }: { locale?: Locale }) {
       className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 px-4 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-cream-muted"
       aria-label={isEs ? "Acciones" : "Actions"}
     >
-      <Link href={whatsOnHref} className="transition hover:text-gold">
+      <Link href={whatsOnHref} data-event="whats_on" className="transition hover:text-gold">
         {whatsOnLabel}
       </Link>
       <span className="text-gold/40" aria-hidden>
@@ -30,6 +30,7 @@ export function HomeCtaBand({ locale = "en" }: { locale?: Locale }) {
         href={MAPS_URL}
         target="_blank"
         rel="noopener noreferrer"
+        data-event="directions"
         className="transition hover:text-gold"
       >
         {dirLabel}
@@ -37,7 +38,7 @@ export function HomeCtaBand({ locale = "en" }: { locale?: Locale }) {
       <span className="text-gold/40" aria-hidden>
         |
       </span>
-      <Link href={contactHref} className="transition hover:text-gold">
+      <Link href={contactHref} data-event="contact" className="transition hover:text-gold">
         {contactLabel}
       </Link>
     </nav>

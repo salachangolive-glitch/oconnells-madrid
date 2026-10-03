@@ -2,10 +2,12 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { trackEvent } from "@/components/TrackClicks";
 import {
   buildContactSubject,
   CONTACT_REASONS,
 } from "@/lib/contact";
+import { PUBLIC_EMAIL } from "@/lib/venue";
 
 type Locale = "en" | "es";
 
@@ -51,7 +53,7 @@ const WEB3FORMS_URL = "https://api.web3forms.com/submit";
 export function ContactForm({ locale = "en" }: { locale?: Locale }) {
   const t = copy[locale];
   const [status, setStatus] = useState<
-    "idle" | "sending" | "ok" | "fail" | "unavailable"
+    "idle" | "sending" | "ok" | "fail" | "invalid" | "unavailable"
   >("idle");
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -71,14 +73,15 @@ export function ContactForm({ locale = "en" }: { locale?: Locale }) {
       return;
     }
 
+    const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     if (
       !name ||
-      !email ||
+      !emailOk ||
       !reason ||
       message.length < 10 ||
       !CONTACT_REASONS.some((r) => r.value === reason)
     ) {
-      setStatus("fail");
+      setStatus("invalid");
       return;
     }
 
@@ -100,6 +103,7 @@ export function ContactForm({ locale = "en" }: { locale?: Locale }) {
       access_key: accessKey,
       subject,
       from_name: "O'Connell's Madrid",
+      replyto: PUBLIC_EMAIL,
       name,
       email,
       message:
@@ -124,6 +128,7 @@ export function ContactForm({ locale = "en" }: { locale?: Locale }) {
         success?: boolean;
       };
       if (res.ok && data.success !== false) {
+        trackEvent("form_submit");
         setStatus("ok");
         form.reset();
         return;
@@ -210,9 +215,12 @@ export function ContactForm({ locale = "en" }: { locale?: Locale }) {
 
       <p className="text-xs leading-relaxed text-cream/55">
         {t.privacy}{" "}
-        <Link href={t.privacyHref} className="text-gold underline">
-          {t.privacyLink}
-        </Link>
+        <a
+          href={locale === "es" ? "/es/privacy" : "/privacy"}
+          className="text-cream underline"
+        >
+          {locale === "es" ? "Privacidad" : "Privacy"}
+        </a>
         .
       </p>
 
@@ -225,8 +233,13 @@ export function ContactForm({ locale = "en" }: { locale?: Locale }) {
       </button>
 
       {status === "ok" ? (
-        <p className="text-sm text-gold" role="status">
+        <p className="text-sm text-gold" role="status" data-event="form_submit">
           {t.ok}
+        </p>
+      ) : null}
+      {status === "invalid" ? (
+        <p className="text-sm text-cream-muted" role="alert">
+          {t.required}
         </p>
       ) : null}
       {status === "fail" ? (

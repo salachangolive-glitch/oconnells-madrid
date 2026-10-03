@@ -3,6 +3,7 @@ import { FixtureList } from "@/components/FixtureList";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
 import { buildMetadata } from "@/lib/seo";
+import { RECURRING } from "@/lib/fixtures";
 import { SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
@@ -34,7 +35,7 @@ export default function WhatsOnPage() {
 
       <Section title="Thursday €1 shots">
         <p>
-          Every Thursday: €1 shots at the pub. Ask at the bar when you arrive.{" "}
+          {RECURRING.thursdayShots.en}{" "}
           <Link href="/thursday-1-euro-shots" className="text-gold underline">
             Thursday €1 shots
           </Link>

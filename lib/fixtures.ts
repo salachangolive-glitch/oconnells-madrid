@@ -49,8 +49,8 @@ export const FIXTURES: Fixture[] = [];
 
 export const RECURRING = {
   thursdayShots: {
-    en: "Every Thursday: €1 shots at the pub. Ask at the bar when you arrive.",
-    es: "Todos los jueves: chupitos a 1 € en el pub. Pregunta en la barra para más información.",
+    en: "Thursday is the night for €1 shots at the pub. Ask at the bar when you arrive — if anything is different that night, they'll tell you.",
+    es: "El jueves es la noche de los chupitos a 1 €. Pregunta en la barra al llegar; si esa noche cambia algo, te lo dicen allí.",
   },
   liveSports: {
     en: "O'Connell St is an Irish pub by Puerta del Sol — Espoz y Mina 7. We put major live sport on our screens when it's confirmed: football, NFL, NBA, rugby, Formula 1, tennis and more. See Today and This week on this page, or ask at the bar if you're looking for a specific game.",

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist_Mono, Libre_Baskerville, Source_Sans_3 } from "next/font/google";
 import { JsonLd } from "@/components/JsonLd";
+import { TrackClicks } from "@/components/TrackClicks";
 import { barOrPubJsonLd } from "@/lib/jsonld";
 import {
   getSiteUrl,
@@ -53,6 +54,7 @@ export default function RootLayout({
     >
       <body className="flex min-h-full flex-col text-cream">
         <JsonLd data={barOrPubJsonLd()} />
+        <TrackClicks />
         {children}
       </body>
     </html>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { RECURRING } from "@/lib/fixtures";
 
 type Locale = "en" | "es";
 
@@ -15,9 +16,7 @@ export function ThursdayFeature({ locale = "en" }: { locale?: Locale }) {
         {isEs ? "Jueves · chupitos a 1 €" : "Thursday · €1 shots"}
       </h2>
       <p className="mt-3 max-w-lg text-cream-muted">
-        {isEs
-          ? "Todos los jueves: chupitos a 1 € en el pub. Pregunta en la barra para más información."
-          : "Every Thursday: €1 shots at the pub. Ask at the bar when you arrive."}
+        {isEs ? RECURRING.thursdayShots.es : RECURRING.thursdayShots.en}
       </p>
       <p className="mt-5">
         <Link href={href} className="text-sm text-gold hover:text-cream">

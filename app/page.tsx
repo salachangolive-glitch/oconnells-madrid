@@ -135,7 +135,7 @@ export default function HomePage() {
             <dt className="font-semibold text-cream">Do you show live sports?</dt>
             <dd className="mt-1 text-cream/80">
               Yes. Confirmed matches and events go on{" "}
-              <Link href="/whats-on" className="text-gold underline">
+              <Link href="/whats-on" data-event="whats_on" className="text-gold underline">
                 What&apos;s On
               </Link>
               ; ask at the bar for tonight&apos;s lineup.
@@ -158,6 +158,7 @@ export default function HomePage() {
                 href={MAPS_URL}
                 target="_blank"
                 rel="noopener noreferrer"
+                data-event="directions"
                 className="text-gold underline"
               >
                 Google Maps
@@ -176,6 +177,7 @@ export default function HomePage() {
             href={MAPS_URL}
             target="_blank"
             rel="noopener noreferrer"
+            data-event="directions"
             className="text-gold underline"
           >
             Google Maps
@@ -193,7 +195,7 @@ export default function HomePage() {
       <Section title="Contact">
         <p>
           Questions about a match night or a group?{" "}
-          <Link href="/contact" className="text-gold underline">
+          <Link href="/contact" data-event="contact" className="text-gold underline">
             Write to us via the form
           </Link>
           .

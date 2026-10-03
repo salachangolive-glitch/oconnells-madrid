@@ -27,7 +27,11 @@ export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
             {isEs ? HOURS.summaryEs : HOURS.summaryEn}
           </p>
           <p className="mt-3">
-            <a href={PUBLIC_EMAIL_MAILTO} className="text-cream hover:text-gold">
+            <a
+              href={PUBLIC_EMAIL_MAILTO}
+              data-event="email_click"
+              className="text-cream hover:text-gold"
+            >
               {PUBLIC_EMAIL}
             </a>
           </p>
@@ -48,6 +52,7 @@ export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
             <li>
               <Link
                 href={isEs ? "/es/whats-on" : "/whats-on"}
+                data-event="whats_on"
                 className="hover:text-gold"
               >
                 {isEs ? "Agenda" : "What's On"}
@@ -82,6 +87,7 @@ export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
             <li>
               <Link
                 href={isEs ? "/es/contact" : "/contact"}
+                data-event="contact"
                 className="hover:text-gold"
               >
                 {isEs ? "Contacto" : "Contact"}
@@ -100,10 +106,19 @@ export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
                 href={MAPS_URL}
                 target="_blank"
                 rel="noopener noreferrer"
+                data-event="directions"
                 className="hover:text-gold"
               >
                 {isEs ? "Cómo llegar" : "Directions"}
               </a>
+            </li>
+            <li>
+              <Link
+                href={isEs ? "/es/privacy" : "/privacy"}
+                className="hover:text-gold"
+              >
+                {isEs ? "Privacidad" : "Privacy"}
+              </Link>
             </li>
           </ul>
         </div>

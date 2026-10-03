@@ -3,7 +3,7 @@ import { InteriorPhoto } from "@/components/InteriorPhoto";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
 import { buildMetadata } from "@/lib/seo";
-import { ADDRESS, HOURS, MAPS_URL, SITE_NAME } from "@/lib/venue";
+import { HOURS, SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
   title: "Premier League on screens in Madrid near Sol",
@@ -34,7 +34,13 @@ export default function PremierLeaguePage() {
           for confirmed times in Madrid, or ask at the bar.
         </p>
         <p>
-          Also{" "}
+          The pub is on Calle de Espoz y Mina 7, a short walk from Puerta del
+          Sol. {HOURS.summaryEn}. No table reservations — walk in, first come,
+          first served. A match only goes on What&apos;s On when it is on our
+          screens. This page does not list kick-offs.
+        </p>
+        <p>
+          Also see{" "}
           <Link href="/champions-league" className="text-cream underline">
             Champions League
           </Link>{" "}

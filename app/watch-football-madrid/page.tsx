@@ -32,8 +32,27 @@ export default function WatchFootballPage() {
           <Link href="/whats-on" className="text-cream underline">
             What&apos;s On
           </Link>{" "}
-          for the time in Madrid. If it is not listed there, ask at the bar —
-          do not assume a fixture is on.
+          for confirmed matches, or ask at the bar if one game matters most.
+        </p>
+        <p>
+          {HOURS.summaryEn}. No table reservations — walk in, first come, first
+          served. Sol is the landmark: Espoz y Mina 7 is a few minutes on foot.
+          We only call a match confirmed when it is on at the pub.
+        </p>
+      </Section>
+      <Section title="Getting here">
+        <p>
+          Aim for Puerta del Sol, then walk to Calle de Espoz y Mina.{" "}
+          <a
+            href={MAPS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-event="directions"
+            className="text-cream underline"
+          >
+            Open directions
+          </a>
+          .
         </p>
         <p>
           Pages for{" "}

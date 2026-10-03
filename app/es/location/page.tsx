@@ -37,7 +37,11 @@ export default function EsLocationPage() {
       <Section title="Dirección y horarios">
         <p>{ADDRESS.full}</p>
         <p>
-          <a href={PUBLIC_EMAIL_MAILTO} className="text-cream underline">
+          <a
+            href={PUBLIC_EMAIL_MAILTO}
+            data-event="email_click"
+            className="text-cream underline"
+          >
             {PUBLIC_EMAIL}
           </a>
           {" · "}
@@ -55,6 +59,7 @@ export default function EsLocationPage() {
             href={MAPS_URL}
             target="_blank"
             rel="noopener noreferrer"
+            data-event="directions"
             className="inline-flex rounded-md bg-pub-green px-4 py-2 font-semibold text-cream hover:bg-pub-green-light"
           >
             Abrir en Google Maps

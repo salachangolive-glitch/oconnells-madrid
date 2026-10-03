@@ -19,13 +19,15 @@ export default function EsErasmusPage() {
       <PageHero
         eyebrow="Erasmus · Internacionales"
         title={`Tu noche en ${SITE_NAME}`}
-        lead="O'Connell St está a pocos pasos de Puerta del Sol y es una opción sencilla para estudiantes y público internacional que buscan un pub en el centro de Madrid."
+        lead="Si estás de Erasmus en Madrid, O'Connell St queda a un paso de Sol. Se entra, se pide en inglés si quieres, y si hay partido confirmado se ve en las pantallas."
       />
       <ThursdayFeature locale="es" />
-      <Section title="El pub">
+      <Section title="Cómo es la noche">
         <p>
-          Los jueves hay chupitos a 1 €, y puedes consultar en la Agenda los
-          deportes confirmados de la semana.
+          Queda céntrico, así que todo el mundo encuentra la puerta. En la
+          barra se habla inglés. Las pantallas se encienden cuando el partido
+          está confirmado, no porque sí. Y los jueves los chupitos a 1 € dan
+          un plan — pregunta al llegar, por si esa noche hay algún matiz.
         </p>
         <p>
           <Link href="/es/sports" className="text-gold underline">

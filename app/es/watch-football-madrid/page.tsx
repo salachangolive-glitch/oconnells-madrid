@@ -52,6 +52,12 @@ export default function EsWatchFootballPage() {
           </Link>
           .
         </p>
+        <p>
+          {HOURS.summaryEs}. No se reservan mesas. Atendemos por orden de
+          llegada. El punto de referencia es Sol: Espoz y Mina 7 está a unos
+          minutos andando. Solo damos un partido por confirmado cuando se ve
+          en el pub.
+        </p>
       </Section>
       <Section title="Horario y cómo llegar">
         <p>{ADDRESS.full}. {HOURS.summaryEs}.</p>
@@ -62,6 +68,7 @@ export default function EsWatchFootballPage() {
             href={MAPS_URL}
             target="_blank"
             rel="noopener noreferrer"
+            data-event="directions"
             className="text-cream underline"
           >
             Cómo llegar

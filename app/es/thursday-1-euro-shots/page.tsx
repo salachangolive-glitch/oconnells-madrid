@@ -7,7 +7,7 @@ import { MAPS_URL, SITE_NAME } from "@/lib/venue";
 export const metadata = buildMetadata({
   title: "Chupitos a 1 € los jueves cerca de Sol",
   description:
-    "Chupitos a 1 € los jueves en O'Connell St Madrid cerca de Sol. Pregunta en la barra para más información.",
+    "Chupitos a 1 € los jueves en O'Connell St Madrid cerca de Sol. Pregunta en la barra: es una oferta de los jueves, no de cada bebida toda la noche.",
   path: "/es/thursday-1-euro-shots",
   locale: "es",
 });
@@ -18,7 +18,7 @@ export default function EsThursdayShotsPage() {
       <PageHero
         eyebrow="Jueves · 1 €"
         title="Chupitos a 1 € los jueves"
-        lead={`En ${SITE_NAME}, los jueves son chupitos a 1 €. Pregunta en la barra para más información.`}
+        lead={`En ${SITE_NAME}, el jueves es la noche de los chupitos a 1 €. Pregunta en la barra al llegar.`}
       />
       <Section title="Por qué el jueves">
         <p>
@@ -27,7 +27,9 @@ export default function EsThursdayShotsPage() {
           en Madrid.
         </p>
         <p>
-          La promoción actual de chupitos a 1 € es los jueves.
+          La oferta de chupitos a 1 € es de los jueves, no de otros días.
+          No es una promesa de que cada bebida y cada hora salgan a 1 € —
+          pregunta en la barra qué se sirve.
         </p>
       </Section>
       <Section title="Información útil">
@@ -52,6 +54,7 @@ export default function EsThursdayShotsPage() {
             href={MAPS_URL}
             target="_blank"
             rel="noopener noreferrer"
+            data-event="directions"
             className="text-gold underline"
           >
             Cómo llegar

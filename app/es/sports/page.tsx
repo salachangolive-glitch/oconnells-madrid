@@ -20,7 +20,7 @@ export default function EsSportsPage() {
       <PageHero
         eyebrow="Pantallas · pintas · Sol"
         title={`Deportes en directo en ${SITE_NAME}`}
-        lead="Retransmitimos grandes eventos deportivos cuando su emisión está confirmada. Consulta la Agenda para ver la programación de esta semana."
+        lead="Vienes a por una pinta y te quedas con lo que de verdad está puesto. Fútbol cuando la noche lo pide, y NFL, NBA, rugby, F1 o tenis cuando lo hemos confirmado — a un paso de Sol. No prometemos todos los partidos. Mira la agenda."
       />
       <InteriorPhoto
         src="/images/interior/sports-aisle.webp"
@@ -30,9 +30,10 @@ export default function EsSportsPage() {
       <FixtureStrip locale="es" />
       <Section title="Qué ponemos">
         <p>
-          Retransmitimos grandes eventos deportivos cuando su emisión está
-          confirmada: fútbol, NFL, NBA, rugby, Fórmula 1 y tenis. Un partido
-          solo aparece aquí cuando el pub ha confirmado la emisión.
+          Vienes a por una pinta y acabas viendo lo que de verdad está
+          puesto. Fútbol casi todos los fines de semana y las noches europeas,
+          y otro deporte cuando hemos confirmado un partido grande para el
+          bar. No rellenamos la agenda con encuentros que no vamos a emitir.
         </p>
         <p>
           Para la agenda, mira{" "}
@@ -61,8 +62,9 @@ export default function EsSportsPage() {
       />
       <Section title="Más allá del fútbol">
         <p>
-          Consulta la Agenda para ver la programación de esta semana, o
-          pregunta en la barra.{" "}
+          NFL y NBA cuando esos partidos están en nuestras pantallas; rugby,
+          F1 y tenis en las noches que hemos confirmado. Si te importa un
+          partido concreto, pregunta en la barra o mira la{" "}
           <Link href="/es/whats-on" className="text-gold underline">
             Agenda
           </Link>

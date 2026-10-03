@@ -52,7 +52,18 @@ export function SiteHeader({
           aria-label="Primary"
         >
           {items.map((item) => (
-            <Link key={item.href} href={item.href} className="hover:text-gold">
+            <Link
+              key={item.href}
+              href={item.href}
+              className="hover:text-gold"
+              data-event={
+                item.href.includes("whats-on")
+                  ? "whats_on"
+                  : item.href.includes("/contact")
+                    ? "contact"
+                    : undefined
+              }
+            >
               {item.label}
             </Link>
           ))}
@@ -74,6 +85,13 @@ export function SiteHeader({
             key={item.href}
             href={item.href}
             className="whitespace-nowrap hover:text-gold"
+            data-event={
+              item.href.includes("whats-on")
+                ? "whats_on"
+                : item.href.includes("/contact")
+                  ? "contact"
+                  : undefined
+            }
           >
             {item.label}
           </Link>

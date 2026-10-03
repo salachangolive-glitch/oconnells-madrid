@@ -3,7 +3,7 @@ import { InteriorPhoto } from "@/components/InteriorPhoto";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
 import { buildMetadata } from "@/lib/seo";
-import { ADDRESS, HOURS, MAPS_URL, SITE_NAME } from "@/lib/venue";
+import { HOURS, SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
   title: "Noches de Champions League en el centro de Madrid",
@@ -47,6 +47,13 @@ export default function EsChampionsLeaguePage() {
             Cómo llegar
           </a>
           .
+        </p>
+        <p>
+          Estamos en Calle de Espoz y Mina 7, junto a Puerta del Sol.{" "}
+          {HOURS.summaryEs}. No se reservan mesas. Atendemos por orden de
+          llegada. Ven al cruce que de verdad ponemos en las pantallas, no a
+          todos los partidos europeos de la tele. La agenda es la lista; aquí
+          no inventamos horas.
         </p>
         <p>
           <Link href="/es/premier-league" className="text-cream underline">

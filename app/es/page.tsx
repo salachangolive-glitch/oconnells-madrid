@@ -48,9 +48,9 @@ export default function EsHomePage() {
 
       <section className="mb-12 max-w-2xl">
         <p className="text-sm leading-relaxed text-cream-muted sm:text-base">
-          O&apos;Connell St es un pub irlandés junto a Puerta del Sol, con
-          deportes en directo, ambiente internacional y chupitos a 1 € los
-          jueves.
+          O&apos;Connell St es un pub irlandés junto a Puerta del Sol. Si
+          el partido está confirmado, lo ves en directo en las pantallas; si
+          no, se está igual de bien en la barra.
         </p>
       </section>
 
@@ -95,8 +95,9 @@ export default function EsHomePage() {
         </h2>
         <div className="pub-rule my-3" />
         <p className="text-sm text-cream-muted sm:text-base">
-          O&apos;Connell St está a pocos pasos de Puerta del Sol y recibe a
-          público internacional durante toda la semana.
+          Si estás de Erasmus, este es un sitio fácil para quedar: a un
+          paso de Sol, con gente de fuera y la barra en inglés. Los jueves,
+          si te quedas, pregunta por los chupitos a 1 €.
         </p>
         <p className="mt-3">
           <Link
@@ -142,7 +143,7 @@ export default function EsHomePage() {
             </dt>
             <dd className="mt-1 text-cream/80">
               Sí. Los partidos y eventos confirmados están en la{" "}
-              <Link href="/es/whats-on" className="text-gold underline">
+              <Link href="/es/whats-on" data-event="whats_on" className="text-gold underline">
                 Agenda
               </Link>
               ; pregunta en la barra por la noche.
@@ -165,6 +166,7 @@ export default function EsHomePage() {
                 href={MAPS_URL}
                 target="_blank"
                 rel="noopener noreferrer"
+                data-event="directions"
                 className="text-gold underline"
               >
                 Google Maps
@@ -182,6 +184,7 @@ export default function EsHomePage() {
             href={MAPS_URL}
             target="_blank"
             rel="noopener noreferrer"
+            data-event="directions"
             className="text-gold underline"
           >
             Google Maps
@@ -198,7 +201,7 @@ export default function EsHomePage() {
       <Section title="Contacto">
         <p>
           ¿Dudas sobre una noche de partido o un grupo?{" "}
-          <Link href="/es/contact" className="text-gold underline">
+          <Link href="/es/contact" data-event="contact" className="text-gold underline">
             Escríbenos por el formulario
           </Link>
           .

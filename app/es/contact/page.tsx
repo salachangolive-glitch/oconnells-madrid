@@ -23,10 +23,18 @@ export default function EsContactPage() {
       />
       <p className="mb-8 text-sm text-cream-muted">
         Email{" "}
-        <a href={PUBLIC_EMAIL_MAILTO} className="text-cream underline">
+        <a
+          href={PUBLIC_EMAIL_MAILTO}
+          data-event="email_click"
+          className="text-cream underline"
+        >
           {PUBLIC_EMAIL}
         </a>
-        , o usa el formulario de abajo. En esta web no publicamos teléfono.
+        , o usa el formulario de abajo. En esta web no publicamos teléfono.{" "}
+        <a href="/es/privacy" className="text-cream underline">
+          Privacidad
+        </a>
+        .
       </p>
       <p className="mb-6 text-sm text-cream-muted">
         <Link href="/es/privacy" className="text-gold underline">

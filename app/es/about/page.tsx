@@ -19,7 +19,7 @@ export default function EsAboutPage() {
       <PageHero
         eyebrow="Sobre nosotros"
         title={SITE_NAME}
-        lead="Pub irlandés y bar deportivo en el centro de Madrid — deportes en directo cuando la emisión está confirmada, y chupitos a 1 € los jueves."
+        lead="Un pub irlandés junto a Sol. Se viene a ver el partido cuando está confirmado, a tomar algo, y los jueves a los chupitos a 1 €."
       />
       <InteriorPhoto
         src="/images/interior/about-salon.webp"
@@ -28,11 +28,13 @@ export default function EsAboutPage() {
       />
       <Section title="En resumen">
         <p>
-          Estamos en {ADDRESS.full}, cerca de Puerta del Sol. {HOURS.summaryEs}.
+          Estamos en {ADDRESS.full}, a un paso de Puerta del Sol. {HOURS.summaryEs}.
         </p>
+        <p>No se reservan mesas. Atendemos por orden de llegada.</p>
         <p>
-          Ven por el partido, la pinta y los jueves de chupitos a 1 € — un pub
-          irlandés céntrico.
+          Si es tu primera vez, sal en Metro Sol y busca la fachada roja de
+          Espoz y Mina. La agenda dice qué hay confirmado esta semana; si no
+          sale, pregunta en la barra.
         </p>
         <p>
           <Link href="/es/location" className="text-cream underline">

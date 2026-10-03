@@ -18,6 +18,7 @@ export function StickyCta({ locale = "en" }: { locale?: Locale }) {
         <li>
           <Link
             href={whatsOnHref}
+            data-event="whats_on"
             className="flex min-h-11 flex-col items-center justify-center gap-0.5 px-1 py-1.5 hover:text-gold"
           >
             <ScreenIcon />
@@ -29,6 +30,7 @@ export function StickyCta({ locale = "en" }: { locale?: Locale }) {
             href={MAPS_URL}
             target="_blank"
             rel="noopener noreferrer"
+            data-event="directions"
             className="flex min-h-11 flex-col items-center justify-center gap-0.5 px-1 py-1.5 hover:text-gold"
           >
             <PinIcon />
@@ -38,6 +40,7 @@ export function StickyCta({ locale = "en" }: { locale?: Locale }) {
         <li>
           <Link
             href={contactHref}
+            data-event="contact"
             className="flex min-h-11 flex-col items-center justify-center gap-0.5 px-1 py-1.5 hover:text-gold"
           >
             <MailIcon />

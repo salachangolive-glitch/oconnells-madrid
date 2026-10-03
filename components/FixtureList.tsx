@@ -51,6 +51,7 @@ function FixtureDetail({ f, locale }: { f: Fixture; locale: Locale }) {
           href={MAPS_URL}
           target="_blank"
           rel="noopener noreferrer"
+          data-event="directions"
           className="text-sm text-gold hover:text-cream"
         >
           {isEs ? "Cómo llegar →" : "Directions →"}

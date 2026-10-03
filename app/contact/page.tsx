@@ -22,10 +22,18 @@ export default function ContactPage() {
       />
       <p className="mb-8 text-sm text-cream-muted">
         Email{" "}
-        <a href={PUBLIC_EMAIL_MAILTO} className="text-cream underline">
+        <a
+          href={PUBLIC_EMAIL_MAILTO}
+          data-event="email_click"
+          className="text-cream underline"
+        >
           {PUBLIC_EMAIL}
         </a>
-        , or use the form below. We don’t publish a phone number on this site.
+        , or use the form below. We don’t publish a phone number on this site.{" "}
+        <a href="/privacy" className="text-cream underline">
+          Privacy
+        </a>
+        .
       </p>
       <p className="mb-6 text-sm text-cream-muted">
         <Link href="/privacy" className="text-gold underline">

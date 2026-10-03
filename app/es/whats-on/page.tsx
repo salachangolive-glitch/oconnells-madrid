@@ -3,6 +3,7 @@ import { FixtureList } from "@/components/FixtureList";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
 import { buildMetadata } from "@/lib/seo";
+import { RECURRING } from "@/lib/fixtures";
 import { SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
@@ -36,7 +37,7 @@ export default function EsWhatsOnPage() {
 
       <Section title="Chupitos a 1 € los jueves">
         <p>
-          Todos los jueves: chupitos a 1 € en el pub. Pregunta en la barra para más información.{" "}
+          {RECURRING.thursdayShots.es}{" "}
           <Link
             href="/es/thursday-1-euro-shots"
             className="text-gold underline"

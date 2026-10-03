@@ -36,7 +36,11 @@ export default function LocationPage() {
       <Section title="Address & hours">
         <p>{ADDRESS.full}</p>
         <p>
-          <a href={PUBLIC_EMAIL_MAILTO} className="text-cream underline">
+          <a
+            href={PUBLIC_EMAIL_MAILTO}
+            data-event="email_click"
+            className="text-cream underline"
+          >
             {PUBLIC_EMAIL}
           </a>
           {" · "}
@@ -54,6 +58,7 @@ export default function LocationPage() {
             href={MAPS_URL}
             target="_blank"
             rel="noopener noreferrer"
+            data-event="directions"
             className="inline-flex rounded-md bg-pub-green px-4 py-2 font-semibold text-cream hover:bg-pub-green-light"
           >
             Open in Google Maps

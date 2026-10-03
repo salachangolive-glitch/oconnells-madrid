@@ -3,7 +3,7 @@ import { InteriorPhoto } from "@/components/InteriorPhoto";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
 import { buildMetadata } from "@/lib/seo";
-import { ADDRESS, HOURS, MAPS_URL, SITE_NAME } from "@/lib/venue";
+import { HOURS, SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
   title: "Champions League nights in central Madrid",
@@ -46,6 +46,13 @@ export default function ChampionsLeaguePage() {
             Directions
           </a>
           .
+        </p>
+        <p>
+          We are at Calle de Espoz y Mina 7, beside Puerta del Sol.{" "}
+          {HOURS.summaryEn}. No table reservations — walk in, first come, first
+          served. Come for the tie that is actually on our screens, not every
+          European game on television. What&apos;s On is the list; we do not
+          invent kick-offs here.
         </p>
         <p>
           <Link href="/premier-league" className="text-cream underline">
