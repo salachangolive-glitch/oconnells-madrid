@@ -38,28 +38,17 @@ export type Fixture = {
 
 /**
  * Confirmed screenings.
- * Owner authorized the reviewed 3–10 Oct 2026 agenda on 2026-10-03,
- * then widened it the same day: any sport a Sol crowd would come in for,
- * not football only. Gate: real event, verified Madrid kickoff, pub open.
- * Overnight US cards use the Madrid calendar day (ET+6).
- * Left out: doors closed (F1 Singapore sessions, MotoGP Japan, early kickoffs),
- * no published clock (Shanghai tennis, Il Lombardia), NL C/D.
- * Delta 2026-10-03: reconfirmed 5–6 Oct NL/NFL kickoffs; fixed Commanders/Colts
- * and Bears/Jets home sides (NFL.com); Madrid–Partizan tip 20:45 Madrid
- * (18:45Z / Movistar Arena), not 18:45 local.
- * Delta 2026-10-03 (2d review): Glasgow–Ulster kickoff 18:30 Madrid (5:30pm BST),
- * not 20:45 — club moved from 7:45pm on 1 Sep 2026.
+ * Sunday agenda 2026-10-04: week Mon 5–Sun 11 Oct (plus remaining Sun 4).
+ * Owner gate (ORD 3 Oct): real event, verified Madrid kickoff, pub open;
+ * Confirmed on card without waiting for a separate venue emission post.
+ * Removed played Oct 3 and early Oct 4 (Raptors/UFC). Skipped closed-door
+ * kickoffs (Arsenal–Leeds 13:30 Sat, Rayo–Athletic 14:00 Sat). Added
+ * Liverpool–City Sun 17:30, LaLiga Sun slate, UFC tip fixed to 01:00 Madrid.
+ * Sources: ESPN NFL W4, UEFA.com NL, Sky Sports PL, laligaupdate MD8,
+ * Movistar Arena / RealGM EuroLeague, club URC/Prem pages, PSG.fr, FotMob.
  */
 export const FIXTURES: Fixture[] = [
-  { id: "2026-10-03-bristol-northampton", competition: "Premiership", homeTeam: "Bristol", awayTeam: "Northampton", date: "2026-10-03", kickoffMadrid: "16:05" },
-  { id: "2026-10-03-croatia-england", competition: "UEFA Nations League", homeTeam: "Croatia", awayTeam: "England", date: "2026-10-03", kickoffMadrid: "18:00" },
-  { id: "2026-10-03-gloucester-harlequins", competition: "Premiership", homeTeam: "Gloucester", awayTeam: "Harlequins", date: "2026-10-03", kickoffMadrid: "18:30" },
-  { id: "2026-10-03-sharks-leinster", competition: "United Rugby Championship", homeTeam: "Sharks", awayTeam: "Leinster", date: "2026-10-03", kickoffMadrid: "18:30" },
-  { id: "2026-10-03-glasgow-ulster", competition: "United Rugby Championship", homeTeam: "Glasgow", awayTeam: "Ulster", date: "2026-10-03", kickoffMadrid: "18:30" },
-  { id: "2026-10-03-munster-bulls", competition: "United Rugby Championship", homeTeam: "Munster", awayTeam: "Bulls", date: "2026-10-03", kickoffMadrid: "20:45" },
-  { id: "2026-10-03-spain-czechia", competition: "UEFA Nations League", homeTeam: "Spain", awayTeam: "Czechia", date: "2026-10-03", kickoffMadrid: "20:45" },
-  { id: "2026-10-04-raptors-heat", competition: "NBA", homeTeam: "Toronto Raptors", awayTeam: "Miami Heat", date: "2026-10-04", kickoffMadrid: "01:00" },
-  { id: "2026-10-04-ufc-332", competition: "UFC", homeTeam: "Silva", awayTeam: "Wang", date: "2026-10-04", kickoffMadrid: "02:00" },
+  // Remaining Sun 4 Oct (Madrid daytime/evening — early NBA/UFC already played)
   { id: "2026-10-04-colts-commanders", competition: "NFL", homeTeam: "Washington Commanders", awayTeam: "Indianapolis Colts", date: "2026-10-04", kickoffMadrid: "15:30" },
   { id: "2026-10-04-saracens-sale", competition: "Premiership", homeTeam: "Saracens", awayTeam: "Sale", date: "2026-10-04", kickoffMadrid: "16:00" },
   { id: "2026-10-04-barca-madrid-ligaf", competition: "Liga F", homeTeam: "Barcelona", awayTeam: "Real Madrid", date: "2026-10-04", kickoffMadrid: "17:00" },
@@ -73,19 +62,24 @@ export const FIXTURES: Fixture[] = [
   { id: "2026-10-04-portugal-norway", competition: "UEFA Nations League", homeTeam: "Portugal", awayTeam: "Norway", date: "2026-10-04", kickoffMadrid: "20:45" },
   { id: "2026-10-04-wales-denmark", competition: "UEFA Nations League", homeTeam: "Wales", awayTeam: "Denmark", date: "2026-10-04", kickoffMadrid: "20:45" },
   { id: "2026-10-04-raiders-chiefs", competition: "NFL", homeTeam: "Las Vegas Raiders", awayTeam: "Kansas City Chiefs", date: "2026-10-04", kickoffMadrid: "22:25" },
+  // Mon 5 Oct
   { id: "2026-10-05-lions-panthers", competition: "NFL", homeTeam: "Carolina Panthers", awayTeam: "Detroit Lions", date: "2026-10-05", kickoffMadrid: "02:20" },
   { id: "2026-10-05-france-belgium", competition: "UEFA Nations League", homeTeam: "France", awayTeam: "Belgium", date: "2026-10-05", kickoffMadrid: "20:45" },
   { id: "2026-10-05-italy-turkey", competition: "UEFA Nations League", homeTeam: "Italy", awayTeam: "Turkey", date: "2026-10-05", kickoffMadrid: "20:45" },
+  // Tue 6 Oct
   { id: "2026-10-06-falcons-saints", competition: "NFL", homeTeam: "New Orleans Saints", awayTeam: "Atlanta Falcons", date: "2026-10-06", kickoffMadrid: "02:15" },
   { id: "2026-10-06-croatia-spain", competition: "UEFA Nations League", homeTeam: "Croatia", awayTeam: "Spain", date: "2026-10-06", kickoffMadrid: "20:45" },
   { id: "2026-10-06-england-czechia", competition: "UEFA Nations League", homeTeam: "England", awayTeam: "Czechia", date: "2026-10-06", kickoffMadrid: "20:45" },
+  // Thu 8 Oct
   { id: "2026-10-08-madrid-partizan", competition: "EuroLeague", homeTeam: "Real Madrid", awayTeam: "Partizan", date: "2026-10-08", kickoffMadrid: "20:45" },
+  // Fri 9 Oct
   { id: "2026-10-09-barca-zalgiris", competition: "EuroLeague", homeTeam: "Barcelona", awayTeam: "Žalgiris", date: "2026-10-09", kickoffMadrid: "20:30" },
   { id: "2026-10-09-dortmund-werder", competition: "Bundesliga", homeTeam: "Dortmund", awayTeam: "Werder Bremen", date: "2026-10-09", kickoffMadrid: "20:30" },
   { id: "2026-10-09-glasgow-connacht", competition: "United Rugby Championship", homeTeam: "Glasgow", awayTeam: "Connacht", date: "2026-10-09", kickoffMadrid: "20:45" },
   { id: "2026-10-09-lens-lyon", competition: "Ligue 1", homeTeam: "Lens", awayTeam: "Lyon", date: "2026-10-09", kickoffMadrid: "20:45" },
   { id: "2026-10-09-malaga-espanyol", competition: "LaLiga", homeTeam: "Málaga", awayTeam: "Espanyol", date: "2026-10-09", kickoffMadrid: "21:00" },
   { id: "2026-10-09-westham-qpr", competition: "Championship", homeTeam: "West Ham", awayTeam: "QPR", date: "2026-10-09", kickoffMadrid: "21:00" },
+  // Sat 10 Oct (Arsenal–Leeds 13:30 skipped — doors closed until 16:00; Rayo–Athletic 14:00 same)
   { id: "2026-10-10-chelsea-bournemouth", competition: "Premier League", homeTeam: "Chelsea", awayTeam: "Bournemouth", date: "2026-10-10", kickoffMadrid: "16:00" },
   { id: "2026-10-10-derby-wrexham", competition: "Championship", homeTeam: "Derby", awayTeam: "Wrexham", date: "2026-10-10", kickoffMadrid: "16:00" },
   { id: "2026-10-10-northampton-bath", competition: "Premiership", homeTeam: "Northampton", awayTeam: "Bath", date: "2026-10-10", kickoffMadrid: "16:05" },
@@ -97,7 +91,12 @@ export const FIXTURES: Fixture[] = [
   { id: "2026-10-10-leinster-cardiff", competition: "United Rugby Championship", homeTeam: "Leinster", awayTeam: "Cardiff", date: "2026-10-10", kickoffMadrid: "20:45" },
   { id: "2026-10-10-psg-lemans", competition: "Ligue 1", homeTeam: "PSG", awayTeam: "Le Mans", date: "2026-10-10", kickoffMadrid: "20:45" },
   { id: "2026-10-10-madrid-villarreal", competition: "LaLiga", homeTeam: "Real Madrid", awayTeam: "Villarreal", date: "2026-10-10", kickoffMadrid: "21:00" },
-  { id: "2026-10-11-ufc-allen-duncan", competition: "UFC", homeTeam: "Allen", awayTeam: "Duncan", date: "2026-10-11", kickoffMadrid: "02:00" },
+  // Sun 11 Oct (overnight Sat UFC + marquee Sunday)
+  { id: "2026-10-11-ufc-allen-duncan", competition: "UFC", homeTeam: "Allen", awayTeam: "Duncan", date: "2026-10-11", kickoffMadrid: "01:00" },
+  { id: "2026-10-11-sociedad-deportivo", competition: "LaLiga", homeTeam: "Real Sociedad", awayTeam: "RC Deportivo", date: "2026-10-11", kickoffMadrid: "16:15" },
+  { id: "2026-10-11-liverpool-mancity", competition: "Premier League", homeTeam: "Liverpool", awayTeam: "Manchester City", date: "2026-10-11", kickoffMadrid: "17:30" },
+  { id: "2026-10-11-betis-osasuna", competition: "LaLiga", homeTeam: "Real Betis", awayTeam: "Osasuna", date: "2026-10-11", kickoffMadrid: "18:30" },
+  { id: "2026-10-11-racing-valencia", competition: "LaLiga", homeTeam: "Racing Santander", awayTeam: "Valencia", date: "2026-10-11", kickoffMadrid: "21:00" },
 ];
 
 export const RECURRING = {
