@@ -18,9 +18,9 @@ export default function EsSportsPage() {
   return (
     <PageShell locale="es" altLangHref="/sports">
       <PageHero
-        eyebrow="Pantallas · pintas · Sol"
+        eyebrow="Deportes en directo · Sol"
         title={`Deportes en directo en ${SITE_NAME}`}
-        lead="Vienes a por una pinta y te quedas con lo que de verdad está puesto. Fútbol cuando la noche lo pide, y NFL, NBA, rugby, F1 o tenis cuando lo hemos confirmado — a un paso de Sol. No prometemos todos los partidos. Mira la agenda."
+        lead="Pub irlandés junto a Puerta del Sol, con fútbol, NFL, NBA, rugby, Fórmula 1, tenis y otros deportes cuando la emisión está confirmada. Las horas están en la Agenda."
       />
       <InteriorPhoto
         src="/images/interior/sports-aisle.webp"
@@ -30,13 +30,14 @@ export default function EsSportsPage() {
       <FixtureStrip locale="es" />
       <Section title="Qué ponemos">
         <p>
-          Vienes a por una pinta y acabas viendo lo que de verdad está
-          puesto. Fútbol casi todos los fines de semana y las noches europeas,
-          y otro deporte cuando hemos confirmado un partido grande para el
-          bar. No rellenamos la agenda con encuentros que no vamos a emitir.
+          Ponemos fútbol casi todos los fines de semana y las noches europeas,
+          y otros deportes cuando esa emisión está confirmada: Premier League,
+          EFL Championship, LaLiga, Segunda, Champions League, Europa League,
+          Conference League, selecciones, NFL, NBA, Euroliga, rugby, Fórmula 1,
+          MotoGP, tenis, UFC y boxeo cuando se ven en el pub.
         </p>
         <p>
-          Para la agenda, mira{" "}
+          Para las horas, mira la{" "}
           <Link href="/es/whats-on" className="text-gold underline">
             Agenda
           </Link>
@@ -62,9 +63,9 @@ export default function EsSportsPage() {
       />
       <Section title="Más allá del fútbol">
         <p>
-          NFL y NBA cuando esos partidos están en nuestras pantallas; rugby,
-          F1 y tenis en las noches que hemos confirmado. Si te importa un
-          partido concreto, pregunta en la barra o mira la{" "}
+          NFL, NBA, rugby, Fórmula 1 y tenis se ponen cuando los estamos
+          emitiendo. Si te importa un partido concreto, pregunta en la barra o
+          mira la{" "}
           <Link href="/es/whats-on" className="text-gold underline">
             Agenda
           </Link>

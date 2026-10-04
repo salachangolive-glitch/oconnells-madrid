@@ -89,16 +89,16 @@ export default function HomePage() {
       {/* Erasmus */}
       <section className="mb-12 max-w-2xl">
         <h2 className="font-serif text-xl font-bold text-cream">
-          Erasmus nights
+          Erasmus and visitors
         </h2>
         <div className="pub-rule my-3" />
         <p className="text-sm text-cream-muted sm:text-base">
-          O’Connell St is just a short walk from Puerta del Sol and welcomes
-          an international crowd throughout the week.
+          Erasmus students, tourists and an international crowd, a short walk
+          from Puerta del Sol.
         </p>
         <p className="mt-3">
           <Link href="/erasmus" className="text-sm text-gold hover:text-cream">
-            Erasmus at O&apos;Connell&apos;s →
+            Erasmus at O&apos;Connell St →
           </Link>
         </p>
       </section>

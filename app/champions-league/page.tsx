@@ -18,7 +18,7 @@ export default function ChampionsLeaguePage() {
       <PageHero
         eyebrow="UEFA Champions League"
         title={`Champions League at ${SITE_NAME}`}
-        lead="European nights are busy when a tie is actually on our screens. If your plan hangs on one match, check What's On first."
+        lead="Champions League nights at O'Connell St, Calle de Espoz y Mina 7. Confirmed ties and Madrid times are on What’s On."
       />
       <InteriorPhoto
         src="/images/interior/sports-aisle.webp"
@@ -31,8 +31,8 @@ export default function ChampionsLeaguePage() {
           <Link href="/whats-on" data-event="whats_on" className="text-cream underline">
             What&apos;s On
           </Link>{" "}
-          if your night depends on one tie. If it is not listed as confirmed,
-          ask at the bar. We do not invent kick-offs on this page.
+          for the tie and the Madrid time. If it is not listed, ask at the bar
+          before you come.
         </p>
         <p>
           {ADDRESS.full}. {HOURS.summaryEn}. No table reservations — walk in,

@@ -29,16 +29,11 @@ export default function ContactPage() {
         >
           {PUBLIC_EMAIL}
         </a>
-        , or use the form below. We don’t publish a phone number on this site.{" "}
-        <a href="/privacy" className="text-cream underline">
-          Privacy
-        </a>
-        .
-      </p>
-      <p className="mb-6 text-sm text-cream-muted">
+        , or use the form below.{" "}
         <Link href="/privacy" className="text-gold underline">
-          Privacy notice
+          Privacy
         </Link>
+        .
       </p>
       <ContactForm locale="en" />
     </PageShell>

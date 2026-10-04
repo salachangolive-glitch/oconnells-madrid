@@ -19,21 +19,21 @@ export default function EsPremierLeaguePage() {
       <PageHero
         eyebrow="Premier League · Madrid"
         title={`Premier League en ${SITE_NAME}`}
-        lead="La Premier se pone cuando de verdad la vamos a emitir. Si quieres la hora de esta semana, está en la agenda, no aquí."
+        lead="Premier League en un pub irlandés a un paso de Puerta del Sol. Los partidos confirmados de los próximos 7 días están en la Agenda."
       />
       <InteriorPhoto
         src="/images/interior/sports-corridor.webp"
         alt="Televisiones de deportes en O'Connell St cerca de Sol"
         position="object-[center_40%]"
       />
-      <Section title="Partidos confirmados de esta semana">
+      <Section title="Partidos de Premier League confirmados">
         <p>
-          No publicamos un horario aquí si el pub no ha confirmado la emisión.
-          Mira la{" "}
+          Lo habitual es el sábado y el domingo, y los partidos entre semana
+          que estemos emitiendo. Mira la{" "}
           <Link href="/es/whats-on" data-event="whats_on" className="text-cream underline">
             Agenda
           </Link>{" "}
-          o pregunta en la barra.
+          para la hora de Madrid, o pregunta en la barra.
         </p>
         <p>
           También{" "}

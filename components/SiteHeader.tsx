@@ -15,7 +15,7 @@ const nav = {
   ],
   es: [
     { href: "/es/whats-on", label: "Agenda" },
-    { href: "/es/sports", label: "Deportes en directo" },
+    { href: "/es/sports", label: "Deportes" },
     { href: "/es/thursday-1-euro-shots", label: "Jueves 1 €" },
     { href: "/es/erasmus", label: "Erasmus" },
     { href: "/es/location", label: "Ubicación" },
@@ -77,14 +77,14 @@ export function SiteHeader({
         </Link>
       </div>
       <nav
-        className="flex flex-wrap gap-x-3 gap-y-1.5 border-t border-cream/5 px-4 py-1.5 text-xs text-cream-muted lg:hidden"
+        className="flex flex-nowrap gap-x-3 overflow-x-auto border-t border-cream/5 px-4 py-1.5 text-xs text-cream-muted lg:hidden [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         aria-label="Mobile primary"
       >
         {items.map((item) => (
           <Link
             key={item.href}
             href={item.href}
-            className="whitespace-nowrap hover:text-gold"
+            className="shrink-0 whitespace-nowrap hover:text-gold"
             data-event={
               item.href.includes("whats-on")
                 ? "whats_on"

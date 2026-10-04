@@ -33,8 +33,8 @@ export default function EsAboutPage() {
         <p>No se reservan mesas. Atendemos por orden de llegada.</p>
         <p>
           Si es tu primera vez, sal en Metro Sol y busca la fachada roja de
-          Espoz y Mina. La agenda dice qué hay confirmado esta semana; si no
-          sale, pregunta en la barra.
+          Espoz y Mina. La agenda muestra lo confirmado para los próximos 7
+          días; si no sale, pregunta en la barra.
         </p>
         <p>
           <Link href="/es/location" className="text-cream underline">

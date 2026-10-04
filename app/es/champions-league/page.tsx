@@ -19,7 +19,7 @@ export default function EsChampionsLeaguePage() {
       <PageHero
         eyebrow="UEFA Champions League"
         title={`Champions en ${SITE_NAME}`}
-        lead="Las noches europeas se llenan cuando el cruce está de verdad en nuestras pantallas. Si tu plan depende de un partido, mira la agenda antes de venir."
+        lead="Noches de Champions League en O'Connell St, Calle de Espoz y Mina 7. Los cruces confirmados y la hora de Madrid están en la Agenda."
       />
       <InteriorPhoto
         src="/images/interior/sports-aisle.webp"
@@ -32,8 +32,8 @@ export default function EsChampionsLeaguePage() {
           <Link href="/es/whats-on" data-event="whats_on" className="text-cream underline">
             Agenda
           </Link>{" "}
-          si te importa un cruce concreto. Si no figura como confirmado,
-          pregunta en la barra. Aquí no inventamos horas.
+          para el cruce y la hora de Madrid. Si no está en la lista, pregunta
+          en la barra antes de venir.
         </p>
         <p>
           {ADDRESS.full}. {HOURS.summaryEs}. No se reservan mesas. Atendemos

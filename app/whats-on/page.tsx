@@ -18,7 +18,7 @@ export default function WhatsOnPage() {
     <PageShell locale="en" altLangHref="/es/whats-on">
       <PageHero
         eyebrow="What's On"
-        title={`This week at ${SITE_NAME}`}
+        title={`Next 7 days at ${SITE_NAME}`}
         lead="All times are shown in Madrid time. Events marked ‘Confirmed’ are scheduled to be shown on our screens."
       />
 
@@ -28,7 +28,7 @@ export default function WhatsOnPage() {
         <p>
           O&apos;Connell St is an Irish pub by Puerta del Sol — Espoz y Mina 7.
           We put major live sport on our screens when it&apos;s confirmed:
-          football, NFL, NBA, rugby, Formula 1, tennis and more. See Today and This week on this page, or ask at the bar if you&apos;re
+          football, NFL, NBA, rugby, Formula 1, tennis and more. See Today and the next 7 days on this page, or ask at the bar if you&apos;re
           looking for a specific game.
         </p>
       </Section>

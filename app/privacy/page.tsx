@@ -12,7 +12,7 @@ import {
 export const metadata = buildMetadata({
   title: "Privacy — O'Connell St Madrid",
   description:
-    "Privacy notice for the O'Connell St website: contact form, email comunicacion@oconnellsmadrid.es, and no analytics cookies.",
+    "Privacy notice for the O'Connell St website: contact form only. No shop, bookings or payments. Owner details pending.",
   path: "/privacy",
 });
 
@@ -22,12 +22,11 @@ export default function PrivacyPage() {
       <PageHero
         eyebrow="Privacy"
         title="Privacy"
-        lead={`${SITE_NAME}, ${ADDRESS.full}. Questions about this page: ${PUBLIC_EMAIL}.`}
+        lead="This website is for information. There is no online shop, no table booking and no payments."
       />
-      <Section title="Who this notice is about">
+      <Section title="Owner">
         <p>
-          This notice is for the website of {SITE_NAME}, the Irish pub at{" "}
-          {ADDRESS.full}. Write to{" "}
+          {SITE_NAME}, {ADDRESS.full}. Questions:{" "}
           <a
             href={PUBLIC_EMAIL_MAILTO}
             data-event="email_click"
@@ -35,10 +34,9 @@ export default function PrivacyPage() {
           >
             {PUBLIC_EMAIL}
           </a>
-          . We are not publishing a company legal name, tax number, or
-          companies-registry entry on this site, because those details are not
-          stated here.
+          .
         </p>
+        <p>Owner details pending.</p>
       </Section>
       <Section title="Contact form">
         <p>
@@ -46,20 +44,20 @@ export default function PrivacyPage() {
           <Link href="/contact" data-event="contact" className="text-cream underline">
             contact form
           </Link>
-          , you send your name, email address, a reason and a message. We use
-          that only to reply to that message. The form is delivered by
-          Web3Forms, the provider this site already uses. The reply-to address
-          on those messages is {PUBLIC_EMAIL}. You can also email that address
-          directly.
+          , we receive your name, email, reason and message, and use them only
+          to reply. The form is sent through Web3Forms to the pub inbox. The
+          reply goes to the email address you type in the form. You can also
+          write to {PUBLIC_EMAIL} directly.
         </p>
       </Section>
       <Section title="Cookies and analytics">
         <p>
-          This website does not use Google Analytics and does not set its own
-          analytics or advertising cookies. There is no advertising pixel on
-          these pages. Links labelled Directions open Google Maps, which is
-          Google&apos;s site, not ours. Choosing Directions is not counted as a
-          visit to the pub.
+          These pages do not load Google Analytics, advertising pixels or any
+          other measurement script, and they do not set their own cookies. A
+          click on What’s On, Directions, Contact, email or the form can be
+          forwarded only if a measurement tool is already running in the
+          browser; this site does not add one. Directions opens Google Maps,
+          which is Google’s website.
         </p>
       </Section>
     </PageShell>

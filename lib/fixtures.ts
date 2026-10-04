@@ -102,12 +102,12 @@ export const FIXTURES: Fixture[] = [
 
 export const RECURRING = {
   thursdayShots: {
-    en: "Thursday is the night for €1 shots at the pub. Ask at the bar when you arrive — if anything is different that night, they'll tell you.",
-    es: "El jueves es la noche de los chupitos a 1 €. Pregunta en la barra al llegar; si esa noche cambia algo, te lo dicen allí.",
+    en: "€1 shots every Thursday. Ask at the bar for that night’s selection.",
+    es: "Los jueves tenemos chupitos a 1 €. Consulta en barra la selección disponible esa noche.",
   },
   liveSports: {
-    en: "O'Connell St is an Irish pub by Puerta del Sol — Espoz y Mina 7. We put major live sport on our screens when it's confirmed: football, NFL, NBA, rugby, Formula 1, tennis and more. See Today and This week on this page, or ask at the bar if you're looking for a specific game.",
-    es: "O'Connell St es un pub irlandés junto a Puerta del Sol — Espoz y Mina 7. Retransmitimos grandes eventos deportivos en nuestras pantallas cuando están confirmados: fútbol, NFL, NBA, rugby, Fórmula 1, tenis y más. Consulta la agenda de hoy y de esta semana, o pregunta en la barra si buscas un evento concreto.",
+    en: "O'Connell St is an Irish pub by Puerta del Sol — Espoz y Mina 7. We show confirmed live sport on the screens: football, NFL, NBA, rugby, Formula 1, tennis and more. See Today and the next 7 days on this page, or ask at the bar if you want a specific game.",
+    es: "O'Connell St es un pub irlandés junto a Puerta del Sol — Espoz y Mina 7. Ponemos en las pantallas el deporte en directo que está confirmado: fútbol, NFL, NBA, rugby, Fórmula 1, tenis y más. Mira Hoy y los próximos 7 días en esta página, o pregunta en la barra si buscas un partido concreto.",
   },
 } as const;
 
@@ -126,16 +126,123 @@ export function isConfirmedFixture(f: Fixture): boolean {
   return Boolean(f.kickoffMadrid && /^\d{2}:\d{2}$/.test(f.kickoffMadrid));
 }
 
-export function getTonightFixtures(today: string): Fixture[] {
-  return FIXTURES.filter(
-    (f) => isConfirmedFixture(f) && f.date === today,
+/**
+ * UTC instant for a Madrid wall-clock date + HH:mm.
+ * Overnight cards keep the Madrid calendar day already stored on `date`.
+ */
+export function madridWallTimeMs(date: string, time: string): number | null {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(date) || !/^\d{2}:\d{2}$/.test(time)) {
+    return null;
+  }
+  const [y, mo, d] = date.split("-").map(Number);
+  const [hh, mm] = time.split(":").map(Number);
+  const utcGuess = Date.UTC(y, mo - 1, d, hh, mm, 0);
+  const parts = new Intl.DateTimeFormat("en-US", {
+    timeZone: "Europe/Madrid",
+    hourCycle: "h23",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+  }).formatToParts(new Date(utcGuess));
+  const n = (type: Intl.DateTimeFormatPartTypes) =>
+    Number(parts.find((p) => p.type === type)?.value);
+  const asUtc = Date.UTC(
+    n("year"),
+    n("month") - 1,
+    n("day"),
+    n("hour"),
+    n("minute"),
+    n("second"),
+  );
+  return utcGuess - (asUtc - utcGuess);
+}
+
+export function fixtureStartMs(f: Fixture): number | null {
+  if (!f.kickoffMadrid) return null;
+  return madridWallTimeMs(f.date, f.kickoffMadrid);
+}
+
+/** Hide a screening once its Madrid start is no longer in the future. */
+export function isStillToCome(f: Fixture, now = new Date()): boolean {
+  const start = fixtureStartMs(f);
+  return start != null && start > now.getTime();
+}
+
+/** Add calendar days in Europe/Madrid (noon anchor, safe across DST). */
+export function addMadridDays(ymd: string, days: number): string {
+  const noon = madridWallTimeMs(ymd, "12:00");
+  if (noon == null) return ymd;
+  return madridTodayYmd(new Date(noon + days * 24 * 60 * 60 * 1000));
+}
+
+/** Inclusive window: today through the sixth day ahead (7 Madrid dates). */
+export function agendaWindowEnd(today: string): string {
+  return addMadridDays(today, 6);
+}
+
+function byKickoff(a: Fixture, b: Fixture): number {
+  return (
+    a.date.localeCompare(b.date) ||
+    (a.kickoffMadrid ?? "").localeCompare(b.kickoffMadrid ?? "")
   );
 }
 
-export function getUpcomingFixtures(today: string): Fixture[] {
+export function getTonightFixtures(today: string, now = new Date()): Fixture[] {
   return FIXTURES.filter(
-    (f) => isConfirmedFixture(f) && f.date >= today,
-  ).sort((a, b) => a.date.localeCompare(b.date));
+    (f) =>
+      isConfirmedFixture(f) &&
+      f.date === today &&
+      isStillToCome(f, now),
+  ).sort(byKickoff);
+}
+
+export function getUpcomingFixtures(today: string, now = new Date()): Fixture[] {
+  const end = agendaWindowEnd(today);
+  return FIXTURES.filter(
+    (f) =>
+      isConfirmedFixture(f) &&
+      f.date >= today &&
+      f.date <= end &&
+      isStillToCome(f, now),
+  ).sort(byKickoff);
+}
+
+/** National teams only. Club, NFL and NBA names stay as stored. */
+const NATIONS_ES: Record<string, string> = {
+  England: "Inglaterra",
+  Spain: "España",
+  Germany: "Alemania",
+  France: "Francia",
+  Italy: "Italia",
+  Netherlands: "Países Bajos",
+  Croatia: "Croacia",
+  Czechia: "Chequia",
+  Portugal: "Portugal",
+  Ireland: "Irlanda",
+  "Republic of Ireland": "Irlanda",
+  Israel: "Israel",
+  Greece: "Grecia",
+  Wales: "Gales",
+  Denmark: "Dinamarca",
+  Belgium: "Bélgica",
+  Turkey: "Turquía",
+  Norway: "Noruega",
+  Serbia: "Serbia",
+};
+
+export function displayTeam(name: string, locale: "en" | "es"): string {
+  if (locale !== "es") return name;
+  return NATIONS_ES[name] ?? name;
+}
+
+/** Bare "Championship" / "Premiership" in this list are EFL and Premiership Rugby. */
+export function displayCompetition(name: string): string {
+  if (name === "Championship") return "EFL Championship";
+  if (name === "Premiership") return "Premiership Rugby";
+  return name;
 }
 
 export function formatFixtureDay(date: string, locale: "en" | "es" = "en"): string {

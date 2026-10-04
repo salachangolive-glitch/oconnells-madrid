@@ -18,7 +18,7 @@ export default function WatchFootballPage() {
       <PageHero
         eyebrow="Watch football · Madrid"
         title="Football at a pub near Sol"
-        lead={`${SITE_NAME} is at ${ADDRESS.street}, a short walk from Puerta del Sol. Confirmed football screenings are listed on What's On.`}
+        lead={`${SITE_NAME} shows confirmed football at ${ADDRESS.street}, a few minutes from Puerta del Sol. Kickoff times are on What’s On.`}
       />
       <InteriorPhoto
         src="/images/interior/football-seating.webp"
@@ -27,17 +27,16 @@ export default function WatchFootballPage() {
       />
       <Section title="Confirmed matches">
         <p>
-          A match is shown as confirmed only when the pub is screening it.
-          Check{" "}
+          Premier League, LaLiga, Champions League and other confirmed football
+          go on the screens. The list, with Madrid times, is on{" "}
           <Link href="/whats-on" className="text-cream underline">
             What&apos;s On
-          </Link>{" "}
-          for confirmed matches, or ask at the bar if one game matters most.
+          </Link>
+          . If a game is not listed, ask at the bar.
         </p>
         <p>
-          {HOURS.summaryEn}. No table reservations — walk in, first come, first
-          served. Sol is the landmark: Espoz y Mina 7 is a few minutes on foot.
-          We only call a match confirmed when it is on at the pub.
+          {ADDRESS.full}. {HOURS.summaryEn}. No table reservations — walk in,
+          first come, first served.
         </p>
       </Section>
       <Section title="Getting here">

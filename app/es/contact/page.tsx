@@ -30,16 +30,11 @@ export default function EsContactPage() {
         >
           {PUBLIC_EMAIL}
         </a>
-        , o usa el formulario de abajo. En esta web no publicamos teléfono.{" "}
-        <a href="/es/privacy" className="text-cream underline">
-          Privacidad
-        </a>
-        .
-      </p>
-      <p className="mb-6 text-sm text-cream-muted">
+        , o usa el formulario de abajo.{" "}
         <Link href="/es/privacy" className="text-gold underline">
-          Aviso de privacidad
+          Privacidad
         </Link>
+        .
       </p>
       <ContactForm locale="es" />
     </PageShell>

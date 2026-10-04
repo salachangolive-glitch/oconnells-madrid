@@ -17,9 +17,9 @@ export default function SportsPage() {
   return (
     <PageShell locale="en" altLangHref="/es/sports">
       <PageHero
-        eyebrow="Screens · pints · Sol"
+        eyebrow="Live sports · Sol"
         title={`Live sports at ${SITE_NAME}`}
-        lead="Come for the pint and stay for whatever is actually on. Football when the night calls for it, and NFL, NBA, rugby, F1 or tennis when we’ve confirmed it — a short walk from Sol. We don’t promise every game. Check What’s On."
+        lead="Irish pub near Puerta del Sol with confirmed football, NFL, NBA, rugby, Formula 1, tennis and other sport on the screens. Times are on What’s On."
       />
       <InteriorPhoto
         src="/images/interior/sports-aisle.webp"
@@ -29,17 +29,18 @@ export default function SportsPage() {
       <FixtureStrip locale="en" />
       <Section title="What we put on">
         <p>
-          You come for a pint and end up watching whatever is actually on.
-          Football most weekends and on European nights, and other sport when
-          we’ve confirmed a big game for the bar. We don’t fill the diary with
-          matches we aren’t showing.
+          We show football most weekends and on European nights, plus other
+          sport when that screening is confirmed: Premier League, EFL
+          Championship, LaLiga, Segunda, Champions League, Europa League,
+          Conference League, internationals, NFL, NBA, EuroLeague, rugby,
+          Formula 1, MotoGP, tennis, UFC and boxing when they are on at the pub.
         </p>
         <p>
-          For the diary, see{" "}
+          For kickoff times, see{" "}
           <Link href="/whats-on" className="text-gold underline">
             What&apos;s On
           </Link>
-          . If you want a deeper dive into football:{" "}
+          . For football:{" "}
           <Link href="/watch-football-madrid" className="text-gold underline">
             Watch football in Madrid
           </Link>
@@ -61,9 +62,8 @@ export default function SportsPage() {
       />
       <Section title="Beyond football">
         <p>
-          NFL and NBA when those games are on our screens; rugby, F1 and
-          tennis on the nights we’ve confirmed. If you need one specific
-          match, ask at the bar or check{" "}
+          NFL, NBA, rugby, Formula 1 and tennis go on when we are showing them.
+          For one specific match, ask at the bar or check{" "}
           <Link href="/whats-on" className="text-gold underline">
             What&apos;s On
           </Link>

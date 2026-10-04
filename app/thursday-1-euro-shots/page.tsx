@@ -7,7 +7,7 @@ import { MAPS_URL, SITE_NAME } from "@/lib/venue";
 export const metadata = buildMetadata({
   title: "Thursday €1 shots near Sol",
   description:
-    "Thursday €1 shots at O'Connell St Madrid near Sol. Ask at the bar when you arrive — it is a Thursday offer, not every drink all night.",
+    "€1 shots every Thursday at O'Connell St, Calle de Espoz y Mina 7, near Sol. Ask at the bar for that night’s selection.",
   path: "/thursday-1-euro-shots",
 });
 
@@ -17,25 +17,20 @@ export default function ThursdayShotsPage() {
       <PageHero
         eyebrow="Thursday · €1"
         title="Thursday · €1 shots"
-        lead={`Thursdays at ${SITE_NAME} are the night for €1 shots. Ask at the bar when you arrive.`}
+        lead="€1 shots every Thursday. Ask at the bar for that night’s selection."
       />
-      <Section title="Why Thursday">
+      <Section title="Thursday at the pub">
         <p>
-          €1 shots and a short walk from Sol — a lively Irish-pub night for
-          flatmates, hostel friends, or whoever you&apos;re out with in Madrid.
+          €1 shots every Thursday. Ask at the bar for that night’s selection.
         </p>
         <p>
-          The €1 shots offer is for Thursdays, not other weeknights. It is not
-          a promise that every drink, every hour, is €1 — ask at the bar what
-          is pouring.
+          {SITE_NAME} is at Calle de Espoz y Mina 7, a short walk from Puerta
+          del Sol. No table reservations — walk in, first come, first served.
         </p>
-      </Section>
-      <Section title="Good to know">
         <ul className="list-disc space-y-2 pl-5">
-          <li>Near Sol — straightforward for groups and travellers.</li>
-          <li>Ask at the bar for what is pouring that night.</li>
+          <li>Thursdays only.</li>
           <li>
-            Pair it with a match from{" "}
+            Confirmed sport is on{" "}
             <Link href="/whats-on" className="text-gold underline">
               What&apos;s On
             </Link>

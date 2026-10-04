@@ -28,26 +28,23 @@ export default function EsWatchFootballPage() {
       />
       <Section title="Partidos confirmados">
         <p>
-          Un partido figura como confirmado solo cuando el pub lo emite.
-          Consulta la{" "}
+          Premier League, LaLiga, Champions League y otro fútbol confirmado se
+          ven en las pantallas. La lista, con hora de Madrid, está en la{" "}
           <Link href="/es/whats-on" className="text-cream underline">
             Agenda
-          </Link>{" "}
-          para la hora de Madrid. Si no está en la lista, pregunta en la barra:
-          no des por hecho que se retransmite.
+          </Link>
+          . Si un partido no sale, pregunta en la barra.
         </p>
         <p>
-          {HOURS.summaryEs}. No se reservan mesas. Atendemos por orden de
-          llegada. El punto de referencia es Sol: Espoz y Mina 7 está a unos
-          minutos andando. Solo damos un partido por confirmado cuando se ve
-          en el pub.
+          {ADDRESS.full}. {HOURS.summaryEs}. No se reservan mesas. Atendemos
+          por orden de llegada.
         </p>
       </Section>
       <Section title="Horario y cómo llegar">
         <p>{ADDRESS.full}. {HOURS.summaryEs}.</p>
         <p>
           Desde Metro Sol, camina hasta Calle de Espoz y Mina. Fachada roja y
-          rótulo dorado. No se reservan mesas. Atendemos por orden de llegada.{" "}
+          rótulo dorado.{" "}
           <a
             href={MAPS_URL}
             target="_blank"

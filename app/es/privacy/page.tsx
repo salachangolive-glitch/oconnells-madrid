@@ -12,7 +12,7 @@ import {
 export const metadata = buildMetadata({
   title: "Privacidad — O'Connell St Madrid",
   description:
-    "Aviso de privacidad de la web de O'Connell St: formulario, email comunicacion@oconnellsmadrid.es y sin cookies de analítica.",
+    "Aviso de privacidad de la web de O'Connell St: solo el formulario de contacto. Sin tienda, reservas ni pagos. Titular pendiente.",
   path: "/es/privacy",
   locale: "es",
 });
@@ -23,12 +23,11 @@ export default function EsPrivacyPage() {
       <PageHero
         eyebrow="Privacidad"
         title="Privacidad"
-        lead={`${SITE_NAME}, ${ADDRESS.full}. Para dudas sobre esta página: ${PUBLIC_EMAIL}.`}
+        lead="Esta web es informativa. No hay tienda online, ni reserva de mesas, ni pagos."
       />
-      <Section title="De qué va este aviso">
+      <Section title="Titular">
         <p>
-          Este aviso es de la web de {SITE_NAME}, el pub irlandés de{" "}
-          {ADDRESS.full}. Escríbenos a{" "}
+          {SITE_NAME}, {ADDRESS.full}. Para cualquier duda:{" "}
           <a
             href={PUBLIC_EMAIL_MAILTO}
             data-event="email_click"
@@ -36,9 +35,9 @@ export default function EsPrivacyPage() {
           >
             {PUBLIC_EMAIL}
           </a>
-          . No publicamos aquí razón social, CIF ni datos del registro
-          mercantil, porque esos datos no figuran en esta web.
+          .
         </p>
+        <p>Pendiente de completar con los datos del titular.</p>
       </Section>
       <Section title="Formulario de contacto">
         <p>
@@ -50,20 +49,20 @@ export default function EsPrivacyPage() {
           >
             formulario
           </Link>
-          , nos envías nombre, email, un motivo y un mensaje. Lo usamos solo
-          para responder a ese mensaje. El formulario lo entrega Web3Forms, el
-          proveedor que esta web ya usa. La dirección de respuesta de esos
-          mensajes es {PUBLIC_EMAIL}. También puedes escribir directamente a
-          ese correo.
+          , recibimos tu nombre, email, motivo y mensaje, y los usamos solo
+          para responderte. El envío pasa por Web3Forms hasta el buzón del pub.
+          La respuesta sale al email que escribes en el formulario. También
+          puedes escribir directamente a {PUBLIC_EMAIL}.
         </p>
       </Section>
       <Section title="Cookies y analítica">
         <p>
-          Esta web no usa Google Analytics y no instala cookies propias de
-          analítica ni de publicidad. No hay píxel publicitario en estas
-          páginas. Los enlaces de cómo llegar abren Google Maps, que es la web
-          de Google, no la nuestra. Elegir cómo llegar no cuenta como una
-          visita al pub.
+          Estas páginas no cargan Google Analytics, píxeles publicitarios ni
+          ningún otro script de medición, y no instalan cookies propias. Un
+          clic en Agenda, Cómo llegar, Contacto, el email o el formulario solo
+          se reenvía si el navegador ya tiene una herramienta de medición; esta
+          web no añade ninguna. Cómo llegar abre Google Maps, que es la web de
+          Google.
         </p>
       </Section>
     </PageShell>

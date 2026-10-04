@@ -13,7 +13,7 @@ type Locale = "en" | "es";
 export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
   const isEs = locale === "es";
   return (
-    <footer className="mt-auto border-t border-gold/15 bg-black px-4 py-10 pb-28 text-sm text-cream-muted">
+    <footer className="mt-auto border-t border-gold/15 bg-black px-4 py-10 pb-[calc(7.5rem+env(safe-area-inset-bottom,0px))] text-sm text-cream-muted">
       <div className="mx-auto grid max-w-5xl gap-8 sm:grid-cols-3">
         <div>
           <p className="font-serif text-lg text-cream">

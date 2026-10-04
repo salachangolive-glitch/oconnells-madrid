@@ -48,9 +48,9 @@ export default function EsHomePage() {
 
       <section className="mb-12 max-w-2xl">
         <p className="text-sm leading-relaxed text-cream-muted sm:text-base">
-          O&apos;Connell St es un pub irlandés junto a Puerta del Sol. Si
-          el partido está confirmado, lo ves en directo en las pantallas; si
-          no, se está igual de bien en la barra.
+          O&apos;Connell St es un pub irlandés junto a Puerta del Sol, con
+          deportes en directo, gente de muchos países y chupitos a 1 € los
+          jueves.
         </p>
       </section>
 
@@ -91,20 +91,19 @@ export default function EsHomePage() {
 
       <section className="mb-12 max-w-2xl">
         <h2 className="font-serif text-xl font-bold text-cream">
-          Noches Erasmus
+          Erasmus y visitantes
         </h2>
         <div className="pub-rule my-3" />
         <p className="text-sm text-cream-muted sm:text-base">
-          Si estás de Erasmus, este es un sitio fácil para quedar: a un
-          paso de Sol, con gente de fuera y la barra en inglés. Los jueves,
-          si te quedas, pregunta por los chupitos a 1 €.
+          Estudiantes Erasmus, turistas y gente de fuera, a un paso de Sol.
+          Los jueves, pregunta en la barra por los chupitos a 1 €.
         </p>
         <p className="mt-3">
           <Link
             href="/es/erasmus"
             className="text-sm text-gold hover:text-cream"
           >
-            Erasmus en O&apos;Connell&apos;s →
+            Erasmus en O&apos;Connell St →
           </Link>
         </p>
       </section>

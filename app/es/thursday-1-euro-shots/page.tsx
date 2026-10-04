@@ -7,7 +7,7 @@ import { MAPS_URL, SITE_NAME } from "@/lib/venue";
 export const metadata = buildMetadata({
   title: "Chupitos a 1 € los jueves cerca de Sol",
   description:
-    "Chupitos a 1 € los jueves en O'Connell St Madrid cerca de Sol. Pregunta en la barra: es una oferta de los jueves, no de cada bebida toda la noche.",
+    "Los jueves tenemos chupitos a 1 € en O'Connell St, Calle de Espoz y Mina 7, cerca de Sol. Consulta en barra la selección de esa noche.",
   path: "/es/thursday-1-euro-shots",
   locale: "es",
 });
@@ -18,26 +18,21 @@ export default function EsThursdayShotsPage() {
       <PageHero
         eyebrow="Jueves · 1 €"
         title="Chupitos a 1 € los jueves"
-        lead={`En ${SITE_NAME}, el jueves es la noche de los chupitos a 1 €. Pregunta en la barra al llegar.`}
+        lead="Los jueves tenemos chupitos a 1 €. Consulta en barra la selección disponible esa noche."
       />
-      <Section title="Por qué el jueves">
+      <Section title="El jueves en el pub">
         <p>
-          Chupitos a 1 € los jueves y a un paso de Sol — ambiente de pub
-          irlandés para grupos, gente del hostel o quien quiera una buena noche
-          en Madrid.
+          Los jueves tenemos chupitos a 1 €. Consulta en barra la selección
+          disponible esa noche.
         </p>
         <p>
-          La oferta de chupitos a 1 € es de los jueves, no de otros días.
-          No es una promesa de que cada bebida y cada hora salgan a 1 € —
-          pregunta en la barra qué se sirve.
+          {SITE_NAME} está en Calle de Espoz y Mina 7, a un paso de Puerta del
+          Sol. No se reservan mesas. Atendemos por orden de llegada.
         </p>
-      </Section>
-      <Section title="Información útil">
         <ul className="list-disc space-y-2 pl-5">
-          <li>Cerca de Sol — cómodo para grupos y viajeros.</li>
-          <li>Pregunta en la barra qué se sirve esa noche.</li>
+          <li>Solo los jueves.</li>
           <li>
-            Combínalo con un partido de la{" "}
+            El deporte confirmado está en la{" "}
             <Link href="/es/whats-on" className="text-gold underline">
               Agenda
             </Link>

@@ -19,7 +19,7 @@ export default function EsWhatsOnPage() {
     <PageShell locale="es" altLangHref="/whats-on">
       <PageHero
         eyebrow="Agenda"
-        title={`Esta semana en ${SITE_NAME}`}
+        title={`Próximos 7 días en ${SITE_NAME}`}
         lead="Todos los horarios están indicados en hora de Madrid. Los eventos marcados como ‘Confirmado’ tienen prevista su emisión en nuestras pantallas."
       />
 
@@ -30,7 +30,7 @@ export default function EsWhatsOnPage() {
           O&apos;Connell St es un pub irlandés junto a Puerta del Sol — Espoz y
           Mina 7. Retransmitimos grandes eventos deportivos en nuestras
           pantallas cuando están confirmados: fútbol, NFL, NBA, rugby, Fórmula 1,
-          tenis y más. Consulta la agenda de hoy y de esta semana, o pregunta en
+          tenis y más. Consulta Hoy y los próximos 7 días, o pregunta en
           la barra si buscas un evento concreto.
         </p>
       </Section>

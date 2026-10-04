@@ -18,20 +18,21 @@ export default function PremierLeaguePage() {
       <PageHero
         eyebrow="Premier League · Madrid"
         title={`Premier League at ${SITE_NAME}`}
-        lead="Premier League goes on the screens when that screening is confirmed. Times for this week are on What's On."
+        lead="Premier League at an Irish pub a short walk from Puerta del Sol. Confirmed kickoffs for the next 7 days are on What’s On."
       />
       <InteriorPhoto
         src="/images/interior/sports-corridor.webp"
         alt="Sports TVs at O'Connell St near Sol"
         position="object-[center_40%]"
       />
-      <Section title="This week's confirmed games">
+      <Section title="Confirmed Premier League games">
         <p>
-          We do not list a kick-off here unless the pub is showing it. Open{" "}
+          Saturday and Sunday Premier League matches are the usual plan, plus
+          the midweek games we are showing. Open{" "}
           <Link href="/whats-on" data-event="whats_on" className="text-cream underline">
             What&apos;s On
           </Link>{" "}
-          for confirmed times in Madrid, or ask at the bar.
+          for the Madrid times, or ask at the bar.
         </p>
         <p>
           Also{" "}

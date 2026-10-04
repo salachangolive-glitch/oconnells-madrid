@@ -1,13 +1,11 @@
 "use client";
 
-import Link from "next/link";
 import { useState } from "react";
 import { trackEvent } from "@/components/TrackClicks";
 import {
   buildContactSubject,
   CONTACT_REASONS,
 } from "@/lib/contact";
-import { PUBLIC_EMAIL } from "@/lib/venue";
 
 type Locale = "en" | "es";
 
@@ -15,7 +13,7 @@ const copy = {
   en: {
     name: "Name",
     email: "Email",
-    reason: "Reason for contact",
+    reason: "Reason",
     message: "Message",
     submit: "Send message",
     sending: "Sending…",
@@ -102,12 +100,12 @@ export function ContactForm({ locale = "en" }: { locale?: Locale }) {
     const payload: Record<string, string> = {
       access_key: accessKey,
       subject,
-      from_name: "O'Connell's Madrid",
-      replyto: PUBLIC_EMAIL,
+      from_name: "O'Connell St",
+      replyto: email,
       name,
       email,
       message:
-        `Venue: O'Connell's Madrid\n` +
+        `Venue: O'Connell St\n` +
         `Locale: ${locale}\n` +
         `Reason: ${reasonLabel}\n` +
         `Name: ${name}\n` +

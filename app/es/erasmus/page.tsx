@@ -6,9 +6,9 @@ import { buildMetadata } from "@/lib/seo";
 import { SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
-  title: "Noches Erasmus cerca de Sol",
+  title: "Erasmus y visitantes cerca de Sol",
   description:
-    "Pub irlandés a pocos pasos de Puerta del Sol para estudiantes y público internacional. Jueves: chupitos a 1 €. Agenda con deportes confirmados.",
+    "O'Connell St, junto a Puerta del Sol: pub irlandés con estudiantes Erasmus, turistas y gente de fuera. Espoz y Mina 7.",
   path: "/es/erasmus",
   locale: "es",
 });
@@ -17,17 +17,17 @@ export default function EsErasmusPage() {
   return (
     <PageShell locale="es" altLangHref="/erasmus">
       <PageHero
-        eyebrow="Erasmus · Internacionales"
-        title={`Tu noche en ${SITE_NAME}`}
-        lead="Si estás de Erasmus en Madrid, O'Connell St queda a un paso de Sol. Se entra, se pide en inglés si quieres, y si hay partido confirmado se ve en las pantallas."
+        eyebrow="Erasmus · Visitantes"
+        title={`Gente de fuera en ${SITE_NAME}`}
+        lead="Estudiantes Erasmus, turistas y gente de muchos países coinciden en este pub irlandés, a un paso de Puerta del Sol. Es una noche normal del bar, no una fiesta Erasmus aparte."
       />
       <ThursdayFeature locale="es" />
-      <Section title="Cómo es la noche">
+      <Section title="En el pub">
         <p>
-          Queda céntrico, así que todo el mundo encuentra la puerta. En la
-          barra se habla inglés. Las pantallas se encienden cuando el partido
-          está confirmado, no porque sí. Y los jueves los chupitos a 1 € dan
-          un plan — pregunta al llegar, por si esa noche hay algún matiz.
+          {SITE_NAME} está en Calle de Espoz y Mina 7. El ambiente es
+          internacional toda la semana. El deporte confirmado se ve en las
+          pantallas: mira la Agenda para las horas. Los jueves, pregunta en
+          la barra por los chupitos a 1 €.
         </p>
         <p>
           <Link href="/es/sports" className="text-gold underline">
