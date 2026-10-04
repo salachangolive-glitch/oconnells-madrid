@@ -10,7 +10,7 @@ type BuildMetaOpts = {
 
 export function absoluteUrl(path: string): string {
   const base = getSiteUrl();
-  if (path === "/") return base;
+  if (path === "/") return base.endsWith("/") ? base : `${base}/`;
   return `${base}${path.startsWith("/") ? path : `/${path}`}`;
 }
 
@@ -54,11 +54,20 @@ export function buildMetadata({
       siteName: `${SITE_NAME} Madrid`,
       locale: locale === "es" ? "es_ES" : "en_GB",
       type: "website",
+      images: [
+        {
+          url: "/og.jpg",
+          width: 1200,
+          height: 630,
+          alt: "O'Connell St Irish Pub Madrid",
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title: fullTitle,
       description,
+      images: ["/og.jpg"],
     },
     // Preview hosts, or NEXT_PUBLIC_FORCE_NOINDEX not explicitly false: noindex.
     // Canonical/hreflang/OG still use getSiteUrl() (custom domain when set).

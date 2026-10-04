@@ -17,7 +17,7 @@ import {
 export const metadata = buildMetadata({
   title: `${SITE_NAME} Madrid — Irish pub & sports bar near Sol`,
   description:
-    "Irish pub by Puerta del Sol with live sports on the screens and €1 shots on Thursdays. Calle de Espoz y Mina 7, Madrid.",
+    "Irish pub by Puerta del Sol with live sports, international crowd and €1 shots on Thursdays.",
   path: "/",
 });
 
