@@ -19,8 +19,6 @@ const copy = {
     sending: "Sending…",
     ok: "Thanks — we’ve received your message and will get back to you as soon as possible.",
     fail: "We couldn’t send that just now. Please try again in a moment.",
-    unavailable:
-      "The contact form is not available yet. Please try again later.",
     privacy:
       "We use your name, email, reason and message only to reply to this enquiry.",
     privacyHref: "/privacy",
@@ -36,8 +34,6 @@ const copy = {
     sending: "Enviando…",
     ok: "Gracias — hemos recibido tu mensaje y te responderemos lo antes posible.",
     fail: "No hemos podido enviarlo ahora. Inténtalo de nuevo en un momento.",
-    unavailable:
-      "El formulario no está disponible todavía. Prueba más tarde.",
     privacy:
       "Usamos tu nombre, email, motivo y mensaje solo para responder a esta consulta.",
     privacyHref: "/es/privacy",
@@ -51,7 +47,7 @@ const CONTACT_URL = "/api/contact";
 export function ContactForm({ locale = "en" }: { locale?: Locale }) {
   const t = copy[locale];
   const [status, setStatus] = useState<
-    "idle" | "sending" | "ok" | "fail" | "invalid" | "unavailable"
+    "idle" | "sending" | "ok" | "fail" | "invalid"
   >("idle");
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -93,7 +89,7 @@ export function ContactForm({ locale = "en" }: { locale?: Locale }) {
 
     const payload: Record<string, string> = {
       subject,
-      from_name: "O'Connell St",
+      from_name: "O'Connell St Madrid",
       replyto: email,
       name,
       email,
@@ -118,10 +114,6 @@ export function ContactForm({ locale = "en" }: { locale?: Locale }) {
       const data = (await res.json().catch(() => ({}))) as {
         success?: boolean;
       };
-      if (res.status === 503) {
-        setStatus("unavailable");
-        return;
-      }
       if (res.ok && data.success !== false) {
         trackEvent("form_submit");
         setStatus("ok");
@@ -243,11 +235,6 @@ export function ContactForm({ locale = "en" }: { locale?: Locale }) {
       {status === "fail" ? (
         <p className="text-sm text-cream-muted" role="alert">
           {t.fail}
-        </p>
-      ) : null}
-      {status === "unavailable" ? (
-        <p className="text-sm text-cream-muted" role="alert">
-          {t.unavailable}
         </p>
       ) : null}
     </form>

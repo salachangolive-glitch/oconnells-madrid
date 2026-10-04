@@ -1,9 +1,11 @@
 /**
- * Server-only contact proxy. The Web3Forms key stays in the Pages env
- * WEB3FORMS_ACCESS_KEY and is never written into the static site.
+ * Server-only contact proxy. The key is the Pages env
+ * NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY and is never written into the static site.
  */
 export async function onRequestPost(context) {
-  const key = context.env.WEB3FORMS_ACCESS_KEY;
+  const key =
+    context.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY ||
+    context.env.WEB3FORMS_ACCESS_KEY;
   if (!key) {
     return Response.json({ success: false }, { status: 503 });
   }
@@ -33,7 +35,7 @@ export async function onRequestPost(context) {
     body: JSON.stringify({
       access_key: key,
       subject,
-      from_name: "O'Connell St",
+      from_name: "O'Connell St Madrid",
       replyto: email,
       name,
       email,
