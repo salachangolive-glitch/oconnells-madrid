@@ -46,7 +46,7 @@ const copy = {
   },
 } as const;
 
-const WEB3FORMS_URL = "https://api.web3forms.com/submit";
+const CONTACT_URL = "/api/contact";
 
 export function ContactForm({ locale = "en" }: { locale?: Locale }) {
   const t = copy[locale];
@@ -83,12 +83,6 @@ export function ContactForm({ locale = "en" }: { locale?: Locale }) {
       return;
     }
 
-    const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
-    if (!accessKey) {
-      setStatus("unavailable");
-      return;
-    }
-
     setStatus("sending");
 
     const reasonLabel =
@@ -98,7 +92,6 @@ export function ContactForm({ locale = "en" }: { locale?: Locale }) {
     const subject = buildContactSubject(reason, name, locale);
 
     const payload: Record<string, string> = {
-      access_key: accessKey,
       subject,
       from_name: "O'Connell St",
       replyto: email,
@@ -114,7 +107,7 @@ export function ContactForm({ locale = "en" }: { locale?: Locale }) {
     };
 
     try {
-      const res = await fetch(WEB3FORMS_URL, {
+      const res = await fetch(CONTACT_URL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -125,6 +118,10 @@ export function ContactForm({ locale = "en" }: { locale?: Locale }) {
       const data = (await res.json().catch(() => ({}))) as {
         success?: boolean;
       };
+      if (res.status === 503) {
+        setStatus("unavailable");
+        return;
+      }
       if (res.ok && data.success !== false) {
         trackEvent("form_submit");
         setStatus("ok");
@@ -138,7 +135,7 @@ export function ContactForm({ locale = "en" }: { locale?: Locale }) {
   }
 
   return (
-    <form onSubmit={onSubmit} className="mx-auto max-w-xl space-y-5" noValidate>
+    <form onSubmit={onSubmit} className="mx-auto max-w-xl space-y-5" noValidate autoComplete="off">
       {/* Honeypot */}
       <div className="absolute -left-[9999px] opacity-0" aria-hidden="true">
         <label>
@@ -154,6 +151,7 @@ export function ContactForm({ locale = "en" }: { locale?: Locale }) {
         <input
           id="c-name"
           name="name"
+          autoComplete="off"
           required
           maxLength={120}
           className="w-full border border-gold/30 bg-black/40 px-3 py-2.5 text-cream outline-none focus:border-gold"
@@ -168,6 +166,7 @@ export function ContactForm({ locale = "en" }: { locale?: Locale }) {
           id="c-email"
           name="email"
           type="email"
+          autoComplete="off"
           required
           maxLength={200}
           className="w-full border border-gold/30 bg-black/40 px-3 py-2.5 text-cream outline-none focus:border-gold"
@@ -203,6 +202,7 @@ export function ContactForm({ locale = "en" }: { locale?: Locale }) {
         <textarea
           id="c-message"
           name="message"
+          autoComplete="off"
           required
           rows={6}
           minLength={10}

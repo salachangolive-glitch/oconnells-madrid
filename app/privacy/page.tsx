@@ -12,7 +12,7 @@ import {
 export const metadata = buildMetadata({
   title: "Privacy — O'Connell St Madrid",
   description:
-    "Privacy notice for the O'Connell St website: contact form only. No shop, bookings or payments. Owner details pending.",
+    "Privacy notice for the O'Connell St website: contact form only. No shop, bookings or payments.",
   path: "/privacy",
 });
 
@@ -36,7 +36,6 @@ export default function PrivacyPage() {
           </a>
           .
         </p>
-        <p>Owner details pending.</p>
       </Section>
       <Section title="Contact form">
         <p>

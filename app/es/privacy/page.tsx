@@ -12,7 +12,7 @@ import {
 export const metadata = buildMetadata({
   title: "Privacidad — O'Connell St Madrid",
   description:
-    "Aviso de privacidad de la web de O'Connell St: solo el formulario de contacto. Sin tienda, reservas ni pagos. Titular pendiente.",
+    "Aviso de privacidad de la web de O'Connell St: solo el formulario de contacto. Sin tienda, reservas ni pagos.",
   path: "/es/privacy",
   locale: "es",
 });
@@ -37,7 +37,6 @@ export default function EsPrivacyPage() {
           </a>
           .
         </p>
-        <p>Pendiente de completar con los datos del titular.</p>
       </Section>
       <Section title="Formulario de contacto">
         <p>
