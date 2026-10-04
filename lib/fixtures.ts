@@ -43,9 +43,10 @@ export type Fixture = {
  * Liga F Clásico moved 17:00 → 19:00 (Liga F comunicado, rain).
  * UFC Allen–Duncan main card 02:00 Madrid (UFC.com Sat 20:00 EDT), not 01:00.
  * Added PL still inside doors (premierleague.com, BST+1) and Elche–Celta
- * 14:00 (LaLiga ISO 12:00Z). F1 Singapore race is 14:00 Sunday (20:00 SGT);
- * other Singapore sessions are before doors, and the card format is a vs row,
- * so the race is not forced into a fake opponent.
+ * 14:00 (LaLiga ISO 12:00Z). F1 Singapore Grand Prix only: Sunday 11 Oct
+ * 20:00–22:00 SGT (formula1.com) = 14:00 Madrid. Practice, sprint and
+ * qualifying start while the pub is closed, so they stay off the list.
+ * Empty awayTeam means the card is the race name, not a fake opponent.
  */
 export const FIXTURES: Fixture[] = [
   { id: "2026-10-04-bills-patriots", competition: "NFL", homeTeam: "Buffalo Bills", awayTeam: "New England Patriots", date: "2026-10-04", kickoffMadrid: "19:00" },
@@ -88,6 +89,7 @@ export const FIXTURES: Fixture[] = [
   { id: "2026-10-10-madrid-villarreal", competition: "LaLiga", homeTeam: "Real Madrid", awayTeam: "Villarreal", date: "2026-10-10", kickoffMadrid: "21:00" },
   { id: "2026-10-11-ufc-allen-duncan", competition: "UFC", homeTeam: "Allen", awayTeam: "Duncan", date: "2026-10-11", kickoffMadrid: "02:00" },
   { id: "2026-10-11-elche-celta", competition: "LaLiga", homeTeam: "Elche", awayTeam: "Celta", date: "2026-10-11", kickoffMadrid: "14:00" },
+  { id: "2026-10-11-singapore-gp", competition: "Formula 1", homeTeam: "Singapore Grand Prix", awayTeam: "", date: "2026-10-11", kickoffMadrid: "14:00" },
   { id: "2026-10-11-palace-forest", competition: "Premier League", homeTeam: "Crystal Palace", awayTeam: "Nottingham Forest", date: "2026-10-11", kickoffMadrid: "15:00" },
   { id: "2026-10-11-hull-everton", competition: "Premier League", homeTeam: "Hull City", awayTeam: "Everton", date: "2026-10-11", kickoffMadrid: "15:00" },
   { id: "2026-10-11-sociedad-deportivo", competition: "LaLiga", homeTeam: "Real Sociedad", awayTeam: "RC Deportivo", date: "2026-10-11", kickoffMadrid: "16:15" },
@@ -241,6 +243,22 @@ export function displayCompetition(name: string): string {
   if (name === "Championship") return "EFL Championship";
   if (name === "Premiership") return "Premiership Rugby";
   return name;
+}
+
+
+/** Race rows store the event name in homeTeam and leave awayTeam empty. */
+export function fixtureMatchLabel(f: Fixture, locale: "en" | "es"): string {
+  const home = displayTeam(f.homeTeam, locale);
+  const away = f.awayTeam.trim();
+  if (!away) return home;
+  return `${home} vs ${displayTeam(away, locale)}`;
+}
+
+/** Existing door policy. Shown on each Confirmed card. */
+export function screenPolicyLine(locale: "en" | "es"): string {
+  return locale === "es"
+    ? "En las pantallas. Sin reserva, por orden de llegada."
+    : "On the screens. No booking — first come.";
 }
 
 export function formatFixtureDay(date: string, locale: "en" | "es" = "en"): string {

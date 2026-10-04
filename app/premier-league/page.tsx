@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { InteriorPhoto } from "@/components/InteriorPhoto";
+import { PremierLeagueLines } from "@/components/PremierLeagueLines";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
 import { buildMetadata } from "@/lib/seo";
@@ -34,6 +35,7 @@ export default function PremierLeaguePage() {
           </Link>{" "}
           for the Madrid times, or ask at the bar.
         </p>
+        <PremierLeagueLines locale="en" />
         <p>
           Also{" "}
           <Link href="/champions-league" className="text-cream underline">

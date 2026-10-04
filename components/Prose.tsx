@@ -7,7 +7,7 @@ export function PageHero({
 }: {
   eyebrow?: string;
   title: string;
-  lead?: string;
+  lead?: React.ReactNode;
 }) {
   return (
     <header className="mb-8 max-w-3xl">

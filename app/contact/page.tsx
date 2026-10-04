@@ -18,7 +18,16 @@ export default function ContactPage() {
       <PageHero
         eyebrow="Contact"
         title={`Contact ${SITE_NAME}`}
-        lead="Send a message via the form, or email us directly. We’ll get back to you as soon as we can."
+        lead={
+          <>
+            A match is answered on{" "}
+            <Link href="/whats-on" className="text-cream underline">
+              What&apos;s On
+            </Link>
+            , not by this form. Send a message via the form, or email us
+            directly. We’ll get back to you as soon as we can.
+          </>
+        }
       />
       <p className="mb-8 text-sm text-cream-muted">
         Email{" "}

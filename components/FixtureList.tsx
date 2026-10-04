@@ -4,8 +4,9 @@ import { useMemo } from "react";
 import {
   FIXTURES,
   displayCompetition,
-  displayTeam,
+  fixtureMatchLabel,
   formatFixtureDay,
+  screenPolicyLine,
   getTonightFixtures,
   getUpcomingFixtures,
   isConfirmedFixture,
@@ -32,8 +33,6 @@ const EMPTY = {
 function FixtureDetail({ f, locale }: { f: Fixture; locale: Locale }) {
   const isEs = locale === "es";
   const competition = displayCompetition(f.competition);
-  const home = displayTeam(f.homeTeam, locale);
-  const away = displayTeam(f.awayTeam, locale);
   return (
     <li>
       <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-gold">
@@ -45,7 +44,7 @@ function FixtureDetail({ f, locale }: { f: Fixture; locale: Locale }) {
         ) : null}
       </p>
       <p className="mt-1 font-serif text-2xl font-bold text-cream">
-        {home} vs {away}
+        {fixtureMatchLabel(f, locale)}
       </p>
       <p className="mt-2 text-cream-muted">
         {formatFixtureDay(f.date, locale)}
@@ -53,6 +52,9 @@ function FixtureDetail({ f, locale }: { f: Fixture; locale: Locale }) {
           ? ` · ${f.kickoffMadrid} ${isEs ? "hora Madrid" : "Madrid"}`
           : null}
       </p>
+      {f.kickoffMadrid ? (
+        <p className="mt-2 text-sm text-cream-muted">{screenPolicyLine(locale)}</p>
+      ) : null}
       <p className="mt-4">
         <a
           href={MAPS_URL}
@@ -79,10 +81,15 @@ function ComingUpRow({ f, locale }: { f: Fixture; locale: Locale }) {
         </span>
       ) : null}
       {" — "}
-      {displayTeam(f.homeTeam, locale)} vs {displayTeam(f.awayTeam, locale)}
+      {fixtureMatchLabel(f, locale)}
       {" · "}
       {formatFixtureDay(f.date, locale)}
       {f.kickoffMadrid ? ` · ${f.kickoffMadrid}` : null}
+      {f.kickoffMadrid ? (
+        <span className="mt-1 block text-sm text-cream-muted">
+          {screenPolicyLine(locale)}
+        </span>
+      ) : null}
     </li>
   );
 }

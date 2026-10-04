@@ -19,7 +19,17 @@ export default function EsContactPage() {
       <PageHero
         eyebrow="Contacto"
         title={`Contacto ${SITE_NAME}`}
-        lead="Escríbenos por el formulario o por email si tienes dudas sobre el pub, un grupo, una noche de deporte o un evento. Te responderemos lo antes posible."
+        lead={
+          <>
+            Un partido se responde en la{" "}
+            <Link href="/es/whats-on" className="text-cream underline">
+              Agenda
+            </Link>
+            , no con este formulario. Escríbenos por el formulario o por email
+            si tienes otra duda sobre el pub, un grupo o un evento. Te
+            responderemos lo antes posible.
+          </>
+        }
       />
       <p className="mb-8 text-sm text-cream-muted">
         Email{" "}

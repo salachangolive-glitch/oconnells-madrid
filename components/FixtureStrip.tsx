@@ -4,12 +4,14 @@ import Link from "next/link";
 import { useMemo } from "react";
 import {
   displayCompetition,
-  displayTeam,
+  fixtureMatchLabel,
   formatFixtureDay,
   getUpcomingFixtures,
   madridTodayYmd,
+  screenPolicyLine,
   type Fixture,
 } from "@/lib/fixtures";
+import { PremierLeagueLines } from "@/components/PremierLeagueLines";
 import { MAPS_URL } from "@/lib/venue";
 import { useMadridNow } from "@/components/useMadridNow";
 
@@ -28,11 +30,7 @@ function FixtureRow({ f, locale }: { f: Fixture; locale: Locale }) {
         ) : null}
       </p>
       <h3 className="mt-1 font-serif text-xl font-bold text-cream sm:text-2xl">
-        {displayTeam(f.homeTeam, locale)}{" "}
-        <span className="font-sans text-sm font-normal text-cream-muted">
-          vs
-        </span>{" "}
-        {displayTeam(f.awayTeam, locale)}
+        {fixtureMatchLabel(f, locale)}
       </h3>
       <p className="mt-1 text-sm text-cream-muted">
         {formatFixtureDay(f.date, locale)}
@@ -40,6 +38,9 @@ function FixtureRow({ f, locale }: { f: Fixture; locale: Locale }) {
           ? ` · ${f.kickoffMadrid} ${isEs ? "hora Madrid" : "Madrid"}`
           : null}
       </p>
+      {f.kickoffMadrid ? (
+        <p className="mt-1 text-sm text-cream-muted">{screenPolicyLine(locale)}</p>
+      ) : null}
     </article>
   );
 }
@@ -93,6 +94,7 @@ export function FixtureStrip({ locale = "en" }: { locale?: Locale }) {
       ) : (
         <p className="text-cream-muted">{empty}</p>
       )}
+      <PremierLeagueLines locale={locale} />
       <p className="mt-7">
         <a
           href={MAPS_URL}
