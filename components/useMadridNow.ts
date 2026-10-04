@@ -7,7 +7,7 @@ import { useSyncExternalStore } from "react";
  * The client snapshot then moves to the real clock and drops kickoffs
  * that have already started.
  */
-const BUILD_MS = 1791098943075;
+const BUILD_MS = 1791106059233;
 
 let cached = 0;
 

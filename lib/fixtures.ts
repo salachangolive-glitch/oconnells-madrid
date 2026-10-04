@@ -177,9 +177,10 @@ export function addMadridDays(ymd: string, days: number): string {
   return madridTodayYmd(new Date(noon + days * 24 * 60 * 60 * 1000));
 }
 
-/** Inclusive window: today through the sixth day ahead (7 Madrid dates). */
+/** Inclusive window: today through the seventh day ahead (8 Madrid dates).
+ * Sunday refresh needs Mon→Sun of the coming week visible the same day. */
 export function agendaWindowEnd(today: string): string {
-  return addMadridDays(today, 6);
+  return addMadridDays(today, 7);
 }
 
 function byKickoff(a: Fixture, b: Fixture): number {
