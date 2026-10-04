@@ -88,9 +88,9 @@ function ComingUpRow({ f, locale }: { f: Fixture; locale: Locale }) {
 }
 
 /**
- * Today / Next 7 days. Static HTML does not guess "today" (that would freeze
- * the build clock). After mount, Europe/Madrid now hides kickoffs that have
- * already started and keeps the next 7 Madrid dates.
+ * Today / Next 7 days. The static HTML uses the deploy clock so confirmed
+ * rows are visible without waiting for JavaScript. After mount, Europe/Madrid
+ * now hides kickoffs that have already started.
  */
 export function FixtureList({ locale = "en" }: { locale?: Locale }) {
   const isEs = locale === "es";

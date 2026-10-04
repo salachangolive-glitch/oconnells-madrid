@@ -45,8 +45,8 @@ function FixtureRow({ f, locale }: { f: Fixture; locale: Locale }) {
 }
 
 /**
- * Home / Sports strip — client Madrid date so past rows never stick as "upcoming".
- * SSR shows neutral empty copy until hydrate (no build-time fixture rows).
+ * Home / Sports strip. Static HTML uses the deploy clock. After mount,
+ * Europe/Madrid now hides kickoffs that have already started.
  */
 export function FixtureStrip({ locale = "en" }: { locale?: Locale }) {
   const isEs = locale === "es";
