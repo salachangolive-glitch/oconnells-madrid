@@ -3,11 +3,12 @@
 import { useSyncExternalStore } from "react";
 
 /**
- * Frozen at deploy so the static HTML and the hydration snapshot match.
- * The client snapshot then moves to the real clock and drops kickoffs
- * that have already started.
+ * Build clock, inlined by next.config.ts at build time, so the static HTML
+ * and the hydration snapshot match and every rebuild is current. The client
+ * snapshot then moves to the real clock and drops kickoffs that have
+ * already started.
  */
-const BUILD_MS = 1791188684972;
+const BUILD_MS = Number(process.env.OCONNELL_BUILD_MS) || Date.now();
 
 let cached = 0;
 
