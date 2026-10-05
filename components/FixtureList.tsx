@@ -55,6 +55,9 @@ function FixtureDetail({ f, locale }: { f: Fixture; locale: Locale }) {
       {f.kickoffMadrid ? (
         <p className="mt-2 text-sm text-cream-muted">{screenPolicyLine(locale)}</p>
       ) : null}
+      {f.line?.[locale] ? (
+        <p className="mt-2 text-sm text-cream">{f.line[locale]}</p>
+      ) : null}
       <p className="mt-4">
         <a
           href={MAPS_URL}
@@ -89,6 +92,9 @@ function ComingUpRow({ f, locale }: { f: Fixture; locale: Locale }) {
         <span className="mt-1 block text-sm text-cream-muted">
           {screenPolicyLine(locale)}
         </span>
+      ) : null}
+      {f.line?.[locale] ? (
+        <span className="mt-1 block text-sm text-cream">{f.line[locale]}</span>
       ) : null}
     </li>
   );

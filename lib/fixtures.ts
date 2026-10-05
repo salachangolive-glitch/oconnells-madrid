@@ -34,6 +34,8 @@ export type Fixture = {
    */
   kickoffMadrid?: string;
   note?: string;
+  /** Optional short public line under the row, per locale (omit a locale to show nothing there). */
+  line?: { en?: string; es?: string };
 };
 
 /**
@@ -49,6 +51,9 @@ export type Fixture = {
  * Added Mon 12: Coventry–Newcastle 20:00 UK = 21:00 (PL), Levante–Sevilla
  * 21:00 (LaLiga jornada 8 horarios).
  * F1 Singapore Grand Prix only: Sunday 11 Oct 20:00 SGT = 14:00 Madrid.
+ * Added Tue 13: Atlético–Man United, UCL league phase MD2, 21:00, Riyadh Air
+ * Metropolitano (atleticodemadrid.com, manutd.com). Owner confirmed Movistar+
+ * on 5 Oct. Shows once the 7-day window reaches it (Tue 6).
  * Empty awayTeam means the card is the race name, not a fake opponent.
  */
 export const FIXTURES: Fixture[] = [
@@ -97,6 +102,7 @@ export const FIXTURES: Fixture[] = [
   { id: "2026-10-12-falcons-ravens", competition: "NFL", homeTeam: "Atlanta Falcons", awayTeam: "Baltimore Ravens", date: "2026-10-12", kickoffMadrid: "02:20" },
   { id: "2026-10-12-coventry-newcastle", competition: "Premier League", homeTeam: "Coventry City", awayTeam: "Newcastle United", date: "2026-10-12", kickoffMadrid: "21:00" },
   { id: "2026-10-12-levante-sevilla", competition: "LaLiga", homeTeam: "Levante", awayTeam: "Sevilla", date: "2026-10-12", kickoffMadrid: "21:00" },
+  { id: "2026-10-13-atletico-manutd", competition: "UEFA Champions League", homeTeam: "Atlético Madrid", awayTeam: "Manchester United", date: "2026-10-13", kickoffMadrid: "21:00", note: "League phase MD2, Riyadh Air Metropolitano", line: { en: "Travelling United fans: watch it with us at O'Connell St, a few minutes from Sol." } },
 ];
 
 export const RECURRING = {
