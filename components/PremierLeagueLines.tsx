@@ -23,8 +23,8 @@ export function PremierLeagueLines({ locale }: { locale: Locale }) {
     <div className="mt-4">
       <p>
         {isEs
-          ? "Premier League confirmada este fin de semana, hora de Madrid:"
-          : "Confirmed Premier League this weekend, Madrid time:"}
+          ? "Premier League confirmada esta jornada, hora de Madrid:"
+          : "Confirmed Premier League this round, Madrid time:"}
       </p>
       <ul className="mt-3 space-y-2">
         {rows.map((f) => (
