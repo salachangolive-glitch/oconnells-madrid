@@ -40,42 +40,31 @@ export type Fixture = {
 
 /**
  * Confirmed screenings.
- * Delta 2026-10-06 ~12:00 Madrid. Aligned to Radar ligera 2026-10-06.
- * Removed Radar-Tentative (channel not published): Elche–Celta, R. Sociedad–
- * Deportivo, Betis–Osasuna, Racing–Valencia (Sun 11), Levante–Sevilla (Mon 12),
- * Man United–Tottenham (Sat 10 18:30), Crystal Palace–Forest and Hull–Everton
- * (Sun 11 15:00), Coventry–Newcastle (Mon 12), Jaguars–Eagles London (Sun 11).
- * Removed stale past rows (Fri 5 Nations League).
- * Added Radar-Confirmed missing: Rayo–Athletic (Sat 10 14:00 LaLiga),
- * Galatasaray–Barcelona / Villarreal–Napoli / Arsenal–Lille / Inter–Club Brugge
- * (Tue 13 21:00 UCL MD2). Kept non-Radar rows (EuroLeague, Bundesliga, Ligue 1,
- * Serie A, URC, Premiership, Championship, NFL US, UFC, other PL 16:00) unchanged.
- * Empty awayTeam means the card is the race name, not a fake opponent.
+ * Delta 2026-10-06 ~12:15 Madrid. Radar ligera + verificación emisión ES.
+ * Radar Tentative already removed. Non-Radar rows kept ONLY with published
+ * Spanish broadcaster (Movistar Plus+ / DAZN / HBO Max Deportes) + source URL;
+ * see /workspace/oconnell-agenda-radar-2026-10-06/VERIFICACION-EMISION.md.
+ * Removed: URC (no ES channel 26/27), EFL Championship (no ES rights found),
+ * NFL Saints–Falcons (past kickoff). Empty awayTeam = race name.
  */
 export const FIXTURES: Fixture[] = [
-  { id: "2026-10-06-falcons-saints", competition: "NFL", homeTeam: "New Orleans Saints", awayTeam: "Atlanta Falcons", date: "2026-10-06", kickoffMadrid: "02:15" },
   { id: "2026-10-06-croatia-spain", competition: "UEFA Nations League", homeTeam: "Croatia", awayTeam: "Spain", date: "2026-10-06", kickoffMadrid: "20:45" },
   { id: "2026-10-06-england-czechia", competition: "UEFA Nations League", homeTeam: "England", awayTeam: "Czechia", date: "2026-10-06", kickoffMadrid: "20:45" },
   { id: "2026-10-08-madrid-partizan", competition: "EuroLeague", homeTeam: "Real Madrid", awayTeam: "Partizan", date: "2026-10-08", kickoffMadrid: "20:45" },
   { id: "2026-10-09-cowboys-buccaneers", competition: "NFL", homeTeam: "Dallas Cowboys", awayTeam: "Tampa Bay Buccaneers", date: "2026-10-09", kickoffMadrid: "02:15" },
   { id: "2026-10-09-barca-zalgiris", competition: "EuroLeague", homeTeam: "Barcelona", awayTeam: "Žalgiris", date: "2026-10-09", kickoffMadrid: "20:30" },
   { id: "2026-10-09-dortmund-werder", competition: "Bundesliga", homeTeam: "Dortmund", awayTeam: "Werder Bremen", date: "2026-10-09", kickoffMadrid: "20:30" },
-  { id: "2026-10-09-glasgow-connacht", competition: "United Rugby Championship", homeTeam: "Glasgow", awayTeam: "Connacht", date: "2026-10-09", kickoffMadrid: "20:45" },
   { id: "2026-10-09-lens-lyon", competition: "Ligue 1", homeTeam: "Lens", awayTeam: "Lyon", date: "2026-10-09", kickoffMadrid: "20:45" },
   { id: "2026-10-09-malaga-espanyol", competition: "LaLiga", homeTeam: "Málaga", awayTeam: "Espanyol", date: "2026-10-09", kickoffMadrid: "21:00" },
-  { id: "2026-10-09-westham-qpr", competition: "Championship", homeTeam: "West Ham", awayTeam: "QPR", date: "2026-10-09", kickoffMadrid: "21:00" },
   { id: "2026-10-10-rayo-athletic", competition: "LaLiga", homeTeam: "Rayo Vallecano", awayTeam: "Athletic Club", date: "2026-10-10", kickoffMadrid: "14:00" },
   { id: "2026-10-10-chelsea-bournemouth", competition: "Premier League", homeTeam: "Chelsea", awayTeam: "Bournemouth", date: "2026-10-10", kickoffMadrid: "16:00" },
   { id: "2026-10-10-villa-brentford", competition: "Premier League", homeTeam: "Aston Villa", awayTeam: "Brentford", date: "2026-10-10", kickoffMadrid: "16:00" },
   { id: "2026-10-10-ipswich-fulham", competition: "Premier League", homeTeam: "Ipswich", awayTeam: "Fulham", date: "2026-10-10", kickoffMadrid: "16:00" },
   { id: "2026-10-10-sunderland-brighton", competition: "Premier League", homeTeam: "Sunderland", awayTeam: "Brighton", date: "2026-10-10", kickoffMadrid: "16:00" },
-  { id: "2026-10-10-derby-wrexham", competition: "Championship", homeTeam: "Derby", awayTeam: "Wrexham", date: "2026-10-10", kickoffMadrid: "16:00" },
   { id: "2026-10-10-northampton-bath", competition: "Premiership", homeTeam: "Northampton", awayTeam: "Bath", date: "2026-10-10", kickoffMadrid: "16:05" },
   { id: "2026-10-10-alaves-atletico", competition: "LaLiga", homeTeam: "Alavés", awayTeam: "Atlético Madrid", date: "2026-10-10", kickoffMadrid: "16:15" },
   { id: "2026-10-10-inter-parma", competition: "Serie A", homeTeam: "Inter", awayTeam: "Parma", date: "2026-10-10", kickoffMadrid: "18:00" },
   { id: "2026-10-10-barcelona-getafe", competition: "LaLiga", homeTeam: "Barcelona", awayTeam: "Getafe", date: "2026-10-10", kickoffMadrid: "18:30" },
-  { id: "2026-10-10-ulster-munster", competition: "United Rugby Championship", homeTeam: "Ulster", awayTeam: "Munster", date: "2026-10-10", kickoffMadrid: "18:30" },
-  { id: "2026-10-10-leinster-cardiff", competition: "United Rugby Championship", homeTeam: "Leinster", awayTeam: "Cardiff", date: "2026-10-10", kickoffMadrid: "20:45" },
   { id: "2026-10-10-psg-lemans", competition: "Ligue 1", homeTeam: "PSG", awayTeam: "Le Mans", date: "2026-10-10", kickoffMadrid: "20:45" },
   { id: "2026-10-10-madrid-villarreal", competition: "LaLiga", homeTeam: "Real Madrid", awayTeam: "Villarreal", date: "2026-10-10", kickoffMadrid: "21:00" },
   { id: "2026-10-11-ufc-allen-duncan", competition: "UFC", homeTeam: "Allen", awayTeam: "Duncan", date: "2026-10-11", kickoffMadrid: "02:00" },
