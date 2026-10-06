@@ -40,25 +40,19 @@ export type Fixture = {
 
 /**
  * Confirmed screenings.
- * Delta 2026-10-05 ~10:30 Madrid. Window Mon 5 through Mon 12.
- * Removed finished Sun 4 rows and Lions–Panthers (Mon 5 02:20).
- * Reconfirmed Real Madrid–Partizan Thu 8 20:45 (realmadrid.com, Movistar Arena)
- * and NL Mon 5 / Tue 6 20:45.
- * Added NFL Week 5 from the NFL final schedule (media.nfl.com, 29 Sep, ET+6):
- * TNF Bucs at Cowboys 02:15 Fri 9, London Eagles at Jaguars 15:30, Bears at
- * Packers moved to 13:00 ET = 19:00, Raiders at Patriots and Giants at
- * Commanders 19:00, 49ers at Seahawks 22:25, SNF Ravens at Falcons 02:20 Mon 12.
- * Added Mon 12: Coventry–Newcastle 20:00 UK = 21:00 (PL), Levante–Sevilla
- * 21:00 (LaLiga jornada 8 horarios).
- * F1 Singapore Grand Prix only: Sunday 11 Oct 20:00 SGT = 14:00 Madrid.
- * Added Tue 13: Atlético–Man United, UCL league phase MD2, 21:00, Riyadh Air
- * Metropolitano (atleticodemadrid.com, manutd.com). Owner confirmed Movistar+
- * on 5 Oct. Shows once the 7-day window reaches it (Tue 6).
+ * Delta 2026-10-06 ~12:00 Madrid. Aligned to Radar ligera 2026-10-06.
+ * Removed Radar-Tentative (channel not published): Elche–Celta, R. Sociedad–
+ * Deportivo, Betis–Osasuna, Racing–Valencia (Sun 11), Levante–Sevilla (Mon 12),
+ * Man United–Tottenham (Sat 10 18:30), Crystal Palace–Forest and Hull–Everton
+ * (Sun 11 15:00), Coventry–Newcastle (Mon 12), Jaguars–Eagles London (Sun 11).
+ * Removed stale past rows (Fri 5 Nations League).
+ * Added Radar-Confirmed missing: Rayo–Athletic (Sat 10 14:00 LaLiga),
+ * Galatasaray–Barcelona / Villarreal–Napoli / Arsenal–Lille / Inter–Club Brugge
+ * (Tue 13 21:00 UCL MD2). Kept non-Radar rows (EuroLeague, Bundesliga, Ligue 1,
+ * Serie A, URC, Premiership, Championship, NFL US, UFC, other PL 16:00) unchanged.
  * Empty awayTeam means the card is the race name, not a fake opponent.
  */
 export const FIXTURES: Fixture[] = [
-  { id: "2026-10-05-france-belgium", competition: "UEFA Nations League", homeTeam: "France", awayTeam: "Belgium", date: "2026-10-05", kickoffMadrid: "20:45" },
-  { id: "2026-10-05-italy-turkey", competition: "UEFA Nations League", homeTeam: "Italy", awayTeam: "Turkey", date: "2026-10-05", kickoffMadrid: "20:45" },
   { id: "2026-10-06-falcons-saints", competition: "NFL", homeTeam: "New Orleans Saints", awayTeam: "Atlanta Falcons", date: "2026-10-06", kickoffMadrid: "02:15" },
   { id: "2026-10-06-croatia-spain", competition: "UEFA Nations League", homeTeam: "Croatia", awayTeam: "Spain", date: "2026-10-06", kickoffMadrid: "20:45" },
   { id: "2026-10-06-england-czechia", competition: "UEFA Nations League", homeTeam: "England", awayTeam: "Czechia", date: "2026-10-06", kickoffMadrid: "20:45" },
@@ -70,6 +64,7 @@ export const FIXTURES: Fixture[] = [
   { id: "2026-10-09-lens-lyon", competition: "Ligue 1", homeTeam: "Lens", awayTeam: "Lyon", date: "2026-10-09", kickoffMadrid: "20:45" },
   { id: "2026-10-09-malaga-espanyol", competition: "LaLiga", homeTeam: "Málaga", awayTeam: "Espanyol", date: "2026-10-09", kickoffMadrid: "21:00" },
   { id: "2026-10-09-westham-qpr", competition: "Championship", homeTeam: "West Ham", awayTeam: "QPR", date: "2026-10-09", kickoffMadrid: "21:00" },
+  { id: "2026-10-10-rayo-athletic", competition: "LaLiga", homeTeam: "Rayo Vallecano", awayTeam: "Athletic Club", date: "2026-10-10", kickoffMadrid: "14:00" },
   { id: "2026-10-10-chelsea-bournemouth", competition: "Premier League", homeTeam: "Chelsea", awayTeam: "Bournemouth", date: "2026-10-10", kickoffMadrid: "16:00" },
   { id: "2026-10-10-villa-brentford", competition: "Premier League", homeTeam: "Aston Villa", awayTeam: "Brentford", date: "2026-10-10", kickoffMadrid: "16:00" },
   { id: "2026-10-10-ipswich-fulham", competition: "Premier League", homeTeam: "Ipswich", awayTeam: "Fulham", date: "2026-10-10", kickoffMadrid: "16:00" },
@@ -80,29 +75,23 @@ export const FIXTURES: Fixture[] = [
   { id: "2026-10-10-inter-parma", competition: "Serie A", homeTeam: "Inter", awayTeam: "Parma", date: "2026-10-10", kickoffMadrid: "18:00" },
   { id: "2026-10-10-barcelona-getafe", competition: "LaLiga", homeTeam: "Barcelona", awayTeam: "Getafe", date: "2026-10-10", kickoffMadrid: "18:30" },
   { id: "2026-10-10-ulster-munster", competition: "United Rugby Championship", homeTeam: "Ulster", awayTeam: "Munster", date: "2026-10-10", kickoffMadrid: "18:30" },
-  { id: "2026-10-10-united-tottenham", competition: "Premier League", homeTeam: "Manchester United", awayTeam: "Tottenham", date: "2026-10-10", kickoffMadrid: "18:30" },
   { id: "2026-10-10-leinster-cardiff", competition: "United Rugby Championship", homeTeam: "Leinster", awayTeam: "Cardiff", date: "2026-10-10", kickoffMadrid: "20:45" },
   { id: "2026-10-10-psg-lemans", competition: "Ligue 1", homeTeam: "PSG", awayTeam: "Le Mans", date: "2026-10-10", kickoffMadrid: "20:45" },
   { id: "2026-10-10-madrid-villarreal", competition: "LaLiga", homeTeam: "Real Madrid", awayTeam: "Villarreal", date: "2026-10-10", kickoffMadrid: "21:00" },
   { id: "2026-10-11-ufc-allen-duncan", competition: "UFC", homeTeam: "Allen", awayTeam: "Duncan", date: "2026-10-11", kickoffMadrid: "02:00" },
-  { id: "2026-10-11-elche-celta", competition: "LaLiga", homeTeam: "Elche", awayTeam: "Celta", date: "2026-10-11", kickoffMadrid: "14:00" },
   { id: "2026-10-11-singapore-gp", competition: "Formula 1", homeTeam: "Singapore Grand Prix", awayTeam: "", date: "2026-10-11", kickoffMadrid: "14:00" },
-  { id: "2026-10-11-jaguars-eagles", competition: "NFL", homeTeam: "Jacksonville Jaguars", awayTeam: "Philadelphia Eagles", date: "2026-10-11", kickoffMadrid: "15:30", note: "London" },
-  { id: "2026-10-11-palace-forest", competition: "Premier League", homeTeam: "Crystal Palace", awayTeam: "Nottingham Forest", date: "2026-10-11", kickoffMadrid: "15:00" },
-  { id: "2026-10-11-hull-everton", competition: "Premier League", homeTeam: "Hull City", awayTeam: "Everton", date: "2026-10-11", kickoffMadrid: "15:00" },
-  { id: "2026-10-11-sociedad-deportivo", competition: "LaLiga", homeTeam: "Real Sociedad", awayTeam: "RC Deportivo", date: "2026-10-11", kickoffMadrid: "16:15" },
   { id: "2026-10-11-liverpool-mancity", competition: "Premier League", homeTeam: "Liverpool", awayTeam: "Manchester City", date: "2026-10-11", kickoffMadrid: "17:30" },
-  { id: "2026-10-11-betis-osasuna", competition: "LaLiga", homeTeam: "Real Betis", awayTeam: "Osasuna", date: "2026-10-11", kickoffMadrid: "18:30" },
   { id: "2026-10-11-packers-bears", competition: "NFL", homeTeam: "Green Bay Packers", awayTeam: "Chicago Bears", date: "2026-10-11", kickoffMadrid: "19:00" },
   { id: "2026-10-11-patriots-raiders", competition: "NFL", homeTeam: "New England Patriots", awayTeam: "Las Vegas Raiders", date: "2026-10-11", kickoffMadrid: "19:00" },
   { id: "2026-10-11-commanders-giants", competition: "NFL", homeTeam: "Washington Commanders", awayTeam: "New York Giants", date: "2026-10-11", kickoffMadrid: "19:00" },
   { id: "2026-10-11-troyes-marseille", competition: "Ligue 1", homeTeam: "Troyes", awayTeam: "Marseille", date: "2026-10-11", kickoffMadrid: "20:45" },
-  { id: "2026-10-11-racing-valencia", competition: "LaLiga", homeTeam: "Racing Santander", awayTeam: "Valencia", date: "2026-10-11", kickoffMadrid: "21:00" },
   { id: "2026-10-11-seahawks-49ers", competition: "NFL", homeTeam: "Seattle Seahawks", awayTeam: "San Francisco 49ers", date: "2026-10-11", kickoffMadrid: "22:25" },
   { id: "2026-10-12-falcons-ravens", competition: "NFL", homeTeam: "Atlanta Falcons", awayTeam: "Baltimore Ravens", date: "2026-10-12", kickoffMadrid: "02:20" },
-  { id: "2026-10-12-coventry-newcastle", competition: "Premier League", homeTeam: "Coventry City", awayTeam: "Newcastle United", date: "2026-10-12", kickoffMadrid: "21:00" },
-  { id: "2026-10-12-levante-sevilla", competition: "LaLiga", homeTeam: "Levante", awayTeam: "Sevilla", date: "2026-10-12", kickoffMadrid: "21:00" },
   { id: "2026-10-13-atletico-manutd", competition: "UEFA Champions League", homeTeam: "Atlético Madrid", awayTeam: "Manchester United", date: "2026-10-13", kickoffMadrid: "21:00", note: "League phase MD2, Riyadh Air Metropolitano", line: { en: "Travelling United fans: watch it with us at O'Connell St, a few minutes from Sol." } },
+  { id: "2026-10-13-galatasaray-barcelona", competition: "UEFA Champions League", homeTeam: "Galatasaray", awayTeam: "Barcelona", date: "2026-10-13", kickoffMadrid: "21:00", note: "League phase MD2" },
+  { id: "2026-10-13-villarreal-napoli", competition: "UEFA Champions League", homeTeam: "Villarreal", awayTeam: "Napoli", date: "2026-10-13", kickoffMadrid: "21:00", note: "League phase MD2" },
+  { id: "2026-10-13-arsenal-lille", competition: "UEFA Champions League", homeTeam: "Arsenal", awayTeam: "Lille", date: "2026-10-13", kickoffMadrid: "21:00", note: "League phase MD2" },
+  { id: "2026-10-13-inter-brugge", competition: "UEFA Champions League", homeTeam: "Inter", awayTeam: "Club Brugge", date: "2026-10-13", kickoffMadrid: "21:00", note: "League phase MD2" },
 ];
 
 export const RECURRING = {
