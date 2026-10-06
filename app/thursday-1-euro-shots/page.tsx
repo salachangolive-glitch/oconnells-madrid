@@ -5,9 +5,9 @@ import { buildMetadata } from "@/lib/seo";
 import { MAPS_URL, SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
-  title: "Thursday €1 shots near Sol",
+  title: "Thursday shots near Sol, Madrid · €1 + live sport",
   description:
-    "€1 shots every Thursday at O'Connell St, Calle de Espoz y Mina 7, near Sol. Ask at the bar for that night’s selection.",
+    "Thursday shots near Sol, Madrid: €1 shots every Thursday at O'Connell St, Calle de Espoz y Mina 7, with live sport on the screens.",
   path: "/thursday-1-euro-shots",
 });
 
@@ -16,12 +16,16 @@ export default function ThursdayShotsPage() {
     <PageShell locale="en" altLangHref="/es/thursday-1-euro-shots">
       <PageHero
         eyebrow="Thursday · €1"
-        title="Thursday · €1 shots"
-        lead="€1 shots every Thursday. Ask at the bar for that night’s selection."
+        title="Thursday shots near Sol · €1"
+        lead="€1 shots every Thursday, with live sport on the screens. Ask at the bar for that night’s selection."
       />
-      <Section title="Thursday at the pub">
+      <Section title="Shots and matches on Thursday">
         <p>
           €1 shots every Thursday. Ask at the bar for that night’s selection.
+        </p>
+        <p>
+          Thursday nights come with live sport too: with Movistar we show
+          practically every sport.
         </p>
         <p>
           {SITE_NAME} is at Calle de Espoz y Mina 7, a short walk from Puerta
@@ -30,7 +34,7 @@ export default function ThursdayShotsPage() {
         <ul className="list-disc space-y-2 pl-5">
           <li>Thursdays only.</li>
           <li>
-            Confirmed sport is on{" "}
+            This week&apos;s matches are on{" "}
             <Link href="/whats-on" className="text-gold underline">
               What&apos;s On
             </Link>

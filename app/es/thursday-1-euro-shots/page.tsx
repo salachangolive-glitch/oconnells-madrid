@@ -5,9 +5,9 @@ import { buildMetadata } from "@/lib/seo";
 import { MAPS_URL, SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
-  title: "Chupitos a 1 € los jueves cerca de Sol",
+  title: "Chupitos a 1 euro los jueves en Madrid, junto a Sol",
   description:
-    "Los jueves tenemos chupitos a 1 € en O'Connell St, Calle de Espoz y Mina 7, cerca de Sol. Consulta en barra la selección de esa noche.",
+    "Chupitos a 1 euro los jueves en Madrid: en O'Connell St, Calle de Espoz y Mina 7, junto a Sol, con deporte en directo en las pantallas.",
   path: "/es/thursday-1-euro-shots",
   locale: "es",
 });
@@ -17,13 +17,17 @@ export default function EsThursdayShotsPage() {
     <PageShell locale="es" altLangHref="/thursday-1-euro-shots">
       <PageHero
         eyebrow="Jueves · 1 €"
-        title="Chupitos a 1 € los jueves"
-        lead="Los jueves tenemos chupitos a 1 €. Consulta en barra la selección disponible esa noche."
+        title="Chupitos a 1 euro los jueves en Madrid"
+        lead="Los jueves tenemos chupitos a 1 € y deporte en directo en las pantallas, junto a Sol. Consulta en barra la selección disponible esa noche."
       />
-      <Section title="El jueves en el pub">
+      <Section title="Chupitos y partidos los jueves">
         <p>
           Los jueves tenemos chupitos a 1 €. Consulta en barra la selección
           disponible esa noche.
+        </p>
+        <p>
+          Y el jueves también hay deporte en directo: con Movistar tenemos
+          prácticamente todos los deportes.
         </p>
         <p>
           {SITE_NAME} está en Calle de Espoz y Mina 7, a un paso de Puerta del
@@ -32,7 +36,7 @@ export default function EsThursdayShotsPage() {
         <ul className="list-disc space-y-2 pl-5">
           <li>Solo los jueves.</li>
           <li>
-            El deporte confirmado está en la{" "}
+            Los partidos de esta semana están en la{" "}
             <Link href="/es/whats-on" className="text-gold underline">
               Agenda
             </Link>
