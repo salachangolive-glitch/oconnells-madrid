@@ -46,17 +46,18 @@ export type Fixture = {
  * see /workspace/oconnell-agenda-radar-2026-10-06/VERIFICACION-EMISION.md.
  * Removed: URC (no ES channel 26/27), EFL Championship (no ES rights found),
  * NFL Saints–Falcons (past kickoff). Empty awayTeam = race name.
+ * Delta 2026-10-07 ~10:20 Madrid: removed past Tue 6 rows; removed Rayo–Athletic
+ * (Sat 14:00, doors open 16:00 on Saturdays); added UCL MD2 Wed 14 Oct (Radar
+ * Confirmed + UEFA/club times, Movistar Liga de Campeones). LaLiga J8 Fri/Sat
+ * reconfirmed on laliga.com. See /workspace/oconnell-agenda-delta-2026-10-07/.
  */
 export const FIXTURES: Fixture[] = [
-  { id: "2026-10-06-croatia-spain", competition: "UEFA Nations League", homeTeam: "Croatia", awayTeam: "Spain", date: "2026-10-06", kickoffMadrid: "20:45" },
-  { id: "2026-10-06-england-czechia", competition: "UEFA Nations League", homeTeam: "England", awayTeam: "Czechia", date: "2026-10-06", kickoffMadrid: "20:45" },
   { id: "2026-10-08-madrid-partizan", competition: "EuroLeague", homeTeam: "Real Madrid", awayTeam: "Partizan", date: "2026-10-08", kickoffMadrid: "20:45" },
   { id: "2026-10-09-cowboys-buccaneers", competition: "NFL", homeTeam: "Dallas Cowboys", awayTeam: "Tampa Bay Buccaneers", date: "2026-10-09", kickoffMadrid: "02:15" },
   { id: "2026-10-09-barca-zalgiris", competition: "EuroLeague", homeTeam: "Barcelona", awayTeam: "Žalgiris", date: "2026-10-09", kickoffMadrid: "20:30" },
   { id: "2026-10-09-dortmund-werder", competition: "Bundesliga", homeTeam: "Dortmund", awayTeam: "Werder Bremen", date: "2026-10-09", kickoffMadrid: "20:30" },
   { id: "2026-10-09-lens-lyon", competition: "Ligue 1", homeTeam: "Lens", awayTeam: "Lyon", date: "2026-10-09", kickoffMadrid: "20:45" },
   { id: "2026-10-09-malaga-espanyol", competition: "LaLiga", homeTeam: "Málaga", awayTeam: "Espanyol", date: "2026-10-09", kickoffMadrid: "21:00" },
-  { id: "2026-10-10-rayo-athletic", competition: "LaLiga", homeTeam: "Rayo Vallecano", awayTeam: "Athletic Club", date: "2026-10-10", kickoffMadrid: "14:00" },
   { id: "2026-10-10-chelsea-bournemouth", competition: "Premier League", homeTeam: "Chelsea", awayTeam: "Bournemouth", date: "2026-10-10", kickoffMadrid: "16:00" },
   { id: "2026-10-10-villa-brentford", competition: "Premier League", homeTeam: "Aston Villa", awayTeam: "Brentford", date: "2026-10-10", kickoffMadrid: "16:00" },
   { id: "2026-10-10-ipswich-fulham", competition: "Premier League", homeTeam: "Ipswich", awayTeam: "Fulham", date: "2026-10-10", kickoffMadrid: "16:00" },
@@ -81,6 +82,11 @@ export const FIXTURES: Fixture[] = [
   { id: "2026-10-13-villarreal-napoli", competition: "UEFA Champions League", homeTeam: "Villarreal", awayTeam: "Napoli", date: "2026-10-13", kickoffMadrid: "21:00", note: "League phase MD2" },
   { id: "2026-10-13-arsenal-lille", competition: "UEFA Champions League", homeTeam: "Arsenal", awayTeam: "Lille", date: "2026-10-13", kickoffMadrid: "21:00", note: "League phase MD2" },
   { id: "2026-10-13-inter-brugge", competition: "UEFA Champions League", homeTeam: "Inter", awayTeam: "Club Brugge", date: "2026-10-13", kickoffMadrid: "21:00", note: "League phase MD2" },
+  { id: "2026-10-14-lask-liverpool", competition: "UEFA Champions League", homeTeam: "LASK", awayTeam: "Liverpool", date: "2026-10-14", kickoffMadrid: "18:45", note: "League phase MD2" },
+  { id: "2026-10-14-roma-madrid", competition: "UEFA Champions League", homeTeam: "Roma", awayTeam: "Real Madrid", date: "2026-10-14", kickoffMadrid: "21:00", note: "League phase MD2, Stadio Olimpico" },
+  { id: "2026-10-14-mancity-psg", competition: "UEFA Champions League", homeTeam: "Manchester City", awayTeam: "Paris Saint-Germain", date: "2026-10-14", kickoffMadrid: "21:00", note: "League phase MD2" },
+  { id: "2026-10-14-betis-porto", competition: "UEFA Champions League", homeTeam: "Real Betis", awayTeam: "Porto", date: "2026-10-14", kickoffMadrid: "21:00", note: "League phase MD2" },
+  { id: "2026-10-14-villa-fenerbahce", competition: "UEFA Champions League", homeTeam: "Aston Villa", awayTeam: "Fenerbahçe", date: "2026-10-14", kickoffMadrid: "21:00", note: "League phase MD2" },
 ];
 
 export const RECURRING = {
