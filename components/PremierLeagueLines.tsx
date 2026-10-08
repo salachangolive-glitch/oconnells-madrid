@@ -1,34 +1,53 @@
 import Link from "next/link";
 import {
-  FIXTURES,
+  agendaBuildNow,
   displayTeam,
+  fixtureDataAttrs,
   formatFixtureDay,
-  isConfirmedFixture,
+  getAgendaCandidates,
+  getUpcomingFixtures,
+  madridTodayYmd,
 } from "@/lib/fixtures";
 
 type Locale = "en" | "es";
 
 /**
  * Confirmed Premier League rows already on What's On.
- * Times come from FIXTURES — do not hard-code kickoffs here.
+ * Times come from FIXTURES — do not hard-code kickoffs here. Same rules as
+ * What's On (not finished, Today + next 7 days); AgendaClock updates it live.
  */
 export function PremierLeagueLines({ locale }: { locale: Locale }) {
   const isEs = locale === "es";
-  const rows = FIXTURES.filter(
-    (f) => f.competition === "Premier League" && isConfirmedFixture(f),
-  );
+  const now = agendaBuildNow();
+  const today = madridTodayYmd(now);
+  const isPl = (f: { competition: string }) => f.competition === "Premier League";
+  const rows = getAgendaCandidates(now).filter(isPl);
   if (rows.length === 0) return null;
+  const visibleIds = new Set(
+    getUpcomingFixtures(today, now).filter(isPl).map((f) => f.id),
+  );
 
   return (
-    <div className="mt-4">
+    <div
+      className="mt-4"
+      data-fx-root={`pl-${locale}`}
+      data-fx-wrap="any"
+      data-fx-off={visibleIds.size === 0 ? "" : undefined}
+    >
       <p>
         {isEs
           ? "Premier League confirmada esta jornada, hora de Madrid:"
           : "Confirmed Premier League this round, Madrid time:"}
       </p>
-      <ul className="mt-3 space-y-2">
+      <ul className="mt-3 flex flex-col gap-2">
         {rows.map((f) => (
-          <li key={f.id}>
+          <li
+            key={f.id}
+            data-fx-key={`pl:any:${f.id}`}
+            data-fx-slot="any"
+            {...fixtureDataAttrs(f)}
+            data-fx-off={!visibleIds.has(f.id) ? "" : undefined}
+          >
             {displayTeam(f.homeTeam, locale)} vs {displayTeam(f.awayTeam, locale)}
             {" · "}
             {formatFixtureDay(f.date, locale)}

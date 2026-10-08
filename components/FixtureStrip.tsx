@@ -1,23 +1,34 @@
-"use client";
-
 import Link from "next/link";
-import { useMemo } from "react";
 import {
+  agendaBuildNow,
   displayCompetition,
   fixtureMatchLabel,
   formatFixtureDay,
+  getAgendaCandidates,
+  fixtureDataAttrs,
   getUpcomingFixtures,
+  isOnNow,
   madridTodayYmd,
   screenPolicyLine,
   type Fixture,
 } from "@/lib/fixtures";
+import { OnNowBadge } from "@/components/FixtureList";
 import { PremierLeagueLines } from "@/components/PremierLeagueLines";
 import { MAPS_URL } from "@/lib/venue";
-import { useMadridNow } from "@/components/useMadridNow";
+
+const STRIP_LIMIT = 3;
 
 type Locale = "en" | "es";
 
-function FixtureRow({ f, locale }: { f: Fixture; locale: Locale }) {
+function FixtureRow({
+  f,
+  locale,
+  onNow,
+}: {
+  f: Fixture;
+  locale: Locale;
+  onNow: boolean;
+}) {
   const isEs = locale === "es";
   return (
     <article className="pl-0">
@@ -28,6 +39,7 @@ function FixtureRow({ f, locale }: { f: Fixture; locale: Locale }) {
             · {isEs ? "Confirmado" : "Confirmed"}
           </span>
         ) : null}
+        <OnNowBadge locale={locale} onNow={onNow} />
       </p>
       <h3 className="mt-1 font-serif text-xl font-bold text-cream sm:text-2xl">
         {fixtureMatchLabel(f, locale)}
@@ -46,17 +58,18 @@ function FixtureRow({ f, locale }: { f: Fixture; locale: Locale }) {
 }
 
 /**
- * Home / Sports strip. Static HTML uses the deploy clock. After mount,
- * Europe/Madrid now hides kickoffs that have already started.
+ * Home / Sports strip: next STRIP_LIMIT rows of Today + Next 7 days, same
+ * source and rules as What's On. AgendaClock keeps it current in the browser.
  */
 export function FixtureStrip({ locale = "en" }: { locale?: Locale }) {
   const isEs = locale === "es";
-  const now = useMadridNow();
-  const today = now ? madridTodayYmd(now) : null;
-
-  const upcoming = useMemo(
-    () => (today && now ? getUpcomingFixtures(today, now).slice(0, 3) : []),
-    [today, now],
+  const now = agendaBuildNow();
+  const today = madridTodayYmd(now);
+  const rows = getAgendaCandidates(now);
+  const visibleIds = new Set(
+    getUpcomingFixtures(today, now)
+      .slice(0, STRIP_LIMIT)
+      .map((f) => f.id),
   );
 
   const title = isEs ? "Deportes en directo" : "Live sports";
@@ -81,19 +94,29 @@ export function FixtureStrip({ locale = "en" }: { locale?: Locale }) {
         </Link>
       </div>
       <div className="pub-rule mb-6" />
-      {today === null ? (
-        <p className="text-cream-muted">{empty}</p>
-      ) : upcoming.length > 0 ? (
-        <ul className="space-y-7">
-          {upcoming.map((f) => (
-            <li key={f.id}>
-              <FixtureRow f={f} locale={locale} />
+      <div data-fx-root="strip" data-fx-limit={STRIP_LIMIT}>
+        <ul className="flex flex-col gap-7">
+          {rows.map((f) => (
+            <li
+              key={f.id}
+              data-fx-key={`strip:strip:${f.id}`}
+              data-fx-slot="strip"
+              {...fixtureDataAttrs(f)}
+              data-fx-off={!visibleIds.has(f.id) ? "" : undefined}
+            >
+              <FixtureRow f={f} locale={locale} onNow={isOnNow(f, now)} />
             </li>
           ))}
         </ul>
-      ) : (
-        <p className="text-cream-muted">{empty}</p>
-      )}
+        <p
+          className="text-cream-muted"
+          data-fx-empty="strip"
+          data-fx-empty-id="strip:strip"
+          data-fx-off={visibleIds.size > 0 ? "" : undefined}
+        >
+          {empty}
+        </p>
+      </div>
       <PremierLeagueLines locale={locale} />
       <p className="mt-7">
         <a

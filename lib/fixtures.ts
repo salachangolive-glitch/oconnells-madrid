@@ -16,9 +16,13 @@
  *   - Matchday: reminder check before doors
  * Do not invent kickoff times; do not leave stale past rows in the list.
  *
- * IMPORTANT: Do not call madridTodayYmd() / getTonightFixtures() / getUpcomingFixtures()
- * at static build time for UI labels — use the client FixtureList / FixtureStrip so
- * "Today"/"Hoy" track the visitor's Europe/Madrid calendar day.
+ * Single source of truth for EN + ES, Today/Hoy, Next 7 days/Próximos 7 días and
+ * the Home/Sports strip. The static HTML is computed at build time (Europe/Madrid)
+ * and every row carries data-start / data-end (ISO with Madrid offset); the
+ * inline clock in components/AgendaClock.tsx recomputes the same rules in the
+ * browser on load and every minute, so finished rows disappear and Today/Hoy
+ * rolls over without waiting for the daily rebuild.
+ * Finished = kickoff + SPORT_DURATION_MIN for the sport (see table below).
  */
 
 export type Fixture = {
@@ -179,17 +183,103 @@ export function fixtureStartMs(f: Fixture): number | null {
   return madridWallTimeMs(f.date, f.kickoffMadrid);
 }
 
-/** Hide a screening once its Madrid start is no longer in the future. */
-export function isStillToCome(f: Fixture, now = new Date()): boolean {
-  const start = fixtureStartMs(f);
-  return start != null && start > now.getTime();
+/**
+ * Standard screening length per sport (minutes), used to decide when an event
+ * has finished. One table for EN, ES, Today/Hoy, Next 7 days and the client
+ * clock (the numbers are serialised into data-end on every row).
+ */
+export const SPORT_DURATION_MIN = {
+  football: 120,
+  rugby: 120,
+  nfl: 210,
+  nba: 150,
+  basketball: 120,
+  f1: 120,
+  combat: 240,
+  tennis: 180,
+  default: 120,
+} as const;
+
+export type Sport = keyof typeof SPORT_DURATION_MIN;
+
+const COMPETITION_SPORT: Record<string, Sport> = {
+  "Premier League": "football",
+  LaLiga: "football",
+  "Serie A": "football",
+  Bundesliga: "football",
+  "Ligue 1": "football",
+  Championship: "football",
+  "UEFA Champions League": "football",
+  "UEFA Europa League": "football",
+  "UEFA Conference League": "football",
+  "United Rugby Championship": "rugby",
+  Premiership: "rugby",
+  "Six Nations": "rugby",
+  NFL: "nfl",
+  NBA: "nba",
+  EuroLeague: "basketball",
+  "Formula 1": "f1",
+  UFC: "combat",
+  Boxing: "combat",
+};
+
+export function fixtureSport(f: Fixture): Sport {
+  return COMPETITION_SPORT[f.competition] ?? "default";
 }
 
-/** Add calendar days in Europe/Madrid (noon anchor, safe across DST). */
+export function fixtureEndMs(f: Fixture): number | null {
+  const start = fixtureStartMs(f);
+  if (start == null) return null;
+  return start + SPORT_DURATION_MIN[fixtureSport(f)] * 60 * 1000;
+}
+
+/** ISO 8601 with the Europe/Madrid offset, e.g. 2026-10-09T20:45:00+02:00. */
+export function madridIso(ms: number): string {
+  const parts = new Intl.DateTimeFormat("en-US", {
+    timeZone: "Europe/Madrid",
+    hourCycle: "h23",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+  }).formatToParts(new Date(ms));
+  const v = (t: Intl.DateTimeFormatPartTypes) =>
+    parts.find((p) => p.type === t)?.value ?? "00";
+  const wall = Date.UTC(
+    Number(v("year")),
+    Number(v("month")) - 1,
+    Number(v("day")),
+    Number(v("hour")),
+    Number(v("minute")),
+    Number(v("second")),
+  );
+  const off = Math.round((wall - ms) / 60000);
+  const sign = off >= 0 ? "+" : "-";
+  const abs = Math.abs(off);
+  const oh = String(Math.floor(abs / 60)).padStart(2, "0");
+  const om = String(abs % 60).padStart(2, "0");
+  return `${v("year")}-${v("month")}-${v("day")}T${v("hour")}:${v("minute")}:${v("second")}${sign}${oh}:${om}`;
+}
+
+/** A screening stays listed until start + standard duration for its sport. */
+export function isNotFinished(f: Fixture, now = new Date()): boolean {
+  const end = fixtureEndMs(f);
+  return end != null && end > now.getTime();
+}
+
+/** Started and not finished yet. */
+export function isOnNow(f: Fixture, now = new Date()): boolean {
+  const start = fixtureStartMs(f);
+  const end = fixtureEndMs(f);
+  return start != null && end != null && start <= now.getTime() && end > now.getTime();
+}
+
+/** Add calendar days to a YYYY-MM-DD date (pure calendar maths, no timezone). */
 export function addMadridDays(ymd: string, days: number): string {
-  const noon = madridWallTimeMs(ymd, "12:00");
-  if (noon == null) return ymd;
-  return madridTodayYmd(new Date(noon + days * 24 * 60 * 60 * 1000));
+  const [y, m, d] = ymd.split("-").map(Number);
+  return new Date(Date.UTC(y, m - 1, d + days, 12)).toISOString().slice(0, 10);
 }
 
 /** Inclusive window: today through the seventh day ahead (8 Madrid dates).
@@ -200,29 +290,59 @@ export function agendaWindowEnd(today: string): string {
 
 function byKickoff(a: Fixture, b: Fixture): number {
   return (
-    a.date.localeCompare(b.date) ||
-    (a.kickoffMadrid ?? "").localeCompare(b.kickoffMadrid ?? "")
+    (fixtureStartMs(a) ?? 0) - (fixtureStartMs(b) ?? 0) ||
+    a.id.localeCompare(b.id)
   );
 }
 
+/** Every confirmed row that has not finished at `now`, in kickoff order. */
+export function getAgendaCandidates(now = new Date()): Fixture[] {
+  return FIXTURES.filter((f) => isConfirmedFixture(f) && isNotFinished(f, now)).sort(byKickoff);
+}
+
+/**
+ * Today/Hoy: not finished and either kicks off on today's Madrid date or is
+ * already on (e.g. a late game that started yesterday and runs past midnight).
+ */
+export function isTodaySlot(f: Fixture, today: string, now = new Date()): boolean {
+  if (!isConfirmedFixture(f) || !isNotFinished(f, now)) return false;
+  return f.date === today || isOnNow(f, now);
+}
+
+/** Next 7 days: not finished, later Madrid date, within the window. */
+export function isWeekSlot(f: Fixture, today: string, now = new Date()): boolean {
+  if (!isConfirmedFixture(f) || !isNotFinished(f, now)) return false;
+  if (isTodaySlot(f, today, now)) return false;
+  return f.date > today && f.date <= agendaWindowEnd(today);
+}
+
 export function getTonightFixtures(today: string, now = new Date()): Fixture[] {
+  return FIXTURES.filter((f) => isTodaySlot(f, today, now)).sort(byKickoff);
+}
+
+/** Today + next 7 days (not finished), kickoff order. */
+export function getUpcomingFixtures(today: string, now = new Date()): Fixture[] {
   return FIXTURES.filter(
-    (f) =>
-      isConfirmedFixture(f) &&
-      f.date === today &&
-      isStillToCome(f, now),
+    (f) => isTodaySlot(f, today, now) || isWeekSlot(f, today, now),
   ).sort(byKickoff);
 }
 
-export function getUpcomingFixtures(today: string, now = new Date()): Fixture[] {
-  const end = agendaWindowEnd(today);
-  return FIXTURES.filter(
-    (f) =>
-      isConfirmedFixture(f) &&
-      f.date >= today &&
-      f.date <= end &&
-      isStillToCome(f, now),
-  ).sort(byKickoff);
+/**
+ * Build clock shared by every page of one build (next.config.ts sets it once),
+ * so EN and ES static HTML are cut at the same instant.
+ */
+export function agendaBuildNow(): Date {
+  const ms = Number(process.env.OCONNELL_BUILD_MS);
+  return new Date(Number.isFinite(ms) && ms > 0 ? ms : Date.now());
+}
+
+/** Attributes the client clock reads (components/AgendaClock.tsx). */
+export function fixtureDataAttrs(f: Fixture): Record<string, string> {
+  return {
+    "data-start": madridIso(fixtureStartMs(f) ?? 0),
+    "data-end": madridIso(fixtureEndMs(f) ?? 0),
+    "data-day": f.date,
+  };
 }
 
 /** National teams only. Club, NFL and NBA names stay as stored. */
@@ -277,7 +397,7 @@ export function screenPolicyLine(locale: "en" | "es"): string {
 }
 
 export function formatFixtureDay(date: string, locale: "en" | "es" = "en"): string {
-  const d = new Date(`${date}T12:00:00`);
+  const d = new Date(`${date}T12:00:00Z`);
   return new Intl.DateTimeFormat(locale === "es" ? "es-ES" : "en-GB", {
     weekday: "long",
     day: "numeric",

@@ -1,21 +1,19 @@
-"use client";
-
-import { useMemo } from "react";
 import {
-  FIXTURES,
+  agendaBuildNow,
   displayCompetition,
+  fixtureDataAttrs,
   fixtureMatchLabel,
   formatFixtureDay,
-  screenPolicyLine,
-  getTonightFixtures,
-  getUpcomingFixtures,
-  isConfirmedFixture,
+  getAgendaCandidates,
+  isOnNow,
+  isTodaySlot,
+  isWeekSlot,
   madridTodayYmd,
+  screenPolicyLine,
   type Fixture,
 } from "@/lib/fixtures";
 import { MAPS_URL } from "@/lib/venue";
 import { Section } from "@/components/Prose";
-import { useMadridNow } from "@/components/useMadridNow";
 
 type Locale = "en" | "es";
 
@@ -30,11 +28,30 @@ const EMPTY = {
   },
 } as const;
 
-function FixtureDetail({ f, locale }: { f: Fixture; locale: Locale }) {
+type RowProps = { f: Fixture; locale: Locale; visible: boolean; onNow: boolean };
+
+export function OnNowBadge({ locale, onNow }: { locale: Locale; onNow: boolean }) {
+  return (
+    <span
+      data-fx-on=""
+      data-fx-off={!onNow ? "" : undefined}
+      className="ml-2 rounded-sm bg-gold px-1.5 py-0.5 text-[10px] font-bold tracking-[0.12em] text-black"
+    >
+      {locale === "es" ? "En juego" : "On now"}
+    </span>
+  );
+}
+
+function FixtureDetail({ f, locale, visible, onNow }: RowProps) {
   const isEs = locale === "es";
   const competition = displayCompetition(f.competition);
   return (
-    <li>
+    <li
+      data-fx-key={`list:today:${f.id}`}
+      data-fx-slot="today"
+      {...fixtureDataAttrs(f)}
+      data-fx-off={!visible ? "" : undefined}
+    >
       <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-gold">
         {competition}
         {f.kickoffMadrid ? (
@@ -42,6 +59,7 @@ function FixtureDetail({ f, locale }: { f: Fixture; locale: Locale }) {
             · {isEs ? "Confirmado" : "Confirmed"}
           </span>
         ) : null}
+        <OnNowBadge locale={locale} onNow={onNow} />
       </p>
       <p className="mt-1 font-serif text-2xl font-bold text-cream">
         {fixtureMatchLabel(f, locale)}
@@ -73,10 +91,15 @@ function FixtureDetail({ f, locale }: { f: Fixture; locale: Locale }) {
   );
 }
 
-function ComingUpRow({ f, locale }: { f: Fixture; locale: Locale }) {
+function ComingUpRow({ f, locale, visible }: RowProps) {
   const isEs = locale === "es";
   return (
-    <li>
+    <li
+      data-fx-key={`list:week:${f.id}`}
+      data-fx-slot="week"
+      {...fixtureDataAttrs(f)}
+      data-fx-off={!visible ? "" : undefined}
+    >
       <strong className="text-cream">{displayCompetition(f.competition)}</strong>
       {f.kickoffMadrid ? (
         <span className="ml-2 text-xs uppercase tracking-[0.14em] text-gold">
@@ -101,75 +124,66 @@ function ComingUpRow({ f, locale }: { f: Fixture; locale: Locale }) {
 }
 
 /**
- * Today / Next 7 days. The static HTML uses the deploy clock so confirmed
- * rows are visible without waiting for JavaScript. After mount, Europe/Madrid
- * now hides kickoffs that have already started.
+ * Today / Next 7 days, EN and ES from the same FIXTURES list and the same rules
+ * (lib/fixtures.ts). Static HTML is cut with the build clock in Europe/Madrid;
+ * every not-finished row is in the markup (hidden when out of its slot) and
+ * AgendaClock re-applies the rules in the browser with the real Madrid time.
  */
 export function FixtureList({ locale = "en" }: { locale?: Locale }) {
   const isEs = locale === "es";
-  const now = useMadridNow();
-  const today = now ? madridTodayYmd(now) : null;
-  const tonight = useMemo(
-    () => (today && now ? getTonightFixtures(today, now) : []),
-    [today, now],
-  );
-  const upcoming = useMemo(
-    () => (today && now ? getUpcomingFixtures(today, now) : []),
-    [today, now],
-  );
-  const comingUp = useMemo(
-    () => upcoming.filter((f) => !tonight.some((t) => t.id === f.id)),
-    [upcoming, tonight],
-  );
+  const now = agendaBuildNow();
+  const today = madridTodayYmd(now);
+  const rows = getAgendaCandidates(now);
+  const todayCount = rows.filter((f) => isTodaySlot(f, today, now)).length;
+  const weekCount = rows.filter((f) => isWeekSlot(f, today, now)).length;
 
-  const emptyToday = EMPTY.today[locale];
-  const emptyWeek = EMPTY.week[locale];
   const weekTitle = isEs ? "Próximos 7 días" : "Next 7 days";
 
-  if (today === null) {
-    const all = FIXTURES.filter(isConfirmedFixture).sort(
-      (a, b) =>
-        a.date.localeCompare(b.date) ||
-        (a.kickoffMadrid ?? "").localeCompare(b.kickoffMadrid ?? ""),
-    );
-    return (
-      <>
-        <Section title={isEs ? "Hoy" : "Today"}>
-          <p className="text-cream-muted">{emptyToday}</p>
-          <span className="hidden" data-fixtures={all.length} />
-        </Section>
-        <Section title={weekTitle}>
-          <p className="text-cream-muted">{emptyWeek}</p>
-        </Section>
-      </>
-    );
-  }
-
   return (
-    <>
+    <div data-fx-root="list">
       <Section title={isEs ? "Hoy" : "Today"}>
-        {tonight.length > 0 ? (
-          <ul className="space-y-6">
-            {tonight.map((f) => (
-              <FixtureDetail key={f.id} f={f} locale={locale} />
-            ))}
-          </ul>
-        ) : (
-          <p className="text-cream-muted">{emptyToday}</p>
-        )}
+        <ul className="flex flex-col gap-6">
+          {rows.map((f) => (
+            <FixtureDetail
+              key={f.id}
+              f={f}
+              locale={locale}
+              visible={isTodaySlot(f, today, now)}
+              onNow={isOnNow(f, now)}
+            />
+          ))}
+        </ul>
+        <p
+          className="text-cream-muted"
+          data-fx-empty="today"
+          data-fx-empty-id="list:today"
+          data-fx-off={todayCount > 0 ? "" : undefined}
+        >
+          {EMPTY.today[locale]}
+        </p>
       </Section>
 
       <Section title={weekTitle}>
-        {comingUp.length > 0 ? (
-          <ul className="space-y-4">
-            {comingUp.map((f) => (
-              <ComingUpRow key={f.id} f={f} locale={locale} />
-            ))}
-          </ul>
-        ) : (
-          <p className="text-cream-muted">{emptyWeek}</p>
-        )}
+        <ul className="flex flex-col gap-4">
+          {rows.map((f) => (
+            <ComingUpRow
+              key={f.id}
+              f={f}
+              locale={locale}
+              visible={isWeekSlot(f, today, now)}
+              onNow={false}
+            />
+          ))}
+        </ul>
+        <p
+          className="text-cream-muted"
+          data-fx-empty="week"
+          data-fx-empty-id="list:week"
+          data-fx-off={weekCount > 0 ? "" : undefined}
+        >
+          {EMPTY.week[locale]}
+        </p>
       </Section>
-    </>
+    </div>
   );
 }

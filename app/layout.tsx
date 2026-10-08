@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist_Mono, Libre_Baskerville, Source_Sans_3 } from "next/font/google";
+import { AgendaClock } from "@/components/AgendaClock";
 import { JsonLd } from "@/components/JsonLd";
 import { TrackClicks } from "@/components/TrackClicks";
 import { barOrPubJsonLd } from "@/lib/jsonld";
@@ -56,6 +57,7 @@ export default function RootLayout({
         <JsonLd data={barOrPubJsonLd()} />
         <TrackClicks />
         {children}
+        <AgendaClock />
       </body>
     </html>
   );
