@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
+import { PrivacyCookiesGa4 } from "@/components/PrivacyCookies";
+import { ga4Enabled } from "@/lib/analytics";
 import { buildMetadata } from "@/lib/seo";
 import {
   ADDRESS,
@@ -78,17 +80,21 @@ export default function EsPrivacyPage() {
           ).
         </p>
       </Section>
-      <Section title="Cookies y analítica">
-        <p>
-          Estas páginas no cargan Google Analytics ni píxeles publicitarios, y
-          no instalan cookies. Nuestro proveedor de alojamiento, Cloudflare,
-          cuenta las visitas de forma agregada con Cloudflare Web Analytics,
-          que no usa cookies ni te identifica. Un clic en Agenda, Cómo llegar,
-          Contacto, el email o el formulario solo se envía como evento si
-          Google Analytics ya está funcionando en tu navegador; esta web no lo
-          carga. Cómo llegar abre Google Maps, que es la web de Google.
-        </p>
-      </Section>
+      {ga4Enabled() ? (
+        <PrivacyCookiesGa4 locale="es" />
+      ) : (
+        <Section title="Cookies y analítica">
+          <p>
+            Estas páginas no cargan Google Analytics ni píxeles publicitarios, y
+            no instalan cookies. Nuestro proveedor de alojamiento, Cloudflare,
+            cuenta las visitas de forma agregada con Cloudflare Web Analytics,
+            que no usa cookies ni te identifica. Un clic en Agenda, Cómo llegar,
+            Contacto, el email o el formulario solo se envía como evento si
+            Google Analytics ya está funcionando en tu navegador; esta web no lo
+            carga. Cómo llegar abre Google Maps, que es la web de Google.
+          </p>
+        </Section>
+      )}
     </PageShell>
   );
 }

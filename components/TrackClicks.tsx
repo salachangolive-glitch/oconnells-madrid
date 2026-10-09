@@ -3,9 +3,10 @@
 import { useEffect } from "react";
 
 /**
- * Measurable hooks only. No measurement ID and no ad pixel are added here,
- * and nothing sets cookies. If gtag already exists on the page, the GA4 name
- * below is forwarded to it. Directions is never a store visit.
+ * Measurable hooks only. No ad pixel is added here and nothing sets cookies.
+ * The GA4 name below is sent only after the visitor accepted analytics in the
+ * cookie banner (components/Analytics.tsx sets __ocAnalyticsGranted). With
+ * GA4_MEASUREMENT_ID empty nothing is ever sent. Directions is never a store visit.
  * No click_call: the site deliberately shows no phone (owner, 15 Sep 2026).
  */
 const GA4_NAMES: Record<string, string> = {
@@ -20,13 +21,14 @@ export function trackEvent(key: string) {
   const name = GA4_NAMES[key];
   if (!name || typeof window === "undefined") return;
   const w = window as Window & {
+    __ocAnalyticsGranted?: boolean;
     gtag?: (
       command: "event",
       eventName: string,
       params?: Record<string, string>,
     ) => void;
   };
-  if (typeof w.gtag !== "function") return;
+  if (w.__ocAnalyticsGranted !== true || typeof w.gtag !== "function") return;
   w.gtag("event", name, { event_source: "site" });
 }
 

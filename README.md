@@ -71,3 +71,7 @@ Edit `lib/fixtures.ts` to update What's On confirmed matches (competition, teams
 **EN:** `/` `/sports` `/watch-football-madrid` `/premier-league` `/champions-league` `/erasmus` `/thursday-1-euro-shots` `/about` `/location` `/whats-on` `/contact`
 
 **ES mirrors:** `/es` `/es/sports` `/es/watch-football-madrid` `/es/premier-league` `/es/champions-league` `/es/erasmus` `/es/thursday-1-euro-shots` `/es/about` `/es/location` `/es/whats-on` `/es/contact`
+
+## Ops: Google Analytics 4 (off until configured)
+
+Set the measurement ID in `lib/analytics.ts` (`GA4_MEASUREMENT_ID`). Empty = no GA, no banner. See [`docs/GA4-CONSENT.md`](docs/GA4-CONSENT.md).

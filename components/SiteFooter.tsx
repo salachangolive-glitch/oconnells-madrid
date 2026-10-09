@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ga4Enabled } from "@/lib/analytics";
 import {
   ADDRESS,
   HOURS,
@@ -101,6 +102,17 @@ export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
                 {isEs ? "Privacidad" : "Privacy"}
               </Link>
             </li>
+            {ga4Enabled() ? (
+              <li>
+                <button
+                  type="button"
+                  data-cookie-settings=""
+                  className="text-left hover:text-gold"
+                >
+                  {isEs ? "Configurar cookies" : "Cookie settings"}
+                </button>
+              </li>
+            ) : null}
             <li>
               <a
                 href={MAPS_URL}

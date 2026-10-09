@@ -1,3 +1,5 @@
+import { ga4Enabled } from "@/lib/analytics";
+import { CookieBanner } from "./CookieBanner";
 import { SiteFooter } from "./SiteFooter";
 import { SiteHeader } from "./SiteHeader";
 import { StickyCta } from "./StickyCta";
@@ -31,6 +33,7 @@ export function PageShell({
       </main>
       <SiteFooter locale={locale} />
       <StickyCta locale={locale} />
+      {ga4Enabled() ? <CookieBanner locale={locale} /> : null}
     </>
   );
 }
