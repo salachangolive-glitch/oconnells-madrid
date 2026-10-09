@@ -80,12 +80,13 @@ export default function EsPrivacyPage() {
       </Section>
       <Section title="Cookies y analítica">
         <p>
-          Estas páginas no cargan Google Analytics, píxeles publicitarios ni
-          ningún otro script de medición, y no instalan cookies propias. Un
-          clic en Agenda, Cómo llegar, Contacto, el email o el formulario solo
-          se reenvía si el navegador ya tiene una herramienta de medición; esta
-          web no añade ninguna. Cómo llegar abre Google Maps, que es la web de
-          Google.
+          Estas páginas no cargan Google Analytics ni píxeles publicitarios, y
+          no instalan cookies. Nuestro proveedor de alojamiento, Cloudflare,
+          cuenta las visitas de forma agregada con Cloudflare Web Analytics,
+          que no usa cookies ni te identifica. Un clic en Agenda, Cómo llegar,
+          Contacto, el email o el formulario solo se envía como evento si
+          Google Analytics ya está funcionando en tu navegador; esta web no lo
+          carga. Cómo llegar abre Google Maps, que es la web de Google.
         </p>
       </Section>
     </PageShell>

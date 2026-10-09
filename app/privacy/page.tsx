@@ -74,12 +74,13 @@ export default function PrivacyPage() {
       </Section>
       <Section title="Cookies and analytics">
         <p>
-          These pages do not load Google Analytics, advertising pixels or any
-          other measurement script, and they do not set their own cookies. A
-          click on What’s On, Directions, Contact, email or the form can be
-          forwarded only if a measurement tool is already running in the
-          browser; this site does not add one. Directions opens Google Maps,
-          which is Google’s website.
+          These pages do not load Google Analytics or advertising pixels, and
+          they do not set cookies. Our host, Cloudflare, counts visits in
+          aggregate with Cloudflare Web Analytics, which does not use cookies
+          or identify you. A click on What’s On, Directions, Contact, email or
+          the form is sent as an event only if Google Analytics is already
+          running in your browser; this site does not load it. Directions
+          opens Google Maps, which is Google’s website.
         </p>
       </Section>
     </PageShell>

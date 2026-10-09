@@ -21,9 +21,14 @@ export const PHONE_TEL = "tel:+34915327956";
 export const PUBLIC_EMAIL = "comunicacion@oconnellsmadrid.es";
 export const PUBLIC_EMAIL_MAILTO = "mailto:comunicacion@oconnellsmadrid.es";
 
-/** Search-based Maps link (no invented coordinates). */
+/**
+ * Google Maps link pinned to the O'Connell St GBP listing (Place ID from the
+ * Ads location audit 2026-10-02; opens "O'Connell St · C. de Espoz y Mina, 7"
+ * — checked live 2026-10-09). Query text stays as fallback. No coordinates.
+ */
+export const GBP_PLACE_ID = "ChIJLdKNhYAoQg0RSYjRwIO4dZQ";
 export const MAPS_URL =
-  "https://www.google.com/maps/search/?api=1&query=O%27Connell+St+Calle+de+Espoz+y+Mina+7+28012+Madrid";
+  "https://www.google.com/maps/search/?api=1&query=O%27Connell+St+Calle+de+Espoz+y+Mina+7+28012+Madrid&query_place_id=ChIJLdKNhYAoQg0RSYjRwIO4dZQ";
 
 export const NEIGHBOURHOOD = "near Puerta del Sol";
 

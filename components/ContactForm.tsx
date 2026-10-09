@@ -223,7 +223,7 @@ export function ContactForm({ locale = "en" }: { locale?: Locale }) {
       </button>
 
       {status === "ok" ? (
-        <p className="text-sm text-gold" role="status" data-event="form_submit">
+        <p className="text-sm text-gold" role="status">
           {t.ok}
         </p>
       ) : null}

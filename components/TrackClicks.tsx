@@ -3,20 +3,22 @@
 import { useEffect } from "react";
 
 /**
- * Measurable hooks only. No measurement ID and no ad pixel are added here.
- * If gtag already exists on the page, these names are forwarded to it.
- * Directions is never a store visit.
+ * Measurable hooks only. No measurement ID and no ad pixel are added here,
+ * and nothing sets cookies. If gtag already exists on the page, the GA4 name
+ * below is forwarded to it. Directions is never a store visit.
+ * No click_call: the site deliberately shows no phone (owner, 15 Sep 2026).
  */
-const EVENTS = new Set([
-  "whats_on",
-  "directions",
-  "contact",
-  "email_click",
-  "form_submit",
-]);
+const GA4_NAMES: Record<string, string> = {
+  whats_on: "whats_on",
+  directions: "click_directions",
+  contact: "contact",
+  email_click: "email_click",
+  form_submit: "generate_lead",
+};
 
-export function trackEvent(name: string) {
-  if (!EVENTS.has(name) || typeof window === "undefined") return;
+export function trackEvent(key: string) {
+  const name = GA4_NAMES[key];
+  if (!name || typeof window === "undefined") return;
   const w = window as Window & {
     gtag?: (
       command: "event",
