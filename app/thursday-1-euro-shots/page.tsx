@@ -5,9 +5,9 @@ import { buildMetadata } from "@/lib/seo";
 import { MAPS_URL, SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
-  title: "Thursday €1 shots near Puerta del Sol",
+  title: "Thursday shots near Sol, Madrid · €1 + live sport",
   description:
-    "Thursday €1 shots at O'Connell St Madrid — Erasmus, internationals, tourists and friend groups near Sol. Wednesday €1 shots also on.",
+    "Thursday shots near Sol, Madrid: €1 shots every Thursday at O'Connell St, Calle de Espoz y Mina 7, with live sport on the screens.",
   path: "/thursday-1-euro-shots",
 });
 
@@ -16,25 +16,27 @@ export default function ThursdayShotsPage() {
     <PageShell locale="en" altLangHref="/es/thursday-1-euro-shots">
       <PageHero
         eyebrow="Thursday · €1"
-        title="Thursday · €1 shots"
-        lead={`At ${SITE_NAME}, Thursday is the night for €1 shots — Erasmus students, internationals, tourists and anyone who wants an easy Madrid Centro night near Sol.`}
+        title="Thursday shots near Sol · €1"
+        lead="€1 shots every Thursday, with live sport on the screens. Ask at the bar for that night’s selection."
       />
-      <Section title="Why Thursday">
+      <Section title="Shots and matches on Thursday">
         <p>
-          €1 shots, a short walk from Puerta del Sol, Irish pub energy — it is
-          the night groups actually show up for. Bring your Erasmus flatmates,
-          your hostel friends, or the WhatsApp crew exploring Madrid.
+          €1 shots every Thursday. Ask at the bar for that night’s selection.
         </p>
-        <p>Wednesday €1 shots are on too. Thursday is the one everyone talks about.</p>
-      </Section>
-      <Section title="Good to know">
+        <p>
+          Thursday nights come with live sport too: with Movistar we show
+          practically every sport.
+        </p>
+        <p>
+          {SITE_NAME} is at Calle de Espoz y Mina 7, a short walk from Puerta
+          del Sol. No table reservations — walk in, first come, first served.
+        </p>
         <ul className="list-disc space-y-2 pl-5">
-          <li>Near Puerta del Sol — easy for mixed groups and travellers.</li>
-          <li>Ask at the bar for what is pouring that night.</li>
+          <li>Thursdays only.</li>
           <li>
-            Pair it with a match from{" "}
+            This week&apos;s matches are on{" "}
             <Link href="/whats-on" className="text-gold underline">
-              Fixtures
+              What&apos;s On
             </Link>
             .
           </li>
@@ -49,6 +51,7 @@ export default function ThursdayShotsPage() {
             href={MAPS_URL}
             target="_blank"
             rel="noopener noreferrer"
+            data-event="directions"
             className="text-gold underline"
           >
             Directions

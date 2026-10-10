@@ -1,6 +1,7 @@
 /** Venue NAP from GBP audit 2026-09-15 — do not invent prices, menu, or official status. */
 export const SITE_NAME = "O'Connell St";
-export const SITE_TAGLINE = "Irish pub & sports bar near Puerta del Sol";
+export const SITE_TAGLINE = "Irish pub & sports bar near Sol";
+export const SITE_TAGLINE_ES = "Pub irlandés y bar deportivo cerca de Sol";
 
 /** Canonical address as on GBP editor: Calle de Espoz y Mina, 7, 28012 Madrid */
 export const ADDRESS = {
@@ -12,18 +13,27 @@ export const ADDRESS = {
   full: "Calle de Espoz y Mina, 7, 28012 Madrid",
 } as const;
 
-/** GBP phone only — DO NOT show on the new website (web contact = form / future info@). NOT 915 22 75 09 */
+/** GBP phone only — DO NOT show on the new website (web contact = form + public email). NOT 915 22 75 09 */
 export const PHONE_DISPLAY = "+34 915 32 79 56";
 export const PHONE_TEL = "tel:+34915327956";
 
-/** Search-based Maps link (no invented coordinates). */
+/** Public inbox only. Internal Gmail must never appear on the site. */
+export const PUBLIC_EMAIL = "comunicacion@oconnellsmadrid.es";
+export const PUBLIC_EMAIL_MAILTO = "mailto:comunicacion@oconnellsmadrid.es";
+
+/**
+ * Google Maps link pinned to the O'Connell St GBP listing (Place ID from the
+ * Ads location audit 2026-10-02; opens "O'Connell St · C. de Espoz y Mina, 7"
+ * — checked live 2026-10-09). Query text stays as fallback. No coordinates.
+ */
+export const GBP_PLACE_ID = "ChIJLdKNhYAoQg0RSYjRwIO4dZQ";
 export const MAPS_URL =
-  "https://www.google.com/maps/search/?api=1&query=O%27Connell+St+Calle+de+Espoz+y+Mina+7+28012+Madrid";
+  "https://www.google.com/maps/search/?api=1&query=O%27Connell+St+Calle+de+Espoz+y+Mina+7+28012+Madrid&query_place_id=ChIJLdKNhYAoQg0RSYjRwIO4dZQ";
 
 export const NEIGHBOURHOOD = "near Puerta del Sol";
 
 /**
- * Opening hours from GBP editor/public card (audit 2026-09-15).
+ * Opening hours — aligned with GBP live card (re-verified 2026-10-02).
  * Mon–Thu 18:00–03:00; Fri–Sat 16:00–03:30; Sun 14:00–03:00 (Madrid local).
  */
 export const HOURS = {
@@ -53,24 +63,50 @@ export const HOURS = {
 export const FACTS = {
   type: "Irish pub and sports bar",
   football: ["Premier League", "UEFA Champions League", "LaLiga"] as const,
-  otherSports: ["NFL", "NBA"] as const,
+  otherSports: ["NFL", "NBA", "rugby", "F1", "tennis"] as const,
   thursdayShots: "Thursday €1 shots",
-  wednesdayShots: "Wednesday €1 shots",
 } as const;
 
-/** True when NEXT_PUBLIC_SITE_URL is a Vercel preview host — keep noindex. */
+/** True when NEXT_PUBLIC_SITE_URL is a preview host (Vercel or CF Pages) — keep noindex. */
 export function isPreviewHost(url = getSiteUrl()): boolean {
   try {
-    return new URL(url).hostname.includes("vercel.app");
+    const host = new URL(url).hostname;
+    return host.includes("vercel.app") || host.includes("pages.dev");
   } catch {
-    return url.includes("vercel.app");
+    return url.includes("vercel.app") || url.includes("pages.dev");
   }
+}
+
+/**
+ * Hold indexing on the custom domain until explicit go-live QA.
+ *
+ * NEXT_PUBLIC_SITE_URL only sets canonical/hreflang/sitemap/OG hosts.
+ * It does not by itself allow indexing.
+ *
+ * - unset, "true", "1", "yes" → noindex (safe while QA is still open)
+ * - "false" / "0" / "no" → allow index,follow on a non-preview host
+ *
+ * Go-live after QA: set NEXT_PUBLIC_FORCE_NOINDEX=false and redeploy.
+ * Deleting the variable does not go live; unset stays held.
+ */
+export function forceNoindex(): boolean {
+  const raw = process.env.NEXT_PUBLIC_FORCE_NOINDEX;
+  if (raw == null || raw.trim() === "") return true;
+  const v = raw.trim().toLowerCase();
+  if (v === "0" || v === "false" || v === "no") return false;
+  return true;
+}
+
+/** Preview hosts always noindex. Custom domain noindex until FORCE_NOINDEX is explicitly false. */
+export function shouldNoindex(url = getSiteUrl()): boolean {
+  return isPreviewHost(url) || forceNoindex();
 }
 
 /** Domain TBD — override with NEXT_PUBLIC_SITE_URL after custom domain. */
 export function getSiteUrl(): string {
   const fromEnv = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "");
-  return fromEnv || "https://oconnells-madrid.vercel.app";
+  // Live interim host is Cloudflare Pages until custom domain is set.
+  return fromEnv || "https://oconnells-madrid.pages.dev";
 }
 
 export const EN_PATHS = [
@@ -85,6 +121,7 @@ export const EN_PATHS = [
   "/location",
   "/whats-on",
   "/contact",
+  "/privacy",
 ] as const;
 
 export const ES_PATHS = [
@@ -99,6 +136,7 @@ export const ES_PATHS = [
   "/es/location",
   "/es/whats-on",
   "/es/contact",
+  "/es/privacy",
 ] as const;
 
 export const ALL_CONTENT_PATHS = [...EN_PATHS, ...ES_PATHS] as const;
@@ -116,4 +154,5 @@ export const HREFLANG_PAIRS: Record<string, string | undefined> = {
   "/location": "/es/location",
   "/whats-on": "/es/whats-on",
   "/contact": "/es/contact",
+  "/privacy": "/es/privacy",
 };

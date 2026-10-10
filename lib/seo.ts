@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { getSiteUrl, HREFLANG_PAIRS, isPreviewHost, SITE_NAME } from "./venue";
+import { getSiteUrl, HREFLANG_PAIRS, shouldNoindex, SITE_NAME } from "./venue";
 
 type BuildMetaOpts = {
   title: string;
@@ -10,7 +10,7 @@ type BuildMetaOpts = {
 
 export function absoluteUrl(path: string): string {
   const base = getSiteUrl();
-  if (path === "/") return base;
+  if (path === "/") return base.endsWith("/") ? base : `${base}/`;
   return `${base}${path.startsWith("/") ? path : `/${path}`}`;
 }
 
@@ -21,9 +21,11 @@ export function buildMetadata({
   locale = "en",
 }: BuildMetaOpts): Metadata {
   const canonical = absoluteUrl(path);
+  // Absolute title so root layout template never doubles the brand
+  // (e.g. "O'Connell St Madrid | O'Connell St Madrid").
   const fullTitle =
     title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME} Madrid`;
-  const preview = isPreviewHost();
+  const preview = shouldNoindex();
 
   const languages: Record<string, string> = {};
   const enPath =
@@ -39,7 +41,7 @@ export function buildMetadata({
   }
 
   return {
-    title: fullTitle,
+    title: { absolute: fullTitle },
     description,
     alternates: {
       canonical,
@@ -52,14 +54,24 @@ export function buildMetadata({
       siteName: `${SITE_NAME} Madrid`,
       locale: locale === "es" ? "es_ES" : "en_GB",
       type: "website",
+      images: [
+        {
+          url: "/og.jpg",
+          width: 1200,
+          height: 630,
+          alt: "O'Connell St Irish Pub Madrid",
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title: fullTitle,
       description,
+      images: ["/og.jpg"],
     },
-    // Preview (*.vercel.app): noindex so it never consolidates as the permanent site.
-    // Custom domain: index,follow.
+    // Preview hosts, or NEXT_PUBLIC_FORCE_NOINDEX not explicitly false: noindex.
+    // Canonical/hreflang/OG still use getSiteUrl() (custom domain when set).
+    // Go-live: NEXT_PUBLIC_FORCE_NOINDEX=false.
     robots: preview
       ? { index: false, follow: false }
       : { index: true, follow: true },

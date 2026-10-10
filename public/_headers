@@ -1,0 +1,8 @@
+# Keep the Pages hostname non-indexable even when the production
+# build is indexable (NEXT_PUBLIC_FORCE_NOINDEX=false).
+# Host-scoped: does not apply to oconnellsmadrid.es or www.
+https://oconnells-madrid.pages.dev/*
+	X-Robots-Tag: noindex, nofollow
+
+https://:version.oconnells-madrid.pages.dev/*
+	X-Robots-Tag: noindex, nofollow

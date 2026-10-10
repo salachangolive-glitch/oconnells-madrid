@@ -6,9 +6,9 @@ import { buildMetadata } from "@/lib/seo";
 import { SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
-  title: "Noches Erasmus cerca de Puerta del Sol",
+  title: "Erasmus y visitantes cerca de Sol",
   description:
-    "Pub irlandés para Erasmus cerca de Sol: jueves de chupitos a 1 €, pantallas de fútbol y quedar fácil en Madrid Centro.",
+    "O'Connell St, junto a Puerta del Sol: pub irlandés con estudiantes Erasmus, turistas y gente de fuera. Espoz y Mina 7.",
   path: "/es/erasmus",
   locale: "es",
 });
@@ -17,20 +17,21 @@ export default function EsErasmusPage() {
   return (
     <PageShell locale="es" altLangHref="/erasmus">
       <PageHero
-        eyebrow="Erasmus · Internacionales"
-        title={`Tu noche en ${SITE_NAME}`}
-        lead="Quedar cerca de Sol, ver el partido y quedarte al jueves de chupitos a 1 € — el ambiente de un Irish pub de verdad en Madrid Centro."
+        eyebrow="Erasmus · Visitantes"
+        title={`Gente de fuera en ${SITE_NAME}`}
+        lead="Estudiantes Erasmus, turistas y gente de muchos países coinciden en este pub irlandés, a un paso de Puerta del Sol. Es una noche normal del bar, no una fiesta Erasmus aparte."
       />
       <ThursdayFeature locale="es" />
-      <Section title="Por qué funciona">
+      <Section title="En el pub">
         <p>
-          Central para que todo el mundo llegue. Ambiente fácil en barra. Pantallas
-          cuando hay partido gordo. Pon el jueves en el grupo y el resto se
-          organiza solo.
+          {SITE_NAME} está en Calle de Espoz y Mina 7. El ambiente es
+          internacional toda la semana. El deporte confirmado se ve en las
+          pantallas: mira la Agenda para las horas. Los jueves, pregunta en
+          la barra por los chupitos a 1 €.
         </p>
         <p>
           <Link href="/es/sports" className="text-gold underline">
-            Deportes
+            Deportes en directo
           </Link>
           {" · "}
           <Link href="/es/location" className="text-gold underline">
@@ -38,7 +39,7 @@ export default function EsErasmusPage() {
           </Link>
           {" · "}
           <Link href="/es/whats-on" className="text-gold underline">
-            Partidos
+            Agenda
           </Link>
         </p>
       </Section>

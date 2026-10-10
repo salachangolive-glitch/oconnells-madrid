@@ -11,8 +11,9 @@ type Props = {
 };
 
 /**
- * Real O'Connell St facade. Hero = clean photo only (no text/buttons/dark
- * overlays on the image). Wide horizontal frame so O'CONNELL ST. stays readable.
+ * Real O'Connell St facade (portrait). Hero = clean photo only (no text /
+ * buttons / dark overlays on the image). Full vertical frame so the gold
+ * O'CONNELL ST. lettering and red storefront stay readable.
  */
 export function VenueHero({
   variant,
@@ -40,18 +41,20 @@ export function VenueHero({
   if (mode === "hero") {
     return (
       <div
-        className={`relative w-full overflow-hidden bg-pub-burgundy-deep aspect-[16/9] sm:aspect-[2/1] ${className}`}
+        className={`relative w-full overflow-hidden bg-pub-burgundy-deep ${className}`}
       >
-        <Image
-          src="/images/hero-fachada-desktop.webp"
-          alt={alt}
-          fill
-          priority
-          fetchPriority="high"
-          sizes="100vw"
-          className="object-contain object-center"
-          quality={85}
-        />
+        <div className="relative mx-auto aspect-[3/4] w-full max-h-[85vh] max-w-3xl sm:aspect-[4/5] sm:max-h-[90vh]">
+          <Image
+            src="/images/hero-fachada-desktop.webp"
+            alt={alt}
+            fill
+            priority
+            fetchPriority="high"
+            sizes="(max-width: 768px) 100vw, 768px"
+            className="object-contain object-center"
+            quality={85}
+          />
+        </div>
       </div>
     );
   }

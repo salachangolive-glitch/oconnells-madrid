@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
 import { Geist_Mono, Libre_Baskerville, Source_Sans_3 } from "next/font/google";
+import { AgendaClock } from "@/components/AgendaClock";
+import { Analytics } from "@/components/Analytics";
 import { JsonLd } from "@/components/JsonLd";
+import { TrackClicks } from "@/components/TrackClicks";
 import { barOrPubJsonLd } from "@/lib/jsonld";
 import {
   getSiteUrl,
-  isPreviewHost,
+  shouldNoindex,
   SITE_NAME,
   SITE_TAGLINE,
 } from "@/lib/venue";
@@ -27,7 +30,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const preview = isPreviewHost();
+const preview = shouldNoindex();
 
 export const metadata: Metadata = {
   metadataBase: new URL(getSiteUrl()),
@@ -35,7 +38,7 @@ export const metadata: Metadata = {
     default: `${SITE_NAME} Madrid | Irish pub & sports bar near Sol`,
     template: `%s | ${SITE_NAME} Madrid`,
   },
-  description: `${SITE_NAME} — ${SITE_TAGLINE}. Calle de Espoz y Mina 7. Watch football (Premier League, Champions League, LaLiga) in Madrid Centro. Thursday €1 shots.`,
+  description: `${SITE_NAME} — ${SITE_TAGLINE}. Calle de Espoz y Mina 7. Premier League, Champions League and LaLiga on the screens. Thursday €1 shots.`,
   robots: preview
     ? { index: false, follow: false }
     : { index: true, follow: true },
@@ -52,8 +55,11 @@ export default function RootLayout({
       className={`${sourceSans.variable} ${libreBaskerville.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col text-cream">
+        <Analytics />
         <JsonLd data={barOrPubJsonLd()} />
+        <TrackClicks />
         {children}
+        <AgendaClock />
       </body>
     </html>
   );

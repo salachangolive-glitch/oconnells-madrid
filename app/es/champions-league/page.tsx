@@ -1,14 +1,14 @@
 import Link from "next/link";
+import { InteriorPhoto } from "@/components/InteriorPhoto";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
-import { VenueHero } from "@/components/VenueHero";
 import { buildMetadata } from "@/lib/seo";
-import { SITE_NAME } from "@/lib/venue";
+import { ADDRESS, HOURS, MAPS_URL, SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
   title: "Noches de Champions League en el centro de Madrid",
   description:
-    "UEFA Champions League en las pantallas de O'Connell St, cerca de Puerta del Sol. Sports bar irlandés en Madrid Centro para noches europeas.",
+    "Champions League en O'Connell St cerca de Sol cuando la emisión está confirmada. Horario, entrada sin reserva y Agenda.",
   path: "/es/champions-league",
   locale: "es",
 });
@@ -18,19 +18,36 @@ export default function EsChampionsLeaguePage() {
     <PageShell locale="es" altLangHref="/champions-league">
       <PageHero
         eyebrow="UEFA Champions League"
-        title={`Noches de UCL en ${SITE_NAME}`}
-        lead="El fútbol europeo entre semana pide pantallas grandes. Únete al público de este pub irlandés cerca de Puerta del Sol para las noches de Champions League en Madrid Centro."
+        title={`Champions en ${SITE_NAME}`}
+        lead="Noches de Champions League en O'Connell St, Calle de Espoz y Mina 7. Los cruces confirmados y la hora de Madrid están en la Agenda."
       />
-      <VenueHero variant="secondary" className="mb-10" />
+      <InteriorPhoto
+        src="/images/interior/sports-aisle.webp"
+        alt="Pantallas de deportes en O'Connell St cerca de Sol"
+        position="object-[center_45%]"
+      />
       <Section title="Antes de venir">
         <p>
-          Confirma los cruces de esta noche en{" "}
-          <Link href="/es/whats-on" className="text-cream underline">
-            what&apos;s on
+          Consulta la{" "}
+          <Link href="/es/whats-on" data-event="whats_on" className="text-cream underline">
+            Agenda
           </Link>{" "}
-          si tu plan depende de un partido. Estamos a poca distancia de Sol —
-          fácil para viajeros y locales que entran a Madrid Centro para el
-          pitido.
+          para el cruce y la hora de Madrid. Si no está en la lista, pregunta
+          en la barra antes de venir.
+        </p>
+        <p>
+          {ADDRESS.full}. {HOURS.summaryEs}. No se reservan mesas. Atendemos
+          por orden de llegada.{" "}
+          <a
+            href={MAPS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-event="directions"
+            className="text-cream underline"
+          >
+            Cómo llegar desde Sol
+          </a>
+          .
         </p>
         <p>
           <Link href="/es/premier-league" className="text-cream underline">
@@ -38,7 +55,7 @@ export default function EsChampionsLeaguePage() {
           </Link>
           {" · "}
           <Link href="/es/sports" className="text-cream underline">
-            Deportes
+            Deportes en directo
           </Link>
           {" · "}
           <Link href="/es/location" className="text-cream underline">

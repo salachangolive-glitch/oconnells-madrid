@@ -1,14 +1,14 @@
 import Link from "next/link";
+import { InteriorPhoto } from "@/components/InteriorPhoto";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
-import { VenueHero } from "@/components/VenueHero";
 import { buildMetadata } from "@/lib/seo";
-import { SITE_NAME } from "@/lib/venue";
+import { ADDRESS, HOURS, MAPS_URL, SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
   title: "Champions League nights in central Madrid",
   description:
-    "UEFA Champions League on the screens at O'Connell St near Puerta del Sol. Irish sports bar in Madrid Centro for midweek European nights.",
+    "Champions League at O'Connell St near Sol when the screening is confirmed. Hours, walk-in, and What's On.",
   path: "/champions-league",
 });
 
@@ -17,18 +17,36 @@ export default function ChampionsLeaguePage() {
     <PageShell locale="en" altLangHref="/es/champions-league">
       <PageHero
         eyebrow="UEFA Champions League"
-        title={`UCL nights at ${SITE_NAME}`}
-        lead="Midweek European football belongs on the big screens. Join the crowd at this Irish sports pub near Puerta del Sol for Champions League nights in Madrid Centro."
+        title={`Champions League at ${SITE_NAME}`}
+        lead="Champions League nights at O'Connell St, Calle de Espoz y Mina 7. Confirmed ties and Madrid times are on What’s On."
       />
-      <VenueHero variant="secondary" className="mb-10" />
+      <InteriorPhoto
+        src="/images/interior/sports-aisle.webp"
+        alt="Sports screens at O'Connell St near Sol"
+        position="object-[center_45%]"
+      />
       <Section title="Before you come">
         <p>
-          Confirm tonight&apos;s ties on{" "}
-          <Link href="/whats-on" className="text-cream underline">
-            what&apos;s on
+          Check{" "}
+          <Link href="/whats-on" data-event="whats_on" className="text-cream underline">
+            What&apos;s On
           </Link>{" "}
-          if your night depends on one match. We&apos;re a short walk from Sol —
-          easy for travellers and locals heading into Madrid Centro for kick-off.
+          for the tie and the Madrid time. If it is not listed, ask at the bar
+          before you come.
+        </p>
+        <p>
+          {ADDRESS.full}. {HOURS.summaryEn}. No table reservations — walk in,
+          first come, first served.{" "}
+          <a
+            href={MAPS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-event="directions"
+            className="text-cream underline"
+          >
+            Directions from Sol
+          </a>
+          .
         </p>
         <p>
           <Link href="/premier-league" className="text-cream underline">
@@ -36,7 +54,7 @@ export default function ChampionsLeaguePage() {
           </Link>
           {" · "}
           <Link href="/sports" className="text-cream underline">
-            Sports overview
+            Live Sports
           </Link>
           {" · "}
           <Link href="/location" className="text-cream underline">
