@@ -25,6 +25,8 @@
  * Finished = kickoff + SPORT_DURATION_MIN for the sport (see table below).
  */
 
+import { HOURS } from "./venue";
+
 export type Fixture = {
   id: string;
   competition: string;
@@ -79,6 +81,14 @@ export type Fixture = {
  * (doors 16:00 on Saturdays); no URC (next round 23–24 Oct); no F1 (next 25 Oct);
  * Premiership rugby (no Movistar ficha for 16–18 Oct); UFC (HBO Max, not one of
  * our channels). See /workspace/oconnell-agenda-semana-2026-10-12/.
+ * Delta 2026-10-11 ~09:40 Madrid (DG order 09:26, venue-hours rule): a row is
+ * published only if it kicks off with the bar open and at least 60 min before
+ * closing (lib/venue.ts HOURS; kickoffs before 06:00 belong to the previous
+ * night). Removed overnight NFL: Falcons–Ravens Mon 12 02:20, Rams–Bills Tue 13
+ * 02:15, Broncos–Seahawks Fri 16 02:15, Packers–Cowboys Mon 19 02:20 (last
+ * kickoff 02:00 Sun–Thu nights, 02:30 Fri–Sat nights). isWithinVenueHours()
+ * now enforces the same rule at build time for every row.
+ * See /workspace/oconnell-agenda-semana-2026-10-12/nfl-cierre/.
  */
 export const FIXTURES: Fixture[] = [
   { id: "2026-10-08-madrid-partizan", competition: "EuroLeague", homeTeam: "Real Madrid", awayTeam: "Partizan", date: "2026-10-08", kickoffMadrid: "20:45" },
@@ -112,10 +122,8 @@ export const FIXTURES: Fixture[] = [
   { id: "2026-10-11-troyes-marseille", competition: "Ligue 1", homeTeam: "Troyes", awayTeam: "Marseille", date: "2026-10-11", kickoffMadrid: "20:45" },
   { id: "2026-10-11-racing-valencia", competition: "LaLiga", homeTeam: "Racing Santander", awayTeam: "Valencia", date: "2026-10-11", kickoffMadrid: "21:00", note: "DAZN" },
   { id: "2026-10-11-seahawks-49ers", competition: "NFL", homeTeam: "Seattle Seahawks", awayTeam: "San Francisco 49ers", date: "2026-10-11", kickoffMadrid: "22:25" },
-  { id: "2026-10-12-falcons-ravens", competition: "NFL", homeTeam: "Atlanta Falcons", awayTeam: "Baltimore Ravens", date: "2026-10-12", kickoffMadrid: "02:20" },
   { id: "2026-10-12-levante-sevilla", competition: "LaLiga", homeTeam: "Levante", awayTeam: "Sevilla", date: "2026-10-12", kickoffMadrid: "21:00", note: "Movistar LALIGA" },
   { id: "2026-10-12-coventry-newcastle", competition: "Premier League", homeTeam: "Coventry City", awayTeam: "Newcastle", date: "2026-10-12", kickoffMadrid: "21:00", note: "MW6, DAZN" },
-  { id: "2026-10-13-bills-rams", competition: "NFL", homeTeam: "Los Angeles Rams", awayTeam: "Buffalo Bills", date: "2026-10-13", kickoffMadrid: "02:15", note: "Week 5 MNF (Mon night), DAZN NFL Game Pass" },
   { id: "2026-10-13-milan-madrid", competition: "EuroLeague", homeTeam: "Olimpia Milano", awayTeam: "Real Madrid", date: "2026-10-13", kickoffMadrid: "20:30", note: "Round 5, Movistar Plus+" },
   { id: "2026-10-13-atletico-manutd", competition: "UEFA Champions League", homeTeam: "Atlético Madrid", awayTeam: "Manchester United", date: "2026-10-13", kickoffMadrid: "21:00", note: "League phase MD2, Riyadh Air Metropolitano", line: { en: "Travelling United fans: watch it with us at O'Connell St, a few minutes from Sol." } },
   { id: "2026-10-13-galatasaray-barcelona", competition: "UEFA Champions League", homeTeam: "Galatasaray", awayTeam: "Barcelona", date: "2026-10-13", kickoffMadrid: "21:00", note: "League phase MD2" },
@@ -131,7 +139,6 @@ export const FIXTURES: Fixture[] = [
   { id: "2026-10-15-usg-sociedad", competition: "UEFA Europa League", homeTeam: "Union Saint-Gilloise", awayTeam: "Real Sociedad", date: "2026-10-15", kickoffMadrid: "18:45", note: "League phase MD2, Movistar Plus+" },
   { id: "2026-10-15-celta-juventus", competition: "UEFA Europa League", homeTeam: "Celta", awayTeam: "Juventus", date: "2026-10-15", kickoffMadrid: "21:00", note: "League phase MD2, Balaídos, Movistar Plus+" },
   { id: "2026-10-15-madrid-asvel", competition: "EuroLeague", homeTeam: "Real Madrid", awayTeam: "ASVEL", date: "2026-10-15", kickoffMadrid: "21:00", note: "Round 6, Movistar Plus+" },
-  { id: "2026-10-16-seahawks-broncos", competition: "NFL", homeTeam: "Denver Broncos", awayTeam: "Seattle Seahawks", date: "2026-10-16", kickoffMadrid: "02:15", note: "Week 6 TNF (Thu night), DAZN NFL Game Pass" },
   { id: "2026-10-16-barcelona-olympiacos", competition: "EuroLeague", homeTeam: "Barcelona", awayTeam: "Olympiacos", date: "2026-10-16", kickoffMadrid: "20:30", note: "Round 6, Movistar Plus+" },
   { id: "2026-10-16-deportivo-levante", competition: "LaLiga", homeTeam: "RC Deportivo", awayTeam: "Levante", date: "2026-10-16", kickoffMadrid: "21:00", note: "J9, M+ LALIGA" },
   { id: "2026-10-17-brentford-liverpool", competition: "Premier League", homeTeam: "Brentford", awayTeam: "Liverpool", date: "2026-10-17", kickoffMadrid: "16:00", note: "MW7, DAZN" },
@@ -154,7 +161,6 @@ export const FIXTURES: Fixture[] = [
   { id: "2026-10-18-browns-ravens", competition: "NFL", homeTeam: "Cleveland Browns", awayTeam: "Baltimore Ravens", date: "2026-10-18", kickoffMadrid: "19:00", note: "Week 6, DAZN NFL Game Pass" },
   { id: "2026-10-18-madrid-sevilla", competition: "LaLiga", homeTeam: "Real Madrid", awayTeam: "Sevilla", date: "2026-10-18", kickoffMadrid: "21:00", note: "J9, Bernabéu, Movistar Plus+ / M+ LALIGA" },
   { id: "2026-10-18-chiefs-chargers", competition: "NFL", homeTeam: "Kansas City Chiefs", awayTeam: "Los Angeles Chargers", date: "2026-10-18", kickoffMadrid: "22:25", note: "Week 6, DAZN NFL Game Pass" },
-  { id: "2026-10-19-packers-cowboys", competition: "NFL", homeTeam: "Green Bay Packers", awayTeam: "Dallas Cowboys", date: "2026-10-19", kickoffMadrid: "02:20", note: "Week 6 SNF (Sun night), DAZN NFL Game Pass" },
   { id: "2026-10-19-getafe-rayo", competition: "LaLiga", homeTeam: "Getafe", awayTeam: "Rayo Vallecano", date: "2026-10-19", kickoffMadrid: "21:00", note: "DAZN LALIGA" },
   { id: "2026-10-21-madrid-leipzig", competition: "UEFA Champions League", homeTeam: "Real Madrid", awayTeam: "RB Leipzig", date: "2026-10-21", kickoffMadrid: "21:00", note: "League phase MD3, Movistar Plus+" },
   { id: "2026-10-22-getafe-lugano", competition: "UEFA Conference League", homeTeam: "Getafe", awayTeam: "Lugano", date: "2026-10-22", kickoffMadrid: "18:45", note: "League phase MD2, M+ Liga de Campeones" },
@@ -183,7 +189,50 @@ export function madridTodayYmd(now = new Date()): string {
 
 /** True when a fixture has a verified Madrid kickoff time. */
 export function isConfirmedFixture(f: Fixture): boolean {
-  return Boolean(f.kickoffMadrid && /^\d{2}:\d{2}$/.test(f.kickoffMadrid));
+  return Boolean(
+    f.kickoffMadrid &&
+      /^\d{2}:\d{2}$/.test(f.kickoffMadrid) &&
+      isWithinVenueHours(f),
+  );
+}
+
+/** Last kickoff allowed before closing time (minutes). */
+export const LAST_KICKOFF_BEFORE_CLOSE_MIN = 60;
+/** Kickoffs before this Madrid time belong to the previous night (e.g. 02:20 Mon = Sun night). */
+const NIGHT_ROLLOVER_MIN = 6 * 60;
+
+function hhmmToMin(t: string): number {
+  const [h, m] = t.split(":").map(Number);
+  return h * 60 + m;
+}
+
+/** Opening hours (lib/venue.ts HOURS) for the night that starts on `nightYmd`. */
+export function venueHoursForNight(nightYmd: string): { open: string; close: string } {
+  const dow = new Date(`${nightYmd}T12:00:00Z`).getUTCDay(); // 0 = Sunday
+  if (dow === 0) return HOURS.sun;
+  if (dow >= 1 && dow <= 4) return HOURS.monThu;
+  return HOURS.friSat;
+}
+
+/**
+ * Venue-hours gate (permanent, DG 2026-10-11): a row is published only if it
+ * kicks off with the bar open and at least LAST_KICKOFF_BEFORE_CLOSE_MIN before
+ * closing, i.e. kickoff in [open, close − 60 min] of that night. Rows outside
+ * the window are excluded automatically from every list, strip and page.
+ */
+export function isWithinVenueHours(f: Fixture): boolean {
+  if (!f.kickoffMadrid || !/^\d{2}:\d{2}$/.test(f.kickoffMadrid)) return false;
+  let kickoff = hhmmToMin(f.kickoffMadrid);
+  let night = f.date;
+  if (kickoff < NIGHT_ROLLOVER_MIN) {
+    kickoff += 24 * 60;
+    night = addMadridDays(f.date, -1);
+  }
+  const hours = venueHoursForNight(night);
+  const open = hhmmToMin(hours.open);
+  let close = hhmmToMin(hours.close);
+  if (close < NIGHT_ROLLOVER_MIN) close += 24 * 60;
+  return kickoff >= open && kickoff <= close - LAST_KICKOFF_BEFORE_CLOSE_MIN;
 }
 
 /**
