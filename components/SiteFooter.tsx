@@ -124,6 +124,16 @@ export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
                 {isEs ? "Cómo llegar" : "Directions"}
               </a>
             </li>
+            <li>
+              <a
+                href="https://g.page/r/CUmI0cCDuHWUEBE/review"
+                target="_blank"
+                rel="noopener"
+                className="hover:text-gold"
+              >
+                {isEs ? "Déjanos tu opinión en Google" : "Leave us a Google review"}
+              </a>
+            </li>
           </ul>
         </div>
         <div>
