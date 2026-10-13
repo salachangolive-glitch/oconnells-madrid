@@ -89,6 +89,14 @@ export type Fixture = {
  * kickoff 02:00 Sun–Thu nights, 02:30 Fri–Sat nights). isWithinVenueHours()
  * now enforces the same rule at build time for every row.
  * See /workspace/oconnell-agenda-semana-2026-10-12/nfl-cierre/.
+ * Delta 2026-10-13 ~10:40 Madrid (routine): window now reaches Tue 20. Reconfirmed
+ * UCL MD2 Tue 13/Wed 14 (uefa.com), UEL/UECL Thu 15 (uefa.com), EuroLeague Thu 15
+ * / Fri 16 (movistararena.es, movistarplus.es), LaLiga J9 (laliga.com), PL MW7
+ * (premierleague.com): no time changes. Added (owner rule 2026-10-13, all sport
+ * live): Lyon–Crystal Palace 18:45, Benfica–Celtic and Brighton–Kauno Žalgiris
+ * 21:00 (Thu 15); Spurs–Coventry Mon 19 21:00; UCL MD3 Tue 20 21:00 PSG–Barcelona,
+ * Stuttgart–Atlético, Liverpool–Villarreal, Man City–AEK. Overnight NFL still
+ * excluded by venue-hours rule. See /workspace/oconnell-agenda-delta-2026-10-13/.
  */
 export const FIXTURES: Fixture[] = [
   { id: "2026-10-08-madrid-partizan", competition: "EuroLeague", homeTeam: "Real Madrid", awayTeam: "Partizan", date: "2026-10-08", kickoffMadrid: "20:45" },
@@ -137,8 +145,11 @@ export const FIXTURES: Fixture[] = [
   { id: "2026-10-14-villa-fenerbahce", competition: "UEFA Champions League", homeTeam: "Aston Villa", awayTeam: "Fenerbahçe", date: "2026-10-14", kickoffMadrid: "21:00", note: "League phase MD2" },
   { id: "2026-10-15-craiova-getafe", competition: "UEFA Conference League", homeTeam: "Universitatea Craiova", awayTeam: "Getafe", date: "2026-10-15", kickoffMadrid: "18:45", note: "League phase MD1, M+ Liga de Campeones" },
   { id: "2026-10-15-usg-sociedad", competition: "UEFA Europa League", homeTeam: "Union Saint-Gilloise", awayTeam: "Real Sociedad", date: "2026-10-15", kickoffMadrid: "18:45", note: "League phase MD2, Movistar Plus+" },
+  { id: "2026-10-15-lyon-palace", competition: "UEFA Europa League", homeTeam: "Lyon", awayTeam: "Crystal Palace", date: "2026-10-15", kickoffMadrid: "18:45", note: "League phase MD2; UEFA time (CET); owner rule 2026-10-13: all UEL live" },
   { id: "2026-10-15-celta-juventus", competition: "UEFA Europa League", homeTeam: "Celta", awayTeam: "Juventus", date: "2026-10-15", kickoffMadrid: "21:00", note: "League phase MD2, Balaídos, Movistar Plus+" },
   { id: "2026-10-15-madrid-asvel", competition: "EuroLeague", homeTeam: "Real Madrid", awayTeam: "ASVEL", date: "2026-10-15", kickoffMadrid: "21:00", note: "Round 6, Movistar Plus+" },
+  { id: "2026-10-15-benfica-celtic", competition: "UEFA Europa League", homeTeam: "Benfica", awayTeam: "Celtic", date: "2026-10-15", kickoffMadrid: "21:00", note: "League phase MD2; UEFA time (CET); owner rule 2026-10-13: all UEL live" },
+  { id: "2026-10-15-brighton-zalgiris", competition: "UEFA Conference League", homeTeam: "Brighton", awayTeam: "Kauno Žalgiris", date: "2026-10-15", kickoffMadrid: "21:00", note: "League phase MD1; UEFA time (CET); owner rule 2026-10-13: all UECL live" },
   { id: "2026-10-16-barcelona-olympiacos", competition: "EuroLeague", homeTeam: "Barcelona", awayTeam: "Olympiacos", date: "2026-10-16", kickoffMadrid: "20:30", note: "Round 6, Movistar Plus+" },
   { id: "2026-10-16-deportivo-levante", competition: "LaLiga", homeTeam: "RC Deportivo", awayTeam: "Levante", date: "2026-10-16", kickoffMadrid: "21:00", note: "J9, M+ LALIGA" },
   { id: "2026-10-17-brentford-liverpool", competition: "Premier League", homeTeam: "Brentford", awayTeam: "Liverpool", date: "2026-10-17", kickoffMadrid: "16:00", note: "MW7, DAZN" },
@@ -162,6 +173,11 @@ export const FIXTURES: Fixture[] = [
   { id: "2026-10-18-madrid-sevilla", competition: "LaLiga", homeTeam: "Real Madrid", awayTeam: "Sevilla", date: "2026-10-18", kickoffMadrid: "21:00", note: "J9, Bernabéu, Movistar Plus+ / M+ LALIGA" },
   { id: "2026-10-18-chiefs-chargers", competition: "NFL", homeTeam: "Kansas City Chiefs", awayTeam: "Los Angeles Chargers", date: "2026-10-18", kickoffMadrid: "22:25", note: "Week 6, DAZN NFL Game Pass" },
   { id: "2026-10-19-getafe-rayo", competition: "LaLiga", homeTeam: "Getafe", awayTeam: "Rayo Vallecano", date: "2026-10-19", kickoffMadrid: "21:00", note: "DAZN LALIGA" },
+  { id: "2026-10-19-spurs-coventry", competition: "Premier League", homeTeam: "Tottenham Hotspur", awayTeam: "Coventry City", date: "2026-10-19", kickoffMadrid: "21:00", note: "MW7 Mon; premierleague.com 20:00 UK = 21:00 Madrid; DAZN" },
+  { id: "2026-10-20-psg-barcelona", competition: "UEFA Champions League", homeTeam: "Paris Saint-Germain", awayTeam: "Barcelona", date: "2026-10-20", kickoffMadrid: "21:00", note: "League phase MD3; UEFA time (CET); owner rule 2026-10-13: all UCL live" },
+  { id: "2026-10-20-stuttgart-atletico", competition: "UEFA Champions League", homeTeam: "Stuttgart", awayTeam: "Atlético Madrid", date: "2026-10-20", kickoffMadrid: "21:00", note: "League phase MD3; UEFA time (CET); owner rule 2026-10-13: all UCL live" },
+  { id: "2026-10-20-liverpool-villarreal", competition: "UEFA Champions League", homeTeam: "Liverpool", awayTeam: "Villarreal", date: "2026-10-20", kickoffMadrid: "21:00", note: "League phase MD3; UEFA time (CET); owner rule 2026-10-13: all UCL live" },
+  { id: "2026-10-20-mancity-aek", competition: "UEFA Champions League", homeTeam: "Manchester City", awayTeam: "AEK Athens", date: "2026-10-20", kickoffMadrid: "21:00", note: "League phase MD3; UEFA time (CET); owner rule 2026-10-13: all UCL live" },
   { id: "2026-10-21-madrid-leipzig", competition: "UEFA Champions League", homeTeam: "Real Madrid", awayTeam: "RB Leipzig", date: "2026-10-21", kickoffMadrid: "21:00", note: "League phase MD3, Movistar Plus+" },
   { id: "2026-10-22-getafe-lugano", competition: "UEFA Conference League", homeTeam: "Getafe", awayTeam: "Lugano", date: "2026-10-22", kickoffMadrid: "18:45", note: "League phase MD2, M+ Liga de Campeones" },
   { id: "2026-11-08-falcons-bengals", competition: "NFL", homeTeam: "Atlanta Falcons", awayTeam: "Cincinnati Bengals", date: "2026-11-08", kickoffMadrid: "15:30", note: "NFL Madrid Game, Bernabéu (Week 9). Live at O'Connell confirmed by owner 2026-10-13 07:12; home team/time per nfl.com", line: { en: "The NFL Madrid Game, live near Sol.", es: "El partido de la NFL en Madrid, en directo junto a Sol." } },
