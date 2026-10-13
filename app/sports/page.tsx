@@ -67,6 +67,10 @@ export default function SportsPage() {
           <Link href="/nfl-madrid" className="text-gold underline">
             watching NFL in Madrid
           </Link>
+          . Gig night on 22 October:{" "}
+          <Link href="/fontaines-dc-madrid" className="text-gold underline">
+            Fontaines D.C. before and after
+          </Link>
           .
           For one specific match, ask at the bar or check{" "}
           <Link href="/whats-on" className="text-gold underline">
