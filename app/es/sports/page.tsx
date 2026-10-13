@@ -64,7 +64,11 @@ export default function EsSportsPage() {
       <Section title="Más allá del fútbol">
         <p>
           NFL, NBA, rugby, Fórmula 1 y tenis se ponen cuando los estamos
-          emitiendo. Si te importa un partido concreto, pregunta en la barra o
+          emitiendo. Más sobre{" "}
+          <Link href="/es/nfl-madrid" className="text-gold underline">
+            ver la NFL en Madrid
+          </Link>
+          . Si te importa un partido concreto, pregunta en la barra o
           mira la{" "}
           <Link href="/es/whats-on" className="text-gold underline">
             Agenda

@@ -63,6 +63,11 @@ export default function SportsPage() {
       <Section title="Beyond football">
         <p>
           NFL, NBA, rugby, Formula 1 and tennis go on when we are showing them.
+          More on{" "}
+          <Link href="/nfl-madrid" className="text-gold underline">
+            watching NFL in Madrid
+          </Link>
+          .
           For one specific match, ask at the bar or check{" "}
           <Link href="/whats-on" className="text-gold underline">
             What&apos;s On
