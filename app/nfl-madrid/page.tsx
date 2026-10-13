@@ -71,6 +71,27 @@ export default function NflMadridPage() {
           .
         </p>
       </Section>
+      <Section title="The 2026 NFL Madrid Game">
+        <p>
+          Atlanta Falcons v Cincinnati Bengals, Sunday 8 November 2026, kickoff
+          15:30 Madrid time at the Bernabéu. Tickets, stadium rules and game
+          details are on the{" "}
+          <a href="https://www.nfl.com/international/games/madrid/" target="_blank" rel="noopener noreferrer" className="text-cream underline">
+            NFL&apos;s Madrid Game page
+          </a>{" "}
+          and its{" "}
+          <a href="https://www.nfl.com/international/games/madrid/faqs" target="_blank" rel="noopener noreferrer" className="text-cream underline">
+            FAQ
+          </a>
+          .
+        </p>
+        <p>
+          Getting from the Bernabéu to Sol: the Santiago Bernabéu metro stop is
+          on Line 10, and Sol is one change away. On foot it&apos;s roughly an
+          hour down the Paseo de la Castellana. Expect busy trains straight
+          after the game.
+        </p>
+      </Section>
       <Section title="Find us">
         <p>
           {ADDRESS.full}. {HOURS.summaryEn}.

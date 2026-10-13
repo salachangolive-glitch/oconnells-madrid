@@ -73,6 +73,27 @@ export default function NflMadridPageEs() {
           .
         </p>
       </Section>
+      <Section title="El partido NFL de Madrid 2026">
+        <p>
+          Atlanta Falcons–Cincinnati Bengals, domingo 8 de noviembre de 2026, a las
+          15:30 hora de Madrid en el Bernabéu. Entradas, normas del estadio y
+          detalles del partido en la{" "}
+          <a href="https://www.nfl.com/international/games/madrid/" target="_blank" rel="noopener noreferrer" className="text-cream underline">
+            página de la NFL sobre el partido de Madrid
+          </a>{" "}
+          y sus{" "}
+          <a href="https://www.nfl.com/international/games/madrid/faqs" target="_blank" rel="noopener noreferrer" className="text-cream underline">
+            preguntas frecuentes
+          </a>
+          .
+        </p>
+        <p>
+          Del Bernabéu a Sol: la parada de metro Santiago Bernabéu es de la
+          Línea 10 y Sol está a un transbordo. Andando es aproximadamente una
+          hora bajando por la Castellana. Justo después del partido, los trenes
+          irán llenos.
+        </p>
+      </Section>
       <Section title="Dónde estamos">
         <p>
           {ADDRESS.full}. {HOURS.summaryEs}.
