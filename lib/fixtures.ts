@@ -213,6 +213,7 @@ export const FIXTURES: Fixture[] = [
   { id: "2026-10-22-lillestrom-sociedad", competition: "UEFA Europa League", homeTeam: "Lillestrøm", awayTeam: "Real Sociedad", date: "2026-10-22", kickoffMadrid: "21:00", note: "League phase MD3, Movistar Liga de Campeones (Radar 2026-10-13, movistar.es guide)" },
   { id: "2026-10-22-bournemouth-milan", competition: "UEFA Europa League", homeTeam: "Bournemouth", awayTeam: "Milan", date: "2026-10-22", kickoffMadrid: "21:00", note: "League phase MD3, Movistar Liga de Campeones (Radar 2026-10-13, movistar.es guide)" },
   { id: "2026-10-22-besiktas-palace", competition: "UEFA Europa League", homeTeam: "Beşiktaş", awayTeam: "Crystal Palace", date: "2026-10-22", kickoffMadrid: "21:00", note: "League phase MD3, Movistar Liga de Campeones (Radar 2026-10-13, movistar.es guide)" },
+  { id: "2026-11-08-nfl-redzone", competition: "NFL", homeTeam: "NFL RedZone LIVE", awayTeam: "", date: "2026-11-08", kickoffMadrid: "19:00", note: "Week 9 Sunday afternoon/late windows (19:00, 22:05/22:25 Madrid); owner confirmed RedZone at O'Connell 2026-10-13", line: { en: "NFL RedZone LIVE: every touchdown from the Sunday games.", es: "NFL RedZone en directo: todos los touchdowns de los partidos del domingo." } },
 ];
 
 export const RECURRING = {

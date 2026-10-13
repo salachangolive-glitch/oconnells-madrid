@@ -95,6 +95,10 @@ export default function NflMadridPageEs() {
           <li>22:05 · Texans v Chargers, Raiders v 49ers</li>
           <li>22:25 · Packers v Patriots, Cardinals v Seahawks</li>
         </ul>
+        <p>
+          <strong>NFL RedZone EN DIRECTO</strong> desde las 19:00 del domingo 8
+          de noviembre, con los partidos de las 19:00 y de las 22:05/22:25.
+        </p>
       </Section>
       <Section title="El partido NFL de Madrid 2026">
         <p>

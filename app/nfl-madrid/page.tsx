@@ -93,6 +93,10 @@ export default function NflMadridPage() {
           <li>22:05 · Texans v Chargers, Raiders v 49ers</li>
           <li>22:25 · Packers v Patriots, Cardinals v Seahawks</li>
         </ul>
+        <p>
+          <strong>NFL RedZone LIVE</strong> from 19:00 on Sunday 8 November,
+          covering the 19:00 and 22:05/22:25 games.
+        </p>
       </Section>
       <Section title="The 2026 NFL Madrid Game">
         <p>
