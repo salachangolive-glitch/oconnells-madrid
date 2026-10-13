@@ -33,6 +33,13 @@ export default function EsChampionsLeaguePage() {
           después. También lo emitimos en directo. Sin reserva.
         </p>
       </Section>
+      <Section title="Atlético de Madrid–Bayern · martes 3 de noviembre, 21:00">
+        <p>
+          Seas del Atleti o del Bayern, quedad en el centro: O&apos;Connell St
+          está junto a Sol, punto de encuentro antes de ir al Metropolitano y para
+          comentarlo después. Lo emitimos en directo. Sin reserva.
+        </p>
+      </Section>
       <Section title="Antes de venir">
         <p>
           Consulta la{" "}

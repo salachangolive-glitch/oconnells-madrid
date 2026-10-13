@@ -176,6 +176,7 @@ export const FIXTURES: Fixture[] = [
   { id: "2026-11-08-49ers-raiders", competition: "NFL", homeTeam: "San Francisco 49ers", awayTeam: "Las Vegas Raiders", date: "2026-11-08", kickoffMadrid: "22:05", note: "Week 9; all Sunday games live, owner confirmed 2026-10-13; times nfl.com (ET+6)" },
   { id: "2026-11-08-patriots-packers", competition: "NFL", homeTeam: "New England Patriots", awayTeam: "Green Bay Packers", date: "2026-11-08", kickoffMadrid: "22:25", note: "Week 9; all Sunday games live, owner confirmed 2026-10-13; times nfl.com (ET+6)" },
   { id: "2026-11-08-seahawks-cardinals", competition: "NFL", homeTeam: "Seattle Seahawks", awayTeam: "Arizona Cardinals", date: "2026-11-08", kickoffMadrid: "22:25", note: "Week 9; all Sunday games live, owner confirmed 2026-10-13; times nfl.com (ET+6)" },
+  { id: "2026-11-03-atletico-bayern", competition: "UEFA Champions League", homeTeam: "Atlético Madrid", awayTeam: "Bayern Munich", date: "2026-11-03", kickoffMadrid: "21:00", note: "League phase MD4, Riyadh Air Metropolitano; time per atleticodemadrid.com; owner rule 2026-10-13: all UCL live" },
 ];
 
 export const RECURRING = {
