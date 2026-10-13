@@ -7,6 +7,7 @@ const nav = {
   en: [
     { href: "/whats-on", label: "What's On" },
     { href: "/sports", label: "Live Sports" },
+    { href: "/menu", label: "Menu" },
     { href: "/thursday-1-euro-shots", label: "Thursday €1" },
     { href: "/erasmus", label: "Erasmus" },
     { href: "/location", label: "Location" },
@@ -16,6 +17,7 @@ const nav = {
   es: [
     { href: "/es/whats-on", label: "Agenda" },
     { href: "/es/sports", label: "Deportes" },
+    { href: "/es/menu", label: "Carta" },
     { href: "/es/thursday-1-euro-shots", label: "Jueves 1 €" },
     { href: "/es/erasmus", label: "Erasmus" },
     { href: "/es/location", label: "Ubicación" },
