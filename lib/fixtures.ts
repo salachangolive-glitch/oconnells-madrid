@@ -164,6 +164,7 @@ export const FIXTURES: Fixture[] = [
   { id: "2026-10-19-getafe-rayo", competition: "LaLiga", homeTeam: "Getafe", awayTeam: "Rayo Vallecano", date: "2026-10-19", kickoffMadrid: "21:00", note: "DAZN LALIGA" },
   { id: "2026-10-21-madrid-leipzig", competition: "UEFA Champions League", homeTeam: "Real Madrid", awayTeam: "RB Leipzig", date: "2026-10-21", kickoffMadrid: "21:00", note: "League phase MD3, Movistar Plus+" },
   { id: "2026-10-22-getafe-lugano", competition: "UEFA Conference League", homeTeam: "Getafe", awayTeam: "Lugano", date: "2026-10-22", kickoffMadrid: "18:45", note: "League phase MD2, M+ Liga de Campeones" },
+  { id: "2026-11-08-falcons-bengals", competition: "NFL", homeTeam: "Atlanta Falcons", awayTeam: "Cincinnati Bengals", date: "2026-11-08", kickoffMadrid: "15:30", note: "NFL Madrid Game, Bernabéu (Week 9). Live at O'Connell confirmed by owner 2026-10-13 07:12; home team/time per nfl.com", line: { en: "The NFL Madrid Game, live near Sol.", es: "El partido de la NFL en Madrid, en directo junto a Sol." } },
 ];
 
 export const RECURRING = {

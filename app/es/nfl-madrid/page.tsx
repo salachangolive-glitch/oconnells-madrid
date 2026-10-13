@@ -16,7 +16,7 @@ export const metadata = buildMetadata({
 const faq = [
   {
     q: "¿Dónde ver la NFL en Madrid?",
-    a: "O'Connell St es un pub deportivo en el centro de Madrid, a pocos minutos de la Puerta del Sol. Ponemos la NFL en las teles cuando la estamos emitiendo, y cada partido confirmado aparece en la Agenda con la hora de Madrid.",
+    a: "O'Connell St es un pub deportivo en el centro de Madrid, junto a Sol. Ponemos la NFL en las teles cuando la estamos emitiendo, y cada partido confirmado aparece en la Agenda con la hora de Madrid.",
   },
   {
     q: "¿Ponéis todos los partidos de la NFL?",
@@ -38,7 +38,7 @@ export default function NflMadridPageEs() {
       <PageHero
         eyebrow="NFL · Centro de Madrid"
         title={`Ver la NFL en Madrid en ${SITE_NAME}`}
-        lead="Un pub irlandés deportivo a pocos minutos de la Puerta del Sol, con fútbol americano en las teles cuando lo estamos emitiendo."
+        lead="Un pub irlandés deportivo junto a Sol, con fútbol americano en las teles cuando lo estamos emitiendo."
       />
       <InteriorPhoto
         src="/images/interior/sports-aisle.webp"
@@ -73,6 +73,21 @@ export default function NflMadridPageEs() {
           .
         </p>
       </Section>
+      <Section title="Bengals vs Falcons EN DIRECTO junto a Sol">
+        <p>
+          Emitimos en directo el partido de la NFL en Madrid 2026: Falcons–Bengals,
+          domingo 8 de noviembre, a las 15:30. Los domingos abrimos a las 14:00.
+          Sin reserva, por orden de llegada. También está en la{" "}
+          <Link href="/es/whats-on" className="text-cream underline">Agenda</Link>.
+        </p>
+      </Section>
+      <Section title="Después del partido de Madrid">
+        <p>
+          ¿Vuelves al centro después del partido en el Bernabéu? Estamos en la
+          calle Espoz y Mina, junto a Sol. Ven a comentarlo con otros fans de la
+          NFL, seas del equipo que seas.
+        </p>
+      </Section>
       <Section title="El partido NFL de Madrid 2026">
         <p>
           Atlanta Falcons–Cincinnati Bengals, domingo 8 de noviembre de 2026, a las
@@ -88,10 +103,10 @@ export default function NflMadridPageEs() {
           .
         </p>
         <p>
-          Del Bernabéu a Sol: la parada de metro Santiago Bernabéu es de la
-          Línea 10 y Sol está a un transbordo. Andando es aproximadamente una
-          hora bajando por la Castellana. Justo después del partido, los trenes
-          irán llenos.
+          Para volver al centro: el estadio tiene su propia parada de metro, Santiago
+          Bernabéu. Consulta la ruta hasta Sol en el planificador de{" "}
+          <a href="https://www.metromadrid.es/es" target="_blank" rel="noopener noreferrer" className="text-cream underline">Metro de Madrid</a>.
+          Justo después del partido, los trenes irán llenos.
         </p>
       </Section>
       <Section title="Dónde estamos">

@@ -15,7 +15,7 @@ export const metadata = buildMetadata({
 const faq = [
   {
     q: "Where can I watch NFL in Madrid?",
-    a: "O'Connell St is a sports pub in central Madrid, a short walk from Puerta del Sol. We put NFL games on the TVs when we are showing them, and every confirmed game is listed on What's On with the Madrid time.",
+    a: "O'Connell St is a sports pub in central Madrid, just off Puerta del Sol. We put NFL games on the TVs when we are showing them, and every confirmed game is listed on What's On with the Madrid time.",
   },
   {
     q: "Do you show every NFL game?",
@@ -37,7 +37,7 @@ export default function NflMadridPage() {
       <PageHero
         eyebrow="NFL · Central Madrid"
         title={`Watch NFL in Madrid at ${SITE_NAME}`}
-        lead="An Irish sports pub a few minutes' walk from Puerta del Sol, with American football on the TVs when we're showing it."
+        lead="An Irish sports pub just off Puerta del Sol, with American football on the TVs when we're showing it."
       />
       <InteriorPhoto
         src="/images/interior/sports-aisle.webp"
@@ -71,6 +71,21 @@ export default function NflMadridPage() {
           .
         </p>
       </Section>
+      <Section title="Watch Bengals vs Falcons LIVE near Sol">
+        <p>
+          We&apos;re showing the 2026 NFL Madrid Game live: Falcons v Bengals,
+          Sunday 8 November, kickoff 15:30. Doors open at 14:00 on Sundays. Walk
+          in, first come, first served. It&apos;s also on{" "}
+          <Link href="/whats-on" className="text-cream underline">What&apos;s On</Link>.
+        </p>
+      </Section>
+      <Section title="After the Madrid game">
+        <p>
+          Heading back into the centre after the game at the Bernabéu? We&apos;re
+          on Calle de Espoz y Mina, just off Puerta del Sol. Join us to talk it
+          over with other NFL fans, whichever side you were on.
+        </p>
+      </Section>
       <Section title="The 2026 NFL Madrid Game">
         <p>
           Atlanta Falcons v Cincinnati Bengals, Sunday 8 November 2026, kickoff
@@ -86,10 +101,10 @@ export default function NflMadridPage() {
           .
         </p>
         <p>
-          Getting from the Bernabéu to Sol: the Santiago Bernabéu metro stop is
-          on Line 10, and Sol is one change away. On foot it&apos;s roughly an
-          hour down the Paseo de la Castellana. Expect busy trains straight
-          after the game.
+          Getting back to the centre: the stadium has its own metro stop, Santiago
+          Bernabéu. Plan your route to Sol with the{" "}
+          <a href="https://www.metromadrid.es/en" target="_blank" rel="noopener noreferrer" className="text-cream underline">Metro de Madrid</a>{" "}
+          journey planner. Expect busy trains straight after the game.
         </p>
       </Section>
       <Section title="Find us">
