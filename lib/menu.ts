@@ -19,6 +19,7 @@ export const MENU: MenuSection[] = [
   {
     id: "raciones", es: "Raciones y tapas", en: "Raciones & tapas",
     items: [
+      { es: "Aros de cebolla", en: "Breaded onion rings with ranch sauce", price: 9 },
       { es: "Jamón ibérico de bellota", en: "Iberian ham", price: 24 },
       { es: "Queso manchego", en: "Manchego cheese", price: 12 },
       { es: "Patatas bravas o alioli", en: "Bravas potatoes or alioli", price: 9 },
