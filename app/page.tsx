@@ -198,6 +198,10 @@ export default function HomePage() {
           <Link href="/contact" data-event="contact" className="text-gold underline">
             Write to us via the form
           </Link>
+          . On Thursdays:{" "}
+          <Link href="/thursday-1-euro-shots" className="text-gold underline">
+            €1 shots near Sol
+          </Link>
           .
         </p>
       </Section>

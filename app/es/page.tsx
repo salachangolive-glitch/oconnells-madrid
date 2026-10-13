@@ -203,6 +203,10 @@ export default function EsHomePage() {
           <Link href="/es/contact" data-event="contact" className="text-gold underline">
             Escríbenos por el formulario
           </Link>
+          . Los jueves:{" "}
+          <Link href="/es/thursday-1-euro-shots" className="text-gold underline">
+            chupitos a 1 € junto a Sol
+          </Link>
           .
         </p>
       </Section>

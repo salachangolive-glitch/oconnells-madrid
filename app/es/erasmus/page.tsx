@@ -19,7 +19,7 @@ export default function EsErasmusPage() {
       <PageHero
         eyebrow="Erasmus · Visitantes"
         title={`Gente de fuera en ${SITE_NAME}`}
-        lead="Estudiantes Erasmus, turistas y gente de muchos países coinciden en este pub irlandés, a un paso de Puerta del Sol. Es una noche normal del bar, no una fiesta Erasmus aparte."
+        lead="Estudiantes Erasmus, turistas y gente de muchos países coinciden en este pub irlandés, junto a la Puerta del Sol. Es una noche normal del bar, no una fiesta Erasmus aparte."
       />
       <ThursdayFeature locale="es" />
       <Section title="En el pub">
@@ -27,7 +27,11 @@ export default function EsErasmusPage() {
           {SITE_NAME} está en Calle de Espoz y Mina 7. El ambiente es
           internacional toda la semana. El deporte confirmado se ve en las
           pantallas: mira la Agenda para las horas. Los jueves, pregunta en
-          la barra por los chupitos a 1 €.
+          la barra por los{" "}
+          <Link href="/es/thursday-1-euro-shots" className="text-gold underline">
+            chupitos a 1 €
+          </Link>
+          .
         </p>
         <p>
           <Link href="/es/sports" className="text-gold underline">

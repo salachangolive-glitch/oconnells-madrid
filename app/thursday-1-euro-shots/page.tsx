@@ -2,7 +2,7 @@ import Link from "next/link";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
 import { buildMetadata } from "@/lib/seo";
-import { MAPS_URL, SITE_NAME } from "@/lib/venue";
+import { HOURS, MAPS_URL, SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
   title: "Thursday shots near Sol, Madrid · €1 + live sport",
@@ -28,7 +28,7 @@ export default function ThursdayShotsPage() {
           practically every sport.
         </p>
         <p>
-          {SITE_NAME} is at Calle de Espoz y Mina 7, a short walk from Puerta
+          {SITE_NAME} is at Calle de Espoz y Mina 7, just off Puerta
           del Sol. No table reservations — walk in, first come, first served.
         </p>
         <ul className="list-disc space-y-2 pl-5">
@@ -61,6 +61,14 @@ export default function ThursdayShotsPage() {
             Location
           </Link>
         </p>
+      </Section>
+      <Section title="FAQ">
+        <h3 className="font-semibold">What time do you open on Thursdays?</h3>
+        <p>
+          On Thursdays we are open {HOURS.monThu.open}–{HOURS.monThu.close}.
+        </p>
+        <h3 className="font-semibold">Do I need to book?</h3>
+        <p>No booking needed — walk in, first come, first served.</p>
       </Section>
     </PageShell>
   );

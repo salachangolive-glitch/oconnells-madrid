@@ -2,10 +2,10 @@ import Link from "next/link";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
 import { buildMetadata } from "@/lib/seo";
-import { MAPS_URL, SITE_NAME } from "@/lib/venue";
+import { HOURS, MAPS_URL, SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
-  title: "Chupitos a 1 euro los jueves en Madrid, junto a Sol",
+  title: "Chupitos a 1 € los jueves junto a Sol · Madrid",
   description:
     "Chupitos a 1 euro los jueves en Madrid: en O'Connell St, Calle de Espoz y Mina 7, junto a Sol, con deporte en directo en las pantallas.",
   path: "/es/thursday-1-euro-shots",
@@ -30,7 +30,7 @@ export default function EsThursdayShotsPage() {
           prácticamente todos los deportes.
         </p>
         <p>
-          {SITE_NAME} está en Calle de Espoz y Mina 7, a un paso de Puerta del
+          {SITE_NAME} está en Calle de Espoz y Mina 7, junto a la Puerta del
           Sol. No se reservan mesas. Atendemos por orden de llegada.
         </p>
         <ul className="list-disc space-y-2 pl-5">
@@ -63,6 +63,14 @@ export default function EsThursdayShotsPage() {
             Ubicación
           </Link>
         </p>
+      </Section>
+      <Section title="Preguntas frecuentes">
+        <h3 className="font-semibold">¿A qué hora abrís los jueves?</h3>
+        <p>
+          Los jueves abrimos de {HOURS.monThu.open} a {HOURS.monThu.close}.
+        </p>
+        <h3 className="font-semibold">¿Hay que reservar?</h3>
+        <p>No hace falta reservar: entra cuando quieras, por orden de llegada.</p>
       </Section>
     </PageShell>
   );

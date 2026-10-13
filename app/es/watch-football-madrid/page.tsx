@@ -8,7 +8,7 @@ import { ADDRESS, HOURS, MAPS_URL, SITE_NAME } from "@/lib/venue";
 export const metadata = buildMetadata({
   title: "Ver fútbol en Madrid cerca de Sol",
   description:
-    "Fútbol confirmado en O'Connell St, Calle de Espoz y Mina 7, cerca de Sol. Horario, cómo llegar y Agenda.",
+    "Ver fútbol junto a la Puerta del Sol en O'Connell St, Calle de Espoz y Mina 7. Partidos confirmados, horario, cómo llegar y Agenda.",
   path: "/es/watch-football-madrid",
   locale: "es",
 });
@@ -18,8 +18,8 @@ export default function EsWatchFootballPage() {
     <PageShell locale="es" altLangHref="/watch-football-madrid">
       <PageHero
         eyebrow="Ver fútbol · Madrid"
-        title="Fútbol en un pub junto a Sol"
-        lead={`${SITE_NAME} está en ${ADDRESS.street}, a pocos pasos de Puerta del Sol. Los partidos confirmados están en la Agenda.`}
+        title="Ver fútbol junto a Sol, Madrid"
+        lead={`${SITE_NAME} está en ${ADDRESS.street}, junto a la Puerta del Sol. Los partidos confirmados están en la Agenda.`}
       />
       <InteriorPhoto
         src="/images/interior/football-seating.webp"
@@ -48,6 +48,20 @@ export default function EsWatchFootballPage() {
           reserva.
         </p>
       </Section>
+      <Section title="Preguntas frecuentes">
+        <div>
+          <h3 className="font-semibold">¿Qué partidos ponéis?</h3>
+          <p>
+            Premier League, LaLiga, Champions League y otro fútbol confirmado,
+            además de la NFL y más. Cada partido confirmado está en la Agenda con
+            la hora de Madrid.
+          </p>
+        </div>
+        <div>
+          <h3 className="font-semibold">¿Hay que reservar?</h3>
+          <p>No hace falta reservar: entra cuando quieras, por orden de llegada.</p>
+        </div>
+      </Section>
       <Section title="Horario y cómo llegar">
         <p>{ADDRESS.full}. {HOURS.summaryEs}.</p>
         <p>
@@ -73,6 +87,10 @@ export default function EsWatchFootballPage() {
           ,{" "}
           <Link href="/es/champions-league" className="text-cream underline">
             Champions League
+          </Link>
+          ,{" "}
+          <Link href="/es/nfl-madrid" className="text-cream underline">
+            NFL en Madrid
           </Link>{" "}
           y{" "}
           <Link href="/es/sports" className="text-cream underline">

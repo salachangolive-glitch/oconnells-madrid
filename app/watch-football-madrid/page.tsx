@@ -8,7 +8,7 @@ import { ADDRESS, HOURS, MAPS_URL, SITE_NAME } from "@/lib/venue";
 export const metadata = buildMetadata({
   title: "Watch football in Madrid near Sol",
   description:
-    "Watch confirmed football at O'Connell St, Calle de Espoz y Mina 7, near Sol. Hours, directions and What's On.",
+    "Watch football near Puerta del Sol at O'Connell St, Calle de Espoz y Mina 7. Confirmed matches, hours, directions and What's On.",
   path: "/watch-football-madrid",
 });
 
@@ -17,8 +17,8 @@ export default function WatchFootballPage() {
     <PageShell locale="en" altLangHref="/es/watch-football-madrid">
       <PageHero
         eyebrow="Watch football · Madrid"
-        title="Football at a pub near Sol"
-        lead={`${SITE_NAME} shows confirmed football at ${ADDRESS.street}, a few minutes from Puerta del Sol. Kickoff times are on What’s On.`}
+        title="Watch football near Sol, Madrid"
+        lead={`${SITE_NAME} shows confirmed football at ${ADDRESS.street}, just off Puerta del Sol. Kickoff times are on What’s On.`}
       />
       <InteriorPhoto
         src="/images/interior/football-seating.webp"
@@ -47,6 +47,20 @@ export default function WatchFootballPage() {
           the match live. Walk in, no booking needed.
         </p>
       </Section>
+      <Section title="FAQ">
+        <div>
+          <h3 className="font-semibold">What matches do you show?</h3>
+          <p>
+            Premier League, LaLiga, Champions League and other confirmed football,
+            plus NFL and more. Every confirmed game is listed on What&apos;s On with
+            the Madrid time.
+          </p>
+        </div>
+        <div>
+          <h3 className="font-semibold">Do I need to book?</h3>
+          <p>No booking needed — walk in, first come, first served.</p>
+        </div>
+      </Section>
       <Section title="Getting here">
         <p>
           Aim for Puerta del Sol, then walk to Calle de Espoz y Mina.{" "}
@@ -69,6 +83,10 @@ export default function WatchFootballPage() {
           and{" "}
           <Link href="/champions-league" className="text-cream underline">
             Champions League
+          </Link>
+          ,{" "}
+          <Link href="/nfl-madrid" className="text-cream underline">
+            NFL in Madrid
           </Link>
           , plus other sport on{" "}
           <Link href="/sports" className="text-cream underline">
