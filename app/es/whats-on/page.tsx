@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { PostMatchBanner } from "@/components/PostMatchBanner";
 import { FixtureList } from "@/components/FixtureList";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
@@ -23,6 +24,7 @@ export default function EsWhatsOnPage() {
         lead="Todos los horarios están indicados en hora de Madrid. Los eventos marcados como ‘Confirmado’ tienen prevista su emisión en nuestras pantallas."
       />
 
+      <PostMatchBanner locale="es" />
       <FixtureList locale="es" />
 
       <Section title="Deportes en directo en O'Connell St">

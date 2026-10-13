@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { PostMatchBanner } from "@/components/PostMatchBanner";
 import { FixtureList } from "@/components/FixtureList";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
@@ -22,6 +23,7 @@ export default function WhatsOnPage() {
         lead="All times are shown in Madrid time. Events marked ‘Confirmed’ are scheduled to be shown on our screens."
       />
 
+      <PostMatchBanner locale="en" />
       <FixtureList locale="en" />
 
       <Section title="Live sports at O'Connell St">

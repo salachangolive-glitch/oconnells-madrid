@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { PostMatchBanner } from "@/components/PostMatchBanner";
 import { FixtureStrip } from "@/components/FixtureStrip";
 import { HomeCtaBand } from "@/components/HomeCtaBand";
 import { InteriorGallery, InteriorPhoto } from "@/components/InteriorPhoto";
@@ -34,6 +35,7 @@ export default function EsHomePage() {
         />
       }
     >
+      <PostMatchBanner locale="es" />
       <header className="mb-8 max-w-2xl text-center sm:mx-auto">
         <h1 className="font-serif text-2xl font-bold leading-snug text-cream sm:text-3xl lg:text-4xl">
           O&apos;Connell St Madrid
