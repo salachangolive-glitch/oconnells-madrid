@@ -39,6 +39,14 @@ export default function WatchFootballPage() {
           first come, first served.
         </p>
       </Section>
+      <Section title="Brighton fans in Madrid · Getafe v Brighton, Thu 5 November, 21:00">
+        <p>
+          Over for the Conference League trip? O&apos;Connell St is an Irish pub
+          just off Puerta del Sol, a good place to meet up in the centre before
+          heading out to Getafe and to come back to afterwards. We&apos;re showing
+          the match live. Walk in, no booking needed.
+        </p>
+      </Section>
       <Section title="Getting here">
         <p>
           Aim for Puerta del Sol, then walk to Calle de Espoz y Mina.{" "}
