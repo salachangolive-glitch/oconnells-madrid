@@ -8,7 +8,7 @@ import { ADDRESS, HOURS, MAPS_URL, SITE_NAME } from "@/lib/venue";
 export const metadata = buildMetadata({
   title: "NFL bar in Madrid near Sol – watch NFL in central Madrid",
   description:
-    "Where to watch NFL in Madrid: O'Connell St, an Irish sports pub on Calle de Espoz y Mina, a short walk from Sol. Confirmed games on What's On.",
+    "Where to watch NFL in Madrid: an Irish sports pub near Sol for NFL fans, before and after the game. Confirmed games on What's On.",
   path: "/nfl-madrid",
 });
 
@@ -49,6 +49,11 @@ export default function NflMadridPage() {
           If you are looking for a sports bar in Madrid to catch a game, O&apos;Connell
           St sits on {ADDRESS.street}, right by Sol. Football is our everyday
           plan, and NFL, NBA, rugby and Formula 1 go on when we are showing them.
+        </p>
+        <p>
+          NFL fans in Madrid are welcome before the game, after it, or any
+          time it&apos;s packed elsewhere. On an NFL weekend in Madrid, we&apos;re an
+          easy stop in the centre.
         </p>
         <p>
           Confirmed games for the next 7 days, with Madrid times, are on{" "}

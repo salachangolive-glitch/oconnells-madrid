@@ -8,7 +8,7 @@ import { ADDRESS, HOURS, MAPS_URL, SITE_NAME } from "@/lib/venue";
 export const metadata = buildMetadata({
   title: "Bar para ver la NFL en Madrid cerca de Sol",
   description:
-    "Dónde ver la NFL en Madrid: O'Connell St, pub irlandés deportivo en la calle Espoz y Mina, a un paso de Sol. Partidos confirmados en la Agenda.",
+    "Dónde ver la NFL en Madrid: pub irlandés deportivo junto a Sol para fans de la NFL, antes y después del partido. Partidos confirmados en la Agenda.",
   path: "/es/nfl-madrid",
   locale: "es",
 });
@@ -50,6 +50,11 @@ export default function NflMadridPageEs() {
           Si buscas un bar deportivo en Madrid para ver un partido, O&apos;Connell
           St está en {ADDRESS.street}, junto a Sol. El fútbol es lo de cada día, y
           la NFL, la NBA, el rugby y la Fórmula 1 se ponen cuando los emitimos.
+        </p>
+        <p>
+          Si eres fan de la NFL en Madrid, pásate antes del partido, después o
+          cuando otros sitios estén llenos. En un fin de semana NFL en Madrid,
+          estamos en pleno centro.
         </p>
         <p>
           Los partidos confirmados de los próximos 7 días, en hora de Madrid,
