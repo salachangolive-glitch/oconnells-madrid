@@ -9,7 +9,7 @@
  * While it is empty the site is exactly as before: no gtag, no banner,
  * no cookies, Privacy unchanged. Advertising signals stay denied always.
  */
-export const GA4_MEASUREMENT_ID = "";
+export const GA4_MEASUREMENT_ID = "G-YS63QVW9K8";
 
 /** localStorage key that remembers the visitor's choice ("granted" | "denied"). */
 export const CONSENT_STORAGE_KEY = "oconnell_cookie_consent_v1";
