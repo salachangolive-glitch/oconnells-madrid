@@ -87,6 +87,14 @@ export default function NflMadridPageEs() {
           calle Espoz y Mina, junto a Sol. Ven a comentarlo con otros fans de la
           NFL, seas del equipo que seas.
         </p>
+        <h3 className="font-semibold">Todos los partidos NFL del domingo EN DIRECTO junto a Sol</h3>
+        <p>Ponemos todos los partidos del domingo de la Week 9, en hora de Madrid:</p>
+        <ul>
+          <li>15:30 · Bengals v Falcons (en Madrid)</li>
+          <li>19:00 · Broncos v Panthers, Cowboys v Colts, Jets v Chiefs, Lions v Dolphins, Browns v Saints, Giants v Eagles, Rams v Commanders</li>
+          <li>22:05 · Texans v Chargers, Raiders v 49ers</li>
+          <li>22:25 · Packers v Patriots, Cardinals v Seahawks</li>
+        </ul>
       </Section>
       <Section title="El partido NFL de Madrid 2026">
         <p>
