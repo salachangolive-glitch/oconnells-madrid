@@ -9,6 +9,7 @@
  *   - Next 7 days: later Madrid date, <= today + 7
  *   - strip / any: Today + Next 7 days (first N when data-fx-limit is set)
  *   - data-fx-wrap: hide the whole block when none of its rows is visible
+ *   - badge: Today/Hoy same Madrid day before kickoff; On now/En juego kickoff → +2h15
  * All dates are Europe/Madrid, whatever the visitor's device zone is.
  */
 const SCRIPT = `(function(){
@@ -26,7 +27,7 @@ function run(){
   for(var i=0;i<rows.length;i++){
    var el=rows[i],k=el.getAttribute("data-fx-key"),slot=el.getAttribute("data-fx-slot");
    var s=Date.parse(el.getAttribute("data-start")),e=Date.parse(el.getAttribute("data-end")),day=el.getAttribute("data-day");
-   var live=!(e<=now),on=s<=now&&now<e;
+   var live=!(e<=now),on=s<=now&&now<Math.min(e,s+135*60000);
    var isToday=live&&(day===today||on);
    var isWeek=live&&!isToday&&day>today&&day<=end;
    var vis=slot==="today"?isToday:slot==="week"?isWeek:(isToday||isWeek);
@@ -34,6 +35,7 @@ function run(){
    if(vis)shown[slot]=(shown[slot]||0)+1;
    css.push('[data-fx-key="'+esc(k)+'"]{display:'+(vis?"block":"none")+'!important}');
    css.push('[data-fx-key="'+esc(k)+'"] [data-fx-on]{display:'+(vis&&on?"inline-block":"none")+'!important}');
+   css.push('[data-fx-key="'+esc(k)+'"] [data-fx-soon]{display:'+(vis&&day===today&&now<s?"inline-block":"none")+'!important}');
   }
   var wr=root.getAttribute("data-fx-wrap");
   if(wr)css.push('[data-fx-root="'+esc(root.getAttribute("data-fx-root"))+'"]{display:'+(shown[wr]?"block":"none")+'!important}');

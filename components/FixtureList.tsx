@@ -31,14 +31,18 @@ const EMPTY = {
 type RowProps = { f: Fixture; locale: Locale; visible: boolean; onNow: boolean };
 
 export function OnNowBadge({ locale, onNow }: { locale: Locale; onNow: boolean }) {
+  const cls = "ml-2 rounded-sm bg-gold px-1.5 py-0.5 text-[10px] font-bold tracking-[0.12em] text-black";
+  // Both labels ship in the HTML; components/AgendaClock.tsx shows at most one
+  // from the real Madrid time (Today before kickoff, On now kickoff→+2h15).
   return (
-    <span
-      data-fx-on=""
-      data-fx-off={!onNow ? "" : undefined}
-      className="ml-2 rounded-sm bg-gold px-1.5 py-0.5 text-[10px] font-bold tracking-[0.12em] text-black"
-    >
-      {locale === "es" ? "En juego" : "On now"}
-    </span>
+    <>
+      <span data-fx-soon="" data-fx-off="" className={cls}>
+        {locale === "es" ? "Hoy" : "Today"}
+      </span>
+      <span data-fx-on="" data-fx-off={!onNow ? "" : undefined} className={cls}>
+        {locale === "es" ? "En juego" : "On now"}
+      </span>
+    </>
   );
 }
 

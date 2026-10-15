@@ -414,7 +414,7 @@ export function isNotFinished(f: Fixture, now = new Date()): boolean {
 export function isOnNow(f: Fixture, now = new Date()): boolean {
   const start = fixtureStartMs(f);
   const end = fixtureEndMs(f);
-  return start != null && end != null && start <= now.getTime() && end > now.getTime();
+  return start != null && end != null && start <= now.getTime() && Math.min(end, start + 135 * 60 * 1000) > now.getTime();
 }
 
 /** Add calendar days to a YYYY-MM-DD date (pure calendar maths, no timezone). */
