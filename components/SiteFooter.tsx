@@ -9,10 +9,11 @@ import {
   SITE_NAME,
 } from "@/lib/venue";
 
-type Locale = "en" | "es";
+type Locale = "en" | "es" | "de";
 
 export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
   const isEs = locale === "es";
+  const isDe = locale === "de";
   return (
     <footer className="mt-auto border-t border-gold/15 bg-black px-4 py-10 pb-[calc(7.5rem+env(safe-area-inset-bottom,0px))] text-sm text-cream-muted">
       <div className="mx-auto grid max-w-5xl gap-8 sm:grid-cols-3">
@@ -25,7 +26,7 @@ export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
             {ADDRESS.postalCode} {ADDRESS.city}
           </p>
           <p className="mt-3 text-cream/55">
-            {isEs ? HOURS.summaryEs : HOURS.summaryEn}
+            {isEs ? HOURS.summaryEs : isDe ? HOURS.summaryDe : HOURS.summaryEn}
           </p>
           <p className="mt-3">
             <a
@@ -39,7 +40,7 @@ export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
         </div>
         <div>
           <p className="mb-2 font-semibold uppercase tracking-wide text-cream/90">
-            {isEs ? "Explorar" : "Explore"}
+            {isEs ? "Explorar" : isDe ? "Entdecken" : "Explore"}
           </p>
           <ul className="space-y-1">
             <li>
@@ -47,7 +48,7 @@ export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
                 href={isEs ? "/es/sports" : "/sports"}
                 className="hover:text-gold"
               >
-                {isEs ? "Deportes en directo" : "Live Sports"}
+                {isEs ? "Deportes en directo" : isDe ? "Live Sport" : "Live Sports"}
               </Link>
             </li>
             <li>
@@ -56,17 +57,15 @@ export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
                 data-event="whats_on"
                 className="hover:text-gold"
               >
-                {isEs ? "Agenda" : "What's On"}
+                {isEs ? "Agenda" : isDe ? "What's On" : "What's On"}
               </Link>
             </li>
             <li>
               <Link
-                href={
-                  isEs ? "/es/thursday-1-euro-shots" : "/thursday-1-euro-shots"
-                }
+                href={isEs ? "/es/thursday-1-euro-shots" : "/thursday-1-euro-shots"}
                 className="hover:text-gold"
               >
-                {isEs ? "Chupitos a 1 € los jueves" : "Thursday €1 shots"}
+                {isEs ? "Chupitos a 1 € los jueves" : isDe ? "Thursday €1 shots" : "Thursday €1 shots"}
               </Link>
             </li>
             <li>
@@ -82,7 +81,7 @@ export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
                 href={isEs ? "/es/location" : "/location"}
                 className="hover:text-gold"
               >
-                {isEs ? "Ubicación" : "Location"}
+                {isEs ? "Ubicación" : isDe ? "Lage" : "Location"}
               </Link>
             </li>
             <li>
@@ -91,7 +90,7 @@ export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
                 data-event="contact"
                 className="hover:text-gold"
               >
-                {isEs ? "Contacto" : "Contact"}
+                {isEs ? "Contacto" : isDe ? "Kontakt" : "Contact"}
               </Link>
             </li>
             <li>
@@ -99,7 +98,7 @@ export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
                 href={isEs ? "/es/privacy" : "/privacy"}
                 className="hover:text-gold"
               >
-                {isEs ? "Privacidad" : "Privacy"}
+                {isEs ? "Privacidad" : isDe ? "Datenschutz" : "Privacy"}
               </Link>
             </li>
             {ga4Enabled() ? (
@@ -109,7 +108,7 @@ export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
                   data-cookie-settings=""
                   className="text-left hover:text-gold"
                 >
-                  {isEs ? "Configurar cookies" : "Cookie settings"}
+                  {isEs ? "Configurar cookies" : isDe ? "Cookie-Einstellungen" : "Cookie settings"}
                 </button>
               </li>
             ) : null}
@@ -121,7 +120,7 @@ export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
                 data-event="directions"
                 className="hover:text-gold"
               >
-                {isEs ? "Cómo llegar" : "Directions"}
+                {isEs ? "Cómo llegar" : isDe ? "Anfahrt" : "Directions"}
               </a>
             </li>
             <li>
@@ -131,19 +130,21 @@ export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
                 rel="noopener"
                 className="hover:text-gold"
               >
-                {isEs ? "Déjanos tu opinión en Google" : "Leave us a Google review"}
+                {isEs ? "Déjanos tu opinión en Google" : isDe ? "Google-Bewertung hinterlassen" : "Leave us a Google review"}
               </a>
             </li>
           </ul>
         </div>
         <div>
           <p className="mb-2 font-semibold uppercase tracking-wide text-cream/90">
-            {isEs ? "Dónde estamos" : "Find us"}
+            {isEs ? "Dónde estamos" : isDe ? "So findet ihr uns" : "Find us"}
           </p>
           <p>
             {isEs
               ? "Junto a Puerta del Sol."
-              : "Near Puerta del Sol."}
+              : isDe
+                ? "Direkt an der Puerta del Sol."
+                : "Near Puerta del Sol."}
           </p>
         </div>
       </div>

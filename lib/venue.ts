@@ -52,6 +52,7 @@ export const HOURS = {
   ],
   summaryEn: "Mon–Thu 18:00–03:00 · Fri–Sat 16:00–03:30 · Sun 14:00–03:00",
   summaryEs: "Lun–jue 18:00–03:00 · Vie–sáb 16:00–03:30 · Dom 14:00–03:00",
+  summaryDe: "Mo–Do 18:00–03:00 · Fr–Sa 16:00–03:30 · So 14:00–03:00",
 } as const;
 
 /**
@@ -147,7 +148,11 @@ export const ES_PATHS = [
   "/es/privacy",
 ] as const;
 
-export const ALL_CONTENT_PATHS = [...EN_PATHS, ...ES_PATHS] as const;
+export const DE_PATHS = [
+  "/de/sports-bar-sol",
+] as const;
+
+export const ALL_CONTENT_PATHS = [...EN_PATHS, ...ES_PATHS, ...DE_PATHS] as const;
 
 /** EN path → ES mirror (undefined = no ES page). */
 export const HREFLANG_PAIRS: Record<string, string | undefined> = {
@@ -168,3 +173,19 @@ export const HREFLANG_PAIRS: Record<string, string | undefined> = {
   "/contact": "/es/contact",
   "/privacy": "/es/privacy",
 };
+
+/**
+ * Multi-locale pages (en/es/de). When a path appears here, buildMetadata
+ * emits all listed languages + x-default (EN). Overrides the ES-only pair.
+ */
+export const HREFLANG_GROUPS: Record<
+  string,
+  { en: string; es?: string; de?: string }
+> = {
+  "/sports-bar-sol": {
+    en: "/sports-bar-sol",
+    es: "/es/sports-bar-sol",
+    de: "/de/sports-bar-sol",
+  },
+};
+

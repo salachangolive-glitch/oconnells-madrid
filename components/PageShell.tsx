@@ -4,7 +4,7 @@ import { SiteFooter } from "./SiteFooter";
 import { SiteHeader } from "./SiteHeader";
 import { StickyCta } from "./StickyCta";
 
-type Locale = "en" | "es";
+type Locale = "en" | "es" | "de";
 
 export function PageShell({
   children,
@@ -33,7 +33,7 @@ export function PageShell({
       </main>
       <SiteFooter locale={locale} />
       <StickyCta locale={locale} />
-      {ga4Enabled() ? <CookieBanner locale={locale} /> : null}
+      {ga4Enabled() ? <CookieBanner locale={locale === "de" ? "en" : locale} /> : null}
     </>
   );
 }

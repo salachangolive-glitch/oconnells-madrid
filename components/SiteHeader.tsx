@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { SITE_NAME } from "@/lib/venue";
 
-type Locale = "en" | "es";
+type Locale = "en" | "es" | "de";
 
 const nav = {
   en: [
@@ -24,6 +24,15 @@ const nav = {
     { href: "/es/about", label: "Sobre nosotros" },
     { href: "/es/contact", label: "Contacto" },
   ],
+  // DE site is article-only for now; chrome links to EN pages.
+  de: [
+    { href: "/whats-on", label: "What's On" },
+    { href: "/sports", label: "Live Sports" },
+    { href: "/menu", label: "Speisekarte" },
+    { href: "/location", label: "Lage" },
+    { href: "/about", label: "Über uns" },
+    { href: "/contact", label: "Kontakt" },
+  ],
 } as const;
 
 export function SiteHeader({
@@ -35,8 +44,12 @@ export function SiteHeader({
 }) {
   const items = nav[locale];
   const home = locale === "es" ? "/es" : "/";
-  const switchLabel = locale === "es" ? "EN" : "ES";
-  const switchHref = altLangHref || (locale === "es" ? "/" : "/es");
+  const switchLabel = locale === "es" || locale === "de" ? "EN" : "ES";
+  const switchHref =
+    altLangHref ||
+    (locale === "es" ? "/" : locale === "de" ? "/sports-bar-sol" : "/es");
+  const switchHrefLang =
+    locale === "es" || locale === "de" ? "en" : "es";
 
   return (
     <header className="sticky top-0 z-40 border-b border-gold/20 bg-black/90 backdrop-blur-md">
@@ -73,7 +86,7 @@ export function SiteHeader({
         <Link
           href={switchHref}
           className="rounded-sm border border-gold/40 px-2 py-1 text-xs font-semibold uppercase tracking-wider text-gold hover:bg-gold/10"
-          hrefLang={locale === "es" ? "en" : "es"}
+          hrefLang={switchHrefLang}
         >
           {switchLabel}
         </Link>

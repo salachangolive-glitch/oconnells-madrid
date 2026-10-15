@@ -1,18 +1,23 @@
 import Link from "next/link";
 import { MAPS_URL } from "@/lib/venue";
 
-type Locale = "en" | "es";
+type Locale = "en" | "es" | "de";
 
 /** What's On | Directions | Contact — no phone on the new website. */
 export function StickyCta({ locale = "en" }: { locale?: Locale }) {
   const isEs = locale === "es";
+  const isDe = locale === "de";
   const whatsOnHref = isEs ? "/es/whats-on" : "/whats-on";
   const contactHref = isEs ? "/es/contact" : "/contact";
+  const whatsOnLabel = isEs ? "Agenda" : isDe ? "Programm" : "What's On";
+  const directionsLabel = isEs ? "Cómo llegar" : isDe ? "Anfahrt" : "Directions";
+  const contactLabel = isEs ? "Contacto" : isDe ? "Kontakt" : "Contact";
+  const aria = isEs ? "Acciones rápidas" : isDe ? "Schnellaktionen" : "Quick actions";
 
   return (
     <nav
       className="fixed inset-x-0 bottom-0 z-50 border-t border-gold/25 bg-black/95 backdrop-blur-md safe-bottom"
-      aria-label={isEs ? "Acciones rápidas" : "Quick actions"}
+      aria-label={aria}
     >
       <ul className="mx-auto grid max-w-3xl grid-cols-3 px-1 py-1.5 text-center text-[10px] font-semibold uppercase tracking-[0.14em] text-cream-muted sm:text-[11px]">
         <li>
@@ -22,7 +27,7 @@ export function StickyCta({ locale = "en" }: { locale?: Locale }) {
             className="flex min-h-11 flex-col items-center justify-center gap-0.5 px-1 py-1.5 hover:text-gold"
           >
             <ScreenIcon />
-            {isEs ? "Agenda" : "What's On"}
+            {whatsOnLabel}
           </Link>
         </li>
         <li>
@@ -34,7 +39,7 @@ export function StickyCta({ locale = "en" }: { locale?: Locale }) {
             className="flex min-h-11 flex-col items-center justify-center gap-0.5 px-1 py-1.5 hover:text-gold"
           >
             <PinIcon />
-            {isEs ? "Cómo llegar" : "Directions"}
+            {directionsLabel}
           </a>
         </li>
         <li>
@@ -44,7 +49,7 @@ export function StickyCta({ locale = "en" }: { locale?: Locale }) {
             className="flex min-h-11 flex-col items-center justify-center gap-0.5 px-1 py-1.5 hover:text-gold"
           >
             <MailIcon />
-            {isEs ? "Contacto" : "Contact"}
+            {contactLabel}
           </Link>
         </li>
       </ul>

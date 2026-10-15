@@ -1,17 +1,61 @@
 import type { Metadata } from "next";
-import { getSiteUrl, HREFLANG_PAIRS, shouldNoindex, SITE_NAME } from "./venue";
+import {
+  getSiteUrl,
+  HREFLANG_GROUPS,
+  HREFLANG_PAIRS,
+  shouldNoindex,
+  SITE_NAME,
+} from "./venue";
 
 type BuildMetaOpts = {
   title: string;
   description: string;
   path: string;
-  locale?: "en" | "es";
+  locale?: "en" | "es" | "de";
 };
 
 export function absoluteUrl(path: string): string {
   const base = getSiteUrl();
   if (path === "/") return base.endsWith("/") ? base : `${base}/`;
   return `${base}${path.startsWith("/") ? path : `/${path}`}`;
+}
+
+/** Resolve en path key for a given page path (en, /es/…, or /de/…). */
+function resolveEnKey(path: string): string | undefined {
+  if (path.startsWith("/es")) {
+    return Object.entries(HREFLANG_PAIRS).find(([, es]) => es === path)?.[0];
+  }
+  if (path.startsWith("/de/")) {
+    const group = Object.entries(HREFLANG_GROUPS).find(
+      ([, g]) => g.de === path,
+    );
+    return group?.[0];
+  }
+  return path;
+}
+
+function buildLanguages(path: string): Record<string, string> | undefined {
+  const enKey = resolveEnKey(path);
+  if (!enKey) return undefined;
+
+  const group = HREFLANG_GROUPS[enKey];
+  if (group) {
+    const languages: Record<string, string> = {
+      en: absoluteUrl(group.en),
+      "x-default": absoluteUrl(group.en),
+    };
+    if (group.es) languages.es = absoluteUrl(group.es);
+    if (group.de) languages.de = absoluteUrl(group.de);
+    return languages;
+  }
+
+  const esPath = HREFLANG_PAIRS[enKey];
+  if (!esPath) return undefined;
+  return {
+    en: absoluteUrl(enKey),
+    es: absoluteUrl(esPath),
+    "x-default": absoluteUrl(enKey),
+  };
 }
 
 export function buildMetadata({
@@ -21,38 +65,27 @@ export function buildMetadata({
   locale = "en",
 }: BuildMetaOpts): Metadata {
   const canonical = absoluteUrl(path);
-  // Absolute title so root layout template never doubles the brand
-  // (e.g. "O'Connell St Madrid | O'Connell St Madrid").
   const fullTitle =
     title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME} Madrid`;
   const preview = shouldNoindex();
+  const languages = buildLanguages(path);
 
-  const languages: Record<string, string> = {};
-  const enPath =
-    path.startsWith("/es")
-      ? Object.entries(HREFLANG_PAIRS).find(([, es]) => es === path)?.[0]
-      : path;
-  const esPath = enPath ? HREFLANG_PAIRS[enPath] : undefined;
-
-  if (enPath && esPath) {
-    languages.en = absoluteUrl(enPath);
-    languages.es = absoluteUrl(esPath);
-    languages["x-default"] = absoluteUrl(enPath);
-  }
+  const ogLocale =
+    locale === "es" ? "es_ES" : locale === "de" ? "de_DE" : "en_GB";
 
   return {
     title: { absolute: fullTitle },
     description,
     alternates: {
       canonical,
-      ...(Object.keys(languages).length ? { languages } : undefined),
+      ...(languages ? { languages } : undefined),
     },
     openGraph: {
       title: fullTitle,
       description,
       url: canonical,
       siteName: `${SITE_NAME} Madrid`,
-      locale: locale === "es" ? "es_ES" : "en_GB",
+      locale: ogLocale,
       type: "website",
       images: [
         {
@@ -69,9 +102,6 @@ export function buildMetadata({
       description,
       images: ["/og.jpg"],
     },
-    // Preview hosts, or NEXT_PUBLIC_FORCE_NOINDEX not explicitly false: noindex.
-    // Canonical/hreflang/OG still use getSiteUrl() (custom domain when set).
-    // Go-live: NEXT_PUBLIC_FORCE_NOINDEX=false.
     robots: preview
       ? { index: false, follow: false }
       : { index: true, follow: true },

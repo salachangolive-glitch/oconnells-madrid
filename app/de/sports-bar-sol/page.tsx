@@ -1,0 +1,75 @@
+import Link from "next/link";
+import { InteriorPhoto } from "@/components/InteriorPhoto";
+import { PageShell } from "@/components/PageShell";
+import { PageHero, Section } from "@/components/Prose";
+import { buildMetadata } from "@/lib/seo";
+import { ADDRESS, HOURS, SITE_NAME } from "@/lib/venue";
+
+export const metadata = buildMetadata({
+  title: "Treffpunkt Sol: Atlético–Bayern live im Sports Pub",
+  description:
+    "Bayern-Fans in Madrid: Treffpunkt an der Puerta del Sol vor und nach Atlético–Bayern. Dienstag 3. November 2026, 21:00 Uhr, live bei O'Connell St.",
+  path: "/de/sports-bar-sol",
+  locale: "de",
+});
+
+export default function DeSportsBarSolPage() {
+  return (
+    <PageShell locale="de" altLangHref="/sports-bar-sol">
+      <PageHero
+        eyebrow="Champions League · Madrid"
+        title="Treffpunkt für Fans: Sports Pub an der Puerta del Sol"
+        lead={`${SITE_NAME} liegt in der Calle de Espoz y Mina 7, direkt an der Puerta del Sol — zentraler Treffpunkt vor dem Spiel, live auf den Screens und danach wieder im Zentrum.`}
+      />
+      <InteriorPhoto
+        src="/images/interior/sports-aisle.webp"
+        alt="Sport-Screens im O'Connell St an der Puerta del Sol"
+        position="object-[center_45%]"
+      />
+      <Section title="Atlético Madrid – Bayern München · Di 3. November, 21:00">
+        <p>
+          Matchday am Metropolitano. Wir zeigen Atlético Madrid gegen Bayern
+          München live um 21:00 Uhr Ortszeit Madrid. Trefft euch vorher in Sol,
+          fahrt gemeinsam raus zum Stadion — oder kommt nach dem Abpfiff zurück
+          ins Zentrum und lasst den Abend hier ausklingen. Einfach reinkommen,
+          wer zuerst da ist.
+        </p>
+      </Section>
+      <Section title="Warum Sol?">
+        <p>
+          Die Puerta del Sol ist der praktische Treffpunkt im Zentrum: leicht
+          zu finden, gut angebunden, und nach dem Spiel wieder der natürliche
+          Ort, um zusammenzukommen. O&apos;Connell St ist ein irischer Sports
+          Pub genau dort — Screens, Platz zum Stehen und Sitzen, und kein
+          Theater um Tische.
+        </p>
+        <p>
+          Bestätigte Anstoßzeiten stehen unter{" "}
+          <Link href="/whats-on" data-event="whats_on" className="text-cream underline">
+            What&apos;s On
+          </Link>
+          .
+        </p>
+      </Section>
+      <Section title="So findet ihr uns">
+        <p>
+          {ADDRESS.full}, an der Puerta del Sol. {HOURS.summaryDe}. Keine
+          Tischreservierung — Walk-in, first come, first served.
+        </p>
+        <p>
+          <Link href="/whats-on" className="text-cream underline">
+            What&apos;s On
+          </Link>
+          {" · "}
+          <Link href="/champions-league" className="text-cream underline">
+            Champions League
+          </Link>
+          {" · "}
+          <Link href="/sports" className="text-cream underline">
+            Live Sports
+          </Link>
+        </p>
+      </Section>
+    </PageShell>
+  );
+}
