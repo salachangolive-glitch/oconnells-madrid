@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { captureAttribution } from "@/lib/attribution";
 
 /**
  * Measurable hooks only. No ad pixel is added here and nothing sets cookies.
@@ -34,6 +35,7 @@ export function trackEvent(key: string) {
 
 export function TrackClicks() {
   useEffect(() => {
+    captureAttribution();
     function onClick(e: MouseEvent) {
       const el = (e.target as HTMLElement | null)?.closest?.("[data-event]");
       if (!el) return;

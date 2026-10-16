@@ -1,6 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import {
+  ATTRIBUTION_KEYS,
+  captureAttribution,
+} from "@/lib/attribution";
 import { trackEvent } from "@/components/TrackClicks";
 import {
   buildContactSubject,
@@ -49,6 +53,18 @@ export function ContactForm({ locale = "en" }: { locale?: Locale }) {
   const [status, setStatus] = useState<
     "idle" | "sending" | "ok" | "fail" | "invalid"
   >("idle");
+  const formRef = useRef<HTMLFormElement>(null);
+
+  // Fill the hidden attribution inputs from sessionStorage (DOM sync only).
+  useEffect(() => {
+    const attr = captureAttribution();
+    const form = formRef.current;
+    if (!form) return;
+    for (const k of ATTRIBUTION_KEYS) {
+      const el = form.elements.namedItem(k);
+      if (el instanceof HTMLInputElement) el.value = attr[k] || "";
+    }
+  }, []);
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -87,7 +103,16 @@ export function ContactForm({ locale = "en" }: { locale?: Locale }) {
       ] || reason;
     const subject = buildContactSubject(reason, name, locale);
 
+    const attribution: Record<string, string> = {};
+    for (const k of ATTRIBUTION_KEYS) {
+      attribution[k] = String(fd.get(k) || "").slice(0, 500);
+    }
+    const attributionText = ATTRIBUTION_KEYS.map(
+      (k) => `${k}: ${attribution[k] || "-"}`,
+    ).join("\n");
+
     const payload: Record<string, string> = {
+      ...attribution,
       subject,
       from_name: "O'Connell St Madrid",
       replyto: email,
@@ -99,7 +124,9 @@ export function ContactForm({ locale = "en" }: { locale?: Locale }) {
         `Reason: ${reasonLabel}\n` +
         `Name: ${name}\n` +
         `Reply-To (customer): ${email}\n\n` +
-        `${message}`,
+        `${message}\n\n` +
+        `--- Attribution ---\n` +
+        attributionText,
     };
 
     try {
@@ -127,7 +154,7 @@ export function ContactForm({ locale = "en" }: { locale?: Locale }) {
   }
 
   return (
-    <form onSubmit={onSubmit} className="mx-auto max-w-xl space-y-5" noValidate autoComplete="off">
+    <form ref={formRef} onSubmit={onSubmit} className="mx-auto max-w-xl space-y-5" noValidate autoComplete="off">
       {/* Honeypot */}
       <div className="absolute -left-[9999px] opacity-0" aria-hidden="true">
         <label>
@@ -135,6 +162,10 @@ export function ContactForm({ locale = "en" }: { locale?: Locale }) {
           <input type="text" name="company" tabIndex={-1} autoComplete="off" />
         </label>
       </div>
+
+      {ATTRIBUTION_KEYS.map((k) => (
+        <input key={k} type="hidden" name={k} defaultValue="" />
+      ))}
 
       <div>
         <label htmlFor="c-name" className="mb-1.5 block text-xs font-semibold uppercase tracking-[0.16em] text-gold">
