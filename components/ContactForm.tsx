@@ -24,7 +24,7 @@ const copy = {
     ok: "Thanks — we’ve received your message and will get back to you as soon as possible.",
     fail: "We couldn’t send that just now. Please try again in a moment.",
     privacy:
-      "We use your name, email, reason and message only to reply to this enquiry.",
+      "We use your name, email, reason and message only to reply to this enquiry. We also record the visit source/campaign data (utm, gclid, landing page, referrer) for measurement only.",
     privacyHref: "/privacy",
     privacyLink: "Privacy notice",
     required: "Please fill in all fields.",
@@ -39,7 +39,7 @@ const copy = {
     ok: "Gracias — hemos recibido tu mensaje y te responderemos lo antes posible.",
     fail: "No hemos podido enviarlo ahora. Inténtalo de nuevo en un momento.",
     privacy:
-      "Usamos tu nombre, email, motivo y mensaje solo para responder a esta consulta.",
+      "Usamos tu nombre, email, motivo y mensaje solo para responder a esta consulta. También registramos los datos de origen/campaña de la visita (utm, gclid, página de entrada, referrer) solo para medición.",
     privacyHref: "/es/privacy",
     privacyLink: "Aviso de privacidad",
     required: "Completa todos los campos.",
