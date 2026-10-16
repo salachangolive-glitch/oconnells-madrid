@@ -26,6 +26,14 @@ export async function onRequestPost(context) {
     return Response.json({ success: false }, { status: 400 });
   }
 
+  const ATTR = ["utm_source", "utm_medium", "utm_campaign", "utm_term",
+    "utm_content", "gclid", "landing_page", "referrer"];
+  const attribution = {};
+  for (const k of ATTR) {
+    const v = String(body[k] || "").trim().slice(0, 500);
+    if (v) attribution[k] = v;
+  }
+
   const upstream = await fetch("https://api.web3forms.com/submit", {
     method: "POST",
     headers: {
@@ -40,6 +48,7 @@ export async function onRequestPost(context) {
       name,
       email,
       message: String(body.message || "").slice(0, 5000),
+      ...attribution,
     }),
   });
 
