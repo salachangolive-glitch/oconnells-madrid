@@ -57,3 +57,9 @@ a {
     transparent
   );
 }
+
+/* Agenda rows (components/AgendaClock.tsx): build-time default state.
+   The inline clock overrides it with !important rules from the real Madrid time. */
+[data-fx-off] {
+  display: none;
+}

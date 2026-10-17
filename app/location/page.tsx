@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { InteriorPhoto } from "@/components/InteriorPhoto";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
 import { VenueHero } from "@/components/VenueHero";
@@ -7,6 +8,8 @@ import {
   ADDRESS,
   HOURS,
   MAPS_URL,
+  PUBLIC_EMAIL,
+  PUBLIC_EMAIL_MAILTO,
   SITE_NAME,
 } from "@/lib/venue";
 
@@ -21,7 +24,7 @@ export default function LocationPage() {
   return (
     <PageShell locale="en" altLangHref="/es/location">
       <PageHero
-        eyebrow="Location · Madrid Centro"
+        eyebrow="Location · Madrid"
         title={`How to find ${SITE_NAME}`}
         lead={`${ADDRESS.full} — a short walk from Puerta del Sol.`}
       />
@@ -33,6 +36,14 @@ export default function LocationPage() {
       <Section title="Address & hours">
         <p>{ADDRESS.full}</p>
         <p>
+          <a
+            href={PUBLIC_EMAIL_MAILTO}
+            data-event="email_click"
+            className="text-cream underline"
+          >
+            {PUBLIC_EMAIL}
+          </a>
+          {" · "}
           <a href="/contact" className="text-cream underline">
             Contact
           </a>
@@ -47,21 +58,27 @@ export default function LocationPage() {
             href={MAPS_URL}
             target="_blank"
             rel="noopener noreferrer"
+            data-event="directions"
             className="inline-flex rounded-md bg-pub-green px-4 py-2 font-semibold text-cream hover:bg-pub-green-light"
           >
             Open in Google Maps
           </a>
         </p>
       </Section>
+      <InteriorPhoto
+        src="/images/interior/stairs-levels.webp"
+        alt="Stairs between floors at O'Connell St Irish pub near Sol"
+        position="object-[center_40%]"
+      />
       <Section title="Getting here">
         <p>
-          Aim for Puerta del Sol, then walk to Calle de Espoz y Mina. Perfect
+          Aim for Puerta del Sol, then walk to Calle de Espoz y Mina. Handy
           before a Premier League, Champions League or LaLiga kick-off — or for
-          Thursday €1 shots with your Erasmus crew.
+          Thursday €1 shots with friends.
         </p>
         <p>
           <Link href="/whats-on" className="text-cream underline">
-            Fixtures
+            What&apos;s On
           </Link>
           {" · "}
           <Link href="/sports" className="text-cream underline">

@@ -1,6 +1,8 @@
 import type { MetadataRoute } from "next";
 import { ALL_CONTENT_PATHS, getSiteUrl } from "@/lib/venue";
 
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = getSiteUrl();
   const now = new Date();
