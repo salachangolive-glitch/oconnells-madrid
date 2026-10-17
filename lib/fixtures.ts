@@ -115,6 +115,16 @@ export type Fixture = {
  * have channel PENDING → none shown. Offsets from Intl (CET +01:00 from 25 Oct).
  * NOT added: Rayo–Elche Sat 24 14:00 (doors 16:00). See
  * /workspace/oconnell-agenda-j10-copa-2026-10-17/.
+ * Delta 2026-10-17 ~10:45 Madrid (DG order, owner rule: all broadcasts except
+ * venue closed): NFL completed for Sun 18 (Week 6, ET+6) and Sun 25 (Week 7,
+ * ET+5: Madrid CET from 03:00 on 25 Oct, US EDT until 1 Nov) from nfl.com +
+ * ESPN. Added Sun 18: Bears–Falcons, Titans–Colts, Saints–Giants,
+ * Steelers–Buccaneers 19:00; Cardinals–Rams 22:05; Bills–Raiders 22:25. Added
+ * Sun 25: Steelers–Saints (Paris) 14:30; seven 18:00 games; Broncos–Cardinals
+ * 21:05; Packers–Lions, Rams–Raiders 21:25; Chiefs–Seahawks Mon 26 01:20 (Sun
+ * night). NOT added: Cowboys–Packers Mon 19 02:20 (after last kickoff 02:00).
+ * No channel (NFL rows never used one), no RedZone row.
+ * See /workspace/oconnell-nfl-agenda-2026-10-17/.
  */
 export const FIXTURES: Fixture[] = [
   { id: "2026-10-08-madrid-partizan", competition: "EuroLeague", homeTeam: "Real Madrid", awayTeam: "Partizan", date: "2026-10-08", kickoffMadrid: "20:45" },
@@ -188,8 +198,14 @@ export const FIXTURES: Fixture[] = [
   { id: "2026-10-18-eagles-panthers", competition: "NFL", homeTeam: "Philadelphia Eagles", awayTeam: "Carolina Panthers", date: "2026-10-18", kickoffMadrid: "19:00", note: "Week 6, DAZN NFL Game Pass" },
   { id: "2026-10-18-patriots-jets", competition: "NFL", homeTeam: "New England Patriots", awayTeam: "New York Jets", date: "2026-10-18", kickoffMadrid: "19:00", note: "Week 6, DAZN NFL Game Pass" },
   { id: "2026-10-18-browns-ravens", competition: "NFL", homeTeam: "Cleveland Browns", awayTeam: "Baltimore Ravens", date: "2026-10-18", kickoffMadrid: "19:00", note: "Week 6, DAZN NFL Game Pass" },
+  { id: "2026-10-18-falcons-bears", competition: "NFL", homeTeam: "Atlanta Falcons", awayTeam: "Chicago Bears", date: "2026-10-18", kickoffMadrid: "19:00", note: "Week 6, nfl.com + ESPN (ET+6 CEST), DAZN NFL Game Pass" },
+  { id: "2026-10-18-colts-titans", competition: "NFL", homeTeam: "Indianapolis Colts", awayTeam: "Tennessee Titans", date: "2026-10-18", kickoffMadrid: "19:00", note: "Week 6, nfl.com + ESPN (ET+6 CEST), DAZN NFL Game Pass" },
+  { id: "2026-10-18-giants-saints", competition: "NFL", homeTeam: "New York Giants", awayTeam: "New Orleans Saints", date: "2026-10-18", kickoffMadrid: "19:00", note: "Week 6, nfl.com + ESPN (ET+6 CEST), DAZN NFL Game Pass" },
+  { id: "2026-10-18-buccaneers-steelers", competition: "NFL", homeTeam: "Tampa Bay Buccaneers", awayTeam: "Pittsburgh Steelers", date: "2026-10-18", kickoffMadrid: "19:00", note: "Week 6, nfl.com + ESPN (ET+6 CEST), DAZN NFL Game Pass" },
   { id: "2026-10-18-madrid-sevilla", competition: "LaLiga", homeTeam: "Real Madrid", awayTeam: "Sevilla", date: "2026-10-18", kickoffMadrid: "21:00", note: "J9, Bernabéu, Movistar Plus+ / M+ LALIGA" },
+  { id: "2026-10-18-rams-cardinals", competition: "NFL", homeTeam: "Los Angeles Rams", awayTeam: "Arizona Cardinals", date: "2026-10-18", kickoffMadrid: "22:05", note: "Week 6, nfl.com + ESPN (ET+6 CEST), DAZN NFL Game Pass" },
   { id: "2026-10-18-chiefs-chargers", competition: "NFL", homeTeam: "Kansas City Chiefs", awayTeam: "Los Angeles Chargers", date: "2026-10-18", kickoffMadrid: "22:25", note: "Week 6, DAZN NFL Game Pass" },
+  { id: "2026-10-18-raiders-bills", competition: "NFL", homeTeam: "Las Vegas Raiders", awayTeam: "Buffalo Bills", date: "2026-10-18", kickoffMadrid: "22:25", note: "Week 6, nfl.com + ESPN (ET+6 CEST), DAZN NFL Game Pass" },
   { id: "2026-10-19-getafe-rayo", competition: "LaLiga", homeTeam: "Getafe", awayTeam: "Rayo Vallecano", date: "2026-10-19", kickoffMadrid: "21:00", note: "DAZN LALIGA" },
   { id: "2026-10-19-spurs-coventry", competition: "Premier League", homeTeam: "Tottenham Hotspur", awayTeam: "Coventry City", date: "2026-10-19", kickoffMadrid: "21:00", note: "MW7 Mon; premierleague.com 20:00 UK = 21:00 Madrid; DAZN" },
   { id: "2026-10-20-psg-barcelona", competition: "UEFA Champions League", homeTeam: "Paris Saint-Germain", awayTeam: "Barcelona", date: "2026-10-20", kickoffMadrid: "21:00", note: "League phase MD3; UEFA time (CET); owner rule 2026-10-13: all UCL live" },
@@ -207,9 +223,21 @@ export const FIXTURES: Fixture[] = [
   { id: "2026-10-24-chelsea-spurs", competition: "Premier League", homeTeam: "Chelsea", awayTeam: "Tottenham Hotspur", date: "2026-10-24", kickoffMadrid: "18:30", note: "MW8; premierleague.com 17:30 BST; DAZN" },
   { id: "2026-10-24-atletico-deportivo", competition: "LaLiga", homeTeam: "Atlético Madrid", awayTeam: "RC Deportivo", date: "2026-10-24", kickoffMadrid: "21:00", note: "J10, Riyadh Air Metropolitano; laliga.com horarios J10", channel: "Movistar LALIGA", line: { en: "Atlético at the Metropolitano: Saturday night football near Sol. No booking, come early.", es: "El Atleti en el Metropolitano: fútbol del sábado noche junto a Sol. Sin reserva, ven con tiempo." } },
   { id: "2026-10-25-athleticclub-getafe", competition: "LaLiga", homeTeam: "Athletic Club", awayTeam: "Getafe", date: "2026-10-25", kickoffMadrid: "14:00", note: "J10; laliga.com horarios J10 (Radar 2026-10-17); Sun doors 14:00; CET", channel: "DAZN" },
+  { id: "2026-10-25-saints-steelers", competition: "NFL", homeTeam: "New Orleans Saints", awayTeam: "Pittsburgh Steelers", date: "2026-10-25", kickoffMadrid: "14:30", note: "Week 7, Paris (Stade de France), nfl.com + ESPN 9:30 ET = 14:30 CET, DAZN NFL Game Pass", line: { en: "NFL in Paris: Stade de France, early Sunday afternoon in Madrid.", es: "NFL en París: desde el Stade de France, a primera hora de la tarde del domingo." } },
   { id: "2026-10-25-celta-realbetis", competition: "LaLiga", homeTeam: "Celta", awayTeam: "Real Betis", date: "2026-10-25", kickoffMadrid: "16:15", note: "J10; laliga.com horarios J10 (Radar 2026-10-17); CET", channel: "DAZN" },
+  { id: "2026-10-25-falcons-49ers", competition: "NFL", homeTeam: "Atlanta Falcons", awayTeam: "San Francisco 49ers", date: "2026-10-25", kickoffMadrid: "18:00", note: "Week 7, nfl.com + ESPN (ET+5: Madrid on CET from 25 Oct, US on EDT), DAZN NFL Game Pass" },
+  { id: "2026-10-25-ravens-bengals", competition: "NFL", homeTeam: "Baltimore Ravens", awayTeam: "Cincinnati Bengals", date: "2026-10-25", kickoffMadrid: "18:00", note: "Week 7, nfl.com + ESPN (ET+5: Madrid on CET from 25 Oct, US on EDT), DAZN NFL Game Pass" },
+  { id: "2026-10-25-panthers-buccaneers", competition: "NFL", homeTeam: "Carolina Panthers", awayTeam: "Tampa Bay Buccaneers", date: "2026-10-25", kickoffMadrid: "18:00", note: "Week 7, nfl.com + ESPN (ET+5: Madrid on CET from 25 Oct, US on EDT), DAZN NFL Game Pass" },
+  { id: "2026-10-25-texans-giants", competition: "NFL", homeTeam: "Houston Texans", awayTeam: "New York Giants", date: "2026-10-25", kickoffMadrid: "18:00", note: "Week 7, nfl.com + ESPN (ET+5: Madrid on CET from 25 Oct, US on EDT), DAZN NFL Game Pass" },
+  { id: "2026-10-25-vikings-colts", competition: "NFL", homeTeam: "Minnesota Vikings", awayTeam: "Indianapolis Colts", date: "2026-10-25", kickoffMadrid: "18:00", note: "Week 7, nfl.com + ESPN (ET+5: Madrid on CET from 25 Oct, US on EDT), DAZN NFL Game Pass" },
+  { id: "2026-10-25-jets-dolphins", competition: "NFL", homeTeam: "New York Jets", awayTeam: "Miami Dolphins", date: "2026-10-25", kickoffMadrid: "18:00", note: "Week 7, nfl.com + ESPN (ET+5: Madrid on CET from 25 Oct, US on EDT), DAZN NFL Game Pass" },
+  { id: "2026-10-25-titans-browns", competition: "NFL", homeTeam: "Tennessee Titans", awayTeam: "Cleveland Browns", date: "2026-10-25", kickoffMadrid: "18:00", note: "Week 7, nfl.com + ESPN (ET+5: Madrid on CET from 25 Oct, US on EDT), DAZN NFL Game Pass" },
   { id: "2026-10-25-realsociedad-levante", competition: "LaLiga", homeTeam: "Real Sociedad", awayTeam: "Levante", date: "2026-10-25", kickoffMadrid: "18:30", note: "J10; laliga.com horarios J10 (Radar 2026-10-17); CET", channel: "Movistar LALIGA" },
   { id: "2026-10-25-barcelona-realmadrid", competition: "LaLiga", homeTeam: "Barcelona", awayTeam: "Real Madrid", date: "2026-10-25", kickoffMadrid: "21:00", note: "J10; laliga.com horarios J10 (Radar 2026-10-17); El Clásico; CET (clocks go back 25 Oct 03:00)", channel: "DAZN", line: { en: "El Clásico on the big screens near Sol. It fills up: no booking, come early.", es: "El Clásico en las pantallas junto a Sol. Se llena: sin reserva, ven con tiempo." } },
+  { id: "2026-10-25-cardinals-broncos", competition: "NFL", homeTeam: "Arizona Cardinals", awayTeam: "Denver Broncos", date: "2026-10-25", kickoffMadrid: "21:05", note: "Week 7, nfl.com + ESPN (ET+5: Madrid on CET from 25 Oct, US on EDT), DAZN NFL Game Pass" },
+  { id: "2026-10-25-lions-packers", competition: "NFL", homeTeam: "Detroit Lions", awayTeam: "Green Bay Packers", date: "2026-10-25", kickoffMadrid: "21:25", note: "Week 7, nfl.com + ESPN (ET+5: Madrid on CET from 25 Oct, US on EDT), DAZN NFL Game Pass" },
+  { id: "2026-10-25-raiders-rams", competition: "NFL", homeTeam: "Las Vegas Raiders", awayTeam: "Los Angeles Rams", date: "2026-10-25", kickoffMadrid: "21:25", note: "Week 7, nfl.com + ESPN (ET+5: Madrid on CET from 25 Oct, US on EDT), DAZN NFL Game Pass" },
+  { id: "2026-10-26-seahawks-chiefs", competition: "NFL", homeTeam: "Seattle Seahawks", awayTeam: "Kansas City Chiefs", date: "2026-10-26", kickoffMadrid: "01:20", note: "Week 7 SNF, Sun 25 night (8:20 PM ET = 01:20 CET Mon); within venue hours (Sun close 03:00, last kickoff 02:00); nfl.com + ESPN, DAZN NFL Game Pass" },
   { id: "2026-10-26-sevilla-osasuna", competition: "LaLiga", homeTeam: "Sevilla", awayTeam: "Osasuna", date: "2026-10-26", kickoffMadrid: "21:00", note: "J10; laliga.com horarios J10 (Radar 2026-10-17); CET", channel: "Movistar LALIGA" },
   { id: "2026-10-27-cuarte-girona", competition: "Copa del Rey", homeTeam: "Cuarte", awayTeam: "Girona", date: "2026-10-27", kickoffMadrid: "18:30", note: "1st round; RFEF hora peninsular + Movistar guide LALIGA TV M+ (Radar 2026-10-17)", channel: "Movistar LALIGA" },
   { id: "2026-10-27-sestao-espanyol", competition: "Copa del Rey", homeTeam: "Sestao", awayTeam: "Espanyol", date: "2026-10-27", kickoffMadrid: "19:00", note: "1st round; RFEF hora peninsular + Movistar guide LALIGA TV M+ (Radar 2026-10-17)", channel: "Movistar LALIGA" },
