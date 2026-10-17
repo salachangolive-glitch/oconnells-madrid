@@ -125,6 +125,11 @@ export type Fixture = {
  * night). NOT added: Cowboys–Packers Mon 19 02:20 (after last kickoff 02:00).
  * No channel (NFL rows never used one), no RedZone row.
  * See /workspace/oconnell-nfl-agenda-2026-10-17/.
+ * Delta 2026-10-17 ~10:40 Madrid (DG approval): keep Chiefs–Seahawks Mon 26
+ * 01:20. Weekday NFL rule (TNF/MNF): include if kickoff >= 60 min before that
+ * night's close. Added MNF Cowboys–Eagles Tue 27 01:15 (Mon night). Excluded:
+ * MNF Commanders–49ers Tue 20 02:15 and TNF Patriots–Bears Fri 23 02:15 (45 min
+ * before 03:00 close).
  */
 export const FIXTURES: Fixture[] = [
   { id: "2026-10-08-madrid-partizan", competition: "EuroLeague", homeTeam: "Real Madrid", awayTeam: "Partizan", date: "2026-10-08", kickoffMadrid: "20:45" },
@@ -239,6 +244,7 @@ export const FIXTURES: Fixture[] = [
   { id: "2026-10-25-raiders-rams", competition: "NFL", homeTeam: "Las Vegas Raiders", awayTeam: "Los Angeles Rams", date: "2026-10-25", kickoffMadrid: "21:25", note: "Week 7, nfl.com + ESPN (ET+5: Madrid on CET from 25 Oct, US on EDT), DAZN NFL Game Pass" },
   { id: "2026-10-26-seahawks-chiefs", competition: "NFL", homeTeam: "Seattle Seahawks", awayTeam: "Kansas City Chiefs", date: "2026-10-26", kickoffMadrid: "01:20", note: "Week 7 SNF, Sun 25 night (8:20 PM ET = 01:20 CET Mon); within venue hours (Sun close 03:00, last kickoff 02:00); nfl.com + ESPN, DAZN NFL Game Pass" },
   { id: "2026-10-26-sevilla-osasuna", competition: "LaLiga", homeTeam: "Sevilla", awayTeam: "Osasuna", date: "2026-10-26", kickoffMadrid: "21:00", note: "J10; laliga.com horarios J10 (Radar 2026-10-17); CET", channel: "Movistar LALIGA" },
+  { id: "2026-10-27-eagles-cowboys", competition: "NFL", homeTeam: "Philadelphia Eagles", awayTeam: "Dallas Cowboys", date: "2026-10-27", kickoffMadrid: "01:15", note: "Week 7 MNF, Mon 26 night (8:15 PM ET = 01:15 CET Tue); weekday NFL rule: kickoff >= 60 min before close (Mon close 03:00); nfl.com + ESPN, DAZN NFL Game Pass" },
   { id: "2026-10-27-cuarte-girona", competition: "Copa del Rey", homeTeam: "Cuarte", awayTeam: "Girona", date: "2026-10-27", kickoffMadrid: "18:30", note: "1st round; RFEF hora peninsular + Movistar guide LALIGA TV M+ (Radar 2026-10-17)", channel: "Movistar LALIGA" },
   { id: "2026-10-27-sestao-espanyol", competition: "Copa del Rey", homeTeam: "Sestao", awayTeam: "Espanyol", date: "2026-10-27", kickoffMadrid: "19:00", note: "1st round; RFEF hora peninsular + Movistar guide LALIGA TV M+ (Radar 2026-10-17)", channel: "Movistar LALIGA" },
   { id: "2026-10-27-calamocha-europa", competition: "Copa del Rey", homeTeam: "Calamocha", awayTeam: "Europa", date: "2026-10-27", kickoffMadrid: "19:00", note: "1st round; RFEF hora peninsular + Movistar guide LALIGA TV M+ (Radar 2026-10-17)", channel: "Movistar LALIGA" },
