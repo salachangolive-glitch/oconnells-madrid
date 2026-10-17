@@ -75,9 +75,10 @@ export function ContactForm({ locale = "en" }: { locale?: Locale }) {
     const reason = String(fd.get("reason") || "");
     const message = String(fd.get("message") || "").trim();
     const company = String(fd.get("company") || "");
+    const honey = String(fd.get("_honey") || "");
 
     // Honeypot: bots fill hidden fields — pretend success, do not send.
-    if (company.trim() !== "") {
+    if (company.trim() !== "" || honey.trim() !== "") {
       setStatus("ok");
       form.reset();
       return;
@@ -111,9 +112,14 @@ export function ContactForm({ locale = "en" }: { locale?: Locale }) {
       (k) => `${k}: ${attribution[k] || "-"}`,
     ).join("\n");
 
+    // Subject is rebuilt server-side (unique per submission); `reason` and
+    // `locale` let the server label it. `subject` kept for compatibility.
     const payload: Record<string, string> = {
       ...attribution,
       subject,
+      reason,
+      locale,
+      _honey: honey,
       from_name: "O'Connell St Madrid",
       replyto: email,
       name,
@@ -161,6 +167,17 @@ export function ContactForm({ locale = "en" }: { locale?: Locale }) {
           {locale === "es" ? "Empresa" : "Company"}
           <input type="text" name="company" tabIndex={-1} autoComplete="off" />
         </label>
+      </div>
+      {/* Web3Forms-style honeypot: hidden, not focusable, ignored by AT */}
+      <div style={{ display: "none" }} aria-hidden="true">
+        <input
+          type="text"
+          name="_honey"
+          tabIndex={-1}
+          autoComplete="off"
+          aria-hidden="true"
+          defaultValue=""
+        />
       </div>
 
       {ATTRIBUTION_KEYS.map((k) => (

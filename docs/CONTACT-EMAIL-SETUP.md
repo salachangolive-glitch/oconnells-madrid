@@ -11,8 +11,10 @@ There is **no** `/api/contact` Node route. The browser posts directly to `https:
 
 ## Form (EN + ES)
 - Pages: `/contact` (EN), `/es/contact` (ES Contacto)
-- Client POST to Web3Forms with honeypot field `company`
-- Subject: `[OCONNELLS] {reason} — {name}`
+- Client POST to `/api/contact` (Pages Function, key server-side) → Web3Forms
+- Honeypots: `_honey` (display:none, tabIndex -1, autocomplete off, aria-hidden) + legacy `company`; server also honours `botcheck`. Any filled → 200 success, nothing forwarded.
+- Subject built server-side, unique per submission: `O'Connell St – {motivo} – {nombre} – {dd/mm HH:MM Madrid} #{ref}` (sanitized, ≤150 chars)
+- Testing: never @example.com nor «TEST»; use salachangolive+qa@gmail.com, max one real submission per change.
 - Env: `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` (Cloudflare Pages → Environment variables; also local `.env.local` for dev)
 - If the key is missing at runtime, the form shows a friendly “being activated” message (no Gmail, no phone CTA required).
 
