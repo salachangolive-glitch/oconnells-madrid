@@ -73,6 +73,7 @@ function FixtureDetail({ f, locale, visible, onNow }: RowProps) {
         {f.kickoffMadrid
           ? ` · ${f.kickoffMadrid} ${isEs ? "hora Madrid" : "Madrid"}`
           : null}
+        {f.channel ? ` · ${f.channel}` : null}
       </p>
       {f.kickoffMadrid ? (
         <p className="mt-2 text-sm text-cream-muted">{screenPolicyLine(locale)}</p>
@@ -115,6 +116,7 @@ function ComingUpRow({ f, locale, visible }: RowProps) {
       {" · "}
       {formatFixtureDay(f.date, locale)}
       {f.kickoffMadrid ? ` · ${f.kickoffMadrid}` : null}
+      {f.channel ? ` · ${f.channel}` : null}
       {f.kickoffMadrid ? (
         <span className="mt-1 block text-sm text-cream-muted">
           {screenPolicyLine(locale)}
