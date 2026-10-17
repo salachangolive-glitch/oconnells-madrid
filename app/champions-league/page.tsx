@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { InteriorPhoto } from "@/components/InteriorPhoto";
 import { PageShell } from "@/components/PageShell";
+import { PremierLeagueLines } from "@/components/PremierLeagueLines";
 import { PageHero, Section } from "@/components/Prose";
 import { buildMetadata } from "@/lib/seo";
 import { ADDRESS, HOURS, MAPS_URL, SITE_NAME } from "@/lib/venue";
@@ -50,6 +51,7 @@ export default function ChampionsLeaguePage() {
           for the tie and the Madrid time. If it is not listed, ask at the bar
           before you come.
         </p>
+        <PremierLeagueLines locale="en" competition="ucl" />
         <p>
           {ADDRESS.full}. {HOURS.summaryEn}. No table reservations — walk in,
           first come, first served.{" "}

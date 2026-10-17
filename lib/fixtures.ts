@@ -97,6 +97,11 @@ export type Fixture = {
  * 21:00 (Thu 15); Spurs–Coventry Mon 19 21:00; UCL MD3 Tue 20 21:00 PSG–Barcelona,
  * Stuttgart–Atlético, Liverpool–Villarreal, Man City–AEK. Overnight NFL still
  * excluded by venue-hours rule. See /workspace/oconnell-agenda-delta-2026-10-13/.
+ * Delta 2026-10-17 ~08:45 Madrid (Localo request, owner rule: all matches except
+ * outside opening hours): window now reaches Sat 24. Added PL MW8 Fri 23 / Sat 24
+ * (premierleague.com amendments) and LaLiga J10 Fri 23 / Sat 24 (laliga.com).
+ * NOT added, venue closed at kickoff (Sat doors 16:00): Aston Villa–Man City
+ * 13:30, Rayo–Elche 14:00. See /workspace/oconnell-localo-req-2026-10-17/.
  */
 export const FIXTURES: Fixture[] = [
   { id: "2026-10-08-madrid-partizan", competition: "EuroLeague", homeTeam: "Real Madrid", awayTeam: "Partizan", date: "2026-10-08", kickoffMadrid: "20:45" },
@@ -180,6 +185,14 @@ export const FIXTURES: Fixture[] = [
   { id: "2026-10-20-mancity-aek", competition: "UEFA Champions League", homeTeam: "Manchester City", awayTeam: "AEK Athens", date: "2026-10-20", kickoffMadrid: "21:00", note: "League phase MD3; UEFA time (CET); owner rule 2026-10-13: all UCL live" },
   { id: "2026-10-21-madrid-leipzig", competition: "UEFA Champions League", homeTeam: "Real Madrid", awayTeam: "RB Leipzig", date: "2026-10-21", kickoffMadrid: "21:00", note: "League phase MD3, Movistar Plus+" },
   { id: "2026-10-22-getafe-lugano", competition: "UEFA Conference League", homeTeam: "Getafe", awayTeam: "Lugano", date: "2026-10-22", kickoffMadrid: "18:45", note: "League phase MD2, M+ Liga de Campeones" },
+  { id: "2026-10-23-alaves-malaga", competition: "LaLiga", homeTeam: "Alavés", awayTeam: "Málaga", date: "2026-10-23", kickoffMadrid: "21:00", note: "J10; laliga.com + mundodeportivo.com 21/09 horarios J10" },
+  { id: "2026-10-23-ipswich-forest", competition: "Premier League", homeTeam: "Ipswich", awayTeam: "Nottingham Forest", date: "2026-10-23", kickoffMadrid: "21:00", note: "MW8 Fri; premierleague.com amendments 20:00 BST = 21:00 Madrid; DAZN" },
+  { id: "2026-10-24-arsenal-everton", competition: "Premier League", homeTeam: "Arsenal", awayTeam: "Everton", date: "2026-10-24", kickoffMadrid: "16:00", note: "MW8; premierleague.com 15:00 BST; DAZN" },
+  { id: "2026-10-24-coventry-fulham", competition: "Premier League", homeTeam: "Coventry City", awayTeam: "Fulham", date: "2026-10-24", kickoffMadrid: "16:00", note: "MW8; premierleague.com 15:00 BST; DAZN" },
+  { id: "2026-10-24-racing-espanyol", competition: "LaLiga", homeTeam: "Racing Santander", awayTeam: "Espanyol", date: "2026-10-24", kickoffMadrid: "16:15", note: "J10; laliga.com horarios J10" },
+  { id: "2026-10-24-valencia-villarreal", competition: "LaLiga", homeTeam: "Valencia", awayTeam: "Villarreal", date: "2026-10-24", kickoffMadrid: "18:30", note: "J10; laliga.com horarios J10" },
+  { id: "2026-10-24-chelsea-spurs", competition: "Premier League", homeTeam: "Chelsea", awayTeam: "Tottenham Hotspur", date: "2026-10-24", kickoffMadrid: "18:30", note: "MW8; premierleague.com 17:30 BST; DAZN" },
+  { id: "2026-10-24-atletico-deportivo", competition: "LaLiga", homeTeam: "Atlético Madrid", awayTeam: "RC Deportivo", date: "2026-10-24", kickoffMadrid: "21:00", note: "J10, Riyadh Air Metropolitano; laliga.com horarios J10" },
   { id: "2026-11-08-falcons-bengals", competition: "NFL", homeTeam: "Atlanta Falcons", awayTeam: "Cincinnati Bengals", date: "2026-11-08", kickoffMadrid: "15:30", note: "NFL Madrid Game, Bernabéu (Week 9). Live at O'Connell confirmed by owner 2026-10-13 07:12; home team/time per nfl.com", line: { en: "The NFL Madrid Game, live near Sol.", es: "El partido de la NFL en Madrid, en directo junto a Sol." } },
   { id: "2026-11-08-panthers-broncos", competition: "NFL", homeTeam: "Carolina Panthers", awayTeam: "Denver Broncos", date: "2026-11-08", kickoffMadrid: "19:00", note: "Week 9; all Sunday games live, owner confirmed 2026-10-13; times nfl.com (ET+6)" },
   { id: "2026-11-08-colts-cowboys", competition: "NFL", homeTeam: "Indianapolis Colts", awayTeam: "Dallas Cowboys", date: "2026-11-08", kickoffMadrid: "19:00", note: "Week 9; all Sunday games live, owner confirmed 2026-10-13; times nfl.com (ET+6)" },

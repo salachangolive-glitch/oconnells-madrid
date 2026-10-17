@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { InteriorPhoto } from "@/components/InteriorPhoto";
 import { PageShell } from "@/components/PageShell";
+import { PremierLeagueLines } from "@/components/PremierLeagueLines";
 import { PageHero, Section } from "@/components/Prose";
 import { buildMetadata } from "@/lib/seo";
 import { ADDRESS, HOURS, MAPS_URL, SITE_NAME } from "@/lib/venue";
@@ -49,6 +50,7 @@ export default function EsChampionsLeaguePage() {
           para el cruce y la hora de Madrid. Si no está en la lista, pregunta
           en la barra antes de venir.
         </p>
+        <PremierLeagueLines locale="es" competition="ucl" />
         <p>
           {ADDRESS.full}. {HOURS.summaryEs}. No se reservan mesas. Atendemos
           por orden de llegada.{" "}
