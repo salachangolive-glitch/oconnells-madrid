@@ -73,6 +73,15 @@ export default function NflMadridPageEs() {
           .
         </p>
       </Section>
+      <Section title="Antes del partido: punto de encuentro de aficionados en Sol">
+        <p>
+          El domingo 8 de noviembre, O&apos;Connell es punto de encuentro de
+          aficionados en Sol para el partido de la NFL en Madrid. Abrimos a las
+          14:00: queda con otros fans de la NFL junto a Puerta del Sol antes
+          del inicio a las 15:30, seas del equipo que seas. Sin reserva, por
+          orden de llegada.
+        </p>
+      </Section>
       <Section title="Bengals vs Falcons EN DIRECTO junto a Sol">
         <p>
           Emitimos en directo el partido de la NFL en Madrid 2026: Falcons–Bengals,
@@ -81,16 +90,15 @@ export default function NflMadridPageEs() {
           <Link href="/es/whats-on" className="text-cream underline">Agenda</Link>.
         </p>
       </Section>
-      <Section title="Después del partido de Madrid">
+      <Section title="Después del partido: NFL RedZone EN DIRECTO y todos los partidos NFL del día">
         <p>
           ¿Vuelves al centro después del partido en el Bernabéu? Estamos en la
           calle Espoz y Mina, junto a Sol. Ven a comentarlo con otros fans de la
           NFL, seas del equipo que seas.
         </p>
         <h3 className="font-semibold">Todos los partidos NFL del domingo EN DIRECTO junto a Sol</h3>
-        <p>Ponemos todos los partidos del domingo de la Week 9, en hora de Madrid:</p>
+        <p>Después del partido, ponemos el resto de partidos del domingo de la Week 9, en hora de Madrid:</p>
         <ul>
-          <li>15:30 · Bengals v Falcons (en Madrid)</li>
           <li>19:00 · Broncos v Panthers, Cowboys v Colts, Jets v Chiefs, Lions v Dolphins, Browns v Saints, Giants v Eagles, Rams v Commanders</li>
           <li>22:05 · Texans v Chargers, Raiders v 49ers</li>
           <li>22:25 · Packers v Patriots, Cardinals v Seahawks</li>
@@ -98,6 +106,11 @@ export default function NflMadridPageEs() {
         <p>
           <strong>NFL RedZone EN DIRECTO</strong> desde las 19:00 del domingo 8
           de noviembre, con los partidos de las 19:00 y de las 22:05/22:25.
+        </p>
+        <p>
+          El partido del domingo por la noche (Buccaneers–Bears, 02:20 hora de
+          Madrid) empieza demasiado cerca de nuestro cierre a las 03:00, así
+          que no lo ponemos.
         </p>
       </Section>
       <Section title="El partido NFL de Madrid 2026">

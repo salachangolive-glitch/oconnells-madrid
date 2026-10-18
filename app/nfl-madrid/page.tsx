@@ -71,6 +71,14 @@ export default function NflMadridPage() {
           .
         </p>
       </Section>
+      <Section title="Before the game: fans meeting point at Sol">
+        <p>
+          On Sunday 8 November O&apos;Connell is a fans meeting point at Sol for
+          the NFL Madrid Game. Doors open at 14:00: meet up with other NFL fans
+          just off Puerta del Sol before the 15:30 kickoff, whichever side
+          you&apos;re on. Walk in, first come, first served.
+        </p>
+      </Section>
       <Section title="Watch Bengals vs Falcons LIVE near Sol">
         <p>
           We&apos;re showing the 2026 NFL Madrid Game live: Falcons v Bengals,
@@ -79,16 +87,15 @@ export default function NflMadridPage() {
           <Link href="/whats-on" className="text-cream underline">What&apos;s On</Link>.
         </p>
       </Section>
-      <Section title="After the Madrid game">
+      <Section title="After the game: NFL RedZone LIVE and every NFL game of the day">
         <p>
           Heading back into the centre after the game at the Bernabéu? We&apos;re
           on Calle de Espoz y Mina, just off Puerta del Sol. Join us to talk it
           over with other NFL fans, whichever side you were on.
         </p>
         <h3 className="font-semibold">All Sunday NFL games LIVE near Sol</h3>
-        <p>Every Week 9 Sunday game is on at O&apos;Connell, Madrid times:</p>
+        <p>Post-game, the rest of Week 9&apos;s Sunday games are on at O&apos;Connell, Madrid times:</p>
         <ul>
-          <li>15:30 · Bengals v Falcons (Madrid)</li>
           <li>19:00 · Broncos v Panthers, Cowboys v Colts, Jets v Chiefs, Lions v Dolphins, Browns v Saints, Giants v Eagles, Rams v Commanders</li>
           <li>22:05 · Texans v Chargers, Raiders v 49ers</li>
           <li>22:25 · Packers v Patriots, Cardinals v Seahawks</li>
@@ -96,6 +103,10 @@ export default function NflMadridPage() {
         <p>
           <strong>NFL RedZone LIVE</strong> from 19:00 on Sunday 8 November,
           covering the 19:00 and 22:05/22:25 games.
+        </p>
+        <p>
+          The Sunday night game (Buccaneers v Bears, 02:20 Madrid) kicks off too
+          close to our 03:00 closing, so it isn&apos;t on.
         </p>
       </Section>
       <Section title="The 2026 NFL Madrid Game">
