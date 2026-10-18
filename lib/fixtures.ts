@@ -412,6 +412,8 @@ export const FIXTURES: Fixture[] = [
   // 19:00 UK), formula1.com (US GP 15:00 CDT = 21:00 CET), api-live.euroleague.net (R7).
   // NOT added (bar closed / too late): UECL Kairat–Panathinaikos Thu 22 16:30; URC Bulls–Ulster
   // Sat 24 13:45; NBA Spurs–Thunder Wed 21 03:30, Thunder–Nuggets Fri 23 03:30 (after last kickoff).
+  // DG 2026-10-18 09:23: NBA rows carry no channel; UECL/URC/Motherwell–Hearts no channel. Rayo–Elche
+  // re-verified (apim.laliga.com + laliga.com club page): Sat 24 14:00 -> NOT added (Sat doors 16:00).
   // See /workspace/oconnell-agenda-semana-19-25/.
   { id: "2026-10-22-crvenazvezda-copenhagen", competition: "UEFA Conference League", homeTeam: "Crvena Zvezda", awayTeam: "Copenhagen", date: "2026-10-22", kickoffMadrid: "18:45", note: "League phase MD2; match.uefa.com 2026-10-18 (2026-10-22T16:45Z); Movistar Plus+ (UEFA club competitions)" },
   { id: "2026-10-22-pafos-riga", competition: "UEFA Conference League", homeTeam: "Pafos", awayTeam: "Riga", date: "2026-10-22", kickoffMadrid: "18:45", note: "League phase MD2; match.uefa.com 2026-10-18 (2026-10-22T16:45Z); Movistar Plus+ (UEFA club competitions)" },
@@ -440,12 +442,12 @@ export const FIXTURES: Fixture[] = [
   { id: "2026-10-22-panathinaikos-baskonia", competition: "EuroLeague", homeTeam: "Panathinaikos", awayTeam: "Baskonia", date: "2026-10-22", kickoffMadrid: "20:15", note: "R7; api-live.euroleague.net 18:15Z = 20:15 CEST; Movistar Plus+ (EuroLeague)" },
   { id: "2026-10-22-olimpia-barcelona", competition: "EuroLeague", homeTeam: "Olimpia Milano", awayTeam: "Barcelona", date: "2026-10-22", kickoffMadrid: "20:30", note: "R7; api-live.euroleague.net 18:30Z = 20:30 CEST; Movistar Plus+ (EuroLeague)" },
   { id: "2026-10-23-paris-valencia", competition: "EuroLeague", homeTeam: "Paris Basketball", awayTeam: "Valencia Basket", date: "2026-10-23", kickoffMadrid: "20:45", note: "R7; api-live.euroleague.net 18:45Z = 20:45 CEST; Movistar Plus+ (EuroLeague)" },
-  { id: "2026-10-20-pistons-celtics", competition: "NBA", homeTeam: "Detroit Pistons", awayTeam: "Boston Celtics", date: "2026-10-20", kickoffMadrid: "21:00", note: "Opening night, 3 p.m. ET (nba.com + ESPN) = 21:00 CEST; DAZN selection" },
-  { id: "2026-10-21-knicks-76ers", competition: "NBA", homeTeam: "New York Knicks", awayTeam: "Philadelphia 76ers", date: "2026-10-21", kickoffMadrid: "01:00", note: "Tue 20 night, 7 p.m. ET (nba.com + ESPN) = 01:00 CEST; DAZN selection" },
-  { id: "2026-10-22-heat-timberwolves", competition: "NBA", homeTeam: "Miami Heat", awayTeam: "Minnesota Timberwolves", date: "2026-10-22", kickoffMadrid: "01:30", note: "Wed 21 night, 7:30 p.m. ET (nba.com + ESPN) = 01:30 CEST; DAZN selection" },
-  { id: "2026-10-23-76ers-cavaliers", competition: "NBA", homeTeam: "Philadelphia 76ers", awayTeam: "Cleveland Cavaliers", date: "2026-10-23", kickoffMadrid: "01:00", note: "Thu 22 night, 7 p.m. ET (nba.com + ESPN) = 01:00 CEST; DAZN selection" },
-  { id: "2026-10-25-hornets-heat", competition: "NBA", homeTeam: "Charlotte Hornets", awayTeam: "Miami Heat", date: "2026-10-25", kickoffMadrid: "00:00", note: "Sat 24 night, 6 p.m. ET (ESPN) = 00:00 CEST; DAZN selection" },
-  { id: "2026-10-26-76ers-pistons", competition: "NBA", homeTeam: "Philadelphia 76ers", awayTeam: "Detroit Pistons", date: "2026-10-26", kickoffMadrid: "00:30", note: "Sun 25 night, 7:30 p.m. EDT (ESPN) = 00:30 CET; DAZN selection" },
+  { id: "2026-10-20-pistons-celtics", competition: "NBA", homeTeam: "Detroit Pistons", awayTeam: "Boston Celtics", date: "2026-10-20", kickoffMadrid: "21:00", note: "Opening night, 3 p.m. ET (nba.com + ESPN) = 21:00 CEST; time verified nba.com/ESPN; venue open, kickoff >= 60 min before close" },
+  { id: "2026-10-21-knicks-76ers", competition: "NBA", homeTeam: "New York Knicks", awayTeam: "Philadelphia 76ers", date: "2026-10-21", kickoffMadrid: "01:00", note: "Tue 20 night, 7 p.m. ET (nba.com + ESPN) = 01:00 CEST; time verified nba.com/ESPN; venue open, kickoff >= 60 min before close" },
+  { id: "2026-10-22-heat-timberwolves", competition: "NBA", homeTeam: "Miami Heat", awayTeam: "Minnesota Timberwolves", date: "2026-10-22", kickoffMadrid: "01:30", note: "Wed 21 night, 7:30 p.m. ET (nba.com + ESPN) = 01:30 CEST; time verified nba.com/ESPN; venue open, kickoff >= 60 min before close" },
+  { id: "2026-10-23-76ers-cavaliers", competition: "NBA", homeTeam: "Philadelphia 76ers", awayTeam: "Cleveland Cavaliers", date: "2026-10-23", kickoffMadrid: "01:00", note: "Thu 22 night, 7 p.m. ET (nba.com + ESPN) = 01:00 CEST; time verified nba.com/ESPN; venue open, kickoff >= 60 min before close" },
+  { id: "2026-10-25-hornets-heat", competition: "NBA", homeTeam: "Charlotte Hornets", awayTeam: "Miami Heat", date: "2026-10-25", kickoffMadrid: "00:00", note: "Sat 24 night, 6 p.m. ET (ESPN) = 00:00 CEST; time verified nba.com/ESPN; venue open, kickoff >= 60 min before close" },
+  { id: "2026-10-26-76ers-pistons", competition: "NBA", homeTeam: "Philadelphia 76ers", awayTeam: "Detroit Pistons", date: "2026-10-26", kickoffMadrid: "00:30", note: "Sun 25 night, 7:30 p.m. EDT (ESPN) = 00:30 CET; time verified nba.com/ESPN; venue open, kickoff >= 60 min before close" },
 ];
 
 export const RECURRING = {
