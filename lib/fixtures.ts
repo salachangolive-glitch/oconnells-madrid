@@ -136,6 +136,11 @@ export type Fixture = {
  * 18:30, Hearts–Hibernian Sun 1 16:00, Liverpool–Arsenal Sun 1 17:30, NFL Week 8
  * Sun 1 Nov 19:00/22:05/22:25 (ESPN, ET+6). Not added: Sky-only / no-TV Scottish
  * games; SNF Mon 2 Nov 02:20. See /workspace/oconnell-agenda-escocia-2026-10-18/.
+ * Delta 2026-10-18 b: gap fill through Sun 1 Nov from primary sources
+ * (match.uefa.com, premierleague.com API, laliga.com J11 graphic, ESPN): +4 UCL,
+ * +12 UEL, +12 PL, +8 LaLiga J11 (with channel), TNF Packers–Panthers Fri 30
+ * 01:15. Not added (doors closed): Chelsea–Man Utd Sat 31 13:30, Levante–Atlético
+ * Sat 31 14:00.
  */
 export const FIXTURES: Fixture[] = [
   { id: "2026-10-08-madrid-partizan", competition: "EuroLeague", homeTeam: "Real Madrid", awayTeam: "Partizan", date: "2026-10-08", kickoffMadrid: "20:45" },
@@ -360,6 +365,45 @@ export const FIXTURES: Fixture[] = [
   { id: "2026-11-01-broncos-chiefs", competition: "NFL", homeTeam: "Denver Broncos", awayTeam: "Kansas City Chiefs", date: "2026-11-01", kickoffMadrid: "22:25", note: "Week 8; ESPN schedule API 4:25 PM EST = 22:25 CET (ET+6, US on EST from 1 Nov); DAZN NFL Game Pass" },
   { id: "2026-11-01-dolphins-patriots", competition: "NFL", homeTeam: "Miami Dolphins", awayTeam: "New England Patriots", date: "2026-11-01", kickoffMadrid: "22:25", note: "Week 8; ESPN schedule API 4:25 PM EST = 22:25 CET (ET+6, US on EST from 1 Nov); DAZN NFL Game Pass" },
   // NOT added: SNF Commanders–Eagles Mon 2 Nov 02:20 (after last kickoff 02:00, Sun close 03:00).
+  // Delta 2026-10-18 b (gap fill): missing UCL/UEL MD3, PL MW8 Sun 25 + MW9 Sat 31, LaLiga J11, TNF Week 8.
+  // NOT added (doors closed): PL Chelsea–Man Utd Sat 31 13:30; LaLiga Levante–Atlético Sat 31 14:00.
+  { id: "2026-10-20-roma-slovan", competition: "UEFA Champions League", homeTeam: "Roma", awayTeam: "Slovan Bratislava", date: "2026-10-20", kickoffMadrid: "21:00", note: "League phase MD3; match.uefa.com (CEST); Movistar Liga de Campeones; owner rule: all UCL live" },
+  { id: "2026-10-20-porto-psv", competition: "UEFA Champions League", homeTeam: "Porto", awayTeam: "PSV", date: "2026-10-20", kickoffMadrid: "21:00", note: "League phase MD3; match.uefa.com (CEST); Movistar Liga de Campeones; owner rule: all UCL live" },
+  { id: "2026-10-21-sporting-lask", competition: "UEFA Champions League", homeTeam: "Sporting CP", awayTeam: "LASK", date: "2026-10-21", kickoffMadrid: "21:00", note: "League phase MD3; match.uefa.com (CEST); Movistar Liga de Campeones; owner rule: all UCL live" },
+  { id: "2026-10-21-brugge-lens", competition: "UEFA Champions League", homeTeam: "Club Brugge", awayTeam: "Lens", date: "2026-10-21", kickoffMadrid: "21:00", note: "League phase MD3; match.uefa.com (CEST); Movistar Liga de Campeones; owner rule: all UCL live" },
+  { id: "2026-10-22-ferencvaros-torreense", competition: "UEFA Europa League", homeTeam: "Ferencváros", awayTeam: "Torreense", date: "2026-10-22", kickoffMadrid: "18:45", note: "League phase MD3; match.uefa.com (CEST); Movistar Plus+; owner rule: all UEL live" },
+  { id: "2026-10-22-usg-beersheva", competition: "UEFA Europa League", homeTeam: "Union Saint-Gilloise", awayTeam: "Hapoel Beer-Sheva", date: "2026-10-22", kickoffMadrid: "18:45", note: "League phase MD3; match.uefa.com (CEST); Movistar Plus+; owner rule: all UEL live" },
+  { id: "2026-10-22-dinamo-nec", competition: "UEFA Europa League", homeTeam: "Dinamo Zagreb", awayTeam: "NEC Nijmegen", date: "2026-10-22", kickoffMadrid: "18:45", note: "League phase MD3; match.uefa.com (CEST); Movistar Plus+; owner rule: all UEL live" },
+  { id: "2026-10-22-sturm-marseille", competition: "UEFA Europa League", homeTeam: "Sturm Graz", awayTeam: "Marseille", date: "2026-10-22", kickoffMadrid: "18:45", note: "League phase MD3; match.uefa.com (CEST); Movistar Plus+; owner rule: all UEL live" },
+  { id: "2026-10-22-ofi-leverkusen", competition: "UEFA Europa League", homeTeam: "OFI Crete", awayTeam: "Bayer Leverkusen", date: "2026-10-22", kickoffMadrid: "18:45", note: "League phase MD3; match.uefa.com (CEST); Movistar Plus+; owner rule: all UEL live" },
+  { id: "2026-10-22-ararat-az", competition: "UEFA Europa League", homeTeam: "Ararat-Armenia", awayTeam: "AZ Alkmaar", date: "2026-10-22", kickoffMadrid: "18:45", note: "League phase MD3; match.uefa.com (CEST); Movistar Plus+; owner rule: all UEL live" },
+  { id: "2026-10-22-olympiacos-sparta", competition: "UEFA Europa League", homeTeam: "Olympiacos", awayTeam: "Sparta Prague", date: "2026-10-22", kickoffMadrid: "21:00", note: "League phase MD3; match.uefa.com (CEST); Movistar Plus+; owner rule: all UEL live" },
+  { id: "2026-10-22-plzen-levski", competition: "UEFA Europa League", homeTeam: "Viktoria Plzeň", awayTeam: "Levski Sofia", date: "2026-10-22", kickoffMadrid: "21:00", note: "League phase MD3; match.uefa.com (CEST); Movistar Plus+; owner rule: all UEL live" },
+  { id: "2026-10-22-celje-salzburg", competition: "UEFA Europa League", homeTeam: "Celje", awayTeam: "Salzburg", date: "2026-10-22", kickoffMadrid: "21:00", note: "League phase MD3; match.uefa.com (CEST); Movistar Plus+; owner rule: all UEL live" },
+  { id: "2026-10-22-jagiellonia-anderlecht", competition: "UEFA Europa League", homeTeam: "Jagiellonia", awayTeam: "Anderlecht", date: "2026-10-22", kickoffMadrid: "21:00", note: "League phase MD3; match.uefa.com (CEST); Movistar Plus+; owner rule: all UEL live" },
+  { id: "2026-10-22-omonia-benfica", competition: "UEFA Europa League", homeTeam: "Omonia", awayTeam: "Benfica", date: "2026-10-22", kickoffMadrid: "21:00", note: "League phase MD3; match.uefa.com (CEST); Movistar Plus+; owner rule: all UEL live" },
+  { id: "2026-10-22-hoffenheim-lyon", competition: "UEFA Europa League", homeTeam: "Hoffenheim", awayTeam: "Lyon", date: "2026-10-22", kickoffMadrid: "21:00", note: "League phase MD3; match.uefa.com (CEST); Movistar Plus+; owner rule: all UEL live" },
+  { id: "2026-10-25-palace-newcastle", competition: "Premier League", homeTeam: "Crystal Palace", awayTeam: "Newcastle", date: "2026-10-25", kickoffMadrid: "15:00", note: "MW8; premierleague.com API 14:00 GMT = 15:00 CET; DAZN" },
+  { id: "2026-10-25-hull-brentford", competition: "Premier League", homeTeam: "Hull City", awayTeam: "Brentford", date: "2026-10-25", kickoffMadrid: "15:00", note: "MW8; premierleague.com API 14:00 GMT = 15:00 CET; DAZN" },
+  { id: "2026-10-25-liverpool-brighton", competition: "Premier League", homeTeam: "Liverpool", awayTeam: "Brighton", date: "2026-10-25", kickoffMadrid: "15:00", note: "MW8; premierleague.com API 14:00 GMT = 15:00 CET; DAZN" },
+  { id: "2026-10-25-manutd-bournemouth", competition: "Premier League", homeTeam: "Manchester United", awayTeam: "Bournemouth", date: "2026-10-25", kickoffMadrid: "15:00", note: "MW8; premierleague.com API 14:00 GMT = 15:00 CET; DAZN" },
+  { id: "2026-10-25-sunderland-leeds", competition: "Premier League", homeTeam: "Sunderland", awayTeam: "Leeds", date: "2026-10-25", kickoffMadrid: "17:30", note: "MW8; premierleague.com API 16:30 GMT = 17:30 CET; DAZN" },
+  { id: "2026-10-31-bournemouth-leeds", competition: "Premier League", homeTeam: "Bournemouth", awayTeam: "Leeds", date: "2026-10-31", kickoffMadrid: "16:00", note: "MW9; premierleague.com API 15:00 GMT = 16:00 CET; DAZN" },
+  { id: "2026-10-31-brentford-forest", competition: "Premier League", homeTeam: "Brentford", awayTeam: "Nottingham Forest", date: "2026-10-31", kickoffMadrid: "16:00", note: "MW9; premierleague.com API 15:00 GMT = 16:00 CET; DAZN" },
+  { id: "2026-10-31-coventry-sunderland", competition: "Premier League", homeTeam: "Coventry City", awayTeam: "Sunderland", date: "2026-10-31", kickoffMadrid: "16:00", note: "MW9; premierleague.com API 15:00 GMT = 16:00 CET; DAZN" },
+  { id: "2026-10-31-hull-ipswich", competition: "Premier League", homeTeam: "Hull City", awayTeam: "Ipswich", date: "2026-10-31", kickoffMadrid: "16:00", note: "MW9; premierleague.com API 15:00 GMT = 16:00 CET; DAZN" },
+  { id: "2026-10-31-mancity-brighton", competition: "Premier League", homeTeam: "Manchester City", awayTeam: "Brighton", date: "2026-10-31", kickoffMadrid: "16:00", note: "MW9; premierleague.com API 15:00 GMT = 16:00 CET; DAZN" },
+  { id: "2026-10-31-spurs-palace", competition: "Premier League", homeTeam: "Tottenham Hotspur", awayTeam: "Crystal Palace", date: "2026-10-31", kickoffMadrid: "18:30", note: "MW9; premierleague.com API 17:30 GMT = 18:30 CET; DAZN" },
+  { id: "2026-10-31-villa-fulham", competition: "Premier League", homeTeam: "Aston Villa", awayTeam: "Fulham", date: "2026-10-31", kickoffMadrid: "21:00", note: "MW9; premierleague.com API 20:00 GMT = 21:00 CET; DAZN" },
+  { id: "2026-10-30-villarreal-espanyol", competition: "LaLiga", homeTeam: "Villarreal", awayTeam: "Espanyol", date: "2026-10-30", kickoffMadrid: "21:00", note: "J11; laliga.com horarios J11 (official graphic 03.10.2026); CET", channel: "Movistar LALIGA" },
+  { id: "2026-10-31-rayo-celta", competition: "LaLiga", homeTeam: "Rayo Vallecano", awayTeam: "Celta", date: "2026-10-31", kickoffMadrid: "16:15", note: "J11; laliga.com horarios J11 (official graphic 03.10.2026); CET", channel: "DAZN" },
+  { id: "2026-10-31-betis-malaga", competition: "LaLiga", homeTeam: "Real Betis", awayTeam: "Málaga", date: "2026-10-31", kickoffMadrid: "18:30", note: "J11; laliga.com horarios J11 (official graphic 03.10.2026); CET", channel: "DAZN" },
+  { id: "2026-10-31-barcelona-alaves", competition: "LaLiga", homeTeam: "Barcelona", awayTeam: "Alavés", date: "2026-10-31", kickoffMadrid: "21:00", note: "J11; laliga.com horarios J11 (official graphic 03.10.2026); CET", channel: "Movistar LALIGA" },
+  { id: "2026-11-01-getafe-sevilla", competition: "LaLiga", homeTeam: "Getafe", awayTeam: "Sevilla", date: "2026-11-01", kickoffMadrid: "14:00", note: "J11; laliga.com horarios J11 (official graphic 03.10.2026); CET; Sun doors 14:00", channel: "DAZN" },
+  { id: "2026-11-01-racing-realmadrid", competition: "LaLiga", homeTeam: "Racing Santander", awayTeam: "Real Madrid", date: "2026-11-01", kickoffMadrid: "16:15", note: "J11; laliga.com horarios J11 (official graphic 03.10.2026); CET", channel: "DAZN" },
+  { id: "2026-11-01-elche-valencia", competition: "LaLiga", homeTeam: "Elche", awayTeam: "Valencia", date: "2026-11-01", kickoffMadrid: "18:30", note: "J11; laliga.com horarios J11 (official graphic 03.10.2026); CET", channel: "Movistar LALIGA" },
+  { id: "2026-11-01-athletic-realsociedad", competition: "LaLiga", homeTeam: "Athletic Club", awayTeam: "Real Sociedad", date: "2026-11-01", kickoffMadrid: "21:00", note: "J11; laliga.com horarios J11 (official graphic 03.10.2026); CET", channel: "DAZN" },
+  { id: "2026-10-30-packers-panthers", competition: "NFL", homeTeam: "Green Bay Packers", awayTeam: "Carolina Panthers", date: "2026-10-30", kickoffMadrid: "01:15", note: "Week 8 TNF, Thu 29 night (8:15 PM EDT = 01:15 CET Fri); weekday NFL rule: kickoff >= 60 min before close (Thu close 03:00); ESPN schedule API, DAZN NFL Game Pass" },
   { id: "2026-11-08-nfl-redzone", competition: "NFL", homeTeam: "NFL RedZone LIVE", awayTeam: "", date: "2026-11-08", kickoffMadrid: "19:00", note: "Week 9 Sunday afternoon/late windows (19:00, 22:05/22:25 Madrid); owner confirmed RedZone at O'Connell 2026-10-13", line: { en: "NFL RedZone LIVE: every touchdown from the Sunday games.", es: "NFL RedZone en directo: todos los touchdowns de los partidos del domingo." } },
 ];
 
