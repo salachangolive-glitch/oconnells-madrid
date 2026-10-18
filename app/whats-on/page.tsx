@@ -33,6 +33,11 @@ export default function WhatsOnPage() {
           football, NFL, NBA, rugby, Formula 1, tennis and more. See Today and the next 7 days on this page, or ask at the bar if you&apos;re
           looking for a specific game.
         </p>
+        <p>
+          <Link href="/nfl-madrid" className="text-gold underline">
+            NFL at Puerta del Sol — Sunday 8 Nov, every game live
+          </Link>
+        </p>
       </Section>
 
       <Section title="Thursday €1 shots">

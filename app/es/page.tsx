@@ -54,6 +54,11 @@ export default function EsHomePage() {
           deportes en directo, gente de muchos países y chupitos a 1 € los
           jueves.
         </p>
+        <p className="mt-3">
+          <Link href="/es/nfl-madrid" className="text-sm text-gold hover:text-cream">
+            NFL en la Puerta del Sol — domingo 8 nov, todos los partidos en directo →
+          </Link>
+        </p>
       </section>
 
       <FixtureStrip locale="es" />

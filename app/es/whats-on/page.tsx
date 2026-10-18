@@ -35,6 +35,11 @@ export default function EsWhatsOnPage() {
           tenis y más. Consulta Hoy y los próximos 7 días, o pregunta en
           la barra si buscas un evento concreto.
         </p>
+        <p>
+          <Link href="/es/nfl-madrid" className="text-gold underline">
+            NFL en la Puerta del Sol — domingo 8 nov, todos los partidos en directo
+          </Link>
+        </p>
       </Section>
 
       <Section title="Chupitos a 1 € los jueves">
