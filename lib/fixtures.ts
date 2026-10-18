@@ -130,6 +130,12 @@ export type Fixture = {
  * night's close. Added MNF Cowboys–Eagles Tue 27 01:15 (Mon night). Excluded:
  * MNF Commanders–49ers Tue 20 02:15 and TNF Patriots–Bears Fri 23 02:15 (45 min
  * before 03:00 close).
+ * Delta 2026-10-18 ~09:00 Madrid (DG P1, Radar 2026-10-18-escocia-aficiones.md):
+ * Celtic–Celta Thu 22 highlight line (row existed); added Leinster–Munster Sat 24
+ * 19:00, Motherwell–Hearts Sun 25 15:00, Rangers–Aberdeen + Munster–Sharks Sat 31
+ * 18:30, Hearts–Hibernian Sun 1 16:00, Liverpool–Arsenal Sun 1 17:30, NFL Week 8
+ * Sun 1 Nov 19:00/22:05/22:25 (ESPN, ET+6). Not added: Sky-only / no-TV Scottish
+ * games; SNF Mon 2 Nov 02:20. See /workspace/oconnell-agenda-escocia-2026-10-18/.
  */
 export const FIXTURES: Fixture[] = [
   { id: "2026-10-08-madrid-partizan", competition: "EuroLeague", homeTeam: "Real Madrid", awayTeam: "Partizan", date: "2026-10-08", kickoffMadrid: "20:45" },
@@ -330,10 +336,30 @@ export const FIXTURES: Fixture[] = [
   { id: "2026-10-21-inter-shakhtar", competition: "UEFA Champions League", homeTeam: "Inter", awayTeam: "Shakhtar Donetsk", date: "2026-10-21", kickoffMadrid: "21:00", note: "League phase MD3, Movistar Liga de Campeones (Radar 2026-10-13, movistar.es guide)" },
   { id: "2026-10-22-lech-sunderland", competition: "UEFA Europa League", homeTeam: "Lech Poznań", awayTeam: "Sunderland", date: "2026-10-22", kickoffMadrid: "18:45", note: "League phase MD3, Movistar Liga de Campeones (Radar 2026-10-13, movistar.es guide)" },
   { id: "2026-10-22-juventus-rennes", competition: "UEFA Europa League", homeTeam: "Juventus", awayTeam: "Rennes", date: "2026-10-22", kickoffMadrid: "18:45", note: "League phase MD3, Movistar Liga de Campeones (Radar 2026-10-13, movistar.es guide)" },
-  { id: "2026-10-22-celtic-celta", competition: "UEFA Europa League", homeTeam: "Celtic", awayTeam: "Celta", date: "2026-10-22", kickoffMadrid: "21:00", note: "League phase MD3, Movistar Liga de Campeones (Radar 2026-10-13, movistar.es guide)" },
+  { id: "2026-10-22-celtic-celta", competition: "UEFA Europa League", homeTeam: "Celtic", awayTeam: "Celta", date: "2026-10-22", kickoffMadrid: "21:00", note: "League phase MD3, Celtic Park; match.uefa.com 19:00Z = 21:00 CEST (reverified 2026-10-18); Movistar Liga de Campeones; DG P1 highlight (Radar 2026-10-18 Escocia)", line: { en: "Celtic v Celta: a meeting point for Celtic and Celta fans near Sol. No booking, come early.", es: "Celtic–Celta: punto de encuentro de aficionados del Celtic y del Celta junto a Sol. Sin reserva, ven con tiempo." } },
   { id: "2026-10-22-lillestrom-sociedad", competition: "UEFA Europa League", homeTeam: "Lillestrøm", awayTeam: "Real Sociedad", date: "2026-10-22", kickoffMadrid: "21:00", note: "League phase MD3, Movistar Liga de Campeones (Radar 2026-10-13, movistar.es guide)" },
   { id: "2026-10-22-bournemouth-milan", competition: "UEFA Europa League", homeTeam: "Bournemouth", awayTeam: "Milan", date: "2026-10-22", kickoffMadrid: "21:00", note: "League phase MD3, Movistar Liga de Campeones (Radar 2026-10-13, movistar.es guide)" },
   { id: "2026-10-22-besiktas-palace", competition: "UEFA Europa League", homeTeam: "Beşiktaş", awayTeam: "Crystal Palace", date: "2026-10-22", kickoffMadrid: "21:00", note: "League phase MD3, Movistar Liga de Campeones (Radar 2026-10-13, movistar.es guide)" },
+  // Delta 2026-10-18 (DG P1, Radar /workspace/radar/2026-10-18-escocia-aficiones.md): Scottish football with UK broadcaster
+  // Premier Sports, URC, PL MW9 Sun, NFL Week 8 Sun 1 Nov (US back on EST: ET+6). No channel shown.
+  { id: "2026-10-24-leinster-munster", competition: "United Rugby Championship", homeTeam: "Leinster", awayTeam: "Munster", date: "2026-10-24", kickoffMadrid: "19:00", note: "Round 4, Aviva Stadium; avivastadium.ie + RTÉ 18:00 IST = 19:00 CEST; Premier Sports" },
+  { id: "2026-10-25-motherwell-hearts", competition: "Scottish Premiership", homeTeam: "Motherwell", awayTeam: "Hearts", date: "2026-10-25", kickoffMadrid: "15:00", note: "Fir Park; spfl.co.uk fixtures + SPFL TV selections + heartsfc.co.uk: 14:00 GMT = 15:00 CET; UK TV Premier Sports" },
+  { id: "2026-10-31-rangers-aberdeen", competition: "Scottish League Cup", homeTeam: "Rangers", awayTeam: "Aberdeen", date: "2026-10-31", kickoffMadrid: "18:30", note: "Premier Sports Cup semi-final; spfl.co.uk league-cup fixtures 17:30 GMT = 18:30 CET; UK TV Premier Sports", line: { en: "Scottish League Cup semi-final: a meeting point for Rangers and Aberdeen fans near Sol. No booking, come early.", es: "Semifinal de la Copa de la Liga escocesa: punto de encuentro de aficionados del Rangers y del Aberdeen junto a Sol. Sin reserva, ven con tiempo." } },
+  { id: "2026-10-31-munster-sharks", competition: "United Rugby Championship", homeTeam: "Munster", awayTeam: "Sharks", date: "2026-10-31", kickoffMadrid: "18:30", note: "Round 5, Thomond Park; munsterrugby.ie + BBC 17:30 GMT = 18:30 CET; Premier Sports" },
+  { id: "2026-11-01-hearts-hibernian", competition: "Scottish League Cup", homeTeam: "Hearts", awayTeam: "Hibernian", date: "2026-11-01", kickoffMadrid: "16:00", note: "Premier Sports Cup semi-final (venue not verified); spfl.co.uk league-cup fixtures 15:00 GMT = 16:00 CET; UK TV Premier Sports", line: { en: "Edinburgh derby, Scottish League Cup semi-final: a meeting point for Hearts and Hibs fans near Sol. No booking, come early.", es: "Derbi de Edimburgo, semifinal de la Copa de la Liga escocesa: punto de encuentro de aficionados del Hearts y del Hibs junto a Sol. Sin reserva, ven con tiempo." } },
+  { id: "2026-11-01-liverpool-arsenal", competition: "Premier League", homeTeam: "Liverpool", awayTeam: "Arsenal", date: "2026-11-01", kickoffMadrid: "17:30", note: "MW9; premierleague.com API 16:30 GMT = 17:30 CET; DAZN" },
+  { id: "2026-11-01-bills-ravens", competition: "NFL", homeTeam: "Buffalo Bills", awayTeam: "Baltimore Ravens", date: "2026-11-01", kickoffMadrid: "19:00", note: "Week 8; ESPN schedule API 1:00 PM EST = 19:00 CET (ET+6, US on EST from 1 Nov); DAZN NFL Game Pass" },
+  { id: "2026-11-01-bengals-titans", competition: "NFL", homeTeam: "Cincinnati Bengals", awayTeam: "Tennessee Titans", date: "2026-11-01", kickoffMadrid: "19:00", note: "Week 8; ESPN schedule API 1:00 PM EST = 19:00 CET (ET+6, US on EST from 1 Nov); DAZN NFL Game Pass" },
+  { id: "2026-11-01-cowboys-cardinals", competition: "NFL", homeTeam: "Dallas Cowboys", awayTeam: "Arizona Cardinals", date: "2026-11-01", kickoffMadrid: "19:00", note: "Week 8; ESPN schedule API 1:00 PM EST = 19:00 CET (ET+6, US on EST from 1 Nov); DAZN NFL Game Pass" },
+  { id: "2026-11-01-lions-vikings", competition: "NFL", homeTeam: "Detroit Lions", awayTeam: "Minnesota Vikings", date: "2026-11-01", kickoffMadrid: "19:00", note: "Week 8; ESPN schedule API 1:00 PM EST = 19:00 CET (ET+6, US on EST from 1 Nov); DAZN NFL Game Pass" },
+  { id: "2026-11-01-jets-raiders", competition: "NFL", homeTeam: "New York Jets", awayTeam: "Las Vegas Raiders", date: "2026-11-01", kickoffMadrid: "19:00", note: "Week 8; ESPN schedule API 1:00 PM EST = 19:00 CET (ET+6, US on EST from 1 Nov); DAZN NFL Game Pass" },
+  { id: "2026-11-01-steelers-browns", competition: "NFL", homeTeam: "Pittsburgh Steelers", awayTeam: "Cleveland Browns", date: "2026-11-01", kickoffMadrid: "19:00", note: "Week 8; ESPN schedule API 1:00 PM EST = 19:00 CET (ET+6, US on EST from 1 Nov); DAZN NFL Game Pass" },
+  { id: "2026-11-01-buccaneers-falcons", competition: "NFL", homeTeam: "Tampa Bay Buccaneers", awayTeam: "Atlanta Falcons", date: "2026-11-01", kickoffMadrid: "19:00", note: "Week 8; ESPN schedule API 1:00 PM EST = 19:00 CET (ET+6, US on EST from 1 Nov); DAZN NFL Game Pass" },
+  { id: "2026-11-01-jaguars-colts", competition: "NFL", homeTeam: "Jacksonville Jaguars", awayTeam: "Indianapolis Colts", date: "2026-11-01", kickoffMadrid: "19:00", note: "Week 8; ESPN schedule API 1:00 PM EST = 19:00 CET (ET+6, US on EST from 1 Nov); DAZN NFL Game Pass" },
+  { id: "2026-11-01-rams-chargers", competition: "NFL", homeTeam: "Los Angeles Rams", awayTeam: "Los Angeles Chargers", date: "2026-11-01", kickoffMadrid: "22:05", note: "Week 8; ESPN schedule API 4:05 PM EST = 22:05 CET (ET+6, US on EST from 1 Nov); DAZN NFL Game Pass" },
+  { id: "2026-11-01-broncos-chiefs", competition: "NFL", homeTeam: "Denver Broncos", awayTeam: "Kansas City Chiefs", date: "2026-11-01", kickoffMadrid: "22:25", note: "Week 8; ESPN schedule API 4:25 PM EST = 22:25 CET (ET+6, US on EST from 1 Nov); DAZN NFL Game Pass" },
+  { id: "2026-11-01-dolphins-patriots", competition: "NFL", homeTeam: "Miami Dolphins", awayTeam: "New England Patriots", date: "2026-11-01", kickoffMadrid: "22:25", note: "Week 8; ESPN schedule API 4:25 PM EST = 22:25 CET (ET+6, US on EST from 1 Nov); DAZN NFL Game Pass" },
+  // NOT added: SNF Commanders–Eagles Mon 2 Nov 02:20 (after last kickoff 02:00, Sun close 03:00).
   { id: "2026-11-08-nfl-redzone", competition: "NFL", homeTeam: "NFL RedZone LIVE", awayTeam: "", date: "2026-11-08", kickoffMadrid: "19:00", note: "Week 9 Sunday afternoon/late windows (19:00, 22:05/22:25 Madrid); owner confirmed RedZone at O'Connell 2026-10-13", line: { en: "NFL RedZone LIVE: every touchdown from the Sunday games.", es: "NFL RedZone en directo: todos los touchdowns de los partidos del domingo." } },
 ];
 
@@ -475,6 +501,8 @@ const COMPETITION_SPORT: Record<string, Sport> = {
   "UEFA Europa League": "football",
   "UEFA Conference League": "football",
   "Copa del Rey": "football",
+  "Scottish Premiership": "football",
+  "Scottish League Cup": "football",
   "United Rugby Championship": "rugby",
   Premiership: "rugby",
   "Six Nations": "rugby",
