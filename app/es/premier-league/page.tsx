@@ -7,9 +7,9 @@ import { buildMetadata } from "@/lib/seo";
 import { ADDRESS, HOURS, MAPS_URL, SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
-  title: "Premier League en pantallas en Madrid cerca de Sol",
+  title: "Pub para ver la Premier League en Madrid, junto a Sol",
   description:
-    "Premier League en O'Connell St cerca de Sol cuando la emisión está confirmada. Horario, entrada sin reserva y Agenda.",
+    "Pub para ver la Premier League junto a la Puerta del Sol: los partidos confirmados en O'Connell St, con hora de Madrid, están en la Agenda. Sin reserva.",
   path: "/es/premier-league",
   locale: "es",
 });
@@ -19,7 +19,7 @@ export default function EsPremierLeaguePage() {
     <PageShell locale="es" altLangHref="/premier-league">
       <PageHero
         eyebrow="Premier League · Madrid"
-        title={`Premier League en ${SITE_NAME}`}
+        title={`Pub para ver la Premier League junto a Sol: ${SITE_NAME}`}
         lead="Premier League en un pub irlandés a un paso de Puerta del Sol. Los partidos confirmados de los próximos 7 días están en la Agenda."
       />
       <InteriorPhoto

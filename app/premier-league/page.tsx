@@ -7,9 +7,9 @@ import { buildMetadata } from "@/lib/seo";
 import { ADDRESS, HOURS, MAPS_URL, SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
-  title: "Premier League on screens in Madrid near Sol",
+  title: "Premier League pub in Madrid, by Puerta del Sol",
   description:
-    "Premier League at O'Connell St near Sol when the screening is confirmed. Hours, walk-in, and What's On.",
+    "Premier League pub by Puerta del Sol: confirmed Premier League games at O'Connell St, with Madrid kickoff times on What's On. Walk in, no booking.",
   path: "/premier-league",
 });
 
@@ -18,7 +18,7 @@ export default function PremierLeaguePage() {
     <PageShell locale="en" altLangHref="/es/premier-league">
       <PageHero
         eyebrow="Premier League · Madrid"
-        title={`Premier League at ${SITE_NAME}`}
+        title={`Premier League pub near Sol: ${SITE_NAME}`}
         lead="Premier League at an Irish pub a short walk from Puerta del Sol. Confirmed kickoffs for the next 7 days are on What’s On."
       />
       <InteriorPhoto

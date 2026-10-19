@@ -16,7 +16,7 @@ import {
 } from "@/lib/venue";
 
 export const metadata = buildMetadata({
-  title: `${SITE_NAME} Madrid — Pub irlandés y bar deportivo cerca de Sol`,
+  title: `Pub irlandés en Sol con deportes en directo | ${SITE_NAME} Madrid`,
   description:
     "Pub irlandés junto a Puerta del Sol, con deportes en directo y chupitos a 1 € los jueves. Calle de Espoz y Mina 7, Madrid.",
   path: "/es",
@@ -38,10 +38,13 @@ export default function EsHomePage() {
       <PostMatchBanner locale="es" />
       <header className="mb-8 max-w-2xl text-center sm:mx-auto">
         <h1 className="font-serif text-2xl font-bold leading-snug text-cream sm:text-3xl lg:text-4xl">
-          O&apos;Connell St Madrid
+          O&apos;Connell St Madrid{" "}
+          <span className="mt-1 block text-lg font-semibold text-gold sm:text-xl lg:text-2xl">
+            Pub irlandés en Sol
+          </span>
         </h1>
         <p className="mt-2 text-sm tracking-wide text-cream-muted sm:text-base">
-          Pub irlandés · Sol · Deportes en directo
+          Deportes en directo · Gente de muchos países
         </p>
       </header>
       <div className="mb-10 border-y border-gold/20 bg-pub-burgundy-deep/80">

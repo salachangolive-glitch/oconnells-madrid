@@ -16,7 +16,7 @@ import {
 } from "@/lib/venue";
 
 export const metadata = buildMetadata({
-  title: `${SITE_NAME} Madrid — Irish pub & sports bar near Sol`,
+  title: `Irish pub at Puerta del Sol with live sports | ${SITE_NAME} Madrid`,
   description:
     "Irish pub by Puerta del Sol with live sports, international crowd and €1 shots on Thursdays.",
   path: "/",
@@ -33,10 +33,13 @@ export default function HomePage() {
       {/* Hero text + CTAs */}
       <header className="mb-8 max-w-2xl text-center sm:mx-auto">
         <h1 className="font-serif text-2xl font-bold leading-snug text-cream sm:text-3xl lg:text-4xl">
-          O&apos;Connell St Madrid
+          O&apos;Connell St Madrid{" "}
+          <span className="mt-1 block text-lg font-semibold text-gold sm:text-xl lg:text-2xl">
+            Irish pub at Puerta del Sol
+          </span>
         </h1>
         <p className="mt-2 text-sm tracking-wide text-cream-muted sm:text-base">
-          Irish pub · Sol · Live sports
+          Live sports · International crowd
         </p>
       </header>
       <div className="mb-10 border-y border-gold/20 bg-pub-burgundy-deep/80">

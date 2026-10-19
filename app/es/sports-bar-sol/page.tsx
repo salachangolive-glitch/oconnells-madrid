@@ -6,9 +6,9 @@ import { buildMetadata } from "@/lib/seo";
 import { ADDRESS, HOURS, MAPS_URL, SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
-  title: "Pub deportivo en Sol: Champions y antes/después del partido",
+  title: "Bar deportivo en Sol, Madrid — noches de fútbol",
   description:
-    "Pub deportivo junto a Puerta del Sol para Champions League, prepartido y postpartido. Atlético–Bayern en directo el 3 de noviembre; consulta la Agenda.",
+    "Bar deportivo junto a la Puerta del Sol, en Calle de Espoz y Mina 7: fútbol en pantallas y punto de encuentro antes y después del partido. Sin reserva; horarios en la Agenda.",
   path: "/es/sports-bar-sol",
   locale: "es",
 });
@@ -18,7 +18,7 @@ export default function EsSportsBarSolPage() {
     <PageShell locale="es" altLangHref="/sports-bar-sol">
       <PageHero
         eyebrow="Pub deportivo · Puerta del Sol"
-        title="Pub deportivo en Sol para noches de Champions"
+        title="Bar deportivo en Sol para noches de fútbol"
         lead={`${SITE_NAME} está en Calle de Espoz y Mina 7, junto a Puerta del Sol: punto de encuentro en el centro para fútbol, antes del partido y después.`}
       />
       <InteriorPhoto
@@ -51,18 +51,6 @@ export default function EsSportsBarSolPage() {
           contra Bayern de Múnich en directo a las 21:00 hora de Madrid. Quedad
           en Sol antes de salir hacia el estadio, o volved al centro después
           para comentar el partido. Entrada sin reserva: por orden de llegada.
-        </p>
-      </Section>
-      <Section title="Real Madrid–Sevilla · domingo 18 de octubre">
-        <p>
-          Una noche de LaLiga en el Bernabéu mueve gente por el centro antes y
-          después del partido. O&apos;Connell St sirve como punto de encuentro
-          en Sol para planes previos y para reagruparos en el centro cuando
-          termine el encuentro. Consulta la{" "}
-          <Link href="/es/whats-on" className="text-cream underline">
-            Agenda
-          </Link>{" "}
-          por lo que haya confirmado en pantallas esa noche.
         </p>
       </Section>
       <Section title="También en el calendario">

@@ -7,9 +7,9 @@ import { buildMetadata } from "@/lib/seo";
 import { ADDRESS, HOURS, MAPS_URL, SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
-  title: "Noches de Champions League en el centro de Madrid",
+  title: "Pub para ver la Champions en Madrid, junto a Sol",
   description:
-    "Champions League en O'Connell St cerca de Sol cuando la emisión está confirmada. Horario, entrada sin reserva y Agenda.",
+    "Pub para ver la Champions junto a la Puerta del Sol: las noches de Champions League confirmadas en O'Connell St, con hora de Madrid, están en la Agenda. Sin reserva.",
   path: "/es/champions-league",
   locale: "es",
 });
@@ -19,7 +19,7 @@ export default function EsChampionsLeaguePage() {
     <PageShell locale="es" altLangHref="/champions-league">
       <PageHero
         eyebrow="UEFA Champions League"
-        title={`Champions en ${SITE_NAME}`}
+        title={`Pub para ver la Champions junto a Sol: ${SITE_NAME}`}
         lead="Noches de Champions League en O'Connell St, Calle de Espoz y Mina 7. Los cruces confirmados y la hora de Madrid están en la Agenda."
       />
       <InteriorPhoto

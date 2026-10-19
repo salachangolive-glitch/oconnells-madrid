@@ -6,9 +6,9 @@ import { buildMetadata } from "@/lib/seo";
 import { ADDRESS, HOURS, MAPS_URL, SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
-  title: "Sports bar near Puerta del Sol for Champions League nights",
+  title: "Sports bar in Sol, Madrid — football nights",
   description:
-    "Sports pub just off Puerta del Sol for Champions League, pre-match and post-match. Atlético–Bayern live on 3 November; check What's On for kickoff times.",
+    "Sports bar just off Puerta del Sol at Calle de Espoz y Mina 7: football on the screens and a meeting point before and after the match. Walk in; kickoff times on What's On.",
   path: "/sports-bar-sol",
 });
 
@@ -17,7 +17,7 @@ export default function SportsBarSolPage() {
     <PageShell locale="en" altLangHref="/es/sports-bar-sol">
       <PageHero
         eyebrow="Sports pub · Puerta del Sol"
-        title={`A sports bar in Sol for Champions nights`}
+        title="A sports bar in Sol for football nights"
         lead={`${SITE_NAME} sits on Calle de Espoz y Mina 7, just off Puerta del Sol — a central Madrid meeting point for football, pre-match drinks and post-match talk.`}
       />
       <InteriorPhoto
@@ -51,18 +51,6 @@ export default function SportsBarSolPage() {
           against Bayern Munich live at 21:00 Madrid time. Meet your group in
           Sol before you head out, or come back to the centre afterwards to
           talk the game through. Walk in — first come, first served.
-        </p>
-      </Section>
-      <Section title="Real Madrid v Sevilla · Sun 18 October">
-        <p>
-          A LaLiga night at the Bernabéu means footfall through the centre
-          before and after the match. O&apos;Connell St works as a meeting point
-          in Sol for pre-match plans and for regrouping in the centre once the
-          game is over. Check{" "}
-          <Link href="/whats-on" className="text-cream underline">
-            What&apos;s On
-          </Link>{" "}
-          for whatever is confirmed on the screens that evening.
         </p>
       </Section>
       <Section title="Also on the calendar">

@@ -7,9 +7,9 @@ import { buildMetadata } from "@/lib/seo";
 import { ADDRESS, HOURS, MAPS_URL, SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
-  title: "Champions League nights in central Madrid",
+  title: "Champions League pub in Madrid, by Puerta del Sol",
   description:
-    "Champions League at O'Connell St near Sol when the screening is confirmed. Hours, walk-in, and What's On.",
+    "Champions League pub by Puerta del Sol: confirmed Champions League nights at O'Connell St, with Madrid kickoff times on What's On. Walk in, no booking.",
   path: "/champions-league",
 });
 
@@ -18,7 +18,7 @@ export default function ChampionsLeaguePage() {
     <PageShell locale="en" altLangHref="/es/champions-league">
       <PageHero
         eyebrow="UEFA Champions League"
-        title={`Champions League at ${SITE_NAME}`}
+        title={`Champions League pub near Sol: ${SITE_NAME}`}
         lead="Champions League nights at O'Connell St, Calle de Espoz y Mina 7. Confirmed ties and Madrid times are on What’s On."
       />
       <InteriorPhoto

@@ -6,9 +6,9 @@ import { buildMetadata } from "@/lib/seo";
 import { ADDRESS, HOURS, MAPS_URL, SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
-  title: "Ver fútbol en Madrid cerca de Sol",
+  title: "Pub de fútbol en Sol, Madrid — partidos en directo",
   description:
-    "Ver fútbol junto a la Puerta del Sol en O'Connell St, Calle de Espoz y Mina 7. Partidos confirmados, horario, cómo llegar y Agenda.",
+    "Pub de fútbol junto a la Puerta del Sol: O'Connell St, Calle de Espoz y Mina 7. Partidos confirmados con hora de Madrid, horario y cómo llegar. Sin reserva.",
   path: "/es/watch-football-madrid",
   locale: "es",
 });
@@ -18,7 +18,7 @@ export default function EsWatchFootballPage() {
     <PageShell locale="es" altLangHref="/watch-football-madrid">
       <PageHero
         eyebrow="Ver fútbol · Madrid"
-        title="Ver fútbol junto a Sol, Madrid"
+        title="Pub de fútbol en Sol, Madrid"
         lead={`${SITE_NAME} está en ${ADDRESS.street}, junto a la Puerta del Sol. Los partidos confirmados están en la Agenda.`}
       />
       <InteriorPhoto
