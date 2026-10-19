@@ -34,11 +34,18 @@ export const MAPS_URL =
  * O'Connell St Google Business Profile listing (CID 10697659365903665225 =
  * 0x9475b883c0d18849, same listing as GBP_PLACE_ID). Source: Localo REGISTRO
  * (local.google.com/place?id=10697659365903665225) and the GBP-generated
- * Localo site JSON-LD hasMap. Used as schema sameAs. No coordinates: the GBP
- * pin has not been supplied by Localo, so `geo` is intentionally omitted.
+ * Localo site JSON-LD hasMap. Used as schema sameAs.
  */
 export const GBP_CID = "10697659365903665225";
 export const GBP_MAPS_CID_URL = `https://maps.google.com/maps?cid=${GBP_CID}`;
+
+/**
+ * Google pin of the O'Connell St listing (CID above / place_id GBP_PLACE_ID),
+ * handed over by Localo 2026-10-19 (HANDOFF-DUB-OC-placeid.md; sources:
+ * Apify dataset 15 Oct + Maps preview 12 Oct, matching). Dubliners shares the
+ * building but has its own pin/CID — never use theirs here.
+ */
+export const GBP_GEO = { latitude: 40.4157515, longitude: -3.7022636 } as const;
 
 export const NEIGHBOURHOOD = "near Puerta del Sol";
 

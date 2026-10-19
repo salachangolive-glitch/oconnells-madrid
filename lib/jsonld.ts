@@ -1,6 +1,7 @@
 import {
   ADDRESS,
   FACTS,
+  GBP_GEO,
   GBP_MAPS_CID_URL,
   getSiteUrl,
   HOURS,
@@ -23,9 +24,8 @@ function description(locale: SchemaLocale): string {
 
 /**
  * Site-wide BarOrPub entity. Rendered once per page by PageShell with the
- * page locale. No `telephone` (owner decision pending) and no `geo` (no
- * verified GBP coordinates on file). servesCuisine removed ("Irish pub" is
- * not a cuisine).
+ * page locale. No `telephone` (owner decision pending). `geo` = O'Connell St
+ * GBP pin. servesCuisine removed ("Irish pub" is not a cuisine).
  */
 export function barOrPubJsonLd(locale: SchemaLocale = "en") {
   const site = getSiteUrl();
@@ -43,6 +43,11 @@ export function barOrPubJsonLd(locale: SchemaLocale = "en") {
       addressLocality: ADDRESS.city,
       postalCode: ADDRESS.postalCode,
       addressCountry: ADDRESS.country,
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: GBP_GEO.latitude,
+      longitude: GBP_GEO.longitude,
     },
     hasMap: MAPS_URL,
     sameAs: [GBP_MAPS_CID_URL],
