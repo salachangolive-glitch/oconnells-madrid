@@ -42,6 +42,19 @@ export default function EsWhatsOnPage() {
         </p>
       </Section>
 
+      <Section title="Noche de concierto: Fontaines D.C.">
+        <p>
+          Fontaines D.C. tocan en el Movistar Arena el jueves 22 de octubre, con
+          inicio anunciado a las 20:45. Los jueves abrimos a las 18:00: queda
+          aquí antes del concierto o vuelve al centro después.
+        </p>
+        <p>
+          <Link href="/es/fontaines-dc-madrid" className="text-gold underline">
+            Fontaines D.C., antes y después
+          </Link>
+        </p>
+      </Section>
+
       <Section title="Chupitos a 1 € los jueves">
         <p>
           {RECURRING.thursdayShots.es}{" "}

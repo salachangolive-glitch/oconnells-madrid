@@ -40,6 +40,19 @@ export default function WhatsOnPage() {
         </p>
       </Section>
 
+      <Section title="Gig night: Fontaines D.C.">
+        <p>
+          Fontaines D.C. play Movistar Arena on Thursday 22 October, with the
+          show listed for 20:45. We open at 18:00 on Thursdays: meet your
+          friends here before the show or come back to the centre afterwards.
+        </p>
+        <p>
+          <Link href="/fontaines-dc-madrid" className="text-gold underline">
+            Fontaines D.C. before and after
+          </Link>
+        </p>
+      </Section>
+
       <Section title="Thursday €1 shots">
         <p>
           {RECURRING.thursdayShots.en}{" "}
