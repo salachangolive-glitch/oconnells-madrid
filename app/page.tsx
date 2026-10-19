@@ -84,6 +84,21 @@ export default function HomePage() {
 
       {/* Live Sports / What's On */}
       <FixtureStrip locale="en" />
+      <p className="mb-12 max-w-2xl text-sm text-cream-muted sm:text-base">
+        More football:{" "}
+        <Link href="/premier-league" className="text-gold underline">
+          Premier League
+        </Link>
+        ,{" "}
+        <Link href="/champions-league" className="text-gold underline">
+          Champions League nights
+        </Link>{" "}
+        and our{" "}
+        <Link href="/sports-bar-sol" className="text-gold underline">
+          sports bar in Sol
+        </Link>{" "}
+        page for match days.
+      </p>
 
       {/* Inside / real photos */}
       <InteriorPhoto

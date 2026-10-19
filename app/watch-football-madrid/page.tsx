@@ -88,7 +88,11 @@ export default function WatchFootballPage() {
           <Link href="/nfl-madrid" className="text-cream underline">
             NFL in Madrid
           </Link>
-          , plus other sport on{" "}
+          , our{" "}
+          <Link href="/sports-bar-sol" className="text-cream underline">
+            sports bar in Sol
+          </Link>{" "}
+          page, plus other sport on{" "}
           <Link href="/sports" className="text-cream underline">
             Live Sports
           </Link>

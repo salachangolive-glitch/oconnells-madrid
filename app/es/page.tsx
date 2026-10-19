@@ -88,6 +88,21 @@ export default function EsHomePage() {
       </section>
 
       <FixtureStrip locale="es" />
+      <p className="mb-12 max-w-2xl text-sm text-cream-muted sm:text-base">
+        Más fútbol:{" "}
+        <Link href="/es/premier-league" className="text-gold underline">
+          Premier League
+        </Link>
+        ,{" "}
+        <Link href="/es/champions-league" className="text-gold underline">
+          noches de Champions
+        </Link>{" "}
+        y nuestro{" "}
+        <Link href="/es/sports-bar-sol" className="text-gold underline">
+          bar deportivo en Sol
+        </Link>{" "}
+        para los días de partido.
+      </p>
 
       <InteriorPhoto
         variant="editorial"

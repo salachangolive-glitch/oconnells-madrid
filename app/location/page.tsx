@@ -70,7 +70,18 @@ export default function LocationPage() {
         alt="Stairs between floors at O'Connell St Irish pub near Sol"
         position="object-[center_40%]"
       />
-      <Section title="Getting here">
+      <Section title="Getting here from Puerta del Sol">
+        <p>
+          The nearest station is Sol (Metro and Cercanías), which comes out
+          right on Puerta del Sol. From the square, head for Calle de Espoz y
+          Mina and look for number 7: a red facade with gold O&apos;CONNELL ST.
+          lettering above the door.
+        </p>
+        <p>
+          Not sure of the way? The Google Maps button above opens our listing
+          directly, so you can follow the route from wherever you are in the
+          centre.
+        </p>
         <p>
           Aim for Puerta del Sol, then walk to Calle de Espoz y Mina. Handy
           before a Premier League, Champions League or LaLiga kick-off — or for
@@ -85,9 +96,32 @@ export default function LocationPage() {
             Sports
           </Link>
           {" · "}
+          <Link href="/sports-bar-sol" className="text-cream underline">
+            Sports bar in Sol
+          </Link>
+          {" · "}
           <Link href="/thursday-1-euro-shots" className="text-cream underline">
             Thursday €1
           </Link>
+        </p>
+      </Section>
+      <Section title="Opening hours">
+        <p>
+          We open every day: from {HOURS.monThu.open} Monday to Thursday, from{" "}
+          {HOURS.friSat.open} on Friday and Saturday, and from {HOURS.sun.open}{" "}
+          on Sunday. We close at {HOURS.monThu.close} from Sunday to Thursday
+          and at {HOURS.friSat.close} on Friday and Saturday nights.
+        </p>
+      </Section>
+      <Section title="Walk in, no booking">
+        <p>
+          We don&apos;t take table reservations: just walk in. Tables and space
+          at the bar go first come, first served, so on big match nights it is
+          worth arriving early. Questions about a match night or a group?{" "}
+          <Link href="/contact" data-event="contact" className="text-cream underline">
+            Write to us via the form
+          </Link>
+          .
         </p>
       </Section>
     </PageShell>

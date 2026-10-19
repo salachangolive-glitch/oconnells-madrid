@@ -71,7 +71,18 @@ export default function EsLocationPage() {
         alt="Escaleras entre plantas del pub irlandés O'Connell St cerca de Sol"
         position="object-[center_40%]"
       />
-      <Section title="Cómo llegar">
+      <Section title="Cómo llegar desde la Puerta del Sol">
+        <p>
+          La estación más cercana es Sol (Metro y Cercanías), que sale
+          directamente a la Puerta del Sol. Desde la plaza, busca la Calle de
+          Espoz y Mina y el número 7: fachada roja con el rótulo dorado
+          O&apos;CONNELL ST. sobre la puerta.
+        </p>
+        <p>
+          ¿No sabes bien por dónde ir? El botón de Google Maps de arriba abre
+          directamente nuestra ficha, así puedes seguir la ruta desde cualquier
+          punto del centro.
+        </p>
         <p>
           Dirígete a Puerta del Sol y camina hasta Calle de Espoz y Mina. Ideal
           antes de un partido de Premier League, Champions League o LaLiga — o
@@ -86,12 +97,36 @@ export default function EsLocationPage() {
             Deportes en directo
           </Link>
           {" · "}
+          <Link href="/es/sports-bar-sol" className="text-cream underline">
+            Bar deportivo en Sol
+          </Link>
+          {" · "}
           <Link
             href="/es/thursday-1-euro-shots"
             className="text-cream underline"
           >
             Jueves 1 €
           </Link>
+        </p>
+      </Section>
+      <Section title="Horario">
+        <p>
+          Abrimos todos los días: de lunes a jueves desde las {HOURS.monThu.open},
+          viernes y sábado desde las {HOURS.friSat.open} y domingo desde las{" "}
+          {HOURS.sun.open}. Cerramos a las {HOURS.monThu.close} de domingo a
+          jueves y a las {HOURS.friSat.close} las noches de viernes y sábado.
+        </p>
+      </Section>
+      <Section title="Sin reserva: ven directamente">
+        <p>
+          No reservamos mesas: ven sin más. Las mesas y el sitio en la barra
+          van por orden de llegada, así que en las noches de partido grande
+          conviene llegar con tiempo. ¿Dudas sobre una noche de partido o un
+          grupo?{" "}
+          <Link href="/es/contact" data-event="contact" className="text-cream underline">
+            Escríbenos por el formulario
+          </Link>
+          .
         </p>
       </Section>
     </PageShell>

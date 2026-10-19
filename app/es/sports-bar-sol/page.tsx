@@ -83,6 +83,16 @@ export default function EsSportsBarSolPage() {
             Deportes en directo
           </Link>
         </p>
+        <p>
+          <Link
+            href="/de/sports-bar-sol"
+            hrefLang="de"
+            lang="de"
+            className="text-cream underline"
+          >
+            Auf Deutsch: Sports Pub an der Puerta del Sol
+          </Link>
+        </p>
       </Section>
     </PageShell>
   );

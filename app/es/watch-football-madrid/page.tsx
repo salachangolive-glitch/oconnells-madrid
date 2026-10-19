@@ -91,6 +91,10 @@ export default function EsWatchFootballPage() {
           ,{" "}
           <Link href="/es/nfl-madrid" className="text-cream underline">
             NFL en Madrid
+          </Link>
+          ,{" "}
+          <Link href="/es/sports-bar-sol" className="text-cream underline">
+            bar deportivo en Sol
           </Link>{" "}
           y{" "}
           <Link href="/es/sports" className="text-cream underline">
