@@ -117,18 +117,6 @@ export default function EsLocationPage() {
           jueves y a las {HOURS.friSat.close} las noches de viernes y sábado.
         </p>
       </Section>
-      <Section title="Sin reserva: ven directamente">
-        <p>
-          No reservamos mesas: ven sin más. Las mesas y el sitio en la barra
-          van por orden de llegada, así que en las noches de partido grande
-          conviene llegar con tiempo. ¿Dudas sobre una noche de partido o un
-          grupo?{" "}
-          <Link href="/es/contact" data-event="contact" className="text-cream underline">
-            Escríbenos por el formulario
-          </Link>
-          .
-        </p>
-      </Section>
     </PageShell>
   );
 }

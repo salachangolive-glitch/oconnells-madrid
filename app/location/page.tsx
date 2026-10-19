@@ -113,17 +113,6 @@ export default function LocationPage() {
           and at {HOURS.friSat.close} on Friday and Saturday nights.
         </p>
       </Section>
-      <Section title="Walk in, no booking">
-        <p>
-          We don&apos;t take table reservations: just walk in. Tables and space
-          at the bar go first come, first served, so on big match nights it is
-          worth arriving early. Questions about a match night or a group?{" "}
-          <Link href="/contact" data-event="contact" className="text-cream underline">
-            Write to us via the form
-          </Link>
-          .
-        </p>
-      </Section>
     </PageShell>
   );
 }
