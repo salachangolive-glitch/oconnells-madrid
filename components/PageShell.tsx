@@ -1,4 +1,6 @@
 import { ga4Enabled } from "@/lib/analytics";
+import { barOrPubJsonLd } from "@/lib/jsonld";
+import { JsonLd } from "./JsonLd";
 import { CookieBanner } from "./CookieBanner";
 import { SiteFooter } from "./SiteFooter";
 import { SiteHeader } from "./SiteHeader";
@@ -20,6 +22,8 @@ export function PageShell({
 }) {
   return (
     <>
+      {/* Site-wide BarOrPub schema, description + hasMenu per page locale */}
+      <JsonLd data={barOrPubJsonLd(locale)} />
       <SiteHeader locale={locale} altLangHref={altLangHref} />
       {cover}
       <main

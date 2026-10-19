@@ -30,6 +30,16 @@ export const GBP_PLACE_ID = "ChIJLdKNhYAoQg0RSYjRwIO4dZQ";
 export const MAPS_URL =
   "https://www.google.com/maps/search/?api=1&query=O%27Connell+St+Calle+de+Espoz+y+Mina+7+28012+Madrid&query_place_id=ChIJLdKNhYAoQg0RSYjRwIO4dZQ";
 
+/**
+ * O'Connell St Google Business Profile listing (CID 10697659365903665225 =
+ * 0x9475b883c0d18849, same listing as GBP_PLACE_ID). Source: Localo REGISTRO
+ * (local.google.com/place?id=10697659365903665225) and the GBP-generated
+ * Localo site JSON-LD hasMap. Used as schema sameAs. No coordinates: the GBP
+ * pin has not been supplied by Localo, so `geo` is intentionally omitted.
+ */
+export const GBP_CID = "10697659365903665225";
+export const GBP_MAPS_CID_URL = `https://maps.google.com/maps?cid=${GBP_CID}`;
+
 export const NEIGHBOURHOOD = "near Puerta del Sol";
 
 /**

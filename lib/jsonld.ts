@@ -1,21 +1,41 @@
 import {
   ADDRESS,
   FACTS,
+  GBP_MAPS_CID_URL,
   getSiteUrl,
   HOURS,
   MAPS_URL,
   PUBLIC_EMAIL,
   SITE_NAME,
   SITE_TAGLINE,
+  SITE_TAGLINE_ES,
 } from "./venue";
 
-export function barOrPubJsonLd() {
+type SchemaLocale = "en" | "es" | "de";
+
+/** Per-language description. DE pages keep the EN text (no DE copy approved). */
+function description(locale: SchemaLocale): string {
+  if (locale === "es") {
+    return `${SITE_NAME} — ${SITE_TAGLINE_ES}, en Calle de Espoz y Mina 7. Pantallas con ${FACTS.football.join(", ")}; NFL, NBA, rugby, F1 y tenis cuando se emiten. Chupitos a 1 € los jueves.`;
+  }
+  return `${SITE_NAME} — ${SITE_TAGLINE}. Screens for ${FACTS.football.join(", ")}; ${FACTS.otherSports.join(" / ")} when shown. ${FACTS.thursdayShots}.`;
+}
+
+/**
+ * Site-wide BarOrPub entity. Rendered once per page by PageShell with the
+ * page locale. No `telephone` (owner decision pending) and no `geo` (no
+ * verified GBP coordinates on file). servesCuisine removed ("Irish pub" is
+ * not a cuisine).
+ */
+export function barOrPubJsonLd(locale: SchemaLocale = "en") {
+  const site = getSiteUrl();
   return {
     "@context": "https://schema.org",
     "@type": ["BarOrPub", "LocalBusiness"],
+    "@id": `${site}/#pub`,
     name: SITE_NAME,
-    description: `${SITE_NAME} — ${SITE_TAGLINE}. Screens for ${FACTS.football.join(", ")}; ${FACTS.otherSports.join(" / ")} when shown. ${FACTS.thursdayShots}.`,
-    url: getSiteUrl(),
+    description: description(locale),
+    url: site,
     email: PUBLIC_EMAIL,
     address: {
       "@type": "PostalAddress",
@@ -25,8 +45,9 @@ export function barOrPubJsonLd() {
       addressCountry: ADDRESS.country,
     },
     hasMap: MAPS_URL,
-    servesCuisine: "Irish pub",
-    image: `${getSiteUrl()}/images/oconnell-fachada.jpg`,
+    sameAs: [GBP_MAPS_CID_URL],
+    hasMenu: `${site}${locale === "es" ? "/es/menu" : "/menu"}`,
+    image: `${site}/images/oconnell-fachada.jpg`,
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
