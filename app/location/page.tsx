@@ -14,7 +14,7 @@ import {
 } from "@/lib/venue";
 
 export const metadata = buildMetadata({
-  title: "Location — Calle de Espoz y Mina 7, near Sol",
+  title: "Pub near Puerta del Sol — Calle de Espoz y Mina 7, Madrid",
   description:
     "Find O'Connell St at Calle de Espoz y Mina 7, 28012 Madrid, near Puerta del Sol. Google Maps directions.",
   path: "/location",
@@ -25,7 +25,7 @@ export default function LocationPage() {
     <PageShell locale="en" altLangHref="/es/location">
       <PageHero
         eyebrow="Location · Madrid"
-        title={`How to find ${SITE_NAME}`}
+        title={`Pub near Puerta del Sol — how to find ${SITE_NAME}`}
         lead={`${ADDRESS.full} — a short walk from Puerta del Sol.`}
       />
       <VenueHero

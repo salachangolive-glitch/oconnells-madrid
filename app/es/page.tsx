@@ -61,6 +61,29 @@ export default function EsHomePage() {
         </p>
       </section>
 
+      {/* Pub cerca de la Puerta del Sol — relevancia landing Ads (19 oct) */}
+      <section className="mb-12 max-w-2xl">
+        <h2 className="font-serif text-xl font-bold text-cream">
+          Pub cerca de la Puerta del Sol
+        </h2>
+        <div className="pub-rule my-3" />
+        <p className="text-sm text-cream-muted sm:text-base">
+          O&apos;Connell St es un pub irlandés y bar deportivo en la{" "}
+          {ADDRESS.street}, junto a la Puerta del Sol, en pleno centro de
+          Madrid. Abrimos todos los días y puedes venir sin más. Hay deportes en
+          directo en pantallas grandes; los partidos confirmados están en la{" "}
+          <Link href="/es/whats-on" className="text-gold underline">
+            Agenda
+          </Link>
+          .
+        </p>
+        <p className="mt-3">
+          <Link href="/es/location" className="text-sm text-gold hover:text-cream">
+            Cómo llegar y horarios →
+          </Link>
+        </p>
+      </section>
+
       <FixtureStrip locale="es" />
 
       <InteriorPhoto

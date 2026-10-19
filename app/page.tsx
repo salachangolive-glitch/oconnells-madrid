@@ -56,6 +56,29 @@ export default function HomePage() {
         </p>
       </section>
 
+      {/* Pub near Puerta del Sol — Ads landing relevance (19 Oct) */}
+      <section className="mb-12 max-w-2xl">
+        <h2 className="font-serif text-xl font-bold text-cream">
+          Pub near Puerta del Sol
+        </h2>
+        <div className="pub-rule my-3" />
+        <p className="text-sm text-cream-muted sm:text-base">
+          O&apos;Connell St is an Irish pub and sports bar at {ADDRESS.street},
+          just off Puerta del Sol in Madrid centre. We&apos;re open every day
+          and you can simply walk in. Live sports play on big screens — confirmed
+          matches are on{" "}
+          <Link href="/whats-on" className="text-gold underline">
+            What&apos;s On
+          </Link>
+          .
+        </p>
+        <p className="mt-3">
+          <Link href="/location" className="text-sm text-gold hover:text-cream">
+            Directions and opening hours →
+          </Link>
+        </p>
+      </section>
+
       {/* Live Sports / What's On */}
       <FixtureStrip locale="en" />
 

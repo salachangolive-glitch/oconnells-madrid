@@ -14,7 +14,7 @@ import {
 } from "@/lib/venue";
 
 export const metadata = buildMetadata({
-  title: "Ubicación — Calle de Espoz y Mina 7, cerca de Sol",
+  title: "Pub cerca de Sol — Calle de Espoz y Mina 7, Madrid",
   description:
     "Encuentra O'Connell St en Calle de Espoz y Mina 7, 28012 Madrid, cerca de Puerta del Sol. Cómo llegar en Google Maps.",
   path: "/es/location",
@@ -26,7 +26,7 @@ export default function EsLocationPage() {
     <PageShell locale="es" altLangHref="/location">
       <PageHero
         eyebrow="Ubicación · Madrid"
-        title={`Cómo llegar a ${SITE_NAME}`}
+        title={`Pub cerca de Sol — cómo llegar a ${SITE_NAME}`}
         lead={`${ADDRESS.full} — a poca distancia de Puerta del Sol.`}
       />
       <VenueHero
