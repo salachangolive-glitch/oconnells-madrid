@@ -8,7 +8,7 @@ import { ADDRESS, HOURS, MAPS_URL, SITE_NAME } from "@/lib/venue";
 export const metadata = buildMetadata({
   title: "Sports bar in Sol, Madrid — football nights",
   description:
-    "Sports bar just off Puerta del Sol at Calle de Espoz y Mina 7: football on the screens and a meeting point before and after the match. Walk in; kickoff times on What's On.",
+    "Sports bar just off Puerta del Sol at Calle de Espoz y Mina 7: football on the screens and a meeting point before and after the match. Kickoff times on What's On.",
   path: "/sports-bar-sol",
 });
 
@@ -30,7 +30,7 @@ export default function SportsBarSolPage() {
           When a Champions League night is on, Sol is where many fans gather
           before heading to the stadium and where they come back afterwards.
           O&apos;Connell St is an Irish sports pub in that same stretch of the
-          centre: walk in, grab a screen, and use it as your meeting point for
+          centre: come in, grab a screen, and use it as your meeting point for
           the evening.
         </p>
         <p>
@@ -50,7 +50,7 @@ export default function SportsBarSolPage() {
           Matchday night at the Metropolitano. We are showing Atlético Madrid
           against Bayern Munich live at 21:00 Madrid time. Meet your group in
           Sol before you head out, or come back to the centre afterwards to
-          talk the game through. Walk in — first come, first served.
+          talk the game through.
         </p>
       </Section>
       <Section title="Also on the calendar">
@@ -60,8 +60,7 @@ export default function SportsBarSolPage() {
       </Section>
       <Section title="Find us">
         <p>
-          {ADDRESS.full}, just off Puerta del Sol. {HOURS.summaryEn}. No table
-          reservations — walk in, first come, first served.
+          {ADDRESS.full}, just off Puerta del Sol. {HOURS.summaryEn}.
         </p>
         <p>
           <a

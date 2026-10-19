@@ -67,8 +67,7 @@ export default function HomePage() {
         <div className="pub-rule my-3" />
         <p className="text-sm text-cream-muted sm:text-base">
           O&apos;Connell St is an Irish pub and sports bar at {ADDRESS.street},
-          just off Puerta del Sol in Madrid centre. We&apos;re open every day
-          and you can simply walk in. Live sports play on big screens — confirmed
+          just off Puerta del Sol in Madrid centre. We&apos;re open every day. Live sports play on big screens — confirmed
           matches are on{" "}
           <Link href="/whats-on" className="text-gold underline">
             What&apos;s On
@@ -187,12 +186,6 @@ export default function HomePage() {
                 What&apos;s On
               </Link>
               ; ask at the bar for tonight&apos;s lineup.
-            </dd>
-          </div>
-          <div>
-            <dt className="font-semibold text-cream">Can I book a table?</dt>
-            <dd className="mt-1 text-cream/80">
-              No table reservations — walk in, first come, first served.
             </dd>
           </div>
           <div>

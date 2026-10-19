@@ -30,7 +30,6 @@ export default function EsAboutPage() {
         <p>
           Estamos en {ADDRESS.full}, a un paso de Puerta del Sol. {HOURS.summaryEs}.
         </p>
-        <p>No se reservan mesas. Atendemos por orden de llegada.</p>
         <p>
           Si es tu primera vez, sal en Metro Sol y busca la fachada roja de
           Espoz y Mina. La agenda muestra lo confirmado para los próximos 7

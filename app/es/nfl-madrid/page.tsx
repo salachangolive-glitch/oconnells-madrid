@@ -26,10 +26,6 @@ const faq = [
     q: "¿Estáis cerca del Bernabéu?",
     a: "Estamos en el centro, junto a Sol, no al lado del estadio. En metro desde Sol es fácil pasar por aquí en un día por el centro.",
   },
-  {
-    q: "¿Hay que reservar?",
-    a: "No. No hay reservas de mesa: entra cuando quieras, por orden de llegada.",
-  },
 ];
 
 export default function NflMadridPageEs() {
@@ -78,15 +74,13 @@ export default function NflMadridPageEs() {
           El domingo 8 de noviembre, O&apos;Connell es punto de encuentro de
           aficionados en Sol para el partido de la NFL en Madrid. Abrimos a las
           14:00: queda con otros fans de la NFL junto a Puerta del Sol antes
-          del inicio a las 15:30, seas del equipo que seas. Sin reserva, por
-          orden de llegada.
+          del inicio a las 15:30, seas del equipo que seas.
         </p>
       </Section>
       <Section title="Bengals vs Falcons EN DIRECTO junto a Sol">
         <p>
           Emitimos en directo el partido de la NFL en Madrid 2026: Falcons–Bengals,
-          domingo 8 de noviembre, a las 15:30. Los domingos abrimos a las 14:00.
-          Sin reserva, por orden de llegada. También está en la{" "}
+          domingo 8 de noviembre, a las 15:30. Los domingos abrimos a las 14:00. También está en la{" "}
           <Link href="/es/whats-on" className="text-cream underline">Agenda</Link>.
         </p>
       </Section>

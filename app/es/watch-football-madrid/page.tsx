@@ -8,7 +8,7 @@ import { ADDRESS, HOURS, MAPS_URL, SITE_NAME } from "@/lib/venue";
 export const metadata = buildMetadata({
   title: "Pub de fútbol en Sol, Madrid — partidos en directo",
   description:
-    "Pub de fútbol junto a la Puerta del Sol: O'Connell St, Calle de Espoz y Mina 7. Partidos confirmados con hora de Madrid, horario y cómo llegar. Sin reserva.",
+    "Pub de fútbol junto a la Puerta del Sol: O'Connell St, Calle de Espoz y Mina 7. Partidos confirmados con hora de Madrid, horario y cómo llegar.",
   path: "/es/watch-football-madrid",
   locale: "es",
 });
@@ -36,16 +36,14 @@ export default function EsWatchFootballPage() {
           . Si un partido no sale, pregunta en la barra.
         </p>
         <p>
-          {ADDRESS.full}. {HOURS.summaryEs}. No se reservan mesas. Atendemos
-          por orden de llegada.
+          {ADDRESS.full}. {HOURS.summaryEs}.
         </p>
       </Section>
       <Section title="Getafe–Brighton · jueves 5 de noviembre, 21:00">
         <p>
           ¿Vienes con los aficionados ingleses o del Getafe? O&apos;Connell St es
           un pub irlandés junto a Sol: punto de encuentro en el centro antes de ir
-          a Getafe y para volver después. Emitimos el partido en directo. Sin
-          reserva.
+          a Getafe y para volver después. Emitimos el partido en directo.
         </p>
       </Section>
       <Section title="Preguntas frecuentes">
@@ -56,10 +54,6 @@ export default function EsWatchFootballPage() {
             además de la NFL y más. Cada partido confirmado está en la Agenda con
             la hora de Madrid.
           </p>
-        </div>
-        <div>
-          <h3 className="font-semibold">¿Hay que reservar?</h3>
-          <p>No hace falta reservar: entra cuando quieras, por orden de llegada.</p>
         </div>
       </Section>
       <Section title="Horario y cómo llegar">

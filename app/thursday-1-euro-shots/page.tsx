@@ -29,7 +29,7 @@ export default function ThursdayShotsPage() {
         </p>
         <p>
           {SITE_NAME} is at Calle de Espoz y Mina 7, just off Puerta
-          del Sol. No table reservations — walk in, first come, first served.
+          del Sol.
         </p>
         <ul className="list-disc space-y-2 pl-5">
           <li>Thursdays only.</li>
@@ -67,8 +67,6 @@ export default function ThursdayShotsPage() {
         <p>
           On Thursdays we are open {HOURS.monThu.open}–{HOURS.monThu.close}.
         </p>
-        <h3 className="font-semibold">Do I need to book?</h3>
-        <p>No booking needed — walk in, first come, first served.</p>
       </Section>
     </PageShell>
   );

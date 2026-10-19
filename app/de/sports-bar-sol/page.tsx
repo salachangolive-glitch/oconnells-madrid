@@ -31,8 +31,7 @@ export default function DeSportsBarSolPage() {
           Matchday am Metropolitano. Wir zeigen Atlético Madrid gegen Bayern
           München live um 21:00 Uhr Ortszeit Madrid. Trefft euch vorher in Sol,
           fahrt gemeinsam raus zum Stadion — oder kommt nach dem Abpfiff zurück
-          ins Zentrum und lasst den Abend hier ausklingen. Einfach reinkommen,
-          wer zuerst da ist.
+          ins Zentrum und lasst den Abend hier ausklingen.
         </p>
       </Section>
       <Section title="Warum Sol?">
@@ -40,8 +39,7 @@ export default function DeSportsBarSolPage() {
           Die Puerta del Sol ist der praktische Treffpunkt im Zentrum: leicht
           zu finden, gut angebunden, und nach dem Spiel wieder der natürliche
           Ort, um zusammenzukommen. O&apos;Connell St ist ein irischer Sports
-          Pub genau dort — Screens, Platz zum Stehen und Sitzen, und kein
-          Theater um Tische.
+          Pub genau dort — Screens und Platz zum Stehen und Sitzen.
         </p>
         <p>
           Bestätigte Anstoßzeiten stehen unter{" "}
@@ -53,8 +51,7 @@ export default function DeSportsBarSolPage() {
       </Section>
       <Section title="So findet ihr uns">
         <p>
-          {ADDRESS.full}, an der Puerta del Sol. {HOURS.summaryDe}. Keine
-          Tischreservierung — Walk-in, first come, first served.
+          {ADDRESS.full}, an der Puerta del Sol. {HOURS.summaryDe}.
         </p>
         <p>
           <Link href="/whats-on" className="text-cream underline">

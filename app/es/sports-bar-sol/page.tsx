@@ -8,7 +8,7 @@ import { ADDRESS, HOURS, MAPS_URL, SITE_NAME } from "@/lib/venue";
 export const metadata = buildMetadata({
   title: "Bar deportivo en Sol, Madrid — noches de fútbol",
   description:
-    "Bar deportivo junto a la Puerta del Sol, en Calle de Espoz y Mina 7: fútbol en pantallas y punto de encuentro antes y después del partido. Sin reserva; horarios en la Agenda.",
+    "Bar deportivo junto a la Puerta del Sol, en Calle de Espoz y Mina 7: fútbol en pantallas y punto de encuentro antes y después del partido. Horarios en la Agenda.",
   path: "/es/sports-bar-sol",
   locale: "es",
 });
@@ -50,7 +50,7 @@ export default function EsSportsBarSolPage() {
           Noche de Champions en el Metropolitano. Emitimos Atlético de Madrid
           contra Bayern de Múnich en directo a las 21:00 hora de Madrid. Quedad
           en Sol antes de salir hacia el estadio, o volved al centro después
-          para comentar el partido. Entrada sin reserva: por orden de llegada.
+          para comentar el partido.
         </p>
       </Section>
       <Section title="También en el calendario">
@@ -61,8 +61,7 @@ export default function EsSportsBarSolPage() {
       </Section>
       <Section title="Cómo llegar">
         <p>
-          {ADDRESS.full}, junto a Puerta del Sol. {HOURS.summaryEs}. No se
-          reservan mesas. Atendemos por orden de llegada.
+          {ADDRESS.full}, junto a Puerta del Sol. {HOURS.summaryEs}.
         </p>
         <p>
           <a

@@ -9,7 +9,7 @@ import { ADDRESS, HOURS, MAPS_URL, SITE_NAME } from "@/lib/venue";
 export const metadata = buildMetadata({
   title: "Champions League pub in Madrid, by Puerta del Sol",
   description:
-    "Champions League pub by Puerta del Sol: confirmed Champions League nights at O'Connell St, with Madrid kickoff times on What's On. Walk in, no booking.",
+    "Champions League pub by Puerta del Sol: confirmed Champions League nights at O'Connell St, with Madrid kickoff times on What's On.",
   path: "/champions-league",
 });
 
@@ -30,16 +30,14 @@ export default function ChampionsLeaguePage() {
         <p>
           Meeting up for the match? O&apos;Connell St is just off Puerta del Sol:
           meet your friends in the centre before heading to the stadium, and come
-          back afterwards to talk it over. We&apos;re also showing it live. Walk
-          in, no booking needed.
+          back afterwards to talk it over. We&apos;re also showing it live.
         </p>
       </Section>
       <Section title="Atlético Madrid v Bayern Munich · Tue 3 November, 21:00">
         <p>
           Bayern or Atleti, meet in the centre: O&apos;Connell St is just off
           Puerta del Sol, a meeting point before you head to the Metropolitano
-          and a place to talk it over after. We&apos;re showing it live. Walk in,
-          no booking needed.
+          and a place to talk it over after. We&apos;re showing it live.
         </p>
       </Section>
       <Section title="Before you come">
@@ -53,8 +51,7 @@ export default function ChampionsLeaguePage() {
         </p>
         <PremierLeagueLines locale="en" competition="ucl" />
         <p>
-          {ADDRESS.full}. {HOURS.summaryEn}. No table reservations — walk in,
-          first come, first served.{" "}
+          {ADDRESS.full}. {HOURS.summaryEn}.{" "}
           <a
             href={MAPS_URL}
             target="_blank"

@@ -44,7 +44,7 @@ export default function FontainesPage() {
         <p>
           We open at 18:00 on Thursdays, so there&apos;s time for a drink before
           heading to the arena, and we&apos;re open late for when you get back to
-          the centre. Walk in, no booking needed. It&apos;s also our{" "}
+          the centre. It&apos;s also our{" "}
           <Link href="/thursday-1-euro-shots" className="text-cream underline">
             Thursday shots
           </Link>{" "}

@@ -31,7 +31,7 @@ export default function EsThursdayShotsPage() {
         </p>
         <p>
           {SITE_NAME} está en Calle de Espoz y Mina 7, junto a la Puerta del
-          Sol. No se reservan mesas. Atendemos por orden de llegada.
+          Sol.
         </p>
         <ul className="list-disc space-y-2 pl-5">
           <li>Solo los jueves.</li>
@@ -69,8 +69,6 @@ export default function EsThursdayShotsPage() {
         <p>
           Los jueves abrimos de {HOURS.monThu.open} a {HOURS.monThu.close}.
         </p>
-        <h3 className="font-semibold">¿Hay que reservar?</h3>
-        <p>No hace falta reservar: entra cuando quieras, por orden de llegada.</p>
       </Section>
     </PageShell>
   );

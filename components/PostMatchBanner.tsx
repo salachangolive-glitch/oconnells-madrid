@@ -18,7 +18,7 @@ export function PostMatchBanner({ locale }: { locale: "en" | "es" }) {
       {es ? (
         <p className="mt-2 text-cream/90">
           ¿Vuelves al centro después del Atlético–Manchester United? Sigue la noche
-          de fútbol en nuestro pub deportivo junto a la Puerta del Sol. Sin reserva.
+          de fútbol en nuestro pub deportivo junto a la Puerta del Sol.
         </p>
       ) : (
         <>
@@ -27,8 +27,7 @@ export function PostMatchBanner({ locale }: { locale: "en" | "es" }) {
             your match night near Puerta del Sol.
           </p>
           <p className="mt-1 text-sm text-cream/75">
-            A sports pub at Sol in central Madrid: drinks, football atmosphere and
-            walk-ins only.
+            A sports pub at Sol in central Madrid: drinks and football atmosphere.
           </p>
         </>
       )}

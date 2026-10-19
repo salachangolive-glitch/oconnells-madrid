@@ -8,7 +8,7 @@ import { ADDRESS, HOURS, MAPS_URL, SITE_NAME } from "@/lib/venue";
 export const metadata = buildMetadata({
   title: "Football pub in Sol, Madrid — live matches",
   description:
-    "Football pub just off Puerta del Sol: O'Connell St, Calle de Espoz y Mina 7. Confirmed matches with Madrid times, hours and directions. Walk in.",
+    "Football pub just off Puerta del Sol: O'Connell St, Calle de Espoz y Mina 7. Confirmed matches with Madrid times, hours and directions.",
   path: "/watch-football-madrid",
 });
 
@@ -35,8 +35,7 @@ export default function WatchFootballPage() {
           . If a game is not listed, ask at the bar.
         </p>
         <p>
-          {ADDRESS.full}. {HOURS.summaryEn}. No table reservations — walk in,
-          first come, first served.
+          {ADDRESS.full}. {HOURS.summaryEn}.
         </p>
       </Section>
       <Section title="Brighton fans in Madrid · Getafe v Brighton, Thu 5 November, 21:00">
@@ -44,7 +43,7 @@ export default function WatchFootballPage() {
           Over for the Conference League trip? O&apos;Connell St is an Irish pub
           just off Puerta del Sol, a good place to meet up in the centre before
           heading out to Getafe and to come back to afterwards. We&apos;re showing
-          the match live. Walk in, no booking needed.
+          the match live.
         </p>
       </Section>
       <Section title="FAQ">
@@ -55,10 +54,6 @@ export default function WatchFootballPage() {
             plus NFL and more. Every confirmed game is listed on What&apos;s On with
             the Madrid time.
           </p>
-        </div>
-        <div>
-          <h3 className="font-semibold">Do I need to book?</h3>
-          <p>No booking needed — walk in, first come, first served.</p>
         </div>
       </Section>
       <Section title="Getting here">

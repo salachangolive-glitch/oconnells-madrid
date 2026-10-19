@@ -9,7 +9,7 @@ import { ADDRESS, HOURS, MAPS_URL, SITE_NAME } from "@/lib/venue";
 export const metadata = buildMetadata({
   title: "Pub para ver la Premier League en Madrid, junto a Sol",
   description:
-    "Pub para ver la Premier League junto a la Puerta del Sol: los partidos confirmados en O'Connell St, con hora de Madrid, están en la Agenda. Sin reserva.",
+    "Pub para ver la Premier League junto a la Puerta del Sol: los partidos confirmados en O'Connell St, con hora de Madrid, están en la Agenda.",
   path: "/es/premier-league",
   locale: "es",
 });
@@ -51,8 +51,7 @@ export default function EsPremierLeaguePage() {
       </Section>
       <Section title="Horario y cómo llegar">
         <p>
-          {ADDRESS.full}, a un paso de Puerta del Sol. {HOURS.summaryEs}. No se
-          reservan mesas. Atendemos por orden de llegada.
+          {ADDRESS.full}, a un paso de Puerta del Sol. {HOURS.summaryEs}.
         </p>
         <p>
           <a

@@ -9,7 +9,7 @@ import { ADDRESS, HOURS, MAPS_URL, SITE_NAME } from "@/lib/venue";
 export const metadata = buildMetadata({
   title: "Pub para ver la Champions en Madrid, junto a Sol",
   description:
-    "Pub para ver la Champions junto a la Puerta del Sol: las noches de Champions League confirmadas en O'Connell St, con hora de Madrid, están en la Agenda. Sin reserva.",
+    "Pub para ver la Champions junto a la Puerta del Sol: las noches de Champions League confirmadas en O'Connell St, con hora de Madrid, están en la Agenda.",
   path: "/es/champions-league",
   locale: "es",
 });
@@ -31,14 +31,14 @@ export default function EsChampionsLeaguePage() {
         <p>
           ¿Quedas para el partido? O&apos;Connell St está junto a Sol: punto de
           encuentro en el centro antes de ir al estadio y para comentarlo
-          después. También lo emitimos en directo. Sin reserva.
+          después. También lo emitimos en directo.
         </p>
       </Section>
       <Section title="Atlético de Madrid–Bayern · martes 3 de noviembre, 21:00">
         <p>
           Seas del Atleti o del Bayern, quedad en el centro: O&apos;Connell St
           está junto a Sol, punto de encuentro antes de ir al Metropolitano y para
-          comentarlo después. Lo emitimos en directo. Sin reserva.
+          comentarlo después. Lo emitimos en directo.
         </p>
       </Section>
       <Section title="Antes de venir">
@@ -52,8 +52,7 @@ export default function EsChampionsLeaguePage() {
         </p>
         <PremierLeagueLines locale="es" competition="ucl" />
         <p>
-          {ADDRESS.full}. {HOURS.summaryEs}. No se reservan mesas. Atendemos
-          por orden de llegada.{" "}
+          {ADDRESS.full}. {HOURS.summaryEs}.{" "}
           <a
             href={MAPS_URL}
             target="_blank"

@@ -9,7 +9,7 @@ import { ADDRESS, HOURS, MAPS_URL, SITE_NAME } from "@/lib/venue";
 export const metadata = buildMetadata({
   title: "Premier League pub in Madrid, by Puerta del Sol",
   description:
-    "Premier League pub by Puerta del Sol: confirmed Premier League games at O'Connell St, with Madrid kickoff times on What's On. Walk in, no booking.",
+    "Premier League pub by Puerta del Sol: confirmed Premier League games at O'Connell St, with Madrid kickoff times on What's On.",
   path: "/premier-league",
 });
 
@@ -51,7 +51,6 @@ export default function PremierLeaguePage() {
       <Section title="Hours and directions">
         <p>
           {ADDRESS.full}, a short walk from Puerta del Sol. {HOURS.summaryEn}.
-          No table reservations — walk in, first come, first served.
         </p>
         <p>
           <a

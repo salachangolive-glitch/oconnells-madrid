@@ -45,8 +45,7 @@ export default function FontainesPageEs() {
       <Section title="Antes y después">
         <p>
           Los jueves abrimos a las 18:00, así que hay tiempo para tomar algo antes
-          de ir al recinto, y seguimos abiertos cuando vuelvas al centro. Sin
-          reserva. Además es nuestra noche de{" "}
+          de ir al recinto, y seguimos abiertos cuando vuelvas al centro. Además es nuestra noche de{" "}
           <Link href="/es/thursday-1-euro-shots" className="text-cream underline">
             chupitos del jueves
           </Link>

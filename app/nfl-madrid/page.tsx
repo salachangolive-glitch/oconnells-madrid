@@ -25,10 +25,6 @@ const faq = [
     q: "Is O'Connell St near the Bernabéu?",
     a: "We are in the city centre, near Sol, not by the stadium. The metro from Sol makes it an easy stop on a day in central Madrid.",
   },
-  {
-    q: "Do I need to book?",
-    a: "No. There are no table reservations: walk in, first come, first served.",
-  },
 ];
 
 export default function NflMadridPage() {
@@ -76,14 +72,13 @@ export default function NflMadridPage() {
           On Sunday 8 November O&apos;Connell is a fans meeting point at Sol for
           the NFL Madrid Game. Doors open at 14:00: meet up with other NFL fans
           just off Puerta del Sol before the 15:30 kickoff, whichever side
-          you&apos;re on. Walk in, first come, first served.
+          you&apos;re on.
         </p>
       </Section>
       <Section title="Watch Bengals vs Falcons LIVE near Sol">
         <p>
           We&apos;re showing the 2026 NFL Madrid Game live: Falcons v Bengals,
-          Sunday 8 November, kickoff 15:30. Doors open at 14:00 on Sundays. Walk
-          in, first come, first served. It&apos;s also on{" "}
+          Sunday 8 November, kickoff 15:30. Doors open at 14:00 on Sundays. It&apos;s also on{" "}
           <Link href="/whats-on" className="text-cream underline">What&apos;s On</Link>.
         </p>
       </Section>
