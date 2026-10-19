@@ -14,7 +14,7 @@ import {
 export const metadata = buildMetadata({
   title: "Privacy — O'Connell St Madrid",
   description:
-    "Privacy notice for the O'Connell St website: what the contact form collects, why, and your rights. No shop, bookings or payments.",
+    "Privacy notice for the O'Connell St website: what the contact form collects, why, and your rights. No online shop, no online booking and no payments.",
   path: "/privacy",
 });
 
@@ -24,7 +24,7 @@ export default function PrivacyPage() {
       <PageHero
         eyebrow="Privacy"
         title="Privacy"
-        lead="This website is for information. There is no online shop, no table booking and no payments."
+        lead="This website is for information. There is no online shop, no online booking and no payments."
       />
       <Section title="Who we are">
         <p>

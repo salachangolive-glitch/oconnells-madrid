@@ -14,7 +14,7 @@ import {
 export const metadata = buildMetadata({
   title: "Privacidad — O'Connell St Madrid",
   description:
-    "Aviso de privacidad de la web de O'Connell St: qué recoge el formulario de contacto, para qué y tus derechos. Sin tienda, reservas ni pagos.",
+    "Aviso de privacidad de la web de O'Connell St: qué recoge el formulario de contacto, para qué y tus derechos. Sin tienda online, sin reservas online y sin pagos.",
   path: "/es/privacy",
   locale: "es",
 });
@@ -25,7 +25,7 @@ export default function EsPrivacyPage() {
       <PageHero
         eyebrow="Privacidad"
         title="Privacidad"
-        lead="Esta web es informativa. No hay tienda online, ni reserva de mesas, ni pagos."
+        lead="Esta web es informativa: sin tienda online, sin reservas online y sin pagos."
       />
       <Section title="Quiénes somos">
         <p>
