@@ -28,7 +28,7 @@ export default function EsWatchFootballPage() {
         position="object-[center_20%]"
       />
       <Section title="Partidos confirmados">
-        <FixtureStrip locale="es" />
+        <FixtureStrip locale="es" showHeading={false} showDirections={false} maxRows={60} />
         <p>
           Premier League, LaLiga, Champions League y otro fútbol confirmado se
           ven en las pantallas. La lista, con hora de Madrid, está en la{" "}

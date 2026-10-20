@@ -61,11 +61,30 @@ function FixtureRow({
  * Home / Sports strip: next STRIP_LIMIT rows of Today + Next 7 days, same
  * source and rules as What's On. AgendaClock keeps it current in the browser.
  */
-export function FixtureStrip({ locale = "en" }: { locale?: Locale }) {
+export function FixtureStrip({
+  locale = "en",
+  showHeading = true,
+  showDirections = true,
+  maxRows,
+}: {
+  locale?: Locale;
+  /** false: no own H2 (the page already has a heading above the strip). */
+  showHeading?: boolean;
+  /** false: no "Get directions →" link under the strip. */
+  showDirections?: boolean;
+  /**
+   * Lighter HTML: ship only the first maxRows of Today + Next 7 days instead
+   * of every future confirmed row. Omit (home / sports) to keep all rows.
+   */
+  maxRows?: number;
+}) {
   const isEs = locale === "es";
   const now = agendaBuildNow();
   const today = madridTodayYmd(now);
-  const rows = getAgendaCandidates(now);
+  const rows =
+    maxRows && maxRows > 0
+      ? getUpcomingFixtures(today, now).slice(0, maxRows)
+      : getAgendaCandidates(now);
   const visibleIds = new Set(
     getUpcomingFixtures(today, now)
       .slice(0, STRIP_LIMIT)
@@ -82,10 +101,18 @@ export function FixtureStrip({ locale = "en" }: { locale?: Locale }) {
 
   return (
     <section className="mb-12">
-      <div className="mb-4 flex items-end justify-between gap-4">
-        <h2 className="font-serif text-2xl font-bold text-cream sm:text-3xl">
-          {title}
-        </h2>
+      <div
+        className={
+          showHeading
+            ? "mb-4 flex items-end justify-between gap-4"
+            : "mb-4 flex items-end justify-end gap-4"
+        }
+      >
+        {showHeading ? (
+          <h2 className="font-serif text-2xl font-bold text-cream sm:text-3xl">
+            {title}
+          </h2>
+        ) : null}
         <Link
           href={moreHref}
           className="shrink-0 text-xs uppercase tracking-[0.18em] text-gold hover:text-cream"
@@ -118,17 +145,19 @@ export function FixtureStrip({ locale = "en" }: { locale?: Locale }) {
         </p>
       </div>
       <PremierLeagueLines locale={locale} />
-      <p className="mt-7">
-        <a
-          href={MAPS_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          data-event="directions"
-          className="text-sm text-gold hover:text-cream"
-        >
-          {cta} →
-        </a>
-      </p>
+      {showDirections ? (
+        <p className="mt-7">
+          <a
+            href={MAPS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-event="directions"
+            className="text-sm text-gold hover:text-cream"
+          >
+            {cta} →
+          </a>
+        </p>
+      ) : null}
     </section>
   );
 }

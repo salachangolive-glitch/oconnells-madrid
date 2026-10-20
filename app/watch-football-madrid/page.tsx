@@ -27,7 +27,7 @@ export default function WatchFootballPage() {
         position="object-[center_20%]"
       />
       <Section title="Confirmed matches">
-        <FixtureStrip locale="en" />
+        <FixtureStrip locale="en" showHeading={false} showDirections={false} maxRows={60} />
         <p>
           Premier League, LaLiga, Champions League and other confirmed football
           go on the screens. The list, with Madrid times, is on{" "}
