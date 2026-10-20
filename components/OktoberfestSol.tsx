@@ -63,7 +63,7 @@ export const OKT_META: Record<Locale, { live: { title: string; description: stri
     after: {
       title: "Bier an der Puerta del Sol: Irish Pub im Zentrum von Madrid",
       description:
-        "O'Connell St, Calle de Espoz y Mina 7, direkt an der Puerta del Sol: Irish Pub im Zentrum von Madrid, mit Fußball auf den Screens und internationalem Publikum.",
+        "O'Connell St, Calle de Espoz y Mina 7, gleich an der Puerta del Sol: Irish Pub im Zentrum von Madrid, mit Fußball auf den Screens und internationalem Publikum.",
     },
   },
 };
@@ -189,8 +189,8 @@ export function OktoberfestSol({ locale }: { locale: Locale }) {
           title={live ? "Oktoberfest-Zeit in Madrid: ein Bier an der Puerta del Sol" : "Ein Bier an der Puerta del Sol"}
           lead={
             live
-              ? "Das Oktoberfest Madrid läuft donnerstags bis sonntags bei Westfield Parquesur in Leganés, im Süden der Stadt. Wer im Zentrum wohnt oder sich die Fahrt sparen will: O'Connell St ist ein Irish Pub in der Calle de Espoz y Mina 7, direkt an der Puerta del Sol."
-              : "O'Connell St ist ein Irish Pub in der Calle de Espoz y Mina 7, direkt an der Puerta del Sol: ein Bier im Zentrum, Fußball auf den Screens und Leute aus aller Welt."
+              ? "Das Oktoberfest Madrid läuft donnerstags bis sonntags bei Westfield Parquesur in Leganés, im Süden der Stadt. Wer im Zentrum wohnt oder sich die Fahrt sparen will: O'Connell St ist ein Irish Pub in der Calle de Espoz y Mina 7, gleich an der Puerta del Sol."
+              : "O'Connell St ist ein Irish Pub in der Calle de Espoz y Mina 7, gleich an der Puerta del Sol: ein Bier im Zentrum, Fußball auf den Screens und Leute aus aller Welt."
           }
         />
         <InteriorPhoto src="/images/interior/bar-taps.webp" alt="Zapfhähne an der Bar im O'Connell St an der Puerta del Sol" position="object-[center_40%]" />
@@ -252,7 +252,7 @@ export function OktoberfestSol({ locale }: { locale: Locale }) {
         </Section>
         <Section title="So findet ihr uns">
           <p>
-            Calle de Espoz y Mina 7, direkt an der Puerta del Sol. Von der Station
+            Calle de Espoz y Mina 7, gleich an der Puerta del Sol. Von der Station
             Sol (Metro und Cercanías) auf den Platz und dann in die Calle de Espoz y
             Mina.
           </p>

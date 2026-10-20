@@ -19,7 +19,7 @@ export default function DeSportsBarSolPage() {
       <PageHero
         eyebrow="Champions League · Madrid"
         title="Treffpunkt für Fans: Sports Pub an der Puerta del Sol"
-        lead={`${SITE_NAME} liegt in der Calle de Espoz y Mina 7, direkt an der Puerta del Sol — zentraler Treffpunkt vor dem Spiel, live auf den Screens und danach wieder im Zentrum.`}
+        lead={`${SITE_NAME} liegt in der Calle de Espoz y Mina 7, gleich an der Puerta del Sol — zentraler Treffpunkt vor dem Spiel, live auf den Screens und danach wieder im Zentrum.`}
       />
       <InteriorPhoto
         src="/images/interior/sports-aisle.webp"
