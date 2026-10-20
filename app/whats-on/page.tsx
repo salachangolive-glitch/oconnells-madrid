@@ -24,6 +24,16 @@ export default function WhatsOnPage() {
       />
 
       <PostMatchBanner locale="en" />
+      <p className="mb-6 text-sm text-cream-muted sm:text-base">
+        Champions League this week:{" "}
+        <Link href="/news/champions-league-tuesday-20-october" className="text-gold underline">
+          Tuesday 20 October, 21:00
+        </Link>
+        {" · "}
+        <Link href="/news/champions-league-wednesday-21-october" className="text-gold underline">
+          Wednesday 21 October, 21:00 (Leipzig fans welcome)
+        </Link>
+      </p>
       <FixtureList locale="en" />
 
       <Section title="Live sports at O'Connell St">
