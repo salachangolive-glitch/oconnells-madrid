@@ -260,6 +260,14 @@ export function OktoberfestSol({ locale }: { locale: Locale }) {
             {directions("Route öffnen")}
             {" · "}
             <Link href="/location" className={linkCls}>Lage</Link>
+            {madridTodayYmd(agendaBuildNow()) <= "2026-11-03" ? (
+              <>
+                {" · "}
+                <Link href="/de/sports-bar-sol" className={linkCls}>
+                  Bayern-Fans: Atlético – Bayern, Di 3. November, 21:00
+                </Link>
+              </>
+            ) : null}
           </p>
         </Section>
       </PageShell>

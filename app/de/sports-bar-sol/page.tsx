@@ -49,6 +49,25 @@ export default function DeSportsBarSolPage() {
           .
         </p>
       </Section>
+      <Section title="Bier, Fußball und Treffpunkt an der Puerta del Sol">
+        <p>
+          Ob ihr für Atlético – Bayern am Dienstag, 3. November (21:00 Uhr Madrider
+          Zeit, Metropolitano) in der Stadt seid oder einfach ein paar Tage Madrid
+          macht: Bei uns gibt&apos;s ein Bier an der Bar, Fußball auf den Screens
+          und ein Publikum aus aller Welt – mitten im Zentrum, wo sich ohnehin alle
+          an der Puerta del Sol treffen. Kommt vor dem Anpfiff vorbei, fahrt von
+          Sol aus gemeinsam zum Stadion und feiert oder trauert danach wieder hier.
+        </p>
+        <p>
+          Gerade Oktoberfest-Zeit? Das Fest selbst ist in Leganés, außerhalb des
+          Zentrums – wie ihr von Sol hinkommt und wo ihr danach im Zentrum noch ein
+          Bier trinken könnt, steht auf unserer Seite{" "}
+          <Link href="/de/oktoberfest-madrid-sol" className="text-cream underline">
+            Oktoberfest Madrid: ein Bier an der Puerta del Sol
+          </Link>
+          .
+        </p>
+      </Section>
       <Section title="So findet ihr uns">
         <p>
           {ADDRESS.full}, an der Puerta del Sol. {HOURS.summaryDe}.
