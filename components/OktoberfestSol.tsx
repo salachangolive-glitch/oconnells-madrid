@@ -149,7 +149,7 @@ export function OktoberfestSol({ locale }: { locale: Locale }) {
           <p>
             {live ? "Cuando vuelvas a Sol, aquí seguimos abiertos: " : "Horario: "}
             jueves de 18:00 a 03:00, viernes y sábado de 16:00 a 03:30 y domingo de
-            14:00 a 03:00. Una cerveza en la barra y ambiente internacional:
+            14:00 a 03:00. Cerveza alemana de barril en la barra y ambiente internacional:
             turistas, estudiantes Erasmus y gente de Madrid, en inglés, en español y
             en muchos otros idiomas.
           </p>
@@ -235,7 +235,7 @@ export function OktoberfestSol({ locale }: { locale: Locale }) {
           <p>
             {live ? "Wenn ihr zurück in Sol seid, haben wir noch offen: " : "Öffnungszeiten: "}
             donnerstags 18:00–03:00 Uhr, freitags und samstags 16:00–03:30 Uhr,
-            sonntags 14:00–03:00 Uhr. Ein Bier an der Bar und ein bunt gemischtes
+            sonntags 14:00–03:00 Uhr. Deutsches Bier vom Fass an der Bar und ein bunt gemischtes
             Publikum: Reisende, Erasmus-Studierende und Madrilenen – auf Englisch,
             Spanisch und in vielen anderen Sprachen.
           </p>
@@ -325,7 +325,7 @@ export function OktoberfestSol({ locale }: { locale: Locale }) {
         <p>
           {live ? "When you get back to Sol, we're still open: " : "Opening hours: "}
           Thursday 18:00–03:00, Friday and Saturday 16:00–03:30, Sunday
-          14:00–03:00. A beer at the bar and an international crowd: visitors,
+          14:00–03:00. German draught beer at the bar and an international crowd: visitors,
           Erasmus students and people from Madrid, in English, Spanish and plenty of
           other languages.
         </p>
