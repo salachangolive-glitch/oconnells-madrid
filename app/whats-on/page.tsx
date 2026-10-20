@@ -4,7 +4,7 @@ import { FixtureList } from "@/components/FixtureList";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
 import { buildMetadata } from "@/lib/seo";
-import { RECURRING } from "@/lib/fixtures";
+import { agendaBuildNow, madridTodayYmd, RECURRING } from "@/lib/fixtures";
 import { SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
@@ -24,16 +24,19 @@ export default function WhatsOnPage() {
       />
 
       <PostMatchBanner locale="en" />
-      <p className="mb-6 text-sm text-cream-muted sm:text-base">
-        Champions League this week:{" "}
-        <Link href="/news/champions-league-tuesday-20-october" className="text-gold underline">
-          Tuesday 20 October, 21:00
-        </Link>
-        {" · "}
-        <Link href="/news/champions-league-wednesday-21-october" className="text-gold underline">
-          Wednesday 21 October, 21:00 (Leipzig fans welcome)
-        </Link>
-      </p>
+      {/* Champions news links: build-time date gate, gone from the 22 Oct daily rebuild. */}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-10-21" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          Champions League this week:{" "}
+          <Link href="/news/champions-league-tuesday-20-october" className="text-gold underline">
+            Tuesday 20 October, 21:00
+          </Link>
+          {" · "}
+          <Link href="/news/champions-league-wednesday-21-october" className="text-gold underline">
+            Wednesday 21 October, 21:00 (Leipzig fans welcome)
+          </Link>
+        </p>
+      ) : null}
       <FixtureList locale="en" />
 
       <Section title="Live sports at O'Connell St">

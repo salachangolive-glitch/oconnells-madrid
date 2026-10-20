@@ -81,6 +81,11 @@ function FixtureDetail({ f, locale, visible, onNow }: RowProps) {
       {f.line?.[locale] ? (
         <p className="mt-2 text-sm text-cream">{f.line[locale]}</p>
       ) : null}
+      {f.fanLine ? (
+        <p lang={f.fanLine.lang} className="mt-1 text-sm text-cream">
+          {f.fanLine.text}
+        </p>
+      ) : null}
       <p className="mt-4">
         <a
           href={MAPS_URL}
@@ -124,6 +129,11 @@ function ComingUpRow({ f, locale, visible }: RowProps) {
       ) : null}
       {f.line?.[locale] ? (
         <span className="mt-1 block text-sm text-cream">{f.line[locale]}</span>
+      ) : null}
+      {f.fanLine ? (
+        <span lang={f.fanLine.lang} className="mt-1 block text-sm text-cream">
+          {f.fanLine.text}
+        </span>
       ) : null}
     </li>
   );
