@@ -37,6 +37,15 @@ export default function WhatsOnPage() {
           </Link>
         </p>
       ) : null}
+      {/* Oktoberfest Madrid link: build-time date gate, gone from the 16 Nov daily rebuild. */}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-15" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          Oktoberfest Madrid season (22 Oct – 15 Nov, Thursday to Sunday):{" "}
+          <Link href="/oktoberfest-madrid-sol" className="text-gold underline">
+            getting there from Sol, and a beer in the centre
+          </Link>
+        </p>
+      ) : null}
       <FixtureList locale="en" />
 
       <Section title="Live sports at O'Connell St">

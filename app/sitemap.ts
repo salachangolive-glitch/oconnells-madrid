@@ -1,5 +1,20 @@
 import type { MetadataRoute } from "next";
-import { ALL_CONTENT_PATHS, getSiteUrl, HREFLANG_PAIRS } from "@/lib/venue";
+import { ALL_CONTENT_PATHS, getSiteUrl, HREFLANG_GROUPS, HREFLANG_PAIRS } from "@/lib/venue";
+
+const OKT_GROUP = HREFLANG_GROUPS["/oktoberfest-madrid-sol"];
+
+/** Oktoberfest page: en/es/de/x-default alternates. */
+function oktAlternates(base: string, path: string) {
+  if (!OKT_GROUP || ![OKT_GROUP.en, OKT_GROUP.es, OKT_GROUP.de].includes(path)) return undefined;
+  return {
+    languages: {
+      en: `${base}${OKT_GROUP.en}`,
+      es: `${base}${OKT_GROUP.es}`,
+      de: `${base}${OKT_GROUP.de}`,
+      "x-default": `${base}${OKT_GROUP.en}`,
+    },
+  };
+}
 
 /** News pages: sitemap carries en/es/x-default alternates (hreflang). */
 function newsAlternates(base: string, path: string) {
@@ -28,6 +43,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return ALL_CONTENT_PATHS.map((path) => ({
     url: path === "/" ? base : `${base}${path}`,
     ...(newsAlternates(base, path) ? { alternates: newsAlternates(base, path) } : {}),
+    ...(oktAlternates(base, path) ? { alternates: oktAlternates(base, path) } : {}),
     lastModified: now,
     changeFrequency: path === "/" || path === "/es" ? "weekly" : "monthly",
     priority: path === "/" || path === "/es" ? 1 : path.includes("thursday") ? 0.9 : 0.7,

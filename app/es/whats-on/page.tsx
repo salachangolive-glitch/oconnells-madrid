@@ -38,6 +38,15 @@ export default function EsWhatsOnPage() {
           </Link>
         </p>
       ) : null}
+      {/* Oktoberfest Madrid link: build-time date gate, gone from the 16 Nov daily rebuild. */}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-15" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          Temporada de Oktoberfest Madrid (22 oct – 15 nov, de jueves a domingo):{" "}
+          <Link href="/es/oktoberfest-madrid-sol" className="text-gold underline">
+            cómo llegar desde Sol y una cerveza en el centro
+          </Link>
+        </p>
+      ) : null}
       <FixtureList locale="es" />
 
       <Section title="Deportes en directo en O'Connell St">

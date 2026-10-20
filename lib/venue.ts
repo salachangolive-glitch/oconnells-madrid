@@ -138,6 +138,7 @@ export const EN_PATHS = [
   "/fontaines-dc-madrid",
   "/news/champions-league-tuesday-20-october",
   "/news/champions-league-wednesday-21-october",
+  "/oktoberfest-madrid-sol",
   "/menu",
   "/erasmus",
   "/thursday-1-euro-shots",
@@ -159,6 +160,7 @@ export const ES_PATHS = [
   "/es/fontaines-dc-madrid",
   "/es/noticias/champions-league-martes-20-octubre",
   "/es/noticias/champions-league-miercoles-21-octubre",
+  "/es/oktoberfest-madrid-sol",
   "/es/menu",
   "/es/erasmus",
   "/es/thursday-1-euro-shots",
@@ -171,6 +173,7 @@ export const ES_PATHS = [
 
 export const DE_PATHS = [
   "/de/sports-bar-sol",
+  "/de/oktoberfest-madrid-sol",
 ] as const;
 
 export const ALL_CONTENT_PATHS = [...EN_PATHS, ...ES_PATHS, ...DE_PATHS] as const;
@@ -187,6 +190,7 @@ export const HREFLANG_PAIRS: Record<string, string | undefined> = {
   "/fontaines-dc-madrid": "/es/fontaines-dc-madrid",
   "/news/champions-league-tuesday-20-october": "/es/noticias/champions-league-martes-20-octubre",
   "/news/champions-league-wednesday-21-october": "/es/noticias/champions-league-miercoles-21-octubre",
+  "/oktoberfest-madrid-sol": "/es/oktoberfest-madrid-sol",
   "/menu": "/es/menu",
   "/erasmus": "/es/erasmus",
   "/thursday-1-euro-shots": "/es/thursday-1-euro-shots",
@@ -209,6 +213,11 @@ export const HREFLANG_GROUPS: Record<
     en: "/sports-bar-sol",
     es: "/es/sports-bar-sol",
     de: "/de/sports-bar-sol",
+  },
+  "/oktoberfest-madrid-sol": {
+    en: "/oktoberfest-madrid-sol",
+    es: "/es/oktoberfest-madrid-sol",
+    de: "/de/oktoberfest-madrid-sol",
   },
 };
 
