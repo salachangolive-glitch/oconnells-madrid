@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { FixtureStrip } from "@/components/FixtureStrip";
 import { InteriorPhoto } from "@/components/InteriorPhoto";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
 import { buildMetadata } from "@/lib/seo";
-import { ADDRESS, HOURS, MAPS_URL, SITE_NAME } from "@/lib/venue";
+import { ADDRESS, HOURS, MAPS_URL } from "@/lib/venue";
 
 export const metadata = buildMetadata({
   title: "Football pub in Sol, Madrid — live matches",
@@ -18,7 +19,7 @@ export default function WatchFootballPage() {
       <PageHero
         eyebrow="Watch football · Madrid"
         title="A football pub in Sol, Madrid"
-        lead={`${SITE_NAME} shows confirmed football at ${ADDRESS.street}, just off Puerta del Sol. Kickoff times are on What’s On.`}
+        lead="Watch the matches live at O'Connell St: Calle de Espoz y Mina 7, just off Puerta del Sol, with Premier League, LaLiga and Champions League on the screens. This week's confirmed games, with Madrid times, are below."
       />
       <InteriorPhoto
         src="/images/interior/football-seating.webp"
@@ -26,6 +27,7 @@ export default function WatchFootballPage() {
         position="object-[center_20%]"
       />
       <Section title="Confirmed matches">
+        <FixtureStrip locale="en" />
         <p>
           Premier League, LaLiga, Champions League and other confirmed football
           go on the screens. The list, with Madrid times, is on{" "}

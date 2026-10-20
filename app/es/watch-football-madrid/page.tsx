@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { FixtureStrip } from "@/components/FixtureStrip";
 import { InteriorPhoto } from "@/components/InteriorPhoto";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
 import { buildMetadata } from "@/lib/seo";
-import { ADDRESS, HOURS, MAPS_URL, SITE_NAME } from "@/lib/venue";
+import { ADDRESS, HOURS, MAPS_URL } from "@/lib/venue";
 
 export const metadata = buildMetadata({
   title: "Pub de fútbol en Sol, Madrid — partidos en directo",
@@ -19,7 +20,7 @@ export default function EsWatchFootballPage() {
       <PageHero
         eyebrow="Ver fútbol · Madrid"
         title="Pub de fútbol en Sol, Madrid"
-        lead={`${SITE_NAME} está en ${ADDRESS.street}, junto a la Puerta del Sol. Los partidos confirmados están en la Agenda.`}
+        lead="Ver los partidos en directo en O'Connell St: en Calle de Espoz y Mina 7, junto a la Puerta del Sol, ponemos Premier League, LaLiga y Champions League en las pantallas. Los partidos confirmados de esta semana, con hora de Madrid, están aquí abajo."
       />
       <InteriorPhoto
         src="/images/interior/football-seating.webp"
@@ -27,6 +28,7 @@ export default function EsWatchFootballPage() {
         position="object-[center_20%]"
       />
       <Section title="Partidos confirmados">
+        <FixtureStrip locale="es" />
         <p>
           Premier League, LaLiga, Champions League y otro fútbol confirmado se
           ven en las pantallas. La lista, con hora de Madrid, está en la{" "}
