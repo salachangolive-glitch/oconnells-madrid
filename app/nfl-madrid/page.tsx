@@ -119,10 +119,13 @@ export default function NflMadridPage() {
           .
         </p>
         <p>
-          Getting back to the centre: the stadium has its own metro stop, Santiago
-          Bernabéu. Plan your route to Sol with the{" "}
-          <a href="https://www.metromadrid.es/en" target="_blank" rel="noopener noreferrer" className="text-cream underline">Metro de Madrid</a>{" "}
-          journey planner. Expect busy trains straight after the game.
+          Getting back to the centre: Metro Line 10 is closed between Cuzco and
+          Nuevos Ministerios until the end of the year, so Santiago Bernabéu
+          metro station is out of service. The S10 replacement bus links Plaza de
+          Castilla, Cuzco, Santiago Bernabéu and Nuevos Ministerios. Check
+          transport on{" "}
+          <a href="https://www.metromadrid.es/" target="_blank" rel="noopener noreferrer" className="text-cream underline">metromadrid.es</a>{" "}
+          before you travel.
         </p>
       </Section>
       <Section title="Find us">

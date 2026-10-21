@@ -60,7 +60,7 @@ function FixtureDetail({ f, locale, visible, onNow }: RowProps) {
         {competition}
         {f.kickoffMadrid ? (
           <span className="ml-2 tracking-[0.12em] text-cream-muted">
-            · {isEs ? "Confirmado" : "Confirmed"}
+            · {f.tbc ? (isEs ? "Por confirmar" : "To be confirmed") : isEs ? "Confirmado" : "Confirmed"}
           </span>
         ) : null}
         <OnNowBadge locale={locale} onNow={onNow} />
@@ -75,7 +75,7 @@ function FixtureDetail({ f, locale, visible, onNow }: RowProps) {
           : null}
         {f.channel ? ` · ${f.channel}` : null}
       </p>
-      {f.kickoffMadrid ? (
+      {f.kickoffMadrid && !f.tbc ? (
         <p className="mt-2 text-sm text-cream-muted">{screenPolicyLine(locale)}</p>
       ) : null}
       {f.line?.[locale] ? (
@@ -113,7 +113,7 @@ function ComingUpRow({ f, locale, visible }: RowProps) {
       <strong className="text-cream">{displayCompetition(f.competition)}</strong>
       {f.kickoffMadrid ? (
         <span className="ml-2 text-xs uppercase tracking-[0.14em] text-gold">
-          {isEs ? "Confirmado" : "Confirmed"}
+          {f.tbc ? (isEs ? "Por confirmar" : "To be confirmed") : isEs ? "Confirmado" : "Confirmed"}
         </span>
       ) : null}
       {" — "}
@@ -122,7 +122,7 @@ function ComingUpRow({ f, locale, visible }: RowProps) {
       {formatFixtureDay(f.date, locale)}
       {f.kickoffMadrid ? ` · ${f.kickoffMadrid}` : null}
       {f.channel ? ` · ${f.channel}` : null}
-      {f.kickoffMadrid ? (
+      {f.kickoffMadrid && !f.tbc ? (
         <span className="mt-1 block text-sm text-cream-muted">
           {screenPolicyLine(locale)}
         </span>

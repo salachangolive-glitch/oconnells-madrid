@@ -122,10 +122,13 @@ export default function NflMadridPageEs() {
           .
         </p>
         <p>
-          Para volver al centro: el estadio tiene su propia parada de metro, Santiago
-          Bernabéu. Consulta la ruta hasta Sol en el planificador de{" "}
-          <a href="https://www.metromadrid.es/es" target="_blank" rel="noopener noreferrer" className="text-cream underline">Metro de Madrid</a>.
-          Justo después del partido, los trenes irán llenos.
+          Para volver al centro: la línea 10 de Metro está cortada entre Cuzco y
+          Nuevos Ministerios hasta finales de año, así que la estación Santiago
+          Bernabéu no tiene servicio. El autobús sustitutivo S10 une Plaza de
+          Castilla, Cuzco, Santiago Bernabéu y Nuevos Ministerios. Comprueba el
+          transporte en{" "}
+          <a href="https://www.metromadrid.es/" target="_blank" rel="noopener noreferrer" className="text-cream underline">metromadrid.es</a>{" "}
+          antes de ir.
         </p>
       </Section>
       <Section title="Dónde estamos">

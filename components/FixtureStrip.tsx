@@ -36,7 +36,7 @@ function FixtureRow({
         {displayCompetition(f.competition)}
         {f.kickoffMadrid ? (
           <span className="ml-2 tracking-[0.12em] text-cream-muted">
-            · {isEs ? "Confirmado" : "Confirmed"}
+            · {f.tbc ? (isEs ? "Por confirmar" : "To be confirmed") : isEs ? "Confirmado" : "Confirmed"}
           </span>
         ) : null}
         <OnNowBadge locale={locale} onNow={onNow} />
@@ -50,7 +50,7 @@ function FixtureRow({
           ? ` · ${f.kickoffMadrid} ${isEs ? "hora Madrid" : "Madrid"}`
           : null}
       </p>
-      {f.kickoffMadrid ? (
+      {f.kickoffMadrid && !f.tbc ? (
         <p className="mt-1 text-sm text-cream-muted">{screenPolicyLine(locale)}</p>
       ) : null}
     </article>
