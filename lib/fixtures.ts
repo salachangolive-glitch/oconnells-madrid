@@ -151,6 +151,13 @@ export type Fixture = {
  * +12 UEL, +12 PL, +8 LaLiga J11 (with channel), TNF Packers–Panthers Fri 30
  * 01:15. Not added (doors closed): Chelsea–Man Utd Sat 31 13:30, Levante–Atlético
  * Sat 31 14:00.
+ * Delta 2026-10-21 ~10:35 Madrid (routine every 2 days, window Wed 21 – Wed 28):
+ * added LaLiga J6 postponed Levante–Athletic Club Wed 21 20:00 CEST (laliga.com
+ * match page 2026-10-21T18:00Z PreMatch + athletic-club.eus + ESPN; Movistar
+ * LALIGA). Reconfirmed, no changes: UCL MD3 Wed 21, UEL/UECL Thu 22
+ * (match.uefa.com), PL MW8 (premierleague.com API), LaLiga J10 (laliga.com/ESPN),
+ * NFL week 7 + NBA rows (ESPN), F1 US GP (formula1.com 15:00 CDT = 21:00 CET),
+ * URC, EuroLeague. See /workspace/oconnell-agenda-delta-2026-10-21/.
  */
 export const FIXTURES: Fixture[] = [
   { id: "2026-10-08-madrid-partizan", competition: "EuroLeague", homeTeam: "Real Madrid", awayTeam: "Partizan", date: "2026-10-08", kickoffMadrid: "20:45" },
@@ -238,6 +245,7 @@ export const FIXTURES: Fixture[] = [
   { id: "2026-10-20-stuttgart-atletico", competition: "UEFA Champions League", homeTeam: "Stuttgart", awayTeam: "Atlético Madrid", date: "2026-10-20", kickoffMadrid: "21:00", note: "League phase MD3; UEFA time (CET); owner rule 2026-10-13: all UCL live" },
   { id: "2026-10-20-liverpool-villarreal", competition: "UEFA Champions League", homeTeam: "Liverpool", awayTeam: "Villarreal", date: "2026-10-20", kickoffMadrid: "21:00", note: "League phase MD3; UEFA time (CET); owner rule 2026-10-13: all UCL live" },
   { id: "2026-10-20-mancity-aek", competition: "UEFA Champions League", homeTeam: "Manchester City", awayTeam: "AEK Athens", date: "2026-10-20", kickoffMadrid: "21:00", note: "League phase MD3; UEFA time (CET); owner rule 2026-10-13: all UCL live" },
+  { id: "2026-10-21-levante-athleticclub", competition: "LaLiga", homeTeam: "Levante", awayTeam: "Athletic Club", date: "2026-10-21", kickoffMadrid: "20:00", note: "J6 postponed match (rain), Ciutat de València; laliga.com match page 2026-10-21T18:00:00+00:00 + athletic-club.eus 19/10 + ESPN; Movistar LALIGA (M+ LALIGA)", channel: "Movistar LALIGA" },
   { id: "2026-10-21-madrid-leipzig", competition: "UEFA Champions League", homeTeam: "Real Madrid", awayTeam: "RB Leipzig", date: "2026-10-21", kickoffMadrid: "21:00", note: "League phase MD3, Bernabéu; uefa.com league-phase fixtures 21:00 CET (reverified 2026-10-20 owner order)", line: { en: "Leipzig fans in Madrid: O'Connell St, just off Puerta del Sol, is your fans meeting point before and after the game.", es: "Aficionados del Leipzig en Madrid: O'Connell St, junto a la Puerta del Sol, es vuestro punto de encuentro de aficionados antes y después del partido." } },
   { id: "2026-10-22-getafe-lugano", competition: "UEFA Conference League", homeTeam: "Getafe", awayTeam: "Lugano", date: "2026-10-22", kickoffMadrid: "18:45", note: "League phase MD2, M+ Liga de Campeones" },
   { id: "2026-10-23-alaves-malaga", competition: "LaLiga", homeTeam: "Alavés", awayTeam: "Málaga", date: "2026-10-23", kickoffMadrid: "21:00", note: "J10; laliga.com + mundodeportivo.com 21/09 horarios J10", channel: "DAZN" },
