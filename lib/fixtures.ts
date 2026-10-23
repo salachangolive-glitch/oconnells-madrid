@@ -57,6 +57,13 @@ export type Fixture = {
    * "Por confirmar" and the "On the screens" line is hidden.
    */
   tbc?: boolean;
+  /** Optional localized title replacing "home vs away" (pub events). */
+  title?: { en: string; es: string };
+  /**
+   * In-pub event, not a screening: no "On the screens" line, and it stays
+   * listed until the venue closes that night (no invented end time shown).
+   */
+  pubEvent?: boolean;
 };
 
 /**
@@ -365,6 +372,7 @@ export const FIXTURES: Fixture[] = [
   // Premier Sports, URC, PL MW9 Sun, NFL Week 8 Sun 1 Nov (US back on EST: ET+6). No channel shown.
   { id: "2026-10-24-leinster-munster", competition: "United Rugby Championship", homeTeam: "Leinster", awayTeam: "Munster", date: "2026-10-24", kickoffMadrid: "19:00", note: "Round 4, Aviva Stadium; avivastadium.ie + RTÉ 18:00 IST = 19:00 CEST; Premier Sports" },
   { id: "2026-10-25-motherwell-hearts", competition: "Scottish Premiership", homeTeam: "Motherwell", awayTeam: "Hearts", date: "2026-10-25", kickoffMadrid: "15:00", note: "Fir Park; spfl.co.uk fixtures + SPFL TV selections + heartsfc.co.uk: 14:00 GMT = 15:00 CET; UK TV Premier Sports" },
+  { id: "2026-10-31-halloween-party", competition: "Halloween", homeTeam: "Halloween party", awayTeam: "", date: "2026-10-31", kickoffMadrid: "19:00", pubEvent: true, title: { en: "Halloween party", es: "Fiesta de Halloween" }, note: "Owner order via DG 2026-10-23 09:42: Halloween party at O'Connell St from 19:00, costumes, decorations and music. Only these data.", line: { en: "From 19:00: costumes, decorations and music.", es: "Desde las 19:00: disfraces, decoración y música." } },
   { id: "2026-10-31-rangers-aberdeen", competition: "Scottish League Cup", homeTeam: "Rangers", awayTeam: "Aberdeen", date: "2026-10-31", kickoffMadrid: "18:30", note: "Premier Sports Cup semi-final; spfl.co.uk league-cup fixtures 17:30 GMT = 18:30 CET; UK TV Premier Sports", line: { en: "Scottish League Cup semi-final: a meeting point for Rangers and Aberdeen fans near Sol. Come early.", es: "Semifinal de la Copa de la Liga escocesa: punto de encuentro de aficionados del Rangers y del Aberdeen junto a Sol. Ven con tiempo." } },
   { id: "2026-10-31-munster-sharks", competition: "United Rugby Championship", homeTeam: "Munster", awayTeam: "Sharks", date: "2026-10-31", kickoffMadrid: "18:30", note: "Round 5, Thomond Park; munsterrugby.ie + BBC 17:30 GMT = 18:30 CET; Premier Sports" },
   { id: "2026-11-01-hearts-hibernian", competition: "Scottish League Cup", homeTeam: "Hearts", awayTeam: "Hibernian", date: "2026-11-01", kickoffMadrid: "16:00", note: "Premier Sports Cup semi-final (venue not verified); spfl.co.uk league-cup fixtures 15:00 GMT = 16:00 CET; UK TV Premier Sports", line: { en: "Edinburgh derby, Scottish League Cup semi-final: a meeting point for Hearts and Hibs fans near Sol. Come early.", es: "Derbi de Edimburgo, semifinal de la Copa de la Liga escocesa: punto de encuentro de aficionados del Hearts y del Hibs junto a Sol. Ven con tiempo." } },
@@ -637,6 +645,12 @@ export function fixtureSport(f: Fixture): Sport {
 export function fixtureEndMs(f: Fixture): number | null {
   const start = fixtureStartMs(f);
   if (start == null) return null;
+  if (f.pubEvent) {
+    const close = venueHoursForNight(f.date).close;
+    const closeDay = hhmmToMin(close) < NIGHT_ROLLOVER_MIN ? addMadridDays(f.date, 1) : f.date;
+    const end = madridWallTimeMs(closeDay, close);
+    if (end != null && end > start) return end;
+  }
   return start + SPORT_DURATION_MIN[fixtureSport(f)] * 60 * 1000;
 }
 
@@ -798,6 +812,7 @@ export function displayCompetition(name: string): string {
 
 /** Race rows store the event name in homeTeam and leave awayTeam empty. */
 export function fixtureMatchLabel(f: Fixture, locale: "en" | "es"): string {
+  if (f.title) return f.title[locale];
   const home = displayTeam(f.homeTeam, locale);
   const away = f.awayTeam.trim();
   if (!away) return home;

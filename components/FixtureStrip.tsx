@@ -50,7 +50,7 @@ function FixtureRow({
           ? ` · ${f.kickoffMadrid} ${isEs ? "hora Madrid" : "Madrid"}`
           : null}
       </p>
-      {f.kickoffMadrid && !f.tbc ? (
+      {f.kickoffMadrid && !f.tbc && !f.pubEvent ? (
         <p className="mt-1 text-sm text-cream-muted">{screenPolicyLine(locale)}</p>
       ) : null}
     </article>

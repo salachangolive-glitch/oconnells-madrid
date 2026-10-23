@@ -75,7 +75,7 @@ function FixtureDetail({ f, locale, visible, onNow }: RowProps) {
           : null}
         {f.channel ? ` · ${f.channel}` : null}
       </p>
-      {f.kickoffMadrid && !f.tbc ? (
+      {f.kickoffMadrid && !f.tbc && !f.pubEvent ? (
         <p className="mt-2 text-sm text-cream-muted">{screenPolicyLine(locale)}</p>
       ) : null}
       {f.line?.[locale] ? (
@@ -122,7 +122,7 @@ function ComingUpRow({ f, locale, visible }: RowProps) {
       {formatFixtureDay(f.date, locale)}
       {f.kickoffMadrid ? ` · ${f.kickoffMadrid}` : null}
       {f.channel ? ` · ${f.channel}` : null}
-      {f.kickoffMadrid && !f.tbc ? (
+      {f.kickoffMadrid && !f.tbc && !f.pubEvent ? (
         <span className="mt-1 block text-sm text-cream-muted">
           {screenPolicyLine(locale)}
         </span>
