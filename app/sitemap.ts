@@ -16,6 +16,20 @@ function oktAlternates(base: string, path: string) {
   };
 }
 
+const BAYERN_GROUP = HREFLANG_GROUPS["/news/bayern-fans-madrid-pre-match-meeting-point"];
+
+/** Bayern fans article: en/de/x-default alternates. */
+function bayernAlternates(base: string, path: string) {
+  if (!BAYERN_GROUP?.de || ![BAYERN_GROUP.en, BAYERN_GROUP.de].includes(path)) return undefined;
+  return {
+    languages: {
+      en: `${base}${BAYERN_GROUP.en}`,
+      de: `${base}${BAYERN_GROUP.de}`,
+      "x-default": `${base}${BAYERN_GROUP.en}`,
+    },
+  };
+}
+
 /** News pages: sitemap carries en/es/x-default alternates (hreflang). */
 function newsAlternates(base: string, path: string) {
   const isNews = path.startsWith("/news/") || path.startsWith("/es/noticias/");
@@ -43,6 +57,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return ALL_CONTENT_PATHS.map((path) => ({
     url: path === "/" ? base : `${base}${path}`,
     ...(newsAlternates(base, path) ? { alternates: newsAlternates(base, path) } : {}),
+    ...(bayernAlternates(base, path) ? { alternates: bayernAlternates(base, path) } : {}),
     ...(oktAlternates(base, path) ? { alternates: oktAlternates(base, path) } : {}),
     lastModified: now,
     changeFrequency: path === "/" || path === "/es" ? "weekly" : "monthly",

@@ -7,6 +7,7 @@ import { PageShell } from "@/components/PageShell";
 import { Section } from "@/components/Prose";
 import { ThursdayFeature } from "@/components/ThursdayFeature";
 import { VenueHero } from "@/components/VenueHero";
+import { agendaBuildNow, madridTodayYmd } from "@/lib/fixtures";
 import { buildMetadata } from "@/lib/seo";
 import {
   ADDRESS,
@@ -103,6 +104,19 @@ export default function EsHomePage() {
         </Link>{" "}
         para los días de partido.
       </p>
+      {/* Bayern fans articles (Atlético–Bayern 3 Nov): build-time date gate, gone from the 4 Nov daily rebuild. */}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-03" ? (
+        <p className="mb-12 max-w-2xl border-l-2 border-gold pl-4 text-sm text-cream-muted sm:text-base">
+          Atlético–Bayern, martes 3 de noviembre, 21:00 — afición del Bayern en Madrid:{" "}
+          <Link href="/news/bayern-fans-madrid-pre-match-meeting-point" className="text-gold underline">
+            punto de encuentro junto a Sol (inglés)
+          </Link>
+          {" · "}
+          <a href="/de/bayern-fans-madrid-treffpunkt" hrefLang="de" lang="de" className="text-gold underline">
+            Treffpunkt für Bayern-Fans (alemán)
+          </a>
+        </p>
+      ) : null}
 
       <InteriorPhoto
         variant="editorial"

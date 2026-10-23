@@ -138,6 +138,7 @@ export const EN_PATHS = [
   "/fontaines-dc-madrid",
   "/news/champions-league-tuesday-20-october",
   "/news/champions-league-wednesday-21-october",
+  "/news/bayern-fans-madrid-pre-match-meeting-point",
   "/oktoberfest-madrid-sol",
   "/menu",
   "/erasmus",
@@ -174,6 +175,7 @@ export const ES_PATHS = [
 export const DE_PATHS = [
   "/de/sports-bar-sol",
   "/de/oktoberfest-madrid-sol",
+  "/de/bayern-fans-madrid-treffpunkt",
 ] as const;
 
 export const ALL_CONTENT_PATHS = [...EN_PATHS, ...ES_PATHS, ...DE_PATHS] as const;
@@ -218,6 +220,10 @@ export const HREFLANG_GROUPS: Record<
     en: "/oktoberfest-madrid-sol",
     es: "/es/oktoberfest-madrid-sol",
     de: "/de/oktoberfest-madrid-sol",
+  },
+  "/news/bayern-fans-madrid-pre-match-meeting-point": {
+    en: "/news/bayern-fans-madrid-pre-match-meeting-point",
+    de: "/de/bayern-fans-madrid-treffpunkt",
   },
 };
 
