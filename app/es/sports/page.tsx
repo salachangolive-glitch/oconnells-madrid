@@ -27,7 +27,7 @@ export default function EsSportsPage() {
         alt="Pantallas de deportes y pasillo de asientos en el pub irlandés O'Connell St cerca de Sol"
         position="object-[center_15%]"
       />
-      <FixtureStrip locale="es" />
+      <FixtureStrip locale="es" windowOnly />
       <Section title="Qué ponemos">
         <p>
           Ponemos fútbol casi todos los fines de semana y las noches europeas,
@@ -67,10 +67,6 @@ export default function EsSportsPage() {
           emitiendo. Más sobre{" "}
           <Link href="/es/nfl-madrid" className="text-gold underline">
             ver la NFL en Madrid
-          </Link>
-          . Noche de concierto el 22 de octubre:{" "}
-          <Link href="/es/fontaines-dc-madrid" className="text-gold underline">
-            Fontaines D.C., antes y después
           </Link>
           . Si te importa un partido concreto, pregunta en la barra o
           mira la{" "}

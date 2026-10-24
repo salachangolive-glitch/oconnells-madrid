@@ -26,7 +26,7 @@ export default function SportsPage() {
         alt="Live sports screens and seating aisle at O'Connell St Irish pub near Sol"
         position="object-[center_15%]"
       />
-      <FixtureStrip locale="en" />
+      <FixtureStrip locale="en" windowOnly />
       <Section title="What we put on">
         <p>
           We show football most weekends and on European nights, plus other
@@ -67,12 +67,7 @@ export default function SportsPage() {
           <Link href="/nfl-madrid" className="text-gold underline">
             watching NFL in Madrid
           </Link>
-          . Gig night on 22 October:{" "}
-          <Link href="/fontaines-dc-madrid" className="text-gold underline">
-            Fontaines D.C. before and after
-          </Link>
-          .
-          For one specific match, ask at the bar or check{" "}
+          . For one specific match, ask at the bar or check{" "}
           <Link href="/whats-on" className="text-gold underline">
             What&apos;s On
           </Link>

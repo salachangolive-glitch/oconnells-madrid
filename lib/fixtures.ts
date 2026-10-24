@@ -741,7 +741,7 @@ export function getAgendaCandidatesWindow(now = new Date(), bufferDays = 2): Fix
  * `horizonHours` after the build are considered: the site is rebuilt every
  * morning (daily rebuild stamp), so 48 h leaves a full day of slack. If no
  * rebuild happens for longer, the strip falls back to its "check What's On"
- * line; What's On itself always ships every row.
+ * line; What's On ships the same window (+2 days buffer) since 24 Oct 2026.
  */
 export function pruneNeverVisible(
   rows: Fixture[],

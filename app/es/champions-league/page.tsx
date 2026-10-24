@@ -27,13 +27,6 @@ export default function EsChampionsLeaguePage() {
         alt="Pantallas de deportes en O'Connell St cerca de Sol"
         position="object-[center_45%]"
       />
-      <Section title="Real Madrid–RB Leipzig · miércoles 21 de octubre, 21:00">
-        <p>
-          ¿Quedas para el partido? O&apos;Connell St está junto a Sol: punto de
-          encuentro en el centro antes de ir al estadio y para comentarlo
-          después. También lo emitimos en directo.
-        </p>
-      </Section>
       <Section title="Atlético de Madrid–Bayern · martes 3 de noviembre, 21:00">
         <p>
           Seas del Atleti o del Bayern, quedad en el centro: O&apos;Connell St

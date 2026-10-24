@@ -4,7 +4,8 @@ import {
   fixtureDataAttrs,
   fixtureMatchLabel,
   formatFixtureDay,
-  getAgendaCandidates,
+  addMadridDays,
+  getAgendaCandidatesWindow,
   isOnNow,
   isTodaySlot,
   isWeekSlot,
@@ -149,7 +150,11 @@ export function FixtureList({ locale = "en" }: { locale?: Locale }) {
   const isEs = locale === "es";
   const now = agendaBuildNow();
   const today = madridTodayYmd(now);
-  const rows = getAgendaCandidates(now);
+  // Lighter HTML (24 Oct 2026): ship only rows the client clock can still
+  // show before the next daily rebuild. Next 7 days = 7-day window + 2 days
+  // buffer (same rule as the home strip); Today = rows dated up to today + 2.
+  const rows = getAgendaCandidatesWindow(now);
+  const todayRows = rows.filter((f) => f.date <= addMadridDays(today, 2));
   const todayCount = rows.filter((f) => isTodaySlot(f, today, now)).length;
   const weekCount = rows.filter((f) => isWeekSlot(f, today, now)).length;
 
@@ -159,7 +164,7 @@ export function FixtureList({ locale = "en" }: { locale?: Locale }) {
     <div data-fx-root="list">
       <Section title={isEs ? "Hoy" : "Today"}>
         <ul className="flex flex-col gap-6">
-          {rows.map((f) => (
+          {todayRows.map((f) => (
             <FixtureDetail
               key={f.id}
               f={f}

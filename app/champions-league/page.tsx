@@ -26,13 +26,6 @@ export default function ChampionsLeaguePage() {
         alt="Sports screens at O'Connell St near Sol"
         position="object-[center_45%]"
       />
-      <Section title="Real Madrid v RB Leipzig · Wed 21 October, 21:00">
-        <p>
-          Meeting up for the match? O&apos;Connell St is just off Puerta del Sol:
-          meet your friends in the centre before heading to the stadium, and come
-          back afterwards to talk it over. We&apos;re also showing it live.
-        </p>
-      </Section>
       <Section title="Atlético Madrid v Bayern Munich · Tue 3 November, 21:00">
         <p>
           Bayern or Atleti, meet in the centre: O&apos;Connell St is just off
