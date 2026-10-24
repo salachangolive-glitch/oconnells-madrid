@@ -6,9 +6,9 @@ import { buildMetadata } from "@/lib/seo";
 import { ADDRESS, HOURS, MAPS_URL, SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
-  title: "NFL bar in Madrid near Sol – watch NFL in central Madrid",
+  title: "American football nights at a sports pub by Sol",
   description:
-    "Where to watch NFL in Madrid: an Irish sports pub near Sol for NFL fans, before and after the game. Confirmed games on What's On.",
+    "O'Connell St, just off Puerta del Sol: European football first, plus American football on the screens on the nights we show it. Confirmed games on What's On.",
   path: "/nfl-madrid",
 });
 
@@ -32,7 +32,7 @@ export default function NflMadridPage() {
     <PageShell locale="en" altLangHref="/es/nfl-madrid">
       <PageHero
         eyebrow="NFL · Central Madrid"
-        title={`Watch NFL in Madrid at ${SITE_NAME}`}
+        title={`American football nights at ${SITE_NAME}`}
         lead="An Irish sports pub just off Puerta del Sol, with American football on the TVs when we're showing it."
       />
       <InteriorPhoto

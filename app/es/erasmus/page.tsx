@@ -6,9 +6,9 @@ import { buildMetadata } from "@/lib/seo";
 import { SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
-  title: "Erasmus y visitantes cerca de Sol",
+  title: "Ambiente internacional junto a Sol: estudiantes y visitantes",
   description:
-    "O'Connell St, junto a Puerta del Sol: pub irlandés con estudiantes Erasmus, turistas y gente de fuera. Espoz y Mina 7.",
+    "O'Connell St, junto a la Puerta del Sol: pub irlandés con fútbol europeo en las pantallas y ambiente internacional de estudiantes y visitantes. Espoz y Mina 7.",
   path: "/es/erasmus",
   locale: "es",
 });

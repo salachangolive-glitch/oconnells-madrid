@@ -6,9 +6,9 @@ import { buildMetadata } from "@/lib/seo";
 import { SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
-  title: "Erasmus and visitors near Sol",
+  title: "International crowd near Sol: students and visitors",
   description:
-    "O'Connell St, near Puerta del Sol: Irish pub for Erasmus students, tourists and an international crowd. Espoz y Mina 7.",
+    "O'Connell St, just off Puerta del Sol: an Irish pub with European football on the screens and an international crowd of students and visitors. Espoz y Mina 7.",
   path: "/erasmus",
 });
 

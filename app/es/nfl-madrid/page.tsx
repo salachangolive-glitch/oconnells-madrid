@@ -6,9 +6,9 @@ import { buildMetadata } from "@/lib/seo";
 import { ADDRESS, HOURS, MAPS_URL, SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
-  title: "Bar para ver la NFL en Madrid cerca de Sol",
+  title: "Noches de fútbol americano en un pub deportivo junto a Sol",
   description:
-    "Dónde ver la NFL en Madrid: pub irlandés deportivo junto a Sol para fans de la NFL, antes y después del partido. Partidos confirmados en la Agenda.",
+    "O'Connell St, junto a la Puerta del Sol: fútbol europeo y, las noches que lo emitimos, fútbol americano en las pantallas. Partidos confirmados en la Agenda.",
   path: "/es/nfl-madrid",
   locale: "es",
 });
@@ -33,7 +33,7 @@ export default function NflMadridPageEs() {
     <PageShell locale="es" altLangHref="/nfl-madrid">
       <PageHero
         eyebrow="NFL · Centro de Madrid"
-        title={`Ver la NFL en Madrid en ${SITE_NAME}`}
+        title={`Noches de fútbol americano en ${SITE_NAME}`}
         lead="Un pub irlandés deportivo junto a Sol, con fútbol americano en las teles cuando lo estamos emitiendo."
       />
       <InteriorPhoto
