@@ -1,5 +1,54 @@
 import type { MetadataRoute } from "next";
-import { ALL_CONTENT_PATHS, getSiteUrl } from "@/lib/venue";
+import { ALL_CONTENT_PATHS, getSiteUrl, HREFLANG_GROUPS, HREFLANG_PAIRS } from "@/lib/venue";
+
+const OKT_GROUP = HREFLANG_GROUPS["/oktoberfest-madrid-sol"];
+
+/** Oktoberfest page: en/es/de/x-default alternates. */
+function oktAlternates(base: string, path: string) {
+  if (!OKT_GROUP || ![OKT_GROUP.en, OKT_GROUP.es, OKT_GROUP.de].includes(path)) return undefined;
+  return {
+    languages: {
+      en: `${base}${OKT_GROUP.en}`,
+      es: `${base}${OKT_GROUP.es}`,
+      de: `${base}${OKT_GROUP.de}`,
+      "x-default": `${base}${OKT_GROUP.en}`,
+    },
+  };
+}
+
+const BAYERN_GROUP = HREFLANG_GROUPS["/news/bayern-fans-madrid-pre-match-meeting-point"];
+
+/** Bayern fans article: en/de/x-default alternates. */
+function bayernAlternates(base: string, path: string) {
+  if (!BAYERN_GROUP?.de || ![BAYERN_GROUP.en, BAYERN_GROUP.de].includes(path)) return undefined;
+  return {
+    languages: {
+      en: `${base}${BAYERN_GROUP.en}`,
+      de: `${base}${BAYERN_GROUP.de}`,
+      "x-default": `${base}${BAYERN_GROUP.en}`,
+    },
+  };
+}
+
+/** News pages: sitemap carries en/es/x-default alternates (hreflang). */
+function newsAlternates(base: string, path: string) {
+  const isNews = path.startsWith("/news/") || path.startsWith("/es/noticias/");
+  if (!isNews) return undefined;
+  const en = path.startsWith("/es/")
+    ? Object.entries(HREFLANG_PAIRS).find(([, es]) => es === path)?.[0]
+    : path;
+  const es = en ? HREFLANG_PAIRS[en] : undefined;
+  if (!en || !es) return undefined;
+  return {
+    languages: {
+      en: `${base}${en}`,
+      es: `${base}${es}`,
+      "x-default": `${base}${en}`,
+    },
+  };
+}
+
+export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = getSiteUrl();
@@ -7,6 +56,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return ALL_CONTENT_PATHS.map((path) => ({
     url: path === "/" ? base : `${base}${path}`,
+    ...(newsAlternates(base, path) ? { alternates: newsAlternates(base, path) } : {}),
+    ...(bayernAlternates(base, path) ? { alternates: bayernAlternates(base, path) } : {}),
+    ...(oktAlternates(base, path) ? { alternates: oktAlternates(base, path) } : {}),
     lastModified: now,
     changeFrequency: path === "/" || path === "/es" ? "weekly" : "monthly",
     priority: path === "/" || path === "/es" ? 1 : path.includes("thursday") ? 0.9 : 0.7,
