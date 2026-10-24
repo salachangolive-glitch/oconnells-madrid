@@ -722,6 +722,46 @@ export function getAgendaCandidates(now = new Date()): Fixture[] {
 }
 
 /**
+ * Lighter HTML for the home strip: confirmed, not-finished rows up to the
+ * 7-day window plus `bufferDays` (default 2), so the client clock still has
+ * the rows it needs if the daily rebuild is late. Rows further out live on
+ * What's On only.
+ */
+export function getAgendaCandidatesWindow(now = new Date(), bufferDays = 2): Fixture[] {
+  const last = addMadridDays(agendaWindowEnd(madridTodayYmd(now)), bufferDays);
+  return getAgendaCandidates(now).filter((f) => f.date <= last);
+}
+
+/**
+ * Drop rows that can never be among the first `limit` visible rows of a
+ * strip. The client clock (AgendaClock) shows rows in kickoff order and hides
+ * finished ones, so a row is shown at some moment t (now <= t < its end) only
+ * if fewer than `limit` earlier rows are still running at t. Checking t = now
+ * and every earlier row's end time is exact. Only moments up to
+ * `horizonHours` after the build are considered: the site is rebuilt every
+ * morning (daily rebuild stamp), so 48 h leaves a full day of slack. If no
+ * rebuild happens for longer, the strip falls back to its "check What's On"
+ * line; What's On itself always ships every row.
+ */
+export function pruneNeverVisible(
+  rows: Fixture[],
+  limit: number,
+  now = new Date(),
+  horizonHours = 48,
+): Fixture[] {
+  const nowMs = now.getTime();
+  const horizonMs = nowMs + horizonHours * 3600_000;
+  const ends = rows.map((f) => fixtureEndMs(f) ?? 0);
+  return rows.filter((_, i) => {
+    const end = ends[i];
+    const times = [nowMs, horizonMs, ...ends.slice(0, i)].filter(
+      (t) => t >= nowMs && t <= horizonMs && t < end,
+    );
+    return times.some((t) => ends.slice(0, i).filter((e) => e > t).length < limit);
+  });
+}
+
+/**
  * Today/Hoy: not finished and either kicks off on today's Madrid date or is
  * already on (e.g. a late game that started yesterday and runs past midnight).
  */

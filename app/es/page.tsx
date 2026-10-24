@@ -88,7 +88,7 @@ export default function EsHomePage() {
         </p>
       </section>
 
-      <FixtureStrip locale="es" />
+      <FixtureStrip locale="es" windowOnly />
       <p className="mb-12 max-w-2xl text-sm text-cream-muted sm:text-base">
         Más fútbol:{" "}
         <Link href="/es/premier-league" className="text-gold underline">

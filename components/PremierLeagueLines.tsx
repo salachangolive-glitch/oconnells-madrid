@@ -5,6 +5,7 @@ import {
   fixtureDataAttrs,
   formatFixtureDay,
   getAgendaCandidates,
+  getAgendaCandidatesWindow,
   getUpcomingFixtures,
   madridTodayYmd,
 } from "@/lib/fixtures";
@@ -32,16 +33,19 @@ const COMPETITIONS = {
 export function PremierLeagueLines({
   locale,
   competition = "pl",
+  windowOnly = false,
 }: {
   locale: Locale;
   competition?: keyof typeof COMPETITIONS;
+  /** Only rows inside the 7-day window (+2 days buffer); see FixtureStrip. */
+  windowOnly?: boolean;
 }) {
   const isEs = locale === "es";
   const now = agendaBuildNow();
   const today = madridTodayYmd(now);
   const comp = COMPETITIONS[competition];
   const isPl = (f: { competition: string }) => f.competition === comp.name;
-  const rows = getAgendaCandidates(now).filter(isPl);
+  const rows = (windowOnly ? getAgendaCandidatesWindow(now) : getAgendaCandidates(now)).filter(isPl);
   if (rows.length === 0) return null;
   const visibleIds = new Set(
     getUpcomingFixtures(today, now).filter(isPl).map((f) => f.id),

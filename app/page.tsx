@@ -83,7 +83,7 @@ export default function HomePage() {
       </section>
 
       {/* Live Sports / What's On */}
-      <FixtureStrip locale="en" />
+      <FixtureStrip locale="en" windowOnly />
       <p className="mb-12 max-w-2xl text-sm text-cream-muted sm:text-base">
         More football:{" "}
         <Link href="/premier-league" className="text-gold underline">

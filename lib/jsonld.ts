@@ -17,9 +17,9 @@ type SchemaLocale = "en" | "es" | "de";
 /** Per-language description. DE pages keep the EN text (no DE copy approved). */
 function description(locale: SchemaLocale): string {
   if (locale === "es") {
-    return `${SITE_NAME} — ${SITE_TAGLINE_ES}, en Calle de Espoz y Mina 7. Pantallas con ${FACTS.football.join(", ")}; NFL, NBA, rugby, F1 y tenis cuando se emiten. Chupitos a 1 € los jueves.`;
+    return `${SITE_NAME} — ${SITE_TAGLINE_ES}, en Calle de Espoz y Mina 7, a un paso de Puerta del Sol. Fachada roja con letras doradas. Fútbol europeo en pantalla: ${FACTS.football.join(", ")}; también NFL, NBA, rugby, F1 y tenis cuando se emiten. Abre por la tarde y la noche.`;
   }
-  return `${SITE_NAME} — ${SITE_TAGLINE}. Screens for ${FACTS.football.join(", ")}; ${FACTS.otherSports.join(" / ")} when shown. ${FACTS.thursdayShots}.`;
+  return `${SITE_NAME} — ${SITE_TAGLINE}, at Calle de Espoz y Mina 7, a short walk from Puerta del Sol. Red facade with gold lettering. European football on the screens: ${FACTS.football.join(", ")}; also ${FACTS.otherSports.join(" / ")} when shown. Open afternoons and evenings.`;
 }
 
 /**
@@ -34,6 +34,7 @@ export function barOrPubJsonLd(locale: SchemaLocale = "en") {
     "@type": ["BarOrPub", "LocalBusiness"],
     "@id": `${site}/#pub`,
     name: SITE_NAME,
+    alternateName: `${SITE_NAME} Madrid`,
     description: description(locale),
     url: site,
     email: PUBLIC_EMAIL,
@@ -80,5 +81,26 @@ export function barOrPubJsonLd(locale: SchemaLocale = "en") {
         value: true,
       },
     ],
+  };
+}
+
+/**
+ * /about and /es/about: AboutPage node with its own @id, pointing at the
+ * site-wide O'Connell St entity (`/#pub`). Facts only (lib/venue.ts).
+ */
+export function aboutPageJsonLd(locale: "en" | "es" = "en") {
+  const site = getSiteUrl();
+  const path = locale === "es" ? "/es/about" : "/about";
+  return {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "@id": `${site}${path}#webpage`,
+    url: `${site}${path}`,
+    name: locale === "es" ? `Sobre ${SITE_NAME} Madrid` : `About ${SITE_NAME} Madrid`,
+    inLanguage: locale === "es" ? "es-ES" : "en",
+    isPartOf: { "@type": "WebSite", "@id": `${site}/#website`, url: site, name: `${SITE_NAME} Madrid` },
+    about: { "@id": `${site}/#pub` },
+    mainEntity: { "@id": `${site}/#pub` },
+    primaryImageOfPage: `${site}/images/oconnell-fachada.jpg`,
   };
 }

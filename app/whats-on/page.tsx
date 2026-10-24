@@ -24,19 +24,6 @@ export default function WhatsOnPage() {
       />
 
       <PostMatchBanner locale="en" />
-      {/* Champions news links: build-time date gate, gone from the 22 Oct daily rebuild. */}
-      {madridTodayYmd(agendaBuildNow()) <= "2026-10-21" ? (
-        <p className="mb-6 text-sm text-cream-muted sm:text-base">
-          Champions League this week:{" "}
-          <Link href="/news/champions-league-tuesday-20-october" className="text-gold underline">
-            Tuesday 20 October, 21:00
-          </Link>
-          {" · "}
-          <Link href="/news/champions-league-wednesday-21-october" className="text-gold underline">
-            Wednesday 21 October, 21:00 (Leipzig fans welcome)
-          </Link>
-        </p>
-      ) : null}
       {/* Oktoberfest Madrid link: build-time date gate, gone from the 16 Nov daily rebuild. */}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-15" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">

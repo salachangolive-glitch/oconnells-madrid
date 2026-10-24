@@ -5,6 +5,8 @@ import {
   fixtureMatchLabel,
   formatFixtureDay,
   getAgendaCandidates,
+  getAgendaCandidatesWindow,
+  pruneNeverVisible,
   fixtureDataAttrs,
   getUpcomingFixtures,
   isOnNow,
@@ -66,6 +68,7 @@ export function FixtureStrip({
   showHeading = true,
   showDirections = true,
   maxRows,
+  windowOnly = false,
 }: {
   locale?: Locale;
   /** false: no own H2 (the page already has a heading above the strip). */
@@ -77,6 +80,12 @@ export function FixtureStrip({
    * of every future confirmed row. Omit (home / sports) to keep all rows.
    */
   maxRows?: number;
+  /**
+   * Home: ship only rows inside the 7-day window (+2 days buffer for the
+   * daily rebuild), minus rows that can never reach the first STRIP_LIMIT
+   * visible slots (pruneNeverVisible). Full list = What's On.
+   */
+  windowOnly?: boolean;
 }) {
   const isEs = locale === "es";
   const now = agendaBuildNow();
@@ -84,7 +93,9 @@ export function FixtureStrip({
   const rows =
     maxRows && maxRows > 0
       ? getUpcomingFixtures(today, now).slice(0, maxRows)
-      : getAgendaCandidates(now);
+      : windowOnly
+        ? pruneNeverVisible(getAgendaCandidatesWindow(now), STRIP_LIMIT, now)
+        : getAgendaCandidates(now);
   const visibleIds = new Set(
     getUpcomingFixtures(today, now)
       .slice(0, STRIP_LIMIT)
@@ -144,7 +155,7 @@ export function FixtureStrip({
           {empty}
         </p>
       </div>
-      <PremierLeagueLines locale={locale} />
+      <PremierLeagueLines locale={locale} windowOnly={windowOnly} />
       {showDirections ? (
         <p className="mt-7">
           <a
