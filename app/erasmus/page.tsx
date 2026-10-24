@@ -16,9 +16,9 @@ export default function ErasmusPage() {
   return (
     <PageShell locale="en" altLangHref="/es/erasmus">
       <PageHero
-        eyebrow="Erasmus · Visitors"
+        eyebrow="International crowd · Sol"
         title={`International crowd at ${SITE_NAME}`}
-        lead="Erasmus students, tourists and people from all over meet at this Irish pub, just off Puerta del Sol. It is a normal night at the bar, not a separate Erasmus party."
+        lead="Students, visitors and people from all over meet at this Irish pub, just off Puerta del Sol: European football on the screens and an easy place for a night out with your group."
       />
       <ThursdayFeature locale="en" />
       <Section title="At the pub">

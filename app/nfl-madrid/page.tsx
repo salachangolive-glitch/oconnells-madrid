@@ -14,11 +14,11 @@ export const metadata = buildMetadata({
 
 const faq = [
   {
-    q: "Where can I watch NFL in Madrid?",
-    a: "O'Connell St is a sports pub in central Madrid, just off Puerta del Sol. We put NFL games on the TVs when we are showing them, and every confirmed game is listed on What's On with the Madrid time.",
+    q: "Do you show American football?",
+    a: "Yes, on the nights we are showing it. European football comes first at O'Connell St, and every confirmed game is listed on What's On with the Madrid time.",
   },
   {
-    q: "Do you show every NFL game?",
+    q: "Do you show every game?",
     a: "No. Some kickoffs fall after closing time in Madrid, and we only list a game once the screening is confirmed. If you're after one particular game, check What's On or ask at the bar.",
   },
   {
@@ -31,7 +31,7 @@ export default function NflMadridPage() {
   return (
     <PageShell locale="en" altLangHref="/es/nfl-madrid">
       <PageHero
-        eyebrow="NFL · Central Madrid"
+        eyebrow="Sports pub · Central Madrid"
         title={`American football nights at ${SITE_NAME}`}
         lead="An Irish sports pub just off Puerta del Sol, with American football on the TVs when we're showing it."
       />
@@ -43,13 +43,13 @@ export default function NflMadridPage() {
       <Section title="A sports pub in central Madrid">
         <p>
           If you are looking for a sports bar in Madrid to catch a game, O&apos;Connell
-          St sits on {ADDRESS.street}, right by Sol. Football is our everyday
-          plan, and NFL, NBA, rugby and Formula 1 go on when we are showing them.
+          St sits on {ADDRESS.street}, right by Sol. European football is our
+          everyday plan, and American football, basketball, rugby and Formula 1
+          go on when we are showing them.
         </p>
         <p>
-          NFL fans in Madrid are welcome before the game, after it, or any
-          time it&apos;s packed elsewhere. On an NFL weekend in Madrid, we&apos;re an
-          easy stop in the centre.
+          It&apos;s an easy place to meet up with a group of friends in the centre,
+          before a game, after it, or for a night out around Sol.
         </p>
         <p>
           Confirmed games for the next 7 days, with Madrid times, are on{" "}
@@ -65,67 +65,6 @@ export default function NflMadridPage() {
             football in Madrid
           </Link>
           .
-        </p>
-      </Section>
-      <Section title="Before the game: fans meeting point at Sol">
-        <p>
-          On Sunday 8 November O&apos;Connell is a fans meeting point at Sol for
-          the NFL Madrid Game. Doors open at 14:00: meet up with other NFL fans
-          just off Puerta del Sol before the 15:30 kickoff, whichever side
-          you&apos;re on.
-        </p>
-      </Section>
-      <Section title="Watch Bengals vs Falcons LIVE near Sol">
-        <p>
-          We&apos;re showing the 2026 NFL Madrid Game live: Falcons v Bengals,
-          Sunday 8 November, kickoff 15:30. Doors open at 14:00 on Sundays. It&apos;s also on{" "}
-          <Link href="/whats-on" className="text-cream underline">What&apos;s On</Link>.
-        </p>
-      </Section>
-      <Section title="After the game: NFL RedZone LIVE and every NFL game of the day">
-        <p>
-          Heading back into the centre after the game at the Bernabéu? We&apos;re
-          on Calle de Espoz y Mina, just off Puerta del Sol. Join us to talk it
-          over with other NFL fans, whichever side you were on.
-        </p>
-        <h3 className="font-semibold">All Sunday NFL games LIVE near Sol</h3>
-        <p>Post-game, the rest of Week 9&apos;s Sunday games are on at O&apos;Connell, Madrid times:</p>
-        <ul>
-          <li>19:00 · Broncos v Panthers, Cowboys v Colts, Jets v Chiefs, Lions v Dolphins, Browns v Saints, Giants v Eagles, Rams v Commanders</li>
-          <li>22:05 · Texans v Chargers, Raiders v 49ers</li>
-          <li>22:25 · Packers v Patriots, Cardinals v Seahawks</li>
-        </ul>
-        <p>
-          <strong>NFL RedZone LIVE</strong> from 19:00 on Sunday 8 November,
-          covering the 19:00 and 22:05/22:25 games.
-        </p>
-        <p>
-          The Sunday night game (Buccaneers v Bears, 02:20 Madrid) kicks off too
-          close to our 03:00 closing, so it isn&apos;t on.
-        </p>
-      </Section>
-      <Section title="The 2026 NFL Madrid Game">
-        <p>
-          Atlanta Falcons v Cincinnati Bengals, Sunday 8 November 2026, kickoff
-          15:30 Madrid time at the Bernabéu. Tickets, stadium rules and game
-          details are on the{" "}
-          <a href="https://www.nfl.com/international/games/madrid/" target="_blank" rel="noopener noreferrer" className="text-cream underline">
-            NFL&apos;s Madrid Game page
-          </a>{" "}
-          and its{" "}
-          <a href="https://www.nfl.com/international/games/madrid/faqs" target="_blank" rel="noopener noreferrer" className="text-cream underline">
-            FAQ
-          </a>
-          .
-        </p>
-        <p>
-          Getting back to the centre: Metro Line 10 is closed between Cuzco and
-          Nuevos Ministerios until the end of the year, so Santiago Bernabéu
-          metro station is out of service. The S10 replacement bus links Plaza de
-          Castilla, Cuzco, Santiago Bernabéu and Nuevos Ministerios. Check
-          transport on{" "}
-          <a href="https://www.metromadrid.es/" target="_blank" rel="noopener noreferrer" className="text-cream underline">metromadrid.es</a>{" "}
-          before you travel.
         </p>
       </Section>
       <Section title="Find us">

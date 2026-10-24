@@ -15,11 +15,11 @@ export const metadata = buildMetadata({
 
 const faq = [
   {
-    q: "¿Dónde ver la NFL en Madrid?",
-    a: "O'Connell St es un pub deportivo en el centro de Madrid, junto a Sol. Ponemos la NFL en las teles cuando la estamos emitiendo, y cada partido confirmado aparece en la Agenda con la hora de Madrid.",
+    q: "¿Ponéis fútbol americano?",
+    a: "Sí, las noches que lo emitimos. En O'Connell St el fútbol europeo va primero, y cada partido confirmado aparece en la Agenda con la hora de Madrid.",
   },
   {
-    q: "¿Ponéis todos los partidos de la NFL?",
+    q: "¿Ponéis todos los partidos?",
     a: "No. Algunos empiezan después del cierre en horario de Madrid, y solo anunciamos un partido cuando la emisión está confirmada. Si buscas uno en concreto, mira la Agenda o pregunta en la barra.",
   },
   {
@@ -32,7 +32,7 @@ export default function NflMadridPageEs() {
   return (
     <PageShell locale="es" altLangHref="/nfl-madrid">
       <PageHero
-        eyebrow="NFL · Centro de Madrid"
+        eyebrow="Pub deportivo · Centro de Madrid"
         title={`Noches de fútbol americano en ${SITE_NAME}`}
         lead="Un pub irlandés deportivo junto a Sol, con fútbol americano en las teles cuando lo estamos emitiendo."
       />
@@ -44,13 +44,13 @@ export default function NflMadridPageEs() {
       <Section title="Un pub deportivo en el centro de Madrid">
         <p>
           Si buscas un bar deportivo en Madrid para ver un partido, O&apos;Connell
-          St está en {ADDRESS.street}, junto a Sol. El fútbol es lo de cada día, y
-          la NFL, la NBA, el rugby y la Fórmula 1 se ponen cuando los emitimos.
+          St está en {ADDRESS.street}, junto a Sol. El fútbol europeo es lo de
+          cada día, y el fútbol americano, el baloncesto, el rugby y la Fórmula 1
+          se ponen cuando los emitimos.
         </p>
         <p>
-          Si eres fan de la NFL en Madrid, pásate antes del partido, después o
-          cuando otros sitios estén llenos. En un fin de semana NFL en Madrid,
-          estamos en pleno centro.
+          Es un sitio fácil para quedar con tu grupo de amigos en el centro:
+          antes de un partido, después o para salir de noche por Sol.
         </p>
         <p>
           Los partidos confirmados de los próximos 7 días, en hora de Madrid,
@@ -67,68 +67,6 @@ export default function NflMadridPageEs() {
             fútbol en Madrid
           </Link>
           .
-        </p>
-      </Section>
-      <Section title="Antes del partido: punto de encuentro de aficionados en Sol">
-        <p>
-          El domingo 8 de noviembre, O&apos;Connell es punto de encuentro de
-          aficionados en Sol para el partido de la NFL en Madrid. Abrimos a las
-          14:00: queda con otros fans de la NFL junto a Puerta del Sol antes
-          del inicio a las 15:30, seas del equipo que seas.
-        </p>
-      </Section>
-      <Section title="Bengals vs Falcons EN DIRECTO junto a Sol">
-        <p>
-          Emitimos en directo el partido de la NFL en Madrid 2026: Falcons–Bengals,
-          domingo 8 de noviembre, a las 15:30. Los domingos abrimos a las 14:00. También está en la{" "}
-          <Link href="/es/whats-on" className="text-cream underline">Agenda</Link>.
-        </p>
-      </Section>
-      <Section title="Después del partido: NFL RedZone EN DIRECTO y todos los partidos NFL del día">
-        <p>
-          ¿Vuelves al centro después del partido en el Bernabéu? Estamos en la
-          calle Espoz y Mina, junto a Sol. Ven a comentarlo con otros fans de la
-          NFL, seas del equipo que seas.
-        </p>
-        <h3 className="font-semibold">Todos los partidos NFL del domingo EN DIRECTO junto a Sol</h3>
-        <p>Después del partido, ponemos el resto de partidos del domingo de la Week 9, en hora de Madrid:</p>
-        <ul>
-          <li>19:00 · Broncos v Panthers, Cowboys v Colts, Jets v Chiefs, Lions v Dolphins, Browns v Saints, Giants v Eagles, Rams v Commanders</li>
-          <li>22:05 · Texans v Chargers, Raiders v 49ers</li>
-          <li>22:25 · Packers v Patriots, Cardinals v Seahawks</li>
-        </ul>
-        <p>
-          <strong>NFL RedZone EN DIRECTO</strong> desde las 19:00 del domingo 8
-          de noviembre, con los partidos de las 19:00 y de las 22:05/22:25.
-        </p>
-        <p>
-          El partido del domingo por la noche (Buccaneers–Bears, 02:20 hora de
-          Madrid) empieza demasiado cerca de nuestro cierre a las 03:00, así
-          que no lo ponemos.
-        </p>
-      </Section>
-      <Section title="El partido NFL de Madrid 2026">
-        <p>
-          Atlanta Falcons–Cincinnati Bengals, domingo 8 de noviembre de 2026, a las
-          15:30 hora de Madrid en el Bernabéu. Entradas, normas del estadio y
-          detalles del partido en la{" "}
-          <a href="https://www.nfl.com/international/games/madrid/" target="_blank" rel="noopener noreferrer" className="text-cream underline">
-            página de la NFL sobre el partido de Madrid
-          </a>{" "}
-          y sus{" "}
-          <a href="https://www.nfl.com/international/games/madrid/faqs" target="_blank" rel="noopener noreferrer" className="text-cream underline">
-            preguntas frecuentes
-          </a>
-          .
-        </p>
-        <p>
-          Para volver al centro: la línea 10 de Metro está cortada entre Cuzco y
-          Nuevos Ministerios hasta finales de año, así que la estación Santiago
-          Bernabéu no tiene servicio. El autobús sustitutivo S10 une Plaza de
-          Castilla, Cuzco, Santiago Bernabéu y Nuevos Ministerios. Comprueba el
-          transporte en{" "}
-          <a href="https://www.metromadrid.es/" target="_blank" rel="noopener noreferrer" className="text-cream underline">metromadrid.es</a>{" "}
-          antes de ir.
         </p>
       </Section>
       <Section title="Dónde estamos">

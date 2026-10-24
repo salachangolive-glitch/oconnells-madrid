@@ -70,14 +70,6 @@ export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
             </li>
             <li>
               <Link
-                href={isEs ? "/es/erasmus" : "/erasmus"}
-                className="hover:text-gold"
-              >
-                Erasmus
-              </Link>
-            </li>
-            <li>
-              <Link
                 href={isEs ? "/es/location" : "/location"}
                 className="hover:text-gold"
               >
