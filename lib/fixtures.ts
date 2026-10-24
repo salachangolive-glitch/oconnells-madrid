@@ -532,7 +532,8 @@ export function venueHoursForNight(nightYmd: string): { open: string; close: str
   const dow = new Date(`${nightYmd}T12:00:00Z`).getUTCDay(); // 0 = Sunday
   if (dow === 0) return HOURS.sun;
   if (dow >= 1 && dow <= 4) return HOURS.monThu;
-  return HOURS.friSat;
+  if (dow === 5) return HOURS.fri;
+  return HOURS.sat;
 }
 
 /**

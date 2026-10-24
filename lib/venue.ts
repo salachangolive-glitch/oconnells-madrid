@@ -51,25 +51,29 @@ export const NEIGHBOURHOOD = "near Puerta del Sol";
 
 /**
  * Opening hours — aligned with GBP live card (re-verified 2026-10-02).
- * Mon–Thu 18:00–03:00; Fri–Sat 16:00–03:30; Sun 14:00–03:00 (Madrid local).
+ * Mon–Thu 18:00–03:00; Fri 16:00–03:30; Sat 15:00–03:30; Sun 14:00–03:00 (Madrid local).
+ * Sat 15:00 / Sun 14:00 opening confirmed by owner via DG, 2026-10-24 23:53.
  */
 export const HOURS = {
   monThu: { open: "18:00", close: "03:00" },
-  friSat: { open: "16:00", close: "03:30" },
+  fri: { open: "16:00", close: "03:30" },
+  sat: { open: "15:00", close: "03:30" },
   sun: { open: "14:00", close: "03:00" },
   linesEn: [
     "Mon–Thu: 18:00–03:00",
-    "Fri–Sat: 16:00–03:30",
+    "Fri: 16:00–03:30",
+    "Sat: 15:00–03:30",
     "Sun: 14:00–03:00",
   ],
   linesEs: [
     "Lun–jue: 18:00–03:00",
-    "Vie–sáb: 16:00–03:30",
+    "Vie: 16:00–03:30",
+    "Sáb: 15:00–03:30",
     "Dom: 14:00–03:00",
   ],
-  summaryEn: "Mon–Thu 18:00–03:00 · Fri–Sat 16:00–03:30 · Sun 14:00–03:00",
-  summaryEs: "Lun–jue 18:00–03:00 · Vie–sáb 16:00–03:30 · Dom 14:00–03:00",
-  summaryDe: "Mo–Do 18:00–03:00 · Fr–Sa 16:00–03:30 · So 14:00–03:00",
+  summaryEn: "Mon–Thu 18:00–03:00 · Fri 16:00–03:30 · Sat 15:00–03:30 · Sun 14:00–03:00",
+  summaryEs: "Lun–jue 18:00–03:00 · Vie 16:00–03:30 · Sáb 15:00–03:30 · Dom 14:00–03:00",
+  summaryDe: "Mo–Do 18:00–03:00 · Fr 16:00–03:30 · Sa 15:00–03:30 · So 14:00–03:00",
 } as const;
 
 /**

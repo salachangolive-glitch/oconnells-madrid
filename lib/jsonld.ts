@@ -63,9 +63,15 @@ export function barOrPubJsonLd(locale: SchemaLocale = "en") {
       },
       {
         "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Friday", "Saturday"],
-        opens: HOURS.friSat.open,
-        closes: HOURS.friSat.close,
+        dayOfWeek: "Friday",
+        opens: HOURS.fri.open,
+        closes: HOURS.fri.close,
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: "Saturday",
+        opens: HOURS.sat.open,
+        closes: HOURS.sat.close,
       },
       {
         "@type": "OpeningHoursSpecification",

@@ -108,9 +108,9 @@ export default function LocationPage() {
       <Section title="Opening hours">
         <p>
           We open every day: from {HOURS.monThu.open} Monday to Thursday, from{" "}
-          {HOURS.friSat.open} on Friday and Saturday, and from {HOURS.sun.open}{" "}
+          {HOURS.fri.open} on Friday, from {HOURS.sat.open} on Saturday, and from {HOURS.sun.open}{" "}
           on Sunday. We close at {HOURS.monThu.close} from Sunday to Thursday
-          and at {HOURS.friSat.close} on Friday and Saturday nights.
+          and at {HOURS.fri.close} on Friday and Saturday nights.
         </p>
       </Section>
     </PageShell>

@@ -112,9 +112,9 @@ export default function EsLocationPage() {
       <Section title="Horario">
         <p>
           Abrimos todos los días: de lunes a jueves desde las {HOURS.monThu.open},
-          viernes y sábado desde las {HOURS.friSat.open} y domingo desde las{" "}
+          viernes desde las {HOURS.fri.open}, sábado desde las {HOURS.sat.open} y domingo desde las{" "}
           {HOURS.sun.open}. Cerramos a las {HOURS.monThu.close} de domingo a
-          jueves y a las {HOURS.friSat.close} las noches de viernes y sábado.
+          jueves y a las {HOURS.fri.close} las noches de viernes y sábado.
         </p>
       </Section>
     </PageShell>
