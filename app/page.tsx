@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { PostMatchBanner } from "@/components/PostMatchBanner";
 import { FixtureStrip } from "@/components/FixtureStrip";
+import { HalloweenTeaser } from "@/components/HalloweenSol";
 import { HomeCtaBand } from "@/components/HomeCtaBand";
 import { InteriorGallery, InteriorPhoto } from "@/components/InteriorPhoto";
 import { PageShell } from "@/components/PageShell";
@@ -83,6 +84,7 @@ export default function HomePage() {
       </section>
 
       {/* Live Sports / What's On */}
+      <HalloweenTeaser locale="en" today={madridTodayYmd(agendaBuildNow())} />
       <FixtureStrip locale="en" windowOnly />
       <p className="mb-12 max-w-2xl text-sm text-cream-muted sm:text-base">
         More football:{" "}

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { PostMatchBanner } from "@/components/PostMatchBanner";
 import { FixtureList } from "@/components/FixtureList";
+import { HalloweenTeaser } from "@/components/HalloweenSol";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
 import { buildMetadata } from "@/lib/seo";
@@ -46,6 +47,7 @@ export default function WhatsOnPage() {
           </a>
         </p>
       ) : null}
+      <HalloweenTeaser locale="en" today={madridTodayYmd(agendaBuildNow())} />
       <FixtureList locale="en" />
 
       <Section title="Live sports at O'Connell St">
