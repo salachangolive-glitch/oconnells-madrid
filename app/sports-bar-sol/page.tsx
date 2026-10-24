@@ -53,11 +53,6 @@ export default function SportsBarSolPage() {
           talk the game through.
         </p>
       </Section>
-      <Section title="Also on the calendar">
-        <p>
-          On Sunday 8 November we are showing every NFL game of the day live.
-        </p>
-      </Section>
       <Section title="Find us">
         <p>
           {ADDRESS.full}, just off Puerta del Sol. {HOURS.summaryEn}.

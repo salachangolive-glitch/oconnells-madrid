@@ -11,7 +11,7 @@ import { SITE_NAME } from "@/lib/venue";
 export const metadata = buildMetadata({
   title: "Agenda — Deportes en directo | O'Connell St Madrid",
   description:
-    "Agenda de O'Connell St Madrid: deportes en directo confirmados con hora de Madrid. Fútbol, NFL, NBA, rugby, Fórmula 1, tenis y más cuando aparecen como Confirmado.",
+    "Agenda de O'Connell St Madrid: deportes en directo confirmados con hora de Madrid. Fútbol primero, y baloncesto, rugby, Fórmula 1, tenis y más cuando aparecen como Confirmado.",
   path: "/es/whats-on",
   locale: "es",
 });
@@ -55,7 +55,7 @@ export default function EsWhatsOnPage() {
         <p>
           O&apos;Connell St es un pub irlandés junto a Puerta del Sol — Espoz y
           Mina 7. Retransmitimos grandes eventos deportivos en nuestras
-          pantallas cuando están confirmados: fútbol, NFL, NBA, rugby, Fórmula 1,
+          pantallas cuando están confirmados: fútbol, NBA, rugby, Fórmula 1,
           tenis y más. Consulta Hoy y los próximos 7 días, o pregunta en
           la barra si buscas un evento concreto.
         </p>

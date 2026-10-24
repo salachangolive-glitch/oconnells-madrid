@@ -53,12 +53,6 @@ export default function EsSportsBarSolPage() {
           para comentar el partido.
         </p>
       </Section>
-      <Section title="También en el calendario">
-        <p>
-          El domingo 8 de noviembre emitimos en directo todos los partidos NFL
-          de la jornada.
-        </p>
-      </Section>
       <Section title="Cómo llegar">
         <p>
           {ADDRESS.full}, junto a Puerta del Sol. {HOURS.summaryEs}.

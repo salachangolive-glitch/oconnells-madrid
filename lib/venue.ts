@@ -75,13 +75,13 @@ export const HOURS = {
 /**
  * Public-safe facts for copy & JSON-LD.
  * INTERNAL (never on page): no terrace; no habitual live music; not an official
- * club/league partner; Thursday is commercially prioritised for Erasmus.
+ * club/league partner; Thursday is commercially prioritised for the international crowd.
  * GBP website field still localo.site — do not change GBP from this repo.
  */
 export const FACTS = {
   type: "Irish pub and sports bar",
   football: ["Premier League", "UEFA Champions League", "LaLiga"] as const,
-  otherSports: ["NFL", "NBA", "rugby", "F1", "tennis"] as const,
+  otherSports: ["basketball", "rugby", "F1", "tennis"] as const,
   thursdayShots: "Thursday €1 shots",
 } as const;
 

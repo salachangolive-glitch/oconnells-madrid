@@ -150,7 +150,7 @@ export function OktoberfestSol({ locale }: { locale: Locale }) {
             {live ? "Cuando vuelvas a Sol, aquí seguimos abiertos: " : "Horario: "}
             jueves de 18:00 a 03:00, viernes y sábado de 16:00 a 03:30 y domingo de
             14:00 a 03:00. Cerveza alemana de barril en la barra y ambiente internacional:
-            turistas, estudiantes Erasmus y gente de Madrid, en inglés, en español y
+            turistas, estudiantes y gente de Madrid, en inglés, en español y
             en muchos otros idiomas.
           </p>
         </Section>
@@ -158,7 +158,7 @@ export function OktoberfestSol({ locale }: { locale: Locale }) {
           <p>
             Premier League, LaLiga y Champions League en las pantallas
             {live
-              ? "; además, el partido de la NFL en Madrid el domingo 8 de noviembre y el España–Inglaterra el domingo 15 de noviembre, último día del Oktoberfest. "
+              ? "; además, el España–Inglaterra el domingo 15 de noviembre, último día del Oktoberfest. "
               : ". "}
             Las horas, en hora de Madrid, están en la{" "}
             <Link href={whatsOn} className={linkCls}>Agenda</Link>.
@@ -236,7 +236,7 @@ export function OktoberfestSol({ locale }: { locale: Locale }) {
             {live ? "Wenn ihr zurück in Sol seid, haben wir noch offen: " : "Öffnungszeiten: "}
             donnerstags 18:00–03:00 Uhr, freitags und samstags 16:00–03:30 Uhr,
             sonntags 14:00–03:00 Uhr. Deutsches Bier vom Fass an der Bar und ein bunt gemischtes
-            Publikum: Reisende, Erasmus-Studierende und Madrilenen – auf Englisch,
+            Publikum: Reisende, Studierende und Madrilenen – auf Englisch,
             Spanisch und in vielen anderen Sprachen.
           </p>
         </Section>
@@ -244,7 +244,7 @@ export function OktoberfestSol({ locale }: { locale: Locale }) {
           <p>
             Premier League, LaLiga und Champions League laufen auf den Screens
             {live
-              ? " – dazu das NFL-Spiel in Madrid am Sonntag, 8. November, und Spanien gegen England am Sonntag, 15. November, dem letzten Oktoberfest-Tag. "
+              ? " – dazu Spanien gegen England am Sonntag, 15. November, dem letzten Oktoberfest-Tag. "
               : ". "}
             Alle Anstoßzeiten in Madrider Zeit stehen unter{" "}
             <Link href="/whats-on" className={linkCls}>What&apos;s On</Link>.
@@ -326,7 +326,7 @@ export function OktoberfestSol({ locale }: { locale: Locale }) {
           {live ? "When you get back to Sol, we're still open: " : "Opening hours: "}
           Thursday 18:00–03:00, Friday and Saturday 16:00–03:30, Sunday
           14:00–03:00. German draught beer at the bar and an international crowd: visitors,
-          Erasmus students and people from Madrid, in English, Spanish and plenty of
+          students and people from Madrid, in English, Spanish and plenty of
           other languages.
         </p>
       </Section>
@@ -334,7 +334,7 @@ export function OktoberfestSol({ locale }: { locale: Locale }) {
         <p>
           Premier League, LaLiga and Champions League on the screens
           {live
-            ? ", plus the NFL Madrid Game on Sunday 8 November and Spain v England on Sunday 15 November, the last day of Oktoberfest. "
+            ? ", plus Spain v England on Sunday 15 November, the last day of Oktoberfest. "
             : ". "}
           Kick-off times, in Madrid time, are on{" "}
           <Link href={whatsOn} className={linkCls}>What&apos;s On</Link>.

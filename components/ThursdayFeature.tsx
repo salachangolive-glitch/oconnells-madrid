@@ -2,7 +2,7 @@ import Link from "next/link";
 
 type Locale = "en" | "es";
 
-/** Compact Thursday mention for Home and Erasmus. */
+/** Compact Thursday mention for Home and the international-crowd page. */
 export function ThursdayFeature({ locale = "en" }: { locale?: Locale }) {
   const href =
     locale === "es" ? "/es/thursday-1-euro-shots" : "/thursday-1-euro-shots";

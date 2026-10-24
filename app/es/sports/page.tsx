@@ -20,7 +20,7 @@ export default function EsSportsPage() {
       <PageHero
         eyebrow="Deportes en directo · Sol"
         title={`Deportes en directo en ${SITE_NAME}`}
-        lead="Pub irlandés junto a Puerta del Sol, con fútbol, NFL, NBA, rugby, Fórmula 1, tenis y otros deportes cuando la emisión está confirmada. Las horas están en la Agenda."
+        lead="Pub irlandés junto a Puerta del Sol, con fútbol, NBA, rugby, Fórmula 1, tenis y otros deportes cuando la emisión está confirmada. Las horas están en la Agenda."
       />
       <InteriorPhoto
         src="/images/interior/sports-aisle.webp"
@@ -63,10 +63,10 @@ export default function EsSportsPage() {
       />
       <Section title="Más allá del fútbol">
         <p>
-          NFL, NBA, rugby, Fórmula 1 y tenis se ponen cuando los estamos
-          emitiendo. Más sobre{" "}
+          Fútbol americano, NBA, rugby, Fórmula 1 y tenis se ponen cuando los
+          estamos emitiendo. Más sobre las{" "}
           <Link href="/es/nfl-madrid" className="text-gold underline">
-            ver la NFL en Madrid
+            noches de fútbol americano
           </Link>
           . Si te importa un partido concreto, pregunta en la barra o
           mira la{" "}

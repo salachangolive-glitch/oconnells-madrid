@@ -39,7 +39,7 @@ export default function EsAboutPage() {
         <p>
           Dentro hay una barra larga de madera con grifos de cerveza, asientos
           de barril, mesas bajo las televisiones y escaleras entre plantas. El
-          ambiente mezcla gente de Madrid, estudiantes Erasmus y visitantes de
+          ambiente mezcla gente de Madrid, estudiantes y visitantes de
           muchos países.
         </p>
       </Section>
@@ -51,7 +51,7 @@ export default function EsAboutPage() {
           en el centro, antes y durante el partido.
         </p>
         <p>
-          También hay otros deportes cuando se emiten: NFL, NBA, rugby,
+          También hay otros deportes cuando se emiten: fútbol americano, NBA, rugby,
           Fórmula 1 y tenis. Cada partido confirmado aparece en la{" "}
           <Link href="/es/whats-on" className="text-cream underline">
             Agenda
@@ -135,7 +135,7 @@ export default function EsAboutPage() {
           </Link>
           {" · "}
           <Link href="/es/erasmus" className="text-cream underline">
-            Erasmus
+            Ambiente internacional
           </Link>
         </p>
       </Section>

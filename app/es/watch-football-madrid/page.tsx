@@ -86,7 +86,7 @@ export default function EsWatchFootballPage() {
           </Link>
           ,{" "}
           <Link href="/es/nfl-madrid" className="text-cream underline">
-            NFL en Madrid
+            noches de fútbol americano
           </Link>
           ,{" "}
           <Link href="/es/sports-bar-sol" className="text-cream underline">

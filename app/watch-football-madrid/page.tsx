@@ -83,7 +83,7 @@ export default function WatchFootballPage() {
           </Link>
           ,{" "}
           <Link href="/nfl-madrid" className="text-cream underline">
-            NFL in Madrid
+            American football nights
           </Link>
           , our{" "}
           <Link href="/sports-bar-sol" className="text-cream underline">

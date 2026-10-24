@@ -104,8 +104,8 @@ export function FixtureStrip({
 
   const title = isEs ? "Deportes en directo" : "Live sports";
   const empty = isEs
-    ? "Retransmitimos grandes eventos deportivos durante la semana — fútbol, NFL, NBA, rugby, Fórmula 1 y tenis cuando su emisión está confirmada. Consulta la Agenda para los próximos 7 días."
-    : "We show major live sport throughout the week — football, NFL, NBA, rugby, Formula 1 and tennis when confirmed. Check What’s On for the next 7 days.";
+    ? "Retransmitimos grandes eventos deportivos durante la semana — fútbol, NBA, rugby, Fórmula 1 y tenis cuando su emisión está confirmada. Consulta la Agenda para los próximos 7 días."
+    : "We show major live sport throughout the week — football, NBA, rugby, Formula 1 and tennis when confirmed. Check What’s On for the next 7 days.";
   const moreHref = isEs ? "/es/whats-on" : "/whats-on";
   const more = isEs ? "Agenda" : "What's On";
   const cta = isEs ? "Cómo llegar" : "Get directions";

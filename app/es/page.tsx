@@ -150,11 +150,11 @@ export default function EsHomePage() {
 
       <section className="mb-12 max-w-2xl">
         <h2 className="font-serif text-xl font-bold text-cream">
-          Erasmus y visitantes
+          Turistas e internacionales
         </h2>
         <div className="pub-rule my-3" />
         <p className="text-sm text-cream-muted sm:text-base">
-          Estudiantes Erasmus, turistas y gente de fuera, a un paso de Sol.
+          Estudiantes, turistas y gente de fuera, a un paso de Sol.
           Los jueves, pregunta en la barra por los chupitos a 1 €.
         </p>
         <p className="mt-3">
@@ -162,7 +162,7 @@ export default function EsHomePage() {
             href="/es/erasmus"
             className="text-sm text-gold hover:text-cream"
           >
-            Erasmus en O&apos;Connell St →
+            Ambiente internacional en O&apos;Connell St →
           </Link>
         </p>
       </section>

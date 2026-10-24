@@ -38,7 +38,7 @@ export default function AboutPage() {
         <p>
           Inside there is a long wooden bar with beer taps, barrel seating,
           tables under wall TVs and stairs between floors. The crowd is a mix of
-          people from Madrid, Erasmus students and visitors from all over.
+          people from Madrid, students and visitors from all over.
         </p>
       </Section>
       <Section title="European football at Sol">
@@ -49,7 +49,7 @@ export default function AboutPage() {
           centre before and during the match.
         </p>
         <p>
-          Other sport goes on too when it is shown: NFL, NBA, rugby, Formula 1
+          Other sport goes on too when it is shown: American football, NBA, rugby, Formula 1
           and tennis. Every confirmed match is listed on{" "}
           <Link href="/whats-on" className="text-cream underline">
             What&apos;s On
@@ -132,7 +132,7 @@ export default function AboutPage() {
           </Link>
           {" · "}
           <Link href="/erasmus" className="text-cream underline">
-            Erasmus
+            International crowd
           </Link>
         </p>
       </Section>

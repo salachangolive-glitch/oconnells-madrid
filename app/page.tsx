@@ -48,7 +48,7 @@ export default function HomePage() {
         <HomeCtaBand locale="en" />
       </div>
 
-      {/* Presentación — parallel to ES; Erasmus stays in its own section */}
+      {/* Presentación — parallel to ES; visitors stay in their own section */}
       <section className="mb-12 max-w-2xl">
         <p className="text-sm leading-relaxed text-cream-muted sm:text-base">
           O&apos;Connell St is an Irish pub by Puerta del Sol, with live sports,
@@ -144,19 +144,19 @@ export default function HomePage() {
       {/* Thursday €1 — once */}
       <ThursdayFeature locale="en" />
 
-      {/* Erasmus */}
+      {/* Visitors */}
       <section className="mb-12 max-w-2xl">
         <h2 className="font-serif text-xl font-bold text-cream">
-          Erasmus and visitors
+          Visitors
         </h2>
         <div className="pub-rule my-3" />
         <p className="text-sm text-cream-muted sm:text-base">
-          Erasmus students, tourists and an international crowd, a short walk
-          from Puerta del Sol.
+          Students, tourists and an international crowd, a short walk from
+          Puerta del Sol.
         </p>
         <p className="mt-3">
           <Link href="/erasmus" className="text-sm text-gold hover:text-cream">
-            Erasmus at O&apos;Connell St →
+            International crowd at O&apos;Connell St →
           </Link>
         </p>
       </section>

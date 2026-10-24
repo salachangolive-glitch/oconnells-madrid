@@ -11,7 +11,7 @@ import { SITE_NAME } from "@/lib/venue";
 export const metadata = buildMetadata({
   title: "What's On — Live Sports | O'Connell St Madrid",
   description:
-    "What's On at O'Connell St Madrid: confirmed live sports with Madrid kickoff times. Football, NFL, NBA, rugby, Formula 1, tennis and more when marked Confirmed.",
+    "What's On at O'Connell St Madrid: confirmed live sports with Madrid kickoff times. Football first, plus basketball, rugby, Formula 1, tennis and more when marked Confirmed.",
   path: "/whats-on",
 });
 
@@ -54,7 +54,7 @@ export default function WhatsOnPage() {
         <p>
           O&apos;Connell St is an Irish pub by Puerta del Sol — Espoz y Mina 7.
           We put major live sport on our screens when it&apos;s confirmed:
-          football, NFL, NBA, rugby, Formula 1, tennis and more. See Today and the next 7 days on this page, or ask at the bar if you&apos;re
+          football, NBA, rugby, Formula 1, tennis and more. See Today and the next 7 days on this page, or ask at the bar if you&apos;re
           looking for a specific game.
         </p>
       </Section>

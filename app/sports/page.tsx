@@ -9,7 +9,7 @@ import { SITE_NAME } from "@/lib/venue";
 export const metadata = buildMetadata({
   title: "Live sports Madrid — Irish pub near Sol",
   description:
-    "O'Connell St near Sol shows major live sport when confirmed: football, NFL, NBA, rugby, Formula 1 and tennis. Check What's On.",
+    "O'Connell St near Sol shows major live sport when confirmed: football, basketball, rugby, Formula 1 and tennis. Check What's On.",
   path: "/sports",
 });
 
@@ -19,7 +19,7 @@ export default function SportsPage() {
       <PageHero
         eyebrow="Live sports · Sol"
         title={`Live sports at ${SITE_NAME}`}
-        lead="Irish pub near Puerta del Sol with confirmed football, NFL, NBA, rugby, Formula 1, tennis and other sport on the screens. Times are on What’s On."
+        lead="Irish pub near Puerta del Sol with confirmed football, NBA, rugby, Formula 1, tennis and other sport on the screens. Times are on What’s On."
       />
       <InteriorPhoto
         src="/images/interior/sports-aisle.webp"
@@ -62,10 +62,10 @@ export default function SportsPage() {
       />
       <Section title="Beyond football">
         <p>
-          NFL, NBA, rugby, Formula 1 and tennis go on when we are showing them.
-          More on{" "}
+          American football, NBA, rugby, Formula 1 and tennis go on when we are
+          showing them. More on{" "}
           <Link href="/nfl-madrid" className="text-gold underline">
-            watching NFL in Madrid
+            American football nights
           </Link>
           . For one specific match, ask at the bar or check{" "}
           <Link href="/whats-on" className="text-gold underline">
