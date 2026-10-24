@@ -4,6 +4,7 @@ import { preload } from "react-dom";
 const HERO_SRCSET = [
   "/images/hero-fachada-480w.webp 480w",
   "/images/hero-fachada-720w.webp 720w",
+  "/images/hero-fachada-780w.webp 780w",
   "/images/hero-fachada-960w.webp 960w",
   "/images/hero-fachada-desktop.webp 1200w",
 ].join(", ");

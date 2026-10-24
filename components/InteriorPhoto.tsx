@@ -1,4 +1,52 @@
-import Image from "next/image";
+/** Interior photos with pre-sized copies (name-320w/480w/640w/780w.webp). */
+const RESPONSIVE = new Set([
+  "/images/interior/bar-corner.webp",
+  "/images/interior/bar-taps.webp",
+  "/images/interior/sports-aisle.webp",
+  "/images/interior/about-salon.webp",
+  "/images/interior/stairs-levels.webp",
+]);
+
+function srcSetFor(src: string): string | undefined {
+  if (!RESPONSIVE.has(src)) return undefined;
+  const base = src.replace(/\.webp$/, "");
+  return [320, 480, 640, 780]
+    .map((w) => `${base}-${w}w.webp ${w}w`)
+    .concat(`${src} 1050w`)
+    .join(", ");
+}
+
+/** Plain <img> filling its box (static export has no image optimizer). */
+function FillImg({
+  src,
+  alt,
+  sizes,
+  priority,
+  className,
+}: {
+  src: string;
+  alt: string;
+  sizes: string;
+  priority?: boolean;
+  className: string;
+}) {
+  const srcSet = srcSetFor(src);
+  return (
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src={src}
+      srcSet={srcSet}
+      sizes={srcSet ? sizes : undefined}
+      alt={alt}
+      width={1050}
+      height={1400}
+      loading={priority ? undefined : "lazy"}
+      fetchPriority={priority ? "high" : undefined}
+      decoding="async"
+      className={`absolute inset-0 h-full w-full ${className}`}
+    />
+  );
+}
 
 type Props = {
   src: string;
@@ -29,10 +77,9 @@ export function InteriorPhoto({
         className={`relative w-full overflow-hidden bg-pub-burgundy-deep ${className}`}
       >
         <div className="relative mx-auto aspect-[3/4] w-full max-h-[85vh] max-w-3xl sm:aspect-[4/5] sm:max-h-[90vh]">
-          <Image
+          <FillImg
             src={src}
             alt={alt}
-            fill
             priority={priority}
             sizes="(max-width: 768px) 100vw, 768px"
             className={`object-contain ${position}`}
@@ -47,11 +94,9 @@ export function InteriorPhoto({
       <figure
         className={`relative aspect-[3/4] overflow-hidden rounded-lg border border-cream/10 bg-pub-burgundy-deep ${className}`}
       >
-        <Image
+        <FillImg
           src={src}
           alt={alt}
-          fill
-          loading="lazy"
           sizes="(max-width: 640px) 50vw, 280px"
           className={`object-cover ${position}`}
         />
@@ -65,12 +110,10 @@ export function InteriorPhoto({
       className={`relative mb-10 overflow-hidden rounded-xl border border-cream/15 bg-pub-burgundy-deep shadow-lg shadow-black/40 ${className}`}
     >
       <div className="relative aspect-[3/4] w-full sm:aspect-[4/5] md:mx-auto md:max-w-xl">
-        <Image
+        <FillImg
           src={src}
           alt={alt}
-          fill
           priority={priority}
-          loading={priority ? undefined : "lazy"}
           sizes="(max-width: 768px) 100vw, 576px"
           className={`object-contain sm:object-cover ${position}`}
         />
