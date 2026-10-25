@@ -141,6 +141,7 @@ export const EN_PATHS = [
   "/nfl-madrid",
   "/news/bayern-fans-madrid-pre-match-meeting-point",
   "/news/bayern-fans-things-to-do-near-sol",
+  "/news/duran-duran-madrid-gig-night-sol",
   "/oktoberfest-madrid-sol",
   "/halloween-madrid-sol",
   "/menu",
