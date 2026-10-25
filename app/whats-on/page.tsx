@@ -47,6 +47,17 @@ export default function WhatsOnPage() {
           </a>
         </p>
       ) : null}
+      {/* Concerts (DG 25 Oct; times per movistararena.es): build-time date gates, each line gone from the daily rebuild after its date. */}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-06" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          Duran Duran at the Movistar Arena, Friday 6 November, 21:00: meet at O&apos;Connell St, near Sol, before or after the concert.
+        </p>
+      ) : null}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-10" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          Bryan Adams «Roll with the Punches» at the Movistar Arena, Tuesday 10 November, 20:30: meet at O&apos;Connell St, near Sol, before or after the concert.
+        </p>
+      ) : null}
       <HalloweenTeaser locale="en" today={madridTodayYmd(agendaBuildNow())} />
       <FixtureList locale="en" />
 
