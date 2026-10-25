@@ -38,12 +38,12 @@ export default function WhatsOnPage() {
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-03" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">
           Atlético v Bayern, Tuesday 3 November, 21:00:{" "}
-          <Link href="/news/bayern-fans-madrid-pre-match-meeting-point" className="text-gold underline">
-            Bayern fans meeting point and the build-up by Sol
+          <Link href="/news/bayern-fans-things-to-do-near-sol" className="text-gold underline">
+            Bayern fans: two hours around Sol before you meet up
           </Link>
           {" · "}
-          <a href="/de/bayern-fans-madrid-treffpunkt" hrefLang="de" lang="de" className="text-gold underline">
-            Treffpunkt für Bayern-Fans (Deutsch)
+          <a href="/de/bayern-fans-madrid-sol-entdecken" hrefLang="de" lang="de" className="text-gold underline">
+            Zwei Stunden rund um die Sol (Deutsch)
           </a>
         </p>
       ) : null}

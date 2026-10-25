@@ -16,16 +16,20 @@ function oktAlternates(base: string, path: string) {
   };
 }
 
-const BAYERN_GROUP = HREFLANG_GROUPS["/news/bayern-fans-madrid-pre-match-meeting-point"];
+const BAYERN_GROUPS = [
+  HREFLANG_GROUPS["/news/bayern-fans-madrid-pre-match-meeting-point"],
+  HREFLANG_GROUPS["/news/bayern-fans-things-to-do-near-sol"],
+];
 
-/** Bayern fans article: en/de/x-default alternates. */
+/** Bayern fans articles: en/de/x-default alternates. */
 function bayernAlternates(base: string, path: string) {
-  if (!BAYERN_GROUP?.de || ![BAYERN_GROUP.en, BAYERN_GROUP.de].includes(path)) return undefined;
+  const g = BAYERN_GROUPS.find((x) => x?.de && [x.en, x.de].includes(path));
+  if (!g?.de) return undefined;
   return {
     languages: {
-      en: `${base}${BAYERN_GROUP.en}`,
-      de: `${base}${BAYERN_GROUP.de}`,
-      "x-default": `${base}${BAYERN_GROUP.en}`,
+      en: `${base}${g.en}`,
+      de: `${base}${g.de}`,
+      "x-default": `${base}${g.en}`,
     },
   };
 }

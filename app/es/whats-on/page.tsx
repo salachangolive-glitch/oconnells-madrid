@@ -39,11 +39,11 @@ export default function EsWhatsOnPage() {
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-03" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">
           Atlético–Bayern, martes 3 de noviembre, 21:00 (artículos para la afición del Bayern):{" "}
-          <Link href="/news/bayern-fans-madrid-pre-match-meeting-point" className="text-gold underline">
+          <Link href="/news/bayern-fans-things-to-do-near-sol" className="text-gold underline">
             en inglés
           </Link>
           {" · "}
-          <a href="/de/bayern-fans-madrid-treffpunkt" hrefLang="de" lang="de" className="text-gold underline">
+          <a href="/de/bayern-fans-madrid-sol-entdecken" hrefLang="de" lang="de" className="text-gold underline">
             en alemán
           </a>
         </p>

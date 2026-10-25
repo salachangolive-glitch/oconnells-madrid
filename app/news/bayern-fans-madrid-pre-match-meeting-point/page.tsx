@@ -102,6 +102,10 @@ export default function NewsBayernFansPreMatchPage() {
           <Link href="/whats-on" className="text-cream underline">
             What&apos;s On
           </Link>
+          {" · "}
+          <Link href="/news/bayern-fans-things-to-do-near-sol" className="text-cream underline">
+            Next: two hours around Sol
+          </Link>
         </p>
       </Section>
     </PageShell>

@@ -104,6 +104,10 @@ export default function DeBayernFansTreffpunktPage() {
           <Link href="/de/sports-bar-sol" className="text-cream underline">
             Sports Pub an der Sol
           </Link>
+          {" · "}
+          <Link href="/de/bayern-fans-madrid-sol-entdecken" className="text-cream underline">
+            Weiter: Zwei Stunden rund um die Sol
+          </Link>
         </p>
       </Section>
     </PageShell>
