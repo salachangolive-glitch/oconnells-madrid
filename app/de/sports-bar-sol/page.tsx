@@ -6,9 +6,9 @@ import { buildMetadata } from "@/lib/seo";
 import { ADDRESS, HOURS, SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
-  title: "Treffpunkt Sol: Atlético–Bayern live im Sports Pub",
+  title: "Atlético–Bayern live: ein Irish Pub nahe Sol, um sich vor dem Spiel zu treffen",
   description:
-    "Bayern-Fans in Madrid: Treffpunkt an der Puerta del Sol vor und nach Atlético–Bayern. Dienstag 3. November 2026, 21:00 Uhr, live bei O'Connell St.",
+    "Bayern-Fans in Madrid: ein Irish Pub nahe Sol, um sich vor dem Spiel Atlético–Bayern zu treffen. Dienstag 3. November 2026, 21:00 Uhr, live bei O'Connell St.",
   path: "/de/sports-bar-sol",
   locale: "de",
 });
@@ -18,8 +18,8 @@ export default function DeSportsBarSolPage() {
     <PageShell locale="de" altLangHref="/sports-bar-sol">
       <PageHero
         eyebrow="Champions League · Madrid"
-        title="Treffpunkt für Fans: Sports Pub an der Puerta del Sol"
-        lead={`${SITE_NAME} liegt in der Calle de Espoz y Mina 7, gleich an der Puerta del Sol — zentraler Treffpunkt vor dem Spiel, live auf den Screens und danach wieder im Zentrum.`}
+        title="Ein Irish Pub nahe Sol, um sich vor dem Spiel zu treffen"
+        lead={`${SITE_NAME} liegt in der Calle de Espoz y Mina 7, gleich an der Puerta del Sol — ein Irish Pub nahe Sol, um sich vor dem Spiel zu treffen, live auf den Screens und danach wieder im Zentrum.`}
       />
       <InteriorPhoto
         src="/images/interior/sports-aisle.webp"
@@ -36,7 +36,7 @@ export default function DeSportsBarSolPage() {
       </Section>
       <Section title="Warum Sol?">
         <p>
-          Die Puerta del Sol ist der praktische Treffpunkt im Zentrum: leicht
+          Die Puerta del Sol ist der praktische Ort im Zentrum, um sich zu verabreden: leicht
           zu finden, gut angebunden, und nach dem Spiel wieder der natürliche
           Ort, um zusammenzukommen. O&apos;Connell St ist ein irischer Sports
           Pub genau dort — Screens und Platz zum Stehen und Sitzen.
@@ -49,7 +49,7 @@ export default function DeSportsBarSolPage() {
           .
         </p>
       </Section>
-      <Section title="Bier, Fußball und Treffpunkt an der Puerta del Sol">
+      <Section title="Bier und Fußball an der Puerta del Sol">
         <p>
           Ob ihr für Atlético – Bayern am Dienstag, 3. November (21:00 Uhr Madrider
           Zeit, Metropolitano) in der Stadt seid oder einfach ein paar Tage Madrid

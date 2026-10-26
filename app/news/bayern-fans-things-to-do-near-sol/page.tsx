@@ -69,7 +69,7 @@ export default function NewsBayernFansNearSolPage() {
           .
         </p>
       </Section>
-      <Section title="Three Irish pubs, one meeting point">
+      <Section title="Three Irish pubs near Sol to meet up before the match">
         <ul className="list-disc space-y-1 pl-5">
           <li>O&apos;Connell St · Calle de Espoz y Mina 7</li>
           <li>Dubliners · Calle de Espoz y Mina 7, the same address</li>
@@ -97,7 +97,7 @@ export default function NewsBayernFansNearSolPage() {
           </Link>
           {" · "}
           <Link href="/news/bayern-fans-madrid-pre-match-meeting-point" className="text-cream underline">
-            Bayern fans meeting point by Sol
+            Bayern fans: an Irish pub near Sol to meet up before the match
           </Link>
           {" · "}
           <Link href="/whats-on" className="text-cream underline">

@@ -66,7 +66,7 @@ export default function NewsBayernFansTimingPage() {
           .
         </p>
       </Section>
-      <Section title="Three Irish pubs, one meeting point">
+      <Section title="Three Irish pubs near Sol to meet up before the match">
         <ul className="list-disc space-y-1 pl-5">
           <li>O&apos;Connell St · Calle de Espoz y Mina 7</li>
           <li>Dubliners · Calle de Espoz y Mina 7, same address</li>

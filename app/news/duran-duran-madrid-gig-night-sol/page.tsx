@@ -6,7 +6,7 @@ import { buildMetadata } from "@/lib/seo";
 import { MAPS_URL } from "@/lib/venue";
 
 export const metadata = buildMetadata({
-  title: "Duran Duran in Madrid, Fri 6 Nov: gig night meeting point by Sol",
+  title: "Duran Duran in Madrid, Fri 6 Nov: an Irish pub near Sol to meet up before the gig",
   description:
     "Going to Duran Duran's Free To Love Tour at the Movistar Arena, Friday 6 November 2026, 21:00? Meet at O'Connell St, Espoz y Mina 7 by Puerta del Sol, before or after the show.",
   path: "/news/duran-duran-madrid-gig-night-sol",
@@ -63,7 +63,7 @@ export default function NewsDuranDuranGigNightPage() {
           When the encore is done, take Line 2 back to Sol and walk round the
           corner to Espoz y Mina 7. On Fridays O&apos;Connell St stays open
           until 03:30, so there&apos;s time to talk through the setlist with
-          the rest of the group. It&apos;s a fans meeting point for the night,
+          the rest of the group. It&apos;s an Irish pub near Sol to meet up before the gig,
           wherever you came from.
         </p>
         <p>

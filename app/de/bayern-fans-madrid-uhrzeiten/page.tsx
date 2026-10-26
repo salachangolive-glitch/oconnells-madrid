@@ -8,7 +8,7 @@ import { MAPS_URL } from "@/lib/venue";
 const EN_PATH = "/news/bayern-fans-madrid-timing";
 
 export const metadata = buildMetadata({
-  title: "Bayern Fans Madrid: Uhrzeiten, Abendessen & Treffpunkt vor 21:00 Uhr",
+  title: "Bayern Fans Madrid: Uhrzeiten, Abendessen & ein Irish Pub nahe Sol, um sich vor dem Spiel um 21:00 Uhr zu treffen",
   description:
     "Madrid tickt anders: Abendessen spät, Anstoß Atlético – Bayern um 21:00 Uhr (Di 3. November). Wann sich die Truppe an der Puerta del Sol trifft – O'Connell St öffnet um 18:00 Uhr.",
   path: "/de/bayern-fans-madrid-uhrzeiten",
@@ -69,7 +69,7 @@ export default function DeBayernFansUhrzeitenPage() {
           .
         </p>
       </Section>
-      <Section title="Drei Irish Pubs, ein Treffpunkt">
+      <Section title="Drei Irish Pubs nahe Sol, um sich vor dem Spiel zu treffen">
         <ul className="list-disc space-y-1 pl-5">
           <li>O&apos;Connell St · Calle de Espoz y Mina 7</li>
           <li>Dubliners · Calle de Espoz y Mina 7, gleiche Adresse</li>
@@ -101,7 +101,7 @@ export default function DeBayernFansUhrzeitenPage() {
           </Link>
           {" · "}
           <Link href="/de/bayern-fans-madrid-treffpunkt" className="text-cream underline">
-            Treffpunkt für Bayern-Fans an der Sol
+            Bayern-Fans: ein Irish Pub nahe Sol, um sich vor dem Spiel zu treffen
           </Link>
         </p>
       </Section>

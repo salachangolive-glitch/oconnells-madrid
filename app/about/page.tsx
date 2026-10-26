@@ -45,8 +45,8 @@ export default function AboutPage() {
         <p>
           Football is the heart of the place. We show the Premier League, the
           UEFA Champions League and LaLiga, with the game on the projector and 9
-          screens. On big European nights the pub is a meeting point in the
-          centre before and during the match.
+          screens. On big European nights it&apos;s an Irish pub near Sol to meet up
+          before the match, and to watch it live.
         </p>
         <p>
           Other sport goes on too when it is shown: American football, NBA, rugby, Formula 1

@@ -93,8 +93,8 @@ export function HalloweenSol({ locale }: { locale: "en" | "es" }) {
       <Section title={es ? "Quedad en Sol con vuestro grupo" : "Meet your friends at Sol"}>
         <p>
           {es
-            ? "Sol es el punto de encuentro más fácil del centro: llega el Metro (líneas 1, 2 y 3) y Cercanías. Quedad en la plaza, venid disfrazados y empezad aquí la noche de Halloween con vuestro grupo de amigos."
-            : "Sol is the easiest meeting point in the centre, with Metro lines 1, 2 and 3 and Cercanías trains. Meet in the square, come in costume and start Halloween night here with your group of friends."}
+            ? "Sol es el sitio más fácil del centro para quedar: llega el Metro (líneas 1, 2 y 3) y Cercanías. Quedad en la plaza, venid disfrazados y empezad aquí la noche de Halloween con vuestro grupo de amigos."
+            : "Sol is the easiest place in the centre to meet up, with Metro lines 1, 2 and 3 and Cercanías trains. Meet in the square, come in costume and start Halloween night here with your group of friends."}
         </p>
         <p>
           {es ? "Se entra directamente, por orden de llegada." : "Just walk in, first come, first served."}

@@ -40,7 +40,7 @@ export default function DeBayernFansSolEntdeckenPage() {
           aus die spanischen Nationalstraßen gemessen werden – das Foto mit
           den Füßen darauf gehört dazu. Ein paar Meter weiter steht der Bär
           mit dem Erdbeerbaum, das Wappentier der Stadt und der
-          Treffpunkt-Klassiker der Madrilenen.
+          Klassiker, wenn sich Madrilenen verabreden.
         </p>
       </Section>
       <Section title="Calle Mayor und Plaza Mayor">
@@ -73,7 +73,7 @@ export default function DeBayernFansSolEntdeckenPage() {
           .
         </p>
       </Section>
-      <Section title="Drei Irish Pubs, ein Treffpunkt">
+      <Section title="Drei Irish Pubs nahe Sol, um sich vor dem Spiel zu treffen">
         <ul className="list-disc space-y-1 pl-5">
           <li>O&apos;Connell St · Calle de Espoz y Mina 7</li>
           <li>Dubliners · Calle de Espoz y Mina 7, gleiche Adresse</li>
@@ -102,7 +102,7 @@ export default function DeBayernFansSolEntdeckenPage() {
           </Link>
           {" · "}
           <Link href="/de/bayern-fans-madrid-treffpunkt" className="text-cream underline">
-            Treffpunkt für Bayern-Fans an der Sol
+            Bayern-Fans: ein Irish Pub nahe Sol, um sich vor dem Spiel zu treffen
           </Link>
           {" · "}
           <Link href="/de/sports-bar-sol" className="text-cream underline">

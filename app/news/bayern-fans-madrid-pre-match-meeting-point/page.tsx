@@ -8,9 +8,9 @@ import { MAPS_URL } from "@/lib/venue";
 const DE_PATH = "/de/bayern-fans-madrid-treffpunkt";
 
 export const metadata = buildMetadata({
-  title: "Where to watch Atlético v Bayern in Madrid: Bayern fans meeting point by Sol",
+  title: "Where to watch Atlético v Bayern in Madrid: an Irish pub near Sol to meet up before the match",
   description:
-    "Bayern fans in Madrid for Atlético v Bayern, Tue 3 Nov, 21:00: spend the build-up in the centre. A pre-match meeting point by Puerta del Sol, and the game live on our screens.",
+    "Bayern fans in Madrid for Atlético v Bayern, Tue 3 Nov, 21:00: spend the build-up in the centre. An Irish pub near Sol to meet up before the match, and the game live on our screens.",
   path: "/news/bayern-fans-madrid-pre-match-meeting-point",
 });
 
@@ -20,7 +20,7 @@ export default function NewsBayernFansPreMatchPage() {
       <PageHero
         eyebrow="Champions League · Tuesday 3 November 2026 · 21:00"
         title="Bayern fans in Madrid: the build-up starts in the centre"
-        lead="Atlético Madrid v Bayern Munich kicks off at 21:00 Madrid time at the Riyadh Air Metropolitano. The hours before belong to the city centre: red shirts around Puerta del Sol, songs in German and Spanish, and a meeting point a few steps from the square."
+        lead="Atlético Madrid v Bayern Munich kicks off at 21:00 Madrid time at the Riyadh Air Metropolitano. The hours before belong to the city centre: red shirts around Puerta del Sol, songs in German and Spanish, and an Irish pub a few steps from the square to meet up before the match."
       />
       <InteriorPhoto
         src="/images/interior/football-seating.webp"
@@ -29,7 +29,7 @@ export default function NewsBayernFansPreMatchPage() {
       />
       <p className="mb-8 text-sm text-cream-muted">
         <a href={DE_PATH} hrefLang="de" lang="de" className="text-gold underline">
-          Auf Deutsch lesen: Treffpunkt für Bayern-Fans an der Puerta del Sol
+          Auf Deutsch lesen: ein Irish Pub nahe Sol, um sich vor dem Spiel zu treffen
         </a>
       </p>
       <Section title="The match">
@@ -58,7 +58,7 @@ export default function NewsBayernFansPreMatchPage() {
           stadium later or staying to watch here.
         </p>
       </Section>
-      <Section title="Three Irish pubs, one meeting point">
+      <Section title="Three Irish pubs near Sol to meet up before the match">
         <p>
           Big group, or friends arriving at different times? There are three
           Irish pubs to meet at, all in the centre:
@@ -69,7 +69,7 @@ export default function NewsBayernFansPreMatchPage() {
           <li>O&apos;Reilly&apos;s · 200 m from Puerta del Sol</li>
         </ul>
         <p>
-          Pick one as your Treffpunkt, share the pin and the rest of the group
+          Pick one, share the pin and the rest of the group
           will find you. Atleti fans are just as welcome: a Champions League
           night is better with both sides in the room.
         </p>

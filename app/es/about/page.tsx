@@ -47,8 +47,8 @@ export default function EsAboutPage() {
         <p>
           El fútbol es el centro del local. Ponemos la Premier League, la UEFA
           Champions League y LaLiga, con el partido en el proyector y 9
-          pantallas. En las grandes noches europeas el pub es punto de encuentro
-          en el centro, antes y durante el partido.
+          pantallas. En las grandes noches europeas es un pub en Sol para quedar
+          antes del partido y verlo en directo.
         </p>
         <p>
           También hay otros deportes cuando se emiten: fútbol americano, NBA, rugby,

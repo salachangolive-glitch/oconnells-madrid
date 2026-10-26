@@ -44,8 +44,8 @@ export default function EsWatchFootballPage() {
       <Section title="Getafe–Brighton · jueves 5 de noviembre, 21:00">
         <p>
           ¿Vienes con los aficionados ingleses o del Getafe? O&apos;Connell St es
-          un pub irlandés junto a Sol: punto de encuentro en el centro antes de ir
-          a Getafe y para volver después. Emitimos el partido en directo.
+          un pub irlandés en Sol para quedar antes de ir a Getafe y para volver
+          después. Emitimos el partido en directo.
         </p>
       </Section>
       <Section title="Preguntas frecuentes">

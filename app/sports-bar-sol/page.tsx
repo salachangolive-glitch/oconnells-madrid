@@ -8,7 +8,7 @@ import { ADDRESS, HOURS, MAPS_URL, SITE_NAME } from "@/lib/venue";
 export const metadata = buildMetadata({
   title: "Sports bar in Sol, Madrid — football nights",
   description:
-    "Sports bar just off Puerta del Sol at Calle de Espoz y Mina 7: football on the screens and a meeting point before and after the match. Kickoff times on What's On.",
+    "Sports bar just off Puerta del Sol at Calle de Espoz y Mina 7: football on the screens, and an Irish pub near Sol to meet up before the match. Kickoff times on What's On.",
   path: "/sports-bar-sol",
 });
 
@@ -18,7 +18,7 @@ export default function SportsBarSolPage() {
       <PageHero
         eyebrow="Sports pub · Puerta del Sol"
         title="A sports bar in Sol for football nights"
-        lead={`${SITE_NAME} sits on Calle de Espoz y Mina 7, just off Puerta del Sol — a central Madrid meeting point for football, pre-match drinks and post-match talk.`}
+        lead={`${SITE_NAME} sits on Calle de Espoz y Mina 7, just off Puerta del Sol — an Irish pub near Sol to meet up before the match, with football on the screens and post-match talk.`}
       />
       <InteriorPhoto
         src="/images/interior/sports-aisle.webp"
@@ -30,8 +30,8 @@ export default function SportsBarSolPage() {
           When a Champions League night is on, Sol is where many fans gather
           before heading to the stadium and where they come back afterwards.
           O&apos;Connell St is an Irish sports pub in that same stretch of the
-          centre: come in, grab a screen, and use it as your meeting point for
-          the evening.
+          centre: come in, grab a screen, and make it the place to meet up
+          before the game.
         </p>
         <p>
           Confirmed kickoff times for Madrid are always on{" "}
