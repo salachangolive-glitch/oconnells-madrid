@@ -19,6 +19,7 @@ function oktAlternates(base: string, path: string) {
 const BAYERN_GROUPS = [
   HREFLANG_GROUPS["/news/bayern-fans-madrid-pre-match-meeting-point"],
   HREFLANG_GROUPS["/news/bayern-fans-things-to-do-near-sol"],
+  HREFLANG_GROUPS["/news/bayern-fans-madrid-timing"],
 ];
 
 /** Bayern fans articles: en/de/x-default alternates. */

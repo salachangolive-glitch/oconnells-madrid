@@ -141,6 +141,7 @@ export const EN_PATHS = [
   "/nfl-madrid",
   "/news/bayern-fans-madrid-pre-match-meeting-point",
   "/news/bayern-fans-things-to-do-near-sol",
+  "/news/bayern-fans-madrid-timing",
   "/news/duran-duran-madrid-gig-night-sol",
   "/oktoberfest-madrid-sol",
   "/halloween-madrid-sol",
@@ -179,6 +180,7 @@ export const DE_PATHS = [
   "/de/oktoberfest-madrid-sol",
   "/de/bayern-fans-madrid-treffpunkt",
   "/de/bayern-fans-madrid-sol-entdecken",
+  "/de/bayern-fans-madrid-uhrzeiten",
 ] as const;
 
 export const ALL_CONTENT_PATHS = [...EN_PATHS, ...ES_PATHS, ...DE_PATHS] as const;
@@ -229,6 +231,10 @@ export const HREFLANG_GROUPS: Record<
   "/news/bayern-fans-things-to-do-near-sol": {
     en: "/news/bayern-fans-things-to-do-near-sol",
     de: "/de/bayern-fans-madrid-sol-entdecken",
+  },
+  "/news/bayern-fans-madrid-timing": {
+    en: "/news/bayern-fans-madrid-timing",
+    de: "/de/bayern-fans-madrid-uhrzeiten",
   },
 };
 

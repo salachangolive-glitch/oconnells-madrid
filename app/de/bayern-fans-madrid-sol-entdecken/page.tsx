@@ -108,6 +108,10 @@ export default function DeBayernFansSolEntdeckenPage() {
           <Link href="/de/sports-bar-sol" className="text-cream underline">
             Sports Pub an der Sol
           </Link>
+          {" · "}
+          <Link href="/de/bayern-fans-madrid-uhrzeiten" className="text-cream underline">
+            Weiter: Madrid tickt anders
+          </Link>
         </p>
       </Section>
     </PageShell>

@@ -103,6 +103,10 @@ export default function NewsBayernFansNearSolPage() {
           <Link href="/whats-on" className="text-cream underline">
             What&apos;s On
           </Link>
+          {" · "}
+          <Link href="/news/bayern-fans-madrid-timing" className="text-cream underline">
+            Next: Madrid timing for match night
+          </Link>
         </p>
       </Section>
     </PageShell>
