@@ -59,6 +59,11 @@ export default function EsHomePage() {
           deportes en directo, gente de muchos países y chupitos a 1 € los
           jueves.
         </p>
+        <p className="mt-3">
+          <Link href="/es/nfl-madrid" className="text-sm text-gold hover:text-cream">
+            NFL en Madrid
+          </Link>
+        </p>
       </section>
 
       {/* Pub cerca de la Puerta del Sol — relevancia landing Ads (19 oct) */}

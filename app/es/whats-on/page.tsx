@@ -81,6 +81,11 @@ export default function EsWhatsOnPage() {
           tenis y más. Consulta Hoy y los próximos 7 días, o pregunta en
           la barra si buscas un evento concreto.
         </p>
+        <p>
+          <Link href="/es/nfl-madrid" className="text-gold underline">
+            NFL en Madrid
+          </Link>
+        </p>
       </Section>
 
 

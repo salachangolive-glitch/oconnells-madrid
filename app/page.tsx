@@ -54,6 +54,11 @@ export default function HomePage() {
           O&apos;Connell St is an Irish pub by Puerta del Sol, with live sports,
           an international crowd, and €1 shots on Thursdays.
         </p>
+        <p className="mt-3">
+          <Link href="/nfl-madrid" className="text-sm text-gold hover:text-cream">
+            NFL in Madrid
+          </Link>
+        </p>
       </section>
 
       {/* Pub near Puerta del Sol — Ads landing relevance (19 Oct) */}

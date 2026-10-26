@@ -83,6 +83,11 @@ export default function WhatsOnPage() {
           football, NBA, rugby, Formula 1, tennis and more. See Today and the next 7 days on this page, or ask at the bar if you&apos;re
           looking for a specific game.
         </p>
+        <p>
+          <Link href="/nfl-madrid" className="text-gold underline">
+            NFL in Madrid
+          </Link>
+        </p>
       </Section>
 
 
