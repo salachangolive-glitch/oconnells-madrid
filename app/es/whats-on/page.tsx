@@ -59,6 +59,17 @@ export default function EsWhatsOnPage() {
           Bryan Adams «Roll with the Punches» en el Movistar Arena, martes 10 de noviembre, 20:30: queda en O&apos;Connell St, cerca de Sol, antes o después del concierto.
         </p>
       ) : null}
+      {/* Real Madrid Femenino UWCL (DG 26 Oct; times per match.uefa.com + realmadrid.com): build-time date gates, each line gone from the daily rebuild after its date. */}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-10" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          Champions femenina: Real Madrid–Paris FC, martes 10 de noviembre, 18:45 (Di Stéfano), en directo cerca de Sol.
+        </p>
+      ) : null}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-18" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          Champions femenina: Real Madrid–Inter, miércoles 18 de noviembre, 18:45 (Di Stéfano), en directo cerca de Sol.
+        </p>
+      ) : null}
       <HalloweenTeaser locale="es" today={madridTodayYmd(agendaBuildNow())} />
       <FixtureList locale="es" />
 
