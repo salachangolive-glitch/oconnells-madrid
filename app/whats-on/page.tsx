@@ -65,7 +65,7 @@ export default function WhatsOnPage() {
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-10" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">
           Women&apos;s Champions League: Real Madrid v Paris FC, Tuesday 10 November, 18:45 (Di Stéfano), live near Sol.{" "}
-          <span lang="fr">Supporters du Paris FC : rendez-vous à O&apos;Connell St, près de Sol.</span>
+          <span lang="fr">Supporters du Paris FC : O&apos;Connell St, un pub près de Sol pour se retrouver avant le match.</span>
         </p>
       ) : null}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-18" ? (
