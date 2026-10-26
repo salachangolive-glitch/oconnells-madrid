@@ -70,6 +70,12 @@ export default function EsWhatsOnPage() {
           Champions femenina: Real Madrid–Inter, miércoles 18 de noviembre, 18:45 (Di Stéfano), en directo cerca de Sol.
         </p>
       ) : null}
+      {/* España–Inglaterra, Liga de Naciones (DG 26 Oct vía Radar; hora según match.uefa.com id 2047904, 19:45Z = 20:45 CET; fecha según rfef.es): build-time date gate, gone from the 16 Nov daily rebuild. Canal por confirmar hasta que RTVE lo publique. */}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-15" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          Liga de Naciones: España–Inglaterra, domingo 15 de noviembre, 20:45 (Riyadh Air Metropolitano), en directo cerca de Sol. Canal: por confirmar.
+        </p>
+      ) : null}
       <HalloweenTeaser locale="es" today={madridTodayYmd(agendaBuildNow())} />
       <FixtureList locale="es" />
 
