@@ -69,13 +69,6 @@ function newsAlternates(base: string, path: string) {
   };
 }
 
-/** German-only pages (no EN/ES twin): self de alternate. */
-function deOnlyAlternates(base: string, path: string) {
-  if (!path.startsWith("/de/")) return undefined;
-  if (Object.values(HREFLANG_GROUPS).some((g) => g.de === path)) return undefined;
-  return { languages: { de: `${base}${path}` } };
-}
-
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -88,7 +81,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...(bayernAlternates(base, path) ? { alternates: bayernAlternates(base, path) } : {}),
     ...(oktAlternates(base, path) ? { alternates: oktAlternates(base, path) } : {}),
     ...(homeAlternates(base, path) ? { alternates: homeAlternates(base, path) } : {}),
-    ...(deOnlyAlternates(base, path) ? { alternates: deOnlyAlternates(base, path) } : {}),
     lastModified: now,
     changeFrequency: path === "/" || path === "/es" ? "weekly" : "monthly",
     priority: path === "/" || path === "/es" ? 1 : path.includes("thursday") ? 0.9 : 0.7,

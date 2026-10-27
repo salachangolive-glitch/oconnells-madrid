@@ -79,15 +79,6 @@ export default function WhatsOnPage() {
           UEFA Nations League: Spain v England, Sunday 15 November, 20:45 (Riyadh Air Metropolitano), live near Sol. TV channel TBC.
         </p>
       ) : null}
-      {/* OC-30 Germany v Netherlands, UEFA Nations League (DG 27 Oct; kickoff per match.uefa.com id 2047909, 19:45Z = 20:45 CET, Olympiastadion Berlin): build-time date gate, gone from the 17 Nov daily rebuild. */}
-      {madridTodayYmd(agendaBuildNow()) <= "2026-11-16" ? (
-        <p className="mb-6 text-sm text-cream-muted sm:text-base">
-          UEFA Nations League: Germany v Netherlands, Monday 16 November, 20:45 (Olympiastadion, Berlin), live near Sol: a Monday night in Sol for German and Dutch supporters.{" "}
-          <a href="/de/deutschland-niederlande-madrid-sol" hrefLang="de" lang="de" className="text-gold underline">
-            Deutschland – Niederlande: Montagabend an der Puerta del Sol (Deutsch)
-          </a>
-        </p>
-      ) : null}
       <HalloweenTeaser locale="en" today={madridTodayYmd(agendaBuildNow())} />
       <FixtureList locale="en" />
 

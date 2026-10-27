@@ -9,7 +9,7 @@ import { ADDRESS, HOURS, MAPS_URL } from "@/lib/venue";
  * German index /de (DG order 27 Oct 2026). Lists the German pages that exist.
  * /de/bayern-fans-madrid-sol (moved 27 Oct 2026 from the old slug, 301 in
  * public/_redirects) is listed with the other Bayern pages.
- * OC-29 / OC-30 (DG 27 Oct 2026) are listed in DE_UPCOMING; for new pieces append { href, title, text } to the right group below
+ * To add OC-29 / OC-30 once Radar assigns them and the pages exist: append { href, title, text } to the right group below
  * (or to DE_UPCOMING), add the path to DE_PATHS in lib/venue.ts, done.
  */
 type DeItem = { href: string; title: string; text: string };
@@ -58,18 +58,7 @@ const DE_GROUPS: { title: string; items: DeItem[] }[] = [
 ];
 
 /** Next German pieces (OC-29, OC-30): add here when the pages are live. */
-const DE_UPCOMING: DeItem[] = [
-  {
-    href: "/de/serbien-deutschland-madrid-sol",
-    title: "Serbien – Deutschland, Fr 13. November, 20:45 Uhr: Länderspiel-Freitag an der Puerta del Sol",
-    text: "UEFA Nations League aus Belgrad, bei uns ein paar Schritte von der Sol. Freitags ab 16:00 Uhr geöffnet.",
-  },
-  {
-    href: "/de/deutschland-niederlande-madrid-sol",
-    title: "Deutschland – Niederlande, Mo 16. November, 20:45 Uhr: Montagabend an der Puerta del Sol",
-    text: "UEFA Nations League aus dem Berliner Olympiastadion. Deutsche und Niederländer sind gleichermaßen willkommen.",
-  },
-];
+const DE_UPCOMING: DeItem[] = [];
 
 export const metadata = buildMetadata({
   title: "O'Connell St Madrid auf Deutsch: Irish Pub an der Puerta del Sol",
