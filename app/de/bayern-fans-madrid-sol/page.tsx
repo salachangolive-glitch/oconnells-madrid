@@ -5,7 +5,7 @@ import { PageHero, Section } from "@/components/Prose";
 import { buildMetadata } from "@/lib/seo";
 import { MAPS_URL } from "@/lib/venue";
 
-const EN_PATH = "/news/bayern-fans-madrid-pre-match-meeting-point";
+const EN_PATH = "/news/bayern-fans-madrid-sol-pre-match";
 
 export const metadata = buildMetadata({
   title: "Bayern Fans Madrid: ein Irish Pub nahe Sol, um das Spiel zu sehen",

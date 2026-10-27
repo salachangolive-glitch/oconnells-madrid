@@ -139,7 +139,7 @@ export const EN_PATHS = [
   "/champions-league",
   "/sports-bar-sol",
   "/nfl-madrid",
-  "/news/bayern-fans-madrid-pre-match-meeting-point",
+  "/news/bayern-fans-madrid-sol-pre-match",
   "/news/bayern-fans-things-to-do-near-sol",
   "/news/bayern-fans-madrid-timing",
   "/news/bayern-fans-barrio-de-las-letras",
@@ -233,8 +233,8 @@ export const HREFLANG_GROUPS: Record<
     es: "/es/oktoberfest-madrid-sol",
     de: "/de/oktoberfest-madrid-sol",
   },
-  "/news/bayern-fans-madrid-pre-match-meeting-point": {
-    en: "/news/bayern-fans-madrid-pre-match-meeting-point",
+  "/news/bayern-fans-madrid-sol-pre-match": {
+    en: "/news/bayern-fans-madrid-sol-pre-match",
     de: "/de/bayern-fans-madrid-sol",
   },
   "/news/bayern-fans-things-to-do-near-sol": {

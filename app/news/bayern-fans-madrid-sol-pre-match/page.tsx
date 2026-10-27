@@ -11,7 +11,7 @@ export const metadata = buildMetadata({
   title: "Where to watch Atlético v Bayern in Madrid: an Irish pub near Sol to meet up before the match",
   description:
     "Bayern fans in Madrid for Atlético v Bayern, Tue 3 Nov, 21:00: spend the build-up in the centre. An Irish pub near Sol to meet up before the match, and the game live on our screens.",
-  path: "/news/bayern-fans-madrid-pre-match-meeting-point",
+  path: "/news/bayern-fans-madrid-sol-pre-match",
 });
 
 export default function NewsBayernFansPreMatchPage() {

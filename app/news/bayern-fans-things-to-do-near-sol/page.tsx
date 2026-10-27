@@ -96,7 +96,7 @@ export default function NewsBayernFansNearSolPage() {
             Contact
           </Link>
           {" · "}
-          <Link href="/news/bayern-fans-madrid-pre-match-meeting-point" className="text-cream underline">
+          <Link href="/news/bayern-fans-madrid-sol-pre-match" className="text-cream underline">
             Bayern fans: an Irish pub near Sol to meet up before the match
           </Link>
           {" · "}
