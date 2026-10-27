@@ -184,6 +184,9 @@ export const DE_PATHS = [
   "/de/bayern-fans-madrid-sol-entdecken",
   "/de/bayern-fans-madrid-uhrzeiten",
   "/de/bayern-fans-barrio-de-las-letras",
+  /** OC-29 / OC-30 (DG 27 Oct 2026): German-only pages, self hreflang de. */
+  "/de/serbien-deutschland-madrid-sol",
+  "/de/deutschland-niederlande-madrid-sol",
 ] as const;
 
 export const ALL_CONTENT_PATHS = [...EN_PATHS, ...ES_PATHS, ...DE_PATHS] as const;

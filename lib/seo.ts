@@ -36,7 +36,11 @@ function resolveEnKey(path: string): string | undefined {
 
 function buildLanguages(path: string): Record<string, string> | undefined {
   const enKey = resolveEnKey(path);
-  if (!enKey) return undefined;
+  if (!enKey) {
+    /** German-only pages (no EN/ES twin, e.g. OC-29/OC-30): self hreflang de. */
+    if (path.startsWith("/de/")) return { de: absoluteUrl(path) };
+    return undefined;
+  }
 
   const group = HREFLANG_GROUPS[enKey];
   if (group) {
