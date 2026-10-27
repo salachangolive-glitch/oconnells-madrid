@@ -25,6 +25,7 @@ type Locale = "en" | "es" | "de";
  * OC2: "3.er fin de semana jue 5 – dom 8 nov", VERIFICADO fechas).
  * Tent opening hours are PENDIENTE in Radar (the event site contradicts
  * itself), so no tent times are published here — link to the event site.
+ * Tent hours 3rd weekend (DG 27 Oct 08:41; oktoberfestmad.es home + información práctica, curl 27 Oct 08:43; the FAQ page lists other hours): Thu–Fri 17:00–00:00, Sat–Sun 12:00–01:00.
  * Mon 9 Nov: Almudena public holiday in Madrid city (Radar OR5, BOCM 12/12/2025).
  * Build-time gate: weekends that have ended drop off the list.
  */
@@ -170,11 +171,12 @@ export function OktoberfestSol({ locale }: { locale: Locale }) {
               {showThirdWeekend() ? (
                 <p>
                   El tercer fin de semana del Oktoberfest Madrid va del jueves 5 al
-                  domingo 8 de noviembre, en Parquesur (Leganés), y el lunes 9 es
-                  festivo en Madrid capital por la Almudena. Los horarios de la carpa
-                  los publica el propio evento en su {eventLink("web")}. En el centro,
-                  O&apos;Connell St abre los cuatro días con su horario de siempre
-                  (abajo).
+                  domingo 8 de noviembre, en Westfield Parquesur (Leganés). Horario
+                  de la carpa según la {eventLink("web del evento")}: jueves y viernes
+                  de 17:00 a 00:00, sábado y domingo de 12:00 a 01:00; consúltalo allí
+                  antes de ir. El lunes 9 de noviembre es festivo en Madrid capital
+                  (la Almudena). En el centro, O&apos;Connell St abre los cuatro días
+                  con su horario de siempre (abajo).
                 </p>
               ) : null}
               <p>Fines de semana que quedan (de jueves a domingo):</p>
@@ -267,15 +269,17 @@ export function OktoberfestSol({ locale }: { locale: Locale }) {
                 {eventLink("Website des Festes")}.
               </p>
             </Section>
-            <Section title={showThirdWeekend() ? "Oktoberfest-Saison an der Puerta del Sol: drittes Wochenende, 5. bis 8. November" : "Oktoberfest-Saison an der Puerta del Sol"}>
+            <Section title={showThirdWeekend() ? "Drittes Wochenende: Donnerstag, 5., bis Sonntag, 8. November" : "Oktoberfest-Saison an der Puerta del Sol"}>
               {showThirdWeekend() ? (
                 <p>
                   Das dritte Oktoberfest-Wochenende in Madrid läuft von Donnerstag,
-                  5., bis Sonntag, 8. November, in Parquesur (Leganés). Montag, der
-                  9. November, ist in der Stadt Madrid Feiertag (Almudena). Die
-                  Öffnungszeiten des Festzelts veröffentlicht das Fest selbst auf
-                  seiner {eventLink("Website")}. Im Zentrum hat O&apos;Connell St an
-                  allen vier Tagen zu den üblichen Zeiten offen (siehe unten).
+                  5., bis Sonntag, 8. November, in Westfield Parquesur (Leganés).
+                  Öffnungszeiten des Festzelts laut {eventLink("Website des Festes")}:
+                  Donnerstag und Freitag 17:00 bis 00:00 Uhr, Samstag und Sonntag
+                  12:00 bis 01:00 Uhr; bitte vor der Fahrt dort nachsehen. Montag,
+                  der 9. November, ist in der Stadt Madrid Feiertag (Almudena). Im
+                  Zentrum hat O&apos;Connell St an allen vier Tagen zu den üblichen
+                  Zeiten offen (siehe unten).
                 </p>
               ) : null}
               <p>Die noch kommenden Wochenenden (donnerstags bis sonntags):</p>
@@ -376,11 +380,12 @@ export function OktoberfestSol({ locale }: { locale: Locale }) {
             {showThirdWeekend() ? (
               <p>
                 The third Oktoberfest Madrid weekend runs from Thursday 5 to Sunday 8
-                November at Parquesur (Leganés), and Monday 9 November is a public
-                holiday in the city of Madrid (La Almudena). Tent opening times are
-                published by the event itself on its {eventLink("website")}. In the
-                centre, O&apos;Connell St is open on all four days at its usual
-                hours (below).
+                November at Westfield Parquesur (Leganés). Tent opening times, per
+                the {eventLink("event's website")}: Thursday and Friday 17:00 to
+                00:00, Saturday and Sunday 12:00 to 01:00; check there before you
+                go. Monday 9 November is a public holiday in the city of Madrid (La
+                Almudena). In the centre, O&apos;Connell St is open on all four days
+                at its usual hours (below).
               </p>
             ) : null}
             <p>Weekends still to come (Thursday to Sunday):</p>
