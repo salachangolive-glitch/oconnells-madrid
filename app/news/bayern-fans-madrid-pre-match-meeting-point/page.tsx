@@ -5,7 +5,7 @@ import { PageHero, Section } from "@/components/Prose";
 import { buildMetadata } from "@/lib/seo";
 import { MAPS_URL } from "@/lib/venue";
 
-const DE_PATH = "/de/bayern-fans-madrid-treffpunkt";
+const DE_PATH = "/de/bayern-fans-madrid-sol";
 
 export const metadata = buildMetadata({
   title: "Where to watch Atlético v Bayern in Madrid: an Irish pub near Sol to meet up before the match",

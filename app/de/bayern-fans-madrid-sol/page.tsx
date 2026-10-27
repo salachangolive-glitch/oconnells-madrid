@@ -8,20 +8,20 @@ import { MAPS_URL } from "@/lib/venue";
 const EN_PATH = "/news/bayern-fans-madrid-pre-match-meeting-point";
 
 export const metadata = buildMetadata({
-  title: "Bayern Fans Madrid: ein Irish Pub nahe Sol, um sich vor dem Spiel zu treffen",
+  title: "Bayern Fans Madrid: ein Irish Pub nahe Sol, um das Spiel zu sehen",
   description:
-    "Bayern-Fans in Madrid vor Atlético – Bayern (Di 3. November, 21:00 Uhr): ein Irish Pub nahe Sol, um sich vor dem Spiel zu treffen. Ab 18 Uhr an der Puerta del Sol einstimmen, das Spiel live auf unseren Screens.",
-  path: "/de/bayern-fans-madrid-treffpunkt",
+    "Bayern-Fans in Madrid vor Atlético – Bayern (Di 3. November, 21:00 Uhr): ein Irish Pub nahe Sol, um das Spiel zu sehen. Ab 18 Uhr an der Puerta del Sol einstimmen, das Spiel live auf unseren Screens.",
+  path: "/de/bayern-fans-madrid-sol",
   locale: "de",
 });
 
-export default function DeBayernFansPreMatchPage() {
+export default function DeBayernFansSolPage() {
   return (
     <PageShell locale="de" altLangHref={EN_PATH}>
       <PageHero
         eyebrow="Champions League · Dienstag, 3. November 2026 · 21:00 Uhr"
         title="Bayern-Fans in Madrid: Hier geht der Abend los"
-        lead="Bevor im Metropolitano der Ball rollt, gehört die Innenstadt den Fans. Rund um die Puerta del Sol trifft sich alles – und nur ein paar Schritte vom Platz entfernt ein Irish Pub, um sich vor dem Spiel zu treffen."
+        lead="Bevor im Metropolitano der Ball rollt, gehört die Innenstadt den Fans. Rund um die Puerta del Sol trifft sich alles – und nur ein paar Schritte vom Platz entfernt ein Irish Pub, um das Spiel zu sehen."
       />
       <InteriorPhoto
         src="/images/interior/sports-aisle.webp"
@@ -59,10 +59,10 @@ export default function DeBayernFansPreMatchPage() {
           egal, ob ihr später raus ins Stadion fahrt oder hier mitfiebert.
         </p>
       </Section>
-      <Section title="Drei Irish Pubs nahe Sol, um sich vor dem Spiel zu treffen">
+      <Section title="Drei Irish Pubs nahe Sol, um das Spiel zu sehen">
         <p>
           Ihr seid eine große Gruppe oder kommt zu unterschiedlichen Zeiten an?
-          Drei Irish Pubs im Zentrum, um sich vor dem Spiel zu treffen:
+          Drei Irish Pubs im Zentrum, um das Spiel zu sehen:
         </p>
         <ul className="list-disc space-y-1 pl-5">
           <li>O&apos;Connell St · Calle de Espoz y Mina 7</li>

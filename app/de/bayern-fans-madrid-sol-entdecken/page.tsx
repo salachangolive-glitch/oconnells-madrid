@@ -101,7 +101,7 @@ export default function DeBayernFansSolEntdeckenPage() {
             Kontakt (Englisch)
           </Link>
           {" · "}
-          <Link href="/de/bayern-fans-madrid-treffpunkt" className="text-cream underline">
+          <Link href="/de/bayern-fans-madrid-sol" className="text-cream underline">
             Bayern-Fans: ein Irish Pub nahe Sol, um sich vor dem Spiel zu treffen
           </Link>
           {" · "}

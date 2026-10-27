@@ -7,10 +7,9 @@ import { ADDRESS, HOURS, MAPS_URL } from "@/lib/venue";
 
 /**
  * German index /de (DG order 27 Oct 2026). Lists the German pages that exist.
- * /de/bayern-fans-madrid-treffpunkt is NOT listed here on purpose: its slug
- * contains a vetoed word (slug can't change; page stays live and linked from
- * the other Bayern articles). To add OC-29 / OC-30 once Radar assigns them and
- * the pages exist: append { href, title, text } to the right group below
+ * /de/bayern-fans-madrid-sol (moved 27 Oct 2026 from the old slug, 301 in
+ * public/_redirects) is listed with the other Bayern pages.
+ * To add OC-29 / OC-30 once Radar assigns them and the pages exist: append { href, title, text } to the right group below
  * (or to DE_UPCOMING), add the path to DE_PATHS in lib/venue.ts, done.
  */
 type DeItem = { href: string; title: string; text: string };
@@ -33,6 +32,11 @@ const DE_GROUPS: { title: string; items: DeItem[] }[] = [
         href: "/de/sports-bar-sol",
         title: "Atlético – Bayern live an der Puerta del Sol",
         text: "Das Spiel auf unseren Screens, mitten im Zentrum, und danach noch ein Bier.",
+      },
+      {
+        href: "/de/bayern-fans-madrid-sol",
+        title: "Bayern-Fans in Madrid: Hier geht der Abend los",
+        text: "Ein Irish Pub nahe Sol, um das Spiel zu sehen: der Nachmittag in der Altstadt, der Abend an der Puerta del Sol.",
       },
       {
         href: "/de/bayern-fans-madrid-uhrzeiten",
