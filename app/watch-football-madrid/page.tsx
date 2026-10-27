@@ -7,7 +7,7 @@ import { buildMetadata } from "@/lib/seo";
 import { ADDRESS, HOURS, MAPS_URL } from "@/lib/venue";
 
 export const metadata = buildMetadata({
-  title: "Football pub in Sol, Madrid — live matches",
+  title: "Watch Football in Sol, Madrid | O'Connell St Irish Pub",
   description:
     "Football pub just off Puerta del Sol: O'Connell St, Calle de Espoz y Mina 7. Confirmed matches with Madrid times, hours and directions.",
   path: "/watch-football-madrid",
@@ -18,7 +18,7 @@ export default function WatchFootballPage() {
     <PageShell locale="en" altLangHref="/es/watch-football-madrid">
       <PageHero
         eyebrow="Watch football · Madrid"
-        title="A football pub in Sol, Madrid"
+        title="Watch football in Sol at O'Connell St"
         lead="Watch the matches live at O'Connell St: Calle de Espoz y Mina 7, just off Puerta del Sol, with Premier League, LaLiga and Champions League on the screens. This week's confirmed games, with Madrid times, are below."
       />
       <InteriorPhoto

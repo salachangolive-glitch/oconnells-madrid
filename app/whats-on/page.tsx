@@ -99,6 +99,13 @@ export default function WhatsOnPage() {
           looking for a specific game.
         </p>
         <p>
+          Matchday plans? Here&apos;s how to{" "}
+          <Link href="/watch-football-madrid" className="text-gold underline">
+            watch football in Sol
+          </Link>{" "}
+          with us, with this week&apos;s confirmed games.
+        </p>
+        <p>
           <Link href="/nfl-madrid" className="text-gold underline">
             NFL in Madrid
           </Link>
