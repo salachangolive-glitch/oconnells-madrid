@@ -25,7 +25,7 @@ function resolveEnKey(path: string): string | undefined {
   if (path.startsWith("/es")) {
     return Object.entries(HREFLANG_PAIRS).find(([, es]) => es === path)?.[0];
   }
-  if (path.startsWith("/de/")) {
+  if (path === "/de" || path.startsWith("/de/")) {
     const group = Object.entries(HREFLANG_GROUPS).find(
       ([, g]) => g.de === path,
     );

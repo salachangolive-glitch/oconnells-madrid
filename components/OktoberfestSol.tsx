@@ -17,11 +17,58 @@ import { MAPS_URL } from "@/lib/venue";
  */
 export const OKTOBERFEST_LAST_DAY = "2026-11-15";
 
+type Locale = "en" | "es" | "de";
+
+/**
+ * Event weekends (Thu–Sun), CONFIRMED by Radar from oktoberfestmad.es
+ * (/workspace/radar/2026-10-20-oktoberfest.md §1 + eventos-madrid-2026-10-27.md
+ * OC2: "3.er fin de semana jue 5 – dom 8 nov", VERIFICADO fechas).
+ * Tent opening hours are PENDIENTE in Radar (the event site contradicts
+ * itself), so no tent times are published here — link to the event site.
+ * Mon 9 Nov: Almudena public holiday in Madrid city (Radar OR5, BOCM 12/12/2025).
+ * Build-time gate: weekends that have ended drop off the list.
+ */
+export const OKT_WEEKENDS = [
+  { n: 1, start: "2026-10-22", end: "2026-10-25", en: "Thu 22 – Sun 25 October", es: "jue 22 – dom 25 de octubre", de: "Do 22. – So 25. Oktober" },
+  { n: 2, start: "2026-10-29", end: "2026-11-01", en: "Thu 29 October – Sun 1 November", es: "jue 29 de octubre – dom 1 de noviembre", de: "Do 29. Oktober – So 1. November" },
+  { n: 3, start: "2026-11-05", end: "2026-11-08", en: "Thu 5 – Sun 8 November", es: "jue 5 – dom 8 de noviembre", de: "Do 5. – So 8. November" },
+  { n: 4, start: "2026-11-12", end: "2026-11-15", en: "Thu 12 – Sun 15 November", es: "jue 12 – dom 15 de noviembre", de: "Do 12. – So 15. November" },
+] as const;
+
+const THIRD_WEEKEND_END = "2026-11-08";
+
+function upcomingWeekends(now = agendaBuildNow()) {
+  const today = madridTodayYmd(now);
+  return OKT_WEEKENDS.filter((w) => w.end >= today);
+}
+
+function showThirdWeekend(now = agendaBuildNow()): boolean {
+  return madridTodayYmd(now) <= THIRD_WEEKEND_END;
+}
+
+const WEEKEND_LABEL: Record<Locale, Record<number, string>> = {
+  en: { 1: "First weekend", 2: "Second weekend", 3: "Third weekend", 4: "Last weekend" },
+  es: { 1: "Primer fin de semana", 2: "Segundo fin de semana", 3: "Tercer fin de semana", 4: "Último fin de semana" },
+  de: { 1: "Erstes Wochenende", 2: "Zweites Wochenende", 3: "Drittes Wochenende", 4: "Letztes Wochenende" },
+};
+
+function WeekendList({ locale }: { locale: Locale }) {
+  const list = upcomingWeekends();
+  if (list.length === 0) return null;
+  return (
+    <ul className="list-disc space-y-1 pl-5">
+      {list.map((w) => (
+        <li key={w.n}>
+          <strong>{WEEKEND_LABEL[locale][w.n]}:</strong> {w[locale]}
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 export function oktoberfestLive(now = agendaBuildNow()): boolean {
   return madridTodayYmd(now) <= OKTOBERFEST_LAST_DAY;
 }
-
-type Locale = "en" | "es" | "de";
 
 export const OKT_PATHS: Record<Locale, string> = {
   en: "/oktoberfest-madrid-sol",
@@ -119,6 +166,20 @@ export function OktoberfestSol({ locale }: { locale: Locale }) {
                 {eventLink("web del evento")}.
               </p>
             </Section>
+            <Section title={showThirdWeekend() ? "Tercer fin de semana: del jueves 5 al domingo 8 de noviembre" : "Los fines de semana del Oktoberfest"}>
+              {showThirdWeekend() ? (
+                <p>
+                  El tercer fin de semana del Oktoberfest Madrid va del jueves 5 al
+                  domingo 8 de noviembre, en Parquesur (Leganés), y el lunes 9 es
+                  festivo en Madrid capital por la Almudena. Los horarios de la carpa
+                  los publica el propio evento en su {eventLink("web")}. En el centro,
+                  O&apos;Connell St abre los cuatro días con su horario de siempre
+                  (abajo).
+                </p>
+              ) : null}
+              <p>Fines de semana que quedan (de jueves a domingo):</p>
+              <WeekendList locale="es" />
+            </Section>
             <Section title="De Sol a Parquesur en transporte público">
               <p>
                 <strong>Cercanías:</strong> en la estación de Sol, coge la C-3 o la
@@ -205,6 +266,20 @@ export function OktoberfestSol({ locale }: { locale: Locale }) {
                 Öffnungszeiten findet ihr auf der{" "}
                 {eventLink("Website des Festes")}.
               </p>
+            </Section>
+            <Section title={showThirdWeekend() ? "Oktoberfest-Saison an der Puerta del Sol: drittes Wochenende, 5. bis 8. November" : "Oktoberfest-Saison an der Puerta del Sol"}>
+              {showThirdWeekend() ? (
+                <p>
+                  Das dritte Oktoberfest-Wochenende in Madrid läuft von Donnerstag,
+                  5., bis Sonntag, 8. November, in Parquesur (Leganés). Montag, der
+                  9. November, ist in der Stadt Madrid Feiertag (Almudena). Die
+                  Öffnungszeiten des Festzelts veröffentlicht das Fest selbst auf
+                  seiner {eventLink("Website")}. Im Zentrum hat O&apos;Connell St an
+                  allen vier Tagen zu den üblichen Zeiten offen (siehe unten).
+                </p>
+              ) : null}
+              <p>Die noch kommenden Wochenenden (donnerstags bis sonntags):</p>
+              <WeekendList locale="de" />
             </Section>
             <Section title="Von Sol nach Parquesur mit den Öffis">
               <p>
@@ -296,6 +371,20 @@ export function OktoberfestSol({ locale }: { locale: Locale }) {
               it. Tickets, tables and opening times are on the{" "}
               {eventLink("event's website")}.
             </p>
+          </Section>
+          <Section title={showThirdWeekend() ? "Third weekend: Thursday 5 to Sunday 8 November" : "Oktoberfest weekends"}>
+            {showThirdWeekend() ? (
+              <p>
+                The third Oktoberfest Madrid weekend runs from Thursday 5 to Sunday 8
+                November at Parquesur (Leganés), and Monday 9 November is a public
+                holiday in the city of Madrid (La Almudena). Tent opening times are
+                published by the event itself on its {eventLink("website")}. In the
+                centre, O&apos;Connell St is open on all four days at its usual
+                hours (below).
+              </p>
+            ) : null}
+            <p>Weekends still to come (Thursday to Sunday):</p>
+            <WeekendList locale="en" />
           </Section>
           <Section title="From Sol to Parquesur by public transport">
             <p>

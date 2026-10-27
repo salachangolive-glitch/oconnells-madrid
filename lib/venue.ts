@@ -177,6 +177,7 @@ export const ES_PATHS = [
 ] as const;
 
 export const DE_PATHS = [
+  "/de",
   "/de/sports-bar-sol",
   "/de/oktoberfest-madrid-sol",
   "/de/bayern-fans-madrid-treffpunkt",
@@ -216,6 +217,12 @@ export const HREFLANG_GROUPS: Record<
   string,
   { en: string; es?: string; de?: string }
 > = {
+  /** Home EN/ES + German index /de (27 Oct 2026). */
+  "/": {
+    en: "/",
+    es: "/es",
+    de: "/de",
+  },
   "/sports-bar-sol": {
     en: "/sports-bar-sol",
     es: "/es/sports-bar-sol",

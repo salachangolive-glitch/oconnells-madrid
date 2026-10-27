@@ -16,6 +16,21 @@ function oktAlternates(base: string, path: string) {
   };
 }
 
+const HOME_GROUP = HREFLANG_GROUPS["/"];
+
+/** Home EN/ES + German index /de: en/es/de/x-default alternates. */
+function homeAlternates(base: string, path: string) {
+  if (!HOME_GROUP?.es || !HOME_GROUP.de || !["/", "/es", "/de"].includes(path)) return undefined;
+  return {
+    languages: {
+      en: `${base}/`,
+      es: `${base}${HOME_GROUP.es}`,
+      de: `${base}${HOME_GROUP.de}`,
+      "x-default": `${base}/`,
+    },
+  };
+}
+
 const BAYERN_GROUPS = [
   HREFLANG_GROUPS["/news/bayern-fans-madrid-pre-match-meeting-point"],
   HREFLANG_GROUPS["/news/bayern-fans-things-to-do-near-sol"],
@@ -65,6 +80,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...(newsAlternates(base, path) ? { alternates: newsAlternates(base, path) } : {}),
     ...(bayernAlternates(base, path) ? { alternates: bayernAlternates(base, path) } : {}),
     ...(oktAlternates(base, path) ? { alternates: oktAlternates(base, path) } : {}),
+    ...(homeAlternates(base, path) ? { alternates: homeAlternates(base, path) } : {}),
     lastModified: now,
     changeFrequency: path === "/" || path === "/es" ? "weekly" : "monthly",
     priority: path === "/" || path === "/es" ? 1 : path.includes("thursday") ? 0.9 : 0.7,

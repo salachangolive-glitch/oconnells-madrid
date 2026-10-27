@@ -43,6 +43,13 @@ export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
             {isEs ? "Explorar" : isDe ? "Entdecken" : "Explore"}
           </p>
           <ul className="space-y-1">
+            {isDe ? (
+              <li>
+                <Link href="/de" hrefLang="de" className="hover:text-gold">
+                  Alle Seiten auf Deutsch
+                </Link>
+              </li>
+            ) : null}
             <li>
               <Link
                 href={isEs ? "/es/sports" : "/sports"}

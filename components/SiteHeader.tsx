@@ -41,7 +41,7 @@ export function SiteHeader({
   altLangHref?: string;
 }) {
   const items = nav[locale];
-  const home = locale === "es" ? "/es" : "/";
+  const home = locale === "es" ? "/es" : locale === "de" ? "/de" : "/";
   const switchLabel = locale === "es" || locale === "de" ? "EN" : "ES";
   const switchHref =
     altLangHref ||
