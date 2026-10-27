@@ -56,6 +56,15 @@ export default function WhatsOnPage() {
           </Link>
         </p>
       ) : null}
+      {/* Atlético–Barcelona LaLiga J12 (Radar OC3, laliga.com J12): build-time date gate. */}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-08" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          LaLiga: Atlético Madrid v Barcelona, Sunday 8 November, 21:00, live near Sol.{" "}
+          <Link href="/news/atletico-barcelona-sunday-night-sol" className="text-gold underline">
+            Big LaLiga Sunday night in Sol
+          </Link>
+        </p>
+      ) : null}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-10" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">
           Bryan Adams «Roll with the Punches» at the Movistar Arena, Tuesday 10 November, 20:30: meet at O&apos;Connell St, near Sol, before or after the concert.

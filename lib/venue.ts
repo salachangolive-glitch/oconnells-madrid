@@ -144,6 +144,7 @@ export const EN_PATHS = [
   "/news/bayern-fans-madrid-timing",
   "/news/bayern-fans-barrio-de-las-letras",
   "/news/duran-duran-madrid-gig-night-sol",
+  "/news/atletico-barcelona-sunday-night-sol",
   "/oktoberfest-madrid-sol",
   "/halloween-madrid-sol",
   "/menu",
