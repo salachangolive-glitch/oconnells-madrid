@@ -97,6 +97,10 @@ export default function NewsBayernFansTimingPage() {
             Two hours around Sol
           </Link>
           {" · "}
+          <Link href="/news/bayern-fans-barrio-de-las-letras" className="text-cream underline">
+            Next: the Barrio de las Letras
+          </Link>
+          {" · "}
           <Link href="/whats-on" className="text-cream underline">
             What&apos;s On
           </Link>

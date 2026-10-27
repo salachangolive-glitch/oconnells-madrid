@@ -38,12 +38,12 @@ export default function WhatsOnPage() {
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-03" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">
           Atlético v Bayern, Tuesday 3 November, 21:00:{" "}
-          <Link href="/news/bayern-fans-madrid-timing" className="text-gold underline">
-            Bayern fans: Madrid timing, late dinners and when to meet
+          <Link href="/news/bayern-fans-barrio-de-las-letras" className="text-gold underline">
+            Bayern fans: the Barrio de las Letras, right by our door
           </Link>
           {" · "}
-          <a href="/de/bayern-fans-madrid-uhrzeiten" hrefLang="de" lang="de" className="text-gold underline">
-            Madrid tickt anders: Uhrzeiten (Deutsch)
+          <a href="/de/bayern-fans-barrio-de-las-letras" hrefLang="de" lang="de" className="text-gold underline">
+            Unser Viertel: Barrio de las Letras (Deutsch)
           </a>
         </p>
       ) : null}

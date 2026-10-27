@@ -20,6 +20,7 @@ const BAYERN_GROUPS = [
   HREFLANG_GROUPS["/news/bayern-fans-madrid-pre-match-meeting-point"],
   HREFLANG_GROUPS["/news/bayern-fans-things-to-do-near-sol"],
   HREFLANG_GROUPS["/news/bayern-fans-madrid-timing"],
+  HREFLANG_GROUPS["/news/bayern-fans-barrio-de-las-letras"],
 ];
 
 /** Bayern fans articles: en/de/x-default alternates. */

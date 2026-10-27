@@ -100,6 +100,10 @@ export default function DeBayernFansUhrzeitenPage() {
             Zwei Stunden rund um die Sol
           </Link>
           {" · "}
+          <Link href="/de/bayern-fans-barrio-de-las-letras" className="text-cream underline">
+            Weiter: Unser Viertel, das Barrio de las Letras
+          </Link>
+          {" · "}
           <Link href="/de/bayern-fans-madrid-treffpunkt" className="text-cream underline">
             Bayern-Fans: ein Irish Pub nahe Sol, um sich vor dem Spiel zu treffen
           </Link>
