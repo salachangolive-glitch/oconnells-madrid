@@ -110,12 +110,12 @@ export default function EsHomePage() {
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-03" ? (
         <p className="mb-12 max-w-2xl border-l-2 border-gold pl-4 text-sm text-cream-muted sm:text-base">
           Atlético–Bayern, martes 3 de noviembre, 21:00 — afición del Bayern en Madrid:{" "}
-          <Link href="/news/bayern-fans-barrio-de-las-letras" className="text-gold underline">
-            el Barrio de las Letras y la plaza de Santa Ana (inglés)
+          <Link href="/news/bayern-fans-madrid-group" className="text-gold underline">
+            si venís en grupo grande: un punto en el mapa y tres pubs (inglés)
           </Link>
           {" · "}
-          <a href="/de/bayern-fans-barrio-de-las-letras" hrefLang="de" lang="de" className="text-gold underline">
-            Unser Viertel (alemán)
+          <a href="/de/bayern-fans-gruppe-madrid" hrefLang="de" lang="de" className="text-gold underline">
+            Die ganze Truppe, ein Pin (alemán)
           </a>
         </p>
       ) : null}

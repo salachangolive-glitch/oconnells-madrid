@@ -106,12 +106,12 @@ export default function HomePage() {
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-03" ? (
         <p className="mb-12 max-w-2xl border-l-2 border-gold pl-4 text-sm text-cream-muted sm:text-base">
           Atlético v Bayern, Tuesday 3 November, 21:00 — Bayern fans in Madrid:{" "}
-          <Link href="/news/bayern-fans-barrio-de-las-letras" className="text-gold underline">
-            our neighbourhood, the Barrio de las Letras and Plaza de Santa Ana
+          <Link href="/news/bayern-fans-madrid-group" className="text-gold underline">
+            coming as a big group: one pin, three pubs near Sol
           </Link>
           {" · "}
-          <a href="/de/bayern-fans-barrio-de-las-letras" hrefLang="de" lang="de" className="text-gold underline">
-            Unser Viertel: Barrio de las Letras
+          <a href="/de/bayern-fans-gruppe-madrid" hrefLang="de" lang="de" className="text-gold underline">
+            Die ganze Truppe, ein Pin
           </a>
         </p>
       ) : null}

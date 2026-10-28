@@ -143,6 +143,7 @@ export const EN_PATHS = [
   "/news/bayern-fans-things-to-do-near-sol",
   "/news/bayern-fans-madrid-timing",
   "/news/bayern-fans-barrio-de-las-letras",
+  "/news/bayern-fans-madrid-group",
   "/news/duran-duran-madrid-gig-night-sol",
   "/news/atletico-barcelona-sunday-night-sol",
   "/oktoberfest-madrid-sol",
@@ -185,6 +186,7 @@ export const DE_PATHS = [
   "/de/bayern-fans-madrid-sol-entdecken",
   "/de/bayern-fans-madrid-uhrzeiten",
   "/de/bayern-fans-barrio-de-las-letras",
+  "/de/bayern-fans-gruppe-madrid",
 ] as const;
 
 export const ALL_CONTENT_PATHS = [...EN_PATHS, ...ES_PATHS, ...DE_PATHS] as const;
@@ -249,6 +251,10 @@ export const HREFLANG_GROUPS: Record<
   "/news/bayern-fans-barrio-de-las-letras": {
     en: "/news/bayern-fans-barrio-de-las-letras",
     de: "/de/bayern-fans-barrio-de-las-letras",
+  },
+  "/news/bayern-fans-madrid-group": {
+    en: "/news/bayern-fans-madrid-group",
+    de: "/de/bayern-fans-gruppe-madrid",
   },
 };
 

@@ -100,6 +100,10 @@ export default function DeBayernFansBarrioLetrasPage() {
             Kontakt (Englisch)
           </Link>
           {" · "}
+          <Link href="/de/bayern-fans-gruppe-madrid" className="text-cream underline">
+            Weiter: Die ganze Truppe, ein Pin
+          </Link>
+          {" · "}
           <Link href="/de/bayern-fans-madrid-uhrzeiten" className="text-cream underline">
             Madrid tickt anders
           </Link>

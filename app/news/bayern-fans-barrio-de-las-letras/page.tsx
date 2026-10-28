@@ -102,6 +102,10 @@ export default function NewsBayernFansBarrioLetrasPage() {
             Madrid timing for match night
           </Link>
           {" · "}
+          <Link href="/news/bayern-fans-madrid-group" className="text-cream underline">
+            Next: getting a big group together
+          </Link>
+          {" · "}
           <Link href="/whats-on" className="text-cream underline">
             What&apos;s On
           </Link>
