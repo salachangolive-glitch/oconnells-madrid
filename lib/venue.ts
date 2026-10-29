@@ -146,6 +146,7 @@ export const EN_PATHS = [
   "/news/bayern-fans-madrid-group",
   "/news/bayern-atletico-fans-together",
   "/news/duran-duran-madrid-gig-night-sol",
+  "/news/bryan-adams-madrid-gig-night-sol",
   "/news/atletico-barcelona-sunday-night-sol",
   "/oktoberfest-madrid-sol",
   "/halloween-madrid-sol",

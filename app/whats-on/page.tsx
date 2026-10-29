@@ -67,7 +67,10 @@ export default function WhatsOnPage() {
       ) : null}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-10" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">
-          Bryan Adams «Roll with the Punches» at the Movistar Arena, Tuesday 10 November, 20:30: meet at O&apos;Connell St, near Sol, before or after the concert.
+          Bryan Adams «Roll with the Punches» at the Movistar Arena, Tuesday 10 November, 20:30: meet at O&apos;Connell St, near Sol, before or after the concert.{" "}
+          <Link href="/news/bryan-adams-madrid-gig-night-sol" className="text-gold underline">
+            Bryan Adams gig night guide
+          </Link>
         </p>
       ) : null}
       {/* Real Madrid Femenino UWCL (DG 26 Oct; times per match.uefa.com + realmadrid.com): build-time date gates, each line gone from the daily rebuild after its date. */}
