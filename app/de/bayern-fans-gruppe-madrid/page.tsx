@@ -86,6 +86,10 @@ export default function DeBayernFansGruppePage() {
             Kontakt (Englisch)
           </Link>
           {" · "}
+          <Link href="/de/bayern-atletico-fans-gemeinsam" className="text-cream underline">
+            Weiter: Rot-Weiß trifft Rot-Weiß
+          </Link>
+          {" · "}
           <Link href="/de/bayern-fans-barrio-de-las-letras" className="text-cream underline">
             Unser Viertel, das Barrio de las Letras
           </Link>

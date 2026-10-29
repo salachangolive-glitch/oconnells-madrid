@@ -106,12 +106,12 @@ export default function HomePage() {
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-03" ? (
         <p className="mb-12 max-w-2xl border-l-2 border-gold pl-4 text-sm text-cream-muted sm:text-base">
           Atlético v Bayern, Tuesday 3 November, 21:00 — Bayern fans in Madrid:{" "}
-          <Link href="/news/bayern-fans-madrid-group" className="text-gold underline">
-            coming as a big group: one pin, three pubs near Sol
+          <Link href="/news/bayern-atletico-fans-together" className="text-gold underline">
+            red and white meets red and white, both sets of fans near Sol
           </Link>
           {" · "}
-          <a href="/de/bayern-fans-gruppe-madrid" hrefLang="de" lang="de" className="text-gold underline">
-            Die ganze Truppe, ein Pin
+          <a href="/de/bayern-atletico-fans-gemeinsam" hrefLang="de" lang="de" className="text-gold underline">
+            Rot-Weiß trifft Rot-Weiß
           </a>
         </p>
       ) : null}

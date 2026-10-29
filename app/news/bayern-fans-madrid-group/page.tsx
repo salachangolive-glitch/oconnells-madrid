@@ -84,6 +84,10 @@ export default function NewsBayernFansGroupPage() {
             Contact
           </Link>
           {" · "}
+          <Link href="/news/bayern-atletico-fans-together" className="text-cream underline">
+            Next: red and white meets red and white
+          </Link>
+          {" · "}
           <Link href="/news/bayern-fans-barrio-de-las-letras" className="text-cream underline">
             Our neighbourhood, the Barrio de las Letras
           </Link>

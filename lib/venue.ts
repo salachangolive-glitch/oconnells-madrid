@@ -144,6 +144,7 @@ export const EN_PATHS = [
   "/news/bayern-fans-madrid-timing",
   "/news/bayern-fans-barrio-de-las-letras",
   "/news/bayern-fans-madrid-group",
+  "/news/bayern-atletico-fans-together",
   "/news/duran-duran-madrid-gig-night-sol",
   "/news/atletico-barcelona-sunday-night-sol",
   "/oktoberfest-madrid-sol",
@@ -187,6 +188,7 @@ export const DE_PATHS = [
   "/de/bayern-fans-madrid-uhrzeiten",
   "/de/bayern-fans-barrio-de-las-letras",
   "/de/bayern-fans-gruppe-madrid",
+  "/de/bayern-atletico-fans-gemeinsam",
 ] as const;
 
 export const ALL_CONTENT_PATHS = [...EN_PATHS, ...ES_PATHS, ...DE_PATHS] as const;
@@ -255,6 +257,10 @@ export const HREFLANG_GROUPS: Record<
   "/news/bayern-fans-madrid-group": {
     en: "/news/bayern-fans-madrid-group",
     de: "/de/bayern-fans-gruppe-madrid",
+  },
+  "/news/bayern-atletico-fans-together": {
+    en: "/news/bayern-atletico-fans-together",
+    de: "/de/bayern-atletico-fans-gemeinsam",
   },
 };
 
