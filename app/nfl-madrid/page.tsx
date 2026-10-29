@@ -67,6 +67,43 @@ export default function NflMadridPage() {
           .
         </p>
       </Section>
+      <Section title="Going to the Bernabéu on Sunday 8 November">
+        <p>
+          Bengals v Falcons kicks off at 15:30 Madrid time at the Bernabéu.
+          These are the arrival details Real Madrid lists on{" "}
+          <a
+            href="https://bernabeu.realmadrid.com/nfl/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-cream underline"
+          >
+            the stadium&apos;s NFL page
+          </a>
+          :
+        </p>
+        <ul className="list-disc pl-5 space-y-1">
+          <li>The stadium perimeter opens at 12:30.</li>
+          <li>
+            There is no parking at the stadium, so plan on public transport or a
+            taxi. The accessible metro station is Nuevos Ministerios (lines 6, 8
+            and 10), about 15 minutes on foot from the accessible entrance.
+          </li>
+          <li>
+            The NFL clear-bag policy applies, and the advice is to bring no bag
+            at all. If you need one: a clear bag up to 30.5 × 15.25 × 30.5 cm or a
+            small clutch up to 11.5 × 16.5 cm. An empty, clear reusable bottle
+            (up to 1 litre) is allowed.
+          </li>
+        </ul>
+        <p>
+          No ticket? The game is on our screens at O&apos;Connell St, near Sol,
+          from 15:30. Check{" "}
+          <Link href="/whats-on" className="text-cream underline">
+            What&apos;s On
+          </Link>{" "}
+          for the rest of Sunday&apos;s games.
+        </p>
+      </Section>
       <Section title="Find us">
         <p>
           {ADDRESS.full}. {HOURS.summaryEn}.

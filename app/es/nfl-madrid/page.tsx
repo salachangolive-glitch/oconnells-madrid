@@ -69,6 +69,45 @@ export default function NflMadridPageEs() {
           .
         </p>
       </Section>
+      <Section title="Si vas al Bernabéu el domingo 8 de noviembre">
+        <p>
+          El Bengals–Falcons empieza a las 15:30, hora de Madrid, en el
+          Bernabéu. Estos son los datos de llegada que da el Real Madrid en{" "}
+          <a
+            href="https://bernabeu.realmadrid.com/nfl/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-cream underline"
+          >
+            la página NFL del estadio
+          </a>
+          :
+        </p>
+        <ul className="list-disc pl-5 space-y-1">
+          <li>El perímetro del estadio abre a las 12:30.</li>
+          <li>
+            No hay parking en el estadio: mejor transporte público o taxi. La
+            estación de metro accesible es Nuevos Ministerios (líneas 6, 8 y
+            10), a unos 15 minutos andando de la entrada accesible.
+          </li>
+          <li>
+            Rige la política de bolsas transparentes de la NFL y se recomienda no
+            llevar ninguna bolsa. Si hace falta: bolsa transparente de hasta 30,5
+            × 15,25 × 30,5 cm o bolso de mano de hasta 11,5 × 16,5 cm. Se puede
+            llevar una botella reutilizable, vacía y transparente, de hasta 1
+            litro.
+          </li>
+        </ul>
+        <p>
+          ¿Sin entrada? El partido está en nuestras pantallas en O&apos;Connell
+          St, junto a Sol, desde las 15:30. El resto de partidos del domingo, en
+          la{" "}
+          <Link href="/es/whats-on" className="text-cream underline">
+            Agenda
+          </Link>
+          .
+        </p>
+      </Section>
       <Section title="Dónde estamos">
         <p>
           {ADDRESS.full}. {HOURS.summaryEs}.
