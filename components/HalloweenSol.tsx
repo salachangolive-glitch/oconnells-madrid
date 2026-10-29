@@ -138,7 +138,11 @@ export function HalloweenTeaser({ locale, today }: { locale: "en" | "es"; today:
   const es = locale === "es";
   return (
     <p className="mb-12 max-w-2xl border-l-2 border-gold pl-4 text-sm text-cream-muted sm:text-base">
-      {es ? "Sábado 31 de octubre, desde las 19:00 — " : "Saturday 31 October, from 19:00 — "}
+      {today === HALLOWEEN_LAST_DAY
+        ? es ? "Esta noche, sábado 31 de octubre, desde las 19:00 — " : "Tonight, Saturday 31 October, from 19:00 — "
+        : today >= "2026-10-29"
+          ? es ? "Este sábado 31 de octubre, desde las 19:00 — " : "This Saturday 31 October, from 19:00 — "
+          : es ? "Sábado 31 de octubre, desde las 19:00 — " : "Saturday 31 October, from 19:00 — "}
       <Link href={es ? HALLOWEEN_PATHS.es : HALLOWEEN_PATHS.en} className="text-gold underline">
         {es ? "Noche de Halloween junto a Sol" : "Halloween night by Sol"}
       </Link>
