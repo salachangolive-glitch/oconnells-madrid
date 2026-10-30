@@ -2,6 +2,7 @@ import Link from "next/link";
 import { PostMatchBanner } from "@/components/PostMatchBanner";
 import { FixtureList } from "@/components/FixtureList";
 import { HalloweenTeaser } from "@/components/HalloweenSol";
+import { NflSunday8Nov } from "@/components/NflSunday8Nov";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
 import { buildMetadata } from "@/lib/seo";
@@ -76,6 +77,7 @@ export default function EsWhatsOnPage() {
           Liga de Naciones: España–Inglaterra, domingo 15 de noviembre, 20:45 (Riyadh Air Metropolitano), en directo cerca de Sol. Canal: por confirmar.
         </p>
       ) : null}
+      <NflSunday8Nov locale="es" today={madridTodayYmd(agendaBuildNow())} context="whats-on" />
       <HalloweenTeaser locale="es" today={madridTodayYmd(agendaBuildNow())} />
       <FixtureList locale="es" />
 

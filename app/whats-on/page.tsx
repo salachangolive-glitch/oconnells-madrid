@@ -2,6 +2,7 @@ import Link from "next/link";
 import { PostMatchBanner } from "@/components/PostMatchBanner";
 import { FixtureList } from "@/components/FixtureList";
 import { HalloweenTeaser } from "@/components/HalloweenSol";
+import { NflSunday8Nov } from "@/components/NflSunday8Nov";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
 import { buildMetadata } from "@/lib/seo";
@@ -91,6 +92,7 @@ export default function WhatsOnPage() {
           UEFA Nations League: Spain v England, Sunday 15 November, 20:45 (Riyadh Air Metropolitano), live near Sol. TV channel TBC.
         </p>
       ) : null}
+      <NflSunday8Nov locale="en" today={madridTodayYmd(agendaBuildNow())} context="whats-on" />
       <HalloweenTeaser locale="en" today={madridTodayYmd(agendaBuildNow())} />
       <FixtureList locale="en" />
 

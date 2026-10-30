@@ -2,6 +2,7 @@ import Link from "next/link";
 import { PostMatchBanner } from "@/components/PostMatchBanner";
 import { FixtureStrip } from "@/components/FixtureStrip";
 import { HalloweenTeaser } from "@/components/HalloweenSol";
+import { NflSunday8Nov } from "@/components/NflSunday8Nov";
 import { HomeCtaBand } from "@/components/HomeCtaBand";
 import { InteriorGallery, InteriorPhoto } from "@/components/InteriorPhoto";
 import { PageShell } from "@/components/PageShell";
@@ -82,6 +83,9 @@ export default function HomePage() {
           </Link>
         </p>
       </section>
+
+      {/* NFL Sunday 8 Nov: third home block (owner via DG 30 Oct), gone from 9 Nov */}
+      <NflSunday8Nov locale="en" today={madridTodayYmd(agendaBuildNow())} />
 
       {/* Live Sports / What's On */}
       <HalloweenTeaser locale="en" today={madridTodayYmd(agendaBuildNow())} />

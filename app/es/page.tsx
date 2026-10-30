@@ -2,6 +2,7 @@ import Link from "next/link";
 import { PostMatchBanner } from "@/components/PostMatchBanner";
 import { FixtureStrip } from "@/components/FixtureStrip";
 import { HalloweenTeaser } from "@/components/HalloweenSol";
+import { NflSunday8Nov } from "@/components/NflSunday8Nov";
 import { HomeCtaBand } from "@/components/HomeCtaBand";
 import { InteriorGallery, InteriorPhoto } from "@/components/InteriorPhoto";
 import { PageShell } from "@/components/PageShell";
@@ -88,6 +89,9 @@ export default function EsHomePage() {
           </Link>
         </p>
       </section>
+
+      {/* Domingo NFL 8 nov: tercer bloque de la portada (dueño vía DG 30 oct), se retira el 9 nov */}
+      <NflSunday8Nov locale="es" today={madridTodayYmd(agendaBuildNow())} />
 
       <HalloweenTeaser locale="es" today={madridTodayYmd(agendaBuildNow())} />
       <FixtureStrip locale="es" windowOnly />
