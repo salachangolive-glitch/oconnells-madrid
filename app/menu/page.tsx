@@ -18,7 +18,7 @@ export default function MenuPage() {
       <PageHero
         eyebrow="Food & drinks · Menu"
         title="Pub food near Sol"
-        lead="Tapas to share, rice dishes, burgers, pizza and an Irish breakfast, with the game on the projector and 9 screens."
+        lead="Tapas to share, rice dishes, burgers, pizza and an Irish breakfast, with the game on the big screen and 9 screens."
       />
       <Section title="Our menu">
         <p>

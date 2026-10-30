@@ -10,7 +10,7 @@ import { ADDRESS, HOURS, MAPS_URL, SITE_NAME } from "@/lib/venue";
 export const metadata = buildMetadata({
   title: "Sobre O'Connell St Madrid — pub irlandés de fútbol europeo en Sol",
   description:
-    "Sobre O'Connell St: pub irlandés en Calle de Espoz y Mina 7, junto a Puerta del Sol. Premier League, Champions League y LaLiga en proyector y 9 pantallas.",
+    "Sobre O'Connell St: pub irlandés en Calle de Espoz y Mina 7, junto a Puerta del Sol. Premier League, Champions League y LaLiga en pantalla grande y 9 pantallas.",
   path: "/es/about",
   locale: "es",
 });
@@ -46,7 +46,7 @@ export default function EsAboutPage() {
       <Section title="Fútbol europeo en Sol">
         <p>
           El fútbol es el centro del local. Ponemos la Premier League, la UEFA
-          Champions League y LaLiga, con el partido en el proyector y 9
+          Champions League y LaLiga, con el partido en la pantalla grande y 9
           pantallas. En las grandes noches europeas es un pub en Sol para quedar
           antes del partido y verlo en directo.
         </p>

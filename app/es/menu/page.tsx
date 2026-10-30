@@ -19,7 +19,7 @@ export default function MenuPageEs() {
       <PageHero
         eyebrow="Comida y bebida · Carta"
         title="Comer en un pub junto a Sol"
-        lead="Raciones para compartir, arroces, hamburguesas, pizza y desayuno irlandés, con el partido en el proyector y 9 pantallas."
+        lead="Raciones para compartir, arroces, hamburguesas, pizza y desayuno irlandés, con el partido en la pantalla grande y 9 pantallas."
       />
       <Section title="Nuestra carta">
         <p>

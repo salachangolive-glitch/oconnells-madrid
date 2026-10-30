@@ -10,7 +10,7 @@ import { ADDRESS, HOURS, MAPS_URL, SITE_NAME } from "@/lib/venue";
 export const metadata = buildMetadata({
   title: "About O'Connell St Madrid — Irish pub for European football at Sol",
   description:
-    "About O'Connell St: Irish pub at Calle de Espoz y Mina 7, near Puerta del Sol. Premier League, Champions League and LaLiga on a projector and 9 screens.",
+    "About O'Connell St: Irish pub at Calle de Espoz y Mina 7, near Puerta del Sol. Premier League, Champions League and LaLiga on a big screen and 9 screens.",
   path: "/about",
 });
 
@@ -44,7 +44,7 @@ export default function AboutPage() {
       <Section title="European football at Sol">
         <p>
           Football is the heart of the place. We show the Premier League, the
-          UEFA Champions League and LaLiga, with the game on the projector and 9
+          UEFA Champions League and LaLiga, with the game on the big screen and 9
           screens. On big European nights it&apos;s an Irish pub near Sol to meet up
           before the match, and to watch it live.
         </p>
