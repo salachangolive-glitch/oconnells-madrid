@@ -81,6 +81,10 @@ export default function NewsBayernAtleticoTogetherPage() {
             Contact
           </Link>
           {" · "}
+          <Link href="/news/bayern-fans-madrid-weekend" className="text-cream underline">
+            Next: arriving early? A football weekend near Sol
+          </Link>
+          {" · "}
           <Link href="/news/bayern-fans-madrid-group" className="text-cream underline">
             Coming as a big group: one pin, three pubs
           </Link>

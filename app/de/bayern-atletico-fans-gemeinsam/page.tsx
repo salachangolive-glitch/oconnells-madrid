@@ -82,6 +82,10 @@ export default function DeBayernAtleticoGemeinsamPage() {
             Kontakt (Englisch)
           </Link>
           {" · "}
+          <Link href="/de/bayern-fans-madrid-wochenende" className="text-cream underline">
+            Weiter: Früher anreisen?
+          </Link>
+          {" · "}
           <Link href="/de/bayern-fans-gruppe-madrid" className="text-cream underline">
             Die ganze Truppe, ein Pin
           </Link>
