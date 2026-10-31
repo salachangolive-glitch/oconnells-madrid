@@ -74,6 +74,15 @@ export default function WhatsOnPage() {
           </Link>
         </p>
       ) : null}
+      {/* England v Croatia, UEFA Nations League (Radar OC5; match.uefa.com id 2047879, 19:45Z = 20:45 CET): build-time date gate. */}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-12" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          UEFA Nations League: England v Croatia, Thursday 12 November, 20:45 (Wembley), live near Sol.{" "}
+          <Link href="/news/england-croatia-thursday-night-sol" className="text-gold underline">
+            England Thursday in Sol
+          </Link>
+        </p>
+      ) : null}
       {/* Real Madrid Femenino UWCL (DG 26 Oct; times per match.uefa.com + realmadrid.com): build-time date gates, each line gone from the daily rebuild after its date. */}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-10" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">

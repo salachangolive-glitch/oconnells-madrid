@@ -150,6 +150,7 @@ export const EN_PATHS = [
   "/news/duran-duran-madrid-gig-night-sol",
   "/news/bryan-adams-madrid-gig-night-sol",
   "/news/atletico-barcelona-sunday-night-sol",
+  "/news/england-croatia-thursday-night-sol",
   "/oktoberfest-madrid-sol",
   "/halloween-madrid-sol",
   "/menu",
