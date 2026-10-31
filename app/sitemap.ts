@@ -39,6 +39,7 @@ const BAYERN_GROUPS = [
   HREFLANG_GROUPS["/news/bayern-fans-madrid-group"],
   HREFLANG_GROUPS["/news/bayern-atletico-fans-together"],
   HREFLANG_GROUPS["/news/bayern-fans-madrid-weekend"],
+  HREFLANG_GROUPS["/news/bayern-fans-halloween-madrid"],
 ];
 
 /** Bayern fans articles: en/de/x-default alternates. */

@@ -146,6 +146,7 @@ export const EN_PATHS = [
   "/news/bayern-fans-madrid-group",
   "/news/bayern-atletico-fans-together",
   "/news/bayern-fans-madrid-weekend",
+  "/news/bayern-fans-halloween-madrid",
   "/news/duran-duran-madrid-gig-night-sol",
   "/news/bryan-adams-madrid-gig-night-sol",
   "/news/atletico-barcelona-sunday-night-sol",
@@ -192,6 +193,7 @@ export const DE_PATHS = [
   "/de/bayern-fans-gruppe-madrid",
   "/de/bayern-atletico-fans-gemeinsam",
   "/de/bayern-fans-madrid-wochenende",
+  "/de/bayern-fans-halloween-madrid",
 ] as const;
 
 export const ALL_CONTENT_PATHS = [...EN_PATHS, ...ES_PATHS, ...DE_PATHS] as const;
@@ -268,6 +270,10 @@ export const HREFLANG_GROUPS: Record<
   "/news/bayern-fans-madrid-weekend": {
     en: "/news/bayern-fans-madrid-weekend",
     de: "/de/bayern-fans-madrid-wochenende",
+  },
+  "/news/bayern-fans-halloween-madrid": {
+    en: "/news/bayern-fans-halloween-madrid",
+    de: "/de/bayern-fans-halloween-madrid",
   },
 };
 

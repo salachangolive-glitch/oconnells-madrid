@@ -92,6 +92,10 @@ export default function NewsBayernFansWeekendPage() {
             Contact
           </Link>
           {" · "}
+          <Link href="/news/bayern-fans-halloween-madrid" className="text-cream underline">
+            Next: Halloween near Sol on Saturday
+          </Link>
+          {" · "}
           <Link href="/news/bayern-atletico-fans-together" className="text-cream underline">
             Red and white meets red and white
           </Link>

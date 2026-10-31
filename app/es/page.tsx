@@ -114,12 +114,12 @@ export default function EsHomePage() {
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-03" ? (
         <p className="mb-12 max-w-2xl border-l-2 border-gold pl-4 text-sm text-cream-muted sm:text-base">
           Atlético–Bayern, martes 3 de noviembre, 21:00 — afición del Bayern en Madrid:{" "}
-          <Link href="/news/bayern-fans-madrid-weekend" className="text-gold underline">
-            si llegáis antes: un fin de semana de fútbol junto a Sol (inglés)
+          <Link href="/news/bayern-fans-halloween-madrid" className="text-gold underline">
+            si ya estáis en Madrid: Halloween junto a Sol el sábado (inglés)
           </Link>
           {" · "}
-          <a href="/de/bayern-fans-madrid-wochenende" hrefLang="de" lang="de" className="text-gold underline">
-            Früher anreisen? (alemán)
+          <a href="/de/bayern-fans-halloween-madrid" hrefLang="de" lang="de" className="text-gold underline">
+            Halloween an der Sol (alemán)
           </a>
         </p>
       ) : null}

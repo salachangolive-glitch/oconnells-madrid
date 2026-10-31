@@ -96,6 +96,10 @@ export default function DeBayernFansWochenendePage() {
             Kontakt (Englisch)
           </Link>
           {" · "}
+          <Link href="/de/bayern-fans-halloween-madrid" className="text-cream underline">
+            Weiter: Halloween an der Sol
+          </Link>
+          {" · "}
           <Link href="/de/bayern-atletico-fans-gemeinsam" className="text-cream underline">
             Rot-Weiß trifft Rot-Weiß
           </Link>
