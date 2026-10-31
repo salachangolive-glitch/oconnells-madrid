@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 
 /** Sets <html lang> for nested locale segments (App Router has one root html). */
-export function LangAttr({ lang }: { lang: "en" | "es" }) {
+export function LangAttr({ lang }: { lang: "en" | "es" | "de" }) {
   useEffect(() => {
     document.documentElement.lang = lang;
   }, [lang]);

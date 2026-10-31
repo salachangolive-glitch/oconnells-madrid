@@ -1,0 +1,42 @@
+# O'Connell St Madrid
+
+> O'Connell St is an Irish pub and sports bar at Calle de Espoz y Mina 7, 28012 Madrid, Spain, a short walk from Puerta del Sol. Its focus is European football: Premier League, UEFA Champions League and LaLiga on a big screen and 9 screens. Basketball, rugby, Formula 1 and tennis are also shown when broadcast.
+
+ES: O'Connell St es un pub irlandés y bar deportivo en Calle de Espoz y Mina 7, 28012 Madrid, junto a Puerta del Sol, centrado en el fútbol europeo (Premier League, Champions League y LaLiga). Web en español: https://oconnellsmadrid.es/es
+
+## Key facts
+- Name: O'Connell St (O'Connell St Madrid)
+- Type: Irish pub and sports bar
+- Address: Calle de Espoz y Mina, 7, 28012 Madrid, Spain
+- Nearest station: Sol (Metro and Cercanías)
+- How to recognise it: red facade with gold O'CONNELL ST. lettering
+- Opening hours (Madrid time): Mon–Thu 18:00–03:00; Fri 16:00–03:30; Sat 15:00–03:30; Sun 14:00–03:00
+- Contact: comunicacion@oconnellsmadrid.es or the contact form (https://oconnellsmadrid.es/contact)
+- Google Maps: https://maps.google.com/maps?cid=10697659365903665225
+- Match listings: confirmed games for the next 7 days are on What's On, always in Madrid time
+
+## Pages (English)
+- [Home](https://oconnellsmadrid.es/): overview
+- [What's On](https://oconnellsmadrid.es/whats-on): confirmed matches and events, next 7 days, Madrid time
+- [Premier League](https://oconnellsmadrid.es/premier-league): Premier League at a pub near Sol
+- [Champions League](https://oconnellsmadrid.es/champions-league): Champions League nights
+- [Watch football in Madrid](https://oconnellsmadrid.es/watch-football-madrid): football in the centre
+- [Live sports](https://oconnellsmadrid.es/sports): all sports shown
+- [About](https://oconnellsmadrid.es/about): who we are
+- [Location and hours](https://oconnellsmadrid.es/location): directions from Puerta del Sol
+- [Menu](https://oconnellsmadrid.es/menu): food
+- [Contact](https://oconnellsmadrid.es/contact)
+
+## Páginas (español)
+- [Inicio](https://oconnellsmadrid.es/es)
+- [Agenda](https://oconnellsmadrid.es/es/whats-on): partidos confirmados, próximos 7 días, hora de Madrid
+- [Premier League](https://oconnellsmadrid.es/es/premier-league)
+- [Champions League](https://oconnellsmadrid.es/es/champions-league)
+- [Ver fútbol en Madrid](https://oconnellsmadrid.es/es/watch-football-madrid)
+- [Sobre nosotros](https://oconnellsmadrid.es/es/about)
+- [Ubicación y horario](https://oconnellsmadrid.es/es/location)
+- [Carta](https://oconnellsmadrid.es/es/menu)
+- [Contacto](https://oconnellsmadrid.es/es/contact)
+
+## Optional
+- [Sitemap](https://oconnellsmadrid.es/sitemap.xml)

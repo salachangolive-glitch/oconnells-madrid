@@ -1,8 +1,12 @@
+import { ga4Enabled } from "@/lib/analytics";
+import { barOrPubJsonLd } from "@/lib/jsonld";
+import { JsonLd } from "./JsonLd";
+import { CookieBanner } from "./CookieBanner";
 import { SiteFooter } from "./SiteFooter";
 import { SiteHeader } from "./SiteHeader";
 import { StickyCta } from "./StickyCta";
 
-type Locale = "en" | "es";
+type Locale = "en" | "es" | "de";
 
 export function PageShell({
   children,
@@ -18,19 +22,22 @@ export function PageShell({
 }) {
   return (
     <>
+      {/* Site-wide BarOrPub schema, description + hasMenu per page locale */}
+      <JsonLd data={barOrPubJsonLd(locale)} />
       <SiteHeader locale={locale} altLangHref={altLangHref} />
       {cover}
       <main
         className={
           cover
-            ? "mx-auto w-full max-w-5xl flex-1 px-4 py-6 sm:py-10"
-            : "mx-auto w-full max-w-5xl flex-1 px-4 py-8 sm:py-12"
+            ? "mx-auto w-full max-w-5xl flex-1 px-4 pt-6 pb-8 sm:pt-10"
+            : "mx-auto w-full max-w-5xl flex-1 px-4 pt-8 pb-8 sm:pt-12"
         }
       >
         {children}
       </main>
       <SiteFooter locale={locale} />
       <StickyCta locale={locale} />
+      {ga4Enabled() ? <CookieBanner locale={locale === "de" ? "en" : locale} /> : null}
     </>
   );
 }

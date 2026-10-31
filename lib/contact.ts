@@ -56,5 +56,5 @@ export function buildContactSubject(
 ): string {
   const reason = reasonSubjectLabel(reasonValue, locale);
   const safeName = name.trim().slice(0, 80) || (locale === "es" ? "Sin nombre" : "No name");
-  return `[OCONNELLS] ${reason} — ${safeName}`;
+  return `[O'Connell St Madrid] ${reason} — ${safeName}`;
 }

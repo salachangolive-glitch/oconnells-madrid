@@ -1,0 +1,22 @@
+# Expired Champions League match notes (20 and 21 Oct 2026), retired 24 Oct 2026.
+# 301 to the evergreen Champions League page in the same language.
+/news/champions-league-tuesday-20-october /champions-league 301
+/news/champions-league-tuesday-20-october/ /champions-league 301
+/news/champions-league-wednesday-21-october /champions-league 301
+/news/champions-league-wednesday-21-october/ /champions-league 301
+/es/noticias/champions-league-martes-20-octubre /es/champions-league 301
+/es/noticias/champions-league-martes-20-octubre/ /es/champions-league 301
+/es/noticias/champions-league-miercoles-21-octubre /es/champions-league 301
+/es/noticias/champions-league-miercoles-21-octubre/ /es/champions-league 301
+# Past gig page (Fontaines D.C., Movistar Arena, Thu 22 Oct 2026), retired 24 Oct 2026.
+# 301 to What's On in the same language.
+/fontaines-dc-madrid /whats-on 301
+/fontaines-dc-madrid/ /whats-on 301
+/es/fontaines-dc-madrid /es/whats-on 301
+/es/fontaines-dc-madrid/ /es/whats-on 301
+# German Bayern article moved to a neutral slug (DG order 27 Oct 2026). Old URL kept as 301.
+/de/bayern-fans-madrid-treffpunkt /de/bayern-fans-madrid-sol 301
+/de/bayern-fans-madrid-treffpunkt/ /de/bayern-fans-madrid-sol 301
+# EN Bayern article moved to a slug without "meeting-point" (DG order 27 Oct 2026 08:53). Old URL kept as 301.
+/news/bayern-fans-madrid-pre-match-meeting-point /news/bayern-fans-madrid-sol-pre-match 301
+/news/bayern-fans-madrid-pre-match-meeting-point/ /news/bayern-fans-madrid-sol-pre-match 301

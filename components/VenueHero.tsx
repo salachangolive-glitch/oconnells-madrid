@@ -1,4 +1,14 @@
 import Image from "next/image";
+import { preload } from "react-dom";
+
+const HERO_SRCSET = [
+  "/images/hero-fachada-480w.webp 480w",
+  "/images/hero-fachada-720w.webp 720w",
+  "/images/hero-fachada-780w.webp 780w",
+  "/images/hero-fachada-960w.webp 960w",
+  "/images/hero-fachada-desktop.webp 1200w",
+].join(", ");
+const HERO_SIZES = "(max-width: 768px) 100vw, 768px";
 
 type Props = {
   variant?: "hero" | "secondary" | "gradient";
@@ -11,8 +21,9 @@ type Props = {
 };
 
 /**
- * Real O'Connell St facade. Hero = clean photo only (no text/buttons/dark
- * overlays on the image). Wide horizontal frame so O'CONNELL ST. stays readable.
+ * Real O'Connell St facade (portrait). Hero = clean photo only (no text /
+ * buttons / dark overlays on the image). Full vertical frame so the gold
+ * O'CONNELL ST. lettering and red storefront stay readable.
  */
 export function VenueHero({
   variant,
@@ -38,20 +49,32 @@ export function VenueHero({
         : "aspect-video";
 
   if (mode === "hero") {
+    preload("/images/hero-fachada-desktop.webp", {
+      as: "image",
+      imageSrcSet: HERO_SRCSET,
+      imageSizes: HERO_SIZES,
+      fetchPriority: "high",
+    });
     return (
       <div
-        className={`relative w-full overflow-hidden bg-pub-burgundy-deep aspect-[16/9] sm:aspect-[2/1] ${className}`}
+        className={`relative w-full overflow-hidden bg-pub-burgundy-deep ${className}`}
       >
-        <Image
-          src="/images/hero-fachada-desktop.webp"
-          alt={alt}
-          fill
-          priority
-          fetchPriority="high"
-          sizes="100vw"
-          className="object-contain object-center"
-          quality={85}
-        />
+        <div className="relative mx-auto aspect-[3/4] w-full max-h-[85vh] max-w-3xl sm:aspect-[4/5] sm:max-h-[90vh]">
+          {/* Plain responsive <img> (static export has no image optimizer):
+              phones get a 480/720/960 px file instead of the 1200 px one. */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/hero-fachada-desktop.webp"
+            srcSet={HERO_SRCSET}
+            sizes={HERO_SIZES}
+            alt={alt}
+            width={1200}
+            height={1600}
+            fetchPriority="high"
+            decoding="async"
+            className="absolute inset-0 h-full w-full object-contain object-center"
+          />
+        </div>
       </div>
     );
   }
