@@ -33,6 +33,11 @@ export default function DeBayernFansHalloweenPage() {
           Read in English: Halloween near Sol
         </a>
       </p>
+      <p className="mb-8 border-l-2 border-gold pl-4 text-sm sm:text-base">
+        <a href="/de/bayern-fans-madrid-treffpunkt-sol" className="font-semibold text-gold underline">
+          Dienstag, 3. November: Atlético – Bayern live auf der Großleinwand – euer Treffpunkt an der Sol und die Metro zum Stadion →
+        </a>
+      </p>
       <Section title="Halloween ab 19:00 Uhr">
         <p>
           Am Samstag, 31. Oktober, startet die Halloween-Party um 19:00 Uhr:

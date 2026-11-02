@@ -148,6 +148,7 @@ export const EN_PATHS = [
   "/news/bayern-fans-madrid-weekend",
   "/news/bayern-fans-halloween-madrid",
   "/news/spanish-phrases-football-fans",
+  "/news/bayern-fans-madrid-meeting-point-sol",
   "/news/duran-duran-madrid-gig-night-sol",
   "/news/bryan-adams-madrid-gig-night-sol",
   "/news/atletico-barcelona-sunday-night-sol",
@@ -182,6 +183,7 @@ export const ES_PATHS = [
   "/es/whats-on",
   "/es/contact",
   "/es/privacy",
+  "/es/noticias/aficion-bayern-madrid-punto-de-encuentro-sol",
 ] as const;
 
 export const DE_PATHS = [
@@ -197,6 +199,7 @@ export const DE_PATHS = [
   "/de/bayern-fans-madrid-wochenende",
   "/de/bayern-fans-halloween-madrid",
   "/de/spanisch-fuer-bayern-fans",
+  "/de/bayern-fans-madrid-treffpunkt-sol",
 ] as const;
 
 export const ALL_CONTENT_PATHS = [...EN_PATHS, ...ES_PATHS, ...DE_PATHS] as const;
@@ -220,6 +223,7 @@ export const HREFLANG_PAIRS: Record<string, string | undefined> = {
   "/whats-on": "/es/whats-on",
   "/contact": "/es/contact",
   "/privacy": "/es/privacy",
+  "/news/bayern-fans-madrid-meeting-point-sol": "/es/noticias/aficion-bayern-madrid-punto-de-encuentro-sol",
 };
 
 /**
@@ -281,6 +285,12 @@ export const HREFLANG_GROUPS: Record<
   "/news/spanish-phrases-football-fans": {
     en: "/news/spanish-phrases-football-fans",
     de: "/de/spanisch-fuer-bayern-fans",
+  },
+  /** Bayern meeting point article (owner via DG 2 Nov 2026): en/es/de. */
+  "/news/bayern-fans-madrid-meeting-point-sol": {
+    en: "/news/bayern-fans-madrid-meeting-point-sol",
+    es: "/es/noticias/aficion-bayern-madrid-punto-de-encuentro-sol",
+    de: "/de/bayern-fans-madrid-treffpunkt-sol",
   },
 };
 

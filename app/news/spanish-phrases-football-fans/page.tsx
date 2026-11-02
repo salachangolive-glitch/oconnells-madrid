@@ -45,6 +45,11 @@ export default function NewsSpanishPhrasesFootballFansPage() {
           Auf Deutsch lesen: Spanisch für Bayern Fans
         </a>
       </p>
+      <p className="mb-8 border-l-2 border-gold pl-4 text-sm sm:text-base">
+        <a href="/news/bayern-fans-madrid-meeting-point-sol" className="font-semibold text-gold underline">
+          Tuesday 3 November: Atlético v Bayern live on the big screen — your meeting point at Sol, and the metro to the stadium →
+        </a>
+      </p>
       <Section title="Ten phrases">
         <ol className="list-decimal space-y-2 pl-5">
           {PHRASES.map((p) => (

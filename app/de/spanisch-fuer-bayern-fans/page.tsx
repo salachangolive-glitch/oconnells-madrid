@@ -46,6 +46,11 @@ export default function DeSpanischFuerBayernFansPage() {
           Read in English: ten Spanish phrases for football fans
         </a>
       </p>
+      <p className="mb-8 border-l-2 border-gold pl-4 text-sm sm:text-base">
+        <a href="/de/bayern-fans-madrid-treffpunkt-sol" className="font-semibold text-gold underline">
+          Dienstag, 3. November: Atlético – Bayern live auf der Großleinwand – euer Treffpunkt an der Sol und die Metro zum Stadion →
+        </a>
+      </p>
       <Section title="Zehn Sätze">
         <ol className="list-decimal space-y-2 pl-5">
           {PHRASES.map((p) => (

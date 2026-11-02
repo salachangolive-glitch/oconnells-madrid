@@ -38,7 +38,15 @@ export default function EsWhatsOnPage() {
       {/* Bayern fans articles (Atlético–Bayern 3 Nov): build-time date gate, gone from the 4 Nov daily rebuild. */}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-03" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">
-          Atlético–Bayern, martes 3 de noviembre, 21:00 (artículos para la afición del Bayern):{" "}
+          Atlético–Bayern, martes 3 de noviembre, 21:00:{" "}
+          <Link href="/es/noticias/aficion-bayern-madrid-punto-de-encuentro-sol" className="text-gold underline">
+            punto de encuentro en Sol, en directo en pantalla grande
+          </Link>
+          {" · "}
+          <a href="/de/bayern-fans-madrid-treffpunkt-sol" hrefLang="de" lang="de" className="text-gold underline">
+            Treffpunkt an der Sol (en alemán)
+          </a>
+          {" · "}artículos para la afición del Bayern:{" "}
           <Link href="/news/spanish-phrases-football-fans" className="text-gold underline">
             en inglés
           </Link>

@@ -1,3 +1,4 @@
+import { BAYERN_MP_PATHS } from "@/components/BayernMeetingPointArticle";
 import { MAPS_URL } from "@/lib/venue";
 
 /**
@@ -10,6 +11,8 @@ import { MAPS_URL } from "@/lib/venue";
  * (Mon–Thu 18:00–03:00, so Mon 2 and Tue 3 Nov open 18:00).
  * Gate: build-time (<= BAYERN3_LAST_DAY, gone from the 4 Nov 06:31 daily
  * rebuild) + inline clock that hides it from Wed 4 Nov 00:00 Madrid.
+ * Main link per language: the meeting point article (owner via DG 2 Nov 09:46,
+ * «Treffpunkt» / «meeting point» / «punto de encuentro» allowed for this campaign only).
  * Links are final URLs (no 301): main DE article moved 27 Oct from
  * /de/bayern-fans-madrid-treffpunkt to /de/bayern-fans-madrid-sol.
  */
@@ -31,6 +34,21 @@ const EN_LINKS = [
 ];
 
 const HIDE_SCRIPT = `(function(){try{var d=new Intl.DateTimeFormat("en-CA",{timeZone:"Europe/Madrid",year:"numeric",month:"2-digit",day:"2-digit"}).format(new Date());if(d>"${BAYERN3_LAST_DAY}"){var e=document.querySelectorAll("[data-bayern3]");for(var i=0;i<e.length;i++)e[i].style.display="none";}}catch(_){}})();`;
+
+function MainCta({ href, label, lang }: { href: string; label: string; lang: string }) {
+  return (
+    <p className="mt-4">
+      <a
+        href={href}
+        hrefLang={lang}
+        data-event="bayern_article"
+        className="inline-block bg-gold px-4 py-2 text-sm font-semibold text-pub-burgundy-deep transition hover:bg-cream"
+      >
+        {label} →
+      </a>
+    </p>
+  );
+}
 
 function LinkList({ items, lang }: { items: { href: string; label: string }[]; lang: string }) {
   return (
@@ -63,43 +81,46 @@ export function BayernMatchFeature({ locale, today }: { locale: "en" | "es"; tod
       {/* Deutsch */}
       <div lang="de">
         <h2 id="bayern3-title" className="mt-2 font-serif text-2xl font-bold text-cream">
-          Atlético – Bayern live auf der Großleinwand
+          Atlético – Bayern: euer Treffpunkt an der Sol, live auf der Großleinwand
         </h2>
         <div className="pub-rule my-3" />
         <p className="text-sm text-cream-muted sm:text-base">
           Bayern-Fans in Madrid: Am Dienstag, 3. November, um 21:00 Uhr (Madrider Zeit) läuft
           Atlético – Bayern aus dem Metropolitano live auf der Großleinwand im O&apos;Connell St,
           einem Irish Pub in der Calle de Espoz y Mina 7, direkt neben der Puerta del Sol. Bier,
-          Essen und Stimmung mitten im Zentrum. Montag und Dienstag geöffnet von 18:00 bis 03:00 Uhr.
+          Essen und Stimmung mitten im Zentrum – euer Treffpunkt vor und nach dem Spiel. Montag und Dienstag geöffnet von 18:00 bis 03:00 Uhr.
         </p>
+        <MainCta href={BAYERN_MP_PATHS.de} lang="de" label="Treffpunkt an der Sol: Spiel, Metro zum Stadion, zurück bis 03:00" />
         <LinkList items={DE_LINKS} lang="de" />
       </div>
 
       {/* English */}
       <div lang="en" className="mt-6 border-t border-gold/20 pt-5">
         <h3 className="font-serif text-lg font-bold text-cream">
-          Atlético v Bayern live on the big screen
+          Atlético v Bayern: your meeting point at Sol, live on the big screen
         </h3>
         <p className="mt-2 text-sm text-cream-muted sm:text-base">
           Bayern fans in Madrid: Atlético v Bayern kicks off at the Metropolitano on Tuesday
           3 November at 21:00 Madrid time, and it&apos;s live on the big screen at O&apos;Connell St,
           an Irish pub at Calle de Espoz y Mina 7, right next to Puerta del Sol. Beer, food and a
-          match-night atmosphere in the city centre. Open Monday and Tuesday from 18:00 to 03:00.
+          match-night atmosphere in the city centre — your meeting point before and after the match. Open Monday and Tuesday from 18:00 to 03:00.
         </p>
+        <MainCta href={BAYERN_MP_PATHS.en} lang="en" label="Meeting point at Sol: the match, the metro to the stadium, back until 03:00" />
         <LinkList items={EN_LINKS} lang="en" />
       </div>
 
       {es ? (
         <div lang="es" className="mt-6 border-t border-gold/20 pt-5">
           <h3 className="font-serif text-lg font-bold text-cream">
-            Atlético–Bayern en directo en pantalla grande
+            Atlético–Bayern: tu punto de encuentro en Sol, en directo en pantalla grande
           </h3>
           <p className="mt-2 text-sm text-cream-muted sm:text-base">
             El martes 3 de noviembre a las 21:00, el Atlético–Bayern de Champions desde el
             Metropolitano, en directo en pantalla grande en O&apos;Connell St, pub irlandés en la
             Calle de Espoz y Mina 7, junto a la Puerta del Sol. Cerveza, comida y ambiente de
-            partido en pleno centro. Lunes y martes abrimos de 18:00 a 03:00.
+            partido en pleno centro: tu punto de encuentro antes y después del partido. Lunes y martes abrimos de 18:00 a 03:00.
           </p>
+          <MainCta href={BAYERN_MP_PATHS.es} lang="es" label="Punto de encuentro en Sol: el partido, el metro al estadio y vuelta hasta las 03:00" />
         </div>
       ) : null}
 

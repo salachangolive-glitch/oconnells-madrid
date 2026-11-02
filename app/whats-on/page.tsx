@@ -38,6 +38,14 @@ export default function WhatsOnPage() {
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-03" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">
           Atlético v Bayern, Tuesday 3 November, 21:00:{" "}
+          <Link href="/news/bayern-fans-madrid-meeting-point-sol" className="text-gold underline">
+            meeting point at Sol, live on the big screen
+          </Link>
+          {" · "}
+          <a href="/de/bayern-fans-madrid-treffpunkt-sol" hrefLang="de" lang="de" className="text-gold underline">
+            Treffpunkt an der Sol (Deutsch)
+          </a>
+          {" · "}
           <Link href="/news/spanish-phrases-football-fans" className="text-gold underline">
             Bayern fans in Madrid: ten Spanish phrases
           </Link>

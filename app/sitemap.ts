@@ -74,6 +74,21 @@ function newsAlternates(base: string, path: string) {
   };
 }
 
+const BAYERN_MP = HREFLANG_GROUPS["/news/bayern-fans-madrid-meeting-point-sol"];
+
+/** Bayern meeting point article: en/es/de/x-default alternates. */
+function bayernMpAlternates(base: string, path: string) {
+  if (!BAYERN_MP?.es || !BAYERN_MP.de || ![BAYERN_MP.en, BAYERN_MP.es, BAYERN_MP.de].includes(path)) return undefined;
+  return {
+    languages: {
+      en: `${base}${BAYERN_MP.en}`,
+      es: `${base}${BAYERN_MP.es}`,
+      de: `${base}${BAYERN_MP.de}`,
+      "x-default": `${base}${BAYERN_MP.en}`,
+    },
+  };
+}
+
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -86,6 +101,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...(bayernAlternates(base, path) ? { alternates: bayernAlternates(base, path) } : {}),
     ...(oktAlternates(base, path) ? { alternates: oktAlternates(base, path) } : {}),
     ...(homeAlternates(base, path) ? { alternates: homeAlternates(base, path) } : {}),
+    ...(bayernMpAlternates(base, path) ? { alternates: bayernMpAlternates(base, path) } : {}),
     lastModified: now,
     changeFrequency: path === "/" || path === "/es" ? "weekly" : "monthly",
     priority: path === "/" || path === "/es" ? 1 : path.includes("thursday") ? 0.9 : 0.7,
