@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { PostMatchBanner } from "@/components/PostMatchBanner";
 import { FixtureStrip } from "@/components/FixtureStrip";
-import { HalloweenTeaser } from "@/components/HalloweenSol";
 import { NflSunday8Nov } from "@/components/NflSunday8Nov";
 import { HomeCtaBand } from "@/components/HomeCtaBand";
 import { InteriorGallery, InteriorPhoto } from "@/components/InteriorPhoto";
@@ -93,7 +92,6 @@ export default function EsHomePage() {
       {/* Domingo NFL 8 nov: tercer bloque de la portada (dueño vía DG 30 oct), se retira el 9 nov */}
       <NflSunday8Nov locale="es" today={madridTodayYmd(agendaBuildNow())} />
 
-      <HalloweenTeaser locale="es" today={madridTodayYmd(agendaBuildNow())} />
       <FixtureStrip locale="es" windowOnly />
       <p className="mb-12 max-w-2xl text-sm text-cream-muted sm:text-base">
         Más fútbol:{" "}
@@ -114,12 +112,12 @@ export default function EsHomePage() {
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-03" ? (
         <p className="mb-12 max-w-2xl border-l-2 border-gold pl-4 text-sm text-cream-muted sm:text-base">
           Atlético–Bayern, martes 3 de noviembre, 21:00 — afición del Bayern en Madrid:{" "}
-          <Link href="/news/bayern-fans-halloween-madrid" className="text-gold underline">
-            si ya estáis en Madrid: Halloween junto a Sol el sábado (inglés)
+          <Link href="/news/spanish-phrases-football-fans" className="text-gold underline">
+            diez frases en español para el bar y la calle (inglés)
           </Link>
           {" · "}
-          <a href="/de/bayern-fans-halloween-madrid" hrefLang="de" lang="de" className="text-gold underline">
-            Halloween an der Sol (alemán)
+          <a href="/de/spanisch-fuer-bayern-fans" hrefLang="de" lang="de" className="text-gold underline">
+            Spanisch für Bayern Fans (alemán)
           </a>
         </p>
       ) : null}

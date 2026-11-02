@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { PostMatchBanner } from "@/components/PostMatchBanner";
 import { FixtureList } from "@/components/FixtureList";
-import { HalloweenTeaser } from "@/components/HalloweenSol";
 import { NflSunday8Nov } from "@/components/NflSunday8Nov";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
@@ -39,12 +38,12 @@ export default function WhatsOnPage() {
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-03" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">
           Atlético v Bayern, Tuesday 3 November, 21:00:{" "}
-          <Link href="/news/bayern-fans-halloween-madrid" className="text-gold underline">
-            Bayern fans in Madrid early: Halloween near Sol
+          <Link href="/news/spanish-phrases-football-fans" className="text-gold underline">
+            Bayern fans in Madrid: ten Spanish phrases
           </Link>
           {" · "}
-          <a href="/de/bayern-fans-halloween-madrid" hrefLang="de" lang="de" className="text-gold underline">
-            Halloween an der Sol (Deutsch)
+          <a href="/de/spanisch-fuer-bayern-fans" hrefLang="de" lang="de" className="text-gold underline">
+            Spanisch für Bayern Fans (Deutsch)
           </a>
         </p>
       ) : null}
@@ -102,7 +101,6 @@ export default function WhatsOnPage() {
         </p>
       ) : null}
       <NflSunday8Nov locale="en" today={madridTodayYmd(agendaBuildNow())} context="whats-on" />
-      <HalloweenTeaser locale="en" today={madridTodayYmd(agendaBuildNow())} />
       <FixtureList locale="en" />
 
       <Section title="Live sports at O'Connell St">

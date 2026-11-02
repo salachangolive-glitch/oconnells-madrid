@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { PostMatchBanner } from "@/components/PostMatchBanner";
 import { FixtureStrip } from "@/components/FixtureStrip";
-import { HalloweenTeaser } from "@/components/HalloweenSol";
 import { NflSunday8Nov } from "@/components/NflSunday8Nov";
 import { HomeCtaBand } from "@/components/HomeCtaBand";
 import { InteriorGallery, InteriorPhoto } from "@/components/InteriorPhoto";
@@ -88,7 +87,6 @@ export default function HomePage() {
       <NflSunday8Nov locale="en" today={madridTodayYmd(agendaBuildNow())} />
 
       {/* Live Sports / What's On */}
-      <HalloweenTeaser locale="en" today={madridTodayYmd(agendaBuildNow())} />
       <FixtureStrip locale="en" windowOnly />
       <p className="mb-12 max-w-2xl text-sm text-cream-muted sm:text-base">
         More football:{" "}
@@ -110,12 +108,12 @@ export default function HomePage() {
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-03" ? (
         <p className="mb-12 max-w-2xl border-l-2 border-gold pl-4 text-sm text-cream-muted sm:text-base">
           Atlético v Bayern, Tuesday 3 November, 21:00 — Bayern fans in Madrid:{" "}
-          <Link href="/news/bayern-fans-halloween-madrid" className="text-gold underline">
-            landed early? Halloween near Sol on Saturday night
+          <Link href="/news/spanish-phrases-football-fans" className="text-gold underline">
+            ten Spanish phrases for the bar and the street
           </Link>
           {" · "}
-          <a href="/de/bayern-fans-halloween-madrid" hrefLang="de" lang="de" className="text-gold underline">
-            Halloween an der Sol für Bayern Fans
+          <a href="/de/spanisch-fuer-bayern-fans" hrefLang="de" lang="de" className="text-gold underline">
+            Spanisch für Bayern Fans: zehn Sätze
           </a>
         </p>
       ) : null}

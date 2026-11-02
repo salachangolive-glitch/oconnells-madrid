@@ -50,7 +50,7 @@ export default function DeBayernFansHalloweenPage() {
           21:00 Uhr. Zum Fußball kommen, für Halloween bleiben.
         </p>
       </Section>
-      <Section title="Drei Pubs, ein Treffpunkt">
+      <Section title="Drei Pubs an der Sol">
         <p>
           O&apos;Connell St und Dubliners teilen sich die Calle de Espoz y
           Mina 7, ein paar Gehminuten von der Puerta del Sol. Das
@@ -85,6 +85,10 @@ export default function DeBayernFansHalloweenPage() {
           {" · "}
           <Link href="/de/bayern-fans-madrid-wochenende" className="text-cream underline">
             Früher anreisen?
+          </Link>
+          {" · "}
+          <Link href="/de/spanisch-fuer-bayern-fans" className="text-cream underline">
+            Spanisch für Bayern Fans: zehn Sätze
           </Link>
         </p>
       </Section>

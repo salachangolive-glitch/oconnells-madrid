@@ -49,7 +49,7 @@ export default function NewsBayernFansHalloweenPage() {
           Halloween.
         </p>
       </Section>
-      <Section title="Three pubs, one meeting place">
+      <Section title="Three pubs near Sol">
         <p>
           O&apos;Connell St and Dubliners share Calle de Espoz y Mina 7, a
           couple of minutes&apos; walk from Puerta del Sol, and
@@ -84,6 +84,10 @@ export default function NewsBayernFansHalloweenPage() {
           {" · "}
           <Link href="/news/bayern-fans-madrid-weekend" className="text-cream underline">
             Arriving early? A football weekend near Sol
+          </Link>
+          {" · "}
+          <Link href="/news/spanish-phrases-football-fans" className="text-cream underline">
+            Ten Spanish phrases for football fans
           </Link>
         </p>
       </Section>

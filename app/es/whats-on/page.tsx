@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { PostMatchBanner } from "@/components/PostMatchBanner";
 import { FixtureList } from "@/components/FixtureList";
-import { HalloweenTeaser } from "@/components/HalloweenSol";
 import { NflSunday8Nov } from "@/components/NflSunday8Nov";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
@@ -40,11 +39,11 @@ export default function EsWhatsOnPage() {
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-03" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">
           Atlético–Bayern, martes 3 de noviembre, 21:00 (artículos para la afición del Bayern):{" "}
-          <Link href="/news/bayern-fans-halloween-madrid" className="text-gold underline">
+          <Link href="/news/spanish-phrases-football-fans" className="text-gold underline">
             en inglés
           </Link>
           {" · "}
-          <a href="/de/bayern-fans-halloween-madrid" hrefLang="de" lang="de" className="text-gold underline">
+          <a href="/de/spanisch-fuer-bayern-fans" hrefLang="de" lang="de" className="text-gold underline">
             en alemán
           </a>
         </p>
@@ -78,7 +77,6 @@ export default function EsWhatsOnPage() {
         </p>
       ) : null}
       <NflSunday8Nov locale="es" today={madridTodayYmd(agendaBuildNow())} context="whats-on" />
-      <HalloweenTeaser locale="es" today={madridTodayYmd(agendaBuildNow())} />
       <FixtureList locale="es" />
 
       <Section title="Deportes en directo en O'Connell St">

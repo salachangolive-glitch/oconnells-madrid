@@ -11,26 +11,24 @@ import { ADDRESS, HOURS, MAPS_URL, SITE_NAME } from "@/lib/venue";
  * Owner order via DG (2026-10-23 09:42, restated 2026-10-24 23:31): costumes,
  * decorations and music. ONLY these data: no prices, promotions or contests.
  * Angle: Halloween night at Sol + groups of friends (no students, no food).
- * Retire after the night with a 301 to What's On (T+1/T+3, 1–3 Nov).
+ * Archived 2 Nov 2026 (DG): past event, no 301, stays indexable and in the
+ * sitemap; reusable for Halloween 2027. Home / What's On teasers removed.
  */
 export const HALLOWEEN_PATHS = {
   en: "/halloween-madrid-sol",
   es: "/es/halloween-madrid-sol",
 } as const;
 
-/** Home / What's On teaser gate: shown on builds up to and including 31 Oct. */
-export const HALLOWEEN_LAST_DAY = "2026-10-31";
-
 export const HALLOWEEN_META = {
   en: {
-    title: "Halloween night near Sol, Madrid: Saturday 31 October from 19:00",
+    title: "Halloween near Sol, Madrid: past event, Saturday 31 October 2026",
     description:
-      "Halloween at O'Connell St, just off Puerta del Sol: Saturday 31 October from 19:00, with costumes, decorations and music. Meet your friends in the centre.",
+      "Halloween at O'Connell St, just off Puerta del Sol, took place on Saturday 31 October 2026 from 19:00, with costumes, decorations and music. See What's On for upcoming events.",
   },
   es: {
-    title: "Noche de Halloween junto a Sol, Madrid: sábado 31 de octubre desde las 19:00",
+    title: "Halloween junto a Sol, Madrid: evento pasado, sábado 31 de octubre de 2026",
     description:
-      "Halloween en O'Connell St, junto a la Puerta del Sol: sábado 31 de octubre desde las 19:00, con disfraces, decoración y música. Quedad con vuestro grupo en el centro.",
+      "Halloween en O'Connell St, junto a la Puerta del Sol, se celebró el sábado 31 de octubre de 2026 desde las 19:00, con disfraces, decoración y música. Consulta la Agenda para los próximos eventos.",
   },
 } as const;
 
@@ -70,12 +68,12 @@ export function HalloweenSol({ locale }: { locale: "en" | "es" }) {
     <PageShell locale={locale} altLangHref={es ? HALLOWEEN_PATHS.en : HALLOWEEN_PATHS.es}>
       <JsonLd data={eventJsonLd(locale)} />
       <PageHero
-        eyebrow={es ? "Halloween · sábado 31 de octubre de 2026 · desde las 19:00" : "Halloween · Saturday 31 October 2026 · from 19:00"}
-        title={es ? `Noche de Halloween en ${SITE_NAME}, junto a Sol` : `Halloween night at ${SITE_NAME}, by Sol`}
+        eyebrow={es ? "Evento pasado · Halloween · sábado 31 de octubre de 2026" : "Past event · Halloween · Saturday 31 October 2026"}
+        title={es ? `Halloween en ${SITE_NAME}, junto a Sol` : `Halloween at ${SITE_NAME}, by Sol`}
         lead={
           es
-            ? "El sábado 31 de octubre, O'Connell St, a un paso de la Puerta del Sol, se viste de Halloween desde las 19:00: disfraces, decoración y música en pleno centro de Madrid."
-            : "On Saturday 31 October, O'Connell St, a few steps from Puerta del Sol, turns into a Halloween night from 19:00: costumes, decorations and music in the centre of Madrid."
+            ? "La noche de Halloween de O'Connell St, a un paso de la Puerta del Sol, se celebró el sábado 31 de octubre de 2026 desde las 19:00, con disfraces, decoración y música en pleno centro de Madrid."
+            : "Halloween night at O'Connell St, a few steps from Puerta del Sol, took place on Saturday 31 October 2026 from 19:00, with costumes, decorations and music in the centre of Madrid."
         }
       />
       <InteriorPhoto
@@ -83,21 +81,18 @@ export function HalloweenSol({ locale }: { locale: "en" | "es" }) {
         alt={es ? "Barra de O'Connell St junto a la Puerta del Sol" : "The bar at O'Connell St near Puerta del Sol"}
         position="object-[center_40%]"
       />
-      <Section title={es ? "La noche" : "The night"}>
+      <Section title={es ? "Cómo fue la noche" : "How the night went"}>
         <ul className="list-disc space-y-1 pl-5">
-          <li>{es ? "Sábado 31 de octubre de 2026, desde las 19:00" : "Saturday 31 October 2026, from 19:00"}</li>
+          <li>{es ? "Se celebró el sábado 31 de octubre de 2026, desde las 19:00" : "Took place on Saturday 31 October 2026, from 19:00"}</li>
           <li>{es ? "Disfraces, decoración y música" : "Costumes, decorations and music"}</li>
           <li>{es ? `${ADDRESS.full}, junto a la Puerta del Sol` : `${ADDRESS.full}, just off Puerta del Sol`}</li>
         </ul>
       </Section>
-      <Section title={es ? "Quedad en Sol con vuestro grupo" : "Meet your friends at Sol"}>
+      <Section title={es ? "Halloween 2027" : "Halloween 2027"}>
         <p>
           {es
-            ? "Sol es el sitio más fácil del centro para quedar: llega el Metro (líneas 1, 2 y 3) y Cercanías. Quedad en la plaza, venid disfrazados y empezad aquí la noche de Halloween con vuestro grupo de amigos."
-            : "Sol is the easiest place in the centre to meet up, with Metro lines 1, 2 and 3 and Cercanías trains. Meet in the square, come in costume and start Halloween night here with your group of friends."}
-        </p>
-        <p>
-          {es ? "Se entra directamente, por orden de llegada." : "Just walk in, first come, first served."}
+            ? "Este evento ya ha pasado. Cuando haya novedades sobre Halloween 2027 las publicaremos en esta misma página y en la Agenda. Mientras tanto, el pub sigue abierto todos los días con deporte en directo."
+            : "This event has now taken place. When there is news about Halloween 2027, we will post it on this page and on What's On. In the meantime, the pub is open every day with live sport."}
         </p>
       </Section>
       <Section title={es ? "Horario y cómo llegar" : "Hours and directions"}>
@@ -129,24 +124,5 @@ export function HalloweenSol({ locale }: { locale: "en" | "es" }) {
         </p>
       </Section>
     </PageShell>
-  );
-}
-
-/** Short teaser for the home and What's On (build-time gate). */
-export function HalloweenTeaser({ locale, today }: { locale: "en" | "es"; today: string }) {
-  if (today > HALLOWEEN_LAST_DAY) return null;
-  const es = locale === "es";
-  return (
-    <p className="mb-12 max-w-2xl border-l-2 border-gold pl-4 text-sm text-cream-muted sm:text-base">
-      {today === HALLOWEEN_LAST_DAY
-        ? es ? "Esta noche, sábado 31 de octubre, desde las 19:00 — " : "Tonight, Saturday 31 October, from 19:00 — "
-        : today >= "2026-10-29"
-          ? es ? "Este sábado 31 de octubre, desde las 19:00 — " : "This Saturday 31 October, from 19:00 — "
-          : es ? "Sábado 31 de octubre, desde las 19:00 — " : "Saturday 31 October, from 19:00 — "}
-      <Link href={es ? HALLOWEEN_PATHS.es : HALLOWEEN_PATHS.en} className="text-gold underline">
-        {es ? "Noche de Halloween junto a Sol" : "Halloween night by Sol"}
-      </Link>
-      {es ? ": disfraces, decoración y música." : ": costumes, decorations and music."}
-    </p>
   );
 }
