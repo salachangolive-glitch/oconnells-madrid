@@ -67,6 +67,13 @@ export default function EsWhatsOnPage() {
           Bryan Adams «Roll with the Punches» en el Movistar Arena, martes 10 de noviembre, 20:30: queda en O&apos;Connell St, cerca de Sol, antes o después del concierto.
         </p>
       ) : null}
+      {/* Serbia–Alemania, Liga de Naciones (DG 2 nov vía Radar; match.uefa.com id 2047887, 19:45Z = 20:45 CET, Belgrado): build-time date gate. */}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-13" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          Liga de Naciones: Serbia–Alemania, viernes 13 de noviembre, 20:45 (hora de Madrid; en Belgrado), en directo cerca de Sol.{" "}
+          <span lang="de">Serbien – Deutschland, Freitag, 13. November, 20:45 Uhr: live im O&apos;Connell St an der Puerta del Sol.</span>
+        </p>
+      ) : null}
       {/* Real Madrid Femenino UWCL (DG 26 Oct; times per match.uefa.com + realmadrid.com): build-time date gates, each line gone from the daily rebuild after its date. */}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-10" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">
@@ -75,13 +82,19 @@ export default function EsWhatsOnPage() {
       ) : null}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-18" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">
-          Champions femenina: Real Madrid–Inter, miércoles 18 de noviembre, 18:45 (Di Stéfano), en directo cerca de Sol.
+          Champions femenina: Real Madrid–Inter, miércoles 18 de noviembre, 18:45 (Di Stéfano), en directo cerca de Sol. Canal por confirmar.{" "}
+          <Link href="/es/noticias/real-madrid-inter-champions-femenina-sol" className="text-gold underline">
+            Real Madrid–Inter en Sol
+          </Link>
         </p>
       ) : null}
       {/* España–Inglaterra, Liga de Naciones (DG 26 Oct vía Radar; hora según match.uefa.com id 2047904, 19:45Z = 20:45 CET; fecha según rfef.es): build-time date gate, gone from the 16 Nov daily rebuild. Canal por confirmar hasta que RTVE lo publique. */}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-15" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">
-          Liga de Naciones: España–Inglaterra, domingo 15 de noviembre, 20:45 (Riyadh Air Metropolitano), en directo cerca de Sol. Canal: por confirmar.
+          Liga de Naciones: España–Inglaterra, domingo 15 de noviembre, 20:45 (Riyadh Air Metropolitano), en directo en pantalla grande cerca de Sol, abierto hasta las 03:00. Canal por confirmar.{" "}
+          <Link href="/es/noticias/espana-inglaterra-domingo-sol" className="text-gold underline">
+            España–Inglaterra: domingo de fútbol en Sol
+          </Link>
         </p>
       ) : null}
       <NflSunday8Nov locale="es" today={madridTodayYmd(agendaBuildNow())} context="whats-on" />

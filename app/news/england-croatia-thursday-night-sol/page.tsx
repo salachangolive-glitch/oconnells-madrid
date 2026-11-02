@@ -65,7 +65,11 @@ export default function NewsEnglandCroatiaThursdayNightPage() {
           England are back in action on Sunday 15 November, against Spain at
           the Riyadh Air Metropolitano, 20:45. If you&apos;re in town for that
           one, Thursday is a good chance to get to know the area around Sol
-          first. Both games, and the rest of the fixtures, are on{" "}
+          first. Our guide to that night is here:{" "}
+          <Link href="/news/spain-england-sunday-night-sol" className="text-gold underline">
+            Spain v England: Sunday night football in Sol
+          </Link>
+          . Both games, and the rest of the fixtures, are on{" "}
           <Link href="/whats-on" className="text-gold underline">
             What&apos;s On
           </Link>

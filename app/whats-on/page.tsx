@@ -90,6 +90,13 @@ export default function WhatsOnPage() {
           </Link>
         </p>
       ) : null}
+      {/* Serbia v Germany, UEFA Nations League (DG 2 Nov via Radar; match.uefa.com id 2047887, 19:45Z = 20:45 CET, Belgrade): build-time date gate, gone from the 14 Nov daily rebuild. */}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-13" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          UEFA Nations League: Serbia v Germany, Friday 13 November, 20:45 Madrid time (Belgrade), live near Sol.{" "}
+          <span lang="de">Serbien – Deutschland, Freitag, 13. November, 20:45 Uhr: live im O&apos;Connell St an der Puerta del Sol.</span>
+        </p>
+      ) : null}
       {/* Real Madrid Femenino UWCL (DG 26 Oct; times per match.uefa.com + realmadrid.com): build-time date gates, each line gone from the daily rebuild after its date. */}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-10" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">
@@ -99,13 +106,19 @@ export default function WhatsOnPage() {
       ) : null}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-18" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">
-          Women&apos;s Champions League: Real Madrid v Inter, Wednesday 18 November, 18:45 (Di Stéfano), live near Sol.
+          Women&apos;s Champions League: Real Madrid v Inter, Wednesday 18 November, 18:45 (Di Stéfano), live near Sol. TV channel TBC.{" "}
+          <Link href="/news/real-madrid-inter-womens-champions-league-sol" className="text-gold underline">
+            Real Madrid v Inter in Sol
+          </Link>
         </p>
       ) : null}
       {/* Spain v England, UEFA Nations League (DG 26 Oct via Radar; kickoff per match.uefa.com id 2047904, 19:45Z = 20:45 CET; date per rfef.es): build-time date gate, gone from the 16 Nov daily rebuild. Channel TBC until RTVE publishes. */}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-15" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">
-          UEFA Nations League: Spain v England, Sunday 15 November, 20:45 (Riyadh Air Metropolitano), live near Sol. TV channel TBC.
+          UEFA Nations League: Spain v England, Sunday 15 November, 20:45 (Riyadh Air Metropolitano), live on the big screen near Sol, open until 03:00. TV channel TBC.{" "}
+          <Link href="/news/spain-england-sunday-night-sol" className="text-gold underline">
+            Spain v England: Sunday night in Sol
+          </Link>
         </p>
       ) : null}
       <NflSunday8Nov locale="en" today={madridTodayYmd(agendaBuildNow())} context="whats-on" />

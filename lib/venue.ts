@@ -153,6 +153,8 @@ export const EN_PATHS = [
   "/news/bryan-adams-madrid-gig-night-sol",
   "/news/atletico-barcelona-sunday-night-sol",
   "/news/england-croatia-thursday-night-sol",
+  "/news/spain-england-sunday-night-sol",
+  "/news/real-madrid-inter-womens-champions-league-sol",
   "/oktoberfest-madrid-sol",
   "/halloween-madrid-sol",
   "/menu",
@@ -184,6 +186,8 @@ export const ES_PATHS = [
   "/es/contact",
   "/es/privacy",
   "/es/noticias/aficion-bayern-madrid-punto-de-encuentro-sol",
+  "/es/noticias/espana-inglaterra-domingo-sol",
+  "/es/noticias/real-madrid-inter-champions-femenina-sol",
 ] as const;
 
 export const DE_PATHS = [
@@ -224,6 +228,8 @@ export const HREFLANG_PAIRS: Record<string, string | undefined> = {
   "/contact": "/es/contact",
   "/privacy": "/es/privacy",
   "/news/bayern-fans-madrid-meeting-point-sol": "/es/noticias/aficion-bayern-madrid-punto-de-encuentro-sol",
+  "/news/spain-england-sunday-night-sol": "/es/noticias/espana-inglaterra-domingo-sol",
+  "/news/real-madrid-inter-womens-champions-league-sol": "/es/noticias/real-madrid-inter-champions-femenina-sol",
 };
 
 /**

@@ -3,6 +3,7 @@ import { InteriorPhoto } from "@/components/InteriorPhoto";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
 import { buildMetadata } from "@/lib/seo";
+import { agendaBuildNow, madridTodayYmd } from "@/lib/fixtures";
 import { ADDRESS, HOURS, MAPS_URL, SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
@@ -108,6 +109,57 @@ export default function NflMadridPageEs() {
           .
         </p>
       </Section>
+      {/* Esta semana en Madrid (DG 2 nov, tarea 5; nfl.com/news/fan-events-in-madrid + Radar 2026-11-02-nfl.md): actos de terceros, NO en O'Connell St. Gate de build, fuera desde el rebuild del 9 nov. */}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-08" ? (
+        <div id="esta-semana">
+          <Section title="Esta semana en Madrid">
+            <p>
+              Los Falcons tienen dos actividades para aficionados en Madrid esta
+              semana, publicadas en{" "}
+              <a
+                href="https://www.nfl.com/news/fan-events-in-madrid"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-cream underline"
+              >
+                NFL.com
+              </a>
+              . Las organiza el club en otros locales, no en O&apos;Connell St:
+            </p>
+            <ul className="list-disc pl-5 space-y-1">
+              <li>
+                Falcons House: sábado 7 de noviembre, de 13:00 a 17:00, en el
+                Irish Rover Madrid, Av. de Brasil 7 (Tetuán).
+              </li>
+              <li>
+                Paseo «Dirty Birds» hasta el Bernabéu: domingo 8 de noviembre, de
+                13:00 a 13:15, con salida desde Mira Miranda Madrid, Paseo de la
+                Castellana 89.
+              </li>
+            </ul>
+            <p className="text-sm text-cream-muted">
+              Datos publicados en NFL.com, consultados el 2 de noviembre de 2026.
+              Compruébalos allí por si cambian.
+            </p>
+            <h3 className="mt-4 font-serif text-lg font-semibold text-cream">
+              ¿Sin entrada? Mira el partido cerca de Sol
+            </h3>
+            <p>
+              El Bengals–Falcons empieza a las 15:30, hora de Madrid. En
+              O&apos;Connell St, {ADDRESS.street}, junto a la Puerta del Sol, lo
+              ponemos en directo en pantalla grande. Los domingos abrimos a las
+              14:00.
+            </p>
+            <h3 className="mt-4 font-serif text-lg font-semibold text-cream">
+              Después del partido
+            </h3>
+            <p>
+              ¿Vuelves del Bernabéu? El domingo abrimos hasta las 03:00, con el
+              resto de partidos NFL del domingo en las pantallas.
+            </p>
+          </Section>
+        </div>
+      ) : null}
       <Section title="Dónde estamos">
         <p>
           {ADDRESS.full}. {HOURS.summaryEs}.

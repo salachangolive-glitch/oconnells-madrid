@@ -116,6 +116,13 @@ export function NflSunday8Nov({
           <>
             {" · "}
             <Link
+              href={es ? "/es/nfl-madrid#esta-semana" : "/nfl-madrid#this-week"}
+              className="text-gold hover:text-cream"
+            >
+              {es ? "Esta semana en Madrid →" : "This week in Madrid →"}
+            </Link>
+            {" · "}
+            <Link
               href={es ? "/es/whats-on" : "/whats-on"}
               data-event="whats_on"
               className="text-gold hover:text-cream"

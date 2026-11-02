@@ -3,6 +3,7 @@ import { InteriorPhoto } from "@/components/InteriorPhoto";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
 import { buildMetadata } from "@/lib/seo";
+import { agendaBuildNow, madridTodayYmd } from "@/lib/fixtures";
 import { ADDRESS, HOURS, MAPS_URL, SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
@@ -104,6 +105,54 @@ export default function NflMadridPage() {
           for the rest of Sunday&apos;s games.
         </p>
       </Section>
+      {/* This week in Madrid (DG 2 Nov, task 5; nfl.com/news/fan-events-in-madrid + Radar 2026-11-02-nfl.md): third-party Falcons fan events, NOT at O'Connell St. Build-time gate, gone from the 9 Nov daily rebuild. */}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-08" ? (
+        <div id="this-week">
+          <Section title="This week in Madrid">
+            <p>
+              The Falcons have two fan events in Madrid this week, listed on{" "}
+              <a
+                href="https://www.nfl.com/news/fan-events-in-madrid"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-cream underline"
+              >
+                NFL.com
+              </a>
+              . They are run by the club at other venues, not at O&apos;Connell St:
+            </p>
+            <ul className="list-disc pl-5 space-y-1">
+              <li>
+                Falcons House: Saturday 7 November, 13:00–17:00, at Irish Rover
+                Madrid, Av. de Brasil 7 (Tetuán).
+              </li>
+              <li>
+                Dirty Birds Fan Walk to the Bernabéu: Sunday 8 November, 13:00–13:15,
+                starting from Mira Miranda Madrid, Paseo de la Castellana 89.
+              </li>
+            </ul>
+            <p className="text-sm text-cream-muted">
+              Details as published on NFL.com, checked on 2 November 2026. Check
+              there for any changes.
+            </p>
+            <h3 className="mt-4 font-serif text-lg font-semibold text-cream">
+              No ticket? Watch the game near Sol
+            </h3>
+            <p>
+              Bengals v Falcons kicks off at 15:30 Madrid time. At O&apos;Connell
+              St, {ADDRESS.street}, next to Puerta del Sol, it&apos;s live on the
+              big screen. On Sundays we open at 14:00.
+            </p>
+            <h3 className="mt-4 font-serif text-lg font-semibold text-cream">
+              After the match
+            </h3>
+            <p>
+              Coming back from the Bernabéu? We&apos;re open until 03:00 on
+              Sunday, with the rest of Sunday&apos;s NFL games on the screens.
+            </p>
+          </Section>
+        </div>
+      ) : null}
       <Section title="Find us">
         <p>
           {ADDRESS.full}. {HOURS.summaryEn}.
