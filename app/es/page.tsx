@@ -2,6 +2,7 @@ import Link from "next/link";
 import { PostMatchBanner } from "@/components/PostMatchBanner";
 import { FixtureStrip } from "@/components/FixtureStrip";
 import { NflSunday8Nov } from "@/components/NflSunday8Nov";
+import { BayernMatchFeature } from "@/components/BayernMatchFeature";
 import { HomeCtaBand } from "@/components/HomeCtaBand";
 import { InteriorGallery, InteriorPhoto } from "@/components/InteriorPhoto";
 import { PageShell } from "@/components/PageShell";
@@ -53,6 +54,12 @@ export default function EsHomePage() {
         <HomeCtaBand locale="es" />
       </div>
 
+      {/* Atlético–Bayern Tue 3 Nov: featured block right after hero (owner via DG 2 Nov 09:44), gone from 4 Nov */}
+      <BayernMatchFeature locale="es" today={madridTodayYmd(agendaBuildNow())} />
+
+      {/* Domingo NFL 8 nov: tercer bloque de la portada (dueño vía DG 30 oct), se retira el 9 nov */}
+      <NflSunday8Nov locale="es" today={madridTodayYmd(agendaBuildNow())} />
+
       <section className="mb-12 max-w-2xl">
         <p className="text-sm leading-relaxed text-cream-muted sm:text-base">
           O&apos;Connell St es un pub irlandés junto a Puerta del Sol, con
@@ -89,9 +96,6 @@ export default function EsHomePage() {
         </p>
       </section>
 
-      {/* Domingo NFL 8 nov: tercer bloque de la portada (dueño vía DG 30 oct), se retira el 9 nov */}
-      <NflSunday8Nov locale="es" today={madridTodayYmd(agendaBuildNow())} />
-
       <FixtureStrip locale="es" windowOnly />
       <p className="mb-12 max-w-2xl text-sm text-cream-muted sm:text-base">
         Más fútbol:{" "}
@@ -108,19 +112,6 @@ export default function EsHomePage() {
         </Link>{" "}
         para los días de partido.
       </p>
-      {/* Bayern fans articles (Atlético–Bayern 3 Nov): build-time date gate, gone from the 4 Nov daily rebuild. */}
-      {madridTodayYmd(agendaBuildNow()) <= "2026-11-03" ? (
-        <p className="mb-12 max-w-2xl border-l-2 border-gold pl-4 text-sm text-cream-muted sm:text-base">
-          Atlético–Bayern, martes 3 de noviembre, 21:00 — afición del Bayern en Madrid:{" "}
-          <Link href="/news/spanish-phrases-football-fans" className="text-gold underline">
-            diez frases en español para el bar y la calle (inglés)
-          </Link>
-          {" · "}
-          <a href="/de/spanisch-fuer-bayern-fans" hrefLang="de" lang="de" className="text-gold underline">
-            Spanisch für Bayern Fans (alemán)
-          </a>
-        </p>
-      ) : null}
 
       <InteriorPhoto
         variant="editorial"

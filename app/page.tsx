@@ -2,6 +2,7 @@ import Link from "next/link";
 import { PostMatchBanner } from "@/components/PostMatchBanner";
 import { FixtureStrip } from "@/components/FixtureStrip";
 import { NflSunday8Nov } from "@/components/NflSunday8Nov";
+import { BayernMatchFeature } from "@/components/BayernMatchFeature";
 import { HomeCtaBand } from "@/components/HomeCtaBand";
 import { InteriorGallery, InteriorPhoto } from "@/components/InteriorPhoto";
 import { PageShell } from "@/components/PageShell";
@@ -48,6 +49,12 @@ export default function HomePage() {
         <HomeCtaBand locale="en" />
       </div>
 
+      {/* Atlético–Bayern Tue 3 Nov: featured block right after hero (owner via DG 2 Nov 09:44), gone from 4 Nov */}
+      <BayernMatchFeature locale="en" today={madridTodayYmd(agendaBuildNow())} />
+
+      {/* NFL Sunday 8 Nov: third home block (owner via DG 30 Oct), gone from 9 Nov */}
+      <NflSunday8Nov locale="en" today={madridTodayYmd(agendaBuildNow())} />
+
       {/* Presentación — parallel to ES; visitors stay in their own section */}
       <section className="mb-12 max-w-2xl">
         <p className="text-sm leading-relaxed text-cream-muted sm:text-base">
@@ -83,9 +90,6 @@ export default function HomePage() {
         </p>
       </section>
 
-      {/* NFL Sunday 8 Nov: third home block (owner via DG 30 Oct), gone from 9 Nov */}
-      <NflSunday8Nov locale="en" today={madridTodayYmd(agendaBuildNow())} />
-
       {/* Live Sports / What's On */}
       <FixtureStrip locale="en" windowOnly />
       <p className="mb-12 max-w-2xl text-sm text-cream-muted sm:text-base">
@@ -103,20 +107,6 @@ export default function HomePage() {
         </Link>{" "}
         page for match days.
       </p>
-
-      {/* Bayern fans articles (Atlético–Bayern 3 Nov): build-time date gate, gone from the 4 Nov daily rebuild. */}
-      {madridTodayYmd(agendaBuildNow()) <= "2026-11-03" ? (
-        <p className="mb-12 max-w-2xl border-l-2 border-gold pl-4 text-sm text-cream-muted sm:text-base">
-          Atlético v Bayern, Tuesday 3 November, 21:00 — Bayern fans in Madrid:{" "}
-          <Link href="/news/spanish-phrases-football-fans" className="text-gold underline">
-            ten Spanish phrases for the bar and the street
-          </Link>
-          {" · "}
-          <a href="/de/spanisch-fuer-bayern-fans" hrefLang="de" lang="de" className="text-gold underline">
-            Spanisch für Bayern Fans: zehn Sätze
-          </a>
-        </p>
-      ) : null}
       {/* Inside / real photos */}
       <InteriorPhoto
         variant="editorial"
