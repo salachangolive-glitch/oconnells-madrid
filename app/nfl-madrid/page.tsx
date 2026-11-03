@@ -97,8 +97,8 @@ export default function NflMadridPage() {
           </li>
         </ul>
         <p>
-          No ticket? The game is on our screens at O&apos;Connell St, near Sol,
-          from 15:30. Check{" "}
+          No ticket? Watch it on the big screen, with the match-day atmosphere,
+          at O&apos;Connell St, near Sol, from 15:30. Check{" "}
           <Link href="/whats-on" className="text-cream underline">
             What&apos;s On
           </Link>{" "}
@@ -110,18 +110,35 @@ export default function NflMadridPage() {
         <div id="this-week">
           <Section title="This week in Madrid">
             <p>
-              The Falcons have two fan events in Madrid this week, listed on{" "}
+              Fan events in Madrid this week, listed on NFL.com (
+              <a
+                href="https://www.nfl.com/news/madrid-la-nfl-ya-esta-aqui"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-cream underline"
+              >
+                NFL House
+              </a>
+              ,{" "}
               <a
                 href="https://www.nfl.com/news/fan-events-in-madrid"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-cream underline"
               >
-                NFL.com
+                Falcons events
               </a>
-              . They are run by the club at other venues, not at O&apos;Connell St:
+              ). They are run by the NFL and the Falcons at other venues, not at
+              O&apos;Connell St:
             </p>
             <ul className="list-disc pl-5 space-y-1">
+              <li>
+                NFL House Madrid: Friday 6 and Saturday 7 November, 12:00–20:00,
+                at Casa de las Alhajas, Plaza de San Martín. Run by the NFL.
+              </li>
+              <li data-oc-sat="">
+                Saturday 7 November: O&apos;Connell St is a few minutes&apos; walk from the NFL House at Casa de las Alhajas (Plaza de San Martín), an NFL event, not ours. We open at 15:00, so drop in for a drink after your visit.
+              </li>
               <li>
                 Falcons House: Saturday 7 November, 13:00–17:00, at Irish Rover
                 Madrid, Av. de Brasil 7 (Tetuán).
@@ -132,7 +149,7 @@ export default function NflMadridPage() {
               </li>
             </ul>
             <p className="text-sm text-cream-muted">
-              Details as published on NFL.com, checked on 2 November 2026. Check
+              Details as published on NFL.com, checked on 2 and 3 November 2026. Check
               there for any changes.
             </p>
             <h3 className="mt-4 font-serif text-lg font-semibold text-cream">
@@ -141,7 +158,7 @@ export default function NflMadridPage() {
             <p>
               Bengals v Falcons kicks off at 15:30 Madrid time. At O&apos;Connell
               St, {ADDRESS.street}, next to Puerta del Sol, it&apos;s live on the
-              big screen. On Sundays we open at 14:00.
+              big screen from 15:30, with the match-day atmosphere. On Sundays we open at 14:00.
             </p>
             <h3 className="mt-4 font-serif text-lg font-semibold text-cream">
               After the match

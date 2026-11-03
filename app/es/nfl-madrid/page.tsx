@@ -100,8 +100,8 @@ export default function NflMadridPageEs() {
           </li>
         </ul>
         <p>
-          ¿Sin entrada? El partido está en nuestras pantallas en O&apos;Connell
-          St, junto a Sol, desde las 15:30. El resto de partidos del domingo, en
+          ¿Sin entrada? Míralo en pantalla grande, con todo el ambiente, en
+          O&apos;Connell St, junto a Sol, desde las 15:30. El resto de partidos del domingo, en
           la{" "}
           <Link href="/es/whats-on" className="text-cream underline">
             Agenda
@@ -114,19 +114,37 @@ export default function NflMadridPageEs() {
         <div id="esta-semana">
           <Section title="Esta semana en Madrid">
             <p>
-              Los Falcons tienen dos actividades para aficionados en Madrid esta
-              semana, publicadas en{" "}
+              Actividades para aficionados en Madrid esta semana, publicadas en
+              NFL.com (
+              <a
+                href="https://www.nfl.com/news/madrid-la-nfl-ya-esta-aqui"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-cream underline"
+              >
+                NFL House
+              </a>
+              ,{" "}
               <a
                 href="https://www.nfl.com/news/fan-events-in-madrid"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-cream underline"
               >
-                NFL.com
+                actividades de los Falcons
               </a>
-              . Las organiza el club en otros locales, no en O&apos;Connell St:
+              ). Las organizan la NFL y los Falcons en otros locales, no en
+              O&apos;Connell St:
             </p>
             <ul className="list-disc pl-5 space-y-1">
+              <li>
+                NFL House Madrid: viernes 6 y sábado 7 de noviembre, de 12:00 a
+                20:00, en la Casa de las Alhajas, Plaza de San Martín. La organiza
+                la NFL.
+              </li>
+              <li data-oc-sat="">
+                Sábado 7 de noviembre: O&apos;Connell St está a pocos minutos a pie de la NFL House, en la Casa de las Alhajas (Plaza de San Martín), un evento de la NFL, no nuestro. Abrimos a las 15:00: pásate a tomar algo después de tu visita.
+              </li>
               <li>
                 Falcons House: sábado 7 de noviembre, de 13:00 a 17:00, en el
                 Irish Rover Madrid, Av. de Brasil 7 (Tetuán).
@@ -138,7 +156,7 @@ export default function NflMadridPageEs() {
               </li>
             </ul>
             <p className="text-sm text-cream-muted">
-              Datos publicados en NFL.com, consultados el 2 de noviembre de 2026.
+              Datos publicados en NFL.com, consultados el 2 y el 3 de noviembre de 2026.
               Compruébalos allí por si cambian.
             </p>
             <h3 className="mt-4 font-serif text-lg font-semibold text-cream">
@@ -147,7 +165,8 @@ export default function NflMadridPageEs() {
             <p>
               El Bengals–Falcons empieza a las 15:30, hora de Madrid. En
               O&apos;Connell St, {ADDRESS.street}, junto a la Puerta del Sol, lo
-              ponemos en directo en pantalla grande. Los domingos abrimos a las
+              ponemos en directo en pantalla grande desde las 15:30, con todo el
+              ambiente. Los domingos abrimos a las
               14:00.
             </p>
             <h3 className="mt-4 font-serif text-lg font-semibold text-cream">

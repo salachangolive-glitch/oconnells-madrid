@@ -84,9 +84,16 @@ export function NflSunday8Nov({
       <div className="pub-rule my-3" />
       <p className="text-sm text-cream-muted sm:text-base">
         {es
-          ? "La NFL juega en Madrid: Bengals vs Falcons en el Bernabéu y, después, toda la jornada del domingo en directo en nuestras pantallas, en O'Connell St, junto a la Puerta del Sol. Horarios de Madrid."
-          : "The NFL plays in Madrid: Bengals vs Falcons at the Bernabéu, then the rest of Sunday's games live on our screens at O'Connell St, just off Puerta del Sol. All times are Madrid time."}
+          ? "La NFL juega en Madrid: Bengals vs Falcons en el Bernabéu, en directo en pantalla grande y con todo el ambiente desde las 15:30 en O'Connell St, junto a la Puerta del Sol, y después el resto de la jornada del domingo en nuestras pantallas. Horarios de Madrid."
+          : "The NFL plays in Madrid: Bengals vs Falcons at the Bernabéu, live on the big screen with the match-day atmosphere from 15:30 at O'Connell St, just off Puerta del Sol, then the rest of Sunday's games on our screens. All times are Madrid time."}
       </p>
+      {context === "home" ? (
+        <p data-oc-sat="" className="mt-3 text-sm text-cream-muted sm:text-base">
+          {es
+            ? "Sábado 7 de noviembre: O'Connell St está a pocos minutos a pie de la NFL House, en la Casa de las Alhajas (Plaza de San Martín), un evento de la NFL, no nuestro. Abrimos a las 15:00: pásate a tomar algo después de tu visita."
+            : "Saturday 7 November: O'Connell St is a few minutes' walk from the NFL House at Casa de las Alhajas (Plaza de San Martín), an NFL event, not ours. We open at 15:00, so drop in for a drink after your visit."}
+        </p>
+      ) : null}
       <ul className="mt-4 space-y-2 text-sm text-cream sm:text-base">
         {list.map(({ time, games }) => (
           <li key={time}>
