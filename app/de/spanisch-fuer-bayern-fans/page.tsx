@@ -98,6 +98,10 @@ export default function DeSpanischFuerBayernFansPage() {
           <Link href="/de/bayern-fans-madrid-wochenende" className="text-cream underline">
             Früher anreisen?
           </Link>
+          {" · "}
+          <Link href="/de/bayern-fans-nach-dem-abpfiff" className="text-cream underline">
+            Nach dem Abpfiff: zurück an die Sol
+          </Link>
         </p>
       </Section>
     </PageShell>

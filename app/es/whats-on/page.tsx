@@ -47,11 +47,11 @@ export default function EsWhatsOnPage() {
             Treffpunkt an der Sol (en alemán)
           </a>
           {" · "}artículos para la afición del Bayern:{" "}
-          <Link href="/news/spanish-phrases-football-fans" className="text-gold underline">
+          <Link href="/news/bayern-fans-after-the-final-whistle" className="text-gold underline">
             en inglés
           </Link>
           {" · "}
-          <a href="/de/spanisch-fuer-bayern-fans" hrefLang="de" lang="de" className="text-gold underline">
+          <a href="/de/bayern-fans-nach-dem-abpfiff" hrefLang="de" lang="de" className="text-gold underline">
             en alemán
           </a>
         </p>

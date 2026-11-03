@@ -19,6 +19,7 @@ import { MAPS_URL } from "@/lib/venue";
 export const BAYERN3_LAST_DAY = "2026-11-03";
 
 const DE_LINKS = [
+  { href: "/de/bayern-fans-nach-dem-abpfiff", label: "Nach dem Abpfiff: zurück an die Sol, offen bis 03:00" },
   { href: "/de/bayern-fans-madrid-sol", label: "Bayern-Fans in Madrid: der Abend an der Sol" },
   { href: "/de/sports-bar-sol", label: "Atlético – Bayern live an der Puerta del Sol" },
   { href: "/de/bayern-fans-madrid-uhrzeiten", label: "Uhrzeiten für den Spieltag" },
@@ -27,6 +28,7 @@ const DE_LINKS = [
 ];
 
 const EN_LINKS = [
+  { href: "/news/bayern-fans-after-the-final-whistle", label: "After the final whistle: back to Sol, open until 03:00" },
   { href: "/news/bayern-fans-madrid-sol-pre-match", label: "Bayern fans in Madrid: the evening near Sol" },
   { href: "/news/bayern-fans-madrid-timing", label: "Match-day timings" },
   { href: "/news/spanish-phrases-football-fans", label: "Ten Spanish phrases for the bar and the street" },

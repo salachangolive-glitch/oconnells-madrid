@@ -46,12 +46,12 @@ export default function WhatsOnPage() {
             Treffpunkt an der Sol (Deutsch)
           </a>
           {" · "}
-          <Link href="/news/spanish-phrases-football-fans" className="text-gold underline">
-            Bayern fans in Madrid: ten Spanish phrases
+          <Link href="/news/bayern-fans-after-the-final-whistle" className="text-gold underline">
+            Bayern fans in Madrid: after the final whistle, back to Sol
           </Link>
           {" · "}
-          <a href="/de/spanisch-fuer-bayern-fans" hrefLang="de" lang="de" className="text-gold underline">
-            Spanisch für Bayern Fans (Deutsch)
+          <a href="/de/bayern-fans-nach-dem-abpfiff" hrefLang="de" lang="de" className="text-gold underline">
+            Nach dem Abpfiff an der Sol (Deutsch)
           </a>
         </p>
       ) : null}

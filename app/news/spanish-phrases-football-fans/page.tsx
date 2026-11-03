@@ -96,6 +96,10 @@ export default function NewsSpanishPhrasesFootballFansPage() {
           <Link href="/news/bayern-fans-madrid-weekend" className="text-cream underline">
             Arriving early? A football weekend near Sol
           </Link>
+          {" · "}
+          <Link href="/news/bayern-fans-after-the-final-whistle" className="text-cream underline">
+            After the final whistle: back to Sol
+          </Link>
         </p>
       </Section>
     </PageShell>

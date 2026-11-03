@@ -148,6 +148,7 @@ export const EN_PATHS = [
   "/news/bayern-fans-madrid-weekend",
   "/news/bayern-fans-halloween-madrid",
   "/news/spanish-phrases-football-fans",
+  "/news/bayern-fans-after-the-final-whistle",
   "/news/bayern-fans-madrid-meeting-point-sol",
   "/news/duran-duran-madrid-gig-night-sol",
   "/news/bryan-adams-madrid-gig-night-sol",
@@ -203,6 +204,7 @@ export const DE_PATHS = [
   "/de/bayern-fans-madrid-wochenende",
   "/de/bayern-fans-halloween-madrid",
   "/de/spanisch-fuer-bayern-fans",
+  "/de/bayern-fans-nach-dem-abpfiff",
   "/de/bayern-fans-madrid-treffpunkt-sol",
 ] as const;
 
@@ -291,6 +293,10 @@ export const HREFLANG_GROUPS: Record<
   "/news/spanish-phrases-football-fans": {
     en: "/news/spanish-phrases-football-fans",
     de: "/de/spanisch-fuer-bayern-fans",
+  },
+  "/news/bayern-fans-after-the-final-whistle": {
+    en: "/news/bayern-fans-after-the-final-whistle",
+    de: "/de/bayern-fans-nach-dem-abpfiff",
   },
   /** Bayern meeting point article (owner via DG 2 Nov 2026): en/es/de. */
   "/news/bayern-fans-madrid-meeting-point-sol": {
