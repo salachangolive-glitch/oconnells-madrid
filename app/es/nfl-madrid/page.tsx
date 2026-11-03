@@ -87,7 +87,7 @@ export default function NflMadridPageEs() {
         <ul className="list-disc pl-5 space-y-1">
           <li>El perímetro del estadio abre a las 12:30.</li>
           <li>
-            No hay parking en el estadio: mejor transporte público o taxi. La
+            No hay parking en el estadio: conviene ir en transporte público o taxi. La
             estación de metro accesible es Nuevos Ministerios (líneas 6, 8 y
             10), a unos 15 minutos andando de la entrada accesible.
           </li>
