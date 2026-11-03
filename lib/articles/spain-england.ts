@@ -44,9 +44,9 @@ export const SPAIN_ENGLAND: MatchArticleData = {
             "Spain v England, UEFA Nations League, League A, Group 3, last matchday of the league phase",
             "Sunday 15 November 2026, 20:45 Madrid time (19:45 in the UK)",
             "Riyadh Air Metropolitano, Madrid",
-            "TV channel TBC",
+            "La 1 / RTVE Play",
           ],
-          note: "Date, kick-off and venue as listed by UEFA and the Spanish FA (RFEF). The Spanish TV channel has not been announced yet; we will add it once the broadcaster publishes it. Kick-off times can move, so check again on the day.",
+          note: "Date, kick-off and venue as listed by UEFA and the Spanish FA (RFEF). Kick-off times can move, so check again on the day.",
         },
         {
           title: "Live on the big screen at O'Connell St",
@@ -105,9 +105,9 @@ export const SPAIN_ENGLAND: MatchArticleData = {
             "España–Inglaterra, Liga de Naciones de la UEFA, Liga A, Grupo 3, última jornada de la fase de liga",
             "Domingo 15 de noviembre de 2026, 20:45 (hora de Madrid)",
             "Riyadh Air Metropolitano, Madrid",
-            "Canal por confirmar",
+            "La 1 / RTVE Play",
           ],
-          note: "Fecha, hora y estadio según la UEFA y la RFEF. La cadena todavía no se ha anunciado; la añadiremos cuando la publique. Los horarios pueden cambiar: compruébalo el mismo día.",
+          note: "Fecha, hora y estadio según la UEFA y la RFEF. Los horarios pueden cambiar: compruébalo el mismo día.",
         },
         {
           title: "En directo en pantalla grande en O'Connell St",
