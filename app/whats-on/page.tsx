@@ -97,6 +97,15 @@ export default function WhatsOnPage() {
           <span lang="de">Serbien – Deutschland, Freitag, 13. November, 20:45 Uhr: live im O&apos;Connell St an der Puerta del Sol.</span>
         </p>
       ) : null}
+      {/* Germany v Netherlands, UEFA Nations League (Radar OC11; match.uefa.com id 2047909, 19:45Z = 20:45 CET): build-time date gate. */}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-16" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          UEFA Nations League: Germany v Netherlands, Monday 16 November, 20:45 (Berlin), live near Sol.{" "}
+          <Link href="/news/germany-netherlands-monday-night-sol" className="text-gold underline">
+            Germany v Netherlands: Monday night in Sol
+          </Link>
+        </p>
+      ) : null}
       {/* Real Madrid Femenino UWCL (DG 26 Oct; times per match.uefa.com + realmadrid.com): build-time date gates, each line gone from the daily rebuild after its date. */}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-10" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">
