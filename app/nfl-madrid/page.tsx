@@ -86,8 +86,7 @@ export default function NflMadridPage() {
           <li>The stadium perimeter opens at 12:30.</li>
           <li>
             There is no parking at the stadium, so plan on public transport or a
-            taxi. The accessible metro station is Nuevos Ministerios (lines 6, 8
-            and 10), about 15 minutes on foot from the accessible entrance.
+            taxi. By metro, use Concha Espina (L9) or Cuzco (L10).
           </li>
           <li>
             The NFL clear-bag policy applies, and the advice is to bring no bag
@@ -98,7 +97,7 @@ export default function NflMadridPage() {
         </ul>
         <p>
           No ticket? Watch it on the big screen, with the match-day atmosphere,
-          at O&apos;Connell St, near Sol, from 15:30. Check{" "}
+          at O&apos;Connell St, near Sol, from 15:30. From 19:00, come back from the stadium to O&apos;Connell St. Check{" "}
           <Link href="/whats-on" className="text-cream underline">
             What&apos;s On
           </Link>{" "}
@@ -164,8 +163,7 @@ export default function NflMadridPage() {
               After the match
             </h3>
             <p>
-              Coming back from the Bernabéu? We&apos;re open until 03:00 on
-              Sunday, with the rest of Sunday&apos;s NFL games on the screens.
+              From 19:00, come back from the stadium to O&apos;Connell St. The rest of Sunday&apos;s NFL games are on the screens.
             </p>
           </Section>
         </div>

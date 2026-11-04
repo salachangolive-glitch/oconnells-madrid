@@ -87,9 +87,8 @@ export default function NflMadridPageEs() {
         <ul className="list-disc pl-5 space-y-1">
           <li>El perímetro del estadio abre a las 12:30.</li>
           <li>
-            No hay parking en el estadio: conviene ir en transporte público o taxi. La
-            estación de metro accesible es Nuevos Ministerios (líneas 6, 8 y
-            10), a unos 15 minutos andando de la entrada accesible.
+            No hay parking en el estadio: conviene ir en transporte público o taxi. En
+            metro, Concha Espina (L9) o Cuzco (L10).
           </li>
           <li>
             Rige la política de bolsas transparentes de la NFL y se recomienda no
@@ -101,7 +100,7 @@ export default function NflMadridPageEs() {
         </ul>
         <p>
           ¿Sin entrada? Míralo en pantalla grande, con todo el ambiente, en
-          O&apos;Connell St, junto a Sol, desde las 15:30. El resto de partidos del domingo, en
+          O&apos;Connell St, junto a Sol, desde las 15:30. A partir de las 19:00, el pub es para cuando volváis del estadio. El resto de partidos del domingo, en
           la{" "}
           <Link href="/es/whats-on" className="text-cream underline">
             Agenda
@@ -173,8 +172,7 @@ export default function NflMadridPageEs() {
               Después del partido
             </h3>
             <p>
-              ¿Vuelves del Bernabéu? El domingo abrimos hasta las 03:00, con el
-              resto de partidos NFL del domingo en las pantallas.
+              A partir de las 19:00, el pub es para cuando volváis del estadio. El resto de partidos NFL del domingo, en las pantallas.
             </p>
           </Section>
         </div>

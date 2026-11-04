@@ -84,8 +84,8 @@ export function NflSunday8Nov({
       <div className="pub-rule my-3" />
       <p className="text-sm text-cream-muted sm:text-base">
         {es
-          ? "La NFL juega en Madrid: Bengals vs Falcons en el Bernabéu, en directo en pantalla grande y con todo el ambiente desde las 15:30 en O'Connell St, junto a la Puerta del Sol, y después el resto de la jornada del domingo en nuestras pantallas. Horarios de Madrid."
-          : "The NFL plays in Madrid: Bengals vs Falcons at the Bernabéu, live on the big screen with the match-day atmosphere from 15:30 at O'Connell St, just off Puerta del Sol, then the rest of Sunday's games on our screens. All times are Madrid time."}
+          ? "La NFL juega en Madrid: Bengals vs Falcons en el Bernabéu, en directo en pantalla grande y con todo el ambiente desde las 15:30 en O'Connell St, junto a la Puerta del Sol, y después el resto de la jornada del domingo en nuestras pantallas. A partir de las 19:00, el pub es para cuando volváis del estadio. Horarios de Madrid."
+          : "The NFL plays in Madrid: Bengals vs Falcons at the Bernabéu, live on the big screen with the match-day atmosphere from 15:30 at O'Connell St, just off Puerta del Sol, then the rest of Sunday's games on our screens. From 19:00, come back from the stadium to O'Connell St. All times are Madrid time."}
       </p>
       {context === "home" ? (
         <p data-oc-sat="" className="mt-3 text-sm text-cream-muted sm:text-base">
@@ -102,7 +102,7 @@ export function NflSunday8Nov({
               <span key={f.id}>
                 {i > 0 ? " · " : null}
                 {label(f)}
-                {f.id === BERNABEU_ID ? " (Santiago Bernabéu, Madrid)" : null}
+                {f.id === BERNABEU_ID ? " (Bernabéu, Madrid)" : null}
               </span>
             ))}
             {time === "19:00" ? (
