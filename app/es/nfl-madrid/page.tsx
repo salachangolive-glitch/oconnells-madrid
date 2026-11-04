@@ -136,13 +136,8 @@ export default function NflMadridPageEs() {
               O&apos;Connell St:
             </p>
             <ul className="list-disc pl-5 space-y-1">
-              <li>
-                NFL House Madrid: viernes 6 y sábado 7 de noviembre, de 12:00 a
-                20:00, en la Casa de las Alhajas, Plaza de San Martín. La organiza
-                la NFL.
-              </li>
               <li data-oc-sat="">
-                Sábado 7 de noviembre: O&apos;Connell St está a pocos minutos a pie de la NFL House, en la Casa de las Alhajas (Plaza de San Martín), un evento de la NFL, no nuestro. Abrimos a las 15:00: pásate a tomar algo después de tu visita.
+                O&apos;Connell St está a pocos minutos a pie de la NFL House en la Casa de las Alhajas (Plaza de San Martín), un evento de la NFL, no nuestro. Pásate a tomar algo después de tu visita.
               </li>
               <li>
                 Falcons House: sábado 7 de noviembre, de 13:00 a 17:00, en el
