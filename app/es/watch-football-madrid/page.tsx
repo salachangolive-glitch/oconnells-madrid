@@ -45,7 +45,10 @@ export default function EsWatchFootballPage() {
         <p>
           ¿Vienes con los aficionados ingleses o del Getafe? O&apos;Connell St es
           un pub irlandés en Sol para quedar antes de ir a Getafe y para volver
-          después. Emitimos el partido en directo.
+          después. Emitimos el partido en directo.{" "}
+          <Link href="/es/noticias/getafe-brighton-jueves-sol" className="text-cream underline">
+            Getafe–Brighton en Sol
+          </Link>
         </p>
       </Section>
       <Section title="Preguntas frecuentes">

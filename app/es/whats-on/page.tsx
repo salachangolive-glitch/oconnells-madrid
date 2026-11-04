@@ -67,6 +67,23 @@ export default function EsWhatsOnPage() {
           </Link>
         </p>
       ) : null}
+      {/* Getafe–Brighton + Real Madrid–Crvena Zvezda, artículos para la afición visitante (orden del dueño 4 nov 2026 vía DG; uefa.com / euroleague.net): build-time date gates. */}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-05" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          UEFA Conference League: Getafe–Brighton, jueves 5 de noviembre, 21:00 (Coliseum, Getafe), en directo en pantalla grande cerca de Sol. Abrimos a las 18:00.{" "}
+          <Link href="/es/noticias/getafe-brighton-jueves-sol" className="text-gold underline">
+            Getafe–Brighton en Sol
+          </Link>
+        </p>
+      ) : null}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-12" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          Euroliga: Real Madrid–Crvena Zvezda, jueves 12 de noviembre, 21:00 (Movistar Arena), en directo cerca de Sol.{" "}
+          <Link href="/es/noticias/real-madrid-crvena-zvezda-jueves-sol" className="text-gold underline">
+            Real Madrid–Crvena Zvezda en Sol
+          </Link>
+        </p>
+      ) : null}
       {/* España–Inglaterra, Liga de Naciones (DG 26 Oct vía Radar; hora según match.uefa.com id 2047904, 19:45Z = 20:45 CET; fecha según rfef.es): build-time date gate, gone from the 16 Nov daily rebuild. Canal por confirmar hasta que RTVE lo publique. */}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-15" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">

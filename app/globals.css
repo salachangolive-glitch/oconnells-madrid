@@ -63,3 +63,18 @@ a {
 [data-fx-off] {
   display: none;
 }
+
+/* Agenda badges (components/FixtureList.tsx OnNowBadge): label as generated
+   content so the static HTML never contains it as text (bug 4 Nov 2026). */
+[data-fx-soon="en"]::after {
+  content: "Today";
+}
+[data-fx-soon="es"]::after {
+  content: "Hoy";
+}
+[data-fx-on="en"]::after {
+  content: "On now";
+}
+[data-fx-on="es"]::after {
+  content: "En juego";
+}

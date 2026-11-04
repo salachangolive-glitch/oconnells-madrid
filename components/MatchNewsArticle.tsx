@@ -38,6 +38,8 @@ export type MatchArticleData = {
   homeTeam: string;
   awayTeam: string;
   venue: string;
+  /** Stadium town for SportsEvent JSON-LD (default "Madrid"). */
+  venueLocality?: string;
   copy: Record<MatchLocale, MatchCopy>;
 };
 
@@ -98,7 +100,7 @@ function jsonLd(d: MatchArticleData, l: MatchLocale) {
           location: {
             "@type": "StadiumOrArena",
             name: d.venue,
-            address: { "@type": "PostalAddress", addressLocality: "Madrid", addressCountry: "ES" },
+            address: { "@type": "PostalAddress", addressLocality: d.venueLocality ?? "Madrid", addressCountry: "ES" },
           },
         },
       },

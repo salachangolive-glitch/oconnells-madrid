@@ -45,7 +45,10 @@ export default function WatchFootballPage() {
           Over for the Conference League trip? O&apos;Connell St is an Irish pub
           just off Puerta del Sol, a good place to meet up in the centre before
           heading out to Getafe and to come back to afterwards. We&apos;re showing
-          the match live.
+          the match live.{" "}
+          <Link href="/news/getafe-brighton-thursday-night-sol" className="text-cream underline">
+            Getafe v Brighton near Sol
+          </Link>
         </p>
       </Section>
       <Section title="FAQ">

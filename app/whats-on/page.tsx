@@ -100,6 +100,23 @@ export default function WhatsOnPage() {
           </Link>
         </p>
       ) : null}
+      {/* Getafe v Brighton + Real Madrid v Crvena Zvezda, visiting-fans articles (owner order 4 Nov 2026 via DG; uefa.com / euroleague.net): build-time date gates. */}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-05" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          UEFA Conference League: Getafe v Brighton, Thursday 5 November, 21:00 (Coliseum, Getafe), live on the big screen near Sol. We open at 18:00.{" "}
+          <Link href="/news/getafe-brighton-thursday-night-sol" className="text-gold underline">
+            Brighton fans in Madrid: Getafe v Brighton near Sol
+          </Link>
+        </p>
+      ) : null}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-12" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          EuroLeague: Real Madrid v Crvena Zvezda, Thursday 12 November, 21:00 (Movistar Arena), live near Sol.{" "}
+          <Link href="/news/real-madrid-crvena-zvezda-thursday-sol" className="text-gold underline">
+            Crvena Zvezda in Madrid: Thursday night near Sol
+          </Link>
+        </p>
+      ) : null}
       {/* Spain v England, UEFA Nations League (DG 26 Oct via Radar; kickoff per match.uefa.com id 2047904, 19:45Z = 20:45 CET; date per rfef.es): build-time date gate, gone from the 16 Nov daily rebuild. Channel TBC until RTVE publishes. */}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-15" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">

@@ -33,16 +33,16 @@ type RowProps = { f: Fixture; locale: Locale; visible: boolean; onNow: boolean }
 
 export function OnNowBadge({ locale, onNow }: { locale: Locale; onNow: boolean }) {
   const cls = "ml-2 rounded-sm bg-gold px-1.5 py-0.5 text-[10px] font-bold tracking-[0.12em] text-black";
-  // Both labels ship in the HTML; components/AgendaClock.tsx shows at most one
-  // from the real Madrid time (Today before kickoff, On now kickoff→+2h15).
+  // components/AgendaClock.tsx shows at most one badge from the real Madrid
+  // time (Today before kickoff, On now kickoff→+2h15). The label is CSS
+  // generated content (app/globals.css, keyed on the locale value), not text
+  // in the HTML: otherwise every pre-shipped row (tomorrow's included) carried
+  // the words "On now / En juego" for curl, crawlers, reader mode and
+  // no-CSS views, whatever the clock said (bug 4 Nov 2026, Getafe–Brighton).
   return (
     <>
-      <span data-fx-soon="" data-fx-off="" className={cls}>
-        {locale === "es" ? "Hoy" : "Today"}
-      </span>
-      <span data-fx-on="" data-fx-off={!onNow ? "" : undefined} className={cls}>
-        {locale === "es" ? "En juego" : "On now"}
-      </span>
+      <span data-fx-soon={locale} data-fx-off="" className={cls} />
+      <span data-fx-on={locale} data-fx-off={!onNow ? "" : undefined} className={cls} />
     </>
   );
 }
