@@ -26,13 +26,6 @@ export default function ChampionsLeaguePage() {
         alt="Sports screens at O'Connell St near Sol"
         position="object-[center_45%]"
       />
-      <Section title="Atlético Madrid v Bayern Munich · Tue 3 November, 21:00">
-        <p>
-          Bayern or Atleti, meet in the centre: O&apos;Connell St is just off
-          Puerta del Sol, an Irish pub near Sol to meet up before you head to
-          the Metropolitano, and a place to talk it over after. We&apos;re showing it live.
-        </p>
-      </Section>
       <Section title="Before you come">
         <p>
           Check{" "}

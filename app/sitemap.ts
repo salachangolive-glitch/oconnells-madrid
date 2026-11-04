@@ -31,32 +31,6 @@ function homeAlternates(base: string, path: string) {
   };
 }
 
-const BAYERN_GROUPS = [
-  HREFLANG_GROUPS["/news/bayern-fans-madrid-sol-pre-match"],
-  HREFLANG_GROUPS["/news/bayern-fans-things-to-do-near-sol"],
-  HREFLANG_GROUPS["/news/bayern-fans-madrid-timing"],
-  HREFLANG_GROUPS["/news/bayern-fans-barrio-de-las-letras"],
-  HREFLANG_GROUPS["/news/bayern-fans-madrid-group"],
-  HREFLANG_GROUPS["/news/bayern-atletico-fans-together"],
-  HREFLANG_GROUPS["/news/bayern-fans-madrid-weekend"],
-  HREFLANG_GROUPS["/news/bayern-fans-halloween-madrid"],
-  HREFLANG_GROUPS["/news/spanish-phrases-football-fans"],
-  HREFLANG_GROUPS["/news/bayern-fans-after-the-final-whistle"],
-];
-
-/** Bayern fans articles: en/de/x-default alternates. */
-function bayernAlternates(base: string, path: string) {
-  const g = BAYERN_GROUPS.find((x) => x?.de && [x.en, x.de].includes(path));
-  if (!g?.de) return undefined;
-  return {
-    languages: {
-      en: `${base}${g.en}`,
-      de: `${base}${g.de}`,
-      "x-default": `${base}${g.en}`,
-    },
-  };
-}
-
 /** News pages: sitemap carries en/es/x-default alternates (hreflang). */
 function newsAlternates(base: string, path: string) {
   const isNews = path.startsWith("/news/") || path.startsWith("/es/noticias/");
@@ -75,21 +49,6 @@ function newsAlternates(base: string, path: string) {
   };
 }
 
-const BAYERN_MP = HREFLANG_GROUPS["/news/bayern-fans-madrid-meeting-point-sol"];
-
-/** Bayern meeting point article: en/es/de/x-default alternates. */
-function bayernMpAlternates(base: string, path: string) {
-  if (!BAYERN_MP?.es || !BAYERN_MP.de || ![BAYERN_MP.en, BAYERN_MP.es, BAYERN_MP.de].includes(path)) return undefined;
-  return {
-    languages: {
-      en: `${base}${BAYERN_MP.en}`,
-      es: `${base}${BAYERN_MP.es}`,
-      de: `${base}${BAYERN_MP.de}`,
-      "x-default": `${base}${BAYERN_MP.en}`,
-    },
-  };
-}
-
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -99,10 +58,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return ALL_CONTENT_PATHS.map((path) => ({
     url: path === "/" ? base : `${base}${path}`,
     ...(newsAlternates(base, path) ? { alternates: newsAlternates(base, path) } : {}),
-    ...(bayernAlternates(base, path) ? { alternates: bayernAlternates(base, path) } : {}),
     ...(oktAlternates(base, path) ? { alternates: oktAlternates(base, path) } : {}),
     ...(homeAlternates(base, path) ? { alternates: homeAlternates(base, path) } : {}),
-    ...(bayernMpAlternates(base, path) ? { alternates: bayernMpAlternates(base, path) } : {}),
     lastModified: now,
     changeFrequency: path === "/" || path === "/es" ? "weekly" : "monthly",
     priority: path === "/" || path === "/es" ? 1 : path.includes("thursday") ? 0.9 : 0.7,

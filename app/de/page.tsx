@@ -7,8 +7,7 @@ import { ADDRESS, HOURS, MAPS_URL } from "@/lib/venue";
 
 /**
  * German index /de (DG order 27 Oct 2026). Lists the German pages that exist.
- * /de/bayern-fans-madrid-sol (moved 27 Oct 2026 from the old slug, 301 in
- * public/_redirects) is listed with the other Bayern pages.
+ * Bayern pages (Atlético–Bayern 3 Nov) retired 4 Nov 2026, 301 in public/_redirects.
  * To add OC-29 / OC-30 once Radar assigns them and the pages exist: append { href, title, text } to the right group below
  * (or to DE_UPCOMING), add the path to DE_PATHS in lib/venue.ts, done.
  */
@@ -25,36 +24,6 @@ const DE_GROUPS: { title: string; items: DeItem[] }[] = [
       },
     ],
   },
-  {
-    title: "Champions League: Atlético – Bayern, Di 3. November, 21:00 Uhr",
-    items: [
-      {
-        href: "/de/sports-bar-sol",
-        title: "Atlético – Bayern live an der Puerta del Sol",
-        text: "Das Spiel auf unseren Screens, mitten im Zentrum, und danach noch ein Bier.",
-      },
-      {
-        href: "/de/bayern-fans-madrid-sol",
-        title: "Bayern-Fans in Madrid: Hier geht der Abend los",
-        text: "Ein Irish Pub nahe Sol, um das Spiel zu sehen: der Nachmittag in der Altstadt, der Abend an der Puerta del Sol.",
-      },
-      {
-        href: "/de/bayern-fans-madrid-uhrzeiten",
-        title: "Madrid tickt anders: Uhrzeiten und Abendessen",
-        text: "Wann man in Madrid isst und wie euer Tag zum Anstoß um 21:00 Uhr passt.",
-      },
-      {
-        href: "/de/bayern-fans-madrid-sol-entdecken",
-        title: "Zwei Stunden rund um die Sol",
-        text: "Ein Spaziergang durchs Zentrum, bevor die Truppe zusammenkommt.",
-      },
-      {
-        href: "/de/bayern-fans-barrio-de-las-letras",
-        title: "Das Barrio de las Letras beginnt am Ende unserer Straße",
-        text: "Cervantes, Lope de Vega und die Plaza de Santa Ana, ein paar Minuten von der Nummer 7.",
-      },
-    ],
-  },
 ];
 
 /** Next German pieces (OC-29, OC-30): add here when the pages are live. */
@@ -63,7 +32,7 @@ const DE_UPCOMING: DeItem[] = [];
 export const metadata = buildMetadata({
   title: "O'Connell St Madrid auf Deutsch: Irish Pub an der Puerta del Sol",
   description:
-    "Alle deutschen Seiten von O'Connell St, dem Irish Pub in der Calle de Espoz y Mina 7 an der Puerta del Sol: Oktoberfest-Saison in Madrid, Atlético – Bayern und Tipps rund um Sol.",
+    "Alle deutschen Seiten von O'Connell St, dem Irish Pub in der Calle de Espoz y Mina 7 an der Puerta del Sol: Oktoberfest-Saison in Madrid und Tipps rund um Sol.",
   path: "/de",
   locale: "de",
 });

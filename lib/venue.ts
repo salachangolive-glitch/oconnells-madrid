@@ -139,17 +139,6 @@ export const EN_PATHS = [
   "/champions-league",
   "/sports-bar-sol",
   "/nfl-madrid",
-  "/news/bayern-fans-madrid-sol-pre-match",
-  "/news/bayern-fans-things-to-do-near-sol",
-  "/news/bayern-fans-madrid-timing",
-  "/news/bayern-fans-barrio-de-las-letras",
-  "/news/bayern-fans-madrid-group",
-  "/news/bayern-atletico-fans-together",
-  "/news/bayern-fans-madrid-weekend",
-  "/news/bayern-fans-halloween-madrid",
-  "/news/spanish-phrases-football-fans",
-  "/news/bayern-fans-after-the-final-whistle",
-  "/news/bayern-fans-madrid-meeting-point-sol",
   "/news/duran-duran-madrid-gig-night-sol",
   "/news/bryan-adams-madrid-gig-night-sol",
   "/news/atletico-barcelona-sunday-night-sol",
@@ -187,26 +176,13 @@ export const ES_PATHS = [
   "/es/whats-on",
   "/es/contact",
   "/es/privacy",
-  "/es/noticias/aficion-bayern-madrid-punto-de-encuentro-sol",
   "/es/noticias/espana-inglaterra-domingo-sol",
   "/es/noticias/real-madrid-inter-champions-femenina-sol",
 ] as const;
 
 export const DE_PATHS = [
   "/de",
-  "/de/sports-bar-sol",
   "/de/oktoberfest-madrid-sol",
-  "/de/bayern-fans-madrid-sol",
-  "/de/bayern-fans-madrid-sol-entdecken",
-  "/de/bayern-fans-madrid-uhrzeiten",
-  "/de/bayern-fans-barrio-de-las-letras",
-  "/de/bayern-fans-gruppe-madrid",
-  "/de/bayern-atletico-fans-gemeinsam",
-  "/de/bayern-fans-madrid-wochenende",
-  "/de/bayern-fans-halloween-madrid",
-  "/de/spanisch-fuer-bayern-fans",
-  "/de/bayern-fans-nach-dem-abpfiff",
-  "/de/bayern-fans-madrid-treffpunkt-sol",
 ] as const;
 
 export const ALL_CONTENT_PATHS = [...EN_PATHS, ...ES_PATHS, ...DE_PATHS] as const;
@@ -230,7 +206,6 @@ export const HREFLANG_PAIRS: Record<string, string | undefined> = {
   "/whats-on": "/es/whats-on",
   "/contact": "/es/contact",
   "/privacy": "/es/privacy",
-  "/news/bayern-fans-madrid-meeting-point-sol": "/es/noticias/aficion-bayern-madrid-punto-de-encuentro-sol",
   "/news/spain-england-sunday-night-sol": "/es/noticias/espana-inglaterra-domingo-sol",
   "/news/real-madrid-inter-womens-champions-league-sol": "/es/noticias/real-madrid-inter-champions-femenina-sol",
 };
@@ -252,58 +227,11 @@ export const HREFLANG_GROUPS: Record<
   "/sports-bar-sol": {
     en: "/sports-bar-sol",
     es: "/es/sports-bar-sol",
-    de: "/de/sports-bar-sol",
   },
   "/oktoberfest-madrid-sol": {
     en: "/oktoberfest-madrid-sol",
     es: "/es/oktoberfest-madrid-sol",
     de: "/de/oktoberfest-madrid-sol",
-  },
-  "/news/bayern-fans-madrid-sol-pre-match": {
-    en: "/news/bayern-fans-madrid-sol-pre-match",
-    de: "/de/bayern-fans-madrid-sol",
-  },
-  "/news/bayern-fans-things-to-do-near-sol": {
-    en: "/news/bayern-fans-things-to-do-near-sol",
-    de: "/de/bayern-fans-madrid-sol-entdecken",
-  },
-  "/news/bayern-fans-madrid-timing": {
-    en: "/news/bayern-fans-madrid-timing",
-    de: "/de/bayern-fans-madrid-uhrzeiten",
-  },
-  "/news/bayern-fans-barrio-de-las-letras": {
-    en: "/news/bayern-fans-barrio-de-las-letras",
-    de: "/de/bayern-fans-barrio-de-las-letras",
-  },
-  "/news/bayern-fans-madrid-group": {
-    en: "/news/bayern-fans-madrid-group",
-    de: "/de/bayern-fans-gruppe-madrid",
-  },
-  "/news/bayern-atletico-fans-together": {
-    en: "/news/bayern-atletico-fans-together",
-    de: "/de/bayern-atletico-fans-gemeinsam",
-  },
-  "/news/bayern-fans-madrid-weekend": {
-    en: "/news/bayern-fans-madrid-weekend",
-    de: "/de/bayern-fans-madrid-wochenende",
-  },
-  "/news/bayern-fans-halloween-madrid": {
-    en: "/news/bayern-fans-halloween-madrid",
-    de: "/de/bayern-fans-halloween-madrid",
-  },
-  "/news/spanish-phrases-football-fans": {
-    en: "/news/spanish-phrases-football-fans",
-    de: "/de/spanisch-fuer-bayern-fans",
-  },
-  "/news/bayern-fans-after-the-final-whistle": {
-    en: "/news/bayern-fans-after-the-final-whistle",
-    de: "/de/bayern-fans-nach-dem-abpfiff",
-  },
-  /** Bayern meeting point article (owner via DG 2 Nov 2026): en/es/de. */
-  "/news/bayern-fans-madrid-meeting-point-sol": {
-    en: "/news/bayern-fans-madrid-meeting-point-sol",
-    es: "/es/noticias/aficion-bayern-madrid-punto-de-encuentro-sol",
-    de: "/de/bayern-fans-madrid-treffpunkt-sol",
   },
 };
 

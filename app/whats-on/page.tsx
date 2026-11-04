@@ -34,27 +34,6 @@ export default function WhatsOnPage() {
           </Link>
         </p>
       ) : null}
-      {/* Bayern fans articles (Atlético–Bayern 3 Nov): build-time date gate, gone from the 4 Nov daily rebuild. */}
-      {madridTodayYmd(agendaBuildNow()) <= "2026-11-03" ? (
-        <p className="mb-6 text-sm text-cream-muted sm:text-base">
-          Atlético v Bayern, Tuesday 3 November, 21:00:{" "}
-          <Link href="/news/bayern-fans-madrid-meeting-point-sol" className="text-gold underline">
-            meeting point at Sol, live on the big screen
-          </Link>
-          {" · "}
-          <a href="/de/bayern-fans-madrid-treffpunkt-sol" hrefLang="de" lang="de" className="text-gold underline">
-            Treffpunkt an der Sol (Deutsch)
-          </a>
-          {" · "}
-          <Link href="/news/bayern-fans-after-the-final-whistle" className="text-gold underline">
-            Bayern fans in Madrid: after the final whistle, back to Sol
-          </Link>
-          {" · "}
-          <a href="/de/bayern-fans-nach-dem-abpfiff" hrefLang="de" lang="de" className="text-gold underline">
-            Nach dem Abpfiff an der Sol (Deutsch)
-          </a>
-        </p>
-      ) : null}
       {/* Concerts (DG 25 Oct; times per movistararena.es): build-time date gates, each line gone from the daily rebuild after its date. */}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-06" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">

@@ -8,7 +8,7 @@ import { ADDRESS, MAPS_URL, SITE_NAME } from "@/lib/venue";
 
 /**
  * Generic EN/ES match article (DG 2 Nov 2026): NewsArticle + Event (screening
- * at O'Connell St) + SportsEvent JSON-LD, same pattern as the Bayern article.
+ * at O'Connell St) + SportsEvent JSON-LD.
  * Copy lives in the per-match data module; facts only from verified sources.
  */
 export type MatchLocale = "en" | "es";

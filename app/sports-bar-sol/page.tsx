@@ -45,14 +45,6 @@ export default function SportsBarSolPage() {
           .
         </p>
       </Section>
-      <Section title="Atlético Madrid v Bayern Munich · Tue 3 November, 21:00">
-        <p>
-          Matchday night at the Metropolitano. We are showing Atlético Madrid
-          against Bayern Munich live at 21:00 Madrid time. Meet your group in
-          Sol before you head out, or come back to the centre afterwards to
-          talk the game through.
-        </p>
-      </Section>
       <Section title="Find us">
         <p>
           {ADDRESS.full}, just off Puerta del Sol. {HOURS.summaryEn}.
@@ -74,16 +66,6 @@ export default function SportsBarSolPage() {
           {" · "}
           <Link href="/sports" className="text-cream underline">
             Live Sports
-          </Link>
-        </p>
-        <p>
-          <Link
-            href="/de/sports-bar-sol"
-            hrefLang="de"
-            lang="de"
-            className="text-cream underline"
-          >
-            Auf Deutsch: Sports Pub an der Puerta del Sol
           </Link>
         </p>
       </Section>

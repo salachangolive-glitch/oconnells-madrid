@@ -2,7 +2,6 @@ import Link from "next/link";
 import { PostMatchBanner } from "@/components/PostMatchBanner";
 import { FixtureStrip } from "@/components/FixtureStrip";
 import { NflSunday8Nov } from "@/components/NflSunday8Nov";
-import { BayernMatchFeature } from "@/components/BayernMatchFeature";
 import { HomeCtaBand } from "@/components/HomeCtaBand";
 import { InteriorGallery, InteriorPhoto } from "@/components/InteriorPhoto";
 import { PageShell } from "@/components/PageShell";
@@ -48,9 +47,6 @@ export default function HomePage() {
       <div className="mb-10 border-y border-gold/20 bg-pub-burgundy-deep/80">
         <HomeCtaBand locale="en" />
       </div>
-
-      {/* Atlético–Bayern Tue 3 Nov: featured block right after hero (owner via DG 2 Nov 09:44), gone from 4 Nov */}
-      <BayernMatchFeature locale="en" today={madridTodayYmd(agendaBuildNow())} />
 
       {/* NFL Sunday 8 Nov: third home block (owner via DG 30 Oct), gone from 9 Nov */}
       <NflSunday8Nov locale="en" today={madridTodayYmd(agendaBuildNow())} />

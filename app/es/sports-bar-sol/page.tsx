@@ -45,14 +45,6 @@ export default function EsSportsBarSolPage() {
           .
         </p>
       </Section>
-      <Section title="Atlético de Madrid–Bayern · martes 3 de noviembre, 21:00">
-        <p>
-          Noche de Champions en el Metropolitano. Emitimos Atlético de Madrid
-          contra Bayern de Múnich en directo a las 21:00 hora de Madrid. Quedad
-          en Sol antes de salir hacia el estadio, o volved al centro después
-          para comentar el partido.
-        </p>
-      </Section>
       <Section title="Cómo llegar">
         <p>
           {ADDRESS.full}, junto a Puerta del Sol. {HOURS.summaryEs}.
@@ -74,16 +66,6 @@ export default function EsSportsBarSolPage() {
           {" · "}
           <Link href="/es/sports" className="text-cream underline">
             Deportes en directo
-          </Link>
-        </p>
-        <p>
-          <Link
-            href="/de/sports-bar-sol"
-            hrefLang="de"
-            lang="de"
-            className="text-cream underline"
-          >
-            Auf Deutsch: Sports Pub an der Puerta del Sol
           </Link>
         </p>
       </Section>

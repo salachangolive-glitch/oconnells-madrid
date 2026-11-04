@@ -27,13 +27,6 @@ export default function EsChampionsLeaguePage() {
         alt="Pantallas de deportes en O'Connell St cerca de Sol"
         position="object-[center_45%]"
       />
-      <Section title="Atlético de Madrid–Bayern · martes 3 de noviembre, 21:00">
-        <p>
-          Seas del Atleti o del Bayern, quedad en el centro: O&apos;Connell St
-          es un pub en Sol para quedar antes de ir al Metropolitano y para
-          comentarlo después. Lo emitimos en directo.
-        </p>
-      </Section>
       <Section title="Antes de venir">
         <p>
           Consulta la{" "}
