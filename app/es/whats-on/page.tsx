@@ -84,10 +84,10 @@ export default function EsWhatsOnPage() {
           </Link>
         </p>
       ) : null}
-      {/* España–Inglaterra, Liga de Naciones (DG 26 Oct vía Radar; hora según match.uefa.com id 2047904, 19:45Z = 20:45 CET; fecha según rfef.es): build-time date gate, gone from the 16 Nov daily rebuild. Canal por confirmar hasta que RTVE lo publique. */}
+      {/* España–Inglaterra, Liga de Naciones (DG 26 Oct vía Radar; hora según match.uefa.com id 2047904, 19:45Z = 20:45 CET; fecha según rfef.es): build-time date gate, gone from the 16 Nov daily rebuild. Sin canal (DG 4 nov: rtve.es no lo confirma para este partido); sin hora de cierre el domingo. */}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-15" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">
-          Liga de Naciones: España–Inglaterra, domingo 15 de noviembre, 20:45 (Riyadh Air Metropolitano), en directo en pantalla grande cerca de Sol, abierto hasta las 03:00. Canal: La 1 / RTVE Play.{" "}
+          Liga de Naciones: España–Inglaterra, domingo 15 de noviembre, 20:45 (Riyadh Air Metropolitano), en directo en pantalla grande cerca de Sol, desde las 14:00.{" "}
           <Link href="/es/noticias/espana-inglaterra-domingo-sol" className="text-gold underline">
             España–Inglaterra: domingo de fútbol en Sol
           </Link>

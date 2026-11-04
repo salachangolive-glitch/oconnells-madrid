@@ -117,10 +117,10 @@ export default function WhatsOnPage() {
           </Link>
         </p>
       ) : null}
-      {/* Spain v England, UEFA Nations League (DG 26 Oct via Radar; kickoff per match.uefa.com id 2047904, 19:45Z = 20:45 CET; date per rfef.es): build-time date gate, gone from the 16 Nov daily rebuild. Channel TBC until RTVE publishes. */}
+      {/* Spain v England, UEFA Nations League (DG 26 Oct via Radar; kickoff per match.uefa.com id 2047904, 19:45Z = 20:45 CET; date per rfef.es): build-time date gate, gone from the 16 Nov daily rebuild. No channel named (DG 4 Nov: not confirmed by rtve.es for this match); no Sunday closing time. */}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-15" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">
-          UEFA Nations League: Spain v England, Sunday 15 November, 20:45 (Riyadh Air Metropolitano), live on the big screen near Sol, open until 03:00. TV: La 1 / RTVE Play.{" "}
+          UEFA Nations League: Spain v England, Sunday 15 November, 20:45 (Riyadh Air Metropolitano), live on the big screen near Sol, from 14:00.{" "}
           <Link href="/news/spain-england-sunday-night-sol" className="text-gold underline">
             Spain v England: Sunday night in Sol
           </Link>
