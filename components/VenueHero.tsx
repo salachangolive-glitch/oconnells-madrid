@@ -8,6 +8,9 @@ const HERO_SRCSET = [
   "/images/hero-fachada-960w.webp 960w",
   "/images/hero-fachada-desktop.webp 1200w",
 ].join(", ");
+const HERO_SRCSET_AVIF = [480, 720, 780, 960, 1200]
+  .map((w) => `/images/hero-fachada-${w}w.avif ${w}w`)
+  .join(", ");
 const HERO_SIZES = "(max-width: 768px) 100vw, 768px";
 
 type Props = {
@@ -49,9 +52,10 @@ export function VenueHero({
         : "aspect-video";
 
   if (mode === "hero") {
-    preload("/images/hero-fachada-desktop.webp", {
+    preload("/images/hero-fachada-1200w.avif", {
       as: "image",
-      imageSrcSet: HERO_SRCSET,
+      type: "image/avif",
+      imageSrcSet: HERO_SRCSET_AVIF,
       imageSizes: HERO_SIZES,
       fetchPriority: "high",
     });
@@ -63,6 +67,8 @@ export function VenueHero({
           {/* Plain responsive <img> (static export has no image optimizer):
               phones get a 480/720/960 px file instead of the 1200 px one. */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
+          <picture>
+          <source type="image/avif" srcSet={HERO_SRCSET_AVIF} sizes={HERO_SIZES} />
           <img
             src="/images/hero-fachada-desktop.webp"
             srcSet={HERO_SRCSET}
@@ -74,6 +80,7 @@ export function VenueHero({
             decoding="async"
             className="absolute inset-0 h-full w-full object-contain object-center"
           />
+          </picture>
         </div>
       </div>
     );

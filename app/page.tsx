@@ -76,7 +76,7 @@ export default function HomePage() {
         <div className="pub-rule my-3" />
         <p className="text-sm text-cream-muted sm:text-base">
           O&apos;Connell St is an Irish pub and sports bar at {ADDRESS.street},
-          just off Puerta del Sol in Madrid centre. We&apos;re open every day. Live sports play on big screens — confirmed
+          just off Puerta del Sol in Madrid centre. We&apos;re open every day, until 03:00 Sunday to Thursday and 03:30 on Friday and Saturday. Live sports play on big screens — confirmed
           matches are on{" "}
           <Link href="/whats-on" className="text-gold underline">
             What&apos;s On

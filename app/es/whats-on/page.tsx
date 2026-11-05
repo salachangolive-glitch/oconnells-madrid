@@ -22,7 +22,7 @@ export default function EsWhatsOnPage() {
       <PageHero
         eyebrow="Agenda"
         title={`Próximos 7 días en ${SITE_NAME}`}
-        lead="Todos los horarios están indicados en hora de Madrid. Los eventos marcados como ‘Confirmado’ tienen prevista su emisión en nuestras pantallas."
+        lead="Deporte en directo en nuestro pub irlandés cerca de Puerta del Sol. Todos los horarios están indicados en hora de Madrid. Los eventos marcados como ‘Confirmado’ tienen prevista su emisión en nuestras pantallas."
       />
 
       <PostMatchBanner locale="es" />

@@ -26,6 +26,8 @@ const libreBaskerville = Libre_Baskerville({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap",
+  preload: false,
 });
 
 const preview = shouldNoindex();

@@ -22,7 +22,7 @@ export default function EsAboutPage() {
       <PageHero
         eyebrow="Sobre nosotros"
         title={`Sobre ${SITE_NAME} Madrid`}
-        lead="Un pub irlandés a un paso de Puerta del Sol, donde el fútbol europeo es lo principal en las pantallas."
+        lead="Un pub irlandés a un paso de Puerta del Sol, donde el fútbol europeo es lo principal en las pantallas. Abrimos a diario: lun–jue desde las 18:00, vie 16:00, sáb 15:00 y dom 14:00."
       />
       <InteriorPhoto
         src="/images/interior/about-salon.webp"

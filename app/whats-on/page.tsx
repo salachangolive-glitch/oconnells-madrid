@@ -21,7 +21,7 @@ export default function WhatsOnPage() {
       <PageHero
         eyebrow="What's On"
         title={`Next 7 days at ${SITE_NAME}`}
-        lead="All times are shown in Madrid time. Events marked ‘Confirmed’ are scheduled to be shown on our screens."
+        lead="Live sport at our Irish pub near Puerta del Sol. All times are shown in Madrid time. Events marked ‘Confirmed’ are scheduled to be shown on our screens."
       />
 
       <PostMatchBanner locale="en" />

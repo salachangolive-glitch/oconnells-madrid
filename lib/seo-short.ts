@@ -4,13 +4,13 @@
  * Titles here are without the brand suffix unless they already contain it.
  */
 export const SEO_SHORT: Record<string, { title?: string; description?: string }> = {
-  "/": {"title": "Irish pub at Puerta del Sol with live sports"},
-  "/about": {"title": "About us: Irish pub for football at Sol"},
+  "/": {"title": "Irish pub near Puerta del Sol, open late | O'Connell St", "description": "O'Connell St, Irish pub near Puerta del Sol with live sport on big screens. Open daily: Mon–Thu 18:00–03:00, Fri 16:00–03:30, Sat 15:00–03:30, Sun 14:00–03:00."},
+  "/about": {"title": "About O'Connell St: Irish pub near Puerta del Sol", "description": "O'Connell St is an Irish pub and sports bar near Puerta del Sol, at Espoz y Mina 7, with European football on the screens. Open every day until 03:00 or 03:30."},
   "/champions-league": {"title": "Champions League pub in Madrid, by Sol"},
   "/de": {"title": "O'Connell St Madrid: Irish Pub an der Puerta del Sol"},
   "/de/oktoberfest-madrid-sol": {"title": "Oktoberfest Madrid 2026: Irish Pub an der Sol", "description": "Oktoberfest Madrid: 22. Oktober bis 15. November, Do–So, in Parquesur (Leganés). Anreise ab Sol mit Metro oder Cercanías – und ein Bier im O'Connell St."},
-  "/es": {"title": "Pub irlandés en Sol con deportes en directo"},
-  "/es/about": {"title": "Sobre nosotros: pub irlandés de fútbol en Sol"},
+  "/es": {"title": "Pub irlandés cerca de Puerta del Sol | O'Connell St", "description": "Pub irlandés cerca de Puerta del Sol con deporte en directo. Abierto a diario: lun–jue 18:00–03:00, vie 16:00–03:30, sáb 15:00–03:30, dom 14:00–03:00."},
+  "/es/about": {"title": "Sobre O'Connell St: pub irlandés cerca de Puerta del Sol", "description": "O'Connell St es un pub irlandés y bar deportivo cerca de Puerta del Sol, en Espoz y Mina 7, con fútbol europeo. Abierto a diario hasta las 03:00 o 03:30."},
   "/es/champions-league": {"title": "Ver la Champions en Madrid, junto a Sol"},
   "/es/halloween-madrid-sol": {"title": "Halloween junto a Sol: evento pasado (31 oct)", "description": "Halloween en O'Connell St, junto a Sol, fue el sábado 31 de octubre de 2026 con disfraces, decoración y música. Consulta la Agenda para próximos eventos."},
   "/es/location": {"title": "Pub cerca de Sol: Calle de Espoz y Mina 7"},

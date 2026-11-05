@@ -82,7 +82,7 @@ export default function EsHomePage() {
         <p className="text-sm text-cream-muted sm:text-base">
           O&apos;Connell St es un pub irlandés y bar deportivo en la{" "}
           {ADDRESS.street}, junto a la Puerta del Sol, en pleno centro de
-          Madrid. Abrimos todos los días. Hay deportes en
+          Madrid. Abrimos todos los días, hasta las 03:00 de domingo a jueves y hasta las 03:30 viernes y sábado. Hay deportes en
           directo en pantallas grandes; los partidos confirmados están en la{" "}
           <Link href="/es/whats-on" className="text-gold underline">
             Agenda

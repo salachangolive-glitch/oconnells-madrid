@@ -21,7 +21,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About"
         title={`About ${SITE_NAME} Madrid`}
-        lead="An Irish pub a short walk from Puerta del Sol, where European football is the main event on the screens."
+        lead="An Irish pub a short walk from Puerta del Sol, where European football is the main event on the screens. Open every day from 18:00 Mon–Thu, 16:00 Fri, 15:00 Sat and 14:00 Sun."
       />
       <InteriorPhoto
         src="/images/interior/about-salon.webp"
