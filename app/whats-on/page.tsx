@@ -73,6 +73,9 @@ export default function WhatsOnPage() {
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-13" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">
           UEFA Nations League: Serbia v Germany, Friday 13 November, 20:45 Madrid time (Belgrade), live near Sol.{" "}
+          <Link href="/news/serbia-germany-friday-night-sol" className="text-gold underline">
+            Serbia v Germany: Friday night in Sol
+          </Link>{" "}
           <span lang="de">Serbien – Deutschland, Freitag, 13. November, 20:45 Uhr: live im O&apos;Connell St an der Puerta del Sol.</span>
         </p>
       ) : null}
