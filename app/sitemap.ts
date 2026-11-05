@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import LASTMOD from "@/lib/lastmod.json";
 import { ALL_CONTENT_PATHS, getSiteUrl, HREFLANG_GROUPS, HREFLANG_PAIRS } from "@/lib/venue";
 
 const OKT_GROUP = HREFLANG_GROUPS["/oktoberfest-madrid-sol"];
@@ -51,16 +52,50 @@ function newsAlternates(base: string, path: string) {
 
 export const dynamic = "force-static";
 
+/**
+ * Event pages leave the sitemap once the event day is over (Madrid date).
+ * Pages stay online (they may have traffic); only the sitemap entry goes.
+ */
+const EVENT_LAST_DAY: Record<string, string> = {
+  "/halloween-madrid-sol": "2026-10-31",
+  "/es/halloween-madrid-sol": "2026-10-31",
+  "/oktoberfest-madrid-sol": "2026-11-15",
+  "/es/oktoberfest-madrid-sol": "2026-11-15",
+  "/de/oktoberfest-madrid-sol": "2026-11-15",
+  "/news/getafe-brighton-thursday-night-sol": "2026-11-05",
+  "/es/noticias/getafe-brighton-jueves-sol": "2026-11-05",
+  "/news/duran-duran-madrid-gig-night-sol": "2026-11-06",
+  "/news/atletico-barcelona-sunday-night-sol": "2026-11-08",
+  "/news/bryan-adams-madrid-gig-night-sol": "2026-11-10",
+  "/news/england-croatia-thursday-night-sol": "2026-11-12",
+  "/news/real-madrid-crvena-zvezda-thursday-sol": "2026-11-12",
+  "/es/noticias/real-madrid-crvena-zvezda-jueves-sol": "2026-11-12",
+  "/news/serbia-germany-friday-night-sol": "2026-11-13",
+  "/news/spain-england-sunday-night-sol": "2026-11-15",
+  "/es/noticias/espana-inglaterra-domingo-sol": "2026-11-15",
+  "/news/germany-netherlands-monday-night-sol": "2026-11-16",
+  "/news/real-madrid-inter-womens-champions-league-sol": "2026-11-18",
+  "/es/noticias/real-madrid-inter-champions-femenina-sol": "2026-11-18",
+};
+
+function madridYmd(d: Date): string {
+  return new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Madrid" }).format(d);
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = getSiteUrl();
-  const now = new Date();
+  const today = madridYmd(new Date());
+  const lastmod = LASTMOD as Record<string, string>;
 
-  return ALL_CONTENT_PATHS.map((path) => ({
+  return ALL_CONTENT_PATHS.filter((path) => {
+    const end = EVENT_LAST_DAY[path];
+    return !end || end >= today;
+  }).map((path) => ({
     url: path === "/" ? base : `${base}${path}`,
     ...(newsAlternates(base, path) ? { alternates: newsAlternates(base, path) } : {}),
     ...(oktAlternates(base, path) ? { alternates: oktAlternates(base, path) } : {}),
     ...(homeAlternates(base, path) ? { alternates: homeAlternates(base, path) } : {}),
-    lastModified: now,
+    ...(lastmod[path] ? { lastModified: lastmod[path] } : {}),
     changeFrequency: path === "/" || path === "/es" ? "weekly" : "monthly",
     priority: path === "/" || path === "/es" ? 1 : path.includes("thursday") ? 0.9 : 0.7,
   }));

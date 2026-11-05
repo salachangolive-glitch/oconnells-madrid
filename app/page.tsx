@@ -43,6 +43,10 @@ export default function HomePage() {
         <p className="mt-2 text-sm tracking-wide text-cream-muted sm:text-base">
           Live sports · International crowd
         </p>
+        <div className="mx-auto mt-4 inline-block rounded border border-gold/30 px-4 py-2 text-sm text-cream sm:text-base">
+          <p className="font-semibold text-gold">Open every day</p>
+          <p>{HOURS.summaryEn}</p>
+        </div>
       </header>
       <div className="mb-10 border-y border-gold/20 bg-pub-burgundy-deep/80">
         <HomeCtaBand locale="en" />
@@ -144,12 +148,13 @@ export default function HomePage() {
         </h2>
         <div className="pub-rule my-3" />
         <p className="text-sm text-cream-muted sm:text-base">
-          Students, tourists and an international crowd, a short walk from
-          Puerta del Sol.
+          Erasmus students, tourists and an international crowd, a short walk
+          from Puerta del Sol. Thursday nights are when the international crowd
+          fills the bar.
         </p>
         <p className="mt-3">
           <Link href="/erasmus" className="text-sm text-gold hover:text-cream">
-            International crowd at O&apos;Connell St →
+            Erasmus in Madrid: Thursday nights next to Sol →
           </Link>
         </p>
       </section>

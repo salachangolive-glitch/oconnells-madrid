@@ -1,14 +1,13 @@
 import Link from "next/link";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
-import { ThursdayFeature } from "@/components/ThursdayFeature";
 import { buildMetadata } from "@/lib/seo";
-import { SITE_NAME } from "@/lib/venue";
+import { ADDRESS, HOURS, SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
-  title: "Ambiente internacional junto a Sol: estudiantes y visitantes",
+  title: "Erasmus en Madrid: jueves junto a Sol | O'Connell St",
   description:
-    "O'Connell St, junto a la Puerta del Sol: pub irlandés con fútbol europeo en las pantallas y ambiente internacional de estudiantes y visitantes. Espoz y Mina 7.",
+    "Erasmus en Madrid: los jueves en O'Connell St, pub irlandés junto a la Puerta del Sol con deporte en directo, cerveza y comida de pub. Espoz y Mina 7.",
   path: "/es/erasmus",
   locale: "es",
 });
@@ -17,33 +16,39 @@ export default function EsErasmusPage() {
   return (
     <PageShell locale="es" altLangHref="/erasmus">
       <PageHero
-        eyebrow="Ambiente internacional · Sol"
-        title={`Gente de fuera en ${SITE_NAME}`}
-        lead="Estudiantes, visitantes y gente de muchos países coinciden en este pub irlandés, junto a la Puerta del Sol: fútbol europeo en las pantallas y un sitio fácil para salir de noche con tu grupo."
+        eyebrow="Erasmus · Jueves · Sol"
+        title="Erasmus en Madrid: los jueves, junto a Sol"
+        lead="Estudiantes Erasmus, visitantes y gente de todas partes acaban en este pub irlandés, a un paso de la Puerta del Sol. El jueves es la noche en que el ambiente internacional llena la barra."
       />
-      <ThursdayFeature locale="es" />
-      <Section title="En el pub">
+      <Section title="Los jueves">
         <p>
-          {SITE_NAME} está en Calle de Espoz y Mina 7. El ambiente es
-          internacional toda la semana. El deporte confirmado se ve en las
-          pantallas: mira la Agenda para las horas. Los jueves, pregunta en
-          la barra por los{" "}
-          <Link href="/es/thursday-1-euro-shots" className="text-gold underline">
-            chupitos a 1 €
-          </Link>
-          .
+          Los jueves {SITE_NAME} abre a las {HOURS.monThu.open} y cierra a las{" "}
+          {HOURS.monThu.close}. Deporte en directo en pantalla grande cuando está
+          confirmado, cerveza en la barra y comida de pub. Es una noche normal de
+          pub con ambiente internacional, no una fiesta aparte.
         </p>
+      </Section>
+      <Section title="Dónde estamos">
         <p>
+          {ADDRESS.full}, junto a la Puerta del Sol, en pleno centro de Madrid:
+          fácil de encontrar para un grupo recién llegado a la ciudad.
+        </p>
+        <p>Horario: {HOURS.summaryEs}.</p>
+        <p>
+          <Link href="/es/whats-on" className="text-gold underline">
+            Agenda
+          </Link>
+          {" · "}
           <Link href="/es/sports" className="text-gold underline">
             Deportes en directo
           </Link>
           {" · "}
-          <Link href="/es/location" className="text-gold underline">
-            Ubicación
+          <Link href="/es/menu" className="text-gold underline">
+            Comida y bebida
           </Link>
           {" · "}
-          <Link href="/es/whats-on" className="text-gold underline">
-            Agenda
+          <Link href="/es/location" className="text-gold underline">
+            Cómo llegar
           </Link>
         </p>
       </Section>

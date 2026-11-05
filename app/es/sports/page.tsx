@@ -1,3 +1,4 @@
+import { UpcomingNotes } from "@/components/UpcomingNotes";
 import Link from "next/link";
 import { FixtureStrip } from "@/components/FixtureStrip";
 import { InteriorPhoto } from "@/components/InteriorPhoto";
@@ -76,6 +77,7 @@ export default function EsSportsPage() {
           .
         </p>
       </Section>
+      <UpcomingNotes locale="es" />
     </PageShell>
   );
 }

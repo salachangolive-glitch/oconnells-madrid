@@ -1,3 +1,5 @@
+# GSC HTML verification: serve exact .html URL with 200 (Pages strips .html -> 308). Never delete the original file.
+/googlede4d0a960f5c8eb4.html /gsc/googlede4d0a960f5c8eb4.txt 200
 # Expired Champions League match notes (20 and 21 Oct 2026), retired 24 Oct 2026.
 # 301 to the evergreen Champions League page in the same language.
 /news/champions-league-tuesday-20-october /champions-league 301
@@ -68,3 +70,9 @@
 /de/spanisch-fuer-bayern-fans/ /de 301
 /de/sports-bar-sol /de 301
 /de/sports-bar-sol/ /de 301
+
+# Retired German Nations League pages (no redirect existed -> 404 in GSC). 301 to the EN match notes.
+/de/deutschland-niederlande-madrid-sol /news/germany-netherlands-monday-night-sol 301
+/de/deutschland-niederlande-madrid-sol/ /news/germany-netherlands-monday-night-sol 301
+/de/serbien-deutschland-madrid-sol /news/serbia-germany-friday-night-sol 301
+/de/serbien-deutschland-madrid-sol/ /news/serbia-germany-friday-night-sol 301

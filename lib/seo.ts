@@ -1,3 +1,4 @@
+import { SEO_SHORT } from "@/lib/seo-short";
 import type { Metadata } from "next";
 import {
   getSiteUrl,
@@ -65,8 +66,15 @@ export function buildMetadata({
   locale = "en",
 }: BuildMetaOpts): Metadata {
   const canonical = absoluteUrl(path);
-  const fullTitle =
-    title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME} Madrid`;
+  const o = SEO_SHORT[path];
+  if (o?.description) description = o.description;
+  const base = o?.title ?? title;
+  const long = `${base} | ${SITE_NAME} Madrid`;
+  const fullTitle = base.includes(SITE_NAME)
+    ? base
+    : long.length <= 60
+      ? long
+      : `${base} | ${SITE_NAME}`;
   const preview = shouldNoindex();
   const languages = buildLanguages(path);
 

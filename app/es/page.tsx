@@ -48,6 +48,10 @@ export default function EsHomePage() {
         <p className="mt-2 text-sm tracking-wide text-cream-muted sm:text-base">
           Deportes en directo · Gente de muchos países
         </p>
+        <div className="mx-auto mt-4 inline-block rounded border border-gold/30 px-4 py-2 text-sm text-cream sm:text-base">
+          <p className="font-semibold text-gold">Abierto todos los días</p>
+          <p>{HOURS.summaryEs}</p>
+        </div>
       </header>
       <div className="mb-10 border-y border-gold/20 bg-pub-burgundy-deep/80">
         <HomeCtaBand locale="es" />
@@ -148,15 +152,15 @@ export default function EsHomePage() {
         </h2>
         <div className="pub-rule my-3" />
         <p className="text-sm text-cream-muted sm:text-base">
-          Estudiantes, turistas y gente de fuera, a un paso de Sol.
-          Los jueves, pregunta en la barra por los chupitos a 1 €.
+          Estudiantes Erasmus, turistas y gente de fuera, a un paso de Sol.
+          Los jueves son la noche en que el ambiente internacional llena la barra.
         </p>
         <p className="mt-3">
           <Link
             href="/es/erasmus"
             className="text-sm text-gold hover:text-cream"
           >
-            Ambiente internacional en O&apos;Connell St →
+            Erasmus en Madrid: los jueves, junto a Sol →
           </Link>
         </p>
       </section>
