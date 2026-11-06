@@ -115,11 +115,6 @@ export default function NflMadridPageEs() {
                 aficionados de la NFL, no en nuestro pub).
               </li>
               <li>
-                NFL House Madrid — Palacio de las Alhajas, Calle San Martín 1,
-                12:00–20:00 (a pocos minutos de Sol; evento de la NFL, no nuestro).
-                Pásate a tomar algo después de tu visita.
-              </li>
-              <li>
                 Valencia–Real Madrid a las 21:00 — Orange TV y DAZN, en directo
                 junto a Sol cuando lo estemos emitiendo. Mira la{" "}
                 <Link href="/es/whats-on" className="text-cream underline">
@@ -241,7 +236,7 @@ export default function NflMadridPageEs() {
                 rel="noopener noreferrer"
                 className="text-cream underline"
               >
-                NFL House
+                actividades en Madrid
               </a>
               ,{" "}
               <a
@@ -257,9 +252,8 @@ export default function NflMadridPageEs() {
             </p>
             <ul className="list-disc space-y-1 pl-5">
               <li data-oc-sat="">
-                O&apos;Connell St está a pocos minutos a pie de la NFL House en
-                la Casa de las Alhajas (Plaza de San Martín), un evento de la
-                NFL, no nuestro. Pásate a tomar algo después de tu visita.
+                Domingo 8 de noviembre — Punto de encuentro para el gran evento
+                desde las 12:00 del mediodía.
               </li>
               <li>
                 Falcons House: sábado 7 de noviembre, de 13:00 a 17:00, en el

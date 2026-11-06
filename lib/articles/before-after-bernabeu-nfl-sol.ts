@@ -5,9 +5,8 @@ import type { MatchArticleData } from "@/components/MatchNewsArticle";
  * Facts:
  *  - Sunday 8 Nov open from 12:00 (habitual Sunday 14:00).
  *  - Bengals at Falcons 15:30 Madrid, Bernabéu; ES channel DAZN · Cuatro.
- *  - NFL Experience Plaza de España and NFL House Palacio de las Alhajas are
- *    city context only — O'Connell St is an independent Irish pub, not the
- *    event organiser.
+ *  - Sunday 8 Nov: main event meeting point from 12:00 midday at O'Connell St.
+ *    O'Connell St is an independent Irish pub, not the organiser of city NFL events.
  * Banned in copy: oficial/official, best/mejor/beste, proyector/projector/Beamer.
  */
 export const BEFORE_AFTER_BERNABEU_NFL: MatchArticleData = {
@@ -49,10 +48,10 @@ export const BEFORE_AFTER_BERNABEU_NFL: MatchArticleData = {
           ],
         },
         {
-          title: "NFL events in the city — not at our pub",
+          title: "Main event meeting point",
           paras: [
-            "NFL Experience at Plaza de España and NFL House at Palacio de las Alhajas are city events this weekend. They are context for a trip to Madrid, not something we run.",
-            "O'Connell St is an independent Irish pub near Sol. We are not the organiser of those events. Drop in for a pint before or after — Espoz y Mina 7, a short walk from Puerta del Sol.",
+            "Sunday 8 November — Main event meeting point from 12:00 midday.",
+            "O'Connell St is an independent Irish pub near Sol. Drop in for a pint before or after — Espoz y Mina 7, a short walk from Puerta del Sol.",
           ],
         },
       ],
@@ -94,10 +93,10 @@ export const BEFORE_AFTER_BERNABEU_NFL: MatchArticleData = {
           ],
         },
         {
-          title: "Eventos NFL en la ciudad — no en nuestro pub",
+          title: "Punto de encuentro para el gran evento",
           paras: [
-            "NFL Experience en Plaza de España y NFL House en el Palacio de las Alhajas son eventos de la ciudad este fin de semana. Sirven de contexto para un viaje a Madrid; no los organizamos nosotros.",
-            "O'Connell St es un pub irlandés independiente junto a Sol. No somos el organizador de esos eventos. Pásate a tomar una cerveza antes o después — Espoz y Mina 7, a un paso de la Puerta del Sol.",
+            "Domingo 8 de noviembre — Punto de encuentro para el gran evento desde las 12:00 del mediodía.",
+            "O'Connell St es un pub irlandés independiente junto a Sol. Pásate a tomar una cerveza antes o después — Espoz y Mina 7, a un paso de la Puerta del Sol.",
           ],
         },
       ],

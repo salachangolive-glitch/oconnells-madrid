@@ -110,11 +110,6 @@ export default function NflMadridPage() {
                 event, not at our pub).
               </li>
               <li>
-                NFL House Madrid — Palacio de las Alhajas, Calle San Martín 1,
-                12:00–20:00 (a few minutes&apos; walk from Sol; NFL event, not
-                ours). Drop in for a drink after your visit.
-              </li>
-              <li>
                 Valencia v Real Madrid at 21:00 — Orange TV and DAZN, live near
                 Sol when we are showing it. See{" "}
                 <Link href="/whats-on" className="text-cream underline">
@@ -231,7 +226,7 @@ export default function NflMadridPage() {
                 rel="noopener noreferrer"
                 className="text-cream underline"
               >
-                NFL House
+                Madrid fan events
               </a>
               ,{" "}
               <a
@@ -247,9 +242,7 @@ export default function NflMadridPage() {
             </p>
             <ul className="list-disc space-y-1 pl-5">
               <li data-oc-sat="">
-                O&apos;Connell St is a few minutes&apos; walk from the NFL House
-                at Casa de las Alhajas (Plaza de San Martín), an NFL event, not
-                ours. Drop in for a drink after your visit.
+                Sunday 8 November — Main event meeting point from 12:00 midday.
               </li>
               <li>
                 Falcons House: Saturday 7 November, 13:00–17:00, at Irish Rover

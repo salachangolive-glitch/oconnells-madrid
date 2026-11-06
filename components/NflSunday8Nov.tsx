@@ -93,8 +93,8 @@ export function NflSunday8Nov({
       {context === "home" ? (
         <p data-oc-sat="" className="mt-3 text-sm text-cream-muted sm:text-base">
           {es
-            ? "O'Connell St está a pocos minutos a pie de la NFL House en la Casa de las Alhajas (Plaza de San Martín), un evento de la NFL, no nuestro. Pásate a tomar algo después de tu visita."
-            : "O'Connell St is a few minutes' walk from the NFL House at Casa de las Alhajas (Plaza de San Martín), an NFL event, not ours. Drop in for a drink after your visit."}
+            ? "Domingo 8 de noviembre — Punto de encuentro para el gran evento desde las 12:00 del mediodía."
+            : "Sunday 8 November — Main event meeting point from 12:00 midday."}
         </p>
       ) : null}
       <ul className="mt-4 space-y-2 text-sm text-cream sm:text-base">
