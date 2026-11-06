@@ -84,8 +84,8 @@ export function NflSunday8Nov({
       <div className="pub-rule my-3" />
       <p className="text-sm text-cream-muted sm:text-base">
         {es
-          ? "La NFL juega en Madrid: Bengals vs Falcons en el Bernabéu, en directo en pantalla grande y con todo el ambiente desde las 15:30 en O'Connell St, junto a la Puerta del Sol, y después el resto de la jornada del domingo en nuestras pantallas. A partir de las 19:00, el pub es para cuando volváis del estadio. Horarios de Madrid."
-          : "The NFL plays in Madrid: Bengals vs Falcons at the Bernabéu, live on the big screen with the match-day atmosphere from 15:30 at O'Connell St, just off Puerta del Sol, then the rest of Sunday's games on our screens. From 19:00, come back from the stadium to O'Connell St. All times are Madrid time."}
+          ? "La NFL juega en Madrid: Bengals vs Falcons en el Bernabéu, en directo en pantalla grande y con todo el ambiente desde las 15:30 en O'Connell St, pub irlandés y punto de encuentro internacional junto a la Puerta del Sol; después, el resto de la jornada del domingo en nuestras pantallas. A partir de las 19:00, el pub es para cuando volváis del estadio. Horarios de Madrid."
+          : "The NFL plays in Madrid: Bengals vs Falcons at the Bernabéu, live on the big screen with the match-day atmosphere from 15:30 at O'Connell St — an Irish pub and international meeting point just off Puerta del Sol — then the rest of Sunday's games on our screens. From 19:00, come back from the stadium to O'Connell St. All times are Madrid time."}
       </p>
       <p className="mt-3 text-sm font-semibold text-gold sm:text-base">
         {es
@@ -123,6 +123,13 @@ export function NflSunday8Nov({
       <p className="mt-4 text-sm">
         <Link href={es ? "/es/nfl-madrid" : "/nfl-madrid"} className="text-gold hover:text-cream">
           {es ? "Guía de la NFL en Madrid →" : "NFL in Madrid guide →"}
+        </Link>
+        {" · "}
+        <Link
+          href={es ? "/es/nfl-madrid#cuatro-bares" : "/nfl-madrid#four-bars"}
+          className="text-gold hover:text-cream"
+        >
+          {es ? "Cuatro bares cerca de Sol →" : "Four bars near Sol →"}
         </Link>
         {context === "home" ? (
           <>
