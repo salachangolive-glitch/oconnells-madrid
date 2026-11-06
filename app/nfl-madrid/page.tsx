@@ -153,7 +153,7 @@ export default function NflMadridPage() {
             <p>
               Bengals v Falcons kicks off at 15:30 Madrid time. At O&apos;Connell
               St, {ADDRESS.street}, next to Puerta del Sol, it&apos;s live on the
-              big screen from 15:30, with the match-day atmosphere. On Sundays we open at 14:00.
+              big screen from 15:30, with the match-day atmosphere. On Sundays we open at 14:00. Exception Sunday 8 Nov: open from 12:00.
             </p>
             <h3 className="mt-4 font-serif text-lg font-semibold text-cream">
               After the match

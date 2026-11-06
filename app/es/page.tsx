@@ -51,6 +51,7 @@ export default function EsHomePage() {
         <div className="mx-auto mt-4 inline-block rounded border border-gold/30 px-4 py-2 text-sm text-cream sm:text-base">
           <p className="font-semibold text-gold">Abierto todos los días</p>
           <p>{HOURS.summaryEs}</p>
+          <p className="mt-1 text-gold">Excepción domingo 8 nov: abrimos desde las 12:00</p>
         </div>
       </header>
       <div className="mb-10 border-y border-gold/20 bg-pub-burgundy-deep/80">

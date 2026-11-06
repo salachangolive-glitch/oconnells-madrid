@@ -46,6 +46,7 @@ export default function HomePage() {
         <div className="mx-auto mt-4 inline-block rounded border border-gold/30 px-4 py-2 text-sm text-cream sm:text-base">
           <p className="font-semibold text-gold">Open every day</p>
           <p>{HOURS.summaryEn}</p>
+          <p className="mt-1 text-gold">Exception Sunday 8 Nov: open from 12:00</p>
         </div>
       </header>
       <div className="mb-10 border-y border-gold/20 bg-pub-burgundy-deep/80">

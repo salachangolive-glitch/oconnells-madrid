@@ -87,6 +87,11 @@ export function NflSunday8Nov({
           ? "La NFL juega en Madrid: Bengals vs Falcons en el Bernabéu, en directo en pantalla grande y con todo el ambiente desde las 15:30 en O'Connell St, junto a la Puerta del Sol, y después el resto de la jornada del domingo en nuestras pantallas. A partir de las 19:00, el pub es para cuando volváis del estadio. Horarios de Madrid."
           : "The NFL plays in Madrid: Bengals vs Falcons at the Bernabéu, live on the big screen with the match-day atmosphere from 15:30 at O'Connell St, just off Puerta del Sol, then the rest of Sunday's games on our screens. From 19:00, come back from the stadium to O'Connell St. All times are Madrid time."}
       </p>
+      <p className="mt-3 text-sm font-semibold text-gold sm:text-base">
+        {es
+          ? "Excepción domingo 8 nov: abrimos desde las 12:00 (los domingos habituales, desde las 14:00)."
+          : "Exception Sunday 8 Nov: open from 12:00 (usual Sundays from 14:00)."}
+      </p>
       {context === "home" ? (
         <p data-oc-sat="" className="mt-3 text-sm text-cream-muted sm:text-base">
           {es

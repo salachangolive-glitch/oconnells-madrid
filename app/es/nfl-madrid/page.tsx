@@ -161,7 +161,7 @@ export default function NflMadridPageEs() {
               O&apos;Connell St, {ADDRESS.street}, junto a la Puerta del Sol, lo
               ponemos en directo en pantalla grande desde las 15:30, con todo el
               ambiente. Los domingos abrimos a las
-              14:00.
+              14:00. Excepción domingo 8 nov: abrimos desde las 12:00.
             </p>
             <h3 className="mt-4 font-serif text-lg font-semibold text-cream">
               Después del partido
