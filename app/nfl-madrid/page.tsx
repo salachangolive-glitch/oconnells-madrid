@@ -239,13 +239,22 @@ export default function NflMadridPage() {
           </Section>
         </div>
       ) : null}
-      {/* Four bars near Sol — hub URL pending DG / Dubliners publish. */}
+      {/* Four bars near Sol — hub LIVE (DG 6 Nov). */}
       <div id="four-bars">
         <Section title="Four bars near Sol">
           <p>
             Four sibling venues sit within a few minutes of Puerta del Sol —
-            different rooms for the same fan weekend. Find the one that suits
-            you (or hop between them):
+            different rooms for the same fan weekend. Pick the one that suits
+            you, hop between them, or start from the shared guide:{" "}
+            <a
+              href="https://dublinersmadrid.es/4-bars-one-fan-weekend/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gold underline"
+            >
+              4 bars, one fan weekend
+            </a>
+            .
           </p>
           <ul className="mt-3 space-y-3">
             {SIBLINGS.map((s) => (
@@ -279,9 +288,17 @@ export default function NflMadridPage() {
               </li>
             ))}
           </ul>
-          <p className="mt-3 text-sm text-cream-muted">
-            A shared fan-weekend hub page will be linked here when it is
-            published. Until then, use the addresses and maps above.
+          <p className="mt-3 text-sm text-cream">
+            Prefer the overview of all four rooms for this fan weekend? See{" "}
+            <a
+              href="https://dublinersmadrid.es/4-bars-one-fan-weekend/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gold underline"
+            >
+              4 bars, one fan weekend
+            </a>{" "}
+            — addresses, maps and how the venues sit around Sol.
           </p>
         </Section>
       </div>

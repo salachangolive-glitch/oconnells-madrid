@@ -247,13 +247,22 @@ export default function NflMadridPageEs() {
           </Section>
         </div>
       ) : null}
-      {/* Cuatro bares cerca de Sol — URL del hub pendiente de publicar (DG). */}
+      {/* Cuatro bares cerca de Sol — hub LIVE (DG 6 nov). */}
       <div id="cuatro-bares">
         <Section title="Cuatro bares cerca de Sol">
           <p>
             Cuatro locales hermanos a pocos minutos de la Puerta del Sol —
             distintas salas para el mismo fin de semana de aficionados. Elige el
-            que te encaje (o pásate de uno a otro):
+            que te encaje, pásate de uno a otro, o empieza por la guía común:{" "}
+            <a
+              href="https://dublinersmadrid.es/es/cuatro-bares-fin-de-semana/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gold underline"
+            >
+              cuatro bares, un fin de semana
+            </a>
+            .
           </p>
           <ul className="mt-3 space-y-3">
             {SIBLINGS.map((s) => (
@@ -287,10 +296,18 @@ export default function NflMadridPageEs() {
               </li>
             ))}
           </ul>
-          <p className="mt-3 text-sm text-cream-muted">
-            Cuando se publique la página central del fin de semana de
-            aficionados, la enlazaremos aquí. Hasta entonces, usa las
-            direcciones y los mapas de arriba.
+          <p className="mt-3 text-sm text-cream">
+            ¿Quieres el resumen de las cuatro salas para este fin de semana?
+            Mira{" "}
+            <a
+              href="https://dublinersmadrid.es/es/cuatro-bares-fin-de-semana/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gold underline"
+            >
+              cuatro bares, un fin de semana
+            </a>{" "}
+            — direcciones, mapas y cómo quedan los locales alrededor de Sol.
           </p>
         </Section>
       </div>
