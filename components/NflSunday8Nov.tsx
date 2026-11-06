@@ -1,13 +1,13 @@
 import Link from "next/link";
-import { FIXTURES, type Fixture } from "@/lib/fixtures";
+import { FIXTURES, nflNick, type Fixture } from "@/lib/fixtures";
 
 /**
  * Home + What's On block: NFL Sunday 8 November 2026 (owner order via DG,
  * 30 Oct 01:22–01:25, /workspace/nfl-8nov-portadas-2026-10-30/ORDEN.md).
  * Third block of the home (EN + ES). Games come from FIXTURES (same rows as
- * What's On), shown "Away vs Home" as in ORDEN.md; times Madrid (ESPN/nfl.com
- * ET+6). RedZone from 19:00 confirmed by the owner. Buccaneers–Bears (Mon 9,
- * 02:20) is not in FIXTURES (outside hours).
+ * What's On), shown Away at Home (Bengals at Falcons / Bengals–Falcons);
+ * times Madrid (nfl.com REG 9). RedZone from 19:00 confirmed by the owner.
+ * Buccaneers–Bears (Mon 9, 02:20) is not in FIXTURES (outside hours).
  * Gate: build-time (<= NFL8_LAST_DAY, gone from the 9 Nov 06:31 daily rebuild)
  * + inline clock that hides it from Mon 9 Nov 00:00 Madrid before that rebuild.
  */
@@ -16,15 +16,10 @@ export const NFL8_LAST_DAY = "2026-11-08";
 
 const BERNABEU_ID = "2026-11-08-falcons-bengals";
 
-function nick(team: string): string {
-  const parts = team.trim().split(/\s+/);
-  return parts[parts.length - 1];
-}
-
-/** Listing order inside a slot, as in ORDEN.md; unknown ids keep FIXTURES order at the end. */
+/** Listing order inside a slot (Radar 2026-11-06 / nfl.com REG 9); unknown ids keep FIXTURES order. */
 const ORDER = [
-  "2026-11-08-patriots-packers",
   "2026-11-08-49ers-raiders",
+  "2026-11-08-patriots-packers",
   "2026-11-08-seahawks-cardinals",
 ];
 function order(id: string): number {
@@ -69,7 +64,9 @@ export function NflSunday8Nov({
   const es = locale === "es";
   const list = slots();
   const label = (f: Fixture) =>
-    f.title ? f.title[locale] : `${nick(f.awayTeam)} vs ${nick(f.homeTeam)}`;
+    es
+      ? `${nflNick(f.awayTeam)}–${nflNick(f.homeTeam)}`
+      : `${nflNick(f.awayTeam)} at ${nflNick(f.homeTeam)}`;
   return (
     <section
       id="nfl-sunday-8-november"
@@ -85,8 +82,8 @@ export function NflSunday8Nov({
       <div className="pub-rule my-3" />
       <p className="text-sm text-cream-muted sm:text-base">
         {es
-          ? "La NFL juega en Madrid: Bengals–Falcons en el Bernabéu, en directo en pantalla grande y con todo el ambiente desde las 15:30 en O'Connell St, pub irlandés y punto de encuentro internacional junto a la Puerta del Sol; después, el resto de la jornada del domingo en nuestras pantallas. A partir de las 19:00, el pub es para cuando volváis del estadio. Horarios de Madrid."
-          : "The NFL plays in Madrid: Bengals at Falcons at the Bernabéu, live on the big screen with the match-day atmosphere from 15:30 at O'Connell St — an Irish pub and international meeting point just off Puerta del Sol — then the rest of Sunday's games on our screens. From 19:00, come back from the stadium to O'Connell St. All times are Madrid time."}
+          ? "La NFL juega en Madrid: Bengals–Falcons en el Bernabéu, en directo en pantalla grande y con todo el ambiente desde las 15:30 (DAZN y Cuatro) en O'Connell St, pub irlandés y punto de encuentro internacional junto a la Puerta del Sol; jornada desde mediodía (abrimos a las 12:00), no solo por la noche. Después, el resto de partidos del domingo en nuestras pantallas. A partir de las 19:00, el pub es para cuando volváis del estadio. Horarios de Madrid."
+          : "The NFL plays in Madrid: Bengals at Falcons at the Bernabéu, live on the big screen with the match-day atmosphere from 15:30 (DAZN and Cuatro) at O'Connell St — an Irish pub and international meeting point just off Puerta del Sol. Sunday is a full day from midday (open 12:00), not just the evening, then the rest of Sunday's games on our screens. From 19:00, come back from the stadium to O'Connell St. All times are Madrid time."}
       </p>
       <p className="mt-3 text-sm font-semibold text-gold sm:text-base">
         {es
@@ -108,7 +105,11 @@ export function NflSunday8Nov({
               <span key={f.id}>
                 {i > 0 ? " · " : null}
                 {label(f)}
-                {f.id === BERNABEU_ID ? " (Bernabéu, Madrid)" : null}
+                {f.id === BERNABEU_ID
+                  ? es
+                    ? " (Bernabéu, Madrid · DAZN y Cuatro)"
+                    : " (Bernabéu, Madrid · DAZN and Cuatro)"
+                  : null}
               </span>
             ))}
             {time === "19:00" ? (

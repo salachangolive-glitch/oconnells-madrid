@@ -16,7 +16,7 @@ export const metadata = buildMetadata({
 const faq = [
   {
     q: "Do you show American football?",
-    a: "Yes, when we are showing it — including the full Sunday 8 Nov from 12:00. European football comes first at O'Connell St, and every confirmed game is listed on What's On with the Madrid time.",
+    a: "Yes, when we are showing it — including Sunday 8 November, a full day from midday (open from 12:00). European football comes first at O'Connell St, and every confirmed game is listed on What's On with the Madrid time.",
   },
   {
     q: "Do you show every game?",
@@ -68,21 +68,22 @@ export default function NflMadridPage() {
   return (
     <PageShell locale="en" altLangHref="/es/nfl-madrid">
       <PageHero
-        eyebrow="Irish pub · Live sport · Near Sol"
+        eyebrow="Sports bar Sol · Irish pub · Live sport"
         title="Watch NFL in Madrid at a sports bar near Sol"
-        lead="An Irish pub just off Puerta del Sol — live sport on the big screens and an international meeting point for fans in central Madrid."
+        lead="Sunday 8 November we open from 12:00 for a full day from midday — not just the evening. Watch NFL Madrid near Sol on the screens, with Bengals at Falcons at 15:30 and Sunday football after. Independent Irish pub; ask which game is on."
       />
       <InteriorPhoto
         src="/images/interior/sports-aisle.webp"
         alt="TVs along the sports area at O'Connell St near Sol"
         position="object-[center_35%]"
       />
-      <Section title="Your NFL meeting point near Puerta del Sol">
+      <Section title="NFL bar Madrid">
         <p>
           O&apos;Connell St sits on {ADDRESS.street}, a short walk from Puerta
-          del Sol. We are an Irish pub with live sport and an international
-          crowd — a place to meet fellow fans before the game, after the game,
-          and through Sunday football.
+          del Sol. This NFL bar Madrid is an Irish pub with live sport and an
+          international crowd — a meeting point for fans who want to watch NFL
+          Madrid near Sol before the game, after the game, and through Sunday
+          football.
         </p>
         <p>
           European football is our everyday plan; American football, basketball,
@@ -100,58 +101,86 @@ export default function NflMadridPage() {
         ) : null}
       </Section>
       {showWeekend ? (
-        <Section title="This weekend · 7 & 8 November">
-          <h3 className="font-serif text-lg font-semibold text-cream">Saturday 7 November</h3>
-          <ul className="mt-2 list-disc space-y-1 pl-5">
-            <li>
-              NFL Experience Madrid — Plaza de España, 10:00–19:00 (NFL fan
-              event, not at our pub).
-            </li>
-            <li>
-              NFL House Madrid — Palacio de las Alhajas, Calle San Martín 1,
-              12:00–20:00 (a few minutes&apos; walk from Sol; NFL event, not
-              ours). Drop in for a drink after your visit.
-            </li>
-            <li>
-              Valencia v Real Madrid at 21:00 — live near Sol when we are
-              showing it. See{" "}
+        <>
+          <Section title="This weekend · 7 & 8 November">
+            <h3 className="font-serif text-lg font-semibold text-cream">Saturday 7 November</h3>
+            <ul className="mt-2 list-disc space-y-1 pl-5">
+              <li>
+                NFL Experience Madrid — Plaza de España, 10:00–19:00 (NFL fan
+                event, not at our pub).
+              </li>
+              <li>
+                NFL House Madrid — Palacio de las Alhajas, Calle San Martín 1,
+                12:00–20:00 (a few minutes&apos; walk from Sol; NFL event, not
+                ours). Drop in for a drink after your visit.
+              </li>
+              <li>
+                Valencia v Real Madrid at 21:00 — Orange TV and DAZN, live near
+                Sol when we are showing it. See{" "}
+                <Link href="/whats-on" className="text-cream underline">
+                  What&apos;s On
+                </Link>
+                .
+              </li>
+            </ul>
+            <p className="mt-2 text-sm text-cream-muted">
+              Saturday we open at 15:00. Come early for a good spot near the
+              screen.
+            </p>
+            <h3 className="mt-4 font-serif text-lg font-semibold text-cream">
+              Sunday 8 November — full day from midday
+            </h3>
+            <p>
+              Open from <strong className="text-gold">12:00</strong> (one-day
+              exception; usual Sunday opening is 14:00). The NFL Madrid Game is
+              in the afternoon; the rest of the Sunday windows run into the
+              evening.
+            </p>
+          </Section>
+          <Section title="Bengals Falcons Madrid">
+            <ul className="list-disc space-y-1 pl-5">
+              <li>
+                <strong>15:30</strong> — Bengals at Falcons, NFL Madrid Game at
+                the Bernabéu (DAZN and Cuatro). Live on the big screen at
+                O&apos;Connell St if you are not at the stadium.
+              </li>
+              <li>
+                <strong>19:00</strong> — seven games (ask which is on; we do not
+                name a TV channel for these): Broncos at Panthers · Cowboys at
+                Colts · Jets at Chiefs · Lions at Dolphins · Browns at Saints ·
+                Giants at Eagles · Rams at Commanders. NFL RedZone from 19:00.
+              </li>
+              <li>
+                <strong>22:05</strong> — Texans at Chargers.
+              </li>
+              <li>
+                <strong>22:25</strong> — Raiders at 49ers · Packers at Patriots ·
+                Cardinals at Seahawks.
+              </li>
+            </ul>
+            <p className="mt-2 text-sm text-cream-muted">
+              We do not promise every kickoff on every screen. Ask at the bar
+              which games are up.
+            </p>
+          </Section>
+          <Section title="Sports bar Sol">
+            <p>
+              This sports bar Sol puts Sunday football and the NFL Madrid Game
+              on the screens at Espoz y Mina 7. Independent Irish pub — if you
+              are looking for a particular game, ask which one is on.
+            </p>
+          </Section>
+          <Section title="Atlético Barcelona bar Sol (Sun 21:00)">
+            <p>
+              Atlético Madrid v Barcelona at 21:00 — live near Sol when we are
+              showing it, in the same room as the NFL windows. See{" "}
               <Link href="/whats-on" className="text-cream underline">
                 What&apos;s On
               </Link>
               .
-            </li>
-          </ul>
-          <p className="mt-2 text-sm text-cream-muted">
-            Saturday we open at 15:00. Come early for a good spot near the
-            screen.
-          </p>
-          <h3 className="mt-4 font-serif text-lg font-semibold text-cream">
-            Sunday 8 November — from 12:00
-          </h3>
-          <ul className="mt-2 list-disc space-y-1 pl-5">
-            <li>
-              Open from <strong className="text-gold">12:00</strong> (one-day
-              exception; usual Sunday opening is 14:00).
-            </li>
-            <li>
-              Bengals at Falcons at 15:30 — NFL Madrid Game at the Bernabéu;
-              live on the big screen at O&apos;Connell St if you are not at the
-              stadium.
-            </li>
-            <li>
-              From 19:00 — more NFL windows (and RedZone) on our screens; times
-              on What&apos;s On. Later kickoffs around 22:05 / 22:25 as listed.
-            </li>
-            <li>
-              Atlético Madrid v Barcelona at 21:00 — live near Sol when we are
-              showing it.
-            </li>
-          </ul>
-          <p className="mt-2 text-sm text-cream-muted">
-            We do not promise every kickoff on every screen. Ask at the bar
-            which games are up.
-          </p>
-        </Section>
+            </p>
+          </Section>
+        </>
       ) : null}
       <Section title="Going to the Bernabéu on Sunday 8 November">
         <p>

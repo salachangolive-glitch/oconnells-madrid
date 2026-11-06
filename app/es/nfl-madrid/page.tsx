@@ -17,7 +17,7 @@ export const metadata = buildMetadata({
 const faq = [
   {
     q: "¿Ponéis fútbol americano?",
-    a: "Sí, cuando lo emitimos — incluida la jornada completa del domingo 8 nov desde las 12:00. En O'Connell St el fútbol europeo va primero, y cada partido confirmado aparece en la Agenda con la hora de Madrid.",
+    a: "Sí, cuando lo emitimos — el domingo 8 de noviembre, jornada desde mediodía (abrimos desde las 12:00). En O'Connell St el fútbol europeo va primero, y cada partido confirmado aparece en la Agenda con la hora de Madrid.",
   },
   {
     q: "¿Ponéis todos los partidos?",
@@ -69,21 +69,22 @@ export default function NflMadridPageEs() {
   return (
     <PageShell locale="es" altLangHref="/nfl-madrid">
       <PageHero
-        eyebrow="Pub irlandés · Deporte en directo · Junto a Sol"
+        eyebrow="Sports bar Sol · Pub irlandés · Deporte en directo"
         title="Ver la NFL en Madrid en un sports bar junto a Sol"
-        lead="Un pub irlandés junto a la Puerta del Sol — deporte en directo en pantallas grandes y punto de encuentro internacional para aficionados en el centro de Madrid."
+        lead="El domingo 8 de noviembre abrimos desde las 12:00: jornada desde mediodía, no solo por la noche. Ver la NFL cerca de Sol en pantallas, con Bengals–Falcons a las 15:30 y fútbol el domingo. Pub irlandés independiente; pregunta qué partido echan."
       />
       <InteriorPhoto
         src="/images/interior/sports-aisle.webp"
         alt="Televisiones en la zona deportiva de O'Connell St cerca de Sol"
         position="object-[center_35%]"
       />
-      <Section title="Tu punto de encuentro NFL junto a Puerta del Sol">
+      <Section title="NFL bar Madrid">
         <p>
           O&apos;Connell St está en {ADDRESS.street}, a un paso de la Puerta del
-          Sol. Somos un pub irlandés con deporte en directo y ambiente
-          internacional — un sitio para quedar con otros aficionados antes del
-          partido, después y durante toda la jornada del domingo.
+          Sol. Este NFL bar Madrid es un pub irlandés con deporte en directo y
+          ambiente internacional — un punto de encuentro para ver la NFL cerca
+          de Sol antes del partido, después y durante toda la jornada del
+          domingo.
         </p>
         <p>
           El fútbol europeo es lo de cada día; el fútbol americano, el
@@ -103,60 +104,90 @@ export default function NflMadridPageEs() {
         ) : null}
       </Section>
       {showWeekend ? (
-        <Section title="Este fin de semana · 7 y 8 de noviembre">
-          <h3 className="font-serif text-lg font-semibold text-cream">
-            Sábado 7 de noviembre
-          </h3>
-          <ul className="mt-2 list-disc space-y-1 pl-5">
-            <li>
-              NFL Experience Madrid — Plaza de España, 10:00–19:00 (evento de
-              aficionados de la NFL, no en nuestro pub).
-            </li>
-            <li>
-              NFL House Madrid — Palacio de las Alhajas, Calle San Martín 1,
-              12:00–20:00 (a pocos minutos de Sol; evento de la NFL, no nuestro).
-              Pásate a tomar algo después de tu visita.
-            </li>
-            <li>
-              Valencia–Real Madrid a las 21:00 — en directo junto a Sol cuando
-              lo estemos emitiendo. Mira la{" "}
+        <>
+          <Section title="Este fin de semana · 7 y 8 de noviembre">
+            <h3 className="font-serif text-lg font-semibold text-cream">
+              Sábado 7 de noviembre
+            </h3>
+            <ul className="mt-2 list-disc space-y-1 pl-5">
+              <li>
+                NFL Experience Madrid — Plaza de España, 10:00–19:00 (evento de
+                aficionados de la NFL, no en nuestro pub).
+              </li>
+              <li>
+                NFL House Madrid — Palacio de las Alhajas, Calle San Martín 1,
+                12:00–20:00 (a pocos minutos de Sol; evento de la NFL, no nuestro).
+                Pásate a tomar algo después de tu visita.
+              </li>
+              <li>
+                Valencia–Real Madrid a las 21:00 — Orange TV y DAZN, en directo
+                junto a Sol cuando lo estemos emitiendo. Mira la{" "}
+                <Link href="/es/whats-on" className="text-cream underline">
+                  Agenda
+                </Link>
+                .
+              </li>
+            </ul>
+            <p className="mt-2 text-sm text-cream-muted">
+              El sábado abrimos a las 15:00. Ven con tiempo si quieres un buen
+              sitio cerca de la pantalla.
+            </p>
+            <h3 className="mt-4 font-serif text-lg font-semibold text-cream">
+              Domingo 8 de noviembre — jornada desde mediodía
+            </h3>
+            <p>
+              Abrimos desde las <strong className="text-gold">12:00</strong>{" "}
+              (excepción de un solo día; el domingo habitual es a las 14:00). El
+              partido NFL de Madrid es a las 15:30; el resto de ventanas del
+              domingo son a las 19:00, 22:05 y 22:25.
+            </p>
+          </Section>
+          <Section title="Bengals Falcons Madrid">
+            <ul className="list-disc space-y-1 pl-5">
+              <li>
+                <strong>15:30</strong> — Bengals–Falcons, partido NFL en el
+                Bernabéu (DAZN y Cuatro). En pantalla grande en O&apos;Connell
+                St si no estás en el estadio.
+              </li>
+              <li>
+                <strong>19:00</strong> — siete partidos (pregunta cuál echan; no
+                nombramos canal de TV para estos): Broncos–Panthers ·
+                Cowboys–Colts · Jets–Chiefs · Lions–Dolphins · Browns–Saints ·
+                Giants–Eagles · Rams–Commanders. NFL RedZone desde las 19:00.
+              </li>
+              <li>
+                <strong>22:05</strong> — Texans–Chargers.
+              </li>
+              <li>
+                <strong>22:25</strong> — Raiders–49ers · Packers–Patriots ·
+                Cardinals–Seahawks.
+              </li>
+            </ul>
+            <p className="mt-2 text-sm text-cream-muted">
+              No prometemos todos los partidos en todas las pantallas. Pregunta
+              en la barra qué hay puesto.
+            </p>
+          </Section>
+          <Section title="Sports bar Sol">
+            <p>
+              Este sports bar Sol pone el fútbol del domingo y el partido NFL de
+              Madrid en las pantallas de Espoz y Mina 7. Pub irlandés
+              independiente — si buscas un partido concreto, pregunta cuál
+              echan.
+            </p>
+          </Section>
+          <Section title="Atlético Barcelona bar Sol (dom 21:00)">
+            <p>
+              Atlético de Madrid–Barcelona a las 21:00 — en directo junto a Sol
+              cuando lo estemos emitiendo, en la misma sala que las ventanas
+              NFL. Mira la{" "}
               <Link href="/es/whats-on" className="text-cream underline">
                 Agenda
               </Link>
               .
-            </li>
-          </ul>
-          <p className="mt-2 text-sm text-cream-muted">
-            El sábado abrimos a las 15:00. Ven con tiempo si quieres un buen
-            sitio cerca de la pantalla.
-          </p>
-          <h3 className="mt-4 font-serif text-lg font-semibold text-cream">
-            Domingo 8 de noviembre — desde las 12:00
-          </h3>
-          <ul className="mt-2 list-disc space-y-1 pl-5">
-            <li>
-              Abrimos desde las <strong className="text-gold">12:00</strong>{" "}
-              (excepción de un solo día; el domingo habitual es a las 14:00).
-            </li>
-            <li>
-              Bengals–Falcons a las 15:30 — partido NFL en el Bernabéu; en
-              pantalla grande en O&apos;Connell St si no estás en el estadio.
-            </li>
-            <li>
-              Desde las 19:00 — más ventanas NFL (y RedZone) en nuestras
-              pantallas; horarios en la Agenda. Kickoffs más tarde hacia las
-              22:05 / 22:25 según lo listado.
-            </li>
-            <li>
-              Atlético de Madrid–Barcelona a las 21:00 — en directo junto a Sol
-              cuando lo estemos emitiendo.
-            </li>
-          </ul>
-          <p className="mt-2 text-sm text-cream-muted">
-            No prometemos todos los partidos en todas las pantallas. Pregunta en
-            la barra qué hay puesto.
-          </p>
-        </Section>
+            </p>
+          </Section>
+        </>
       ) : null}
       <Section title="Si vas al Bernabéu el domingo 8 de noviembre">
         <p>
