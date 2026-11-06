@@ -35,6 +35,15 @@ export default function EsWhatsOnPage() {
           </Link>
         </p>
       ) : null}
+      {/* Dónde ver la NFL este finde (ciclo 1, DG 6 nov): build-time date gate. */}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-08" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          Finde NFL en Madrid: Bengals–Falcons, domingo 8 de noviembre, 15:30, y más NFL desde las 19:00, en directo junto a Sol. Abrimos desde las 12:00.{" "}
+          <Link href="/es/noticias/donde-ver-nfl-madrid-sol" className="text-gold underline">
+            Dónde ver la NFL este finde junto a Sol
+          </Link>
+        </p>
+      ) : null}
       {/* Concerts (DG 25 Oct; times per movistararena.es): build-time date gates, each line gone from the daily rebuild after its date. */}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-06" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">

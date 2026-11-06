@@ -149,6 +149,7 @@ export const EN_PATHS = [
   "/news/real-madrid-inter-womens-champions-league-sol",
   "/news/getafe-brighton-thursday-night-sol",
   "/news/real-madrid-crvena-zvezda-thursday-sol",
+  "/news/where-to-watch-nfl-madrid-sol",
   "/oktoberfest-madrid-sol",
   "/halloween-madrid-sol",
   "/menu",
@@ -183,6 +184,7 @@ export const ES_PATHS = [
   "/es/noticias/real-madrid-inter-champions-femenina-sol",
   "/es/noticias/getafe-brighton-jueves-sol",
   "/es/noticias/real-madrid-crvena-zvezda-jueves-sol",
+  "/es/noticias/donde-ver-nfl-madrid-sol",
 ] as const;
 
 export const DE_PATHS = [
@@ -215,6 +217,7 @@ export const HREFLANG_PAIRS: Record<string, string | undefined> = {
   "/news/real-madrid-inter-womens-champions-league-sol": "/es/noticias/real-madrid-inter-champions-femenina-sol",
   "/news/getafe-brighton-thursday-night-sol": "/es/noticias/getafe-brighton-jueves-sol",
   "/news/real-madrid-crvena-zvezda-thursday-sol": "/es/noticias/real-madrid-crvena-zvezda-jueves-sol",
+  "/news/where-to-watch-nfl-madrid-sol": "/es/noticias/donde-ver-nfl-madrid-sol",
 };
 
 /**

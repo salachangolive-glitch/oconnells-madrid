@@ -43,6 +43,15 @@ export default function WhatsOnPage() {
           </Link>
         </p>
       ) : null}
+      {/* Where to watch NFL this weekend (ciclo 1, DG 6 Nov): build-time date gate. */}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-08" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          NFL Madrid Game weekend: Bengals at Falcons, Sunday 8 November, 15:30, plus Sunday NFL from 19:00, live near Sol. Open from 12:00.{" "}
+          <Link href="/news/where-to-watch-nfl-madrid-sol" className="text-gold underline">
+            Where to watch NFL this weekend near Sol
+          </Link>
+        </p>
+      ) : null}
       {/* Atlético–Barcelona LaLiga J12 (Radar OC3, laliga.com J12): build-time date gate. */}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-08" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">

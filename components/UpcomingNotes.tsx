@@ -5,6 +5,7 @@ import { agendaBuildNow, madridTodayYmd } from "@/lib/fixtures";
 const NOTES: { day: string; en?: [string, string]; es?: [string, string] }[] = [
   { day: "2026-11-05", en: ["/news/getafe-brighton-thursday-night-sol", "Getafe v Brighton · Thu 5 Nov"], es: ["/es/noticias/getafe-brighton-jueves-sol", "Getafe–Brighton · jue 5 nov"] },
   { day: "2026-11-06", en: ["/news/duran-duran-madrid-gig-night-sol", "Duran Duran gig night · Fri 6 Nov"] },
+  { day: "2026-11-08", en: ["/news/where-to-watch-nfl-madrid-sol", "Where to watch NFL · Sun 8 Nov"], es: ["/es/noticias/donde-ver-nfl-madrid-sol", "Dónde ver la NFL · dom 8 nov"] },
   { day: "2026-11-08", en: ["/news/atletico-barcelona-sunday-night-sol", "Atlético v Barcelona · Sun 8 Nov"] },
   { day: "2026-11-10", en: ["/news/bryan-adams-madrid-gig-night-sol", "Bryan Adams gig night · Tue 10 Nov"] },
   { day: "2026-11-12", en: ["/news/england-croatia-thursday-night-sol", "England v Croatia · Thu 12 Nov"] },
