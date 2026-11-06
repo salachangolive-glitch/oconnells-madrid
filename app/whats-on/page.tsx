@@ -62,6 +62,10 @@ export default function WhatsOnPage() {
           <Link href="/news/sunday-football-sol-8-nov" className="text-gold underline">
             Sunday football near Sol
           </Link>
+          {" · "}
+          <Link href="/news/four-bars-fan-weekend-sol" className="text-gold underline">
+            Four bars, one fan weekend
+          </Link>
         </p>
       ) : null}
       {/* Atlético–Barcelona LaLiga J12 (Radar OC3, laliga.com J12): build-time date gate. */}

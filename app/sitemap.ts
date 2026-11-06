@@ -74,6 +74,8 @@ const EVENT_LAST_DAY: Record<string, string> = {
   "/es/noticias/antes-despues-bernabeu-nfl-sol": "2026-11-08",
   "/news/sunday-football-sol-8-nov": "2026-11-08",
   "/es/noticias/futbol-domingo-sol-8-nov": "2026-11-08",
+  "/news/four-bars-fan-weekend-sol": "2026-11-08",
+  "/es/noticias/cuatro-bares-finde-sol": "2026-11-08",
   "/news/bryan-adams-madrid-gig-night-sol": "2026-11-10",
   "/news/england-croatia-thursday-night-sol": "2026-11-12",
   "/news/real-madrid-crvena-zvezda-thursday-sol": "2026-11-12",

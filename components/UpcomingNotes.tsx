@@ -9,6 +9,7 @@ const NOTES: { day: string; en?: [string, string]; es?: [string, string] }[] = [
   { day: "2026-11-08", en: ["/news/nfl-meeting-point-sol", "NFL meeting point near Sol · Sun 8 Nov"], es: ["/es/noticias/punto-encuentro-nfl-sol", "Punto de encuentro NFL · dom 8 nov"] },
   { day: "2026-11-08", en: ["/news/before-after-bernabeu-nfl-sol", "Before/after Bernabéu NFL · Sun 8 Nov"], es: ["/es/noticias/antes-despues-bernabeu-nfl-sol", "Antes y después NFL Bernabéu · dom 8 nov"] },
   { day: "2026-11-08", en: ["/news/sunday-football-sol-8-nov", "Sunday football near Sol · 8 Nov"], es: ["/es/noticias/futbol-domingo-sol-8-nov", "Fútbol domingo en Sol · 8 nov"] },
+  { day: "2026-11-08", en: ["/news/four-bars-fan-weekend-sol", "Four bars, one fan weekend · Sol"], es: ["/es/noticias/cuatro-bares-finde-sol", "Cuatro bares, un finde · Sol"] },
   { day: "2026-11-08", en: ["/news/atletico-barcelona-sunday-night-sol", "Atlético v Barcelona · Sun 8 Nov"] },
   { day: "2026-11-10", en: ["/news/bryan-adams-madrid-gig-night-sol", "Bryan Adams gig night · Tue 10 Nov"] },
   { day: "2026-11-12", en: ["/news/england-croatia-thursday-night-sol", "England v Croatia · Thu 12 Nov"] },

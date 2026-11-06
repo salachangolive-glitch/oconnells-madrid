@@ -153,6 +153,7 @@ export const EN_PATHS = [
   "/news/nfl-meeting-point-sol",
   "/news/before-after-bernabeu-nfl-sol",
   "/news/sunday-football-sol-8-nov",
+  "/news/four-bars-fan-weekend-sol",
   "/oktoberfest-madrid-sol",
   "/halloween-madrid-sol",
   "/menu",
@@ -191,6 +192,7 @@ export const ES_PATHS = [
   "/es/noticias/punto-encuentro-nfl-sol",
   "/es/noticias/antes-despues-bernabeu-nfl-sol",
   "/es/noticias/futbol-domingo-sol-8-nov",
+  "/es/noticias/cuatro-bares-finde-sol",
 ] as const;
 
 export const DE_PATHS = [
@@ -227,6 +229,7 @@ export const HREFLANG_PAIRS: Record<string, string | undefined> = {
   "/news/nfl-meeting-point-sol": "/es/noticias/punto-encuentro-nfl-sol",
   "/news/before-after-bernabeu-nfl-sol": "/es/noticias/antes-despues-bernabeu-nfl-sol",
   "/news/sunday-football-sol-8-nov": "/es/noticias/futbol-domingo-sol-8-nov",
+  "/news/four-bars-fan-weekend-sol": "/es/noticias/cuatro-bares-finde-sol",
 };
 
 /**

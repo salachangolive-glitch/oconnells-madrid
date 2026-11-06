@@ -54,6 +54,10 @@ export default function EsWhatsOnPage() {
           <Link href="/es/noticias/futbol-domingo-sol-8-nov" className="text-gold underline">
             Fútbol domingo junto a Sol
           </Link>
+          {" · "}
+          <Link href="/es/noticias/cuatro-bares-finde-sol" className="text-gold underline">
+            Cuatro bares, un finde
+          </Link>
         </p>
       ) : null}
       {/* Concerts (DG 25 Oct; times per movistararena.es): build-time date gates, each line gone from the daily rebuild after its date. */}
