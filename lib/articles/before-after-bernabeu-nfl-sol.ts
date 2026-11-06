@@ -22,6 +22,7 @@ export const BEFORE_AFTER_BERNABEU_NFL: MatchArticleData = {
   homeTeam: "Atlanta Falcons",
   awayTeam: "Cincinnati Bengals",
   venue: "Santiago Bernabéu",
+  fourBars: true,
   copy: {
     en: {
       title: "Before and after Bernabéu NFL, near Sol",
@@ -29,7 +30,7 @@ export const BEFORE_AFTER_BERNABEU_NFL: MatchArticleData = {
         "Before or after Bengals at Falcons at the Bernabéu: O'Connell St, Espoz y Mina 7, Sunday from 12:00. Independent Irish pub — not the organiser of those events.",
       eyebrow: "NFL Madrid · Sunday 8 November 2026 · before and after the Bernabéu",
       h1: "Before and after Bengals at Falcons: Irish pub near Sol",
-      lead: "Bengals at Falcons kicks off at 15:30 at the Bernabéu. O'Connell St, an Irish pub at Espoz y Mina 7 next to Puerta del Sol, opens from 12:00 on Sunday 8 November — a stop before the stadium, and a place to come back to after.",
+      lead: "Bengals at Falcons kicks off at 15:30 at the Bernabéu. Four sibling bars sit around Puerta del Sol — O'Reilly's, Dubliners, O'Connell's and Four Corner. O'Connell's, Espoz y Mina 7, opens from 12:00 on Sunday 8 November: a stop before the stadium, and a place to come back to after.",
       screeningName: "Before and after Bengals at Falcons at O'Connell St",
       sections: [
         {
@@ -74,7 +75,7 @@ export const BEFORE_AFTER_BERNABEU_NFL: MatchArticleData = {
         "Antes o después de Bengals–Falcons en el Bernabéu: O'Connell St, Espoz y Mina 7, domingo desde las 12:00. Pub irlandés independiente, no organizamos el evento.",
       eyebrow: "NFL Madrid · domingo 8 de noviembre de 2026 · antes y después del Bernabéu",
       h1: "Antes y después de Bengals–Falcons: pub irlandés junto a Sol",
-      lead: "Bengals–Falcons empieza a las 15:30 en el Bernabéu. O'Connell St, pub irlandés en Espoz y Mina 7 junto a la Puerta del Sol, abre desde las 12:00 el domingo 8 de noviembre: una parada antes del estadio, y un sitio al que volver después.",
+      lead: "Bengals–Falcons empieza a las 15:30 en el Bernabéu. Cuatro bares hermanos alrededor de la Puerta del Sol: O'Reilly's, Dubliners, O'Connell's y Four Corner. O'Connell's, Espoz y Mina 7, abre desde las 12:00 el domingo 8 de noviembre: una parada antes del estadio, y un sitio al que volver después.",
       screeningName: "Antes y después de Bengals–Falcons en O'Connell St",
       sections: [
         {

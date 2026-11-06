@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FourBarsNearSol } from "@/components/FourBarsNearSol";
 import { InteriorPhoto } from "@/components/InteriorPhoto";
 import { JsonLd } from "@/components/JsonLd";
 import { PageShell } from "@/components/PageShell";
@@ -40,6 +41,8 @@ export type MatchArticleData = {
   venue: string;
   /** Stadium town for SportsEvent JSON-LD (default "Madrid"). */
   venueLocality?: string;
+  /** Owner 6 Nov: NFL weekend notes lead with all four sibling bars. */
+  fourBars?: boolean;
   copy: Record<MatchLocale, MatchCopy>;
 };
 
@@ -120,6 +123,7 @@ export function MatchNewsArticle({ data, locale }: { data: MatchArticleData; loc
           {c.other.label}
         </a>
       </p>
+      {data.fourBars ? <FourBarsNearSol locale={locale} /> : null}
       {c.sections.map((s) => (
         <Section key={s.title} title={s.title}>
           {s.paras?.map((p) => <p key={p}>{p}</p>)}

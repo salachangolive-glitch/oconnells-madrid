@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FourBarsNearSol } from "@/components/FourBarsNearSol";
 import { InteriorPhoto } from "@/components/InteriorPhoto";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
@@ -25,6 +26,7 @@ export default function NewsAtleticoBarcelonaSundayNightPage() {
         alt="Beer taps at the bar of O'Connell St Irish pub by Puerta del Sol"
         position="object-[center_40%]"
       />
+      <FourBarsNearSol locale="en" />
       <Section title="The match">
         <ul className="list-disc space-y-1 pl-5">
           <li>Atlético Madrid v FC Barcelona, LaLiga matchday 12</li>

@@ -6,9 +6,11 @@ import type { MatchArticleData } from "@/components/MatchNewsArticle";
  *  - Address: Calle de Espoz y Mina 7, 28012 Madrid (lib/venue).
  *  - Sunday 8 Nov open from 12:00 (one-day exception; habitual Sunday 14:00).
  *  - Bengals at Falcons 15:30 Madrid, Bernabéu, nfl.com REG 9; ES channel DAZN · Cuatro.
- *  - Regroup from 19:00. Sibling bars: Dubliners (same street) + O'Reilly's,
- *    Pasaje de Matheu 4. Hub: dublinersmadrid.es/4-bars-one-fan-weekend/
- *    (ES: /es/cuatro-bares-fin-de-semana/).
+ *  - Regroup from 19:00.
+ *  - Four sibling bars (owner 6 Nov 15:48, this order): O'Reilly's Pasaje de
+ *    Matheu 4; Dubliners Espoz y Mina 7; O'Connell's Espoz y Mina 7; Four Corner
+ *    Calle de la Victoria 6 (meeting point only: no hours, no NFL claim).
+ *  - Hub: dublinersmadrid.es/4-bars-one-fan-weekend/ (ES: /es/cuatro-bares-fin-de-semana/).
  * Banned in copy: oficial/official, best/mejor/beste, proyector/projector/Beamer.
  */
 export const NFL_MEETING_POINT_SOL: MatchArticleData = {
@@ -23,14 +25,15 @@ export const NFL_MEETING_POINT_SOL: MatchArticleData = {
   homeTeam: "Atlanta Falcons",
   awayTeam: "Cincinnati Bengals",
   venue: "Santiago Bernabéu",
+  fourBars: true,
   copy: {
     en: {
       title: "NFL meeting point near Sol, Sun 8 Nov",
       description:
         "Meeting point near Puerta del Sol at O'Connell St, Espoz y Mina 7. Sunday 8 Nov open from 12:00 (usual 14:00). Bengals at Falcons 15:30; regroup from 19:00.",
       eyebrow: "NFL Madrid · Sunday 8 November 2026 · meeting point from 12:00",
-      h1: "NFL meeting point near Puerta del Sol",
-      lead: "Meet near Puerta del Sol at O'Connell St, Espoz y Mina 7. Sunday 8 November we open from 12:00 — not the usual Sunday 14:00 — so the pub is a meeting point from midday, through Bengals at Falcons at 15:30, and again from 19:00.",
+      h1: "NFL meeting point: four bars near Puerta del Sol",
+      lead: "Four sibling bars around Puerta del Sol this NFL weekend: O'Reilly's, Dubliners, O'Connell's and Four Corner. Meet at O'Connell's, Espoz y Mina 7 — Sunday 8 November we open from 12:00, not the usual Sunday 14:00 — through Bengals at Falcons at 15:30, and again from 19:00.",
       screeningName: "NFL meeting point at O'Connell St, Bengals at Falcons on the screens",
       sections: [
         {
@@ -47,12 +50,6 @@ export const NFL_MEETING_POINT_SOL: MatchArticleData = {
           paras: [
             "O'Connell St is an Irish pub at Calle de Espoz y Mina 7, a couple of minutes from Puerta del Sol. Independent Irish pub, live sport, international crowd — a meeting point before the game, after the game, and through Sunday football.",
             "No ticket? Watch Bengals at Falcons on the screens from 15:30. Going to the Bernabéu? Start here from 12:00 and come back from 19:00.",
-          ],
-        },
-        {
-          title: "Sister pubs around Sol",
-          paras: [
-            "Dubliners is in the same street, Espoz y Mina 7. O'Reilly's Restaurant Bar is at Pasaje de Matheu 4, a short walk from Sol. A shared fan-weekend guide lists the rooms around the square: https://dublinersmadrid.es/4-bars-one-fan-weekend/",
           ],
         },
       ],
@@ -74,8 +71,8 @@ export const NFL_MEETING_POINT_SOL: MatchArticleData = {
       description:
         "Punto de encuentro junto a Sol en O'Connell St, Espoz y Mina 7. Domingo 8 nov desde las 12:00. Bengals–Falcons 15:30; reencuentro desde las 19:00.",
       eyebrow: "NFL Madrid · domingo 8 de noviembre de 2026 · punto de encuentro desde las 12:00",
-      h1: "Punto de encuentro NFL junto a la Puerta del Sol",
-      lead: "Quedamos junto a la Puerta del Sol en O'Connell St, Espoz y Mina 7. El domingo 8 de noviembre abrimos desde las 12:00 — no el domingo habitual a las 14:00 — para ser punto de encuentro desde mediodía, durante Bengals–Falcons a las 15:30, y otra vez desde las 19:00.",
+      h1: "Punto de encuentro NFL: cuatro bares junto a Sol",
+      lead: "Cuatro bares hermanos alrededor de la Puerta del Sol este finde NFL: O'Reilly's, Dubliners, O'Connell's y Four Corner. Quedamos en O'Connell's, Espoz y Mina 7 — el domingo 8 de noviembre abrimos desde las 12:00, no el domingo habitual a las 14:00 — durante Bengals–Falcons a las 15:30, y otra vez desde las 19:00.",
       screeningName: "Punto de encuentro NFL en O'Connell St, Bengals–Falcons en las pantallas",
       sections: [
         {
@@ -92,12 +89,6 @@ export const NFL_MEETING_POINT_SOL: MatchArticleData = {
           paras: [
             "O'Connell St es un pub irlandés en la Calle de Espoz y Mina 7, a un par de minutos de la Puerta del Sol. Pub irlandés independiente, deporte en directo, ambiente internacional — un punto de encuentro antes del partido, después y durante el fútbol del domingo.",
             "¿Sin entrada? Mira Bengals–Falcons en las pantallas desde las 15:30. ¿Vas al Bernabéu? Empieza aquí desde las 12:00 y vuelve a partir de las 19:00.",
-          ],
-        },
-        {
-          title: "Pubs hermanos cerca de Sol",
-          paras: [
-            "Dubliners está en la misma calle, Espoz y Mina 7. O'Reilly's Restaurant Bar está en el Pasaje de Matheu 4, a un paso de Sol. La guía común del fin de semana lista las salas alrededor de la plaza: https://dublinersmadrid.es/es/cuatro-bares-fin-de-semana/",
           ],
         },
       ],

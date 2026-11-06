@@ -19,6 +19,7 @@ export const SUNDAY_FOOTBALL_SOL: MatchArticleData = {
   homeTeam: "Atlanta Falcons",
   awayTeam: "Cincinnati Bengals",
   venue: "Santiago Bernabéu",
+  fourBars: true,
   copy: {
     en: {
       title: "Sunday football near Sol, 8 November",
@@ -26,7 +27,7 @@ export const SUNDAY_FOOTBALL_SOL: MatchArticleData = {
         "Sunday 8 Nov near Sol: open 12:00, Bengals at Falcons 15:30, more NFL from 19:00, Atlético v Barcelona 21:00. Ask which game is on.",
       eyebrow: "Sunday 8 November 2026 · from 12:00 · Sol",
       h1: "Sunday football near Sol: 8 November from midday",
-      lead: "Sunday 8 November at O'Connell St, Espoz y Mina 7, next to Puerta del Sol: we open from 12:00, Bengals at Falcons is at 15:30, more NFL from 19:00, and Atlético v Barcelona at 21:00. Ask which game is on.",
+      lead: "Sunday 8 November around Puerta del Sol: four sibling bars — O'Reilly's, Dubliners, O'Connell's and Four Corner. At O'Connell's, Espoz y Mina 7, we open from 12:00, Bengals at Falcons is at 15:30, more NFL from 19:00, and Atlético v Barcelona at 21:00. Ask which game is on.",
       screeningName: "Sunday football at O'Connell St, 8 November",
       sections: [
         {
@@ -66,7 +67,7 @@ export const SUNDAY_FOOTBALL_SOL: MatchArticleData = {
         "Domingo 8 nov junto a Sol: abrimos 12:00, Bengals–Falcons 15:30, más NFL desde las 19:00, Atlético–Barcelona 21:00. Pregunta qué partido echan.",
       eyebrow: "Domingo 8 de noviembre de 2026 · desde las 12:00 · Sol",
       h1: "Fútbol domingo junto a Sol: 8 de noviembre desde mediodía",
-      lead: "El domingo 8 de noviembre en O'Connell St, Espoz y Mina 7, junto a la Puerta del Sol: abrimos desde las 12:00, Bengals–Falcons a las 15:30, más NFL desde las 19:00, y Atlético–Barcelona a las 21:00. Pregunta qué partido echan.",
+      lead: "El domingo 8 de noviembre alrededor de la Puerta del Sol: cuatro bares hermanos — O'Reilly's, Dubliners, O'Connell's y Four Corner. En O'Connell's, Espoz y Mina 7, abrimos desde las 12:00, Bengals–Falcons a las 15:30, más NFL desde las 19:00, y Atlético–Barcelona a las 21:00. Pregunta qué partido echan.",
       screeningName: "Fútbol domingo en O'Connell St, 8 de noviembre",
       sections: [
         {
