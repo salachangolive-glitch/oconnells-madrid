@@ -150,6 +150,9 @@ export const EN_PATHS = [
   "/news/getafe-brighton-thursday-night-sol",
   "/news/real-madrid-crvena-zvezda-thursday-sol",
   "/news/where-to-watch-nfl-madrid-sol",
+  "/news/nfl-meeting-point-sol",
+  "/news/before-after-bernabeu-nfl-sol",
+  "/news/sunday-football-sol-8-nov",
   "/oktoberfest-madrid-sol",
   "/halloween-madrid-sol",
   "/menu",
@@ -185,6 +188,9 @@ export const ES_PATHS = [
   "/es/noticias/getafe-brighton-jueves-sol",
   "/es/noticias/real-madrid-crvena-zvezda-jueves-sol",
   "/es/noticias/donde-ver-nfl-madrid-sol",
+  "/es/noticias/punto-encuentro-nfl-sol",
+  "/es/noticias/antes-despues-bernabeu-nfl-sol",
+  "/es/noticias/futbol-domingo-sol-8-nov",
 ] as const;
 
 export const DE_PATHS = [
@@ -218,6 +224,9 @@ export const HREFLANG_PAIRS: Record<string, string | undefined> = {
   "/news/getafe-brighton-thursday-night-sol": "/es/noticias/getafe-brighton-jueves-sol",
   "/news/real-madrid-crvena-zvezda-thursday-sol": "/es/noticias/real-madrid-crvena-zvezda-jueves-sol",
   "/news/where-to-watch-nfl-madrid-sol": "/es/noticias/donde-ver-nfl-madrid-sol",
+  "/news/nfl-meeting-point-sol": "/es/noticias/punto-encuentro-nfl-sol",
+  "/news/before-after-bernabeu-nfl-sol": "/es/noticias/antes-despues-bernabeu-nfl-sol",
+  "/news/sunday-football-sol-8-nov": "/es/noticias/futbol-domingo-sol-8-nov",
 };
 
 /**

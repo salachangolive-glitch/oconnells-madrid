@@ -50,6 +50,18 @@ export default function WhatsOnPage() {
           <Link href="/news/where-to-watch-nfl-madrid-sol" className="text-gold underline">
             Where to watch NFL this weekend near Sol
           </Link>
+          {" · "}
+          <Link href="/news/nfl-meeting-point-sol" className="text-gold underline">
+            NFL meeting point near Sol
+          </Link>
+          {" · "}
+          <Link href="/news/before-after-bernabeu-nfl-sol" className="text-gold underline">
+            Before and after the Bernabéu
+          </Link>
+          {" · "}
+          <Link href="/news/sunday-football-sol-8-nov" className="text-gold underline">
+            Sunday football near Sol
+          </Link>
         </p>
       ) : null}
       {/* Atlético–Barcelona LaLiga J12 (Radar OC3, laliga.com J12): build-time date gate. */}

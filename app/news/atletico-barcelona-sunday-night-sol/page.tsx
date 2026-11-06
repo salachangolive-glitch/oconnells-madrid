@@ -46,12 +46,16 @@ export default function NewsAtleticoBarcelonaSundayNightPage() {
       </Section>
       <Section title="Live on the screens at O'Connell St">
         <p>
-          O&apos;Connell St opens at 14:00 on Sundays and stays open until
-          03:00, so you can settle in well before kick-off and stay for the
-          talk afterwards. It&apos;s a busy sporting Sunday in Madrid: the NFL
-          game at the Bernabéu and the rest of the NFL Sunday are on our
-          screens through the afternoon and evening, and LaLiga takes over at
-          21:00.
+          Exception Sunday 8 November: O&apos;Connell St opens from 12:00
+          (usual Sundays from 14:00) and stays open until 03:00, so the hours
+          cover the late kickoff. NFL Sunday starts at midday — Bengals at
+          Falcons at 15:30, then more NFL from 19:00 — and LaLiga takes over at
+          21:00. Ask which game is on; we do not promise every game on every
+          screen. The NFL Sunday plan is on{" "}
+          <Link href="/nfl-madrid" className="text-gold underline">
+            NFL in Madrid
+          </Link>
+          . First come, first served.
         </p>
         <p>
           Atlético fans, Barça fans and neutrals all end up in the centre on a

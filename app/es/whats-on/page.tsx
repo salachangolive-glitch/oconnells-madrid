@@ -42,6 +42,18 @@ export default function EsWhatsOnPage() {
           <Link href="/es/noticias/donde-ver-nfl-madrid-sol" className="text-gold underline">
             Dónde ver la NFL este finde junto a Sol
           </Link>
+          {" · "}
+          <Link href="/es/noticias/punto-encuentro-nfl-sol" className="text-gold underline">
+            Punto de encuentro NFL junto a Sol
+          </Link>
+          {" · "}
+          <Link href="/es/noticias/antes-despues-bernabeu-nfl-sol" className="text-gold underline">
+            Antes y después del Bernabéu
+          </Link>
+          {" · "}
+          <Link href="/es/noticias/futbol-domingo-sol-8-nov" className="text-gold underline">
+            Fútbol domingo junto a Sol
+          </Link>
         </p>
       ) : null}
       {/* Concerts (DG 25 Oct; times per movistararena.es): build-time date gates, each line gone from the daily rebuild after its date. */}
