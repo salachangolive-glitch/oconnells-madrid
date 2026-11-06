@@ -4,12 +4,12 @@ import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
 import { buildMetadata } from "@/lib/seo";
 import { agendaBuildNow, madridTodayYmd } from "@/lib/fixtures";
-import { ADDRESS, HOURS, MAPS_URL, SITE_NAME } from "@/lib/venue";
+import { ADDRESS, HOURS, MAPS_URL } from "@/lib/venue";
 
 export const metadata = buildMetadata({
-  title: "Fin de semana NFL Madrid · punto de encuentro junto a Sol",
+  title: "Ver la NFL en Madrid cerca de Sol | O'Connell St",
   description:
-    "O'Connell St, Calle de Espoz y Mina 7, junto a Puerta del Sol: pub irlandés, deporte en directo y punto de encuentro internacional para aficionados NFL en Madrid. Domingo 8 nov abrimos desde las 12:00.",
+    "Sports bar en Sol este finde NFL: Bengals–Falcons Madrid y pantallas el domingo en O'Connell's, Espoz y Mina 7. Pub irlandés independiente — pregunta qué partido echan.",
   path: "/es/nfl-madrid",
   locale: "es",
 });
@@ -17,7 +17,7 @@ export const metadata = buildMetadata({
 const faq = [
   {
     q: "¿Ponéis fútbol americano?",
-    a: "Sí, las noches que lo emitimos. En O'Connell St el fútbol europeo va primero, y cada partido confirmado aparece en la Agenda con la hora de Madrid.",
+    a: "Sí, cuando lo emitimos — incluida la jornada completa del domingo 8 nov desde las 12:00. En O'Connell St el fútbol europeo va primero, y cada partido confirmado aparece en la Agenda con la hora de Madrid.",
   },
   {
     q: "¿Ponéis todos los partidos?",
@@ -70,7 +70,7 @@ export default function NflMadridPageEs() {
     <PageShell locale="es" altLangHref="/nfl-madrid">
       <PageHero
         eyebrow="Pub irlandés · Deporte en directo · Junto a Sol"
-        title={`Fin de semana NFL Madrid en ${SITE_NAME}`}
+        title="Ver la NFL en Madrid en un sports bar junto a Sol"
         lead="Un pub irlandés junto a la Puerta del Sol — deporte en directo en pantallas grandes y punto de encuentro internacional para aficionados en el centro de Madrid."
       />
       <InteriorPhoto

@@ -68,7 +68,8 @@ export function NflSunday8Nov({
   if (today > NFL8_LAST_DAY) return null;
   const es = locale === "es";
   const list = slots();
-  const label = (f: Fixture) => `${nick(f.awayTeam)} vs ${nick(f.homeTeam)}`;
+  const label = (f: Fixture) =>
+    f.title ? f.title[locale] : `${nick(f.awayTeam)} vs ${nick(f.homeTeam)}`;
   return (
     <section
       id="nfl-sunday-8-november"
@@ -84,8 +85,8 @@ export function NflSunday8Nov({
       <div className="pub-rule my-3" />
       <p className="text-sm text-cream-muted sm:text-base">
         {es
-          ? "La NFL juega en Madrid: Bengals vs Falcons en el Bernabéu, en directo en pantalla grande y con todo el ambiente desde las 15:30 en O'Connell St, pub irlandés y punto de encuentro internacional junto a la Puerta del Sol; después, el resto de la jornada del domingo en nuestras pantallas. A partir de las 19:00, el pub es para cuando volváis del estadio. Horarios de Madrid."
-          : "The NFL plays in Madrid: Bengals vs Falcons at the Bernabéu, live on the big screen with the match-day atmosphere from 15:30 at O'Connell St — an Irish pub and international meeting point just off Puerta del Sol — then the rest of Sunday's games on our screens. From 19:00, come back from the stadium to O'Connell St. All times are Madrid time."}
+          ? "La NFL juega en Madrid: Bengals–Falcons en el Bernabéu, en directo en pantalla grande y con todo el ambiente desde las 15:30 en O'Connell St, pub irlandés y punto de encuentro internacional junto a la Puerta del Sol; después, el resto de la jornada del domingo en nuestras pantallas. A partir de las 19:00, el pub es para cuando volváis del estadio. Horarios de Madrid."
+          : "The NFL plays in Madrid: Bengals at Falcons at the Bernabéu, live on the big screen with the match-day atmosphere from 15:30 at O'Connell St — an Irish pub and international meeting point just off Puerta del Sol — then the rest of Sunday's games on our screens. From 19:00, come back from the stadium to O'Connell St. All times are Madrid time."}
       </p>
       <p className="mt-3 text-sm font-semibold text-gold sm:text-base">
         {es

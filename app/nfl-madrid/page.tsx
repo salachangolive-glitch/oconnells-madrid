@@ -4,19 +4,19 @@ import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
 import { buildMetadata } from "@/lib/seo";
 import { agendaBuildNow, madridTodayYmd } from "@/lib/fixtures";
-import { ADDRESS, HOURS, MAPS_URL, SITE_NAME } from "@/lib/venue";
+import { ADDRESS, HOURS, MAPS_URL } from "@/lib/venue";
 
 export const metadata = buildMetadata({
-  title: "NFL Madrid weekend · Irish pub meeting point near Sol",
+  title: "Watch NFL Madrid near Sol | O'Connell St Irish Pub",
   description:
-    "O'Connell St, Calle de Espoz y Mina 7, near Puerta del Sol: Irish pub, live sport and an international meeting point for NFL fans in Madrid. Sunday 8 Nov open from 12:00.",
+    "Sports bar Sol for NFL weekend: Bengals–Falcons Madrid and Sunday football screens at O'Connell's, Espoz y Mina 7. Independent Irish pub — ask which game is on.",
   path: "/nfl-madrid",
 });
 
 const faq = [
   {
     q: "Do you show American football?",
-    a: "Yes, on the nights we are showing it. European football comes first at O'Connell St, and every confirmed game is listed on What's On with the Madrid time.",
+    a: "Yes, when we are showing it — including the full Sunday 8 Nov from 12:00. European football comes first at O'Connell St, and every confirmed game is listed on What's On with the Madrid time.",
   },
   {
     q: "Do you show every game?",
@@ -69,7 +69,7 @@ export default function NflMadridPage() {
     <PageShell locale="en" altLangHref="/es/nfl-madrid">
       <PageHero
         eyebrow="Irish pub · Live sport · Near Sol"
-        title={`NFL Madrid weekend at ${SITE_NAME}`}
+        title="Watch NFL in Madrid at a sports bar near Sol"
         lead="An Irish pub just off Puerta del Sol — live sport on the big screens and an international meeting point for fans in central Madrid."
       />
       <InteriorPhoto
@@ -134,7 +134,7 @@ export default function NflMadridPage() {
               exception; usual Sunday opening is 14:00).
             </li>
             <li>
-              Bengals v Falcons at 15:30 — NFL Madrid Game at the Bernabéu;
+              Bengals at Falcons at 15:30 — NFL Madrid Game at the Bernabéu;
               live on the big screen at O&apos;Connell St if you are not at the
               stadium.
             </li>
@@ -155,7 +155,7 @@ export default function NflMadridPage() {
       ) : null}
       <Section title="Going to the Bernabéu on Sunday 8 November">
         <p>
-          Bengals v Falcons kicks off at 15:30 Madrid time at the Bernabéu.
+          Bengals at Falcons kicks off at 15:30 Madrid time at the Bernabéu.
           These are the arrival details Real Madrid lists on{" "}
           <a
             href="https://bernabeu.realmadrid.com/nfl/"
