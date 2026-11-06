@@ -59,7 +59,7 @@ const SIBLINGS = [
     address: "Calle de la Victoria, 6, 28012 Madrid",
     maps: "https://www.google.com/maps/search/?api=1&query=Calle+de+la+Victoria+6+28012+Madrid",
     web: null as string | null,
-    note: "Sibling venue near Sol for this weekend (commercial name). Check opening times on the day.",
+    note: "Sunday from 14:00 until late. No NFL until confirmed.",
   },
 ] as const;
 
