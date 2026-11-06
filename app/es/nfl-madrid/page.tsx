@@ -111,10 +111,6 @@ export default function NflMadridPageEs() {
             </h3>
             <ul className="mt-2 list-disc space-y-1 pl-5">
               <li>
-                NFL Experience Madrid — Plaza de España, 10:00–19:00 (evento de
-                aficionados de la NFL, no en nuestro pub).
-              </li>
-              <li>
                 Valencia–Real Madrid a las 21:00 — Orange TV y DAZN, en directo
                 junto a Sol cuando lo estemos emitiendo. Mira la{" "}
                 <Link href="/es/whats-on" className="text-cream underline">
@@ -223,51 +219,18 @@ export default function NflMadridPageEs() {
           .
         </p>
       </Section>
-      {/* Esta semana en Madrid (DG 2 nov): actos de terceros, NO en O'Connell St. Fuera desde rebuild 9 nov. */}
+      {/* Esta semana — solo punto de encuentro (dueño 6 nov: sin propaganda de otros locales). */}
       {showWeekend ? (
         <div id="esta-semana">
-          <Section title="Esta semana en Madrid">
-            <p>
-              Actividades para aficionados en Madrid esta semana, publicadas en
-              NFL.com (
-              <a
-                href="https://www.nfl.com/news/madrid-la-nfl-ya-esta-aqui"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-cream underline"
-              >
-                actividades en Madrid
-              </a>
-              ,{" "}
-              <a
-                href="https://www.nfl.com/news/fan-events-in-madrid"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-cream underline"
-              >
-                actividades de los Falcons
-              </a>
-              ). Las organizan la NFL y los Falcons en otros locales, no en
-              O&apos;Connell St:
+          <Section title="Esta semana en O&apos;Connell St">
+            <p data-oc-sat="">
+              Domingo 8 de noviembre — Punto de encuentro para el gran evento
+              desde las 12:00 del mediodía.
             </p>
-            <ul className="list-disc space-y-1 pl-5">
-              <li data-oc-sat="">
-                Domingo 8 de noviembre — Punto de encuentro para el gran evento
-                desde las 12:00 del mediodía.
-              </li>
-              <li>
-                Falcons House: sábado 7 de noviembre, de 13:00 a 17:00, en el
-                Irish Rover Madrid, Av. de Brasil 7 (Tetuán).
-              </li>
-              <li>
-                Paseo «Dirty Birds» hasta el Bernabéu: domingo 8 de noviembre,
-                de 13:00 a 13:15, con salida desde Mira Miranda Madrid, Paseo de
-                la Castellana 89.
-              </li>
-            </ul>
-            <p className="text-sm text-cream-muted">
-              Datos publicados en NFL.com, consultados el 2 y el 3 de noviembre
-              de 2026. Compruébalos allí por si cambian.
+            <p className="mt-2 text-sm text-cream-muted">
+              Pub irlandés independiente en Espoz y Mina 7, junto a la Puerta
+              del Sol. Bares hermanos: Dubliners, O&apos;Reilly&apos;s y Four
+              Corner.
             </p>
           </Section>
         </div>

@@ -106,10 +106,6 @@ export default function NflMadridPage() {
             <h3 className="font-serif text-lg font-semibold text-cream">Saturday 7 November</h3>
             <ul className="mt-2 list-disc space-y-1 pl-5">
               <li>
-                NFL Experience Madrid — Plaza de España, 10:00–19:00 (NFL fan
-                event, not at our pub).
-              </li>
-              <li>
                 Valencia v Real Madrid at 21:00 — Orange TV and DAZN, live near
                 Sol when we are showing it. See{" "}
                 <Link href="/whats-on" className="text-cream underline">
@@ -214,49 +210,16 @@ export default function NflMadridPage() {
           for the rest of Sunday&apos;s games.
         </p>
       </Section>
-      {/* This week in Madrid (DG 2 Nov, task 5; nfl.com + Radar): third-party events, NOT at O'Connell St. Gone from 9 Nov rebuild. */}
+      {/* This week — meeting point only (owner 6 Nov: no third-party venue promo). */}
       {showWeekend ? (
         <div id="this-week">
-          <Section title="This week in Madrid">
-            <p>
-              Fan events in Madrid this week, listed on NFL.com (
-              <a
-                href="https://www.nfl.com/news/madrid-la-nfl-ya-esta-aqui"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-cream underline"
-              >
-                Madrid fan events
-              </a>
-              ,{" "}
-              <a
-                href="https://www.nfl.com/news/fan-events-in-madrid"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-cream underline"
-              >
-                Falcons events
-              </a>
-              ). They are run by the NFL and the Falcons at other venues, not at
-              O&apos;Connell St:
+          <Section title="This week at O&apos;Connell St">
+            <p data-oc-sat="">
+              Sunday 8 November — Main event meeting point from 12:00 midday.
             </p>
-            <ul className="list-disc space-y-1 pl-5">
-              <li data-oc-sat="">
-                Sunday 8 November — Main event meeting point from 12:00 midday.
-              </li>
-              <li>
-                Falcons House: Saturday 7 November, 13:00–17:00, at Irish Rover
-                Madrid, Av. de Brasil 7 (Tetuán).
-              </li>
-              <li>
-                Dirty Birds Fan Walk to the Bernabéu: Sunday 8 November,
-                13:00–13:15, starting from Mira Miranda Madrid, Paseo de la
-                Castellana 89.
-              </li>
-            </ul>
-            <p className="text-sm text-cream-muted">
-              Details as published on NFL.com, checked on 2 and 3 November 2026.
-              Check there for any changes.
+            <p className="mt-2 text-sm text-cream-muted">
+              Independent Irish pub at Espoz y Mina 7, near Puerta del Sol.
+              Sibling bars: Dubliners, O&apos;Reilly&apos;s and Four Corner.
             </p>
           </Section>
         </div>
