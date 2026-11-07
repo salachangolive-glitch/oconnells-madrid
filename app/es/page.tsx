@@ -7,6 +7,7 @@ import { InteriorGallery, InteriorPhoto } from "@/components/InteriorPhoto";
 import { PageShell } from "@/components/PageShell";
 import { Section } from "@/components/Prose";
 import { ThursdayFeature } from "@/components/ThursdayFeature";
+import { TonightMeetupCta } from "@/components/TonightMeetupCta";
 import { VenueHero } from "@/components/VenueHero";
 import { agendaBuildNow, madridTodayYmd } from "@/lib/fixtures";
 import { buildMetadata } from "@/lib/seo";
@@ -54,6 +55,7 @@ export default function EsHomePage() {
           <p className="mt-1 text-gold">Excepción domingo 8 nov: abrimos desde las 12:00</p>
         </div>
       </header>
+      <TonightMeetupCta locale="es" />
       <div className="mb-10 border-y border-gold/20 bg-pub-burgundy-deep/80">
         <HomeCtaBand locale="es" />
       </div>

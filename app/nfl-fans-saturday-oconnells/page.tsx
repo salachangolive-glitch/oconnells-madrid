@@ -2,6 +2,7 @@ import Link from "next/link";
 import { FourBarsNearSol } from "@/components/FourBarsNearSol";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
+import { TonightMeetupCta } from "@/components/TonightMeetupCta";
 import { PATHS, WEEKEND_HOURS } from "@/lib/fan-weekend";
 import { buildMetadata } from "@/lib/seo";
 import { ADDRESS } from "@/lib/venue";
@@ -21,6 +22,19 @@ export default function SaturdayFansPage() {
         title="NFL fans in Madrid this Saturday"
         lead="The weekend is already on — just not on an NFL clock. O'Connell's opens at 15:00 (until 03:30) at Calle de Espoz y Mina 7, the same street as Dubliners. Independent Irish pub. Not an official NFL event."
       />
+
+      <TonightMeetupCta locale="en" />
+
+      <Section title="Meetup 18:00–19:00 at this door">
+        <p>
+          Saturday 7 November meetup is 18:00–19:00 at O&apos;Connell&apos;s
+          (this room, Espoz y Mina 7), Dubliners on the same street, and
+          O&apos;Reilly&apos;s at Pasaje de Matheu 4. We open at 15:00, so the
+          window starts after the lock turns. Four Corner is not open tonight —
+          Sunday from 14:00 until late, with sports screens. No Saturday NFL
+          games. Valencia vs Real Madrid is at 21:00 when we are showing it.
+        </p>
+      </Section>
 
       <Section title="No live NFL today" featured>
         <p>

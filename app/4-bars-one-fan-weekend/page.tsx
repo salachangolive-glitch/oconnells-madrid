@@ -2,6 +2,7 @@ import Link from "next/link";
 import { FourBarsNearSol } from "@/components/FourBarsNearSol";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
+import { TonightMeetupCta } from "@/components/TonightMeetupCta";
 import { FAN_WEEKEND, PATHS, WEEKEND_HOURS } from "@/lib/fan-weekend";
 import { buildMetadata } from "@/lib/seo";
 
@@ -20,6 +21,17 @@ export default function FourBarsHubPage() {
         title="Four sister bars, one meeting point near Sol"
         lead="Saturday 7 and Sunday 8 November. Not four separate nights out — four rooms a few minutes from Puerta del Sol. Independent Irish pubs. Not an official NFL event."
       />
+
+      <TonightMeetupCta locale="en" />
+
+      <Section title="Tonight 18:00–19:00 — three rooms, not Four Corner">
+        <p>
+          Meetup 18:00–19:00 at O&apos;Reilly&apos;s, Dubliners and
+          O&apos;Connell&apos;s. Four Corner is Sunday from 14:00 only, with
+          sports screens. No Saturday NFL. Valencia vs Real Madrid at 21:00
+          when we are showing it.
+        </p>
+      </Section>
 
       <Section title="How the weekend sits">
         <p>

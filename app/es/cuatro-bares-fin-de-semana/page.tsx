@@ -2,6 +2,7 @@ import Link from "next/link";
 import { FourBarsNearSol } from "@/components/FourBarsNearSol";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
+import { TonightMeetupCta } from "@/components/TonightMeetupCta";
 import { FAN_WEEKEND, PATHS, WEEKEND_HOURS } from "@/lib/fan-weekend";
 import { buildMetadata } from "@/lib/seo";
 
@@ -21,6 +22,17 @@ export default function EsFourBarsHubPage() {
         title="Cuatro bares hermanos, un punto de encuentro junto a Sol"
         lead="Sábado 7 y domingo 8 de noviembre. No son cuatro noches sueltas — cuatro salas a pocos minutos de Puerta del Sol. Pubs irlandeses independientes. No es un evento oficial de la NFL."
       />
+
+      <TonightMeetupCta locale="es" />
+
+      <Section title="Esta noche 18:00–19:00 — tres salas, no Four Corner">
+        <p>
+          Quedada 18:00–19:00 en O&apos;Reilly&apos;s, Dubliners y
+          O&apos;Connell&apos;s. Four Corner es domingo desde las 14:00
+          solamente, con pantallas de deporte. El sábado no hay NFL.
+          Valencia–Real Madrid a las 21:00 si lo estamos poniendo.
+        </p>
+      </Section>
 
       <Section title="Cómo encaja el fin de semana">
         <p>
