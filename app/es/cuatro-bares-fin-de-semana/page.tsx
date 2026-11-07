@@ -54,8 +54,16 @@ export default function EsFourBarsHubPage() {
             Sábado en O&apos;Connell&apos;s
           </Link>
           {" · "}
+          <Link href={PATHS.laterDoorEs} className="text-gold underline">
+            Esta puerta hasta las 15:00
+          </Link>
+          {" · "}
           <Link href={PATHS.sundayEs} className="text-gold underline">
             Pantallas del domingo
+          </Link>
+          {" · "}
+          <Link href={PATHS.usualSundayEs} className="text-gold underline">
+            El domingo habitual es a las 14:00
           </Link>
         </p>
       </Section>

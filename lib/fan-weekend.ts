@@ -22,6 +22,10 @@ export const PATHS = {
   saturdayEs: "/es/fin-de-semana-nfl-oconnells",
   sundayEn: "/nfl-sunday-8-nov-oconnells",
   sundayEs: "/es/nfl-domingo-8-nov-oconnells",
+  laterDoorEn: "/this-door-stays-shut-until-1500",
+  laterDoorEs: "/es/esta-puerta-abre-a-las-1500",
+  usualSundayEn: "/usual-sunday-is-1400",
+  usualSundayEs: "/es/el-domingo-habitual-es-1400",
 } as const;
 
 /** Sat 7 Nov 2026 only. Hide from Sunday 8 Nov 00:00 Europe/Madrid. */

@@ -52,8 +52,16 @@ export default function FourBarsHubPage() {
             Saturday at O&apos;Connell&apos;s
           </Link>
           {" · "}
+          <Link href={PATHS.laterDoorEn} className="text-gold underline">
+            This door until 15:00
+          </Link>
+          {" · "}
           <Link href={PATHS.sundayEn} className="text-gold underline">
             Sunday screens
+          </Link>
+          {" · "}
+          <Link href={PATHS.usualSundayEn} className="text-gold underline">
+            Usual Sunday is 14:00
           </Link>
         </p>
       </Section>

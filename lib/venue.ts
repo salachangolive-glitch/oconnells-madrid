@@ -158,6 +158,8 @@ export const EN_PATHS = [
   "/4-bars-one-fan-weekend",
   "/nfl-fans-saturday-oconnells",
   "/nfl-sunday-8-nov-oconnells",
+  "/this-door-stays-shut-until-1500",
+  "/usual-sunday-is-1400",
   "/oktoberfest-madrid-sol",
   "/halloween-madrid-sol",
   "/menu",
@@ -200,6 +202,8 @@ export const ES_PATHS = [
   "/es/cuatro-bares-fin-de-semana",
   "/es/fin-de-semana-nfl-oconnells",
   "/es/nfl-domingo-8-nov-oconnells",
+  "/es/esta-puerta-abre-a-las-1500",
+  "/es/el-domingo-habitual-es-1400",
 ] as const;
 
 export const DE_PATHS = [
@@ -240,6 +244,8 @@ export const HREFLANG_PAIRS: Record<string, string | undefined> = {
   "/4-bars-one-fan-weekend": "/es/cuatro-bares-fin-de-semana",
   "/nfl-fans-saturday-oconnells": "/es/fin-de-semana-nfl-oconnells",
   "/nfl-sunday-8-nov-oconnells": "/es/nfl-domingo-8-nov-oconnells",
+  "/this-door-stays-shut-until-1500": "/es/esta-puerta-abre-a-las-1500",
+  "/usual-sunday-is-1400": "/es/el-domingo-habitual-es-1400",
 };
 
 /**
