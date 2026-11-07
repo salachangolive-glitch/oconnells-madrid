@@ -128,6 +128,15 @@ export default function WhatsOnPage() {
           </Link>
         </p>
       ) : null}
+      {/* Real Madrid v Celta, LaLiga J13 (Radar OC9; realmadrid.com 21/10/2026 21:00 CET, Bernabéu): build-time date gate. */}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-21" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          LaLiga: Real Madrid v Celta, Saturday 21 November, 21:00 (Bernabéu), live near Sol.{" "}
+          <Link href="/news/real-madrid-celta-saturday-night-sol" className="text-gold underline">
+            Real Madrid v Celta: Saturday night in Sol
+          </Link>
+        </p>
+      ) : null}
       {/* Getafe v Brighton + Real Madrid v Crvena Zvezda, visiting-fans articles (owner order 4 Nov 2026 via DG; uefa.com / euroleague.net): build-time date gates. */}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-05" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">

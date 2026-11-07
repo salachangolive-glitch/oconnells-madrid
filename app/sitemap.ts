@@ -86,6 +86,7 @@ const EVENT_LAST_DAY: Record<string, string> = {
   "/news/germany-netherlands-monday-night-sol": "2026-11-16",
   "/news/real-madrid-inter-womens-champions-league-sol": "2026-11-18",
   "/es/noticias/real-madrid-inter-champions-femenina-sol": "2026-11-18",
+  "/news/real-madrid-celta-saturday-night-sol": "2026-11-21",
 };
 
 function madridYmd(d: Date): string {
