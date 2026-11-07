@@ -155,6 +155,9 @@ export const EN_PATHS = [
   "/news/before-after-bernabeu-nfl-sol",
   "/news/sunday-football-sol-8-nov",
   "/news/four-bars-fan-weekend-sol",
+  "/4-bars-one-fan-weekend",
+  "/nfl-fans-saturday-oconnells",
+  "/nfl-sunday-8-nov-oconnells",
   "/oktoberfest-madrid-sol",
   "/halloween-madrid-sol",
   "/menu",
@@ -194,6 +197,9 @@ export const ES_PATHS = [
   "/es/noticias/antes-despues-bernabeu-nfl-sol",
   "/es/noticias/futbol-domingo-sol-8-nov",
   "/es/noticias/cuatro-bares-finde-sol",
+  "/es/cuatro-bares-fin-de-semana",
+  "/es/fin-de-semana-nfl-oconnells",
+  "/es/nfl-domingo-8-nov-oconnells",
 ] as const;
 
 export const DE_PATHS = [
@@ -231,6 +237,9 @@ export const HREFLANG_PAIRS: Record<string, string | undefined> = {
   "/news/before-after-bernabeu-nfl-sol": "/es/noticias/antes-despues-bernabeu-nfl-sol",
   "/news/sunday-football-sol-8-nov": "/es/noticias/futbol-domingo-sol-8-nov",
   "/news/four-bars-fan-weekend-sol": "/es/noticias/cuatro-bares-finde-sol",
+  "/4-bars-one-fan-weekend": "/es/cuatro-bares-fin-de-semana",
+  "/nfl-fans-saturday-oconnells": "/es/fin-de-semana-nfl-oconnells",
+  "/nfl-sunday-8-nov-oconnells": "/es/nfl-domingo-8-nov-oconnells",
 };
 
 /**
