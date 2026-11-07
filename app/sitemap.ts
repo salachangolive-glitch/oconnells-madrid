@@ -64,7 +64,7 @@ const EVENT_LAST_DAY: Record<string, string> = {
   "/de/oktoberfest-madrid-sol": "2026-11-15",
   "/news/getafe-brighton-thursday-night-sol": "2026-11-05",
   "/es/noticias/getafe-brighton-jueves-sol": "2026-11-05",
-  "/news/duran-duran-madrid-gig-night-sol": "2026-11-06",
+  "/news/duran-duran-madrid-gig-night-sol": "2026-11-07",
   "/news/atletico-barcelona-sunday-night-sol": "2026-11-08",
   "/news/where-to-watch-nfl-madrid-sol": "2026-11-08",
   "/es/noticias/donde-ver-nfl-madrid-sol": "2026-11-08",

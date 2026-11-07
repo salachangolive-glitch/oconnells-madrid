@@ -34,15 +34,6 @@ export default function WhatsOnPage() {
           </Link>
         </p>
       ) : null}
-      {/* Concerts (DG 25 Oct; times per movistararena.es): build-time date gates, each line gone from the daily rebuild after its date. */}
-      {madridTodayYmd(agendaBuildNow()) <= "2026-11-06" ? (
-        <p className="mb-6 text-sm text-cream-muted sm:text-base">
-          Duran Duran at the Movistar Arena, Friday 6 November, 21:00: meet at O&apos;Connell St, near Sol, before or after the concert.{" "}
-          <Link href="/news/duran-duran-madrid-gig-night-sol" className="text-gold underline">
-            Duran Duran gig night guide
-          </Link>
-        </p>
-      ) : null}
       {/* Where to watch NFL this weekend (ciclo 1, DG 6 Nov): build-time date gate. */}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-08" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">

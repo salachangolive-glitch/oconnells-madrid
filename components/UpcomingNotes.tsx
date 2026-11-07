@@ -4,7 +4,6 @@ import { agendaBuildNow, madridTodayYmd } from "@/lib/fixtures";
 /** Internal links to upcoming match/event notes; each drops after its day. */
 const NOTES: { day: string; en?: [string, string]; es?: [string, string] }[] = [
   { day: "2026-11-05", en: ["/news/getafe-brighton-thursday-night-sol", "Getafe v Brighton · Thu 5 Nov"], es: ["/es/noticias/getafe-brighton-jueves-sol", "Getafe–Brighton · jue 5 nov"] },
-  { day: "2026-11-06", en: ["/news/duran-duran-madrid-gig-night-sol", "Duran Duran gig night · Fri 6 Nov"] },
   { day: "2026-11-08", en: ["/news/where-to-watch-nfl-madrid-sol", "Where to watch NFL · Sun 8 Nov"], es: ["/es/noticias/donde-ver-nfl-madrid-sol", "Dónde ver la NFL · dom 8 nov"] },
   { day: "2026-11-08", en: ["/news/nfl-meeting-point-sol", "NFL meeting point near Sol · Sun 8 Nov"], es: ["/es/noticias/punto-encuentro-nfl-sol", "Punto de encuentro NFL · dom 8 nov"] },
   { day: "2026-11-08", en: ["/news/before-after-bernabeu-nfl-sol", "Before/after Bernabéu NFL · Sun 8 Nov"], es: ["/es/noticias/antes-despues-bernabeu-nfl-sol", "Antes y después NFL Bernabéu · dom 8 nov"] },
