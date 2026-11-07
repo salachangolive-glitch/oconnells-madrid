@@ -1,6 +1,7 @@
 import { UpcomingNotes } from "@/components/UpcomingNotes";
 import Link from "next/link";
 import { FixtureStrip } from "@/components/FixtureStrip";
+import { PremierSunday8NovHighlight } from "@/components/PremierSunday8NovHighlight";
 import { InteriorPhoto } from "@/components/InteriorPhoto";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
@@ -29,6 +30,7 @@ export default function EsSportsPage() {
         position="object-[center_15%]"
       />
       <FixtureStrip locale="es" windowOnly />
+      <PremierSunday8NovHighlight locale="es" />
       <Section title="Qué ponemos">
         <p>
           Ponemos fútbol casi todos los fines de semana y las noches europeas,

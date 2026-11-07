@@ -160,6 +160,9 @@ export const EN_PATHS = [
   "/nfl-sunday-8-nov-oconnells",
   "/this-door-stays-shut-until-1500",
   "/usual-sunday-is-1400",
+  "/liverpool-1500-usual-lock-oconnells",
+  "/chelsea-1500-same-english-hour",
+  "/united-1730-after-the-pair-oconnells",
   "/oktoberfest-madrid-sol",
   "/halloween-madrid-sol",
   "/menu",
@@ -204,6 +207,9 @@ export const ES_PATHS = [
   "/es/nfl-domingo-8-nov-oconnells",
   "/es/esta-puerta-abre-a-las-1500",
   "/es/el-domingo-habitual-es-1400",
+  "/es/liverpool-1500-cerrojo-habitual-oconnells",
+  "/es/chelsea-1500-misma-hora-inglesa",
+  "/es/united-1730-despues-del-par-oconnells",
 ] as const;
 
 export const DE_PATHS = [
@@ -246,6 +252,9 @@ export const HREFLANG_PAIRS: Record<string, string | undefined> = {
   "/nfl-sunday-8-nov-oconnells": "/es/nfl-domingo-8-nov-oconnells",
   "/this-door-stays-shut-until-1500": "/es/esta-puerta-abre-a-las-1500",
   "/usual-sunday-is-1400": "/es/el-domingo-habitual-es-1400",
+  "/liverpool-1500-usual-lock-oconnells": "/es/liverpool-1500-cerrojo-habitual-oconnells",
+  "/chelsea-1500-same-english-hour": "/es/chelsea-1500-misma-hora-inglesa",
+  "/united-1730-after-the-pair-oconnells": "/es/united-1730-despues-del-par-oconnells",
 };
 
 /**
