@@ -45,6 +45,17 @@ export default function SportsPage() {
           American football and basketball when those fixtures are showing — ask
           at the bar for the night&apos;s lineup.
         </p>
+        <p>
+          This weekend:{" "}
+          <Link href="/nfl-sunday-8-nov-oconnells" className="text-gold underline">
+            Sunday 8 Nov NFL at O&apos;Connell&apos;s
+          </Link>
+          {" · "}
+          <Link href="/4-bars-one-fan-weekend" className="text-gold underline">
+            four bars near Sol
+          </Link>
+          . No live NFL on Saturday.
+        </p>
       </Section>
     </PageShell>
   );

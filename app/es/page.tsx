@@ -1,9 +1,11 @@
 import Link from "next/link";
+import { FanWeekendBanner } from "@/components/FanWeekendBanner";
 import { FixtureStrip } from "@/components/FixtureStrip";
 import { HomeCtaBand } from "@/components/HomeCtaBand";
 import { PageShell } from "@/components/PageShell";
 import { Section } from "@/components/Prose";
 import { VenueHero } from "@/components/VenueHero";
+import { PATHS, WEEKEND_HOURS } from "@/lib/fan-weekend";
 import { buildMetadata } from "@/lib/seo";
 import {
   ADDRESS,
@@ -29,6 +31,7 @@ export default function EsHomePage() {
         <>
           <VenueHero variant="hero" />
           <HomeCtaBand locale="es" />
+          <FanWeekendBanner locale="es" />
         </>
       }
     >
@@ -43,6 +46,31 @@ export default function EsHomePage() {
           Pantallas para el fútbol, jueves de chupitos a 1 € y a un paso de Sol.
         </p>
       </header>
+
+      <section className="mb-12">
+        <h2 className="font-serif text-xl font-bold text-cream sm:text-2xl">
+          Este fin de semana junto a Sol
+        </h2>
+        <div className="pub-rule my-3" />
+        <p className="text-sm text-cream-muted sm:text-base">
+          Sábado 7 nov abrimos 15:00–03:30 — hoy no hay NFL en directo. Domingo
+          8 nov abrimos desde las 12:00 para Bengals–Falcons 15:30, NFL desde
+          las 19:00 y Atlético–Barcelona 21:00. Cuatro bares hermanos; Four
+          Corner el domingo desde las 14:00.
+        </p>
+        <p className="mt-3 text-sm text-gold">{WEEKEND_HOURS.sun8NovNoteEs}</p>
+        <p className="mt-3 flex flex-wrap gap-x-4 gap-y-1">
+          <Link href={PATHS.saturdayEs} className="text-sm text-gold hover:text-cream">
+            Sábado →
+          </Link>
+          <Link href={PATHS.sundayEs} className="text-sm text-gold hover:text-cream">
+            Domingo NFL →
+          </Link>
+          <Link href={PATHS.hubEs} className="text-sm text-gold hover:text-cream">
+            Los cuatro bares →
+          </Link>
+        </p>
+      </section>
 
       <FixtureStrip locale="es" />
 

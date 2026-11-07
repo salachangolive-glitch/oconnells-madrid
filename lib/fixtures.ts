@@ -19,6 +19,30 @@ export type Fixture = {
 /** Confirmed fixtures (newest/relevant first). */
 export const FIXTURES: Fixture[] = [
   {
+    id: "2026-11-07-valencia-real-madrid",
+    competition: "LaLiga",
+    homeTeam: "Valencia",
+    awayTeam: "Real Madrid",
+    date: "2026-11-07",
+    kickoffMadrid: "21:00",
+  },
+  {
+    id: "2026-11-08-bengals-falcons",
+    competition: "NFL",
+    homeTeam: "Bengals",
+    awayTeam: "Falcons",
+    date: "2026-11-08",
+    kickoffMadrid: "15:30",
+  },
+  {
+    id: "2026-11-08-atletico-barcelona",
+    competition: "LaLiga",
+    homeTeam: "Atlético Madrid",
+    awayTeam: "Barcelona",
+    date: "2026-11-08",
+    kickoffMadrid: "21:00",
+  },
+  {
     id: "2026-09-15-elche-real-madrid",
     competition: "LaLiga",
     homeTeam: "Elche",

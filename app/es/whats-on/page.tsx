@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
+import { PATHS, WEEKEND_HOURS } from "@/lib/fan-weekend";
 import {
   formatFixtureDay,
   getTonightFixtures,
@@ -29,6 +30,28 @@ export default function EsWhatsOnPage() {
         title={`Esta semana en ${SITE_NAME}`}
         lead="Partidos confirmados cuando los tenemos, y las noches fijas del pub."
       />
+
+      <Section title="7–8 de noviembre · fin de semana" featured>
+        <p>
+          Sábado: no hay NFL en directo. Valencia–Real Madrid 21:00 si lo
+          estamos poniendo. {WEEKEND_HOURS.sun8NovNoteEs} Domingo: Bengals–Falcons
+          15:30, NFL desde las 19:00, Atlético–Barcelona 21:00. Preguntad qué
+          partido hay.
+        </p>
+        <p>
+          <Link href={PATHS.saturdayEs} className="text-gold underline">
+            Sábado
+          </Link>
+          {" · "}
+          <Link href={PATHS.sundayEs} className="text-gold underline">
+            Domingo NFL
+          </Link>
+          {" · "}
+          <Link href={PATHS.hubEs} className="text-gold underline">
+            Cuatro bares
+          </Link>
+        </p>
+      </Section>
 
       <Section title="Hoy">
         {tonight.length > 0 ? (
