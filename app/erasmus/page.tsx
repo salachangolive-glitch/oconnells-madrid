@@ -1,14 +1,13 @@
 import Link from "next/link";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
-import { ThursdayFeature } from "@/components/ThursdayFeature";
 import { buildMetadata } from "@/lib/seo";
-import { SITE_NAME } from "@/lib/venue";
+import { ADDRESS, HOURS, SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
-  title: "Erasmus nights near Puerta del Sol",
+  title: "Erasmus in Madrid: Thursday nights by Sol | O'Connell St",
   description:
-    "Erasmus-friendly Irish pub near Sol: Thursday €1 shots, football screens, easy meetups in Madrid Centro. O'Connell St, Espoz y Mina 7.",
+    "Erasmus students in Madrid: Thursday nights at O'Connell St, an Irish pub next to Puerta del Sol with live sport, beer and pub food. Espoz y Mina 7.",
   path: "/erasmus",
 });
 
@@ -16,28 +15,40 @@ export default function ErasmusPage() {
   return (
     <PageShell locale="en" altLangHref="/es/erasmus">
       <PageHero
-        eyebrow="Erasmus · Internationals"
-        title={`Your night at ${SITE_NAME}`}
-        lead="Meet near Sol, watch the football, stay for Thursday €1 shots — the room that feels like a proper Irish pub in Madrid Centro."
+        eyebrow="Erasmus · Thursday · Sol"
+        title="Erasmus in Madrid: Thursday nights next to Sol"
+        lead="Erasmus students, visitors and people from all over end up at this Irish pub, a short walk from Puerta del Sol. Thursday is the night the international crowd fills the bar."
       />
-      <ThursdayFeature locale="en" />
-      <Section title="Why it works">
+      <Section title="Thursday nights">
         <p>
-          Central enough that everyone finds the door. English-friendly at the
-          bar. Screens on when the big games are on. Put Thursday in the group
-          chat and the rest follows.
+          On Thursdays {SITE_NAME} opens at {HOURS.monThu.open} and stays open
+          until {HOURS.monThu.close}. Live sport is on the big screens when it is
+          confirmed, there is beer at the bar and pub food from the kitchen. It is
+          a normal night at the pub with an international crowd, not a separate
+          party.
         </p>
+      </Section>
+      <Section title="Where we are">
         <p>
+          {ADDRESS.full}, next to Puerta del Sol in Madrid centre: easy to find
+          for a group that has just arrived in the city.
+        </p>
+        <p>Opening hours: {HOURS.summaryEn}.</p>
+        <p>
+          <Link href="/whats-on" className="text-gold underline">
+            What&apos;s On
+          </Link>
+          {" · "}
           <Link href="/sports" className="text-gold underline">
-            Sports
+            Live Sports
+          </Link>
+          {" · "}
+          <Link href="/menu" className="text-gold underline">
+            Food & drinks
           </Link>
           {" · "}
           <Link href="/location" className="text-gold underline">
             Location
-          </Link>
-          {" · "}
-          <Link href="/whats-on" className="text-gold underline">
-            Fixtures
           </Link>
         </p>
       </Section>
