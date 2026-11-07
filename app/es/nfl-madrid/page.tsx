@@ -60,7 +60,7 @@ const SIBLINGS = [
     address: "Calle de la Victoria, 6, 28012 Madrid",
     maps: "https://www.google.com/maps/search/?api=1&query=Calle+de+la+Victoria+6+28012+Madrid",
     web: null as string | null,
-    note: "Four Corner, desde las 14:00 hasta la madrugada. Sin NFL hasta confirmar.",
+    note: "Four Corner, desde las 14:00 hasta la madrugada. NFL en pantallas — pregunta qué partido echan.",
   },
 ] as const;
 

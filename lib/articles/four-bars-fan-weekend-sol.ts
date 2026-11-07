@@ -4,7 +4,7 @@ import type { MatchArticleData } from "@/components/MatchNewsArticle";
  * Four sibling bars, one fan weekend near Sol (additional note, 6 Nov 2026).
  * Owner order: O'Reilly's Pasaje de Matheu 4; Dubliners Espoz y Mina 7;
  * O'Connell's Espoz y Mina 7 (Maps from lib/venue.ts); Four Corner Calle de
- * la Victoria 6 (Sunday from 14:00 until late / madrugada; no NFL claim until confirmed).
+ * la Victoria 6 (Sunday from 14:00 until late / madrugada; NFL on screens, owner 7 Nov).
  * Hub: dublinersmadrid.es/4-bars-one-fan-weekend/
  *   (ES: /es/cuatro-bares-fin-de-semana/).
  * Banned in copy: oficial/official, best/mejor/beste, proyector/projector/Beamer.
@@ -36,7 +36,7 @@ export const FOUR_BARS_FAN_WEEKEND_SOL: MatchArticleData = {
           title: "One meeting point, four rooms",
           paras: [
             "The idea is one fan weekend around Puerta del Sol, not four isolated campaigns. O'Reilly's Restaurant Bar (Pasaje de Matheu 4), Dubliners (Calle de Espoz y Mina 7), O'Connell's (Calle de Espoz y Mina 7) and Four Corner (Calle de la Victoria 6) sit a few minutes from the square. Each listing above has its street address and a Google Maps link.",
-            "Four Corner is the fourth sibling meeting-point bar for this weekend. Sunday from 14:00 until late; this page does not say Four Corner shows NFL until that is confirmed.",
+            "Four Corner is the fourth sibling meeting-point bar for this weekend. Sunday from 14:00 until late, with NFL on the screens — ask which game is on.",
           ],
         },
         {
@@ -73,7 +73,7 @@ export const FOUR_BARS_FAN_WEEKEND_SOL: MatchArticleData = {
           title: "Un punto de encuentro, cuatro salas",
           paras: [
             "La idea es un finde de aficionados alrededor de la Puerta del Sol, no cuatro campañas sueltas. O'Reilly's Restaurant Bar (Pasaje de Matheu 4), Dubliners (Calle de Espoz y Mina 7), O'Connell's (Calle de Espoz y Mina 7) y Four Corner (Calle de la Victoria 6) quedan a pocos minutos de la plaza. Cada ficha de arriba tiene su dirección y un enlace a Google Maps.",
-            "Four Corner es el cuarto bar hermano, punto de encuentro, de este finde. Four Corner, desde las 14:00 hasta la madrugada. Sin NFL hasta confirmar.",
+            "Four Corner es el cuarto bar hermano, punto de encuentro, de este finde. Four Corner, desde las 14:00 hasta la madrugada, con NFL en pantallas — pregunta qué partido echan.",
           ],
         },
         {

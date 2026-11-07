@@ -3,7 +3,7 @@ import { Section } from "@/components/Prose";
 
 /**
  * Owner order (6 Nov 15:48): all four sibling bars as the main idea.
- * Four Corner: meeting point; Sunday from 14:00 until late (madrugada). No NFL claim until confirmed.
+ * Four Corner: meeting point; Sunday from 14:00 until late (madrugada). NFL on screens (owner 7 Nov).
  * Do not reuse this to rewrite /nfl-madrid (that page already lists Four Corner).
  */
 const BARS = [
@@ -56,8 +56,8 @@ export function FourBarsNearSol({ locale }: { locale: "en" | "es" }) {
             {"meetingOnly" in b && b.meetingOnly ? (
               <p className="text-sm text-cream-muted">
                 {es
-                  ? "Punto de encuentro hermano junto a Sol. Four Corner, desde las 14:00 hasta la madrugada. Sin NFL en pantallas hasta confirmar."
-                  : "Sibling meeting point near Sol. Sunday open from 14:00 until late, and no NFL on the screens until confirmed."}
+                  ? "Punto de encuentro hermano junto a Sol. Four Corner, desde las 14:00 hasta la madrugada. NFL en pantallas — pregunta qué partido echan."
+                  : "Sibling meeting point near Sol. Sunday from 14:00 until late, NFL on the screens — ask which game is on."}
               </p>
             ) : null}
             <p className="text-sm">

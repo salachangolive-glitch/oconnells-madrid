@@ -59,7 +59,7 @@ const SIBLINGS = [
     address: "Calle de la Victoria, 6, 28012 Madrid",
     maps: "https://www.google.com/maps/search/?api=1&query=Calle+de+la+Victoria+6+28012+Madrid",
     web: null as string | null,
-    note: "Sunday from 14:00 until late. No NFL until confirmed.",
+    note: "Sunday from 14:00 until late. NFL on the screens — ask which game is on.",
   },
 ] as const;
 
