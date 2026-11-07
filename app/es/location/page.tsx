@@ -40,6 +40,14 @@ export default function EsLocationPage() {
           ))}
         </ul>
         <p>
+          Este fin de semana: sábado 7 nov 15:00–03:30. Excepción domingo 8 nov:
+          abrimos desde las 12:00 (los domingos habituales, desde las 14:00).{" "}
+          <Link href="/es/cuatro-bares-fin-de-semana" className="text-cream underline">
+            Cuatro bares, un fin de semana
+          </Link>
+          .
+        </p>
+        <p>
           <a
             href={MAPS_URL}
             target="_blank"

@@ -1,9 +1,11 @@
 import Link from "next/link";
+import { FanWeekendBanner } from "@/components/FanWeekendBanner";
 import { FixtureStrip } from "@/components/FixtureStrip";
 import { HomeCtaBand } from "@/components/HomeCtaBand";
 import { PageShell } from "@/components/PageShell";
 import { Section } from "@/components/Prose";
 import { VenueHero } from "@/components/VenueHero";
+import { PATHS, WEEKEND_HOURS } from "@/lib/fan-weekend";
 import { buildMetadata } from "@/lib/seo";
 import {
   ADDRESS,
@@ -28,6 +30,7 @@ export default function HomePage() {
         <>
           <VenueHero variant="hero" />
           <HomeCtaBand locale="en" />
+          <FanWeekendBanner locale="en" />
         </>
       }
     >
@@ -43,6 +46,31 @@ export default function HomePage() {
           Puerta del Sol.
         </p>
       </header>
+
+      <section className="mb-12">
+        <h2 className="font-serif text-xl font-bold text-cream sm:text-2xl">
+          This weekend near Sol
+        </h2>
+        <div className="pub-rule my-3" />
+        <p className="text-sm text-cream-muted sm:text-base">
+          Saturday 7 Nov we open 15:00–03:30 — no live NFL today. Sunday 8 Nov
+          we open from 12:00 for Bengals vs Falcons 15:30, NFL from 19:00, and
+          Atlético vs Barcelona 21:00. Four sister bars; Four Corner Sunday
+          from 14:00 until late.
+        </p>
+        <p className="mt-3 text-sm text-gold">{WEEKEND_HOURS.sun8NovNoteEn}</p>
+        <p className="mt-3 flex flex-wrap gap-x-4 gap-y-1">
+          <Link href={PATHS.saturdayEn} className="text-sm text-gold hover:text-cream">
+            Saturday →
+          </Link>
+          <Link href={PATHS.sundayEn} className="text-sm text-gold hover:text-cream">
+            Sunday NFL →
+          </Link>
+          <Link href={PATHS.hubEn} className="text-sm text-gold hover:text-cream">
+            The four bars →
+          </Link>
+        </p>
+      </section>
 
       <FixtureStrip locale="en" />
 

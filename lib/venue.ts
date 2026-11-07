@@ -85,6 +85,9 @@ export const EN_PATHS = [
   "/location",
   "/whats-on",
   "/contact",
+  "/4-bars-one-fan-weekend",
+  "/nfl-fans-saturday-oconnells",
+  "/nfl-sunday-8-nov-oconnells",
 ] as const;
 
 export const ES_PATHS = [
@@ -99,6 +102,9 @@ export const ES_PATHS = [
   "/es/location",
   "/es/whats-on",
   "/es/contact",
+  "/es/cuatro-bares-fin-de-semana",
+  "/es/fin-de-semana-nfl-oconnells",
+  "/es/nfl-domingo-8-nov-oconnells",
 ] as const;
 
 export const ALL_CONTENT_PATHS = [...EN_PATHS, ...ES_PATHS] as const;
@@ -116,4 +122,7 @@ export const HREFLANG_PAIRS: Record<string, string | undefined> = {
   "/location": "/es/location",
   "/whats-on": "/es/whats-on",
   "/contact": "/es/contact",
+  "/4-bars-one-fan-weekend": "/es/cuatro-bares-fin-de-semana",
+  "/nfl-fans-saturday-oconnells": "/es/fin-de-semana-nfl-oconnells",
+  "/nfl-sunday-8-nov-oconnells": "/es/nfl-domingo-8-nov-oconnells",
 };

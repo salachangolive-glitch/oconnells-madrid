@@ -43,6 +43,14 @@ export default function LocationPage() {
           ))}
         </ul>
         <p>
+          This weekend: Saturday 7 Nov 15:00–03:30. Exception Sunday 8 Nov: open
+          from 12:00 (usual Sundays from 14:00).{" "}
+          <Link href="/4-bars-one-fan-weekend" className="text-cream underline">
+            Four bars, one fan weekend
+          </Link>
+          .
+        </p>
+        <p>
           <a
             href={MAPS_URL}
             target="_blank"

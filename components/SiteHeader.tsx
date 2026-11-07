@@ -5,6 +5,7 @@ type Locale = "en" | "es";
 
 const nav = {
   en: [
+    { href: "/4-bars-one-fan-weekend", label: "4 Bars" },
     { href: "/sports", label: "Sports" },
     { href: "/whats-on", label: "Fixtures" },
     { href: "/thursday-1-euro-shots", label: "Thursday €1" },
@@ -15,6 +16,7 @@ const nav = {
     { href: "/contact", label: "Contact" },
   ],
   es: [
+    { href: "/es/cuatro-bares-fin-de-semana", label: "4 Bares" },
     { href: "/es/sports", label: "Deportes" },
     { href: "/es/whats-on", label: "Partidos" },
     { href: "/es/thursday-1-euro-shots", label: "Jueves 1 €" },

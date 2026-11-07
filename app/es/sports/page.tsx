@@ -46,6 +46,17 @@ export default function EsSportsPage() {
           Fútbol americano y baloncesto cuando tocan — pregunta en barra por la
           cartelería de la noche.
         </p>
+        <p>
+          Este fin de semana:{" "}
+          <Link href="/es/nfl-domingo-8-nov-oconnells" className="text-gold underline">
+            domingo 8 nov NFL en O&apos;Connell&apos;s
+          </Link>
+          {" · "}
+          <Link href="/es/cuatro-bares-fin-de-semana" className="text-gold underline">
+            cuatro bares junto a Sol
+          </Link>
+          . El sábado no hay NFL en directo.
+        </p>
       </Section>
     </PageShell>
   );

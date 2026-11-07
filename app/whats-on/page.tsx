@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
+import { PATHS, WEEKEND_HOURS } from "@/lib/fan-weekend";
 import {
   formatFixtureDay,
   getTonightFixtures,
@@ -28,6 +29,28 @@ export default function WhatsOnPage() {
         title={`This week at ${SITE_NAME}`}
         lead="Confirmed matches when we have them, plus the weekly nights that keep the pub busy."
       />
+
+      <Section title="7–8 November · fan weekend" featured>
+        <p>
+          Saturday: no live NFL. Valencia vs Real Madrid 21:00 when we are
+          showing it. {WEEKEND_HOURS.sun8NovNoteEn} Sunday screens: Bengals vs
+          Falcons 15:30, NFL from 19:00, Atlético vs Barcelona 21:00. Ask which
+          game is on.
+        </p>
+        <p>
+          <Link href={PATHS.saturdayEn} className="text-gold underline">
+            Saturday
+          </Link>
+          {" · "}
+          <Link href={PATHS.sundayEn} className="text-gold underline">
+            Sunday NFL
+          </Link>
+          {" · "}
+          <Link href={PATHS.hubEn} className="text-gold underline">
+            Four bars
+          </Link>
+        </p>
+      </Section>
 
       <Section title="Tonight">
         {tonight.length > 0 ? (

@@ -27,6 +27,14 @@ export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
           <ul className="space-y-1">
             <li>
               <Link
+                href={isEs ? "/es/cuatro-bares-fin-de-semana" : "/4-bars-one-fan-weekend"}
+                className="hover:text-gold"
+              >
+                {isEs ? "Cuatro bares" : "4 Bars"}
+              </Link>
+            </li>
+            <li>
+              <Link
                 href={isEs ? "/es/sports" : "/sports"}
                 className="hover:text-gold"
               >
