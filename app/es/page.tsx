@@ -106,13 +106,19 @@ export default function EsHomePage() {
 
       <FixtureStrip locale="es" windowOnly />
       <p className="mb-12 max-w-2xl text-sm text-cream-muted sm:text-base">
-        Más fútbol:{" "}
+        Este pub irlandés en Sol es también un pub de Premier League en Madrid:
+        fútbol inglés en pantallas cuando está confirmado, en la misma sala que
+        la NFL. Más:{" "}
         <Link href="/es/premier-league" className="text-gold underline">
           Premier League
         </Link>
         ,{" "}
         <Link href="/es/champions-league" className="text-gold underline">
           noches de Champions
+        </Link>
+        ,{" "}
+        <Link href="/es/nfl-madrid" className="text-gold underline">
+          ver la NFL en Madrid
         </Link>{" "}
         y nuestro{" "}
         <Link href="/es/sports-bar-sol" className="text-gold underline">

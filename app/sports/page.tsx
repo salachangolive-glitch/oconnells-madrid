@@ -62,6 +62,19 @@ export default function SportsPage() {
           .
         </p>
       </Section>
+      <Section title="Premier League pub Madrid">
+        <p>
+          English fans looking for a Premier League pub in Madrid can sit this
+          Irish pub near Puerta del Sol: Saturday and Sunday English kickoffs go
+          on when the screening is confirmed. Sunday 8 Nov the 15:00 cluster and
+          United at 17:30 sit alongside NFL afternoon and evening — coordinate,
+          do not substitute. Ask which game is on. Detail on{" "}
+          <Link href="/premier-league" className="text-gold underline">
+            Premier League
+          </Link>
+          .
+        </p>
+      </Section>
       <InteriorPhoto
         src="/images/interior/sports-corridor.webp"
         alt="Interior with F1 and sports on the TVs at O'Connell St"

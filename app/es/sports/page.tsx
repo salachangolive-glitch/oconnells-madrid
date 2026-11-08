@@ -63,6 +63,19 @@ export default function EsSportsPage() {
           .
         </p>
       </Section>
+      <Section title="Pub de Premier League en Madrid">
+        <p>
+          Si buscas un pub de Premier League en Madrid, este pub irlandés junto
+          a Puerta del Sol pone los saques ingleses de sábado y domingo cuando
+          la emisión está confirmada. El domingo 8 nov el bloque de las 15:00 y
+          United a las 17:30 van junto a la NFL de tarde y noche — coordinad, no
+          sustituyáis. Pregunta qué partido echan. Detalle en{" "}
+          <Link href="/es/premier-league" className="text-gold underline">
+            Premier League
+          </Link>
+          .
+        </p>
+      </Section>
       <InteriorPhoto
         src="/images/interior/sports-corridor.webp"
         alt="Interior con F1 y deportes en las televisiones de O'Connell St"

@@ -17,6 +17,10 @@ export const metadata = buildMetadata({
 
 const faq = [
   {
+    q: "¿Dónde ver la NFL en Madrid?",
+    a: "En este bar NFL Madrid: O'Connell St, Calle de Espoz y Mina 7, a un paso de Puerta del Sol. Ver la NFL en Madrid en pantallas cuando lo emitimos — domingo tarde (Bengals–Falcons 15:30 si no estás en el estadio) y RedZone desde las 19:00. Pregunta qué partido echan. CÓMO LLEGAR es el pin Maps de esta ficha.",
+  },
+  {
     q: "¿Ponéis fútbol americano?",
     a: "Sí, cuando lo emitimos — el domingo 8 de noviembre, jornada desde mediodía (abrimos desde las 12:00). En O'Connell St el fútbol europeo va primero, y cada partido confirmado aparece en la Agenda con la hora de Madrid.",
   },
@@ -89,12 +93,17 @@ export default function NflMadridPageEs() {
           abierto desde las 14:00, con pantallas de deporte.
         </p>
         <p>
-          El fútbol europeo es lo de cada día; el fútbol americano, el
-          baloncesto, el rugby y la Fórmula 1 se ponen cuando los emitimos. Los
-          partidos confirmados de los próximos 7 días, en hora de Madrid, están
-          en la{" "}
+          El fútbol europeo es lo de cada día — este pub irlandés es también un
+          pub de Premier League en Madrid, y esos saques van junto a la NFL, no
+          en su lugar. El fútbol americano, el baloncesto, el rugby y la Fórmula
+          1 se ponen cuando los emitimos. Los partidos confirmados de los
+          próximos 7 días, en hora de Madrid, están en la{" "}
           <Link href="/es/whats-on" data-event="whats_on" className="text-cream underline">
             Agenda
+          </Link>
+          {" · "}
+          <Link href="/es/premier-league" className="text-cream underline">
+            Premier League
           </Link>
           .
         </p>

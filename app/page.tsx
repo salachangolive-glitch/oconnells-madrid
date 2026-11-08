@@ -103,15 +103,21 @@ export default function HomePage() {
       {/* Live Sports / What's On */}
       <FixtureStrip locale="en" windowOnly />
       <p className="mb-12 max-w-2xl text-sm text-cream-muted sm:text-base">
-        More football:{" "}
+        This Irish pub at Puerta del Sol is also a Premier League pub in Madrid:
+        English football on the screens when confirmed, in the same room as NFL.
+        More:{" "}
         <Link href="/premier-league" className="text-gold underline">
           Premier League
         </Link>
         ,{" "}
         <Link href="/champions-league" className="text-gold underline">
           Champions League nights
-        </Link>{" "}
-        and our{" "}
+        </Link>
+        ,{" "}
+        <Link href="/nfl-madrid" className="text-gold underline">
+          watch NFL Madrid
+        </Link>
+        , and our{" "}
         <Link href="/sports-bar-sol" className="text-gold underline">
           sports bar in Sol
         </Link>{" "}

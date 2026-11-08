@@ -16,6 +16,10 @@ export const metadata = buildMetadata({
 
 const faq = [
   {
+    q: "Where can I watch NFL Madrid?",
+    a: "At this NFL bar Madrid: O'Connell St, Calle de Espoz y Mina 7, a short walk from Puerta del Sol. Watch NFL Madrid on the screens when we are showing it — Sunday afternoon (Bengals at Falcons 15:30 if you are not at the stadium) then RedZone from 19:00. Ask which game is on. GET DIRECTIONS is the Maps pin for this listing.",
+  },
+  {
     q: "Do you show American football?",
     a: "Yes, when we are showing it — including Sunday 8 November, a full day from midday (open from 12:00). European football comes first at O'Connell St, and every confirmed game is listed on What's On with the Madrid time.",
   },
@@ -88,11 +92,17 @@ export default function NflMadridPage() {
           with sports screens.
         </p>
         <p>
-          European football is our everyday plan; American football, basketball,
-          rugby and Formula 1 go on when we are showing them. Confirmed games
-          for the next 7 days, with Madrid times, are on{" "}
+          European football is our everyday plan — this Irish pub is also a
+          Premier League pub in Madrid, and those kickoffs sit alongside NFL,
+          not instead of it. American football, basketball, rugby and Formula 1
+          go on when we are showing them. Confirmed games for the next 7 days,
+          with Madrid times, are on{" "}
           <Link href="/whats-on" data-event="whats_on" className="text-cream underline">
             What&apos;s On
+          </Link>
+          {" · "}
+          <Link href="/premier-league" className="text-cream underline">
+            Premier League
           </Link>
           .
         </p>
