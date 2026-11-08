@@ -2,6 +2,7 @@ import Link from "next/link";
 import { PostMatchBanner } from "@/components/PostMatchBanner";
 import { FixtureStrip } from "@/components/FixtureStrip";
 import { NflSunday8Nov } from "@/components/NflSunday8Nov";
+import { AfterGameSundayHighlight } from "@/components/AfterGameSundayHighlight";
 import { PremierSunday8NovHighlight } from "@/components/PremierSunday8NovHighlight";
 import { HomeCtaBand } from "@/components/HomeCtaBand";
 import { InteriorGallery, InteriorPhoto } from "@/components/InteriorPhoto";
@@ -59,6 +60,7 @@ export default function HomePage() {
       {/* NFL Sunday 8 Nov: third home block (owner via DG 30 Oct), gone from 9 Nov */}
       <NflSunday8Nov locale="en" today={madridTodayYmd(agendaBuildNow())} />
       <PremierSunday8NovHighlight locale="en" />
+      <AfterGameSundayHighlight locale="en" />
 
       {/* Presentación — parallel to ES; visitors stay in their own section */}
       <section className="mb-12 max-w-2xl">
