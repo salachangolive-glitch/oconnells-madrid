@@ -4,12 +4,13 @@ import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
 import { buildMetadata } from "@/lib/seo";
 import { agendaBuildNow, madridTodayYmd } from "@/lib/fixtures";
-import { ADDRESS, HOURS, MAPS_URL } from "@/lib/venue";
+import { BAR_MAPS } from "@/lib/after-game-sunday-8-nov";
+import { ADDRESS, HOURS } from "@/lib/venue";
 
 export const metadata = buildMetadata({
-  title: "Ver la NFL en Madrid cerca de Sol | O'Connell St",
+  title: "Bar NFL Madrid: ver la NFL cerca de Sol | O'Connell St",
   description:
-    "Sports bar en Sol este finde NFL: Bengals–Falcons Madrid y pantallas el domingo en O'Connell's, Espoz y Mina 7. Pub irlandés independiente — pregunta qué partido echan.",
+    "Bar NFL Madrid y pub irlandés junto a Puerta del Sol: ver la NFL en Madrid en O'Connell's, Espoz y Mina 7. Pregunta qué partido echan.",
   path: "/es/nfl-madrid",
   locale: "es",
 });
@@ -37,30 +38,30 @@ const SIBLINGS = [
   {
     name: "O'Connell St",
     address: "Calle de Espoz y Mina, 7, 28012 Madrid",
-    maps: MAPS_URL,
+    maps: BAR_MAPS.oconnells,
     web: "https://oconnellsmadrid.es/",
-    note: "Este pub — irlandés, deporte en directo, punto de encuentro internacional.",
+    note: "Este bar NFL Madrid — pub irlandés y bar deportivo junto a Puerta del Sol.",
   },
   {
     name: "Dubliners",
     address: "Calle de Espoz y Mina, 7, 28012 Madrid",
-    maps: "https://www.google.com/maps/search/?api=1&query=Dubliners+Calle+de+Espoz+y+Mina+7+28012+Madrid",
+    maps: BAR_MAPS.dubliners,
     web: "https://dublinersmadrid.es/",
     note: "Pub irlandés en la misma calle / edificio que O'Connell St.",
   },
   {
     name: "O'Reilly's Restaurant Bar",
     address: "Pasaje de Matheu, 4, 28012 Madrid",
-    maps: "https://www.google.com/maps/search/?api=1&query=O%27Reilly%27s+Restaurant+Bar+Pasaje+de+Matheu+4+28012+Madrid",
+    maps: BAR_MAPS.oreillys,
     web: "https://oreillys-restaurant-bar.localo.site/",
     note: "Restaurante-bar a un paso de Sol.",
   },
   {
     name: "Four Corner",
     address: "Calle de la Victoria, 6, 28012 Madrid",
-    maps: "https://www.google.com/maps/search/?api=1&query=Calle+de+la+Victoria+6+28012+Madrid",
+    maps: BAR_MAPS.fourCorner,
     web: null as string | null,
-    note: "Four Corner, desde las 14:00 hasta la madrugada. NFL en pantallas — pregunta qué partido echan.",
+    note: "Abierto desde las 14:00 hasta la madrugada · pantallas de deporte. Pregunta qué partido echan.",
   },
 ] as const;
 
@@ -69,9 +70,9 @@ export default function NflMadridPageEs() {
   return (
     <PageShell locale="es" altLangHref="/nfl-madrid">
       <PageHero
-        eyebrow="Sports bar Sol · Pub irlandés · Deporte en directo"
-        title="Ver la NFL en Madrid en un sports bar junto a Sol"
-        lead="El domingo 8 de noviembre abrimos desde las 12:00: jornada desde mediodía, no solo por la noche. Ver la NFL cerca de Sol en pantallas, con Bengals–Falcons a las 15:30 y fútbol el domingo. Pub irlandés independiente; pregunta qué partido echan."
+        eyebrow="Bar NFL Madrid · pub irlandés · bar deportivo Sol"
+        title="Ver la NFL en Madrid en este pub irlandés junto a Sol"
+        lead="El domingo 8 de noviembre abrimos desde las 12:00: jornada desde mediodía, no solo por la noche. Ver la NFL en Madrid cerca de Puerta del Sol en pantallas, con Bengals–Falcons a las 15:30 y fútbol el domingo. Pub irlandés y bar deportivo independiente; pregunta qué partido echan."
       />
       <InteriorPhoto
         src="/images/interior/sports-aisle.webp"
@@ -81,10 +82,11 @@ export default function NflMadridPageEs() {
       <Section title="NFL bar Madrid">
         <p>
           O&apos;Connell St está en {ADDRESS.street}, a un paso de la Puerta del
-          Sol. Este NFL bar Madrid es un pub irlandés con deporte en directo y
-          ambiente internacional — un punto de encuentro para ver la NFL cerca
-          de Sol antes del partido, después y durante toda la jornada del
-          domingo.
+          Sol. Este bar NFL Madrid es un pub irlandés y bar deportivo con
+          deporte en directo y ambiente internacional — un punto de encuentro
+          para ver la NFL en Madrid cerca de Sol antes del partido, después y
+          durante toda la jornada del domingo. Four Corner en Victoria 6 está
+          abierto desde las 14:00, con pantallas de deporte.
         </p>
         <p>
           El fútbol europeo es lo de cada día; el fútbol americano, el
@@ -159,12 +161,12 @@ export default function NflMadridPageEs() {
               en la barra qué hay puesto.
             </p>
           </Section>
-          <Section title="Sports bar Sol">
+          <Section title="Bar deportivo Sol Madrid">
             <p>
-              Este sports bar Sol pone el fútbol del domingo y el partido NFL de
-              Madrid en las pantallas de Espoz y Mina 7. Pub irlandés
-              independiente — si buscas un partido concreto, pregunta cuál
-              echan.
+              Este bar deportivo Sol Madrid pone el fútbol del domingo y el
+              partido NFL de Madrid en las pantallas de Espoz y Mina 7. Pub
+              irlandés independiente — si buscas un partido concreto, pregunta
+              cuál echan.
             </p>
           </Section>
           <Section title="Atlético Barcelona bar Sol (dom 21:00)">
@@ -263,9 +265,10 @@ export default function NflMadridPageEs() {
                     href={s.maps}
                     target="_blank"
                     rel="noopener noreferrer"
+                    data-event="directions"
                     className="text-cream underline"
                   >
-                    Maps
+                    CÓMO LLEGAR
                   </a>
                   {s.web ? (
                     <>
@@ -293,7 +296,7 @@ export default function NflMadridPageEs() {
               rel="noopener noreferrer"
               className="text-gold underline"
             >
-              cuatro bares, un fin de semana
+              MEET US NEAR SOL
             </a>{" "}
             — direcciones, mapas y cómo quedan los locales alrededor de Sol.
           </p>
@@ -308,13 +311,22 @@ export default function NflMadridPageEs() {
         </p>
         <p>
           <a
-            href={MAPS_URL}
+            href={BAR_MAPS.oconnells}
             target="_blank"
             rel="noopener noreferrer"
             data-event="directions"
             className="text-cream underline"
           >
-            Cómo llegar desde la Puerta del Sol
+            CÓMO LLEGAR
+          </a>
+          {" · "}
+          <a
+            href={BAR_MAPS.oconnells}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-cream underline"
+          >
+            FIND US
           </a>
           {" · "}
           <Link href="/es/location" className="text-cream underline">

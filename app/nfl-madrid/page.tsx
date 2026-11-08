@@ -4,12 +4,13 @@ import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
 import { buildMetadata } from "@/lib/seo";
 import { agendaBuildNow, madridTodayYmd } from "@/lib/fixtures";
-import { ADDRESS, HOURS, MAPS_URL } from "@/lib/venue";
+import { BAR_MAPS } from "@/lib/after-game-sunday-8-nov";
+import { ADDRESS, HOURS } from "@/lib/venue";
 
 export const metadata = buildMetadata({
-  title: "Watch NFL Madrid near Sol | O'Connell St Irish Pub",
+  title: "NFL bar Madrid: watch NFL near Sol | O'Connell St",
   description:
-    "Sports bar Sol for NFL weekend: Bengals–Falcons Madrid and Sunday football screens at O'Connell's, Espoz y Mina 7. Independent Irish pub — ask which game is on.",
+    "NFL bar Madrid and Irish pub by Puerta del Sol: watch NFL Madrid at O'Connell's, Espoz y Mina 7. Sports bar Sol Madrid. Ask which game is on.",
   path: "/nfl-madrid",
 });
 
@@ -36,30 +37,30 @@ const SIBLINGS = [
   {
     name: "O'Connell St",
     address: "Calle de Espoz y Mina, 7, 28012 Madrid",
-    maps: MAPS_URL,
+    maps: BAR_MAPS.oconnells,
     web: "https://oconnellsmadrid.es/",
-    note: "This pub — Irish pub, live sport, international meeting point.",
+    note: "This NFL bar Madrid — Irish pub and sports bar by Puerta del Sol.",
   },
   {
     name: "Dubliners",
     address: "Calle de Espoz y Mina, 7, 28012 Madrid",
-    maps: "https://www.google.com/maps/search/?api=1&query=Dubliners+Calle+de+Espoz+y+Mina+7+28012+Madrid",
+    maps: BAR_MAPS.dubliners,
     web: "https://dublinersmadrid.es/",
     note: "Irish pub in the same street / building as O'Connell St.",
   },
   {
     name: "O'Reilly's Restaurant Bar",
     address: "Pasaje de Matheu, 4, 28012 Madrid",
-    maps: "https://www.google.com/maps/search/?api=1&query=O%27Reilly%27s+Restaurant+Bar+Pasaje+de+Matheu+4+28012+Madrid",
+    maps: BAR_MAPS.oreillys,
     web: "https://oreillys-restaurant-bar.localo.site/",
     note: "Restaurant-bar a short walk from Sol.",
   },
   {
     name: "Four Corner",
     address: "Calle de la Victoria, 6, 28012 Madrid",
-    maps: "https://www.google.com/maps/search/?api=1&query=Calle+de+la+Victoria+6+28012+Madrid",
+    maps: BAR_MAPS.fourCorner,
     web: null as string | null,
-    note: "Sunday from 14:00 until late. NFL on the screens — ask which game is on.",
+    note: "Open from 14:00 until late · sports screens. Ask which game is on.",
   },
 ] as const;
 
@@ -68,9 +69,9 @@ export default function NflMadridPage() {
   return (
     <PageShell locale="en" altLangHref="/es/nfl-madrid">
       <PageHero
-        eyebrow="Sports bar Sol · Irish pub · Live sport"
-        title="Watch NFL in Madrid at a sports bar near Sol"
-        lead="Sunday 8 November we open from 12:00 for a full day from midday — not just the evening. Watch NFL Madrid near Sol on the screens, with Bengals at Falcons at 15:30 and Sunday football after. Independent Irish pub; ask which game is on."
+        eyebrow="NFL bar Madrid · Irish pub · sports bar Sol"
+        title="Watch NFL Madrid at this Irish pub near Sol"
+        lead="Sunday 8 November we open from 12:00 for a full day from midday — not just the evening. Watch NFL Madrid near Puerta del Sol on the screens, with Bengals at Falcons at 15:30 and Sunday football after. Independent Irish pub and sports bar; ask which game is on."
       />
       <InteriorPhoto
         src="/images/interior/sports-aisle.webp"
@@ -80,10 +81,11 @@ export default function NflMadridPage() {
       <Section title="NFL bar Madrid">
         <p>
           O&apos;Connell St sits on {ADDRESS.street}, a short walk from Puerta
-          del Sol. This NFL bar Madrid is an Irish pub with live sport and an
-          international crowd — a meeting point for fans who want to watch NFL
-          Madrid near Sol before the game, after the game, and through Sunday
-          football.
+          del Sol. This NFL bar Madrid is an Irish pub and sports bar with live
+          sport and an international crowd — a meeting point for fans who want
+          to watch NFL Madrid near Sol before the game, after the game, and
+          through Sunday football. Four Corner on Victoria 6 is open from 14:00,
+          with sports screens.
         </p>
         <p>
           European football is our everyday plan; American football, basketball,
@@ -154,11 +156,11 @@ export default function NflMadridPage() {
               which games are up.
             </p>
           </Section>
-          <Section title="Sports bar Sol">
+          <Section title="Sports bar Sol Madrid">
             <p>
-              This sports bar Sol puts Sunday football and the NFL Madrid Game
-              on the screens at Espoz y Mina 7. Independent Irish pub — if you
-              are looking for a particular game, ask which one is on.
+              This sports bar Sol Madrid puts Sunday football and the NFL Madrid
+              Game on the screens at Espoz y Mina 7. Independent Irish pub — if
+              you are looking for a particular game, ask which one is on.
             </p>
           </Section>
           <Section title="Atlético Barcelona bar Sol (Sun 21:00)">
@@ -252,9 +254,10 @@ export default function NflMadridPage() {
                     href={s.maps}
                     target="_blank"
                     rel="noopener noreferrer"
+                    data-event="directions"
                     className="text-cream underline"
                   >
-                    Maps
+                    GET DIRECTIONS
                   </a>
                   {s.web ? (
                     <>
@@ -281,7 +284,7 @@ export default function NflMadridPage() {
               rel="noopener noreferrer"
               className="text-gold underline"
             >
-              4 bars, one fan weekend
+              MEET US NEAR SOL
             </a>{" "}
             — addresses, maps and how the venues sit around Sol.
           </p>
@@ -296,13 +299,22 @@ export default function NflMadridPage() {
         </p>
         <p>
           <a
-            href={MAPS_URL}
+            href={BAR_MAPS.oconnells}
             target="_blank"
             rel="noopener noreferrer"
             data-event="directions"
             className="text-cream underline"
           >
-            How to get here from Puerta del Sol
+            GET DIRECTIONS
+          </a>
+          {" · "}
+          <a
+            href={BAR_MAPS.oconnells}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-cream underline"
+          >
+            FIND US
           </a>
           {" · "}
           <Link href="/location" className="text-cream underline">

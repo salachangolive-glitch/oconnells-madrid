@@ -10,6 +10,7 @@ import { PageShell } from "@/components/PageShell";
 import { Section } from "@/components/Prose";
 import { ThursdayFeature } from "@/components/ThursdayFeature";
 import { TonightMeetupCta } from "@/components/TonightMeetupCta";
+import { LocaloFindUs } from "@/components/LocaloFindUs";
 import { VenueHero } from "@/components/VenueHero";
 import { agendaBuildNow, madridTodayYmd } from "@/lib/fixtures";
 import { buildMetadata } from "@/lib/seo";
@@ -49,7 +50,7 @@ export default function EsHomePage() {
           </span>
         </h1>
         <p className="mt-2 text-sm tracking-wide text-cream-muted sm:text-base">
-          Deportes en directo · Gente de muchos países
+          Pub irlandés · bar deportivo · deporte en directo
         </p>
         <div className="mx-auto mt-4 inline-block rounded border border-gold/30 px-4 py-2 text-sm text-cream sm:text-base">
           <p className="font-semibold text-gold">Abierto todos los días</p>
@@ -69,27 +70,27 @@ export default function EsHomePage() {
 
       <section className="mb-12 max-w-2xl">
         <p className="text-sm leading-relaxed text-cream-muted sm:text-base">
-          O&apos;Connell St es un pub irlandés junto a Puerta del Sol, con
-          deportes en directo, gente de muchos países y chupitos a 1 € los
-          jueves.
-        </p>
-        <p className="mt-3">
-          <Link href="/es/nfl-madrid" className="text-sm text-gold hover:text-cream">
-            NFL en Madrid
-          </Link>
+          O&apos;Connell St es un pub irlandés y bar deportivo junto a Puerta
+          del Sol, con deportes en directo, gente de muchos países y chupitos a
+          1 € los jueves. El domingo, esta es la puerta del bar NFL Madrid en
+          Espoz y Mina 7 —{" "}
+          <Link href="/es/nfl-madrid" className="text-gold underline">
+            ver la NFL en Madrid
+          </Link>{" "}
+          en pantallas, y pregunta qué partido echan.
         </p>
       </section>
 
       {/* Pub cerca de la Puerta del Sol — relevancia landing Ads (19 oct) */}
       <section className="mb-12 max-w-2xl">
         <h2 className="font-serif text-xl font-bold text-cream">
-          Pub cerca de la Puerta del Sol
+          Pub irlandés y bar deportivo junto a Puerta del Sol
         </h2>
         <div className="pub-rule my-3" />
         <p className="text-sm text-cream-muted sm:text-base">
           O&apos;Connell St es un pub irlandés y bar deportivo en la{" "}
           {ADDRESS.street}, junto a la Puerta del Sol, en pleno centro de
-          Madrid. Abrimos todos los días, hasta las 03:00 de domingo a jueves y hasta las 03:30 viernes y sábado. Hay deportes en
+          Madrid — un bar deportivo en Sol, Madrid, con pantallas. Abrimos todos los días, hasta las 03:00 de domingo a jueves y hasta las 03:30 viernes y sábado. Hay deportes en
           directo en pantallas grandes; los partidos confirmados están en la{" "}
           <Link href="/es/whats-on" className="text-gold underline">
             Agenda
@@ -205,11 +206,16 @@ export default function EsHomePage() {
               ¿Ponéis deportes en directo?
             </dt>
             <dd className="mt-1 text-cream/80">
-              Sí. Los partidos y eventos confirmados están en la{" "}
+              Sí. Este bar deportivo pone los partidos confirmados en la{" "}
               <Link href="/es/whats-on" data-event="whats_on" className="text-gold underline">
                 Agenda
               </Link>
-              ; pregunta en la barra por la noche.
+              ; pregunta en la barra por la noche. Para ver la NFL en Madrid,
+              mira el{" "}
+              <Link href="/es/nfl-madrid" className="text-gold underline">
+                bar NFL Madrid
+              </Link>
+              .
             </dd>
           </div>
           <div>
@@ -234,19 +240,10 @@ export default function EsHomePage() {
         </dl>
       </Section>
 
-      <Section title="Cómo encontrarnos">
+      <LocaloFindUs locale="es" />
+      <Section>
         <p>
-          {ADDRESS.full}. Abre{" "}
-          <a
-            href={MAPS_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            data-event="directions"
-            className="text-gold underline"
-          >
-            Google Maps
-          </a>
-          . {HOURS.summaryEs}.
+          {ADDRESS.full}. {HOURS.summaryEs}.
         </p>
         <p>
           <Link href="/es/location" className="text-gold underline">

@@ -10,6 +10,7 @@ import { PageShell } from "@/components/PageShell";
 import { Section } from "@/components/Prose";
 import { ThursdayFeature } from "@/components/ThursdayFeature";
 import { TonightMeetupCta } from "@/components/TonightMeetupCta";
+import { LocaloFindUs } from "@/components/LocaloFindUs";
 import { VenueHero } from "@/components/VenueHero";
 import { agendaBuildNow, madridTodayYmd } from "@/lib/fixtures";
 import { buildMetadata } from "@/lib/seo";
@@ -44,7 +45,7 @@ export default function HomePage() {
           </span>
         </h1>
         <p className="mt-2 text-sm tracking-wide text-cream-muted sm:text-base">
-          Live sports · International crowd
+          Irish pub · sports bar · live sports
         </p>
         <div className="mx-auto mt-4 inline-block rounded border border-gold/30 px-4 py-2 text-sm text-cream sm:text-base">
           <p className="font-semibold text-gold">Open every day</p>
@@ -65,25 +66,27 @@ export default function HomePage() {
       {/* Presentación — parallel to ES; visitors stay in their own section */}
       <section className="mb-12 max-w-2xl">
         <p className="text-sm leading-relaxed text-cream-muted sm:text-base">
-          O&apos;Connell St is an Irish pub by Puerta del Sol, with live sports,
-          an international crowd, and €1 shots on Thursdays.
-        </p>
-        <p className="mt-3">
-          <Link href="/nfl-madrid" className="text-sm text-gold hover:text-cream">
-            NFL in Madrid
-          </Link>
+          O&apos;Connell St is an Irish pub and sports bar by Puerta del Sol,
+          with live sports, an international crowd, and €1 shots on Thursdays.
+          For Sunday American football, this is the NFL bar Madrid door on
+          Espoz y Mina 7 —{" "}
+          <Link href="/nfl-madrid" className="text-gold underline">
+            watch NFL Madrid
+          </Link>{" "}
+          on the screens, and ask which game is on.
         </p>
       </section>
 
       {/* Pub near Puerta del Sol — Ads landing relevance (19 Oct) */}
       <section className="mb-12 max-w-2xl">
         <h2 className="font-serif text-xl font-bold text-cream">
-          Pub near Puerta del Sol
+          Irish pub and sports bar near Puerta del Sol
         </h2>
         <div className="pub-rule my-3" />
         <p className="text-sm text-cream-muted sm:text-base">
           O&apos;Connell St is an Irish pub and sports bar at {ADDRESS.street},
-          just off Puerta del Sol in Madrid centre. We&apos;re open every day, until 03:00 Sunday to Thursday and 03:30 on Friday and Saturday. Live sports play on big screens — confirmed
+          just off Puerta del Sol in Madrid centre — a sports bar in Sol,
+          Madrid, with live screens. We&apos;re open every day, until 03:00 Sunday to Thursday and 03:30 on Friday and Saturday. Live sports play on big screens — confirmed
           matches are on{" "}
           <Link href="/whats-on" className="text-gold underline">
             What&apos;s On
@@ -197,11 +200,16 @@ export default function HomePage() {
           <div>
             <dt className="font-semibold text-cream">Do you show live sports?</dt>
             <dd className="mt-1 text-cream/80">
-              Yes. Confirmed matches and events go on{" "}
+              Yes. This sports bar puts confirmed matches on{" "}
               <Link href="/whats-on" data-event="whats_on" className="text-gold underline">
                 What&apos;s On
               </Link>
-              ; ask at the bar for tonight&apos;s lineup.
+              ; ask at the bar for tonight&apos;s lineup. To watch NFL Madrid,
+              see{" "}
+              <Link href="/nfl-madrid" className="text-gold underline">
+                NFL bar Madrid
+              </Link>
+              .
             </dd>
           </div>
           <div>
@@ -226,20 +234,11 @@ export default function HomePage() {
         </dl>
       </Section>
 
-      {/* Find us */}
-      <Section title="Find us">
+      {/* Find us — CID Maps + GET DIRECTIONS (Localo SEO). Hours unchanged. */}
+      <LocaloFindUs locale="en" />
+      <Section>
         <p>
-          {ADDRESS.full}. Open{" "}
-          <a
-            href={MAPS_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            data-event="directions"
-            className="text-gold underline"
-          >
-            Google Maps
-          </a>
-          . {HOURS.summaryEn}.
+          {ADDRESS.full}. {HOURS.summaryEn}.
         </p>
         <p>
           <Link href="/location" className="text-gold underline">
