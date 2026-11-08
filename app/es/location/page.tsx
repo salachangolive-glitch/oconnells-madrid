@@ -1,22 +1,23 @@
 import Link from "next/link";
 import { InteriorPhoto } from "@/components/InteriorPhoto";
+import { LocaloFindUs } from "@/components/LocaloFindUs";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
 import { VenueHero } from "@/components/VenueHero";
+import { BAR_MAPS } from "@/lib/after-game-sunday-8-nov";
 import { buildMetadata } from "@/lib/seo";
 import {
   ADDRESS,
   HOURS,
-  MAPS_URL,
   PUBLIC_EMAIL,
   PUBLIC_EMAIL_MAILTO,
   SITE_NAME,
 } from "@/lib/venue";
 
 export const metadata = buildMetadata({
-  title: "Pub cerca de la Puerta del Sol — Calle de Espoz y Mina 7",
+  title: "Pub irlandés cerca de Sol — cómo llegar",
   description:
-    "Encuentra O'Connell St en Calle de Espoz y Mina 7, 28012 Madrid, cerca de Puerta del Sol. Cómo llegar en Google Maps.",
+    "Pub irlandés y bar deportivo en Calle de Espoz y Mina 7, 28012 Madrid, junto a Puerta del Sol. CÓMO LLEGAR en el pin de O'Connell St.",
   path: "/es/location",
   locale: "es",
 });
@@ -25,9 +26,9 @@ export default function EsLocationPage() {
   return (
     <PageShell locale="es" altLangHref="/location">
       <PageHero
-        eyebrow="Ubicación · Madrid"
-        title={`Pub cerca de la Puerta del Sol — cómo llegar a ${SITE_NAME}`}
-        lead={`${ADDRESS.full} — a poca distancia de Puerta del Sol.`}
+        eyebrow="Pub irlandés · bar deportivo · Puerta del Sol"
+        title={`Cómo llegar a este pub irlandés junto a Sol — ${SITE_NAME}`}
+        lead={`${ADDRESS.full} — pub irlandés y bar deportivo, a un paso de Puerta del Sol. Punto de encuentro para la NFL del domingo y Atlético–Barcelona 21:00.`}
       />
       <VenueHero
         variant="secondary"
@@ -56,13 +57,13 @@ export default function EsLocationPage() {
         </ul>
         <p>
           <a
-            href={MAPS_URL}
+            href={BAR_MAPS.oconnells}
             target="_blank"
             rel="noopener noreferrer"
             data-event="directions"
             className="inline-flex rounded-md bg-pub-green px-4 py-2 font-semibold text-cream hover:bg-pub-green-light"
           >
-            Abrir en Google Maps
+            CÓMO LLEGAR
           </a>
         </p>
       </Section>
@@ -79,14 +80,25 @@ export default function EsLocationPage() {
           O&apos;CONNELL ST. sobre la puerta.
         </p>
         <p>
-          ¿No sabes bien por dónde ir? El botón de Google Maps de arriba abre
-          directamente nuestra ficha, así puedes seguir la ruta desde cualquier
-          punto del centro.
+          ¿No sabes bien por dónde ir? CÓMO LLEGAR, arriba, abre el pin de este
+          pub irlandés, así puedes seguir la ruta desde cualquier punto del
+          centro.
         </p>
         <p>
-          Dirígete a Puerta del Sol y camina hasta Calle de Espoz y Mina. Ideal
-          antes de un partido de Premier League, Champions League o LaLiga — o
-          para los jueves de chupitos a 1 € con amigos.
+          Dirígete a Puerta del Sol y camina hasta Calle de Espoz y Mina. Esta
+          puerta es el punto de encuentro: NFL de domingo por la tarde en
+          pantallas (Bengals–Falcons 15:30 si no estás en el estadio), RedZone
+          desde las 19:00, luego Atlético–Barcelona a las 21:00 cuando lo
+          estemos emitiendo. Four Corner en Victoria 6 está abierto desde las
+          14:00, con pantallas de deporte. Pregunta qué partido echan. Mira{" "}
+          <Link href="/es/nfl-madrid" className="text-cream underline">
+            bar NFL Madrid
+          </Link>
+          {" · "}
+          <Link href="/es/nfl-noche-luego-atleti-barca-esta-puerta" className="text-cream underline">
+            NFL noche y Atleti 21:00
+          </Link>
+          .
         </p>
         <p>
           <Link href="/es/whats-on" className="text-cream underline">
@@ -109,6 +121,7 @@ export default function EsLocationPage() {
           </Link>
         </p>
       </Section>
+      <LocaloFindUs locale="es" />
       <Section title="Horario">
         <p>
           Abrimos todos los días: de lunes a jueves desde las {HOURS.monThu.open},

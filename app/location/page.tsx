@@ -1,22 +1,23 @@
 import Link from "next/link";
 import { InteriorPhoto } from "@/components/InteriorPhoto";
+import { LocaloFindUs } from "@/components/LocaloFindUs";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
 import { VenueHero } from "@/components/VenueHero";
+import { BAR_MAPS } from "@/lib/after-game-sunday-8-nov";
 import { buildMetadata } from "@/lib/seo";
 import {
   ADDRESS,
   HOURS,
-  MAPS_URL,
   PUBLIC_EMAIL,
   PUBLIC_EMAIL_MAILTO,
   SITE_NAME,
 } from "@/lib/venue";
 
 export const metadata = buildMetadata({
-  title: "Pub near Puerta del Sol — Calle de Espoz y Mina 7, Madrid",
+  title: "Irish pub near Sol — how to get here",
   description:
-    "Find O'Connell St at Calle de Espoz y Mina 7, 28012 Madrid, near Puerta del Sol. Google Maps directions.",
+    "Irish pub and sports bar at Calle de Espoz y Mina 7, 28012 Madrid, near Puerta del Sol. GET DIRECTIONS on the O'Connell St Maps pin.",
   path: "/location",
 });
 
@@ -24,9 +25,9 @@ export default function LocationPage() {
   return (
     <PageShell locale="en" altLangHref="/es/location">
       <PageHero
-        eyebrow="Location · Madrid"
-        title={`Pub near Puerta del Sol — how to find ${SITE_NAME}`}
-        lead={`${ADDRESS.full} — a short walk from Puerta del Sol.`}
+        eyebrow="Irish pub · sports bar · Puerta del Sol"
+        title={`How to get to this Irish pub near Sol — ${SITE_NAME}`}
+        lead={`${ADDRESS.full} — Irish pub and sports bar, a short walk from Puerta del Sol. Meeting point for Sunday NFL and Atlético–Barcelona 21:00.`}
       />
       <VenueHero
         variant="secondary"
@@ -55,13 +56,13 @@ export default function LocationPage() {
         </ul>
         <p>
           <a
-            href={MAPS_URL}
+            href={BAR_MAPS.oconnells}
             target="_blank"
             rel="noopener noreferrer"
             data-event="directions"
             className="inline-flex rounded-md bg-pub-green px-4 py-2 font-semibold text-cream hover:bg-pub-green-light"
           >
-            Open in Google Maps
+            GET DIRECTIONS
           </a>
         </p>
       </Section>
@@ -78,14 +79,25 @@ export default function LocationPage() {
           lettering above the door.
         </p>
         <p>
-          Not sure of the way? The Google Maps button above opens our listing
-          directly, so you can follow the route from wherever you are in the
-          centre.
+          Not sure of the way? GET DIRECTIONS above is the Maps pin for this
+          Irish pub listing, so you can follow the route from wherever you are
+          in the centre.
         </p>
         <p>
-          Aim for Puerta del Sol, then walk to Calle de Espoz y Mina. Handy
-          before a Premier League, Champions League or LaLiga kick-off — or for
-          Thursday €1 shots with friends.
+          Aim for Puerta del Sol, then walk to Calle de Espoz y Mina. This door
+          is the meeting point: Sunday NFL afternoon on the screens (Bengals at
+          Falcons 15:30 if you are not at the stadium), RedZone from 19:00, then
+          Atlético vs Barcelona at 21:00 when we are showing it. Four Corner on
+          Victoria 6 is open from 14:00, with sports screens. Ask which game is
+          on. See{" "}
+          <Link href="/nfl-madrid" className="text-cream underline">
+            NFL bar Madrid
+          </Link>
+          {" · "}
+          <Link href="/evening-nfl-then-atleti-barca-this-door" className="text-cream underline">
+            Evening NFL then Atleti 21:00
+          </Link>
+          .
         </p>
         <p>
           <Link href="/whats-on" className="text-cream underline">
@@ -105,6 +117,7 @@ export default function LocationPage() {
           </Link>
         </p>
       </Section>
+      <LocaloFindUs locale="en" />
       <Section title="Opening hours">
         <p>
           We open every day: from {HOURS.monThu.open} Monday to Thursday, from{" "}
