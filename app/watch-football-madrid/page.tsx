@@ -37,6 +37,17 @@ export default function WatchFootballPage() {
           . If a game is not listed, ask at the bar.
         </p>
         <p>
+          On Saturdays, LaLiga night and English afternoon can share the same
+          calendar square — two Madrid clocks, one room:{" "}
+          <Link
+            href="/two-saturday-football-clocks-one-sol-room-this-door"
+            className="text-cream underline"
+          >
+            two Saturday football clocks in one Sol room
+          </Link>
+          .
+        </p>
+        <p>
           {ADDRESS.full}. {HOURS.summaryEn}.
         </p>
       </Section>

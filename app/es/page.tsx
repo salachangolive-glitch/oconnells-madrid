@@ -138,6 +138,13 @@ export default function EsHomePage() {
           cómo marca Confirmado la Agenda
         </Link>
         ,{" "}
+        <Link
+          href="/es/dos-relojes-futbol-sabado-una-sala-esta-puerta"
+          className="text-gold underline"
+        >
+          dos relojes de fútbol el sábado en una sala
+        </Link>
+        ,{" "}
         <Link href="/es/nfl-madrid" className="text-gold underline">
           ver la NFL en Madrid
         </Link>{" "}

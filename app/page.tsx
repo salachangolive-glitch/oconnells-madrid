@@ -135,6 +135,13 @@ export default function HomePage() {
           how What&apos;s On marks Confirmed
         </Link>
         ,{" "}
+        <Link
+          href="/two-saturday-football-clocks-one-sol-room-this-door"
+          className="text-gold underline"
+        >
+          two Saturday football clocks in one Sol room
+        </Link>
+        ,{" "}
         <Link href="/nfl-madrid" className="text-gold underline">
           watch NFL Madrid
         </Link>

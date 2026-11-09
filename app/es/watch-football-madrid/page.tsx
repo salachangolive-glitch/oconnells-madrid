@@ -38,6 +38,17 @@ export default function EsWatchFootballPage() {
           . Si un partido no sale, pregunta en la barra.
         </p>
         <p>
+          Los sábados, noche de LaLiga y tarde inglesa pueden compartir el mismo
+          cuadrado del calendario — dos relojes de Madrid, una sala:{" "}
+          <Link
+            href="/es/dos-relojes-futbol-sabado-una-sala-esta-puerta"
+            className="text-cream underline"
+          >
+            dos relojes de fútbol el sábado en una sala
+          </Link>
+          .
+        </p>
+        <p>
           {ADDRESS.full}. {HOURS.summaryEs}.
         </p>
       </Section>
