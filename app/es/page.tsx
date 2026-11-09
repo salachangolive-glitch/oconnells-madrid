@@ -124,6 +124,13 @@ export default function EsHomePage() {
           noches de Champions
         </Link>
         ,{" "}
+        <Link
+          href="/es/noches-europeas-martes-miercoles-esta-puerta"
+          className="text-gold underline"
+        >
+          noches europeas de martes y miércoles en esta puerta
+        </Link>
+        ,{" "}
         <Link href="/es/nfl-madrid" className="text-gold underline">
           ver la NFL en Madrid
         </Link>{" "}

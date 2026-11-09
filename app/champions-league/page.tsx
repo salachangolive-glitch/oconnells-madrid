@@ -54,6 +54,13 @@ export default function ChampionsLeaguePage() {
             Premier League
           </Link>
           {" · "}
+          <Link
+            href="/tuesday-wednesday-european-nights-this-door"
+            className="text-cream underline"
+          >
+            Tuesday and Wednesday European nights at this door
+          </Link>
+          {" · "}
           <Link href="/sports" className="text-cream underline">
             Live Sports
           </Link>

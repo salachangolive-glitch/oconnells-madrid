@@ -55,6 +55,13 @@ export default function EsChampionsLeaguePage() {
             Premier League
           </Link>
           {" · "}
+          <Link
+            href="/es/noches-europeas-martes-miercoles-esta-puerta"
+            className="text-cream underline"
+          >
+            noches europeas de martes y miércoles en esta puerta
+          </Link>
+          {" · "}
           <Link href="/es/sports" className="text-cream underline">
             Deportes en directo
           </Link>

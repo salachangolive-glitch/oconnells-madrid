@@ -138,6 +138,7 @@ export const EN_PATHS = [
   "/premier-league",
   "/madrid-clocks-saturday-english-kickoffs-this-door",
   "/champions-league",
+  "/tuesday-wednesday-european-nights-this-door",
   "/sports-bar-sol",
   "/nfl-madrid",
   "/news/duran-duran-madrid-gig-night-sol",
@@ -185,6 +186,7 @@ export const ES_PATHS = [
   "/es/premier-league",
   "/es/relojes-madrid-saques-ingleses-sabado-esta-puerta",
   "/es/champions-league",
+  "/es/noches-europeas-martes-miercoles-esta-puerta",
   "/es/sports-bar-sol",
   "/es/nfl-madrid",
   "/es/oktoberfest-madrid-sol",
@@ -234,6 +236,8 @@ export const HREFLANG_PAIRS: Record<string, string | undefined> = {
   "/madrid-clocks-saturday-english-kickoffs-this-door":
     "/es/relojes-madrid-saques-ingleses-sabado-esta-puerta",
   "/champions-league": "/es/champions-league",
+  "/tuesday-wednesday-european-nights-this-door":
+    "/es/noches-europeas-martes-miercoles-esta-puerta",
   "/sports-bar-sol": "/es/sports-bar-sol",
   "/nfl-madrid": "/es/nfl-madrid",
   "/oktoberfest-madrid-sol": "/es/oktoberfest-madrid-sol",

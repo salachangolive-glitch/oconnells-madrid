@@ -121,6 +121,13 @@ export default function HomePage() {
           Champions League nights
         </Link>
         ,{" "}
+        <Link
+          href="/tuesday-wednesday-european-nights-this-door"
+          className="text-gold underline"
+        >
+          Tuesday and Wednesday European nights at this door
+        </Link>
+        ,{" "}
         <Link href="/nfl-madrid" className="text-gold underline">
           watch NFL Madrid
         </Link>
