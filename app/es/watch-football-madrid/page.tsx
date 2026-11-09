@@ -4,12 +4,13 @@ import { InteriorPhoto } from "@/components/InteriorPhoto";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
 import { buildMetadata } from "@/lib/seo";
-import { ADDRESS, HOURS, MAPS_URL } from "@/lib/venue";
+import { BAR_MAPS } from "@/lib/after-game-sunday-8-nov";
+import { ADDRESS, SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
   title: "Pub de fútbol en Sol, Madrid — partidos en directo",
   description:
-    "Pub de fútbol junto a la Puerta del Sol: O'Connell St, Calle de Espoz y Mina 7. Partidos confirmados con hora de Madrid, horario y cómo llegar.",
+    "Ver fútbol en Sol en Espoz y Mina 7: cruces nombrados solo si la Agenda marca Confirmado. Hora Madrid. Pregunta qué partido. CÓMO LLEGAR.",
   path: "/es/watch-football-madrid",
   locale: "es",
 });
@@ -18,97 +19,95 @@ export default function EsWatchFootballPage() {
   return (
     <PageShell locale="es" altLangHref="/watch-football-madrid">
       <PageHero
-        eyebrow="Ver fútbol · Madrid"
-        title="Pub de fútbol en Sol, Madrid"
-        lead="Ver los partidos en directo en O'Connell St: en Calle de Espoz y Mina 7, junto a la Puerta del Sol, ponemos Premier League, LaLiga y Champions League en las pantallas. Los partidos confirmados de esta semana, con hora de Madrid, están aquí abajo."
+        eyebrow="Ver fútbol en Madrid · fútbol en directo en esta puerta"
+        title={`Pub de fútbol en Sol: ${SITE_NAME}`}
+        lead={`${SITE_NAME} en ${ADDRESS.full}: pub irlandés junto a Puerta del Sol para ver fútbol en directo. Nombramos una emisión solo cuando la Agenda la marca Confirmado — hora de Madrid en cada fila. Pregunta qué partido echan.`}
       />
       <InteriorPhoto
         src="/images/interior/football-seating.webp"
         alt="Asientos con barriles y pantallas de deportes en O'Connell St cerca de Sol"
         position="object-[center_20%]"
       />
-      <Section title="Partidos confirmados">
-        <FixtureStrip locale="es" showHeading={false} showDirections={false} maxRows={60} />
+      <Section title="Cruces nombrados — Confirmado, hora de Madrid" featured>
         <p>
-          Premier League, LaLiga, Champions League y otro fútbol confirmado se
-          ven en las pantallas. La lista, con hora de Madrid, está en la{" "}
-          <Link href="/es/whats-on" className="text-cream underline">
+          La lista siguiente coincide con las filas confirmadas de la{" "}
+          <Link href="/es/whats-on" data-event="whats_on" className="text-cream underline">
             Agenda
           </Link>
-          . Si un partido no sale, pregunta en la barra.
+          . No inventamos saques ni prometemos todas las ligas a la vez. Si chocan
+          dos partidos, pregunta en la barra qué imagen principal echan.
         </p>
+        <FixtureStrip locale="es" windowOnly showHeading={false} showDirections={false} />
+      </Section>
+      <Section title="Fútbol en directo en esta puerta">
         <p>
-          Los sábados, noche de LaLiga y tarde inglesa pueden compartir el mismo
-          cuadrado del calendario — dos relojes de Madrid, una sala:{" "}
+          Premier League, LaLiga, Champions y otras competiciones cuando la
+          emisión está confirmada. Fines de semana ingleses:{" "}
+          <Link href="/es/premier-league" className="text-cream underline">
+            pub de Premier League en Madrid
+          </Link>
+          {" · "}
+          <Link
+            href="/es/relojes-madrid-saques-ingleses-sabado-esta-puerta"
+            className="text-cream underline"
+          >
+            relojes de Madrid para saques ingleses de sábado
+          </Link>
+          . Dos relojes el sábado en una sala:{" "}
           <Link
             href="/es/dos-relojes-futbol-sabado-una-sala-esta-puerta"
             className="text-cream underline"
           >
-            dos relojes de fútbol el sábado en una sala
+            dos relojes de fútbol el sábado
+          </Link>
+          . Más deporte:{" "}
+          <Link href="/es/sports" className="text-cream underline">
+            deportes en directo
+          </Link>
+          {" · "}
+          <Link href="/es/champions-league" className="text-cream underline">
+            Champions League
           </Link>
           .
-        </p>
-        <p>
-          {ADDRESS.full}. {HOURS.summaryEs}.
-        </p>
-      </Section>
-      <Section title="Getafe–Brighton · jueves 5 de noviembre, 21:00">
-        <p>
-          ¿Vienes con los aficionados ingleses o del Getafe? O&apos;Connell St es
-          un pub irlandés en Sol para quedar antes de ir a Getafe y para volver
-          después. Emitimos el partido en directo.{" "}
-          <Link href="/es/noticias/getafe-brighton-jueves-sol" className="text-cream underline">
-            Getafe–Brighton en Sol
-          </Link>
         </p>
       </Section>
       <Section title="Preguntas frecuentes">
         <div>
           <h3 className="font-semibold">¿Qué partidos ponéis?</h3>
           <p>
-            Premier League, LaLiga, Champions League y otro fútbol confirmado,
-            además de la NFL y más. Cada partido confirmado está en la Agenda con
-            la hora de Madrid.
+            Solo fútbol (y otros deportes) que la Agenda marca Confirmado, con
+            hora de Madrid en cada fila. Si no sale en la lista, pregunta en la
+            barra — no prometemos cada partido en cada pantalla.
           </p>
         </div>
       </Section>
-      <Section title="Horario y cómo llegar">
-        <p>{ADDRESS.full}. {HOURS.summaryEs}.</p>
+      <Section title="CÓMO LLEGAR — este pin de Maps">
         <p>
-          Desde Metro Sol, camina hasta Calle de Espoz y Mina. Fachada roja y
-          rótulo dorado.{" "}
+          Las búsquedas de ver fútbol en Madrid deben caer en esta ficha en
+          Espoz y Mina 7, no en la puerta de al lado. CID 10697659365903665225.
+        </p>
+        <p>
+          Desde Sol, camina hasta Espoz y Mina — fachada roja, rótulo dorado.{" "}
           <a
-            href={MAPS_URL}
+            href={BAR_MAPS.oconnells}
             target="_blank"
             rel="noopener noreferrer"
             data-event="directions"
             className="text-cream underline"
           >
-            Cómo llegar
+            CÓMO LLEGAR
           </a>
           {" · "}
           <Link href="/es/location" className="text-cream underline">
             Ubicación
           </Link>
-          . También{" "}
-          <Link href="/es/premier-league" className="text-cream underline">
-            Premier League
-          </Link>
-          ,{" "}
-          <Link href="/es/champions-league" className="text-cream underline">
-            Champions League
-          </Link>
-          ,{" "}
-          <Link href="/es/nfl-madrid" className="text-cream underline">
-            noches de fútbol americano
-          </Link>
-          ,{" "}
+          {" · "}
           <Link href="/es/sports-bar-sol" className="text-cream underline">
             bar deportivo en Sol
-          </Link>{" "}
-          y{" "}
-          <Link href="/es/sports" className="text-cream underline">
-            deportes en directo
+          </Link>
+          {" · "}
+          <Link href="/es/nfl-madrid" className="text-cream underline">
+            noches NFL
           </Link>
           .
         </p>
