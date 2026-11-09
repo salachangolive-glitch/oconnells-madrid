@@ -126,6 +126,18 @@ export default function WhatsOnPage() {
           </Link>
         </p>
       ) : null}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-25" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          UEFA Champions League: Atlético de Madrid v Viking FK, Wednesday 25 November, 21:00 (Riyadh Air Metropolitano). Norwegian / Viking FK fans: a meeting point near Sol before or after — not the NFL Minnesota Vikings.{" "}
+          <Link href="/news/atletico-viking-wednesday-night-sol" className="text-gold underline">
+            Atlético v Viking FK: Wednesday night near Sol
+          </Link>
+          {" · "}
+          <Link href="/es/noticias/atletico-viking-miercoles-sol" className="text-gold underline">
+            En español
+          </Link>
+        </p>
+      ) : null}
       {/* Getafe v Brighton + Real Madrid v Crvena Zvezda, visiting-fans articles (owner order 4 Nov 2026 via DG; uefa.com / euroleague.net): build-time date gates. */}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-05" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">

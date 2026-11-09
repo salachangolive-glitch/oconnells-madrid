@@ -85,6 +85,8 @@ const EVENT_LAST_DAY: Record<string, string> = {
   "/news/tokio-hotel-madrid-gig-night-sol": "2026-11-23",
   "/news/real-madrid-psv-tuesday-night-sol": "2026-11-24",
   "/news/real-madrid-zalgiris-wednesday-night-sol": "2026-11-25",
+  "/news/atletico-viking-wednesday-night-sol": "2026-11-25",
+  "/es/noticias/atletico-viking-miercoles-sol": "2026-11-25",
   "/news/inter-fans-madrid-womens-champions-league-sol": "2026-11-18",
 };
 
