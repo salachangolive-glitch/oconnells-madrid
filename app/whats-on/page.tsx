@@ -154,6 +154,17 @@ export default function WhatsOnPage() {
           </Link>
         </p>
       ) : null}
+      <p className="mb-6 text-sm text-cream-muted sm:text-base">
+        How the Confirmed label works on this list — Madrid time only, ask which
+        game at the bar:{" "}
+        <Link
+          href="/how-whats-on-marks-confirmed-this-door"
+          className="text-gold underline"
+        >
+          how What&apos;s On marks Confirmed at this door
+        </Link>
+        .
+      </p>
       <NflSunday8Nov locale="en" today={madridTodayYmd(agendaBuildNow())} context="whats-on" />
       <FixtureList locale="en" />
 

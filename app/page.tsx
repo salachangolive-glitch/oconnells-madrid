@@ -128,6 +128,13 @@ export default function HomePage() {
           Tuesday and Wednesday European nights at this door
         </Link>
         ,{" "}
+        <Link
+          href="/how-whats-on-marks-confirmed-this-door"
+          className="text-gold underline"
+        >
+          how What&apos;s On marks Confirmed
+        </Link>
+        ,{" "}
         <Link href="/nfl-madrid" className="text-gold underline">
           watch NFL Madrid
         </Link>

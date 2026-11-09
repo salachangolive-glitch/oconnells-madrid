@@ -112,6 +112,17 @@ export default function EsWhatsOnPage() {
           </Link>
         </p>
       ) : null}
+      <p className="mb-6 text-sm text-cream-muted sm:text-base">
+        Cómo funciona la etiqueta Confirmado en esta lista — solo hora de Madrid;
+        pregunta en la barra:{" "}
+        <Link
+          href="/es/como-marca-confirmado-la-agenda-esta-puerta"
+          className="text-gold underline"
+        >
+          cómo marca Confirmado la Agenda en esta puerta
+        </Link>
+        .
+      </p>
       <NflSunday8Nov locale="es" today={madridTodayYmd(agendaBuildNow())} context="whats-on" />
       <FixtureList locale="es" />
 

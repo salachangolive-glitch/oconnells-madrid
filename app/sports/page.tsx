@@ -108,9 +108,16 @@ export default function SportsPage() {
           <Link href="/nfl-madrid" className="text-gold underline">
             NFL in Madrid
           </Link>
-          . For one specific match, ask at the bar or check{" "}
+          .           For one specific match, ask at the bar or check{" "}
           <Link href="/whats-on" className="text-gold underline">
             What&apos;s On
+          </Link>
+          . How Confirmed works:{" "}
+          <Link
+            href="/how-whats-on-marks-confirmed-this-door"
+            className="text-gold underline"
+          >
+            ask which game
           </Link>
           . Four Corner on Victoria 6 is open from 14:00, with sports screens —
           ask which game is on.

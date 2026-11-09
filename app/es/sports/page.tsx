@@ -113,6 +113,13 @@ export default function EsSportsPage() {
           <Link href="/es/whats-on" className="text-gold underline">
             Agenda
           </Link>
+          . Cómo funciona Confirmado:{" "}
+          <Link
+            href="/es/como-marca-confirmado-la-agenda-esta-puerta"
+            className="text-gold underline"
+          >
+            pregunta qué partido
+          </Link>
           . Four Corner en Victoria 6 está abierto desde las 14:00, con
           pantallas de deporte — pregunta qué partido echan.
         </p>

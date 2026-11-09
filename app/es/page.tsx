@@ -131,6 +131,13 @@ export default function EsHomePage() {
           noches europeas de martes y miércoles en esta puerta
         </Link>
         ,{" "}
+        <Link
+          href="/es/como-marca-confirmado-la-agenda-esta-puerta"
+          className="text-gold underline"
+        >
+          cómo marca Confirmado la Agenda
+        </Link>
+        ,{" "}
         <Link href="/es/nfl-madrid" className="text-gold underline">
           ver la NFL en Madrid
         </Link>{" "}
