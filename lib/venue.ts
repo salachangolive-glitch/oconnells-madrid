@@ -188,6 +188,7 @@ export const EN_PATHS = [
   "/whats-on",
   "/contact",
   "/privacy",
+  "/news",
 ] as const;
 
 export const ES_PATHS = [
@@ -216,6 +217,7 @@ export const ES_PATHS = [
   "/es/whats-on",
   "/es/contact",
   "/es/privacy",
+  "/es/noticias",
   "/es/noticias/atletico-viking-miercoles-sol",
   "/es/noticias/espana-inglaterra-domingo-sol",
   "/es/noticias/real-madrid-inter-champions-femenina-sol",
@@ -280,6 +282,7 @@ export const HREFLANG_PAIRS: Record<string, string | undefined> = {
   "/whats-on": "/es/whats-on",
   "/contact": "/es/contact",
   "/privacy": "/es/privacy",
+  "/news": "/es/noticias",
   "/news/spain-england-sunday-night-sol": "/es/noticias/espana-inglaterra-domingo-sol",
   "/news/real-madrid-inter-womens-champions-league-sol": "/es/noticias/real-madrid-inter-champions-femenina-sol",
   "/news/getafe-brighton-thursday-night-sol": "/es/noticias/getafe-brighton-jueves-sol",
