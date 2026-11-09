@@ -49,6 +49,13 @@ export default function EsSportsPage() {
           <Link href="/es/whats-on" className="text-gold underline">
             Agenda
           </Link>
+          . Si chocan dos partidos, pantallas compartidas — no un reservado:{" "}
+          <Link
+            href="/es/saques-solapados-pantallas-compartidas-esta-puerta"
+            className="text-gold underline"
+          >
+            saques solapados en esta puerta
+          </Link>
           . Si buscas fútbol en concreto:{" "}
           <Link href="/es/watch-football-madrid" className="text-gold underline">
             Ver fútbol en Madrid

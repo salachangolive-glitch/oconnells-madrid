@@ -145,6 +145,13 @@ export default function EsHomePage() {
           dos relojes de fútbol el sábado en una sala
         </Link>
         ,{" "}
+        <Link
+          href="/es/saques-solapados-pantallas-compartidas-esta-puerta"
+          className="text-gold underline"
+        >
+          saques solapados y pantallas compartidas
+        </Link>
+        ,{" "}
         <Link href="/es/nfl-madrid" className="text-gold underline">
           ver la NFL en Madrid
         </Link>{" "}

@@ -142,6 +142,13 @@ export default function HomePage() {
           two Saturday football clocks in one Sol room
         </Link>
         ,{" "}
+        <Link
+          href="/overlapping-kickoffs-shared-screens-this-door"
+          className="text-gold underline"
+        >
+          overlapping kickoffs and shared screens
+        </Link>
+        ,{" "}
         <Link href="/nfl-madrid" className="text-gold underline">
           watch NFL Madrid
         </Link>

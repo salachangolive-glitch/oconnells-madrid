@@ -48,6 +48,13 @@ export default function SportsPage() {
           <Link href="/whats-on" className="text-gold underline">
             What&apos;s On
           </Link>
+          . When two games overlap, shared screens — not a private box:{" "}
+          <Link
+            href="/overlapping-kickoffs-shared-screens-this-door"
+            className="text-gold underline"
+          >
+            overlapping kickoffs at this door
+          </Link>
           . For football:{" "}
           <Link href="/watch-football-madrid" className="text-gold underline">
             Watch football in Madrid
