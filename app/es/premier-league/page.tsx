@@ -38,7 +38,15 @@ export default function EsPremierLeaguePage() {
           <Link href="/es/whats-on" data-event="whats_on" className="text-cream underline">
             Agenda
           </Link>{" "}
-          de los próximos 7 días, o pregunta en la barra.
+          de los próximos 7 días, o pregunta en la barra. Si conviertes una
+          gráfica del sábado en hora británica:{" "}
+          <Link
+            href="/es/relojes-madrid-saques-ingleses-sabado-esta-puerta"
+            className="text-cream underline"
+          >
+            relojes de Madrid para saques ingleses de sábado
+          </Link>
+          .
         </p>
         <PremierLeagueLines locale="es" />
         <p>

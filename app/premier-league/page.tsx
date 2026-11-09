@@ -37,7 +37,15 @@ export default function PremierLeaguePage() {
           <Link href="/whats-on" data-event="whats_on" className="text-cream underline">
             What&apos;s On
           </Link>{" "}
-          for the next 7 days, or ask at the bar.
+          for the next 7 days, or ask at the bar. Converting a UK Saturday
+          graphic:{" "}
+          <Link
+            href="/madrid-clocks-saturday-english-kickoffs-this-door"
+            className="text-cream underline"
+          >
+            Madrid clocks for Saturday English kick-offs
+          </Link>
+          .
         </p>
         <PremierLeagueLines locale="en" />
         <p>

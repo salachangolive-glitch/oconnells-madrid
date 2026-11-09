@@ -85,6 +85,13 @@ export default function SportsPage() {
           <Link href="/premier-league" className="text-gold underline">
             Premier League
           </Link>
+          {" · "}
+          <Link
+            href="/madrid-clocks-saturday-english-kickoffs-this-door"
+            className="text-gold underline"
+          >
+            Madrid clocks for Saturday English kick-offs
+          </Link>
           .
         </p>
       </Section>
