@@ -144,6 +144,7 @@ export const EN_PATHS = [
   "/overlapping-kickoffs-shared-screens-this-door",
   "/last-metres-sol-clock-to-gold-lettering-this-door",
   "/english-football-talk-independent-pub-off-sol-this-door",
+  "/listing-number-seven-oconnell-maps-pin-this-door",
   "/sports-bar-sol",
   "/nfl-madrid",
   "/news/duran-duran-madrid-gig-night-sol",
@@ -197,6 +198,7 @@ export const ES_PATHS = [
   "/es/saques-solapados-pantallas-compartidas-esta-puerta",
   "/es/ultimos-metros-reloj-sol-rotulo-dorado-esta-puerta",
   "/es/conversacion-futbol-ingles-pub-independiente-sol-esta-puerta",
+  "/es/ficha-numero-siete-pin-maps-oconnell-esta-puerta",
   "/es/sports-bar-sol",
   "/es/nfl-madrid",
   "/es/oktoberfest-madrid-sol",
@@ -258,6 +260,8 @@ export const HREFLANG_PAIRS: Record<string, string | undefined> = {
     "/es/ultimos-metros-reloj-sol-rotulo-dorado-esta-puerta",
   "/english-football-talk-independent-pub-off-sol-this-door":
     "/es/conversacion-futbol-ingles-pub-independiente-sol-esta-puerta",
+  "/listing-number-seven-oconnell-maps-pin-this-door":
+    "/es/ficha-numero-siete-pin-maps-oconnell-esta-puerta",
   "/sports-bar-sol": "/es/sports-bar-sol",
   "/nfl-madrid": "/es/nfl-madrid",
   "/oktoberfest-madrid-sol": "/es/oktoberfest-madrid-sol",

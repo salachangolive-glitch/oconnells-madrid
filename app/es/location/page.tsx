@@ -5,6 +5,7 @@ import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
 import { VenueHero } from "@/components/VenueHero";
 import { BAR_MAPS } from "@/lib/after-game-sunday-8-nov";
+import { LISTING_NUMBER_SEVEN_PATHS } from "@/lib/listing-number-seven-pin";
 import { buildMetadata } from "@/lib/seo";
 import {
   ADDRESS,
@@ -92,7 +93,12 @@ export default function EsLocationPage() {
           >
             del reloj de Sol al rótulo dorado
           </Link>
-          .
+          . Dos fichas de pub irlandés pueden compartir el número 7 en Maps — el
+          fútbol en esta puerta necesita el{" "}
+          <Link href={LISTING_NUMBER_SEVEN_PATHS.es} className="text-cream underline">
+            pin de O&apos;Connell St en esta ficha
+          </Link>
+          , no otro sitio guardado en la misma calle.
         </p>
         <p>
           Dirígete a Puerta del Sol y camina hasta Calle de Espoz y Mina. Esta

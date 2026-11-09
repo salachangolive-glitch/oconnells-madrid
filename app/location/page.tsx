@@ -5,6 +5,7 @@ import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
 import { VenueHero } from "@/components/VenueHero";
 import { BAR_MAPS } from "@/lib/after-game-sunday-8-nov";
+import { LISTING_NUMBER_SEVEN_PATHS } from "@/lib/listing-number-seven-pin";
 import { buildMetadata } from "@/lib/seo";
 import {
   ADDRESS,
@@ -91,7 +92,12 @@ export default function LocationPage() {
           >
             Sol clock to gold lettering
           </Link>
-          .
+          . Two Irish pub listings can share number 7 in Maps — football at this
+          door needs the{" "}
+          <Link href={LISTING_NUMBER_SEVEN_PATHS.en} className="text-cream underline">
+            O&apos;Connell St pin on this listing
+          </Link>
+          , not another saved place on the same street number.
         </p>
         <p>
           Aim for Puerta del Sol, then walk to Calle de Espoz y Mina. This door
