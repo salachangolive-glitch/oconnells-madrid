@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { PostMatchBanner } from "@/components/PostMatchBanner";
 import { FixtureList } from "@/components/FixtureList";
-import { NflSunday8Nov } from "@/components/NflSunday8Nov";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
 import { buildMetadata } from "@/lib/seo";
@@ -34,38 +33,20 @@ export default function WhatsOnPage() {
           </Link>
         </p>
       ) : null}
-      {/* Where to watch NFL this weekend (ciclo 1, DG 6 Nov): build-time date gate. */}
-      {madridTodayYmd(agendaBuildNow()) <= "2026-11-08" ? (
+      {/* Spain v Chile rugby (ferugby.es 31 Aug 2026 calendar: sáb 14 nov 17:00 h, Butarque). */}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-14" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">
-          NFL Madrid Game weekend: Bengals at Falcons, Sunday 8 November, 15:30, plus Sunday NFL from 19:00, live near Sol. Open from 12:00.{" "}
-          <Link href="/news/where-to-watch-nfl-madrid-sol" className="text-gold underline">
-            Where to watch NFL this weekend near Sol
-          </Link>
-          {" · "}
-          <Link href="/news/nfl-meeting-point-sol" className="text-gold underline">
-            NFL meeting point near Sol
-          </Link>
-          {" · "}
-          <Link href="/news/before-after-bernabeu-nfl-sol" className="text-gold underline">
-            Before and after the Bernabéu
-          </Link>
-          {" · "}
-          <Link href="/news/sunday-football-sol-8-nov" className="text-gold underline">
-            Sunday football near Sol
-          </Link>
-          {" · "}
-          <Link href="/news/four-bars-fan-weekend-sol" className="text-gold underline">
-            Four bars, one fan weekend
-          </Link>
+          World Rugby Nations Cup: Spain v Chile, Saturday 14 November, 17:00 (Estadio Ontime Butarque, Leganés), live near Sol. Chilean fans: a meeting point near Sol.
         </p>
       ) : null}
-      {/* Atlético–Barcelona LaLiga J12 (Radar OC3, laliga.com J12): build-time date gate. */}
-      {madridTodayYmd(agendaBuildNow()) <= "2026-11-08" ? (
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-14" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">
-          LaLiga: Atlético Madrid v Barcelona, Sunday 8 November, 21:00, live near Sol.{" "}
-          <Link href="/news/atletico-barcelona-sunday-night-sol" className="text-gold underline">
-            Big LaLiga Sunday night in Sol
-          </Link>
+          UEFA Nations League: Austria v Republic of Ireland, Saturday 14 November, 20:45 Madrid time (Raiffeisen Arena, Linz), live near Sol.
+        </p>
+      ) : null}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-14" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          Nations Championship rugby: Ireland v Fiji, Saturday 14 November, 21:10 Madrid time (Aviva Stadium, Dublin), live near Sol.
         </p>
       ) : null}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-10" ? (
@@ -74,25 +55,6 @@ export default function WhatsOnPage() {
           <Link href="/news/bryan-adams-madrid-gig-night-sol" className="text-gold underline">
             Bryan Adams gig night guide
           </Link>
-        </p>
-      ) : null}
-      {/* England v Croatia, UEFA Nations League (Radar OC5; match.uefa.com id 2047879, 19:45Z = 20:45 CET): build-time date gate. */}
-      {madridTodayYmd(agendaBuildNow()) <= "2026-11-12" ? (
-        <p className="mb-6 text-sm text-cream-muted sm:text-base">
-          UEFA Nations League: England v Croatia, Thursday 12 November, 20:45 (Wembley), live near Sol.{" "}
-          <Link href="/news/england-croatia-thursday-night-sol" className="text-gold underline">
-            England Thursday in Sol
-          </Link>
-        </p>
-      ) : null}
-      {/* Serbia v Germany, UEFA Nations League (DG 2 Nov via Radar; match.uefa.com id 2047887, 19:45Z = 20:45 CET, Belgrade): build-time date gate, gone from the 14 Nov daily rebuild. */}
-      {madridTodayYmd(agendaBuildNow()) <= "2026-11-13" ? (
-        <p className="mb-6 text-sm text-cream-muted sm:text-base">
-          UEFA Nations League: Serbia v Germany, Friday 13 November, 20:45 Madrid time (Belgrade), live near Sol.{" "}
-          <Link href="/news/serbia-germany-friday-night-sol" className="text-gold underline">
-            Serbia v Germany: Friday night in Sol
-          </Link>{" "}
-          <span lang="de">Serbien – Deutschland, Freitag, 13. November, 20:45 Uhr: live im O&apos;Connell St an der Puerta del Sol.</span>
         </p>
       ) : null}
       {/* Germany v Netherlands, UEFA Nations League (Radar OC11; match.uefa.com id 2047909, 19:45Z = 20:45 CET): build-time date gate. */}
@@ -111,9 +73,14 @@ export default function WhatsOnPage() {
           <span lang="fr">Supporters du Paris FC : O&apos;Connell St, un pub près de Sol pour se retrouver avant le match.</span>
         </p>
       ) : null}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-12" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          Women&apos;s Champions League: Barcelona v Arsenal, Thursday 12 November, 18:45, live near Sol. Arsenal fans: a meeting point near Sol.
+        </p>
+      ) : null}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-18" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">
-          Women&apos;s Champions League: Real Madrid v Inter, Wednesday 18 November, 18:45 (Di Stéfano), live near Sol. TV channel TBC.{" "}
+          Women&apos;s Champions League: Real Madrid v Inter, Wednesday 18 November, 18:45 (Di Stéfano), live near Sol.{" "}
           <Link href="/news/real-madrid-inter-womens-champions-league-sol" className="text-gold underline">
             Real Madrid v Inter in Sol
           </Link>
@@ -145,10 +112,25 @@ export default function WhatsOnPage() {
           </Link>
         </p>
       ) : null}
-      {/* Spain v England, UEFA Nations League (DG 26 Oct via Radar; kickoff per match.uefa.com id 2047904, 19:45Z = 20:45 CET; date per rfef.es): build-time date gate, gone from the 16 Nov daily rebuild. No channel named (DG 4 Nov: not confirmed by rtve.es for this match); Sunday 14:00–03:00 owner-confirmed. */}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-13" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          EuroLeague: Panathinaikos v FC Barcelona, Friday 13 November, 20:15, live near Sol.
+        </p>
+      ) : null}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-15" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">
-          UEFA Nations League: Spain v England, Sunday 15 November, 20:45 (Riyadh Air Metropolitano), live on the big screen near Sol, open on Sundays from 14:00 until 03:00. No reservations: first come, first served.{" "}
+          ATP Finals in Turin, Sunday 15 November: sessions at 14:00, 18:00 and 20:30 Madrid time, live near Sol. Sunday doors 14:00.
+        </p>
+      ) : null}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-15" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          NFL Week 10, Sunday 15 November: first kickoff 15:30 Madrid (Patriots at Lions), then the 19:00, 22:05 and 22:25 windows. Ask which game is on.
+        </p>
+      ) : null}
+      {/* Spain v England, UEFA Nations League; Radar file verified UEFA; on La 1. Sunday 14:00–03:00. */}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-15" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          UEFA Nations League: Spain v England, Sunday 15 November, 20:45 (Riyadh Air Metropolitano), on La 1, live on the big screen near Sol. Open on Sundays from 14:00 until 03:00. English fans: a meeting point near Sol. No reservations: first come, first served.{" "}
           <Link href="/news/spain-england-sunday-night-sol" className="text-gold underline">
             Spain v England: Sunday night in Sol
           </Link>
@@ -165,7 +147,6 @@ export default function WhatsOnPage() {
         </Link>
         .
       </p>
-      <NflSunday8Nov locale="en" today={madridTodayYmd(agendaBuildNow())} context="whats-on" />
       <FixtureList locale="en" />
 
       <Section title="Live sports at O'Connell St">

@@ -43,7 +43,7 @@ export default function EsUnited1730Page() {
 
       <Section title="Cómo se apila de verdad la tarde">
         <ul className="list-disc space-y-2 pl-5">
-          <li>12:00 — abre esta puerta (el domingo habitual es 14:00).</li>
+          <li>12:00 — aquel domingo abrió esta puerta (el domingo habitual es 14:00).</li>
           <li>
             14:00 — Four Corner, Victoria 6, abre hasta la madrugada, pantallas
             de deporte.

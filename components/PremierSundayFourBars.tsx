@@ -42,8 +42,8 @@ export function PremierSundayFourBars({ locale }: { locale: "en" | "es" }) {
     <Section title={es ? "Los cuatro bares — direcciones y Maps" : "The four bars — addresses and Maps"}>
       <p>
         {es
-          ? "Cuatro salas hermanas junto a Sol. Preguntad qué hay en pantalla. No todos los partidos van en todas las pantallas. Pub irlandés independiente. No es un evento oficial."
-          : "Four sister rooms near Sol. Ask which game is on. Not every match on every screen. Independent Irish pub. Not an official event."}
+          ? "Cuatro salas hermanas junto a Sol. Preguntad qué hay en pantalla. No todos los partidos van en todas las pantallas. Pub irlandés independiente."
+          : "Four sister rooms near Sol. Ask which game is on. Not every match on every screen. Independent Irish pub."}
       </p>
       <ul className="mt-3 space-y-3">
         {BARS.map((b) => (

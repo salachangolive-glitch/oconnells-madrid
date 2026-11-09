@@ -1,15 +1,16 @@
 import Link from "next/link";
 import { FourBarsNearSol } from "@/components/FourBarsNearSol";
 import { PageShell } from "@/components/PageShell";
+import { PastEventNotice } from "@/components/PastEventNotice";
 import { PageHero, Section } from "@/components/Prose";
 import { PATHS, WEEKEND_HOURS } from "@/lib/fan-weekend";
 import { buildMetadata } from "@/lib/seo";
 import { ADDRESS } from "@/lib/venue";
 
 export const metadata = buildMetadata({
-  title: "El domingo habitual es a las 14:00 — este domingo O'Connell's abre a las 12:00",
+  title: "El domingo habitual es a las 14:00 — el 8 nov a las 12:00 fue excepción",
   description:
-    "El domingo habitual de O'Connell's es a las 14:00. El 8 nov abrimos a las 12:00. Four Corner sigue a las 14:00 en Victoria 6, con pantallas. Direcciones y Maps de los cuatro bares junto a Sol.",
+    "El domingo habitual de O'Connell's es a las 14:00. El 8 de noviembre de 2026 abrimos a las 12:00, excepción de un día. Aquel día ya ha tenido lugar. Horario habitual en la página de ubicación.",
   path: PATHS.usualSundayEs,
   locale: "es",
 });
@@ -18,10 +19,11 @@ export default function EsUsualSundayPage() {
   return (
     <PageShell locale="es" altLangHref={PATHS.usualSundayEn}>
       <PageHero
-        eyebrow="Domingo 8 de noviembre · una excepción en el horario"
-        title="El domingo habitual es a las 14:00. Este no."
-        lead="El horario de este pub sigue diciendo domingo desde las 14:00. Dejadlo para el resto de semanas. El domingo 8 de noviembre el cerrojo gira a las 12:00 para que la sala exista antes del partido NFL de Madrid. Pub irlandés independiente en Espoz y Mina 7. No es un evento oficial de la NFL."
+        eyebrow="Evento pasado · domingo 8 de noviembre de 2026 · excepción de un día"
+        title="El domingo habitual es a las 14:00. Aquel no."
+        lead="El horario de este pub sigue diciendo domingo desde las 14:00. Dejadlo para el resto de semanas. El domingo 8 de noviembre de 2026 el cerrojo giró a las 12:00 para que la sala existiera antes del partido NFL de Madrid. Pub irlandés independiente en Espoz y Mina 7."
       />
+      <PastEventNotice locale="es" />
 
       <Section title="Por qué la pizarra falla un solo día" featured>
         <p>

@@ -12,9 +12,8 @@ import type { MatchArticleData } from "@/components/MatchNewsArticle";
  *    Las Rosas L2 about a quarter of an hour on foot); riyadhairmetropolitano.com
  *    (metro until about 01:30); EMT SE721 Canillejas–Estadio Metropolitano on
  *    match days, from 2 h before (emtmadrid.es, Oct 2026 notices).
- *  - TV channel: not named (DG 4 Nov 2026: rtve.es only says RTVE shows Spain's
- *    "two November matches", never this match by date on La 1/RTVE Play).
- *  - No fan numbers. Sunday hours 14:00–03:00 (owner confirmed 22 and 24 Oct; DG 4 Nov 2026).
+ *  - TV: La 1 (owner/Radar verification 9 Nov 2026).
+ *  - Meeting point for English fans. Sunday hours 14:00–03:00.
  */
 export const SPAIN_ENGLAND: MatchArticleData = {
   paths: {
@@ -35,7 +34,7 @@ export const SPAIN_ENGLAND: MatchArticleData = {
         "Spain v England, UEFA Nations League, Sunday 15 November 2026, 20:45 Madrid time (19:45 UK) at the Riyadh Air Metropolitano. Watch it live on the big screen at O'Connell St, Espoz y Mina 7, next to Puerta del Sol. Open until 03:00.",
       eyebrow: "UEFA Nations League · Sunday 15 November 2026 · 20:45",
       h1: "Spain v England: Sunday night football in Sol",
-      lead: "Spain play England at the Riyadh Air Metropolitano on Sunday 15 November. In Madrid for the weekend, with or without a ticket? O'Connell St, an Irish pub at Espoz y Mina 7, next to Puerta del Sol, shows the match live on the big screen, and stays open until 03:00 for the rest of the night.",
+      lead: "Spain play England at the Riyadh Air Metropolitano on Sunday 15 November. In Madrid for the weekend, with or without a ticket? O'Connell St, an Irish pub at Espoz y Mina 7, next to Puerta del Sol, is a meeting point for English fans, shows the match live on the big screen on La 1, and stays open until 03:00 for the rest of the night.",
       screeningName: "Spain v England live on the big screen at O'Connell St",
       sections: [
         {
@@ -44,6 +43,7 @@ export const SPAIN_ENGLAND: MatchArticleData = {
             "Spain v England, UEFA Nations League, League A, Group 3, last matchday of the league phase",
             "Sunday 15 November 2026, 20:45 Madrid time (19:45 in the UK)",
             "Riyadh Air Metropolitano, Madrid",
+            "On La 1",
           ],
           note: "Date, kick-off and venue as listed by UEFA and the Spanish FA (RFEF). Kick-off times can move, so check again on the day.",
         },
@@ -51,7 +51,7 @@ export const SPAIN_ENGLAND: MatchArticleData = {
           title: "Live on the big screen at O'Connell St",
           paras: [
             "O'Connell St is open on Sundays from 14:00, open until 03:00. Plenty of time for a late lunch and a pint in the centre before kick-off, and no rush once the final whistle goes.",
-            "Irish pub atmosphere a couple of minutes from Puerta del Sol: beer on tap, food from the kitchen and the match on the big screen. Spain supporters and England supporters, all welcome. No reservations: it's first come, first served, so on a big night it pays to arrive early.",
+            "Irish pub atmosphere a couple of minutes from Puerta del Sol: beer on tap, food from the kitchen and the match on the big screen on La 1. Spain supporters and England supporters, all welcome. English fans: a meeting point near Sol. No reservations: it's first come, first served, so on a big night it pays to arrive early.",
           ],
         },
         {
@@ -71,9 +71,9 @@ export const SPAIN_ENGLAND: MatchArticleData = {
           ],
         },
         {
-          title: "A full week of Nations League",
+          title: "Thursday: Spain in Prague",
           paras: [
-            "England play Croatia at Wembley on Thursday 12 November, 20:45 Madrid time, the same night as Czechia v Spain in Prague. On Sunday 15, Croatia v Czechia kicks off at the same time as Spain v England. All of them are on our What's On page.",
+            "Three days earlier, Thursday 12 November, Spain play Czechia in Prague at 20:45 Madrid time. That match is on What's On too.",
           ],
         },
       ],
@@ -81,7 +81,6 @@ export const SPAIN_ENGLAND: MatchArticleData = {
       dir: "Get directions (Google Maps)",
       more: "More from O'Connell St",
       links: [
-        { href: "/news/england-croatia-thursday-night-sol", label: "England v Croatia, Thursday 12 November" },
         { href: "/whats-on", label: "What's On" },
         { href: "/watch-football-madrid", label: "Watch football in Sol" },
         { href: "/location", label: "Opening hours and location" },
@@ -95,7 +94,7 @@ export const SPAIN_ENGLAND: MatchArticleData = {
         "España–Inglaterra, Liga de Naciones de la UEFA, domingo 15 de noviembre de 2026, 20:45 (hora de Madrid), en el Riyadh Air Metropolitano. En directo en pantalla grande en O'Connell St, Espoz y Mina 7, junto a la Puerta del Sol. Abierto hasta las 03:00.",
       eyebrow: "Liga de Naciones · domingo 15 de noviembre de 2026 · 20:45",
       h1: "España–Inglaterra: domingo de fútbol en Sol",
-      lead: "España recibe a Inglaterra en el Riyadh Air Metropolitano el domingo 15 de noviembre. ¿Estás en Madrid ese fin de semana, con entrada o sin ella? O'Connell St, pub irlandés en Espoz y Mina 7, junto a la Puerta del Sol, lo pone en directo en pantalla grande y abre hasta las 03:00 para seguir la noche.",
+      lead: "España recibe a Inglaterra en el Riyadh Air Metropolitano el domingo 15 de noviembre. ¿Estás en Madrid ese fin de semana, con entrada o sin ella? O'Connell St, pub irlandés en Espoz y Mina 7, junto a la Puerta del Sol, es un punto de encuentro para aficionados ingleses, lo pone en directo en pantalla grande en La 1 y abre hasta las 03:00 para seguir la noche.",
       screeningName: "España–Inglaterra en directo en pantalla grande en O'Connell St",
       sections: [
         {
@@ -104,6 +103,7 @@ export const SPAIN_ENGLAND: MatchArticleData = {
             "España–Inglaterra, Liga de Naciones de la UEFA, Liga A, Grupo 3, última jornada de la fase de liga",
             "Domingo 15 de noviembre de 2026, 20:45 (hora de Madrid)",
             "Riyadh Air Metropolitano, Madrid",
+            "En La 1",
           ],
           note: "Fecha, hora y estadio según la UEFA y la RFEF. Los horarios pueden cambiar: compruébalo el mismo día.",
         },
@@ -111,7 +111,7 @@ export const SPAIN_ENGLAND: MatchArticleData = {
           title: "En directo en pantalla grande en O'Connell St",
           paras: [
             "O'Connell St abre los domingos desde las 14:00, abierto hasta las 03:00. Hay tiempo de sobra para comer tarde y tomar una cerveza en el centro antes del partido, y ninguna prisa al final.",
-            "Ambiente de pub irlandés a un par de minutos de la Puerta del Sol: cerveza de grifo, comida de cocina y el partido en pantalla grande. Aficionados de España y de Inglaterra, todos bienvenidos. Por orden de llegada: en las noches grandes conviene venir pronto.",
+            "Ambiente de pub irlandés a un par de minutos de la Puerta del Sol: cerveza de grifo, comida de cocina y el partido en pantalla grande en La 1. Aficionados de España y de Inglaterra, todos bienvenidos. Aficionados ingleses: punto de encuentro junto a Sol. Por orden de llegada: en las noches grandes conviene venir pronto.",
           ],
         },
         {
@@ -131,9 +131,9 @@ export const SPAIN_ENGLAND: MatchArticleData = {
           ],
         },
         {
-          title: "Una semana de Liga de Naciones",
+          title: "El jueves: España en Praga",
           paras: [
-            "Inglaterra juega contra Croacia en Wembley el jueves 12 de noviembre a las 20:45 (hora de Madrid), la misma noche del Chequia–España en Praga. El domingo 15, el Croacia–Chequia empieza a la misma hora que el España–Inglaterra. Todos están en la Agenda.",
+            "Tres días antes, el jueves 12 de noviembre, España juega en Praga contra Chequia a las 20:45 hora de Madrid. Ese partido también está en la Agenda.",
           ],
         },
       ],

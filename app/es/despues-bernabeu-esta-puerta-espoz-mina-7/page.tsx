@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { AfterGameSundayFourBars } from "@/components/AfterGameSundayFourBars";
 import { PageShell } from "@/components/PageShell";
+import { PastEventNotice } from "@/components/PastEventNotice";
 import { PageHero, Section } from "@/components/Prose";
 import { AFTER_GAME_PATHS } from "@/lib/after-game-sunday-8-nov";
 import { PATHS } from "@/lib/fan-weekend";
@@ -19,10 +20,11 @@ export default function EsDespuesBernabeuEstaPuertaPage() {
   return (
     <PageShell locale="es" altLangHref={AFTER_GAME_PATHS.bernabeuEn}>
       <PageHero
-        eyebrow="Domingo 8 de noviembre · del estadio a esta calle"
+        eyebrow="Evento pasado · domingo 8 de noviembre de 2026 · del estadio a esta calle"
         title="Después del Bernabéu, esta puerta en Espoz y Mina 7"
-        lead="Cuando salís del Madrid Game, la puerta irlandesa de esta calle es la fachada roja con el rótulo dorado. O'Connell's. Luego las tres hermanas. Pub independiente. No es un evento oficial de la NFL. No inventamos el trayecto desde el estadio."
+        lead="Cuando salían del Madrid Game el domingo 8 de noviembre de 2026, la puerta irlandesa de esta calle era la fachada roja con el rótulo dorado. O'Connell's. Luego las tres hermanas. Pub independiente. No inventamos el trayecto desde el estadio."
       />
+      <PastEventNotice locale="es" />
 
       <Section title="La salida del estadio cae en esta calle" featured>
         <p>

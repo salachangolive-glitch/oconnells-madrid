@@ -10,7 +10,7 @@ import { ADDRESS } from "@/lib/venue";
 export const metadata = buildMetadata({
   title: "Liverpool 15:00 at the usual Sunday lock — O'Connell's",
   description:
-    "Crystal Palace vs Liverpool is 15:00 Madrid on Sunday 8 Nov — the hour O'Connell's usually opens. This Sunday we open at 12:00. Ask which game is on. Four bars, Maps, Four Corner 14:00 screens.",
+    "Crystal Palace vs Liverpool was 15:00 Madrid on Sunday 8 Nov — the hour O'Connell's usually opens. That Sunday we opened at 12:00. Usual Sundays from 14:00.",
   path: PL_PATHS.liverpoolEn,
 });
 
@@ -20,7 +20,7 @@ export default function Liverpool1500Page() {
       <PageHero
         eyebrow="Sunday 8 November · gold lettering, Espoz y Mina 7"
         title="Liverpool is 15:00. That is this door's usual lock."
-        lead="Crystal Palace vs Liverpool kicks off at 15:00 Madrid time. On every other Sunday that is when O'Connell's turns the key. This Sunday the red facade is already open from 12:00. Independent Irish pub. We do not promise Liverpool is on a named screen — ask which game is on."
+        lead="Crystal Palace vs Liverpool kicked off at 15:00 Madrid time on Sunday 8 November 2026. On every other Sunday that is when O'Connell's turns the key. That Sunday the red facade was already open from 12:00. Independent Irish pub."
       />
 
       <Section title="The chalkboard still says 14:00" featured>
@@ -29,7 +29,7 @@ export default function Liverpool1500Page() {
           puts Palace vs Liverpool at {PL_KICKOFFS.palaceLiverpool.madrid} — one
           hour after that chalkboard, and the same hour a traveller still
           treats as “when the Irish door wakes.” This Sunday 8 November the
-          exception is earlier: we unlock at 12:00 so the room exists before
+          exception was earlier: we unlocked at 12:00 so the room existed before
           the NFL Madrid game, not because we listed a Premier League grid.
         </p>
         <p>

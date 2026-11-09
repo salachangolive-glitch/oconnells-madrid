@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { InteriorPhoto } from "@/components/InteriorPhoto";
 import { PageShell } from "@/components/PageShell";
+import { PastEventNotice } from "@/components/PastEventNotice";
 import { PageHero, Section } from "@/components/Prose";
 import { buildMetadata } from "@/lib/seo";
 import { agendaBuildNow, madridTodayYmd } from "@/lib/fixtures";
@@ -17,11 +18,11 @@ export const metadata = buildMetadata({
 const faq = [
   {
     q: "Where can I watch NFL Madrid?",
-    a: "At this NFL bar Madrid: O'Connell St, Calle de Espoz y Mina 7, a short walk from Puerta del Sol. Watch NFL Madrid on the screens when we are showing it — Sunday afternoon (Bengals at Falcons 15:30 if you are not at the stadium) then RedZone from 19:00. Ask which game is on. GET DIRECTIONS is the Maps pin for this listing.",
+    a: "At this NFL bar Madrid: O'Connell St, Calle de Espoz y Mina 7, a short walk from Puerta del Sol. Watch NFL Madrid on the screens when we are showing it. Ask which game is on. GET DIRECTIONS is the Maps pin for this listing.",
   },
   {
     q: "Do you show American football?",
-    a: "Yes, when we are showing it — including Sunday 8 November, a full day from midday (open from 12:00). European football comes first at O'Connell St, and every confirmed game is listed on What's On with the Madrid time.",
+    a: "Yes, when we are showing it. European football comes first at O'Connell St, and every confirmed game is listed on What's On with the Madrid time.",
   },
   {
     q: "Do you show every game?",
@@ -32,8 +33,8 @@ const faq = [
     a: "We are in the city centre, near Sol, not by the stadium. The metro from Sol makes it an easy stop before or after a day in central Madrid.",
   },
   {
-    q: "What time do you open on Sunday 8 November?",
-    a: "Exception for Sunday 8 Nov only: we open from 12:00. Usual Sundays open at 14:00.",
+    q: "What time do you open on Sunday?",
+    a: "Usual Sundays open at 14:00 and close at 03:00. Sunday 8 November 2026 was a one-day exception from 12:00 for the NFL Madrid Game; that day has now taken place.",
   },
 ];
 
@@ -73,15 +74,16 @@ export default function NflMadridPage() {
   return (
     <PageShell locale="en" altLangHref="/es/nfl-madrid">
       <PageHero
-        eyebrow="NFL bar Madrid · Irish pub · sports bar Sol"
+        eyebrow="Past event · NFL Madrid Game · Sunday 8 November 2026"
         title="Watch NFL Madrid at this Irish pub near Sol"
-        lead="Sunday 8 November we open from 12:00 for a full day from midday — not just the evening. Watch NFL Madrid near Puerta del Sol on the screens, with Bengals at Falcons at 15:30 and Sunday football after. Independent Irish pub and sports bar; ask which game is on."
+        lead="Bengals at Falcons was the NFL Madrid Game at the Bernabéu on Sunday 8 November 2026 at 15:30. O'Connell St at Espoz y Mina 7, by Puerta del Sol, was a place to watch on the screens and to meet before and after. Independent Irish pub and sports bar; usual Sundays open at 14:00. Ask which game is on."
       />
       <InteriorPhoto
         src="/images/interior/sports-aisle.webp"
         alt="TVs along the sports area at O'Connell St near Sol"
         position="object-[center_35%]"
       />
+      <PastEventNotice locale="en" />
       <Section title="NFL bar Madrid">
         <p>
           O&apos;Connell St sits on {ADDRESS.street}, a short walk from Puerta
@@ -185,10 +187,10 @@ export default function NflMadridPage() {
           </Section>
         </>
       ) : null}
-      <Section title="Going to the Bernabéu on Sunday 8 November">
+      <Section title="The Bernabéu on Sunday 8 November">
         <p>
-          Bengals at Falcons kicks off at 15:30 Madrid time at the Bernabéu.
-          These are the arrival details Real Madrid lists on{" "}
+          Bengals at Falcons kicked off at 15:30 Madrid time at the Bernabéu.
+          Arrival details Real Madrid listed on{" "}
           <a
             href="https://bernabeu.realmadrid.com/nfl/"
             target="_blank"
@@ -213,13 +215,12 @@ export default function NflMadridPage() {
           </li>
         </ul>
         <p>
-          No ticket? Watch it on the big screen, with the match-day atmosphere,
-          at O&apos;Connell St, near Sol, from 15:30. From 19:00, come back from
-          the stadium to O&apos;Connell St. Check{" "}
+          No ticket? That Sunday the game was on the big screen at O&apos;Connell
+          St, near Sol, from 15:30, with later NFL windows from 19:00. Check{" "}
           <Link href="/whats-on" className="text-cream underline">
             What&apos;s On
           </Link>{" "}
-          for the rest of Sunday&apos;s games.
+          for what is next.
         </p>
       </Section>
       {/* This week — meeting point only (owner 6 Nov: no third-party venue promo). */}
@@ -241,8 +242,8 @@ export default function NflMadridPage() {
         <Section title="Four bars near Sol">
           <p>
             Four sibling venues sit within a few minutes of Puerta del Sol —
-            different rooms for the same fan weekend. Pick the one that suits
-            you, hop between them, or start from the shared guide:{" "}
+            Dubliners, O&apos;Connell St, O&apos;Reilly&apos;s and Four Corner.
+            Different rooms around the same square. Start from the shared guide:{" "}
             <a
               href="https://dublinersmadrid.es/4-bars-one-fan-weekend/"
               target="_blank"
@@ -287,7 +288,7 @@ export default function NflMadridPage() {
             ))}
           </ul>
           <p className="mt-3 text-sm text-cream">
-            Prefer the overview of all four rooms for this fan weekend? See{" "}
+            Prefer the overview of all four rooms around Sol? See{" "}
             <a
               href="https://dublinersmadrid.es/4-bars-one-fan-weekend/"
               target="_blank"

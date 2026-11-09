@@ -36,8 +36,8 @@ export function FourBarsNearSol({ locale }: { locale: "en" | "es" }) {
     <Section title={es ? "Cuatro bares cerca de Sol" : "Four bars near Sol"}>
       <p>
         {es
-          ? "Cuatro bares hermanos alrededor de la Puerta del Sol: el mismo finde, cuatro salas. Elige una, salta de una a otra, o empieza por la guía común."
-          : "Four sibling bars around Puerta del Sol: one fan weekend, four rooms. Pick one, hop between them, or start from the shared guide."}{" "}
+          ? "Cuatro bares hermanos alrededor de la Puerta del Sol: aquel finde, cuatro salas. Dubliners, O'Connell St, O'Reilly's y Four Corner."
+          : "Four sibling bars around Puerta del Sol: that fan weekend, four rooms. Dubliners, O'Connell St, O'Reilly's and Four Corner."}{" "}
         <a
           href={es ? "https://dublinersmadrid.es/es/cuatro-bares-fin-de-semana/" : "https://dublinersmadrid.es/4-bars-one-fan-weekend/"}
           target="_blank"

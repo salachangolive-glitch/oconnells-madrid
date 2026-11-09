@@ -2,6 +2,7 @@ import Link from "next/link";
 import { FourBarsNearSol } from "@/components/FourBarsNearSol";
 import { InteriorPhoto } from "@/components/InteriorPhoto";
 import { PageShell } from "@/components/PageShell";
+import { PastEventNotice } from "@/components/PastEventNotice";
 import { PageHero, Section } from "@/components/Prose";
 import { buildMetadata } from "@/lib/seo";
 import { MAPS_URL } from "@/lib/venue";
@@ -17,9 +18,9 @@ export default function NewsAtleticoBarcelonaSundayNightPage() {
   return (
     <PageShell locale="en">
       <PageHero
-        eyebrow="LaLiga · Sunday 8 November 2026 · 21:00"
+        eyebrow="Past event · LaLiga · Sunday 8 November 2026 · 21:00"
         title="Atlético v Barcelona: a big LaLiga Sunday night in Sol"
-        lead="Atlético Madrid host Barcelona at the Riyadh Air Metropolitano on Sunday 8 November. No ticket? Watch it live in the centre of Madrid at O'Connell St, a couple of minutes from Puerta del Sol, and with Monday 9 November a Madrid holiday, there's no rush to get home."
+        lead="Atlético Madrid hosted Barcelona at the Riyadh Air Metropolitano on Sunday 8 November 2026. O'Connell St, a couple of minutes from Puerta del Sol, was a place to watch it in the centre of Madrid."
       />
       <InteriorPhoto
         src="/images/interior/bar-taps.webp"
@@ -46,18 +47,17 @@ export default function NewsAtleticoBarcelonaSundayNightPage() {
           . Kick-off times can still move, so check it again on the day.
         </p>
       </Section>
+      <PastEventNotice locale="en" />
       <Section title="Live on the screens at O'Connell St">
         <p>
-          Exception Sunday 8 November: O&apos;Connell St opens from 12:00
-          (usual Sundays from 14:00) and stays open until 03:00, so the hours
-          cover the late kickoff. NFL Sunday starts at midday — Bengals at
-          Falcons at 15:30, then more NFL from 19:00 — and LaLiga takes over at
-          21:00. Ask which game is on; we do not promise every game on every
-          screen. The NFL Sunday plan is on{" "}
+          That Sunday O&apos;Connell St opened from 12:00 (usual Sundays from
+          14:00) and stayed open until 03:00. NFL Sunday started at midday —
+          Bengals at Falcons at 15:30, then more NFL from 19:00 — and LaLiga
+          at 21:00. The NFL Sunday note is on{" "}
           <Link href="/nfl-madrid" className="text-gold underline">
             NFL in Madrid
           </Link>
-          . First come, first served.
+          .
         </p>
         <p>
           Atlético fans, Barça fans and neutrals all end up in the centre on a

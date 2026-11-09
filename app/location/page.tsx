@@ -28,7 +28,7 @@ export default function LocationPage() {
       <PageHero
         eyebrow="Irish pub · sports bar · Puerta del Sol"
         title={`How to get to this Irish pub near Sol — ${SITE_NAME}`}
-        lead={`${ADDRESS.full} — Irish pub and sports bar, a short walk from Puerta del Sol. Meeting point for Sunday NFL and Atlético–Barcelona 21:00.`}
+        lead={`${ADDRESS.full} — Irish pub and sports bar, a short walk from Puerta del Sol. Confirmed live sport is on What's On.`}
       />
       <VenueHero
         variant="secondary"
@@ -100,18 +100,14 @@ export default function LocationPage() {
           , not another saved place on the same street number.
         </p>
         <p>
-          Aim for Puerta del Sol, then walk to Calle de Espoz y Mina. This door
-          is the meeting point: Sunday NFL afternoon on the screens (Bengals at
-          Falcons 15:30 if you are not at the stadium), RedZone from 19:00, then
-          Atlético vs Barcelona at 21:00 when we are showing it. Four Corner on
-          Victoria 6 is open from 14:00, with sports screens. Ask which game is
-          on. See{" "}
+          Aim for Puerta del Sol, then walk to Calle de Espoz y Mina. Confirmed
+          games for the next 7 days, with Madrid times, are on{" "}
+          <Link href="/whats-on" className="text-cream underline">
+            What&apos;s On
+          </Link>
+          . Ask which game is on. See{" "}
           <Link href="/nfl-madrid" className="text-cream underline">
             NFL bar Madrid
-          </Link>
-          {" · "}
-          <Link href="/evening-nfl-then-atleti-barca-this-door" className="text-cream underline">
-            Evening NFL then Atleti 21:00
           </Link>
           .
         </p>

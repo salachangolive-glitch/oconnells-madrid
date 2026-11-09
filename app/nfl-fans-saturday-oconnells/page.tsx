@@ -1,16 +1,16 @@
 import Link from "next/link";
 import { FourBarsNearSol } from "@/components/FourBarsNearSol";
 import { PageShell } from "@/components/PageShell";
+import { PastEventNotice } from "@/components/PastEventNotice";
 import { PageHero, Section } from "@/components/Prose";
-import { TonightMeetupCta } from "@/components/TonightMeetupCta";
 import { PATHS, WEEKEND_HOURS } from "@/lib/fan-weekend";
 import { buildMetadata } from "@/lib/seo";
 import { ADDRESS } from "@/lib/venue";
 
 export const metadata = buildMetadata({
-  title: "NFL fans in Madrid this Saturday — O'Connell's near Sol",
+  title: "NFL fans in Madrid Saturday 7 Nov — past event",
   description:
-    "NFL fans in Madrid this Saturday: O'Connell's on Espoz y Mina 7 opens 15:00–03:30. No live NFL today. Valencia vs Real Madrid 21:00 when we are showing it. Sunday we open from 12:00.",
+    "Saturday 7 November 2026 at O'Connell's, Espoz y Mina 7: open 15:00–03:30, no live NFL that day. That Saturday has taken place. Usual Sundays from 14:00. See What's On.",
   path: PATHS.saturdayEn,
 });
 
@@ -18,12 +18,11 @@ export default function SaturdayFansPage() {
   return (
     <PageShell locale="en" altLangHref={PATHS.saturdayEs}>
       <PageHero
-        eyebrow="Saturday 7 November · Espoz y Mina 7"
-        title="NFL fans in Madrid this Saturday"
-        lead="The weekend is already on — just not on an NFL clock. O'Connell's opens at 15:00 (until 03:30) at Calle de Espoz y Mina 7, the same street as Dubliners. Independent Irish pub. Not an official NFL event."
+        eyebrow="Past event · Saturday 7 November 2026 · Espoz y Mina 7"
+        title="NFL fans in Madrid that Saturday"
+        lead="Saturday 7 November 2026 had no live NFL. O'Connell's opened at 15:00 (until 03:30) at Calle de Espoz y Mina 7, the same street as Dubliners. Independent Irish pub."
       />
-
-      <TonightMeetupCta locale="en" />
+      <PastEventNotice locale="en" />
 
       <Section title="Meetup 18:00–19:00 at this door">
         <p>
@@ -38,9 +37,8 @@ export default function SaturdayFansPage() {
 
       <Section title="No live NFL today" featured>
         <p>
-          There are no official NFL games on Saturday 7 November. Do not come
-          looking for a kickoff on our screens today. Stay in Sol, meet the
-          four-bar crowd, and ask which football is on.
+          There were no NFL games on Saturday 7 November. That Saturday was
+          European football in Sol, not American.
         </p>
         <p>
           Valencia vs Real Madrid is at 21:00. We put it on when we are showing
@@ -63,13 +61,11 @@ export default function SaturdayFansPage() {
         </p>
       </Section>
 
-      <Section title="Sunday is public today">
+      <Section title="The Sunday that followed">
         <p>{WEEKEND_HOURS.sun8NovNoteEn}</p>
         <p>
-          Tomorrow: Bengals vs Falcons at 15:30 (Madrid game at the Bernabéu;
-          big screen here if you are not at the stadium), NFL windows from
-          19:00, Atlético vs Barcelona at 21:00. Ask which game is on. We do
-          not promise every kickoff on every screen.
+          Sunday 8 November: Bengals vs Falcons at 15:30 (Madrid game at the
+          Bernabéu), NFL windows from 19:00, Atlético vs Barcelona at 21:00.
         </p>
         <p>
           <Link href={PATHS.sundayEn} className="text-gold underline">

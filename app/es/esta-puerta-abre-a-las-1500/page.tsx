@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { FourBarsNearSol } from "@/components/FourBarsNearSol";
 import { PageShell } from "@/components/PageShell";
+import { PastEventNotice } from "@/components/PastEventNotice";
 import { PageHero, Section } from "@/components/Prose";
-import { TonightMeetupCta } from "@/components/TonightMeetupCta";
 import { PATHS } from "@/lib/fan-weekend";
 import { buildMetadata } from "@/lib/seo";
 import { ADDRESS } from "@/lib/venue";
@@ -19,12 +19,11 @@ export default function EsLaterDoorPage() {
   return (
     <PageShell locale="es" altLangHref={PATHS.laterDoorEn}>
       <PageHero
-        eyebrow="Sábado 7 de noviembre · fachada roja, rótulo dorado"
+        eyebrow="Evento pasado · sábado 7 de noviembre de 2026 · fachada roja, rótulo dorado"
         title="Esta puerta abre a las 15:00"
-        lead="Si bajas Espoz y Mina a mediodía buscando el rótulo dorado, el cerrojo sigue echado. No es un error: es este pub. O'Connell's abre a las 15:00 el sábado. Sala irlandesa independiente. No es un evento oficial de la NFL."
+        lead="Los sábados este pub sigue abriendo a las 15:00. El sábado 7 de noviembre de 2026 no hubo kickoff NFL. Sala irlandesa independiente en Espoz y Mina 7."
       />
-
-      <TonightMeetupCta locale="es" />
+      <PastEventNotice locale="es" />
 
       <Section title="El cerrojo más tarde de esta calle" featured>
         <p>
@@ -35,10 +34,8 @@ export default function EsLaterDoorPage() {
           11:30 — y luego dais la vuelta a este rótulo después de las tres.
         </p>
         <p>
-          El sábado 7 de noviembre no hay kickoff oficial de la NFL. No vengáis
-          a las 15:01 buscando un partido americano en el cristal.
-          Valencia–Real Madrid a las 21:00 si lo estamos poniendo — preguntad
-          en barra.
+          El sábado 7 de noviembre no hubo kickoff NFL. Valencia–Real Madrid
+          fue a las 21:00 aquella noche.
         </p>
       </Section>
 
@@ -60,12 +57,11 @@ export default function EsLaterDoorPage() {
         </p>
       </Section>
 
-      <Section title="Four Corner es mañana, 14:00, con pantallas">
+      <Section title="Four Corner el domingo, 14:00, con pantallas">
         <p>
-          Four Corner se suma el domingo desde las 14:00 hasta la madrugada,
-          con pantallas de deporte — pregunta qué partido echan. No inventamos
-          su parrilla. Este domingo nosotros abrimos desde las 12:00 (los
-          domingos habituales, desde las 14:00).
+          Four Corner se sumó aquel domingo desde las 14:00 hasta la madrugada,
+          con pantallas de deporte. Aquel domingo nosotros abrimos desde las
+          12:00 (los domingos habituales, desde las 14:00).
         </p>
         <p>
           <Link href={PATHS.usualSundayEs} className="text-gold underline">

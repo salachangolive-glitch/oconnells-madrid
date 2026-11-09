@@ -43,7 +43,7 @@ export default function EsChelsea1500Page() {
 
       <Section title="Esta puerta ya estaba abierta">
         <p>
-          El domingo habitual aquí es a las 14:00. Este domingo 8 de noviembre
+          El domingo habitual aquí es a las 14:00. Aquel domingo 8 de noviembre
           abrimos a las 12:00. A las 15:00 de Chelsea el rótulo dorado ya
           lleva tres horas encendido, y Four Corner en Victoria 6 lleva una
           hora abierto, con pantallas de deporte. La hora inglesa no abre este

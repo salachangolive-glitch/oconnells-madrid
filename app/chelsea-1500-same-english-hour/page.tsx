@@ -41,7 +41,7 @@ export default function Chelsea1500Page() {
 
       <Section title="This door was already open">
         <p>
-          Usual Sunday here is 14:00. This Sunday 8 November we open at 12:00.
+          Usual Sunday here is 14:00. That Sunday 8 November we opened at 12:00.
           By Chelsea’s 15:00 the gold lettering has been lit for three hours,
           and Four Corner on Victoria 6 has been open for one hour with sports
           screens. The English hour does not open this pub. The NFL exception

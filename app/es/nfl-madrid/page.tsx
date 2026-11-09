@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { InteriorPhoto } from "@/components/InteriorPhoto";
 import { PageShell } from "@/components/PageShell";
+import { PastEventNotice } from "@/components/PastEventNotice";
 import { PageHero, Section } from "@/components/Prose";
 import { buildMetadata } from "@/lib/seo";
 import { agendaBuildNow, madridTodayYmd } from "@/lib/fixtures";
@@ -18,11 +19,11 @@ export const metadata = buildMetadata({
 const faq = [
   {
     q: "¿Dónde ver la NFL en Madrid?",
-    a: "En este bar NFL Madrid: O'Connell St, Calle de Espoz y Mina 7, a un paso de Puerta del Sol. Ver la NFL en Madrid en pantallas cuando lo emitimos — domingo tarde (Bengals–Falcons 15:30 si no estás en el estadio) y RedZone desde las 19:00. Pregunta qué partido echan. CÓMO LLEGAR es el pin Maps de esta ficha.",
+    a: "En este bar NFL Madrid: O'Connell St, Calle de Espoz y Mina 7, a un paso de Puerta del Sol. Ver la NFL en Madrid en pantallas cuando lo emitimos. Pregunta qué partido echan. CÓMO LLEGAR es el pin Maps de esta ficha.",
   },
   {
     q: "¿Ponéis fútbol americano?",
-    a: "Sí, cuando lo emitimos — el domingo 8 de noviembre, jornada desde mediodía (abrimos desde las 12:00). En O'Connell St el fútbol europeo va primero, y cada partido confirmado aparece en la Agenda con la hora de Madrid.",
+    a: "Sí, cuando lo emitimos. En O'Connell St el fútbol europeo va primero, y cada partido confirmado aparece en la Agenda con la hora de Madrid.",
   },
   {
     q: "¿Ponéis todos los partidos?",
@@ -33,8 +34,8 @@ const faq = [
     a: "Estamos en el centro, junto a Sol, no al lado del estadio. En metro desde Sol es fácil pasar por aquí antes o después de un día por el centro.",
   },
   {
-    q: "¿A qué hora abrís el domingo 8 de noviembre?",
-    a: "Excepción solo del domingo 8 nov: abrimos desde las 12:00. Los domingos habituales abrimos a las 14:00.",
+    q: "¿A qué hora abrís el domingo?",
+    a: "Los domingos habituales abrimos a las 14:00 y cerramos a las 03:00. El domingo 8 de noviembre de 2026 fue una excepción de un solo día desde las 12:00 para el partido NFL en Madrid; aquel día ya ha tenido lugar.",
   },
 ];
 
@@ -74,15 +75,16 @@ export default function NflMadridPageEs() {
   return (
     <PageShell locale="es" altLangHref="/nfl-madrid">
       <PageHero
-        eyebrow="Bar NFL Madrid · pub irlandés · bar deportivo Sol"
+        eyebrow="Evento pasado · partido NFL en Madrid · domingo 8 de noviembre de 2026"
         title="Ver la NFL en Madrid en este pub irlandés junto a Sol"
-        lead="El domingo 8 de noviembre abrimos desde las 12:00: jornada desde mediodía, no solo por la noche. Ver la NFL en Madrid cerca de Puerta del Sol en pantallas, con Bengals–Falcons a las 15:30 y fútbol el domingo. Pub irlandés y bar deportivo independiente; pregunta qué partido echan."
+        lead="Bengals–Falcons fue el partido NFL en el Bernabéu el domingo 8 de noviembre de 2026 a las 15:30. O'Connell St en Espoz y Mina 7, junto a Puerta del Sol, fue un sitio para verlo en pantallas y quedar antes y después. Pub irlandés y bar deportivo independiente; los domingos habituales abrimos a las 14:00. Pregunta qué partido echan."
       />
       <InteriorPhoto
         src="/images/interior/sports-aisle.webp"
         alt="Televisiones en la zona deportiva de O'Connell St cerca de Sol"
         position="object-[center_35%]"
       />
+      <PastEventNotice locale="es" />
       <Section title="NFL bar Madrid">
         <p>
           O&apos;Connell St está en {ADDRESS.street}, a un paso de la Puerta del
@@ -191,10 +193,10 @@ export default function NflMadridPageEs() {
           </Section>
         </>
       ) : null}
-      <Section title="Si vas al Bernabéu el domingo 8 de noviembre">
+      <Section title="El Bernabéu el domingo 8 de noviembre">
         <p>
-          El Bengals–Falcons empieza a las 15:30, hora de Madrid, en el
-          Bernabéu. Estos son los datos de llegada que da el Real Madrid en{" "}
+          Bengals–Falcons empezó a las 15:30, hora de Madrid, en el Bernabéu.
+          Datos de llegada que daba el Real Madrid en{" "}
           <a
             href="https://bernabeu.realmadrid.com/nfl/"
             target="_blank"
@@ -220,10 +222,9 @@ export default function NflMadridPageEs() {
           </li>
         </ul>
         <p>
-          ¿Sin entrada? Míralo en pantalla grande, con todo el ambiente, en
-          O&apos;Connell St, junto a Sol, desde las 15:30. A partir de las
-          19:00, el pub es para cuando volváis del estadio. El resto de partidos
-          del domingo, en la{" "}
+          ¿Sin entrada? Aquel domingo el partido estuvo en pantalla grande en
+          O&apos;Connell St, junto a Sol, desde las 15:30, y más NFL desde las
+          19:00. Lo que viene, en la{" "}
           <Link href="/es/whats-on" className="text-cream underline">
             Agenda
           </Link>
@@ -251,8 +252,9 @@ export default function NflMadridPageEs() {
         <Section title="Cuatro bares cerca de Sol">
           <p>
             Cuatro locales hermanos a pocos minutos de la Puerta del Sol —
-            distintas salas para el mismo fin de semana de aficionados. Elige el
-            que te encaje, pásate de uno a otro, o empieza por la guía común:{" "}
+            Dubliners, O&apos;Connell St, O&apos;Reilly&apos;s y Four Corner.
+            Distintas salas alrededor de la misma plaza. Empieza por la guía
+            común:{" "}
             <a
               href="https://dublinersmadrid.es/es/cuatro-bares-fin-de-semana/"
               target="_blank"
@@ -297,8 +299,7 @@ export default function NflMadridPageEs() {
             ))}
           </ul>
           <p className="mt-3 text-sm text-cream">
-            ¿Quieres el resumen de las cuatro salas para este fin de semana?
-            Mira{" "}
+            ¿Quieres el resumen de las cuatro salas alrededor de Sol? Mira{" "}
             <a
               href="https://dublinersmadrid.es/es/cuatro-bares-fin-de-semana/"
               target="_blank"

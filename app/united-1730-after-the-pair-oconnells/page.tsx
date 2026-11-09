@@ -42,7 +42,7 @@ export default function United1730Page() {
 
       <Section title="How the afternoon actually stacks">
         <ul className="list-disc space-y-2 pl-5">
-          <li>12:00 — this door opens (usual Sunday is 14:00).</li>
+          <li>12:00 — that Sunday this door opened (usual Sunday is 14:00).</li>
           <li>
             14:00 — Four Corner, Victoria 6, opens until late, sports screens.
           </li>

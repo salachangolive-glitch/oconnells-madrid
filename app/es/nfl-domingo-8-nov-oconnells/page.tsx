@@ -1,15 +1,16 @@
 import Link from "next/link";
 import { FourBarsNearSol } from "@/components/FourBarsNearSol";
 import { PageShell } from "@/components/PageShell";
+import { PastEventNotice } from "@/components/PastEventNotice";
 import { PageHero, Section } from "@/components/Prose";
 import { PATHS, WEEKEND_HOURS } from "@/lib/fan-weekend";
 import { buildMetadata } from "@/lib/seo";
 import { ADDRESS } from "@/lib/venue";
 
 export const metadata = buildMetadata({
-  title: "Domingo 8 nov en O'Connell's — NFL desde las 12:00",
+  title: "Domingo 8 nov en O'Connell's — domingo NFL pasado",
   description:
-    "Domingo 8 de noviembre: O'Connell's abre desde las 12:00 en Espoz y Mina 7. Bengals–Falcons 15:30, NFL desde las 19:00, Atlético–Barcelona 21:00. Preguntad qué partido hay. Four Corner desde las 14:00.",
+    "Domingo 8 de noviembre de 2026 en O'Connell's, Espoz y Mina 7: abrimos 12:00, Bengals–Falcons 15:30. Aquel día ya ha tenido lugar. Domingos habituales desde las 14:00. Consulta la Agenda.",
   path: PATHS.sundayEs,
   locale: "es",
 });
@@ -18,15 +19,16 @@ export default function EsSundayNflPage() {
   return (
     <PageShell locale="es" altLangHref={PATHS.sundayEn}>
       <PageHero
-        eyebrow="Domingo 8 de noviembre · desde las 12:00"
+        eyebrow="Evento pasado · domingo 8 de noviembre de 2026"
         title="Domingo NFL en O'Connell's, junto a Sol"
-        lead="Excepción de un día: abrimos desde las 12:00 (el domingo habitual es a las 14:00). Pub irlandés en Espoz y Mina 7, junto a Puerta del Sol. Independiente — no es un evento oficial de la NFL. Preguntad qué partido hay."
+        lead="Aquel domingo abrimos desde las 12:00 (el domingo habitual es a las 14:00). Pub irlandés en Espoz y Mina 7, junto a Puerta del Sol. Bengals–Falcons fue a las 15:30."
       />
+      <PastEventNotice locale="es" />
 
       <Section title="Por qué abrimos a mediodía" featured>
         <p>
           {ADDRESS.full}. Los domingos habituales empezamos a las 14:00. El
-          domingo 8 de noviembre abrimos a las 12:00 para que la sala ya esté
+          domingo 8 de noviembre abrimos a las 12:00 para que la sala ya estuviera
           en marcha antes del partido de Madrid. {WEEKEND_HOURS.sun8NovNoteEs}
         </p>
         <p>

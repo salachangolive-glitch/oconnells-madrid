@@ -1,15 +1,16 @@
 import Link from "next/link";
 import { FourBarsNearSol } from "@/components/FourBarsNearSol";
 import { PageShell } from "@/components/PageShell";
+import { PastEventNotice } from "@/components/PastEventNotice";
 import { PageHero, Section } from "@/components/Prose";
 import { PATHS, WEEKEND_HOURS } from "@/lib/fan-weekend";
 import { buildMetadata } from "@/lib/seo";
 import { ADDRESS } from "@/lib/venue";
 
 export const metadata = buildMetadata({
-  title: "Usual Sunday is 14:00 — this Sunday O'Connell's opens at 12:00",
+  title: "Usual Sunday is 14:00 — 8 Nov 12:00 was a one-day exception",
   description:
-    "O'Connell's usual Sunday is 14:00. Sunday 8 Nov we open at 12:00. Four Corner still 14:00 on Victoria 6, sports screens. Addresses and Maps for all four bars near Sol.",
+    "O'Connell's usual Sunday is 14:00. Sunday 8 November 2026 opened at 12:00 as a one-day exception. That day has taken place. Usual hours are on the location page.",
   path: PATHS.usualSundayEn,
 });
 
@@ -17,23 +18,21 @@ export default function UsualSundayPage() {
   return (
     <PageShell locale="en" altLangHref={PATHS.usualSundayEs}>
       <PageHero
-        eyebrow="Sunday 8 November · one-day break in the hours"
-        title="Usual Sunday is 14:00. This one is not."
-        lead="The hours on this pub still read Sunday from 14:00. Keep that for every other week. Sunday 8 November the lock turns at 12:00 so the room exists before the Madrid NFL game. Independent Irish pub on Espoz y Mina 7. Not an official NFL event."
+        eyebrow="Past event · Sunday 8 November 2026 · one-day hours exception"
+        title="Usual Sunday is 14:00. That one was not."
+        lead="The hours on this pub still read Sunday from 14:00. Keep that for every other week. Sunday 8 November 2026 the lock turned at 12:00 so the room existed before the Madrid NFL game. Independent Irish pub on Espoz y Mina 7."
       />
+      <PastEventNotice locale="en" />
 
       <Section title="Why the chalkboard is wrong for one date" featured>
         <p>
-          {ADDRESS.full}. {WEEKEND_HOURS.sun8NovNoteEn} We are not copying
-          anyone else&apos;s lunch service. This is a one-day exception so the
-          Irish room is already a room at midday, not a shuttered facade while
-          kickoff talk starts on the square.
+          {ADDRESS.full}. {WEEKEND_HOURS.sun8NovNoteEn}           We were not copying
+          anyone else&apos;s lunch service. That was a one-day exception so the
+          Irish room was already a room at midday.
         </p>
         <p>
-          Bengals vs Falcons is at 15:30 at the Bernabéu. You can watch it here
-          on the big screen if you are not at the stadium. From 19:00 this is
-          also where you land if you come back into Sol. Ask which game is on.
-          We do not promise every kickoff on every set.
+          Bengals vs Falcons was at 15:30 at the Bernabéu. From 19:00 that
+          Sunday this was also where people landed if they came back into Sol.
         </p>
       </Section>
 

@@ -1,8 +1,6 @@
 import { UpcomingNotes } from "@/components/UpcomingNotes";
 import Link from "next/link";
 import { FixtureStrip } from "@/components/FixtureStrip";
-import { AfterGameSundayHighlight } from "@/components/AfterGameSundayHighlight";
-import { PremierSunday8NovHighlight } from "@/components/PremierSunday8NovHighlight";
 import { InteriorPhoto } from "@/components/InteriorPhoto";
 import { LocaloFindUs } from "@/components/LocaloFindUs";
 import { PageShell } from "@/components/PageShell";
@@ -42,8 +40,6 @@ export default function SportsPage() {
         </p>
         <FixtureStrip locale="en" windowOnly showHeading={false} />
       </Section>
-      <PremierSunday8NovHighlight locale="en" />
-      <AfterGameSundayHighlight locale="en" />
       <Section title="Live football at this door">
         <p>
           Football leads the room: Premier League, LaLiga, Champions League and

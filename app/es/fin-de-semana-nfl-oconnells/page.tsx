@@ -1,16 +1,16 @@
 import Link from "next/link";
 import { FourBarsNearSol } from "@/components/FourBarsNearSol";
 import { PageShell } from "@/components/PageShell";
+import { PastEventNotice } from "@/components/PastEventNotice";
 import { PageHero, Section } from "@/components/Prose";
-import { TonightMeetupCta } from "@/components/TonightMeetupCta";
 import { PATHS, WEEKEND_HOURS } from "@/lib/fan-weekend";
 import { buildMetadata } from "@/lib/seo";
 import { ADDRESS } from "@/lib/venue";
 
 export const metadata = buildMetadata({
-  title: "El fin de semana NFL ya se vive — O'Connell's junto a Sol",
+  title: "Sábado 7 nov NFL en O'Connell's — evento pasado",
   description:
-    "El fin de semana NFL ya se vive: O'Connell's en Espoz y Mina 7 abre 15:00–03:30. Hoy no hay NFL en directo. Valencia–Real Madrid 21:00 si lo estamos poniendo. Domingo abrimos desde las 12:00.",
+    "Sábado 7 de noviembre de 2026 en O'Connell's, Espoz y Mina 7: 15:00–03:30, sin NFL en directo aquel día. Aquel sábado ya ha tenido lugar. Domingos habituales desde las 14:00. Consulta la Agenda.",
   path: PATHS.saturdayEs,
   locale: "es",
 });
@@ -19,12 +19,11 @@ export default function EsSaturdayFansPage() {
   return (
     <PageShell locale="es" altLangHref={PATHS.saturdayEn}>
       <PageHero
-        eyebrow="Sábado 7 de noviembre · Espoz y Mina 7"
-        title="El fin de semana NFL ya se vive"
-        lead="El fin de semana ya está en marcha — solo que no va con reloj NFL. O'Connell's abre a las 15:00 (hasta las 03:30) en Calle de Espoz y Mina 7, la misma calle que Dubliners. Pub irlandés independiente. No es un evento oficial de la NFL."
+        eyebrow="Evento pasado · sábado 7 de noviembre de 2026 · Espoz y Mina 7"
+        title="El fin de semana NFL en aquel sábado"
+        lead="El sábado 7 de noviembre de 2026 no hubo NFL en directo. O'Connell's abrió a las 15:00 (hasta las 03:30) en Calle de Espoz y Mina 7, la misma calle que Dubliners. Pub irlandés independiente."
       />
-
-      <TonightMeetupCta locale="es" />
+      <PastEventNotice locale="es" />
 
       <Section title="Quedada 18:00–19:00 en esta puerta">
         <p>
@@ -40,10 +39,8 @@ export default function EsSaturdayFansPage() {
 
       <Section title="Hoy no hay NFL en directo" featured>
         <p>
-          El sábado 7 de noviembre no hay partidos oficiales de la NFL. No
-          vengáis buscando un kickoff americano en nuestras pantallas hoy.
-          Quedaos en Sol, juntaos con la gente de los cuatro bares y preguntad
-          qué fútbol hay.
+          El sábado 7 de noviembre no hubo partidos NFL. Aquel sábado el fútbol
+          en Sol fue europeo, no americano.
         </p>
         <p>
           Valencia–Real Madrid es a las 21:00. Lo ponemos cuando lo estamos

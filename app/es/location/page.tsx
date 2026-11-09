@@ -29,7 +29,7 @@ export default function EsLocationPage() {
       <PageHero
         eyebrow="Pub irlandés · bar deportivo · Puerta del Sol"
         title={`Cómo llegar a este pub irlandés junto a Sol — ${SITE_NAME}`}
-        lead={`${ADDRESS.full} — pub irlandés y bar deportivo, a un paso de Puerta del Sol. Punto de encuentro para la NFL del domingo y Atlético–Barcelona 21:00.`}
+        lead={`${ADDRESS.full} — pub irlandés y bar deportivo, a un paso de Puerta del Sol. El deporte confirmado está en la Agenda.`}
       />
       <VenueHero
         variant="secondary"
@@ -101,18 +101,15 @@ export default function EsLocationPage() {
           , no otro sitio guardado en la misma calle.
         </p>
         <p>
-          Dirígete a Puerta del Sol y camina hasta Calle de Espoz y Mina. Esta
-          puerta es el punto de encuentro: NFL de domingo por la tarde en
-          pantallas (Bengals–Falcons 15:30 si no estás en el estadio), RedZone
-          desde las 19:00, luego Atlético–Barcelona a las 21:00 cuando lo
-          estemos emitiendo. Four Corner en Victoria 6 está abierto desde las
-          14:00, con pantallas de deporte. Pregunta qué partido echan. Mira{" "}
+          Dirígete a Puerta del Sol y camina hasta Calle de Espoz y Mina. Los
+          partidos confirmados de los próximos 7 días, en hora de Madrid, están
+          en la{" "}
+          <Link href="/es/whats-on" className="text-cream underline">
+            Agenda
+          </Link>
+          . Pregunta qué partido echan. Mira{" "}
           <Link href="/es/nfl-madrid" className="text-cream underline">
             bar NFL Madrid
-          </Link>
-          {" · "}
-          <Link href="/es/nfl-noche-luego-atleti-barca-esta-puerta" className="text-cream underline">
-            NFL noche y Atleti 21:00
           </Link>
           .
         </p>

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { AfterGameSundayFourBars } from "@/components/AfterGameSundayFourBars";
 import { PageShell } from "@/components/PageShell";
+import { PastEventNotice } from "@/components/PastEventNotice";
 import { PageHero, Section } from "@/components/Prose";
 import { AFTER_GAME_PATHS } from "@/lib/after-game-sunday-8-nov";
 import { PATHS } from "@/lib/fan-weekend";
@@ -19,10 +20,11 @@ export default function EveningNflThenAtletiPage() {
   return (
     <PageShell locale="en" altLangHref={AFTER_GAME_PATHS.eveningEs}>
       <PageHero
-        eyebrow="Sunday 8 November · this door after the Madrid Game"
+        eyebrow="Past event · Sunday 8 November 2026 · this door after the Madrid Game"
         title="Evening NFL, then Atlético–Barcelona at 21:00, from this door"
-        lead="From the gold lettering on Espoz y Mina 7 the evening is American football first, then Atlético vs Barcelona at 21:00. We name a match only where this site already confirms it. Ask which game is on. Premier League is still this Sunday — we do not swap it out."
+        lead="On Sunday 8 November 2026, from the gold lettering on Espoz y Mina 7, the evening was American football first, then Atlético vs Barcelona at 21:00. We name a match only where this site already confirms it."
       />
+      <PastEventNotice locale="en" />
 
       <Section title="What this door already confirms" featured>
         <p>

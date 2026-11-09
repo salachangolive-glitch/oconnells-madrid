@@ -1,18 +1,13 @@
 import Link from "next/link";
 import { PostMatchBanner } from "@/components/PostMatchBanner";
 import { FixtureStrip } from "@/components/FixtureStrip";
-import { NflSunday8Nov } from "@/components/NflSunday8Nov";
-import { AfterGameSundayHighlight } from "@/components/AfterGameSundayHighlight";
-import { PremierSunday8NovHighlight } from "@/components/PremierSunday8NovHighlight";
 import { HomeCtaBand } from "@/components/HomeCtaBand";
 import { InteriorGallery, InteriorPhoto } from "@/components/InteriorPhoto";
 import { PageShell } from "@/components/PageShell";
 import { Section } from "@/components/Prose";
 import { ThursdayFeature } from "@/components/ThursdayFeature";
-import { TonightMeetupCta } from "@/components/TonightMeetupCta";
 import { LocaloFindUs } from "@/components/LocaloFindUs";
 import { VenueHero } from "@/components/VenueHero";
-import { agendaBuildNow, madridTodayYmd } from "@/lib/fixtures";
 import { buildMetadata } from "@/lib/seo";
 import {
   ADDRESS,
@@ -50,18 +45,11 @@ export default function HomePage() {
         <div className="mx-auto mt-4 inline-block rounded border border-gold/30 px-4 py-2 text-sm text-cream sm:text-base">
           <p className="font-semibold text-gold">Open every day</p>
           <p>{HOURS.summaryEn}</p>
-          <p className="mt-1 text-gold">Exception Sunday 8 Nov: open from 12:00</p>
         </div>
       </header>
-      <TonightMeetupCta locale="en" />
       <div className="mb-10 border-y border-gold/20 bg-pub-burgundy-deep/80">
         <HomeCtaBand locale="en" />
       </div>
-
-      {/* NFL Sunday 8 Nov: third home block (owner via DG 30 Oct), gone from 9 Nov */}
-      <NflSunday8Nov locale="en" today={madridTodayYmd(agendaBuildNow())} />
-      <PremierSunday8NovHighlight locale="en" />
-      <AfterGameSundayHighlight locale="en" />
 
       {/* Presentación — parallel to ES; visitors stay in their own section */}
       <section className="mb-12 max-w-2xl">

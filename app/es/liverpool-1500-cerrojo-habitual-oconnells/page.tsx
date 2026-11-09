@@ -10,7 +10,7 @@ import { ADDRESS } from "@/lib/venue";
 export const metadata = buildMetadata({
   title: "Liverpool 15:00 en el cerrojo habitual — O'Connell's",
   description:
-    "Crystal Palace–Liverpool es a las 15:00 Madrid el domingo 8 nov — la hora en que O'Connell's suele abrir. Este domingo abrimos a las 12:00. Preguntad qué hay en pantalla. Cuatro bares, Maps, Four Corner 14:00.",
+    "Crystal Palace–Liverpool fue a las 15:00 Madrid el domingo 8 nov. Aquel domingo abrimos a las 12:00. Preguntad qué hay en pantalla. Cuatro bares, Maps, Four Corner 14:00.",
   path: PL_PATHS.liverpoolEs,
   locale: "es",
 });
@@ -31,7 +31,7 @@ export default function EsLiverpool1500Page() {
           {PL_KICKOFFS.palaceLiverpool.madrid} — una hora después de esa
           pizarra, y la misma hora que un viajero sigue tratando como “cuando
           despierta la puerta irlandesa”. El domingo 8 de noviembre la
-          excepción es más temprano: abrimos a las 12:00 para que la sala
+          excepción fue más temprano: abrimos a las 12:00 para que la sala
           exista antes del partido NFL de Madrid, no porque hayamos colgado
           una parrilla de Premier League.
         </p>

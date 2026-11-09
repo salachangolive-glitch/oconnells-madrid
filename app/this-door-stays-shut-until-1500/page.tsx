@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { FourBarsNearSol } from "@/components/FourBarsNearSol";
 import { PageShell } from "@/components/PageShell";
+import { PastEventNotice } from "@/components/PastEventNotice";
 import { PageHero, Section } from "@/components/Prose";
-import { TonightMeetupCta } from "@/components/TonightMeetupCta";
 import { PATHS } from "@/lib/fan-weekend";
 import { buildMetadata } from "@/lib/seo";
 import { ADDRESS } from "@/lib/venue";
@@ -18,12 +18,11 @@ export default function LaterDoorPage() {
   return (
     <PageShell locale="en" altLangHref={PATHS.laterDoorEs}>
       <PageHero
-        eyebrow="Saturday 7 November · red facade, gold lettering"
+        eyebrow="Past event · Saturday 7 November 2026 · red facade, gold lettering"
         title="This door stays shut until 15:00"
-        lead="If you walk Espoz y Mina at midday looking for our gold lettering, the lock has not turned. That is this pub, not a mistake. O'Connell's opens at 15:00 on Saturday. Independent Irish room. Not an official NFL event."
+        lead="On Saturday this pub still opens at 15:00. Saturday 7 November 2026 had no NFL kickoff. Independent Irish room on Espoz y Mina 7."
       />
-
-      <TonightMeetupCta locale="en" />
+      <PastEventNotice locale="en" />
 
       <Section title="The later lock on this street" featured>
         <p>
@@ -34,9 +33,8 @@ export default function LaterDoorPage() {
           to this lettering after three.
         </p>
         <p>
-          There is no official NFL kickoff on Saturday 7 November. Do not come
-          here at 15:01 expecting an American game on the glass. Valencia vs
-          Real Madrid is at 21:00 when we are showing it — ask at the bar.
+          There was no NFL kickoff on Saturday 7 November. Valencia vs
+          Real Madrid was at 21:00 that evening.
         </p>
       </Section>
 
@@ -58,11 +56,11 @@ export default function LaterDoorPage() {
         </p>
       </Section>
 
-      <Section title="Four Corner is tomorrow, 14:00, with screens">
+      <Section title="Four Corner on Sunday, 14:00, with screens">
         <p>
-          Four Corner joins Sunday from 14:00 until late, with sports screens —
-          ask which game is on. We do not invent their listings. This Sunday we
-          ourselves open from 12:00 (usual Sundays from 14:00).
+          Four Corner joined that Sunday from 14:00 until late, with sports
+          screens. That Sunday we ourselves opened from 12:00 (usual Sundays
+          from 14:00).
         </p>
         <p>
           <Link href={PATHS.usualSundayEn} className="text-gold underline">

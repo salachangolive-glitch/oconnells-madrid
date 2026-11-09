@@ -3,6 +3,7 @@ import { FourBarsNearSol } from "@/components/FourBarsNearSol";
 import { InteriorPhoto } from "@/components/InteriorPhoto";
 import { JsonLd } from "@/components/JsonLd";
 import { PageShell } from "@/components/PageShell";
+import { PastEventNotice } from "@/components/PastEventNotice";
 import { PageHero, Section } from "@/components/Prose";
 import { absoluteUrl } from "@/lib/seo";
 import { ADDRESS, MAPS_URL, SITE_NAME } from "@/lib/venue";
@@ -43,6 +44,8 @@ export type MatchArticleData = {
   venueLocality?: string;
   /** Owner 6 Nov: NFL weekend notes lead with all four sibling bars. */
   fourBars?: boolean;
+  /** Past screening: keep the page, drop Event JSON-LD, show archive notice. */
+  pastEvent?: boolean;
   copy: Record<MatchLocale, MatchCopy>;
 };
 
@@ -64,23 +67,27 @@ function jsonLd(d: MatchArticleData, l: MatchLocale) {
   const url = absoluteUrl(d.paths[l]);
   const c = d.copy[l];
   const org = { "@type": "Organization", name: SITE_NAME, url: "https://oconnellsmadrid.es/" };
+  const article: Record<string, unknown> = {
+    "@type": "NewsArticle",
+    headline: c.h1,
+    description: c.description,
+    inLanguage: l,
+    url,
+    mainEntityOfPage: url,
+    datePublished: d.published,
+    dateModified: d.published,
+    image: [absoluteUrl("/og.jpg")],
+    author: org,
+    publisher: org,
+  };
+  if (d.pastEvent) {
+    return { "@context": "https://schema.org", "@graph": [article] };
+  }
+  article.about = { "@id": `${url}#screening` };
   return {
     "@context": "https://schema.org",
     "@graph": [
-      {
-        "@type": "NewsArticle",
-        headline: c.h1,
-        description: c.description,
-        inLanguage: l,
-        url,
-        mainEntityOfPage: url,
-        datePublished: d.published,
-        dateModified: d.published,
-        image: [absoluteUrl("/og.jpg")],
-        author: org,
-        publisher: org,
-        about: { "@id": `${url}#screening` },
-      },
+      article,
       {
         "@type": "Event",
         "@id": `${url}#screening`,
@@ -138,6 +145,7 @@ export function MatchNewsArticle({ data, locale }: { data: MatchArticleData; loc
           {s.note ? <p className="text-sm text-cream-muted">{s.note}</p> : null}
         </Section>
       ))}
+      {data.pastEvent ? <PastEventNotice locale={locale} /> : null}
       <Section title={c.find}>
         <p>
           {ADDRESS.full} ·{" "}
