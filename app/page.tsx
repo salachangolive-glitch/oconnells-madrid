@@ -149,6 +149,13 @@ export default function HomePage() {
           overlapping kickoffs and shared screens
         </Link>
         ,{" "}
+        <Link
+          href="/last-metres-sol-clock-to-gold-lettering-this-door"
+          className="text-gold underline"
+        >
+          last metres from the Sol clock to this door
+        </Link>
+        ,{" "}
         <Link href="/nfl-madrid" className="text-gold underline">
           watch NFL Madrid
         </Link>

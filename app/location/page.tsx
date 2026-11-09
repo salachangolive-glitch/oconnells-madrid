@@ -84,6 +84,16 @@ export default function LocationPage() {
           in the centre.
         </p>
         <p>
+          Last metres from the Sol clock to the gold lettering on this door:{" "}
+          <Link
+            href="/last-metres-sol-clock-to-gold-lettering-this-door"
+            className="text-cream underline"
+          >
+            Sol clock to gold lettering
+          </Link>
+          .
+        </p>
+        <p>
           Aim for Puerta del Sol, then walk to Calle de Espoz y Mina. This door
           is the meeting point: Sunday NFL afternoon on the screens (Bengals at
           Falcons 15:30 if you are not at the stadium), RedZone from 19:00, then

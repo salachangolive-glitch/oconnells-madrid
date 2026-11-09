@@ -85,6 +85,16 @@ export default function EsLocationPage() {
           centro.
         </p>
         <p>
+          Últimos metros del reloj de Sol al rótulo dorado de esta puerta:{" "}
+          <Link
+            href="/es/ultimos-metros-reloj-sol-rotulo-dorado-esta-puerta"
+            className="text-cream underline"
+          >
+            del reloj de Sol al rótulo dorado
+          </Link>
+          .
+        </p>
+        <p>
           Dirígete a Puerta del Sol y camina hasta Calle de Espoz y Mina. Esta
           puerta es el punto de encuentro: NFL de domingo por la tarde en
           pantallas (Bengals–Falcons 15:30 si no estás en el estadio), RedZone

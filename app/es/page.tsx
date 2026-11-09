@@ -152,6 +152,13 @@ export default function EsHomePage() {
           saques solapados y pantallas compartidas
         </Link>
         ,{" "}
+        <Link
+          href="/es/ultimos-metros-reloj-sol-rotulo-dorado-esta-puerta"
+          className="text-gold underline"
+        >
+          últimos metros del reloj de Sol a esta puerta
+        </Link>
+        ,{" "}
         <Link href="/es/nfl-madrid" className="text-gold underline">
           ver la NFL en Madrid
         </Link>{" "}
