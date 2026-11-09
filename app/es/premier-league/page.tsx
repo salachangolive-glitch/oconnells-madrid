@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { InteriorPhoto } from "@/components/InteriorPhoto";
+import { SportsPageWayfinding } from "@/components/SportsPageWayfinding";
 import { PremierLeagueLines } from "@/components/PremierLeagueLines";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
@@ -74,6 +75,7 @@ export default function EsPremierLeaguePage() {
           hora de Madrid dos veces.
         </p>
       </Section>
+      <SportsPageWayfinding locale="es" currentPath="/es/premier-league" />
       <Section title="CÓMO LLEGAR — este pin de Maps">
         <p>
           Las búsquedas de pub de Premier League en Madrid deben caer en esta

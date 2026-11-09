@@ -3,6 +3,7 @@ import { InteriorPhoto } from "@/components/InteriorPhoto";
 import { LocaloFindUs } from "@/components/LocaloFindUs";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
+import { SportsPageWayfinding } from "@/components/SportsPageWayfinding";
 import { buildMetadata } from "@/lib/seo";
 import { ADDRESS, HOURS, SITE_NAME } from "@/lib/venue";
 
@@ -11,6 +12,7 @@ export const metadata = buildMetadata({
   description:
     "Sports bar Sol Madrid at Calle de Espoz y Mina 7, just off Puerta del Sol: Irish pub with football and NFL on the screens. Kickoff times on What's On.",
   path: "/sports-bar-sol",
+  canonicalPath: "/sports",
 });
 
 export default function SportsBarSolPage() {
@@ -50,6 +52,7 @@ export default function SportsBarSolPage() {
           . Four Corner on Victoria 6 is open from 14:00, with sports screens.
         </p>
       </Section>
+      <SportsPageWayfinding locale="en" currentPath="/sports-bar-sol" />
       <LocaloFindUs locale="en" />
       <Section>
         <p>

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { FixtureStrip } from "@/components/FixtureStrip";
 import { InteriorPhoto } from "@/components/InteriorPhoto";
 import { LocaloFindUs } from "@/components/LocaloFindUs";
+import { SportsPageWayfinding } from "@/components/SportsPageWayfinding";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
 import { buildMetadata } from "@/lib/seo";
@@ -107,6 +108,7 @@ export default function SportsPage() {
           .
         </p>
       </Section>
+      <SportsPageWayfinding locale="en" currentPath="/sports" />
       <LocaloFindUs locale="en" />
       <UpcomingNotes locale="en" />
     </PageShell>

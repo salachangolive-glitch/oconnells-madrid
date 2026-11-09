@@ -3,6 +3,7 @@ import { InteriorPhoto } from "@/components/InteriorPhoto";
 import { LocaloFindUs } from "@/components/LocaloFindUs";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
+import { SportsPageWayfinding } from "@/components/SportsPageWayfinding";
 import { buildMetadata } from "@/lib/seo";
 import { ADDRESS, HOURS, SITE_NAME } from "@/lib/venue";
 
@@ -12,6 +13,7 @@ export const metadata = buildMetadata({
     "Bar deportivo Sol Madrid en Calle de Espoz y Mina 7, junto a Puerta del Sol: pub irlandés con fútbol y NFL en pantallas. Horarios en la Agenda.",
   path: "/es/sports-bar-sol",
   locale: "es",
+  canonicalPath: "/es/sports",
 });
 
 export default function EsSportsBarSolPage() {
@@ -51,6 +53,7 @@ export default function EsSportsBarSolPage() {
           pantallas de deporte.
         </p>
       </Section>
+      <SportsPageWayfinding locale="es" currentPath="/es/sports-bar-sol" />
       <LocaloFindUs locale="es" />
       <Section>
         <p>

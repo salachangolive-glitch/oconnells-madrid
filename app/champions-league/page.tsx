@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { InteriorPhoto } from "@/components/InteriorPhoto";
+import { SportsPageWayfinding } from "@/components/SportsPageWayfinding";
 import { PageShell } from "@/components/PageShell";
 import { PremierLeagueLines } from "@/components/PremierLeagueLines";
 import { PageHero, Section } from "@/components/Prose";
@@ -67,6 +68,7 @@ export default function ChampionsLeaguePage() {
           agenda rebuilds — Madrid clocks, not a UK graphic read twice.
         </p>
       </Section>
+      <SportsPageWayfinding locale="en" currentPath="/champions-league" />
       <Section title="GET DIRECTIONS — this Maps pin">
         <p>
           Champions League pub Madrid searches should land on this listing at

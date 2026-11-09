@@ -6,6 +6,7 @@ import {
   getSiteUrl,
   HOURS,
   MAPS_URL,
+  PHONE_DISPLAY,
   PUBLIC_EMAIL,
   SITE_NAME,
   SITE_TAGLINE,
@@ -24,8 +25,8 @@ function description(locale: SchemaLocale): string {
 
 /**
  * Site-wide BarOrPub entity. Rendered once per page by PageShell with the
- * page locale. No `telephone` (owner decision pending). `geo` = O'Connell St
- * GBP pin. servesCuisine removed ("Irish pub" is not a cuisine).
+ * page locale. `telephone` = GBP listing only (schema/GBP; not shown in public UI).
+ * `geo` = O'Connell St GBP pin. servesCuisine removed ("Irish pub" is not a cuisine).
  */
 export function barOrPubJsonLd(locale: SchemaLocale = "en") {
   const site = getSiteUrl();
@@ -37,6 +38,7 @@ export function barOrPubJsonLd(locale: SchemaLocale = "en") {
     alternateName: `${SITE_NAME} Madrid`,
     description: description(locale),
     url: site,
+    telephone: PHONE_DISPLAY,
     email: PUBLIC_EMAIL,
     address: {
       "@type": "PostalAddress",

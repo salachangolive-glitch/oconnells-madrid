@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { FixtureStrip } from "@/components/FixtureStrip";
 import { InteriorPhoto } from "@/components/InteriorPhoto";
+import { SportsPageWayfinding } from "@/components/SportsPageWayfinding";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
 import { buildMetadata } from "@/lib/seo";
@@ -81,6 +82,7 @@ export default function EsWatchFootballPage() {
           </p>
         </div>
       </Section>
+      <SportsPageWayfinding locale="es" currentPath="/es/watch-football-madrid" />
       <Section title="CÓMO LLEGAR — este pin de Maps">
         <p>
           Las búsquedas de ver fútbol en Madrid deben caer en esta ficha en

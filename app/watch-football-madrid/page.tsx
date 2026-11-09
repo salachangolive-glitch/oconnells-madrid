@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { FixtureStrip } from "@/components/FixtureStrip";
 import { InteriorPhoto } from "@/components/InteriorPhoto";
+import { SportsPageWayfinding } from "@/components/SportsPageWayfinding";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
 import { buildMetadata } from "@/lib/seo";
@@ -80,6 +81,7 @@ export default function WatchFootballPage() {
           </p>
         </div>
       </Section>
+      <SportsPageWayfinding locale="en" currentPath="/watch-football-madrid" />
       <Section title="GET DIRECTIONS — this Maps pin">
         <p>
           Watch football in Madrid searches should land on this listing at Espoz

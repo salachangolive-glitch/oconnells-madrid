@@ -13,6 +13,8 @@ type BuildMetaOpts = {
   description: string;
   path: string;
   locale?: "en" | "es" | "de";
+  /** When set, rel=canonical points here (self path if omitted). Used to consolidate overlapping hubs without 404. */
+  canonicalPath?: string;
 };
 
 export function absoluteUrl(path: string): string {
@@ -64,8 +66,9 @@ export function buildMetadata({
   description,
   path,
   locale = "en",
+  canonicalPath,
 }: BuildMetaOpts): Metadata {
-  const canonical = absoluteUrl(path);
+  const canonical = absoluteUrl(canonicalPath ?? path);
   const o = SEO_SHORT[path];
   if (o?.description) description = o.description;
   const base = o?.title ?? title;

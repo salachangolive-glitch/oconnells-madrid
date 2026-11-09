@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { InteriorPhoto } from "@/components/InteriorPhoto";
+import { SportsPageWayfinding } from "@/components/SportsPageWayfinding";
 import { PageShell } from "@/components/PageShell";
 import { PremierLeagueLines } from "@/components/PremierLeagueLines";
 import { PageHero, Section } from "@/components/Prose";
@@ -69,6 +70,7 @@ export default function EsChampionsLeaguePage() {
           veces.
         </p>
       </Section>
+      <SportsPageWayfinding locale="es" currentPath="/es/champions-league" />
       <Section title="CÓMO LLEGAR — este pin de Maps">
         <p>
           Las búsquedas de pub Champions Madrid deben caer en esta ficha en

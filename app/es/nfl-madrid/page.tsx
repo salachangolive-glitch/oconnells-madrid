@@ -2,6 +2,7 @@ import Link from "next/link";
 import { InteriorPhoto } from "@/components/InteriorPhoto";
 import { PageShell } from "@/components/PageShell";
 import { PastEventNotice } from "@/components/PastEventNotice";
+import { SportsPageWayfinding } from "@/components/SportsPageWayfinding";
 import { PageHero, Section } from "@/components/Prose";
 import { buildMetadata } from "@/lib/seo";
 import { agendaBuildNow, madridTodayYmd } from "@/lib/fixtures";
@@ -312,6 +313,7 @@ export default function NflMadridPageEs() {
           </p>
         </Section>
       </div>
+      <SportsPageWayfinding locale="es" currentPath="/es/nfl-madrid" />
       <Section title="Dónde estamos">
         <p>
           {ADDRESS.full}. {HOURS.summaryEs}.
