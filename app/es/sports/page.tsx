@@ -9,12 +9,12 @@ import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
 import { buildMetadata } from "@/lib/seo";
 import { BAR_MAPS } from "@/lib/after-game-sunday-8-nov";
-import { SITE_NAME } from "@/lib/venue";
+import { ADDRESS, SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
   title: "Bar deportivo Sol Madrid — pub irlandés",
   description:
-    "Bar deportivo Sol Madrid en O'Connell St, pub irlandés junto a Puerta del Sol. Fútbol, NFL, baloncesto, rugby, Fórmula 1 y tenis cuando está confirmado. Consulta la Agenda.",
+    "Pub de Premier League y bar deportivo Sol en Espoz y Mina 7. Cruces nombrados solo si la Agenda marca Confirmado. Hora Madrid. CÓMO LLEGAR.",
   path: "/es/sports",
   locale: "es",
 });
@@ -23,75 +23,35 @@ export default function EsSportsPage() {
   return (
     <PageShell locale="es" altLangHref="/sports">
       <PageHero
-        eyebrow="Bar deportivo Sol Madrid · pub irlandés"
-        title={`Deportes en directo en ${SITE_NAME}`}
-        lead="Bar deportivo Sol Madrid: pub irlandés junto a Puerta del Sol, con fútbol, NFL, NBA, rugby, Fórmula 1, tenis y otros deportes cuando la emisión está confirmada. Las horas están en la Agenda."
+        eyebrow="Bar deportivo Sol Madrid · pub de Premier League en Madrid"
+        title="Pub de Premier League en Madrid en este bar deportivo de Sol"
+        lead={`${SITE_NAME} en ${ADDRESS.full}: pub irlandés y bar deportivo Sol Madrid, junto a Puerta del Sol. Nombramos una emisión solo cuando la Agenda la marca Confirmado — hora de Madrid en cada fila. Pregunta qué partido echan.`}
       />
       <InteriorPhoto
         src="/images/interior/sports-aisle.webp"
         alt="Pantallas de deportes y pasillo de asientos en el pub irlandés O'Connell St cerca de Sol"
         position="object-[center_15%]"
       />
-      <FixtureStrip locale="es" windowOnly />
+      <Section title="Cruces nombrados — Confirmado, hora de Madrid" featured>
+        <p>
+          La lista siguiente es la misma agenda confirmada que la{" "}
+          <Link href="/es/whats-on" data-event="whats_on" className="text-gold underline">
+            Agenda
+          </Link>
+          . No inventamos saques ni prometemos todas las ligas a la vez. Si chocan
+          dos partidos, pregunta en la barra qué imagen principal echan.
+        </p>
+        <FixtureStrip locale="es" windowOnly showHeading={false} />
+      </Section>
       <PremierSunday8NovHighlight locale="es" />
       <AfterGameSundayHighlight locale="es" />
-      <Section title="Qué ponemos">
+      <Section title="Fútbol en directo en esta puerta">
         <p>
-          Este pub irlandés y bar deportivo pone fútbol casi todos los fines de
-          semana y las noches europeas, y otros deportes cuando esa emisión está
-          confirmada: Premier League, EFL Championship, LaLiga, Segunda,
-          Champions League, Europa League, Conference League, selecciones, NFL,
-          NBA, Euroliga, rugby, Fórmula 1, MotoGP, tenis, UFC y boxeo cuando se
-          ven en el pub.
-        </p>
-        <p>
-          Para las horas, mira la{" "}
-          <Link href="/es/whats-on" className="text-gold underline">
-            Agenda
-          </Link>
-          . Si chocan dos partidos, pantallas compartidas — no un reservado:{" "}
-          <Link
-            href="/es/saques-solapados-pantallas-compartidas-esta-puerta"
-            className="text-gold underline"
-          >
-            saques solapados en esta puerta
-          </Link>
-          . Si buscas fútbol en concreto:{" "}
-          <Link href="/es/watch-football-madrid" className="text-gold underline">
-            Ver fútbol en Madrid
-          </Link>
-          , con detalle de{" "}
+          El fútbol manda la sala: Premier, LaLiga, Champions y otras
+          competiciones cuando la emisión está confirmada. Fines de semana
+          ingleses:{" "}
           <Link href="/es/premier-league" className="text-gold underline">
-            Premier League
-          </Link>{" "}
-          y{" "}
-          <Link href="/es/champions-league" className="text-gold underline">
-            Champions League
-          </Link>
-          .
-        </p>
-      </Section>
-      <Section title="Pub de Premier League en Madrid">
-        <p>
-          Si buscas un pub de Premier League en Madrid, este pub irlandés junto
-          a Puerta del Sol pone los saques ingleses de sábado y domingo cuando
-          la emisión está confirmada, en hora de Madrid en la{" "}
-          <Link href="/es/whats-on" className="text-gold underline">
-            Agenda
-          </Link>
-          . Pregunta qué partido echan.{" "}
-          <a
-            href={BAR_MAPS.oconnells}
-            target="_blank"
-            rel="noopener noreferrer"
-            data-event="directions"
-            className="text-gold underline"
-          >
-            CÓMO LLEGAR
-          </a>{" "}
-          es el pin de esta ficha. Detalle en{" "}
-          <Link href="/es/premier-league" className="text-gold underline">
-            Premier League
+            pub de Premier League en Madrid
           </Link>
           {" · "}
           <Link
@@ -99,6 +59,14 @@ export default function EsSportsPage() {
             className="text-gold underline"
           >
             relojes de Madrid para saques ingleses de sábado
+          </Link>
+          . Más fútbol:{" "}
+          <Link href="/es/watch-football-madrid" className="text-gold underline">
+            ver fútbol en Madrid
+          </Link>
+          {" · "}
+          <Link href="/es/champions-league" className="text-gold underline">
+            Champions League
           </Link>
           .
         </p>
@@ -110,25 +78,38 @@ export default function EsSportsPage() {
       />
       <Section title="Más allá del fútbol">
         <p>
-          Fútbol americano, NBA, rugby, Fórmula 1 y tenis se ponen cuando los
-          estamos emitiendo. Para ver la NFL en Madrid en este bar NFL Madrid
-          junto a Sol, mira{" "}
+          NFL, NBA, rugby, Fórmula 1 y tenis solo cuando la Agenda los marca
+          Confirmado. Para NFL junto a Sol:{" "}
           <Link href="/es/nfl-madrid" className="text-gold underline">
             NFL en Madrid
           </Link>
-          . Si te importa un partido concreto, pregunta en la barra o mira la{" "}
-          <Link href="/es/whats-on" className="text-gold underline">
+          . ¿Un partido concreto? Pregunta en la barra; la agenda está en la{" "}
+          <Link href="/es/whats-on" data-event="whats_on" className="text-gold underline">
             Agenda
           </Link>
-          . Cómo funciona Confirmado:{" "}
-          <Link
-            href="/es/como-marca-confirmado-la-agenda-esta-puerta"
-            className="text-gold underline"
+          .
+        </p>
+      </Section>
+      <Section title="CÓMO LLEGAR — este pin de Maps">
+        <p>
+          Las búsquedas de bar deportivo Sol Madrid deben caer en esta ficha en
+          Espoz y Mina 7, no en la puerta de al lado. CID 10697659365903665225.
+        </p>
+        <p>
+          <a
+            href={BAR_MAPS.oconnells}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-event="directions"
+            className="text-cream underline"
           >
-            pregunta qué partido
+            CÓMO LLEGAR
+          </a>
+          {" · "}
+          <Link href="/es/location" className="text-cream underline">
+            Ubicación
           </Link>
-          . Four Corner en Victoria 6 está abierto desde las 14:00, con
-          pantallas de deporte — pregunta qué partido echan.
+          .
         </p>
       </Section>
       <LocaloFindUs locale="es" />
