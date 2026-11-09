@@ -8,6 +8,7 @@ import { LocaloFindUs } from "@/components/LocaloFindUs";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
 import { buildMetadata } from "@/lib/seo";
+import { BAR_MAPS } from "@/lib/after-game-sunday-8-nov";
 import { SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
@@ -64,11 +65,23 @@ export default function SportsPage() {
       </Section>
       <Section title="Premier League pub Madrid">
         <p>
-          English fans looking for a Premier League pub in Madrid can sit this
-          Irish pub near Puerta del Sol: Saturday and Sunday English kickoffs go
-          on when the screening is confirmed. Sunday 8 Nov the 15:00 cluster and
-          United at 17:30 sit alongside NFL afternoon and evening — coordinate,
-          do not substitute. Ask which game is on. Detail on{" "}
+          English fans looking for a Premier League pub Madrid sit this Irish
+          pub near Puerta del Sol. Saturday and Sunday English kickoffs go on
+          when the screening is confirmed, listed in Madrid time on{" "}
+          <Link href="/whats-on" className="text-gold underline">
+            What&apos;s On
+          </Link>
+          . Ask which game is on.{" "}
+          <a
+            href={BAR_MAPS.oconnells}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-event="directions"
+            className="text-gold underline"
+          >
+            GET DIRECTIONS
+          </a>{" "}
+          is this listing&apos;s Maps pin. Detail on{" "}
           <Link href="/premier-league" className="text-gold underline">
             Premier League
           </Link>

@@ -8,6 +8,7 @@ import { LocaloFindUs } from "@/components/LocaloFindUs";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
 import { buildMetadata } from "@/lib/seo";
+import { BAR_MAPS } from "@/lib/after-game-sunday-8-nov";
 import { SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
@@ -67,9 +68,21 @@ export default function EsSportsPage() {
         <p>
           Si buscas un pub de Premier League en Madrid, este pub irlandés junto
           a Puerta del Sol pone los saques ingleses de sábado y domingo cuando
-          la emisión está confirmada. El domingo 8 nov el bloque de las 15:00 y
-          United a las 17:30 van junto a la NFL de tarde y noche — coordinad, no
-          sustituyáis. Pregunta qué partido echan. Detalle en{" "}
+          la emisión está confirmada, en hora de Madrid en la{" "}
+          <Link href="/es/whats-on" className="text-gold underline">
+            Agenda
+          </Link>
+          . Pregunta qué partido echan.{" "}
+          <a
+            href={BAR_MAPS.oconnells}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-event="directions"
+            className="text-gold underline"
+          >
+            CÓMO LLEGAR
+          </a>{" "}
+          es el pin de esta ficha. Detalle en{" "}
           <Link href="/es/premier-league" className="text-gold underline">
             Premier League
           </Link>

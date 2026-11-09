@@ -4,12 +4,13 @@ import { PremierLeagueLines } from "@/components/PremierLeagueLines";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
 import { buildMetadata } from "@/lib/seo";
-import { ADDRESS, HOURS, MAPS_URL, SITE_NAME } from "@/lib/venue";
+import { BAR_MAPS } from "@/lib/after-game-sunday-8-nov";
+import { ADDRESS, HOURS, SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
-  title: "Premier League pub in Madrid, by Puerta del Sol",
+  title: "Premier League pub Madrid, by Puerta del Sol",
   description:
-    "Premier League pub by Puerta del Sol: confirmed Premier League games at O'Connell St, with Madrid kickoff times on What's On.",
+    "Premier League pub Madrid at O'Connell St, Espoz y Mina 7. Confirmed English kickoffs in Madrid time on What's On. GET DIRECTIONS on this Maps pin.",
   path: "/premier-league",
 });
 
@@ -17,23 +18,26 @@ export default function PremierLeaguePage() {
   return (
     <PageShell locale="en" altLangHref="/es/premier-league">
       <PageHero
-        eyebrow="Premier League · Madrid"
-        title={`Premier League pub near Sol: ${SITE_NAME}`}
-        lead="Premier League at an Irish pub a short walk from Puerta del Sol. Confirmed kickoffs for the next 7 days are on What’s On."
+        eyebrow="Premier League pub Madrid · Irish pub"
+        title={`Premier League pub Madrid: ${SITE_NAME}`}
+        lead="This Irish pub at Espoz y Mina 7 is a Premier League pub in Madrid. Confirmed Saturday and Sunday English kickoffs — listed in Madrid time — are on What’s On. Ask which game is on."
       />
       <InteriorPhoto
         src="/images/interior/sports-corridor.webp"
         alt="Sports TVs at O'Connell St near Sol"
         position="object-[center_40%]"
       />
-      <Section title="Confirmed Premier League games">
+      <Section title="Premier League pub Madrid">
         <p>
-          Saturday and Sunday Premier League matches are the usual plan, plus
-          the midweek games we are showing. Open{" "}
+          English fans looking for a Premier League pub Madrid sit this door, a
+          short walk from Puerta del Sol. We put Saturday and Sunday Premier
+          League on the screens when the screening is confirmed, plus midweek
+          rounds we are showing. Kickoffs on this site are Madrid clocks, not
+          UK clocks — open{" "}
           <Link href="/whats-on" data-event="whats_on" className="text-cream underline">
             What&apos;s On
           </Link>{" "}
-          for the Madrid times, or ask at the bar.
+          for the next 7 days, or ask at the bar.
         </p>
         <PremierLeagueLines locale="en" />
         <p>
@@ -48,25 +52,25 @@ export default function PremierLeaguePage() {
           .
         </p>
       </Section>
-      <Section title="Hours and directions">
+      <Section title="Hours and GET DIRECTIONS">
         <p>
           {ADDRESS.full}, a short walk from Puerta del Sol. {HOURS.summaryEn}.
         </p>
         <p>
           <a
-            href={MAPS_URL}
+            href={BAR_MAPS.oconnells}
             target="_blank"
             rel="noopener noreferrer"
             data-event="directions"
             className="text-cream underline"
           >
-            Directions from Puerta del Sol
+            GET DIRECTIONS
           </a>
           {" · "}
           <Link href="/location" className="text-cream underline">
             Location
           </Link>
-          .
+          . That pin is this listing, CID 10697659365903665225.
         </p>
       </Section>
     </PageShell>
