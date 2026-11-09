@@ -51,8 +51,16 @@ export default function EsAboutPage() {
           antes del partido y verlo en directo.
         </p>
         <p>
-          También hay otros deportes cuando se emiten: fútbol americano, NBA, rugby,
-          Fórmula 1 y tenis. Cada partido confirmado aparece en la{" "}
+          Charla de fútbol inglés en un pub irlandés independiente junto a Sol —
+          no guion de bar estudiantil:{" "}
+          <Link
+            href="/es/conversacion-futbol-ingles-pub-independiente-sol-esta-puerta"
+            className="text-cream underline"
+          >
+            conversación de fútbol inglés en esta puerta
+          </Link>
+          . También hay otros deportes cuando se emiten: fútbol americano, NBA,
+          rugby, Fórmula 1 y tenis. Cada partido confirmado aparece en la{" "}
           <Link href="/es/whats-on" className="text-cream underline">
             Agenda
           </Link>{" "}

@@ -49,8 +49,16 @@ export default function AboutPage() {
           before the match, and to watch it live.
         </p>
         <p>
-          Other sport goes on too when it is shown: American football, NBA, rugby, Formula 1
-          and tennis. Every confirmed match is listed on{" "}
+          English-speaking match talk at an independent Irish pub off Sol — not
+          a student-bar script:{" "}
+          <Link
+            href="/english-football-talk-independent-pub-off-sol-this-door"
+            className="text-cream underline"
+          >
+            English football talk at this door
+          </Link>
+          . Other sport goes on too when it is shown: American football, NBA,
+          rugby, Formula 1 and tennis. Every confirmed match is listed on{" "}
           <Link href="/whats-on" className="text-cream underline">
             What&apos;s On
           </Link>{" "}

@@ -159,6 +159,13 @@ export default function EsHomePage() {
           últimos metros del reloj de Sol a esta puerta
         </Link>
         ,{" "}
+        <Link
+          href="/es/conversacion-futbol-ingles-pub-independiente-sol-esta-puerta"
+          className="text-gold underline"
+        >
+          conversación de fútbol inglés en este pub independiente
+        </Link>
+        ,{" "}
         <Link href="/es/nfl-madrid" className="text-gold underline">
           ver la NFL en Madrid
         </Link>{" "}

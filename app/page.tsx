@@ -156,6 +156,13 @@ export default function HomePage() {
           last metres from the Sol clock to this door
         </Link>
         ,{" "}
+        <Link
+          href="/english-football-talk-independent-pub-off-sol-this-door"
+          className="text-gold underline"
+        >
+          English football talk at this independent pub
+        </Link>
+        ,{" "}
         <Link href="/nfl-madrid" className="text-gold underline">
           watch NFL Madrid
         </Link>
