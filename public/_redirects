@@ -1,3 +1,9 @@
+# News index: Next export writes hub as news.html but articles live under news/*.html (no news/index.html).
+/news /news.html 200
+/news/ /news.html 200
+/es/noticias /es/noticias.html 200
+/es/noticias/ /es/noticias.html 200
+
 # GSC HTML verification: serve exact .html URL with 200 (Pages strips .html -> 308). Never delete the original file.
 /googlede4d0a960f5c8eb4.html /gsc/googlede4d0a960f5c8eb4.txt 200
 # Expired Champions League match notes (20 and 21 Oct 2026), retired 24 Oct 2026.
