@@ -95,6 +95,15 @@ export default function WhatsOnPage() {
           </Link>
         </p>
       ) : null}
+      {/* Tokio Hotel gig night (Radar OC14; palaciovistalegre.com: Mon 23 Nov 2026, start time TBC): build-time date gate. */}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-23" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          Tokio Hotel at Palacio Vistalegre, Monday 23 November, their only date in Spain: meet at O&apos;Connell St, near Sol, before or after the concert.{" "}
+          <Link href="/news/tokio-hotel-madrid-gig-night-sol" className="text-gold underline">
+            Tokio Hotel gig night guide
+          </Link>
+        </p>
+      ) : null}
       {/* Getafe v Brighton + Real Madrid v Crvena Zvezda, visiting-fans articles (owner order 4 Nov 2026 via DG; uefa.com / euroleague.net): build-time date gates. */}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-05" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">
