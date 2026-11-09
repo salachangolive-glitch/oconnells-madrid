@@ -83,6 +83,9 @@ const EVENT_LAST_DAY: Record<string, string> = {
   "/es/noticias/real-madrid-inter-champions-femenina-sol": "2026-11-18",
   "/news/real-madrid-celta-saturday-night-sol": "2026-11-21",
   "/news/tokio-hotel-madrid-gig-night-sol": "2026-11-23",
+  "/news/real-madrid-psv-tuesday-night-sol": "2026-11-24",
+  "/news/real-madrid-zalgiris-wednesday-night-sol": "2026-11-25",
+  "/news/inter-fans-madrid-womens-champions-league-sol": "2026-11-18",
 };
 
 function madridYmd(d: Date): string {

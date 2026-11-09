@@ -80,9 +80,13 @@ export default function WhatsOnPage() {
       ) : null}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-18" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">
-          Women&apos;s Champions League: Real Madrid v Inter, Wednesday 18 November, 18:45 (Di Stéfano), live near Sol.{" "}
+          Women&apos;s Champions League: Real Madrid v Inter, Wednesday 18 November, 18:45 (Di Stéfano), live near Sol. Italian / Inter fans: a fans meeting point near Sol before or after.{" "}
           <Link href="/news/real-madrid-inter-womens-champions-league-sol" className="text-gold underline">
             Real Madrid v Inter in Sol
+          </Link>
+          {" · "}
+          <Link href="/news/inter-fans-madrid-womens-champions-league-sol" className="text-gold underline">
+            Inter fans meeting point near Sol
           </Link>
         </p>
       ) : null}
@@ -101,6 +105,24 @@ export default function WhatsOnPage() {
           Tokio Hotel at Palacio Vistalegre, Monday 23 November, their only date in Spain: meet at O&apos;Connell St, near Sol, before or after the concert.{" "}
           <Link href="/news/tokio-hotel-madrid-gig-night-sol" className="text-gold underline">
             Tokio Hotel gig night guide
+          </Link>
+        </p>
+      ) : null}
+      {/* Real Madrid v PSV, UCL MD5 (match.uefa.com/v5 id 2049625, 2026-11-24T20:00Z = 21:00 CET): build-time date gate. */}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-24" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          UEFA Champions League: Real Madrid v PSV, Tuesday 24 November, 21:00 (Bernabéu). Dutch / PSV fans: a fans meeting point near Sol before or after.{" "}
+          <Link href="/news/real-madrid-psv-tuesday-night-sol" className="text-gold underline">
+            Real Madrid v PSV: Tuesday night near Sol
+          </Link>
+        </p>
+      ) : null}
+      {/* Real Madrid v Žalgiris, EuroLeague (Movistar Arena 25 Nov 20:45, E2026 game 139, round 14): build-time date gate. */}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-25" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          EuroLeague: Real Madrid v Žalgiris, Wednesday 25 November, 20:45 (Movistar Arena). Lithuanian / Žalgiris fans: a fans meeting point near Sol before or after.{" "}
+          <Link href="/news/real-madrid-zalgiris-wednesday-night-sol" className="text-gold underline">
+            Real Madrid v Žalgiris: Wednesday night near Sol
           </Link>
         </p>
       ) : null}

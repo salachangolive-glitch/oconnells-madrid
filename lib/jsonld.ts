@@ -90,6 +90,65 @@ export function barOrPubJsonLd(locale: SchemaLocale = "en") {
   };
 }
 
+/** NewsArticle + stadium SportsEvent. No pub screening Event. */
+export function visitingFansNewsJsonLd(opts: {
+  path: string;
+  headline: string;
+  description: string;
+  datePublished: string;
+  sportsEventName: string;
+  startDate: string;
+  sport: string;
+  homeTeam: string;
+  awayTeam: string;
+  venue: string;
+  venueStreet?: string;
+}): Record<string, unknown> {
+  const site = getSiteUrl();
+  const url = `${site}${opts.path}`;
+  const org = { "@type": "Organization", name: SITE_NAME, url: `${site}/` };
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "NewsArticle",
+        headline: opts.headline,
+        description: opts.description,
+        inLanguage: "en",
+        url,
+        mainEntityOfPage: url,
+        datePublished: opts.datePublished,
+        dateModified: opts.datePublished,
+        image: [`${site}/og.jpg`],
+        author: org,
+        publisher: org,
+        about: { "@id": `${url}#match` },
+      },
+      {
+        "@type": "SportsEvent",
+        "@id": `${url}#match`,
+        name: opts.sportsEventName,
+        startDate: opts.startDate,
+        sport: opts.sport,
+        eventStatus: "https://schema.org/EventScheduled",
+        eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+        homeTeam: { "@type": "SportsTeam", name: opts.homeTeam },
+        awayTeam: { "@type": "SportsTeam", name: opts.awayTeam },
+        location: {
+          "@type": "StadiumOrArena",
+          name: opts.venue,
+          address: {
+            "@type": "PostalAddress",
+            ...(opts.venueStreet ? { streetAddress: opts.venueStreet } : {}),
+            addressLocality: "Madrid",
+            addressCountry: "ES",
+          },
+        },
+      },
+    ],
+  };
+}
+
 /**
  * /about and /es/about: AboutPage node with its own @id, pointing at the
  * site-wide O'Connell St entity (`/#pub`). Facts only (lib/venue.ts).
