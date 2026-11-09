@@ -1,9 +1,7 @@
 import Link from "next/link";
 import { InteriorPhoto } from "@/components/InteriorPhoto";
-import { JsonLd } from "@/components/JsonLd";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
-import { visitingFansNewsJsonLd } from "@/lib/jsonld";
 import { buildMetadata } from "@/lib/seo";
 import { MAPS_URL } from "@/lib/venue";
 
@@ -18,8 +16,6 @@ import { MAPS_URL } from "@/lib/venue";
  * separate page). Wednesday hours 18:00–03:00 (lib/venue HOURS.monThu).
  */
 const PATH = "/news/inter-fans-madrid-womens-champions-league-sol";
-const PUBLISHED = "2026-11-09T10:00:00+01:00";
-const START = "2026-11-18T18:45:00+01:00";
 const H1 = "Inter in Madrid: a Wednesday Women's Champions League night that starts at Sol";
 const DESCRIPTION =
   "Inter fans in Madrid: Real Madrid Femenino v Inter, Wed 18 Nov 2026, 18:45, Di Stéfano. O'Connell St, Espoz y Mina 7 by Sol, fans meeting point before or after.";
@@ -28,26 +24,12 @@ export const metadata = buildMetadata({
   title: "Real Madrid Femenino v Inter, Wed 18 Nov 18:45: an Irish pub near Sol before and after",
   description: DESCRIPTION,
   path: PATH,
+  noindex: true,
 });
 
 export default function NewsInterFansWomensChampionsLeaguePage() {
   return (
     <PageShell locale="en">
-      <JsonLd
-        data={visitingFansNewsJsonLd({
-          path: PATH,
-          headline: H1,
-          description: DESCRIPTION,
-          datePublished: PUBLISHED,
-          sportsEventName: "Real Madrid Femenino v Inter (UEFA Women's Champions League)",
-          startDate: START,
-          sport: "Football",
-          homeTeam: "Real Madrid Femenino",
-          awayTeam: "Inter",
-          venue: "Estadio Alfredo Di Stéfano",
-          venueStreet: "Camino de Sintra, s/n",
-        })}
-      />
       <PageHero
         eyebrow="UEFA Women's Champions League · Wednesday 18 November 2026 · 18:45"
         title={H1}
@@ -58,6 +40,15 @@ export default function NewsInterFansWomensChampionsLeaguePage() {
         alt="Beer taps at the bar of O'Connell St Irish pub by Puerta del Sol"
         position="object-[center_40%]"
       />
+      <Section title="Meeting point only">
+        <p>
+          O&apos;Connell St is a fans meeting point near Sol — not a confirmed
+          in-pub screening of this match. A Spanish TV channel for a pub
+          screening has not been verified. Ask at the bar on the day if you are
+          looking for a screen; otherwise use this page only for directions and
+          meeting up before or after the stadium.
+        </p>
+      </Section>
       <Section title="The match">
         <ul className="list-disc space-y-1 pl-5">
           <li>Real Madrid Femenino v Inter, UEFA Women&apos;s Champions League, league phase, matchday 5</li>

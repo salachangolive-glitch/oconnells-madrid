@@ -87,8 +87,12 @@ const EVENT_LAST_DAY: Record<string, string> = {
   "/news/real-madrid-zalgiris-wednesday-night-sol": "2026-11-25",
   "/news/atletico-viking-wednesday-night-sol": "2026-11-25",
   "/es/noticias/atletico-viking-miercoles-sol": "2026-11-25",
-  "/news/inter-fans-madrid-womens-champions-league-sol": "2026-11-18",
 };
+
+/** Reachable URLs omitted from the index (noindex pages). */
+const SITEMAP_EXCLUDE = new Set([
+  "/news/inter-fans-madrid-womens-champions-league-sol",
+]);
 
 function madridYmd(d: Date): string {
   return new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Madrid" }).format(d);
@@ -100,6 +104,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const lastmod = LASTMOD as Record<string, string>;
 
   return ALL_CONTENT_PATHS.filter((path) => {
+    if (SITEMAP_EXCLUDE.has(path)) return false;
     const end = EVENT_LAST_DAY[path];
     return !end || end >= today;
   }).map((path) => ({

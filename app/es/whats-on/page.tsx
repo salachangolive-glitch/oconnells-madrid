@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { PostMatchBanner } from "@/components/PostMatchBanner";
+import { NflSunday15NovWhatsOn } from "@/components/NflSunday15NovWhatsOn";
 import { FixtureList } from "@/components/FixtureList";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
@@ -42,36 +43,12 @@ export default function EsWhatsOnPage() {
       ) : null}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-14" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">
-          Liga de Naciones: Austria–Irlanda, sábado 14 de noviembre, 20:45 hora de Madrid (Raiffeisen Arena, Linz), en directo cerca de Sol.
-        </p>
-      ) : null}
-      {madridTodayYmd(agendaBuildNow()) <= "2026-11-14" ? (
-        <p className="mb-6 text-sm text-cream-muted sm:text-base">
           Nations Championship de rugby: Irlanda–Fiyi, sábado 14 de noviembre, 21:10 hora de Madrid (Aviva Stadium, Dublín), en directo cerca de Sol.
         </p>
       ) : null}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-10" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">
           Bryan Adams «Roll with the Punches» en el Movistar Arena, martes 10 de noviembre, 20:30: queda en O&apos;Connell St, cerca de Sol, antes o después del concierto.
-        </p>
-      ) : null}
-      {/* Real Madrid Femenino UWCL (DG 26 Oct; times per match.uefa.com + realmadrid.com): build-time date gates, each line gone from the daily rebuild after its date. */}
-      {madridTodayYmd(agendaBuildNow()) <= "2026-11-10" ? (
-        <p className="mb-6 text-sm text-cream-muted sm:text-base">
-          Champions femenina: Real Madrid–Paris FC, martes 10 de noviembre, 18:45 (Di Stéfano), en directo cerca de Sol.
-        </p>
-      ) : null}
-      {madridTodayYmd(agendaBuildNow()) <= "2026-11-12" ? (
-        <p className="mb-6 text-sm text-cream-muted sm:text-base">
-          Champions femenina: Barcelona–Arsenal, jueves 12 de noviembre, 18:45, en directo cerca de Sol. Aficionados del Arsenal: punto de encuentro junto a Sol.
-        </p>
-      ) : null}
-      {madridTodayYmd(agendaBuildNow()) <= "2026-11-18" ? (
-        <p className="mb-6 text-sm text-cream-muted sm:text-base">
-          Champions femenina: Real Madrid–Inter, miércoles 18 de noviembre, 18:45 (Di Stéfano), en directo cerca de Sol.{" "}
-          <Link href="/es/noticias/real-madrid-inter-champions-femenina-sol" className="text-gold underline">
-            Real Madrid–Inter en Sol
-          </Link>
         </p>
       ) : null}
       {/* Getafe–Brighton + Real Madrid–Crvena Zvezda, artículos para la afición visitante (orden del dueño 4 nov 2026 vía DG; uefa.com / euroleague.net): build-time date gates. */}
@@ -97,14 +74,7 @@ export default function EsWhatsOnPage() {
         </p>
       ) : null}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-15" ? (
-        <p className="mb-6 text-sm text-cream-muted sm:text-base">
-          ATP Finals en Turín, domingo 15 de noviembre: sesiones a las 14:00, 18:00 y 20:30 hora de Madrid, en directo cerca de Sol. Los domingos abrimos a las 14:00.
-        </p>
-      ) : null}
-      {madridTodayYmd(agendaBuildNow()) <= "2026-11-15" ? (
-        <p className="mb-6 text-sm text-cream-muted sm:text-base">
-          NFL semana 10, domingo 15 de noviembre: primer kickoff a las 15:30 hora de Madrid (Patriots at Lions), luego las ventanas de 19:00, 22:05 y 22:25. Pregunta en la barra qué partido hay.
-        </p>
+        <NflSunday15NovWhatsOn locale="es" />
       ) : null}
       {/* España–Inglaterra, Liga de Naciones; Radar file verificado UEFA; en La 1. Domingo 14:00–03:00. */}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-15" ? (

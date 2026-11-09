@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { PostMatchBanner } from "@/components/PostMatchBanner";
+import { NflSunday15NovWhatsOn } from "@/components/NflSunday15NovWhatsOn";
 import { FixtureList } from "@/components/FixtureList";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
@@ -41,11 +42,6 @@ export default function WhatsOnPage() {
       ) : null}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-14" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">
-          UEFA Nations League: Austria v Republic of Ireland, Saturday 14 November, 20:45 Madrid time (Raiffeisen Arena, Linz), live near Sol.
-        </p>
-      ) : null}
-      {madridTodayYmd(agendaBuildNow()) <= "2026-11-14" ? (
-        <p className="mb-6 text-sm text-cream-muted sm:text-base">
           Nations Championship rugby: Ireland v Fiji, Saturday 14 November, 21:10 Madrid time (Aviva Stadium, Dublin), live near Sol.
         </p>
       ) : null}
@@ -63,30 +59,6 @@ export default function WhatsOnPage() {
           UEFA Nations League: Germany v Netherlands, Monday 16 November, 20:45 (Berlin), live near Sol.{" "}
           <Link href="/news/germany-netherlands-monday-night-sol" className="text-gold underline">
             Germany v Netherlands: Monday night in Sol
-          </Link>
-        </p>
-      ) : null}
-      {/* Real Madrid Femenino UWCL (DG 26 Oct; times per match.uefa.com + realmadrid.com): build-time date gates, each line gone from the daily rebuild after its date. */}
-      {madridTodayYmd(agendaBuildNow()) <= "2026-11-10" ? (
-        <p className="mb-6 text-sm text-cream-muted sm:text-base">
-          Women&apos;s Champions League: Real Madrid v Paris FC, Tuesday 10 November, 18:45 (Di Stéfano), live near Sol.{" "}
-          <span lang="fr">Supporters du Paris FC : O&apos;Connell St, un pub près de Sol pour se retrouver avant le match.</span>
-        </p>
-      ) : null}
-      {madridTodayYmd(agendaBuildNow()) <= "2026-11-12" ? (
-        <p className="mb-6 text-sm text-cream-muted sm:text-base">
-          Women&apos;s Champions League: Barcelona v Arsenal, Thursday 12 November, 18:45, live near Sol. Arsenal fans: a meeting point near Sol.
-        </p>
-      ) : null}
-      {madridTodayYmd(agendaBuildNow()) <= "2026-11-18" ? (
-        <p className="mb-6 text-sm text-cream-muted sm:text-base">
-          Women&apos;s Champions League: Real Madrid v Inter, Wednesday 18 November, 18:45 (Di Stéfano), live near Sol. Italian / Inter fans: a fans meeting point near Sol before or after.{" "}
-          <Link href="/news/real-madrid-inter-womens-champions-league-sol" className="text-gold underline">
-            Real Madrid v Inter in Sol
-          </Link>
-          {" · "}
-          <Link href="/news/inter-fans-madrid-womens-champions-league-sol" className="text-gold underline">
-            Inter fans meeting point near Sol
           </Link>
         </p>
       ) : null}
@@ -161,14 +133,7 @@ export default function WhatsOnPage() {
         </p>
       ) : null}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-15" ? (
-        <p className="mb-6 text-sm text-cream-muted sm:text-base">
-          ATP Finals in Turin, Sunday 15 November: sessions at 14:00, 18:00 and 20:30 Madrid time, live near Sol. Sunday doors 14:00.
-        </p>
-      ) : null}
-      {madridTodayYmd(agendaBuildNow()) <= "2026-11-15" ? (
-        <p className="mb-6 text-sm text-cream-muted sm:text-base">
-          NFL Week 10, Sunday 15 November: first kickoff 15:30 Madrid (Patriots at Lions), then the 19:00, 22:05 and 22:25 windows. Ask which game is on.
-        </p>
+        <NflSunday15NovWhatsOn locale="en" />
       ) : null}
       {/* Spain v England, UEFA Nations League; Radar file verified UEFA; on La 1. Sunday 14:00–03:00. */}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-15" ? (

@@ -15,6 +15,8 @@ type BuildMetaOpts = {
   locale?: "en" | "es" | "de";
   /** When set, rel=canonical points here (self path if omitted). Used to consolidate overlapping hubs without 404. */
   canonicalPath?: string;
+  /** When true, page stays reachable (200) but is omitted from index (e.g. pending channel). */
+  noindex?: boolean;
 };
 
 export function absoluteUrl(path: string): string {
@@ -67,6 +69,7 @@ export function buildMetadata({
   path,
   locale = "en",
   canonicalPath,
+  noindex,
 }: BuildMetaOpts): Metadata {
   const canonical = absoluteUrl(canonicalPath ?? path);
   const o = SEO_SHORT[path];
@@ -115,6 +118,8 @@ export function buildMetadata({
     },
     robots: preview
       ? { index: false, follow: false }
-      : { index: true, follow: true },
+      : noindex
+        ? { index: false, follow: true }
+        : { index: true, follow: true },
   };
 }
