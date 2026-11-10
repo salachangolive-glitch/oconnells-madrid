@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { PostMatchBanner } from "@/components/PostMatchBanner";
+import { HomeComingUp } from "@/components/HomeComingUp";
 import { FixtureStrip } from "@/components/FixtureStrip";
 import { HomeCtaBand } from "@/components/HomeCtaBand";
 import { HomeGalleryPreview } from "@/components/GalleryMedia";
@@ -94,6 +95,7 @@ export default function EsHomePage() {
       </section>
 
       <FixtureStrip locale="es" windowOnly />
+      <HomeComingUp locale="es" />
       <p className="mb-12 max-w-2xl text-sm text-cream-muted sm:text-base">
         Este pub irlandés en Sol es también un pub de Premier League en Madrid:
         fútbol inglés en pantallas cuando está confirmado, en la misma sala que

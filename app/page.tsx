@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { PostMatchBanner } from "@/components/PostMatchBanner";
+import { HomeComingUp } from "@/components/HomeComingUp";
 import { FixtureStrip } from "@/components/FixtureStrip";
 import { HomeCtaBand } from "@/components/HomeCtaBand";
 import { HomeGalleryPreview } from "@/components/GalleryMedia";
@@ -91,6 +92,7 @@ export default function HomePage() {
 
       {/* Live Sports / What's On */}
       <FixtureStrip locale="en" windowOnly />
+      <HomeComingUp locale="en" />
       <p className="mb-12 max-w-2xl text-sm text-cream-muted sm:text-base">
         This Irish pub at Puerta del Sol is also a Premier League pub in Madrid:
         English football on the screens when confirmed, in the same room as NFL.
