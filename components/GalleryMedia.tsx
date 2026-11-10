@@ -1,6 +1,7 @@
 import Link from "next/link";
 import {
   GALLERY_PATH,
+  GALLERY_HOME_PREVIEW_IDS,
   GALLERY_PHOTOS,
   GALLERY_VIDEOS,
   type GalleryPhoto,
@@ -111,16 +112,20 @@ export function HomeGalleryPreview({ locale }: { locale: Locale }) {
       : "See the full gallery";
   const lead =
     locale === "es"
-      ? "Tres fotos de ambiente y un vídeo corto del pub en Espoz y Mina 7."
-      : "Three interior photos and a short clip from the pub at Espoz y Mina 7.";
+      ? "Once fotos de ambiente y un vídeo corto del pub en Espoz y Mina 7."
+      : "Eleven interior photos and a short clip from the pub at Espoz y Mina 7.";
+
+  const preview = GALLERY_HOME_PREVIEW_IDS.map((id) =>
+    GALLERY_PHOTOS.find((p) => p.id === id),
+  ).filter((p): p is GalleryPhoto => Boolean(p));
 
   return (
     <section className="mb-12" aria-label={title}>
       <h2 className="font-serif text-xl font-bold text-cream">{title}</h2>
       <div className="pub-rule my-3" />
       <p className="mb-4 text-sm text-cream-muted sm:text-base">{lead}</p>
-      <div className="mb-4 grid grid-cols-3 gap-2 sm:gap-3">
-        {GALLERY_PHOTOS.map((p) => (
+      <div className="mb-4 grid grid-cols-3 gap-2 sm:gap-3 sm:grid-cols-5">
+        {preview.map((p) => (
           <Link key={p.id} href={full} className="block overflow-hidden rounded-md border border-cream/10">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
