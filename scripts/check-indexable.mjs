@@ -76,6 +76,16 @@ function isNotFoundFile(filePath) {
   );
 }
 
+/** Owner-approved noindex (200); GO-LIVE builds must not fail the whole deploy. */
+const NOINDEX_OK_HTML = [
+  "inter-fans-madrid-womens-champions-league-sol",
+];
+
+function isAllowedNoindexPath(filePath) {
+  const f = filePath.replace(/\\/g, "/");
+  return NOINDEX_OK_HTML.some((slug) => f.includes(slug));
+}
+
 const MUST_NOT_DISALLOW = [
   "/",
   "/sports",
@@ -204,6 +214,7 @@ function checkSitemapAndRobotsHosts() {
 
 function checkHtmlNoindex(filePath) {
   if (isNotFoundFile(filePath)) return; // 404 may always be noindex
+  if (isAllowedNoindexPath(filePath)) return;
   if (PREVIEW) return; // noindex expected while held / preview
   const html = readFileSync(filePath, "utf8");
   const patterns = [
@@ -315,7 +326,8 @@ if (!PREVIEW) {
       if (
         f.includes("/_not-found") ||
         f.includes("/_global-error") ||
-        f.includes("/_error")
+        f.includes("/_error") ||
+        isAllowedNoindexPath(f)
       ) {
         continue;
       }
