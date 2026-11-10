@@ -1,8 +1,5 @@
-# News index: Next export writes hub as news.html but articles live under news/*.html (no news/index.html).
-/news /news.html 200
-/news/ /news.html 200
-/es/noticias /es/noticias.html 200
-/es/noticias/ /es/noticias.html 200
+# News hubs: postbuild copies out/news/index.html and out/es/noticias/index.html (see package.json build).
+# Do not add /news -> /news.html 200 rules here: CF pretty-url + news/ directory caused a 308 loop.
 
 # GSC HTML verification: serve exact .html URL with 200 (Pages strips .html -> 308). Never delete the original file.
 /googlede4d0a960f5c8eb4.html /gsc/googlede4d0a960f5c8eb4.txt 200
