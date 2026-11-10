@@ -2,6 +2,7 @@ import Link from "next/link";
 import { PostMatchBanner } from "@/components/PostMatchBanner";
 import { FixtureStrip } from "@/components/FixtureStrip";
 import { HomeCtaBand } from "@/components/HomeCtaBand";
+import { HomeGalleryPreview } from "@/components/GalleryMedia";
 import { InteriorGallery, InteriorPhoto } from "@/components/InteriorPhoto";
 import { PageShell } from "@/components/PageShell";
 import { Section } from "@/components/Prose";
@@ -190,6 +191,8 @@ export default function HomePage() {
           },
         ]}
       />
+
+      <HomeGalleryPreview locale="en" />
 
       {/* Thursday €1 — once */}
       <ThursdayFeature locale="en" />

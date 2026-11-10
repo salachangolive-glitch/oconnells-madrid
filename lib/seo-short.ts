@@ -30,6 +30,8 @@ export const SEO_SHORT: Record<string, { title?: string; description?: string }>
   "/es/location": {"title": "Pub irlandés cerca de Sol — cómo llegar", "description": "Pub irlandés y bar deportivo en Calle de Espoz y Mina 7, junto a Puerta del Sol. CÓMO LLEGAR en el pin de O'Connell St."},
   "/news": {"title": "News and match notes near Sol | O'Connell St", "description": "Match notes and fan guides from O'Connell St by Puerta del Sol. What's On lists confirmed screens in Madrid time."},
   "/es/noticias": {"title": "Noticias y guías junto a Sol | O'Connell St", "description": "Noticias y guías para aficionados en O'Connell St junto a Sol. La Agenda muestra partidos confirmados en hora de Madrid."},
+  "/gallery": {"title": "Gallery: inside O'Connell St near Sol", "description": "Photos and a short video inside O'Connell St, Irish pub at Espoz y Mina 7 by Puerta del Sol. Bar, seating and sports screens."},
+  "/es/galeria": {"title": "Galería: dentro de O'Connell St junto a Sol", "description": "Fotos y un vídeo corto del interior de O'Connell St, pub irlandés en Espoz y Mina 7 junto a Puerta del Sol. Barra, mesas y pantallas."},
   "/es/menu": {"title": "Carta de comida y bebida junto a Sol"},
   "/es/nfl-madrid": {"title": "Bar NFL Madrid: ver la NFL cerca de Sol | O'Connell St", "description": "Bar NFL Madrid y pub irlandés junto a Puerta del Sol: ver la NFL en Madrid en O'Connell's, Espoz y Mina 7. Pregunta qué partido echan."},
   "/es/noticias/antes-despues-bernabeu-nfl-sol": {"title": "Antes y después NFL Bernabéu, Sol: evento pasado", "description": "Bengals–Falcons fue en el Bernabéu el domingo 8 de noviembre de 2026, a las 15:30. O'Connell St en Espoz y Mina 7 fue una parada antes y después. Consulta la Agenda."},
