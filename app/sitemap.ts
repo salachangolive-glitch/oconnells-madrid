@@ -72,6 +72,8 @@ const EVENT_LAST_DAY: Record<string, string> = {
   "/united-1730-after-the-pair-oconnells": "2026-11-08",
   "/es/united-1730-despues-del-par-oconnells": "2026-11-08",
   "/news/bryan-adams-madrid-gig-night-sol": "2026-11-10",
+  "/news/czechia-spain-thursday-night-sol": "2026-11-12",
+  "/es/noticias/chequia-espana-jueves-sol": "2026-11-12",
   "/news/england-croatia-thursday-night-sol": "2026-11-12",
   "/news/real-madrid-crvena-zvezda-thursday-sol": "2026-11-12",
   "/es/noticias/real-madrid-crvena-zvezda-jueves-sol": "2026-11-12",
