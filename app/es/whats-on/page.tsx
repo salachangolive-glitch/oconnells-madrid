@@ -73,6 +73,12 @@ export default function EsWhatsOnPage() {
           Euroliga: Panathinaikos–FC Barcelona, viernes 13 de noviembre, 20:15, en directo cerca de Sol.
         </p>
       ) : null}
+      {/* Serbia–Alemania, Liga de Naciones (match.uefa.com id 2047887, 19:45Z = 20:45 CET; DFB 20:45 +0100; orden dueño 12 nov 14:58): puerta por fecha de build. */}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-13" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          Liga de Naciones: Serbia–Alemania, viernes 13 de noviembre, 20:45 (Belgrado), en directo cerca de Sol. Aficionados alemanes y serbios en Madrid, junto a Sol.
+        </p>
+      ) : null}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-15" ? (
         <NflSunday15NovWhatsOn locale="es" />
       ) : null}

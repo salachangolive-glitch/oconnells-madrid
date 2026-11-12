@@ -6,6 +6,7 @@ const NOTES: { day: string; en?: [string, string]; es?: [string, string] }[] = [
   { day: "2026-11-05", en: ["/news/getafe-brighton-thursday-night-sol", "Getafe v Brighton · Thu 5 Nov"], es: ["/es/noticias/getafe-brighton-jueves-sol", "Getafe–Brighton · jue 5 nov"] },
   { day: "2026-11-10", en: ["/news/bryan-adams-madrid-gig-night-sol", "Bryan Adams gig night · Tue 10 Nov"] },
   { day: "2026-11-12", en: ["/news/real-madrid-crvena-zvezda-thursday-sol", "Real Madrid v Crvena Zvezda · Thu 12 Nov"], es: ["/es/noticias/real-madrid-crvena-zvezda-jueves-sol", "Real Madrid–Crvena Zvezda · jue 12 nov"] },
+  { day: "2026-11-13", en: ["/news/serbia-germany-friday-night-sol", "Serbia v Germany · Fri 13 Nov"] },
   { day: "2026-11-15", en: ["/news/spain-england-sunday-night-sol", "Spain v England · Sun 15 Nov"], es: ["/es/noticias/espana-inglaterra-domingo-sol", "España–Inglaterra · dom 15 nov"] },
   { day: "2026-11-15", en: ["/oktoberfest-madrid-sol", "Oktoberfest Madrid · until 15 Nov"], es: ["/es/oktoberfest-madrid-sol", "Oktoberfest Madrid · hasta el 15 nov"] },
   { day: "2026-11-16", en: ["/news/germany-netherlands-monday-night-sol", "Germany v Netherlands · Mon 16 Nov"] },

@@ -53,6 +53,15 @@ export default function WhatsOnPage() {
           </Link>
         </p>
       ) : null}
+      {/* Serbia v Germany, UEFA Nations League (match.uefa.com id 2047887, 19:45Z = 20:45 CET; DFB 20:45 +0100; owner 12 Nov 14:58): build-time date gate. */}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-13" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          UEFA Nations League: Serbia v Germany, Friday 13 November, 20:45 (Belgrade), live near Sol.{" "}
+          <Link href="/news/serbia-germany-friday-night-sol" className="text-gold underline">
+            Serbia v Germany: Friday night in Sol
+          </Link>
+        </p>
+      ) : null}
       {/* Germany v Netherlands, UEFA Nations League (Radar OC11; match.uefa.com id 2047909, 19:45Z = 20:45 CET): build-time date gate. */}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-16" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">
