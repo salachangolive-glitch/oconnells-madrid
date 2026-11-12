@@ -13,7 +13,7 @@ export const ADDRESS = {
   full: "Calle de Espoz y Mina, 7, 28012 Madrid",
 } as const;
 
-/** GBP phone only — DO NOT show on the new website (web contact = form + public email). NOT 915 22 75 09 */
+/** GBP phone (Localo googleLocationData). Visible tel: on home per M-17; also in JSON-LD. NOT 915 22 75 09 */
 export const PHONE_DISPLAY = "+34 915 32 79 56";
 export const PHONE_TEL = "tel:+34915327956";
 
