@@ -78,6 +78,8 @@ const EVENT_LAST_DAY: Record<string, string> = {
   "/news/real-madrid-crvena-zvezda-thursday-sol": "2026-11-12",
   "/es/noticias/real-madrid-crvena-zvezda-jueves-sol": "2026-11-12",
   "/news/serbia-germany-friday-night-sol": "2026-11-13",
+  "/news/spain-chile-rugby-saturday-sol": "2026-11-14",
+  "/es/noticias/espana-chile-rugby-sabado-sol": "2026-11-14",
   "/news/spain-england-sunday-night-sol": "2026-11-15",
   "/es/noticias/espana-inglaterra-domingo-sol": "2026-11-15",
   "/news/germany-netherlands-monday-night-sol": "2026-11-16",
