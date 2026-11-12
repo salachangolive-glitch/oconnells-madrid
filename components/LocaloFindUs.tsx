@@ -1,5 +1,6 @@
 import { Section } from "@/components/Prose";
 import { BAR_MAPS, HUB } from "@/lib/after-game-sunday-8-nov";
+import { PHONE_DISPLAY, PHONE_TEL } from "@/lib/venue";
 
 /**
  * Localo SEO pass: CID Maps + GET DIRECTIONS on existing commercial pages.
@@ -66,6 +67,14 @@ export function LocaloFindUs({ locale }: { locale: "en" | "es" }) {
               >
                 {es ? "CÓMO LLEGAR" : "GET DIRECTIONS"}
               </a>
+              {b.name === "O'Connell's" ? (
+                <>
+                  {" · "}
+                  <a href={PHONE_TEL} data-event="phone_click" className="text-cream underline">
+                    {PHONE_DISPLAY}
+                  </a>
+                </>
+              ) : null}
             </p>
           </li>
         ))}
