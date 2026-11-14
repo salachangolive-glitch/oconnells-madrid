@@ -1,14 +1,13 @@
 import Link from "next/link";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
-import { ThursdayFeature } from "@/components/ThursdayFeature";
 import { buildMetadata } from "@/lib/seo";
-import { SITE_NAME } from "@/lib/venue";
+import { ADDRESS, HOURS, SITE_NAME } from "@/lib/venue";
 
 export const metadata = buildMetadata({
-  title: "Noches Erasmus cerca de Puerta del Sol",
+  title: "Erasmus en Madrid: jueves junto a Sol | O'Connell St",
   description:
-    "Pub irlandés para Erasmus cerca de Sol: jueves de chupitos a 1 €, pantallas de fútbol y quedar fácil en Madrid Centro.",
+    "Erasmus en Madrid: los jueves en O'Connell St, pub irlandés junto a la Puerta del Sol con deporte en directo, cerveza y comida de pub. Espoz y Mina 7.",
   path: "/es/erasmus",
   locale: "es",
 });
@@ -17,28 +16,39 @@ export default function EsErasmusPage() {
   return (
     <PageShell locale="es" altLangHref="/erasmus">
       <PageHero
-        eyebrow="Erasmus · Internacionales"
-        title={`Tu noche en ${SITE_NAME}`}
-        lead="Quedar cerca de Sol, ver el partido y quedarte al jueves de chupitos a 1 € — el ambiente de un Irish pub de verdad en Madrid Centro."
+        eyebrow="Erasmus · Jueves · Sol"
+        title="Erasmus en Madrid: los jueves, junto a Sol"
+        lead="Estudiantes Erasmus, visitantes y gente de todas partes acaban en este pub irlandés, a un paso de la Puerta del Sol. El jueves es la noche en que el ambiente internacional llena la barra."
       />
-      <ThursdayFeature locale="es" />
-      <Section title="Por qué funciona">
+      <Section title="Los jueves">
         <p>
-          Central para que todo el mundo llegue. Ambiente fácil en barra. Pantallas
-          cuando hay partido gordo. Pon el jueves en el grupo y el resto se
-          organiza solo.
+          Los jueves {SITE_NAME} abre a las {HOURS.monThu.open} y cierra a las{" "}
+          {HOURS.monThu.close}. Deporte en directo en pantalla grande cuando está
+          confirmado, cerveza en la barra y comida de pub. Es una noche normal de
+          pub con ambiente internacional, no una fiesta aparte.
         </p>
+      </Section>
+      <Section title="Dónde estamos">
         <p>
+          {ADDRESS.full}, junto a la Puerta del Sol, en pleno centro de Madrid:
+          fácil de encontrar para un grupo recién llegado a la ciudad.
+        </p>
+        <p>Horario: {HOURS.summaryEs}.</p>
+        <p>
+          <Link href="/es/whats-on" className="text-gold underline">
+            Agenda
+          </Link>
+          {" · "}
           <Link href="/es/sports" className="text-gold underline">
-            Deportes
+            Deportes en directo
+          </Link>
+          {" · "}
+          <Link href="/es/menu" className="text-gold underline">
+            Comida y bebida
           </Link>
           {" · "}
           <Link href="/es/location" className="text-gold underline">
-            Ubicación
-          </Link>
-          {" · "}
-          <Link href="/es/whats-on" className="text-gold underline">
-            Partidos
+            Cómo llegar
           </Link>
         </p>
       </Section>

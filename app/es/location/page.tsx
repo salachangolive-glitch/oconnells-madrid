@@ -1,19 +1,24 @@
 import Link from "next/link";
+import { InteriorPhoto } from "@/components/InteriorPhoto";
+import { LocaloFindUs } from "@/components/LocaloFindUs";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
 import { VenueHero } from "@/components/VenueHero";
+import { BAR_MAPS } from "@/lib/after-game-sunday-8-nov";
+import { LISTING_NUMBER_SEVEN_PATHS } from "@/lib/listing-number-seven-pin";
 import { buildMetadata } from "@/lib/seo";
 import {
   ADDRESS,
   HOURS,
-  MAPS_URL,
+  PUBLIC_EMAIL,
+  PUBLIC_EMAIL_MAILTO,
   SITE_NAME,
 } from "@/lib/venue";
 
 export const metadata = buildMetadata({
-  title: "Ubicación — Calle de Espoz y Mina 7, cerca de Sol",
+  title: "Pub irlandés cerca de Sol — cómo llegar",
   description:
-    "Encuentra O'Connell St en Calle de Espoz y Mina 7, 28012 Madrid, cerca de Puerta del Sol. Cómo llegar en Google Maps.",
+    "Pub irlandés y bar deportivo en Calle de Espoz y Mina 7, 28012 Madrid, junto a Puerta del Sol. CÓMO LLEGAR en el pin de O'Connell St.",
   path: "/es/location",
   locale: "es",
 });
@@ -22,14 +27,26 @@ export default function EsLocationPage() {
   return (
     <PageShell locale="es" altLangHref="/location">
       <PageHero
-        eyebrow="Ubicación · Madrid Centro"
-        title={`Cómo llegar a ${SITE_NAME}`}
-        lead={`${ADDRESS.full} — a poca distancia de Puerta del Sol.`}
+        eyebrow="Pub irlandés · bar deportivo · Puerta del Sol"
+        title={`Cómo llegar a este pub irlandés junto a Sol — ${SITE_NAME}`}
+        lead={`${ADDRESS.full} — pub irlandés y bar deportivo, a un paso de Puerta del Sol. El deporte confirmado está en la Agenda.`}
       />
-      <VenueHero variant="secondary" alt="O'Connell St en Calle de Espoz y Mina, cerca de Sol" className="mb-10" />
+      <VenueHero
+        variant="secondary"
+        alt="O'Connell St en Calle de Espoz y Mina, cerca de Sol"
+        className="mb-10"
+      />
       <Section title="Dirección y horarios">
         <p>{ADDRESS.full}</p>
         <p>
+          <a
+            href={PUBLIC_EMAIL_MAILTO}
+            data-event="email_click"
+            className="text-cream underline"
+          >
+            {PUBLIC_EMAIL}
+          </a>
+          {" · "}
           <a href="/es/contact" className="text-cream underline">
             Contacto
           </a>
@@ -41,28 +58,72 @@ export default function EsLocationPage() {
         </ul>
         <p>
           <a
-            href={MAPS_URL}
+            href={BAR_MAPS.oconnells}
             target="_blank"
             rel="noopener noreferrer"
+            data-event="directions"
             className="inline-flex rounded-md bg-pub-green px-4 py-2 font-semibold text-cream hover:bg-pub-green-light"
           >
-            Abrir en Google Maps
+            CÓMO LLEGAR
           </a>
         </p>
       </Section>
-      <Section title="Cómo llegar">
+      <InteriorPhoto
+        src="/images/interior/stairs-levels.webp"
+        alt="Escaleras entre plantas del pub irlandés O'Connell St cerca de Sol"
+        position="object-[center_40%]"
+      />
+      <Section title="Cómo llegar desde la Puerta del Sol">
         <p>
-          Dirígete a Puerta del Sol y camina hasta Calle de Espoz y Mina. Ideal
-          antes de un partido de Premier League, Champions League o LaLiga — o
-          para los jueves de chupitos a 1 € con tu grupo Erasmus.
+          La estación más cercana es Sol (Metro y Cercanías), que sale
+          directamente a la Puerta del Sol. Desde la plaza, busca la Calle de
+          Espoz y Mina y el número 7: fachada roja con el rótulo dorado
+          O&apos;CONNELL ST. sobre la puerta.
+        </p>
+        <p>
+          ¿No sabes bien por dónde ir? CÓMO LLEGAR, arriba, abre el pin de este
+          pub irlandés, así puedes seguir la ruta desde cualquier punto del
+          centro.
+        </p>
+        <p>
+          Últimos metros del reloj de Sol al rótulo dorado de esta puerta:{" "}
+          <Link
+            href="/es/ultimos-metros-reloj-sol-rotulo-dorado-esta-puerta"
+            className="text-cream underline"
+          >
+            del reloj de Sol al rótulo dorado
+          </Link>
+          . Dos fichas de pub irlandés pueden compartir el número 7 en Maps — el
+          fútbol en esta puerta necesita el{" "}
+          <Link href={LISTING_NUMBER_SEVEN_PATHS.es} className="text-cream underline">
+            pin de O&apos;Connell St en esta ficha
+          </Link>
+          , no otro sitio guardado en la misma calle.
+        </p>
+        <p>
+          Dirígete a Puerta del Sol y camina hasta Calle de Espoz y Mina. Los
+          partidos confirmados de los próximos 7 días, en hora de Madrid, están
+          en la{" "}
+          <Link href="/es/whats-on" className="text-cream underline">
+            Agenda
+          </Link>
+          . Pregunta qué partido echan. Mira{" "}
+          <Link href="/es/nfl-madrid" className="text-cream underline">
+            bar NFL Madrid
+          </Link>
+          .
         </p>
         <p>
           <Link href="/es/whats-on" className="text-cream underline">
-            Partidos
+            Agenda
           </Link>
           {" · "}
           <Link href="/es/sports" className="text-cream underline">
-            Deportes
+            Deportes en directo
+          </Link>
+          {" · "}
+          <Link href="/es/sports-bar-sol" className="text-cream underline">
+            Bar deportivo en Sol
           </Link>
           {" · "}
           <Link
@@ -71,6 +132,15 @@ export default function EsLocationPage() {
           >
             Jueves 1 €
           </Link>
+        </p>
+      </Section>
+      <LocaloFindUs locale="es" />
+      <Section title="Horario">
+        <p>
+          Abrimos todos los días: de lunes a jueves desde las {HOURS.monThu.open},
+          viernes desde las {HOURS.fri.open}, sábado desde las {HOURS.sat.open} y domingo desde las{" "}
+          {HOURS.sun.open}. Cerramos a las {HOURS.monThu.close} de domingo a
+          jueves y a las {HOURS.fri.close} las noches de viernes y sábado.
         </p>
       </Section>
     </PageShell>
