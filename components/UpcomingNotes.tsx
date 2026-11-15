@@ -12,6 +12,7 @@ const NOTES: { day: string; en?: [string, string]; es?: [string, string] }[] = [
   { day: "2026-11-16", en: ["/news/germany-netherlands-monday-night-sol", "Germany v Netherlands · Mon 16 Nov"] },
   { day: "2026-11-18", en: ["/news/real-madrid-inter-womens-champions-league-sol", "Real Madrid v Inter (women) · Wed 18 Nov"], es: ["/es/noticias/real-madrid-inter-champions-femenina-sol", "Real Madrid–Inter femenino · mié 18 nov"] },
   { day: "2026-11-21", en: ["/news/real-madrid-celta-saturday-night-sol", "Real Madrid v Celta · Sat 21 Nov"] },
+  { day: "2026-11-22", en: ["/news/liverpool-manchester-united-sunday-sol", "Liverpool v Man United · Sun 22 Nov"], es: ["/es/noticias/liverpool-manchester-united-domingo-sol", "Liverpool–Man United · dom 22 nov"] },
   { day: "2026-11-23", en: ["/news/tokio-hotel-madrid-gig-night-sol", "Tokio Hotel gig night · Mon 23 Nov"] },
   { day: "2026-11-24", en: ["/news/real-madrid-psv-tuesday-night-sol", "Real Madrid v PSV · Tue 24 Nov"] },
   { day: "2026-11-25", en: ["/news/real-madrid-zalgiris-wednesday-night-sol", "Real Madrid v Žalgiris · Wed 25 Nov"] },

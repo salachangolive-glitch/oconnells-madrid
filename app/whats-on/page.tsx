@@ -80,6 +80,15 @@ export default function WhatsOnPage() {
           </Link>
         </p>
       ) : null}
+      {/* Liverpool v Manchester United, PL MW11 (premierleague.com API: Sun 22 Nov 2026 16:30 GMT = 17:30 Madrid, Anfield; DAZN): build-time date gate. */}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-22" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          Premier League: Liverpool v Manchester United, Sunday 22 November, 17:30 (Anfield), on DAZN, live near Sol. Open on Sundays from 14:00.{" "}
+          <Link href="/news/liverpool-manchester-united-sunday-sol" className="text-gold underline">
+            Liverpool v Man United: Sunday afternoon near Sol
+          </Link>
+        </p>
+      ) : null}
       {/* Tokio Hotel gig night (Radar OC14; palaciovistalegre.com: Mon 23 Nov 2026, start time TBC): build-time date gate. */}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-23" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">

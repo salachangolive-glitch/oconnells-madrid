@@ -91,6 +91,14 @@ export default function EsWhatsOnPage() {
           </Link>
         </p>
       ) : null}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-22" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          Premier League: Liverpool–Manchester United, domingo 22 de noviembre, 17:30 (Anfield), en DAZN, en directo junto a Sol. Los domingos abrimos a las 14:00.{" "}
+          <Link href="/es/noticias/liverpool-manchester-united-domingo-sol" className="text-gold underline">
+            Liverpool–Man United: domingo de Premier junto a Sol
+          </Link>
+        </p>
+      ) : null}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-25" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">
           UEFA Champions League: Atlético de Madrid–Viking FK, miércoles 25 de noviembre, 21:00 (Riyadh Air Metropolitano). Afición noruega del Viking FK: punto de encuentro junto a Sol antes o después — no los Minnesota Vikings de la NFL.{" "}
