@@ -25,15 +25,6 @@ export default function WhatsOnPage() {
       />
 
       <PostMatchBanner locale="en" />
-      {/* Oktoberfest Madrid link: build-time date gate, gone from the 16 Nov daily rebuild. */}
-      {madridTodayYmd(agendaBuildNow()) <= "2026-11-15" ? (
-        <p className="mb-6 text-sm text-cream-muted sm:text-base">
-          Oktoberfest Madrid season (22 Oct – 15 Nov, Thursday to Sunday):{" "}
-          <Link href="/oktoberfest-madrid-sol" className="text-gold underline">
-            getting there from Sol, and a beer in the centre
-          </Link>
-        </p>
-      ) : null}
       {/* Spain v Chile rugby (ferugby.es 31 Aug 2026 calendar: sáb 14 nov 17:00 h, Butarque). */}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-14" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">

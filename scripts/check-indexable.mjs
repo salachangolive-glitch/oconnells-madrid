@@ -79,6 +79,7 @@ function isNotFoundFile(filePath) {
 /** Owner-approved noindex (200); GO-LIVE builds must not fail the whole deploy. */
 const NOINDEX_OK_HTML = [
   "inter-fans-madrid-womens-champions-league-sol",
+  "oktoberfest-madrid-sol",
 ];
 
 function isAllowedNoindexPath(filePath) {

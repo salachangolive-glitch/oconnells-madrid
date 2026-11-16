@@ -26,15 +26,6 @@ export default function EsWhatsOnPage() {
       />
 
       <PostMatchBanner locale="es" />
-      {/* Oktoberfest Madrid link: build-time date gate, gone from the 16 Nov daily rebuild. */}
-      {madridTodayYmd(agendaBuildNow()) <= "2026-11-15" ? (
-        <p className="mb-6 text-sm text-cream-muted sm:text-base">
-          Temporada de Oktoberfest Madrid (22 oct – 15 nov, de jueves a domingo):{" "}
-          <Link href="/es/oktoberfest-madrid-sol" className="text-gold underline">
-            cómo llegar desde Sol y una cerveza en el centro
-          </Link>
-        </p>
-      ) : null}
       {/* España–Chile rugby (ferugby.es 31 ago 2026: sáb 14 nov 17:00 h, Butarque). */}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-14" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">

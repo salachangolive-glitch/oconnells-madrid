@@ -6,25 +6,13 @@ import { buildMetadata } from "@/lib/seo";
 import { ADDRESS, HOURS, MAPS_URL } from "@/lib/venue";
 
 /**
- * German index /de (DG order 27 Oct 2026). Lists the German pages that exist.
+ * German index /de (DG order 27 Oct 2026; Oktoberfest copy retired 16 Nov 2026,
+ * owner order 20 Oct via DG: references come down after 15 Nov).
  * Bayern pages (Atlético–Bayern 3 Nov) retired 4 Nov 2026, 301 in public/_redirects.
- * To add OC-29 / OC-30 once Radar assigns them and the pages exist: append { href, title, text } to the right group below
- * (or to DE_UPCOMING), add the path to DE_PATHS in lib/venue.ts, done.
+ * To add OC-29 / OC-30 once Radar assigns them and the pages exist: append { href, title, text } to DE_UPCOMING,
+ * add the path to DE_PATHS in lib/venue.ts, done.
  */
 type DeItem = { href: string; title: string; text: string };
-
-const DE_GROUPS: { title: string; items: DeItem[] }[] = [
-  {
-    title: "Oktoberfest-Saison an der Puerta del Sol",
-    items: [
-      {
-        href: "/de/oktoberfest-madrid-sol",
-        title: "Oktoberfest Madrid 2026: ein Bier an der Puerta del Sol",
-        text: "Das Fest läuft bis 15. November, donnerstags bis sonntags, in Parquesur (Leganés). Die Wochenenden, die Anfahrt von Sol und ein Bier im Zentrum.",
-      },
-    ],
-  },
-];
 
 /** Next German pieces (OC-29, OC-30): add here when the pages are live. */
 const DE_UPCOMING: DeItem[] = [];
@@ -32,7 +20,7 @@ const DE_UPCOMING: DeItem[] = [];
 export const metadata = buildMetadata({
   title: "O'Connell St Madrid auf Deutsch: Irish Pub an der Puerta del Sol",
   description:
-    "Alle deutschen Seiten von O'Connell St, dem Irish Pub in der Calle de Espoz y Mina 7 an der Puerta del Sol: Oktoberfest-Saison in Madrid und Tipps rund um Sol.",
+    "Irish Pub in der Calle de Espoz y Mina 7, gleich an der Puerta del Sol: Bundesliga, Champions League und Nations League live, Bier und Gäste aus aller Welt.",
   path: "/de",
   locale: "de",
 });
@@ -58,7 +46,7 @@ export default function DeIndexPage() {
       <PageHero
         eyebrow="Auf Deutsch · Madrid"
         title="O'Connell St auf Deutsch: Irish Pub an der Puerta del Sol"
-        lead="O'Connell St ist ein Irish Pub in der Calle de Espoz y Mina 7, gleich an der Puerta del Sol, mit Fußball auf den Screens und Gästen aus aller Welt. Hier findet ihr alle Seiten, die es bei uns auf Deutsch gibt."
+        lead="O'Connell St ist ein Irish Pub in der Calle de Espoz y Mina 7, gleich an der Puerta del Sol. Bei uns laufen Bundesliga, Champions League und Nations League auf den Screens, und ihr trefft Gäste aus aller Welt."
       />
       <InteriorPhoto
         src="/images/interior/sports-aisle.webp"
@@ -74,11 +62,23 @@ export default function DeIndexPage() {
           Español
         </Link>
       </p>
-      {DE_GROUPS.map((g) => (
-        <Section key={g.title} title={g.title}>
-          <ItemList items={g.items} />
-        </Section>
-      ))}
+      <Section title="Live-Sport an der Puerta del Sol">
+        <p>
+          Fußball aus der Bundesliga, der Champions League und der Nations League
+          läuft bei uns in der Madrider Zeit. Welche Spiele diese Woche auf den
+          Screens stehen, findet ihr in der Agenda, auf Englisch und auf Spanisch,
+          jeweils mit dem Vermerk Confirmed.
+        </p>
+        <p>
+          <Link href="/whats-on" hrefLang="en" className="text-cream underline">
+            What&apos;s On (Englisch)
+          </Link>
+          {" · "}
+          <Link href="/es/whats-on" hrefLang="es" className="text-cream underline">
+            Agenda (Español)
+          </Link>
+        </p>
+      </Section>
       {DE_UPCOMING.length > 0 ? (
         <Section title="Neu auf Deutsch">
           <ItemList items={DE_UPCOMING} />

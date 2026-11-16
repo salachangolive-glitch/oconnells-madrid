@@ -3,6 +3,15 @@
 
 # GSC HTML verification: serve exact .html URL with 200 (Pages strips .html -> 308). Never delete the original file.
 /googlede4d0a960f5c8eb4.html /gsc/googlede4d0a960f5c8eb4.txt 200
+# Oktoberfest Madrid 2026 (ended 15 Nov 2026), retired 16 Nov 2026 (owner order 20 Oct via DG).
+# Stub HTML is kept (noindex) so the URL does not 404 if a host serves the file; 301! forces the redirect over that file.
+# EN -> /whats-on, ES -> /es/whats-on, DE -> /de (no German What's On page).
+/oktoberfest-madrid-sol /whats-on 301!
+/oktoberfest-madrid-sol/ /whats-on 301!
+/es/oktoberfest-madrid-sol /es/whats-on 301!
+/es/oktoberfest-madrid-sol/ /es/whats-on 301!
+/de/oktoberfest-madrid-sol /de 301!
+/de/oktoberfest-madrid-sol/ /de 301!
 # Expired Champions League match notes (20 and 21 Oct 2026), retired 24 Oct 2026.
 # 301 to the evergreen Champions League page in the same language.
 /news/champions-league-tuesday-20-october /champions-league 301

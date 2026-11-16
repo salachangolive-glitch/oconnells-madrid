@@ -2,21 +2,6 @@ import type { MetadataRoute } from "next";
 import LASTMOD from "@/lib/lastmod.json";
 import { ALL_CONTENT_PATHS, getSiteUrl, HREFLANG_GROUPS, HREFLANG_PAIRS } from "@/lib/venue";
 
-const OKT_GROUP = HREFLANG_GROUPS["/oktoberfest-madrid-sol"];
-
-/** Oktoberfest page: en/es/de/x-default alternates. */
-function oktAlternates(base: string, path: string) {
-  if (!OKT_GROUP || ![OKT_GROUP.en, OKT_GROUP.es, OKT_GROUP.de].includes(path)) return undefined;
-  return {
-    languages: {
-      en: `${base}${OKT_GROUP.en}`,
-      es: `${base}${OKT_GROUP.es}`,
-      de: `${base}${OKT_GROUP.de}`,
-      "x-default": `${base}${OKT_GROUP.en}`,
-    },
-  };
-}
-
 const HOME_GROUP = HREFLANG_GROUPS["/"];
 
 /** Home EN/ES + German index /de: en/es/de/x-default alternates. */
@@ -59,9 +44,6 @@ export const dynamic = "force-static";
 const EVENT_LAST_DAY: Record<string, string> = {
   "/halloween-madrid-sol": "2026-10-31",
   "/es/halloween-madrid-sol": "2026-10-31",
-  "/oktoberfest-madrid-sol": "2026-11-15",
-  "/es/oktoberfest-madrid-sol": "2026-11-15",
-  "/de/oktoberfest-madrid-sol": "2026-11-15",
   "/news/getafe-brighton-thursday-night-sol": "2026-11-05",
   "/es/noticias/getafe-brighton-jueves-sol": "2026-11-05",
   "/news/duran-duran-madrid-gig-night-sol": "2026-11-07",
@@ -100,6 +82,10 @@ const EVENT_LAST_DAY: Record<string, string> = {
 /** Reachable URLs omitted from the index (noindex pages). */
 const SITEMAP_EXCLUDE = new Set([
   "/news/inter-fans-madrid-womens-champions-league-sol",
+  // Oktoberfest Madrid 2026 retired 16 Nov 2026 (ended 15 Nov); stubs 301 away.
+  "/oktoberfest-madrid-sol",
+  "/es/oktoberfest-madrid-sol",
+  "/de/oktoberfest-madrid-sol",
 ]);
 
 function madridYmd(d: Date): string {
@@ -118,7 +104,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }).map((path) => ({
     url: path === "/" ? base : `${base}${path}`,
     ...(newsAlternates(base, path) ? { alternates: newsAlternates(base, path) } : {}),
-    ...(oktAlternates(base, path) ? { alternates: oktAlternates(base, path) } : {}),
     ...(homeAlternates(base, path) ? { alternates: homeAlternates(base, path) } : {}),
     ...(lastmod[path] ? { lastModified: lastmod[path] } : {}),
     changeFrequency: path === "/" || path === "/es" ? "weekly" : "monthly",

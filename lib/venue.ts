@@ -182,7 +182,6 @@ export const EN_PATHS = [
   "/united-1730-after-the-pair-oconnells",
   "/after-bernabeu-this-door-espoz-mina-7",
   "/evening-nfl-then-atleti-barca-this-door",
-  "/oktoberfest-madrid-sol",
   "/halloween-madrid-sol",
   "/menu",
   "/gallery",
@@ -212,7 +211,6 @@ export const ES_PATHS = [
   "/es/ficha-numero-siete-pin-maps-oconnell-esta-puerta",
   "/es/sports-bar-sol",
   "/es/nfl-madrid",
-  "/es/oktoberfest-madrid-sol",
   "/es/halloween-madrid-sol",
   "/es/menu",
   "/es/galeria",
@@ -252,7 +250,6 @@ export const ES_PATHS = [
 
 export const DE_PATHS = [
   "/de",
-  "/de/oktoberfest-madrid-sol",
 ] as const;
 
 export const ALL_CONTENT_PATHS = [...EN_PATHS, ...ES_PATHS, ...DE_PATHS] as const;
@@ -282,7 +279,6 @@ export const HREFLANG_PAIRS: Record<string, string | undefined> = {
     "/es/ficha-numero-siete-pin-maps-oconnell-esta-puerta",
   "/sports-bar-sol": "/es/sports-bar-sol",
   "/nfl-madrid": "/es/nfl-madrid",
-  "/oktoberfest-madrid-sol": "/es/oktoberfest-madrid-sol",
   "/halloween-madrid-sol": "/es/halloween-madrid-sol",
   "/menu": "/es/menu",
   "/gallery": "/es/galeria",
@@ -338,11 +334,6 @@ export const HREFLANG_GROUPS: Record<
   "/sports-bar-sol": {
     en: "/sports-bar-sol",
     es: "/es/sports-bar-sol",
-  },
-  "/oktoberfest-madrid-sol": {
-    en: "/oktoberfest-madrid-sol",
-    es: "/es/oktoberfest-madrid-sol",
-    de: "/de/oktoberfest-madrid-sol",
   },
 };
 
