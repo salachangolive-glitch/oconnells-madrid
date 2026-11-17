@@ -80,9 +80,10 @@ const GA4_NAMES: Record<string, string> = {
   howto_oconnells: "howto_oconnells",
   howto_dubliners: "howto_dubliners",
   howto_oreillys: "howto_oreillys",
+  rugby_cta_click: "rugby_cta_click",
 };
 
-export function trackEvent(key: string) {
+export function trackEvent(key: string, el?: Element | null) {
   const name = GA4_NAMES[key];
   if (!name || typeof window === "undefined") return;
   const w = window as Window & {
@@ -94,7 +95,14 @@ export function trackEvent(key: string) {
     ) => void;
   };
   if (w.__ocAnalyticsGranted !== true || typeof w.gtag !== "function") return;
-  w.gtag("event", name, { event_source: "site" });
+  const params: Record<string, string> = { event_source: "site" };
+  if (el instanceof HTMLElement) {
+    const bar = el.getAttribute("data-bar");
+    const lang = el.getAttribute("data-lang");
+    if (bar) params.bar = bar;
+    if (lang) params.lang = lang;
+  }
+  w.gtag("event", name, params);
 }
 
 export function TrackClicks() {
@@ -107,7 +115,7 @@ export function TrackClicks() {
       const el = (e.target as HTMLElement | null)?.closest?.("[data-event]");
       if (!el) return;
       const name = el.getAttribute("data-event") || "";
-      trackEvent(name);
+      trackEvent(name, el);
     }
     document.addEventListener("click", onClick);
     return () => {

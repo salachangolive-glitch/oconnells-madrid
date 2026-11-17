@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { PostMatchBanner } from "@/components/PostMatchBanner";
+import { RugbyHomeBanner } from "@/components/RugbyHomeBanner";
 import { HomeComingUp } from "@/components/HomeComingUp";
 import { FixtureStrip } from "@/components/FixtureStrip";
 import { HomeCtaBand } from "@/components/HomeCtaBand";
@@ -33,6 +34,7 @@ export default function HomePage() {
       cover={<VenueHero variant="hero" />}
     >
       <PostMatchBanner locale="en" />
+      <RugbyHomeBanner locale="en" />
       {/* Hero text + CTAs */}
       <header className="mb-8 max-w-2xl text-center sm:mx-auto">
         <h1 className="font-serif text-2xl font-bold leading-snug text-cream sm:text-3xl lg:text-4xl">
