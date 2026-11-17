@@ -28,7 +28,7 @@ const COPY = {
   es: {
     title: "Jornada internacional de rugby – sábado 21 de noviembre",
     live:
-      "En directo en nuestras pantallas en O'Connell St — seis partidos del sábado (hora Madrid).",
+      "En directo en nuestras pantallas en O'Connell St, Espoz y Mina 7 — seis partidos del sábado (hora Madrid).",
     matches: [
       "15:10 Inglaterra–Nueva Zelanda",
       "15:10 Escocia–Japón",
