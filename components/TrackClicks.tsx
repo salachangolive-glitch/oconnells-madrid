@@ -1,7 +1,59 @@
 "use client";
 
 import { useEffect } from "react";
+import { CONSENT_EVENT } from "@/lib/analytics";
 import { captureAttribution } from "@/lib/attribution";
+import {
+  PSV_CAMPAIGN,
+  VIKING_CAMPAIGN,
+} from "@/lib/fan-campaign-three-bars";
+
+const CAMPAIGN_GUIDE_PATHS = new Set<string>([
+  PSV_CAMPAIGN.paths.en,
+  PSV_CAMPAIGN.paths.nl,
+  VIKING_CAMPAIGN.paths.en,
+  VIKING_CAMPAIGN.paths.no,
+]);
+
+const BAR_IDS = new Set(["dubliners", "oconnells", "oreillys"]);
+
+function campaignBarLandingKey(): string | null {
+  if (typeof window === "undefined") return null;
+  if (!CAMPAIGN_GUIDE_PATHS.has(window.location.pathname)) return null;
+  const hash = window.location.hash.replace(/^#/, "");
+  if (BAR_IDS.has(hash)) return hash;
+  const utm = new URLSearchParams(window.location.search).get("utm_content");
+  if (utm && BAR_IDS.has(utm)) return utm;
+  return null;
+}
+
+/** GA4 default page_view omits the hash; report once when a bar anchor or utm_content is present. */
+function reportCampaignBarLanding() {
+  const bar = campaignBarLandingKey();
+  if (!bar) return;
+  const w = window as Window & {
+    __ocAnalyticsGranted?: boolean;
+    __ocBarLandingReported?: boolean;
+    gtag?: (
+      command: "event",
+      eventName: string,
+      params?: Record<string, string>,
+    ) => void;
+  };
+  if (w.__ocAnalyticsGranted !== true || typeof w.gtag !== "function") return;
+  if (w.__ocBarLandingReported) return;
+  w.__ocBarLandingReported = true;
+  const pagePath =
+    window.location.pathname +
+    window.location.search +
+    window.location.hash;
+  w.gtag("event", "page_view", {
+    page_location: window.location.href,
+    page_path: pagePath,
+    utm_content: bar,
+    event_source: "site",
+  });
+}
 
 /**
  * Measurable hooks only. No ad pixel is added here and nothing sets cookies.
@@ -48,6 +100,9 @@ export function trackEvent(key: string) {
 export function TrackClicks() {
   useEffect(() => {
     captureAttribution();
+    reportCampaignBarLanding();
+    document.addEventListener(CONSENT_EVENT, reportCampaignBarLanding);
+    window.addEventListener("hashchange", reportCampaignBarLanding);
     function onClick(e: MouseEvent) {
       const el = (e.target as HTMLElement | null)?.closest?.("[data-event]");
       if (!el) return;
@@ -55,7 +110,11 @@ export function TrackClicks() {
       trackEvent(name);
     }
     document.addEventListener("click", onClick);
-    return () => document.removeEventListener("click", onClick);
+    return () => {
+      document.removeEventListener("click", onClick);
+      document.removeEventListener(CONSENT_EVENT, reportCampaignBarLanding);
+      window.removeEventListener("hashchange", reportCampaignBarLanding);
+    };
   }, []);
   return null;
 }

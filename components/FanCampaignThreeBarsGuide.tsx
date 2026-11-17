@@ -47,7 +47,7 @@ function BarVenueSection({
   const metroLines = stadiumMetroLines(campaign, locale);
 
   return (
-    <Section title={barName(barId, locale)}>
+    <Section id={barId} title={barName(barId, locale)}>
       <p>
         <span className="font-semibold text-cream">{labels.address}: </span>
         {bar.address}
