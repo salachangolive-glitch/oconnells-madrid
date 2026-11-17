@@ -16,6 +16,15 @@ const GA4_NAMES: Record<string, string> = {
   contact: "contact",
   email_click: "email_click",
   form_submit: "generate_lead",
+  directions_oconnells: "directions_oconnells",
+  directions_dubliners: "directions_dubliners",
+  directions_oreillys: "directions_oreillys",
+  tel_oconnells: "tel_oconnells",
+  tel_dubliners: "tel_dubliners",
+  tel_oreillys: "tel_oreillys",
+  link_oconnells: "link_oconnells",
+  link_dubliners: "link_dubliners",
+  link_oreillys: "link_oreillys",
 };
 
 export function trackEvent(key: string) {

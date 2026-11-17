@@ -36,6 +36,10 @@ function resolveEnKey(path: string): string | undefined {
     );
     return group?.[0];
   }
+  const groupByPath = Object.entries(HREFLANG_GROUPS).find(([, g]) =>
+    [g.en, g.es, g.de, g.nl, g.no].filter(Boolean).includes(path),
+  );
+  if (groupByPath) return groupByPath[0];
   return path;
 }
 
@@ -51,6 +55,8 @@ function buildLanguages(path: string): Record<string, string> | undefined {
     };
     if (group.es) languages.es = absoluteUrl(group.es);
     if (group.de) languages.de = absoluteUrl(group.de);
+    if (group.nl) languages.nl = absoluteUrl(group.nl);
+    if (group.no) languages.no = absoluteUrl(group.no);
     return languages;
   }
 

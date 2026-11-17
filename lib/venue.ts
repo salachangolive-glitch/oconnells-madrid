@@ -160,6 +160,10 @@ export const EN_PATHS = [
   "/news/arsenal-manchester-city-sunday-sol",
   "/news/real-madrid-celta-saturday-night-sol",
   "/news/tokio-hotel-madrid-gig-night-sol",
+  "/news/psv-fans-three-bars-sol",
+  "/news/psv-fans-drie-bars-sol",
+  "/news/viking-fans-three-bars-sol",
+  "/news/viking-fans-tre-barer-sol",
   "/news/real-madrid-psv-tuesday-night-sol",
   "/news/real-madrid-zalgiris-wednesday-night-sol",
   "/news/atletico-viking-wednesday-night-sol",
@@ -332,7 +336,7 @@ export const HREFLANG_PAIRS: Record<string, string | undefined> = {
  */
 export const HREFLANG_GROUPS: Record<
   string,
-  { en: string; es?: string; de?: string }
+  { en: string; es?: string; de?: string; nl?: string; no?: string }
 > = {
   /** Home EN/ES + German index /de (27 Oct 2026). */
   "/": {
@@ -343,6 +347,14 @@ export const HREFLANG_GROUPS: Record<
   "/sports-bar-sol": {
     en: "/sports-bar-sol",
     es: "/es/sports-bar-sol",
+  },
+  "/news/psv-fans-three-bars-sol": {
+    en: "/news/psv-fans-three-bars-sol",
+    nl: "/news/psv-fans-drie-bars-sol",
+  },
+  "/news/viking-fans-three-bars-sol": {
+    en: "/news/viking-fans-three-bars-sol",
+    no: "/news/viking-fans-tre-barer-sol",
   },
 };
 
