@@ -88,6 +88,8 @@ const EVENT_LAST_DAY: Record<string, string> = {
   "/news/real-madrid-zalgiris-wednesday-night-sol": "2026-11-25",
   "/news/atletico-viking-wednesday-night-sol": "2026-11-25",
   "/es/noticias/atletico-viking-miercoles-sol": "2026-11-25",
+  "/campaign/portugal-nations-league-meetup-2026-11-20": "2026-11-20",
+  "/es/campaign/portugal-nations-league-meetup-2026-11-20": "2026-11-20",
 };
 
 /** Reachable URLs omitted from the index (noindex pages). */
