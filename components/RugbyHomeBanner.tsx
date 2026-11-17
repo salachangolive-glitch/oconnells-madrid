@@ -8,7 +8,7 @@ const HIDE_SCRIPT = `(function(){if(Date.now()>=${HIDE_AFTER}){var e=document.qu
 const COPY = {
   en: {
     title: "International Rugby – Saturday 21 November",
-    live: "All listed fixtures live on the screens at O'Connell St — we do not name a channel on this page.",
+    live: "Live on our screens at O'Connell St for all listed fixtures — we do not name a channel on this page.",
     matches: [
       "15:10 England v New Zealand",
       "17:40 Ireland v South Africa",
