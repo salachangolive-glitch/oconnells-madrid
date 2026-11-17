@@ -15,6 +15,7 @@ const NOTES: { day: string; en?: [string, string]; es?: [string, string] }[] = [
   { day: "2026-11-23", en: ["/news/tokio-hotel-madrid-gig-night-sol", "Tokio Hotel gig night · Mon 23 Nov"] },
   { day: "2026-11-24", en: ["/news/real-madrid-psv-tuesday-night-sol", "Real Madrid v PSV · Tue 24 Nov"] },
   { day: "2026-11-25", en: ["/news/real-madrid-zalgiris-wednesday-night-sol", "Real Madrid v Žalgiris · Wed 25 Nov"] },
+  { day: "2026-11-29", en: ["/news/arsenal-manchester-city-sunday-sol", "Arsenal v Man City · Sun 29 Nov"], es: ["/es/noticias/arsenal-manchester-city-domingo-sol", "Arsenal–Man City · dom 29 nov"] },
 ];
 
 export function UpcomingNotes({ locale = "en" }: { locale?: "en" | "es" }) {

@@ -98,6 +98,14 @@ export default function EsWhatsOnPage() {
           </Link>
         </p>
       ) : null}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-29" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          Premier League: Arsenal–Manchester City, domingo 29 de noviembre, 17:30 (Emirates Stadium), en DAZN, en directo junto a Sol. Los domingos abrimos a las 14:00.{" "}
+          <Link href="/es/noticias/arsenal-manchester-city-domingo-sol" className="text-gold underline">
+            Arsenal–Man City: domingo de Premier junto a Sol
+          </Link>
+        </p>
+      ) : null}
       <p className="mb-6 text-sm text-cream-muted sm:text-base">
         Cómo funciona la etiqueta Confirmado en esta lista — solo hora de Madrid;
         pregunta en la barra:{" "}

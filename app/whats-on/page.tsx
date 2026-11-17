@@ -119,6 +119,15 @@ export default function WhatsOnPage() {
           </Link>
         </p>
       ) : null}
+      {/* Arsenal v Manchester City, PL MW12 (premierleague.com API fixture 129033: Sun 29 Nov 2026 16:30 GMT = 17:30 Madrid, Emirates; DAZN): build-time date gate. */}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-29" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          Premier League: Arsenal v Manchester City, Sunday 29 November, 17:30 (Emirates Stadium), on DAZN, live near Sol. Open on Sundays from 14:00.{" "}
+          <Link href="/news/arsenal-manchester-city-sunday-sol" className="text-gold underline">
+            Arsenal v Man City: Sunday afternoon near Sol
+          </Link>
+        </p>
+      ) : null}
       {/* Getafe v Brighton + Real Madrid v Crvena Zvezda, visiting-fans articles (owner order 4 Nov 2026 via DG; uefa.com / euroleague.net): build-time date gates. */}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-05" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">
