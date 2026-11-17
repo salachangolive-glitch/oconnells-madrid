@@ -81,6 +81,7 @@ const GA4_NAMES: Record<string, string> = {
   howto_dubliners: "howto_dubliners",
   howto_oreillys: "howto_oreillys",
   rugby_cta_click: "rugby_cta_click",
+  sports_event_cta_click: "sports_event_cta_click",
 };
 
 export function trackEvent(key: string, el?: Element | null) {
@@ -99,8 +100,14 @@ export function trackEvent(key: string, el?: Element | null) {
   if (el instanceof HTMLElement) {
     const bar = el.getAttribute("data-bar");
     const lang = el.getAttribute("data-lang");
+    const campaignId = el.getAttribute("data-campaign-id");
     if (bar) params.bar = bar;
-    if (lang) params.lang = lang;
+    if (lang) params.language = lang;
+    if (campaignId) params.campaign_id = campaignId;
+    if (typeof window !== "undefined") {
+      params.page_path =
+        window.location.pathname + window.location.search;
+    }
   }
   w.gtag("event", name, params);
 }

@@ -200,6 +200,7 @@ export const EN_PATHS = [
   "/contact",
   "/privacy",
   "/news",
+  "/campaign/portugal-nations-league-meetup-2026-11-20",
 ] as const;
 
 export const ES_PATHS = [
@@ -257,6 +258,7 @@ export const ES_PATHS = [
   "/es/united-1730-despues-del-par-oconnells",
   "/es/despues-bernabeu-esta-puerta-espoz-mina-7",
   "/es/nfl-noche-luego-atleti-barca-esta-puerta",
+  "/es/campaign/portugal-nations-league-meetup-2026-11-20",
 ] as const;
 
 export const DE_PATHS = [
@@ -331,6 +333,8 @@ export const HREFLANG_PAIRS: Record<string, string | undefined> = {
   "/united-1730-after-the-pair-oconnells": "/es/united-1730-despues-del-par-oconnells",
   "/after-bernabeu-this-door-espoz-mina-7": "/es/despues-bernabeu-esta-puerta-espoz-mina-7",
   "/evening-nfl-then-atleti-barca-this-door": "/es/nfl-noche-luego-atleti-barca-esta-puerta",
+  "/campaign/portugal-nations-league-meetup-2026-11-20":
+    "/es/campaign/portugal-nations-league-meetup-2026-11-20",
 };
 
 /**
