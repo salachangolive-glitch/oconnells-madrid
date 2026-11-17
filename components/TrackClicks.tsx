@@ -25,6 +25,9 @@ const GA4_NAMES: Record<string, string> = {
   link_oconnells: "link_oconnells",
   link_dubliners: "link_dubliners",
   link_oreillys: "link_oreillys",
+  howto_oconnells: "howto_oconnells",
+  howto_dubliners: "howto_dubliners",
+  howto_oreillys: "howto_oreillys",
 };
 
 export function trackEvent(key: string) {

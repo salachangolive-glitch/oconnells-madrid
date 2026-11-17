@@ -1,21 +1,26 @@
 import { BAR_MAPS } from "@/lib/after-game-sunday-8-nov";
 import { HOURS } from "@/lib/venue";
 
+/** Equal presentation order on all campaign pages. */
+export const THREE_BARS_ORDER = ["dubliners", "oconnells", "oreillys"] as const;
+
+export type BarId = (typeof THREE_BARS_ORDER)[number];
+
 /** Owner campaign 17 Nov 2026 — three bars only (no Four Corner). */
-export const THREE_BARS_DATA = [
+export const THREE_BARS_DATA: Record<
+  BarId,
   {
-    id: "oconnells",
-    maps: BAR_MAPS.oconnells,
-    phone: "+34 915 32 79 56",
-    tel: "tel:+34915327956",
-    web: "https://oconnellsmadrid.es/",
-    address: "Calle de Espoz y Mina 7, 28012 Madrid (Google Maps: O'Connell St)",
-    hoursEn: `Tue–Thu: ${HOURS.monThu.open}–${HOURS.monThu.close} (Tue 24 Nov: open from 18:00)`,
-    hoursNl: `Di–do: ${HOURS.monThu.open}–${HOURS.monThu.close} (di 24 nov: open vanaf 18:00)`,
-    hoursNo: `Tir–tor: ${HOURS.monThu.open}–${HOURS.monThu.close} (ons 25. nov: åpent fra 18:00)`,
-  },
-  {
-    id: "dubliners",
+    maps: string;
+    phone: string;
+    tel: string;
+    web: string;
+    address: string;
+    hoursEn: string;
+    hoursNl: string;
+    hoursNo: string;
+  }
+> = {
+  dubliners: {
     maps: BAR_MAPS.dubliners,
     phone: "+34 915 32 79 56",
     tel: "tel:+34915327956",
@@ -25,8 +30,17 @@ export const THREE_BARS_DATA = [
     hoursNl: "Di: 12:00–02:00 · wo: 12:00–02:00 (volgens Dubliners, Europe/Madrid)",
     hoursNo: "Tir: 12:00–02:00 · ons: 12:00–02:00 (ifølge Dubliners, Europe/Madrid)",
   },
-  {
-    id: "oreillys",
+  oconnells: {
+    maps: BAR_MAPS.oconnells,
+    phone: "+34 915 32 79 56",
+    tel: "tel:+34915327956",
+    web: "https://oconnellsmadrid.es/",
+    address: "Calle de Espoz y Mina 7, 28012 Madrid (Google Maps: O'Connell St)",
+    hoursEn: `Tue–Thu: ${HOURS.monThu.open}–${HOURS.monThu.close}`,
+    hoursNl: `Di–do: ${HOURS.monThu.open}–${HOURS.monThu.close}`,
+    hoursNo: `Tir–tor: ${HOURS.monThu.open}–${HOURS.monThu.close}`,
+  },
+  oreillys: {
     maps: BAR_MAPS.oreillys,
     phone: "+34 915 21 29 58",
     tel: "tel:+34915212958",
@@ -36,7 +50,16 @@ export const THREE_BARS_DATA = [
     hoursNl: "Elke dag 11:30–01:30 (volgens O'Reilly's)",
     hoursNo: "Hver dag 11:30–01:30 (ifølge O'Reilly's)",
   },
-] as const;
+};
+
+export const ACCESS_PHRASE = {
+  en: "No reservations; first come, first served.",
+  nl: "Geen reserveringen; toegang op volgorde van binnenkomst.",
+  no: "Ingen reservasjon; førstemann til mølla.",
+} as const;
+
+export const METRO_MADRID_LINES =
+  "https://www.metromadrid.es/en/travel-in-the-metro/lines-and-horarios/";
 
 export const PSV_CAMPAIGN = {
   paths: {
@@ -49,7 +72,6 @@ export const PSV_CAMPAIGN = {
   uefaUrl: "https://www.uefa.com/uefachampionsleague/match/2049625/",
   oconnellSoloEn: "/news/real-madrid-psv-tuesday-night-sol",
   oconnellSoloNl: "/news/real-madrid-psv-tuesday-night-sol",
-  dublinersAvoid: "https://dublinersmadrid.es/psv-fans-madrid/",
 } as const;
 
 export const VIKING_CAMPAIGN = {
@@ -62,6 +84,8 @@ export const VIKING_CAMPAIGN = {
   kickoff: "21:00",
   uefaUrl: "https://www.uefa.com/uefachampionsleague/match/2049636/",
   oconnellSoloEn: "/news/atletico-viking-wednesday-night-sol",
-  oconnellSoloNo: "/es/noticias/atletico-viking-miercoles-sol",
-  dublinersAvoid: "https://dublinersmadrid.es/viking-fans-madrid/",
+  oconnellSoloNo: "/news/atletico-viking-wednesday-night-sol",
 } as const;
+
+export type CampaignId = "psv" | "viking";
+export type GuideLocale = "en" | "nl" | "no";

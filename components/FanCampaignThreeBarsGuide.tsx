@@ -4,38 +4,123 @@ import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
 import { LangAttr } from "@/components/LangAttr";
 import {
+  barName,
+  footFromSol,
+  meetingAfter,
+  meetingBefore,
+  stadiumMetroLines,
+  uiLabels,
+} from "@/lib/fan-campaign-guide-copy";
+import {
+  ACCESS_PHRASE,
+  METRO_MADRID_LINES,
   PSV_CAMPAIGN,
   THREE_BARS_DATA,
+  THREE_BARS_ORDER,
   VIKING_CAMPAIGN,
+  type BarId,
+  type CampaignId,
+  type GuideLocale,
 } from "@/lib/fan-campaign-three-bars";
 import { buildMetadata } from "@/lib/seo";
 
-type CampaignId = "psv" | "viking";
-type GuideLocale = "en" | "nl" | "no";
-
-const NAMES: Record<string, Record<GuideLocale, string>> = {
-  oconnells: { en: "O'Connell's", nl: "O'Connell's", no: "O'Connell's" },
-  dubliners: { en: "Dubliners", nl: "Dubliners", no: "Dubliners" },
-  oreillys: {
-    en: "O'Reilly's Restaurant Bar",
-    nl: "O'Reilly's Restaurant Bar",
-    no: "O'Reilly's Restaurant Bar",
-  },
-};
-
-const DIRECTIONS_LABEL: Record<GuideLocale, string> = {
-  en: "GET DIRECTIONS",
-  nl: "ROUTE (Google Maps)",
-  no: "VEIVISER (Google Maps)",
-};
-
 function barHours(
-  bar: (typeof THREE_BARS_DATA)[number],
+  bar: (typeof THREE_BARS_DATA)[BarId],
   locale: GuideLocale,
 ): string {
   if (locale === "nl") return bar.hoursNl;
   if (locale === "no") return bar.hoursNo;
   return bar.hoursEn;
+}
+
+function BarVenueSection({
+  barId,
+  locale,
+  campaign,
+}: {
+  barId: BarId;
+  locale: GuideLocale;
+  campaign: CampaignId;
+}) {
+  const bar = THREE_BARS_DATA[barId];
+  const labels = uiLabels(locale);
+  const metroLines = stadiumMetroLines(campaign, locale);
+
+  return (
+    <Section title={barName(barId, locale)}>
+      <p>
+        <span className="font-semibold text-cream">{labels.address}: </span>
+        {bar.address}
+      </p>
+      <p className="mt-2">
+        <span className="font-semibold text-cream">{labels.hours}: </span>
+        {barHours(bar, locale)}
+      </p>
+      <p className="mt-2 text-sm text-cream-muted">{ACCESS_PHRASE[locale]}</p>
+      <p className="mt-3 flex flex-wrap gap-x-3 gap-y-1 text-sm">
+        <a
+          href={bar.maps}
+          target="_blank"
+          rel="noopener noreferrer"
+          data-event={`directions_${barId}`}
+          className="text-cream underline"
+        >
+          {labels.map}
+        </a>
+        <a
+          href={bar.tel}
+          data-event={`tel_${barId}`}
+          className="text-cream underline"
+        >
+          {labels.phone}: {bar.phone}
+        </a>
+        <a
+          href={bar.web}
+          target="_blank"
+          rel="noopener noreferrer"
+          data-event={`link_${barId}`}
+          className="text-gold underline"
+        >
+          {labels.website}
+        </a>
+      </p>
+      <p className="mt-4">
+        <span className="font-semibold text-cream">{labels.footSol}</span>
+        <br />
+        {footFromSol(barId, locale)}
+      </p>
+      <p className="mt-4">
+        <span className="font-semibold text-cream">{labels.metroStadium}</span>
+      </p>
+      <ul className="mt-1 list-disc space-y-1 pl-5">
+        {metroLines.map((line) => (
+          <li key={line}>{line}</li>
+        ))}
+      </ul>
+      <p className="mt-2 text-sm">
+        <a
+          href={METRO_MADRID_LINES}
+          target="_blank"
+          rel="noopener noreferrer"
+          data-event={`howto_${barId}`}
+          className="text-gold underline"
+        >
+          {labels.metroLink}
+        </a>
+      </p>
+      <p className="mt-4">
+        <span className="font-semibold text-cream">{labels.before}</span>
+        <br />
+        {meetingBefore(campaign, locale)}
+      </p>
+      <p className="mt-4">
+        <span className="font-semibold text-cream">{labels.after}</span>
+        <br />
+        {meetingAfter(campaign, locale)}
+      </p>
+      <p className="mt-4 text-sm text-cream-muted">{labels.screening}</p>
+    </Section>
+  );
 }
 
 type Copy = {
@@ -83,14 +168,10 @@ const COPY: Record<CampaignId, Record<GuideLocale, Copy>> = {
       matchNote:
         "Kick-off and venue per UEFA. Times can change — check on the day.",
       uefaLabel: "UEFA Champions League match page",
-      threeBarsTitle: "Three bars — address, Maps and hours",
-      threeBarsIntro:
-        "Dubliners and O'Connell's share Calle de Espoz y Mina 7 (different doors). O'Reilly's is in Pasaje de Matheu 4. Ask at the bar which feed is on. Not every screen shows every match at once.",
-      stadiumTitle: "From Sol toward the Bernabéu (Metro de Madrid)",
-      stadiumParas: [
-        "From Puerta del Sol station: Metro line 1 to Tribunal, then line 10 to Santiago Bernabéu — next to the stadium (see metromadrid.es line maps).",
-        "Allow time for security and finding your seat before 21:00.",
-      ],
+      threeBarsTitle: "",
+      threeBarsIntro: "",
+      stadiumTitle: "",
+      stadiumParas: [],
       fanLine: undefined,
       relatedTitle: "O'Connell's only",
       relatedP:
@@ -121,14 +202,10 @@ const COPY: Record<CampaignId, Record<GuideLocale, Copy>> = {
       matchNote:
         "Datum en aanvang volgens UEFA. Tijden kunnen wijzigen — controleer op de dag zelf.",
       uefaLabel: "UEFA Champions League wedstrijdpagina",
-      threeBarsTitle: "Drie bars — adres, Maps en openingstijden",
-      threeBarsIntro:
-        "Dubliners en O'Connell's zitten op Calle de Espoz y Mina 7 (andere deuren). O'Reilly's staat in Pasaje de Matheu 4. Vraag aan de bar welke zender erop staat.",
-      stadiumTitle: "Van Sol naar het Bernabéu (Metro de Madrid)",
-      stadiumParas: [
-        "Vanaf metrostation Sol: lijn 1 naar Tribunal, daarna lijn 10 naar Santiago Bernabéu — naast het stadion (zie metromadrid.es).",
-        "Reken op tijd voor de controle en je plaats vóór 21:00.",
-      ],
+      threeBarsTitle: "",
+      threeBarsIntro: "",
+      stadiumTitle: "",
+      stadiumParas: [],
       fanLine: {
         lang: "nl",
         text: "Welkom in Madrid, PSV-fans! Drie Irish pubs bij Sol — Dubliners, O'Connell's en O'Reilly's — als ontmoetingspunt vóór Real Madrid–PSV.",
@@ -187,14 +264,10 @@ const COPY: Record<CampaignId, Record<GuideLocale, Copy>> = {
       matchNote:
         "Kick-off and venue per UEFA. Times can change — check on the day.",
       uefaLabel: "UEFA Champions League match page",
-      threeBarsTitle: "Three bars — address, Maps and hours",
-      threeBarsIntro:
-        "Same street: Dubliners and O'Connell's at Espoz y Mina 7. O'Reilly's at Pasaje de Matheu 4. Ask which feed is on.",
-      stadiumTitle: "From Sol toward the Metropolitano (Metro de Madrid)",
-      stadiumParas: [
-        "From Sol: metro line 2 to Las Rosas, then about 15 minutes on foot to the stadium (Atlético club wayfinding). Line 7 serves Estadio Metropolitano station beside the ground (metromadrid.es).",
-        "On match nights EMT bus SE721 links Canillejas (metro line 5) with the stadium from two hours before kick-off.",
-      ],
+      threeBarsTitle: "",
+      threeBarsIntro: "",
+      stadiumTitle: "",
+      stadiumParas: [],
       fanLine: undefined,
       relatedTitle: "O'Connell's only",
       relatedP: "For O'Connell St only:",
@@ -224,14 +297,10 @@ const COPY: Record<CampaignId, Record<GuideLocale, Copy>> = {
       matchNote:
         "Dato og avspark ifølge UEFA. Tider kan endres — sjekk på kampdagen.",
       uefaLabel: "UEFA Champions League kamp-side",
-      threeBarsTitle: "Tre barer — adresse, Maps og åpningstider",
-      threeBarsIntro:
-        "Dubliners og O'Connell's i Calle de Espoz y Mina 7. O'Reilly's i Pasaje de Matheu 4. Spør i baren hvilken feed som går.",
-      stadiumTitle: "Fra Sol til Metropolitano (Metro de Madrid)",
-      stadiumParas: [
-        "Fra Sol: T-banelinje 2 til Las Rosas, deretter ca. 15 minutter til fots (Atléticos veibeskrivelse). Linje 7 stopper ved Estadio Metropolitano ved stadion (metromadrid.es).",
-        "Kampdager: EMT-buss SE721 mellom Canillejas (linje 5) og stadion fra to timer før avspark.",
-      ],
+      threeBarsTitle: "",
+      threeBarsIntro: "",
+      stadiumTitle: "",
+      stadiumParas: [],
       fanLine: {
         lang: "no",
         text: "Velkommen til Madrid! Dubliners, O'Connell's og O'Reilly's ved Puerta del Sol er møtesteder før Atlético–Viking FK.",
@@ -296,6 +365,10 @@ export function FanCampaignThreeBarsGuide({
   path: string;
 }) {
   const c = COPY[campaign][locale];
+  const labels = uiLabels(locale);
+  const threeBarsTitle = labels.threeBarsTitle;
+  const threeBarsIntro =
+    campaign === "psv" ? labels.threeBarsIntro : labels.threeBarsIntroViking;
   const uefaUrl =
     campaign === "psv" ? PSV_CAMPAIGN.uefaUrl : VIKING_CAMPAIGN.uefaUrl;
   const shellLocale = locale === "no" || locale === "nl" ? "en" : locale;
@@ -331,65 +404,22 @@ export function FanCampaignThreeBarsGuide({
         </p>
         <p className="mt-2 text-sm text-cream-muted">{c.screeningNote}</p>
       </Section>
-      <Section title={c.threeBarsTitle}>
-        <p>{c.threeBarsIntro}</p>
-        <ul className="mt-3 space-y-4">
-          {THREE_BARS_DATA.map((bar) => (
-            <li key={bar.id} className="border-l border-gold/40 pl-3">
-              <p className="font-semibold text-cream">{NAMES[bar.id][locale]}</p>
-              <p className="text-sm text-cream-muted">{bar.address}</p>
-              <p className="text-sm text-cream-muted">{barHours(bar, locale)}</p>
-              <p className="mt-2 flex flex-wrap gap-x-3 gap-y-1 text-sm">
-                <a
-                  href={bar.maps}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-event={`directions_${bar.id}`}
-                  className="text-cream underline"
-                >
-                  {DIRECTIONS_LABEL[locale]}
-                </a>
-                <a
-                  href={bar.tel}
-                  data-event={`tel_${bar.id}`}
-                  className="text-cream underline"
-                >
-                  {bar.phone}
-                </a>
-                <a
-                  href={bar.web}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-event={`link_${bar.id}`}
-                  className="text-gold underline"
-                >
-                  {bar.web.replace(/^https:\/\//, "")}
-                </a>
-              </p>
-            </li>
-          ))}
-        </ul>
+      <Section title={threeBarsTitle}>
+        <p>{threeBarsIntro}</p>
       </Section>
+      {THREE_BARS_ORDER.map((barId) => (
+        <BarVenueSection
+          key={barId}
+          barId={barId}
+          locale={locale}
+          campaign={campaign}
+        />
+      ))}
       {c.fanLine ? (
         <p className="mb-8 text-sm text-cream-muted" lang={c.fanLine.lang}>
           {c.fanLine.text}
         </p>
       ) : null}
-      <Section title={c.stadiumTitle}>
-        {c.stadiumParas.map((p) => (
-          <p key={p}>{p}</p>
-        ))}
-        <p className="text-sm text-cream-muted">
-          <a
-            href="https://www.metromadrid.es/en/travel-in-the-metro/lines-and-horarios/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gold underline"
-          >
-            metromadrid.es
-          </a>
-        </p>
-      </Section>
       <Section title={c.relatedTitle}>
         <p>
           {c.relatedP}{" "}
