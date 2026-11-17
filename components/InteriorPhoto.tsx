@@ -5,14 +5,21 @@ const RESPONSIVE = new Set([
   "/images/interior/sports-aisle.webp",
   "/images/interior/about-salon.webp",
   "/images/interior/stairs-levels.webp",
+  "/images/owner-17nov/oconnells-pantallas-futbol.webp",
+  "/images/owner-17nov/oconnells-ambiente-partido.webp",
 ]);
+
+function fullWidthFor(src: string): number {
+  return src.startsWith("/images/owner-17nov/") ? 1152 : 1050;
+}
 
 function srcSetFor(src: string): string | undefined {
   if (!RESPONSIVE.has(src)) return undefined;
   const base = src.replace(/\.webp$/, "");
+  const fullW = fullWidthFor(src);
   return [320, 480, 640, 780]
     .map((w) => `${base}-${w}w.webp ${w}w`)
-    .concat(`${src} 1050w`)
+    .concat(`${src} ${fullW}w`)
     .join(", ");
 }
 
@@ -38,7 +45,7 @@ function FillImg({
       srcSet={srcSet}
       sizes={srcSet ? sizes : undefined}
       alt={alt}
-      width={1050}
+      width={fullWidthFor(src)}
       height={1400}
       loading={priority ? undefined : "lazy"}
       fetchPriority={priority ? "high" : undefined}

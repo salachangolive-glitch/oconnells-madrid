@@ -1,4 +1,5 @@
 import type { MatchArticleData } from "@/components/MatchNewsArticle";
+import { OWNER_PHOTOS_17NOV } from "@/lib/owner-photos-17nov";
 
 /**
  * Nations Championship rugby — Saturday 21 Nov 2026 (17 Nov article).
@@ -19,6 +20,8 @@ export const RUGBY_SATURDAY_SOL_21_NOV: MatchArticleData = {
   awayTeam: "New Zealand",
   venue: "Allianz Stadium",
   venueLocality: "Twickenham",
+  interiorSrc: OWNER_PHOTOS_17NOV.pantallasFutbol.src,
+  interiorPosition: OWNER_PHOTOS_17NOV.pantallasFutbol.position,
   copy: {
     en: {
       title:
@@ -77,7 +80,7 @@ export const RUGBY_SATURDAY_SOL_21_NOV: MatchArticleData = {
         label: "Leer en español",
         lang: "es",
       },
-      alt: "O'Connell St Irish pub screens near Puerta del Sol",
+      alt: OWNER_PHOTOS_17NOV.pantallasFutbol.alt.en,
     },
     es: {
       title:
@@ -136,7 +139,7 @@ export const RUGBY_SATURDAY_SOL_21_NOV: MatchArticleData = {
         label: "Read in English",
         lang: "en",
       },
-      alt: "Pantallas deportivas en O'Connell St junto a Puerta del Sol",
+      alt: OWNER_PHOTOS_17NOV.pantallasFutbol.alt.es,
     },
   },
 };

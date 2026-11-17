@@ -12,6 +12,7 @@ import { ThursdayFeature } from "@/components/ThursdayFeature";
 import { LocaloFindUs } from "@/components/LocaloFindUs";
 import { VenueHero } from "@/components/VenueHero";
 import { buildMetadata } from "@/lib/seo";
+import { ownerPhotoAlt, OWNER_PHOTOS_17NOV } from "@/lib/owner-photos-17nov";
 import {
   ADDRESS,
   HOURS,
@@ -183,14 +184,14 @@ export default function EsHomePage() {
             position: "object-center",
           },
           {
-            src: "/images/interior/sports-aisle.webp",
-            alt: "Pantallas de deportes y pasillo de asientos en O'Connell St",
-            position: "object-[center_20%]",
+            src: OWNER_PHOTOS_17NOV.pantallasFutbol.src,
+            alt: ownerPhotoAlt("pantallasFutbol", "es"),
+            position: OWNER_PHOTOS_17NOV.pantallasFutbol.position,
           },
           {
-            src: "/images/interior/about-salon.webp",
-            alt: "Mesas con televisiones en el salón de O'Connell St",
-            position: "object-center",
+            src: OWNER_PHOTOS_17NOV.ambientePartido.src,
+            alt: ownerPhotoAlt("ambientePartido", "es"),
+            position: OWNER_PHOTOS_17NOV.ambientePartido.position,
           },
           {
             src: "/images/interior/stairs-levels.webp",

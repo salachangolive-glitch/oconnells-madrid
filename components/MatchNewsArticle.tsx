@@ -46,6 +46,9 @@ export type MatchArticleData = {
   fourBars?: boolean;
   /** Past screening: keep the page, drop Event JSON-LD, show archive notice. */
   pastEvent?: boolean;
+  /** Owner photo override (path under public/). */
+  interiorSrc?: string;
+  interiorPosition?: string;
   copy: Record<MatchLocale, MatchCopy>;
 };
 
@@ -124,7 +127,11 @@ export function MatchNewsArticle({ data, locale }: { data: MatchArticleData; loc
     <PageShell locale={locale} altLangHref={c.other.href}>
       <JsonLd data={jsonLd(data, locale)} />
       <PageHero eyebrow={c.eyebrow} title={c.h1} lead={c.lead} />
-      <InteriorPhoto src="/images/interior/bar-taps.webp" alt={c.alt} position="object-[center_40%]" />
+      <InteriorPhoto
+        src={data.interiorSrc ?? "/images/interior/bar-taps.webp"}
+        alt={c.alt}
+        position={data.interiorPosition ?? "object-[center_40%]"}
+      />
       <p className="mb-8 text-sm text-cream-muted">
         <a href={c.other.href} hrefLang={c.other.lang} lang={c.other.lang} className="text-gold underline">
           {c.other.label}
