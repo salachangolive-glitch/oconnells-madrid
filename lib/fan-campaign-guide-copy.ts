@@ -14,9 +14,9 @@ const UI = {
     after: "Meeting point after the match",
     threeBarsTitle: "Three bars — equal meeting points near Sol",
     threeBarsIntro:
-      "Dubliners, O'Connell's and O'Reilly's are three independent Irish venues the same distance from Sol. The owner confirms Real Madrid–PSV on the screens at all three on Tuesday 24 November. Pick one door for your group.",
+      "Dubliners, O'Connell's and O'Reilly's are three independent Irish venues the same distance from Sol. Confirmed on the screens at all three for Real Madrid–PSV on Tuesday 24 November. Pick one door for your group.",
     threeBarsIntroViking:
-      "Dubliners, O'Connell's and O'Reilly's are three independent Irish venues the same distance from Sol. The owner confirms Atlético–Viking FK on the screens at all three on Wednesday 25 November. Viking FK from Stavanger, not the NFL Minnesota Vikings.",
+      "Dubliners, O'Connell's and O'Reilly's are three independent Irish venues the same distance from Sol. Confirmed on the screens at all three for Atlético–Viking FK on Wednesday 25 November. Viking FK from Stavanger, not the NFL Minnesota Vikings.",
     screening:
       "The match is on the screens at this venue for this fixture. Ask at the bar which feed is on.",
     dublinersFoot:
@@ -55,7 +55,7 @@ const UI = {
     after: "Ontmoetingspunt na de wedstrijd",
     threeBarsTitle: "Drie bars — gelijke ontmoetingspunten bij Sol",
     threeBarsIntro:
-      "Dubliners, O'Connell's en O'Reilly's zijn drie onafhankelijke Irish pubs op dezelfde afstand van Sol. De eigenaar bevestigt Real Madrid–PSV op de schermen in alle drie op dinsdag 24 november.",
+      "Dubliners, O'Connell's en O'Reilly's zijn drie onafhankelijke Irish pubs op dezelfde afstand van Sol. Bevestigd op de schermen bij alle drie voor Real Madrid–PSV op dinsdag 24 november.",
     threeBarsIntroViking: "",
     screening:
       "De wedstrijd staat op de schermen in deze zaal. Vraag aan de bar welke zender erop staat.",
@@ -91,7 +91,7 @@ const UI = {
     threeBarsTitle: "Tre barer — like møtesteder ved Sol",
     threeBarsIntro: "",
     threeBarsIntroViking:
-      "Dubliners, O'Connell's og O'Reilly's er tre uavhengige irske puber like langt fra Sol. Eieren bekrefter Atlético–Viking FK på skjermene i alle tre onsdag 25. november. Viking FK fra Stavanger, ikke NFLs Minnesota Vikings.",
+      "Dubliners, O'Connell's og O'Reilly's er tre uavhengige irske puber like langt fra Sol. Bekreftet på skjermene hos alle tre for Atlético–Viking FK onsdag 25. november. Viking FK fra Stavanger, ikke NFLs Minnesota Vikings.",
     screening:
       "Kampen går på skjermene her. Spør i baren hvilken feed som vises.",
     dublinersFoot:

@@ -158,7 +158,7 @@ const COPY: Record<CampaignId, Record<GuideLocale, Copy>> = {
       eyebrow: "UEFA Champions League · Tuesday 24 November 2026 · 21:00",
       h1: "PSV in Madrid: three meeting points near Sol",
       lead:
-        "Real Madrid host PSV on Tuesday 24 November at 21:00 at the Santiago Bernabéu. The owner confirms the match on the screens at Dubliners, O'Connell's and O'Reilly's — three independent Irish venues a short walk from Puerta del Sol. Pick one pin, meet your group, then head to the stadium. First come, first served; no reservations.",
+        "Real Madrid host PSV on Tuesday 24 November at 21:00 at the Santiago Bernabéu. Confirmed on the screens at Dubliners, O'Connell's and O'Reilly's — three independent Irish venues a short walk from Puerta del Sol. Pick one pin, meet your group, then head to the stadium. First come, first served; no reservations.",
       matchTitle: "The match",
       matchBullets: [
         "Real Madrid v PSV, UEFA Champions League, league phase, matchday 5",
@@ -192,7 +192,7 @@ const COPY: Record<CampaignId, Record<GuideLocale, Copy>> = {
       eyebrow: "UEFA Champions League · dinsdag 24 november 2026 · 21:00",
       h1: "PSV in Madrid: drie ontmoetingspunten bij Sol",
       lead:
-        "Real Madrid ontvangt PSV op dinsdag 24 november om 21:00 in het Santiago Bernabéu. De eigenaar bevestigt de wedstrijd op de schermen bij Dubliners, O'Connell's en O'Reilly's — drie onafhankelijke Irish pubs op loopafstand van de Puerta del Sol. Kies één adres, spreek af met je groep en ga daarna naar het stadion. Vol = vol; geen reserveringen.",
+        "Real Madrid ontvangt PSV op dinsdag 24 november om 21:00 in het Santiago Bernabéu. Bevestigd op de schermen bij Dubliners, O'Connell's en O'Reilly's — drie onafhankelijke Irish pubs op loopafstand van de Puerta del Sol. Kies één adres, spreek af met je groep en ga daarna naar het stadion. Vol = vol; geen reserveringen.",
       matchTitle: "De wedstrijd",
       matchBullets: [
         "Real Madrid–PSV, UEFA Champions League, competitiefase, speeldag 5",
@@ -254,7 +254,7 @@ const COPY: Record<CampaignId, Record<GuideLocale, Copy>> = {
       eyebrow: "UEFA Champions League · Wednesday 25 November 2026 · 21:00",
       h1: "Viking FK in Madrid: three meeting points near Sol",
       lead:
-        "Atlético host Viking FK on Wednesday 25 November at 21:00 at the Riyadh Air Metropolitano. The owner confirms the match on the screens at Dubliners, O'Connell's and O'Reilly's near Puerta del Sol — three meeting points before you take the metro east. First come, first served; no reservations. This is Viking FK from Stavanger, not the NFL Minnesota Vikings.",
+        "Atlético host Viking FK on Wednesday 25 November at 21:00 at the Riyadh Air Metropolitano. Confirmed on the screens at Dubliners, O'Connell's and O'Reilly's near Puerta del Sol — three meeting points before you take the metro east. First come, first served; no reservations. This is Viking FK from Stavanger, not the NFL Minnesota Vikings.",
       matchTitle: "The match",
       matchBullets: [
         "Atlético de Madrid v Viking FK, UEFA Champions League, league phase, matchday 5",
@@ -287,7 +287,7 @@ const COPY: Record<CampaignId, Record<GuideLocale, Copy>> = {
       eyebrow: "UEFA Champions League · onsdag 25. november 2026 · 21:00",
       h1: "Viking FK i Madrid: tre møtesteder ved Sol",
       lead:
-        "Atlético tar imot Viking FK onsdag 25. november kl. 21:00 på Riyadh Air Metropolitano. Eieren bekrefter kampen på skjermene i Dubliners, O'Connell's og O'Reilly's ved Puerta del Sol — tre uavhengige irske puber i gangavstand fra torget. Velg ett sted, møt gruppen, ta metro østover. Førstemann til mølla; ingen reservasjoner. Dette er Viking FK fra Stavanger, ikke NFLs Minnesota Vikings.",
+        "Atlético tar imot Viking FK onsdag 25. november kl. 21:00 på Riyadh Air Metropolitano. Bekreftet på skjermene hos Dubliners, O'Connell's og O'Reilly's ved Puerta del Sol — tre uavhengige irske puber i gangavstand fra torget. Velg ett sted, møt gruppen, ta metro østover. Førstemann til mølla; ingen reservasjoner. Dette er Viking FK fra Stavanger, ikke NFLs Minnesota Vikings.",
       matchTitle: "Kampen",
       matchBullets: [
         "Atlético–Viking FK, UEFA Champions League, ligafase, runde 5",
