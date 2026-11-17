@@ -24,7 +24,7 @@ const COPY = {
   },
   es: {
     title: "Jornada internacional de rugby – sábado 21 de noviembre",
-    live: "Los partidos indicados en directo en pantalla en O'Connell St — no citamos cadena en esta página.",
+    live: "En directo en nuestras pantallas en O'Connell St para los partidos indicados — no citamos cadena en esta página.",
     matches: [
       "15:10 Inglaterra–Nueva Zelanda",
       "17:40 Irlanda–Sudáfrica",
