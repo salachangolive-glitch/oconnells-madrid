@@ -22,6 +22,7 @@ import {
   type CampaignId,
   type GuideLocale,
 } from "@/lib/fan-campaign-three-bars";
+import { ownerPhotoAlt, OWNER_PHOTOS_17NOV } from "@/lib/owner-photos-17nov";
 import { buildMetadata } from "@/lib/seo";
 
 function barHours(
@@ -119,6 +120,19 @@ function BarVenueSection({
         {meetingAfter(campaign, locale)}
       </p>
       <p className="mt-4 text-sm text-cream-muted">{labels.screening}</p>
+      {barId === "oconnells" ? (
+        <div className="mt-6">
+          <InteriorPhoto
+            src={OWNER_PHOTOS_17NOV.pantallasFutbol.src}
+            alt={
+              locale === "en"
+                ? ownerPhotoAlt("pantallasFutbol", "en")
+                : ownerPhotoAlt("pantallasFutbol", "es")
+            }
+            position={OWNER_PHOTOS_17NOV.pantallasFutbol.position}
+          />
+        </div>
+      ) : null}
     </Section>
   );
 }
