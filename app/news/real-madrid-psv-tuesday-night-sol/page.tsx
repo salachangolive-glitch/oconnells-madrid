@@ -16,6 +16,7 @@ import { MAPS_URL } from "@/lib/venue";
  * Tuesday hours 18:00–03:00 (lib/venue HOURS.monThu).
  */
 const PATH = "/news/real-madrid-psv-tuesday-night-sol";
+const PATH_ES = "/es/noticias/real-madrid-psv-martes-sol";
 const PUBLISHED = "2026-11-09T10:00:00+01:00";
 const START = "2026-11-24T21:00:00+01:00";
 const H1 = "PSV in Madrid: a Tuesday Champions League night that starts at Sol";
@@ -30,7 +31,7 @@ export const metadata = buildMetadata({
 
 export default function NewsRealMadridPsvTuesdayNightPage() {
   return (
-    <PageShell locale="en">
+    <PageShell locale="en" altLangHref={PATH_ES}>
       <JsonLd
         data={visitingFansNewsJsonLd({
           path: PATH,
@@ -128,6 +129,10 @@ export default function NewsRealMadridPsvTuesdayNightPage() {
           {" · "}
           <Link href="/contact" className="text-cream underline">
             Contact
+          </Link>
+          {" · "}
+          <Link href={PATH_ES} className="text-cream underline">
+            Leer en español
           </Link>
         </p>
       </Section>

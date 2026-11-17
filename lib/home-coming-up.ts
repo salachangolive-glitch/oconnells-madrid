@@ -26,7 +26,7 @@ export const HOME_COMING_UP: ComingUpItem[] = [
         "UEFA Champions League, Tuesday 24 November, 21:00 (Bernabéu). Dutch / PSV fans: a fans meeting point near Sol before or after.",
     },
     es: {
-      href: "/news/real-madrid-psv-tuesday-night-sol",
+      href: "/es/noticias/real-madrid-psv-martes-sol",
       label: "Real Madrid–PSV: martes por la noche junto a Sol",
       detail:
         "Champions: Real Madrid–PSV, martes 24 de noviembre, 21:00 (Bernabéu). Afición neerlandesa / PSV: punto de encuentro junto a Sol antes o después.",
