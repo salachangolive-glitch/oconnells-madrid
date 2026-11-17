@@ -8,10 +8,13 @@ const HIDE_SCRIPT = `(function(){if(Date.now()>=${HIDE_AFTER}){var e=document.qu
 const COPY = {
   en: {
     title: "International Rugby – Saturday 21 November",
-    live: "Live on our screens at O'Connell St for all listed fixtures — we do not name a channel on this page.",
+    live:
+      "Live on our screens at O'Connell St — six Nations Championship fixtures Saturday (Madrid time).",
     matches: [
       "15:10 England v New Zealand",
+      "15:10 Scotland v Japan",
       "17:40 Ireland v South Africa",
+      "17:40 Italy v Fiji",
       "21:10 France v Argentina",
       "21:10 Wales v Australia",
     ],
@@ -24,10 +27,13 @@ const COPY = {
   },
   es: {
     title: "Jornada internacional de rugby – sábado 21 de noviembre",
-    live: "En directo en nuestras pantallas en O'Connell St para los partidos indicados — no citamos cadena en esta página.",
+    live:
+      "En directo en nuestras pantallas en O'Connell St — seis partidos del sábado (hora Madrid).",
     matches: [
       "15:10 Inglaterra–Nueva Zelanda",
+      "15:10 Escocia–Japón",
       "17:40 Irlanda–Sudáfrica",
+      "17:40 Italia–Fiyi",
       "21:10 Francia–Argentina",
       "21:10 Gales–Australia",
     ],
