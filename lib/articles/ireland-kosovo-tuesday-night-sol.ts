@@ -58,7 +58,7 @@ export const IRELAND_KOSOVO: MatchArticleData = {
       more: "More from O'Connell St",
       links: [
         {
-          href: "/news/real-madrid-inter-womens-champions-league-sol",
+          href: "/news/inter-fans-madrid-womens-champions-league-sol",
           label: "Real Madrid v Inter, Wed 18 Nov",
         },
         { href: "/whats-on", label: "What's On" },
@@ -111,7 +111,7 @@ export const IRELAND_KOSOVO: MatchArticleData = {
       more: "Más en O'Connell St",
       links: [
         {
-          href: "/es/noticias/real-madrid-inter-champions-femenina-sol",
+          href: "/es/noticias/aficionados-inter-madrid-champions-femenina-sol",
           label: "Real Madrid–Inter, mié 18 nov",
         },
         { href: "/es/whats-on", label: "Agenda" },

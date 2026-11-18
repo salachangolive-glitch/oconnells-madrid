@@ -67,6 +67,8 @@ const EVENT_LAST_DAY: Record<string, string> = {
   "/news/germany-netherlands-monday-night-sol": "2026-11-16",
   "/news/real-madrid-inter-womens-champions-league-sol": "2026-11-18",
   "/es/noticias/real-madrid-inter-champions-femenina-sol": "2026-11-18",
+  "/news/inter-fans-madrid-womens-champions-league-sol": "2026-11-18",
+  "/es/noticias/aficionados-inter-madrid-champions-femenina-sol": "2026-11-18",
   "/news/ireland-kosovo-tuesday-night-sol": "2026-11-17",
   "/es/noticias/irlanda-kosovo-martes-sol": "2026-11-17",
   "/news/rugby-saturday-sol-21-nov": "2026-11-21",
@@ -92,7 +94,6 @@ const EVENT_LAST_DAY: Record<string, string> = {
 
 /** Reachable URLs omitted from the index (noindex pages). */
 const SITEMAP_EXCLUDE = new Set([
-  "/news/inter-fans-madrid-womens-champions-league-sol",
   // Oktoberfest Madrid 2026 retired 16 Nov 2026 (ended 15 Nov); stubs 301 away.
   "/oktoberfest-madrid-sol",
   "/es/oktoberfest-madrid-sol",

@@ -240,6 +240,7 @@ export const ES_PATHS = [
   "/es/noticias/chequia-espana-jueves-sol",
   "/es/noticias/espana-inglaterra-domingo-sol",
   "/es/noticias/real-madrid-inter-champions-femenina-sol",
+  "/es/noticias/aficionados-inter-madrid-champions-femenina-sol",
   "/es/noticias/getafe-brighton-jueves-sol",
   "/es/noticias/real-madrid-crvena-zvezda-jueves-sol",
   "/es/noticias/donde-ver-nfl-madrid-sol",
@@ -310,6 +311,8 @@ export const HREFLANG_PAIRS: Record<string, string | undefined> = {
   "/news/czechia-spain-thursday-night-sol": "/es/noticias/chequia-espana-jueves-sol",
   "/news/spain-england-sunday-night-sol": "/es/noticias/espana-inglaterra-domingo-sol",
   "/news/real-madrid-inter-womens-champions-league-sol": "/es/noticias/real-madrid-inter-champions-femenina-sol",
+  "/news/inter-fans-madrid-womens-champions-league-sol":
+    "/es/noticias/aficionados-inter-madrid-champions-femenina-sol",
   "/news/getafe-brighton-thursday-night-sol": "/es/noticias/getafe-brighton-jueves-sol",
   "/news/real-madrid-psv-tuesday-night-sol":
     "/es/noticias/real-madrid-psv-martes-sol",

@@ -6,6 +6,7 @@ export const metadata = buildMetadata({
   title: RMFEM_INTER.copy.en.title,
   description: RMFEM_INTER.copy.en.description,
   path: RMFEM_INTER.paths.en,
+  canonicalPath: "/news/inter-fans-madrid-womens-champions-league-sol",
   locale: "en",
 });
 
