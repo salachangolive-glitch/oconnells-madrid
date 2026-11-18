@@ -78,6 +78,8 @@ function isNotFoundFile(filePath) {
 
 /** Owner-approved noindex (200); GO-LIVE builds must not fail the whole deploy. */
 const NOINDEX_OK_HTML = [
+  "zalgiris-fans-three-bars-sol",
+  "zalgiris-fans-trys-barai-sol",
   "oktoberfest-madrid-sol",
 ];
 

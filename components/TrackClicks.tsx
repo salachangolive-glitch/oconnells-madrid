@@ -6,6 +6,7 @@ import { captureAttribution } from "@/lib/attribution";
 import {
   PSV_CAMPAIGN,
   VIKING_CAMPAIGN,
+  ZALGIRIS_CAMPAIGN,
 } from "@/lib/fan-campaign-three-bars";
 
 const CAMPAIGN_GUIDE_PATHS = new Set<string>([
@@ -13,6 +14,8 @@ const CAMPAIGN_GUIDE_PATHS = new Set<string>([
   PSV_CAMPAIGN.paths.nl,
   VIKING_CAMPAIGN.paths.en,
   VIKING_CAMPAIGN.paths.no,
+  ZALGIRIS_CAMPAIGN.paths.en,
+  ZALGIRIS_CAMPAIGN.paths.lt,
 ]);
 
 const BAR_IDS = new Set(["dubliners", "oconnells", "oreillys"]);

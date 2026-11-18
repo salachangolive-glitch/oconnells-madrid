@@ -18,6 +18,7 @@ export const THREE_BARS_DATA: Record<
     hoursEn: string;
     hoursNl: string;
     hoursNo: string;
+    hoursLt: string;
   }
 > = {
   dubliners: {
@@ -29,6 +30,7 @@ export const THREE_BARS_DATA: Record<
     hoursEn: "Tue: 12:00–02:00 · Wed: 12:00–02:00 (per Dubliners listing, Europe/Madrid)",
     hoursNl: "Di: 12:00–02:00 · wo: 12:00–02:00 (volgens Dubliners, Europe/Madrid)",
     hoursNo: "Tir: 12:00–02:00 · ons: 12:00–02:00 (ifølge Dubliners, Europe/Madrid)",
+    hoursLt: "An: 12:00–02:00 · treč: 12:00–02:00 (pagal Dubliners, Europe/Madrid)",
   },
   oconnells: {
     maps: BAR_MAPS.oconnells,
@@ -39,6 +41,7 @@ export const THREE_BARS_DATA: Record<
     hoursEn: `Tue–Thu: ${HOURS.monThu.open}–${HOURS.monThu.close}`,
     hoursNl: `Di–do: ${HOURS.monThu.open}–${HOURS.monThu.close}`,
     hoursNo: `Tir–tor: ${HOURS.monThu.open}–${HOURS.monThu.close}`,
+    hoursLt: `Pir–ket: ${HOURS.monThu.open}–${HOURS.monThu.close}`,
   },
   oreillys: {
     maps: BAR_MAPS.oreillys,
@@ -49,6 +52,7 @@ export const THREE_BARS_DATA: Record<
     hoursEn: "Every day 11:30–01:30 (per O'Reilly's listing)",
     hoursNl: "Elke dag 11:30–01:30 (volgens O'Reilly's)",
     hoursNo: "Hver dag 11:30–01:30 (ifølge O'Reilly's)",
+    hoursLt: "Kasdien 11:30–01:30 (pagal O'Reilly's)",
   },
 };
 
@@ -56,6 +60,7 @@ export const ACCESS_PHRASE = {
   en: "No reservations; first come, first served.",
   nl: "Geen reserveringen; toegang op volgorde van binnenkomst.",
   no: "Ingen reservasjon; førstemann til mølla.",
+  lt: "Be rezervacijų; pirmas atvykęs — pirmas aptarnaujamas.",
 } as const;
 
 export const METRO_MADRID_LINES =
@@ -74,6 +79,22 @@ export const PSV_CAMPAIGN = {
   oconnellSoloNl: "/news/real-madrid-psv-tuesday-night-sol",
 } as const;
 
+/** PREPARADA (noindex) until go-live — Thu 20 Nov 2026 owner window. */
+export const ZALGIRIS_CAMPAIGN = {
+  paths: {
+    en: "/news/zalgiris-fans-three-bars-sol",
+    lt: "/news/zalgiris-fans-trys-barai-sol",
+  },
+  hreflangKey: "/news/zalgiris-fans-three-bars-sol",
+  preparada: true as const,
+  eventDay: "2026-11-25",
+  kickoff: "20:45",
+  eventUrl:
+    "https://www.movistararena.es/en/programacion/evento/real-madrid-vs-zalgiris-kaunas-jornada-14-euroliga-26-27/25-11-2026/20:45",
+  oconnellSoloEn: "/news/real-madrid-zalgiris-wednesday-night-sol",
+  oconnellSoloLt: "/news/real-madrid-zalgiris-wednesday-night-sol",
+} as const;
+
 export const VIKING_CAMPAIGN = {
   paths: {
     en: "/news/viking-fans-three-bars-sol",
@@ -87,5 +108,11 @@ export const VIKING_CAMPAIGN = {
   oconnellSoloNo: "/news/atletico-viking-wednesday-night-sol",
 } as const;
 
-export type CampaignId = "psv" | "viking";
-export type GuideLocale = "en" | "nl" | "no";
+export type CampaignId = "psv" | "viking" | "zalgiris";
+export type GuideLocale = "en" | "nl" | "no" | "lt";
+
+/** Guides held as PREPARADA (200 + noindex; not in sitemap/hubs until go-live). */
+export const PREPARADA_CAMPAIGN_PATHS = new Set<string>([
+  ZALGIRIS_CAMPAIGN.paths.en,
+  ZALGIRIS_CAMPAIGN.paths.lt,
+]);

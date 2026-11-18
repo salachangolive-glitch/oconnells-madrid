@@ -1,3 +1,4 @@
+import { PREPARADA_CAMPAIGN_PATHS } from "@/lib/fan-campaign-three-bars";
 import { EN_PATHS, HREFLANG_PAIRS } from "@/lib/venue";
 import { SEO_SHORT } from "@/lib/seo-short";
 
@@ -18,6 +19,7 @@ function titleFor(path: string): string {
 export const NEWS_HUB_EN: NewsHubEntry[] = EN_PATHS.filter((p) =>
   p.startsWith("/news/"),
 )
+  .filter((p) => !PREPARADA_CAMPAIGN_PATHS.has(p))
   .map((path) => ({
     path,
     title: titleFor(path),

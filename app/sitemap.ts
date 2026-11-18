@@ -94,6 +94,8 @@ const EVENT_LAST_DAY: Record<string, string> = {
 
 /** Reachable URLs omitted from the index (noindex pages). */
 const SITEMAP_EXCLUDE = new Set([
+  "/news/zalgiris-fans-three-bars-sol",
+  "/news/zalgiris-fans-trys-barai-sol",
   // Oktoberfest Madrid 2026 retired 16 Nov 2026 (ended 15 Nov); stubs 301 away.
   "/oktoberfest-madrid-sol",
   "/es/oktoberfest-madrid-sol",

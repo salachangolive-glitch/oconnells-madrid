@@ -9,6 +9,7 @@ import {
   meetingAfter,
   meetingBefore,
   stadiumMetroLines,
+  threeBarsIntro as threeBarsIntroText,
   uiLabels,
 } from "@/lib/fan-campaign-guide-copy";
 import {
@@ -18,6 +19,7 @@ import {
   THREE_BARS_DATA,
   THREE_BARS_ORDER,
   VIKING_CAMPAIGN,
+  ZALGIRIS_CAMPAIGN,
   type BarId,
   type CampaignId,
   type GuideLocale,
@@ -31,7 +33,14 @@ function barHours(
 ): string {
   if (locale === "nl") return bar.hoursNl;
   if (locale === "no") return bar.hoursNo;
+  if (locale === "lt") return bar.hoursLt;
   return bar.hoursEn;
+}
+
+function eventUrl(campaign: CampaignId): string {
+  if (campaign === "psv") return PSV_CAMPAIGN.uefaUrl;
+  if (campaign === "viking") return VIKING_CAMPAIGN.uefaUrl;
+  return ZALGIRIS_CAMPAIGN.eventUrl;
 }
 
 function BarVenueSection({
@@ -124,11 +133,10 @@ function BarVenueSection({
         <div className="mt-6">
           <InteriorPhoto
             src={OWNER_PHOTOS_17NOV.pantallasFutbol.src}
-            alt={
-              locale === "en"
-                ? ownerPhotoAlt("pantallasFutbol", "en")
-                : ownerPhotoAlt("pantallasFutbol", "es")
-            }
+            alt={ownerPhotoAlt(
+              "pantallasFutbol",
+              locale === "en" ? "en" : "es",
+            )}
             position={OWNER_PHOTOS_17NOV.pantallasFutbol.position}
           />
         </div>
@@ -146,7 +154,7 @@ type Copy = {
   matchTitle: string;
   matchBullets: string[];
   matchNote: string;
-  uefaLabel: string;
+  eventLabel: string;
   threeBarsTitle: string;
   threeBarsIntro: string;
   stadiumTitle: string;
@@ -181,7 +189,7 @@ const COPY: Record<CampaignId, Record<GuideLocale, Copy>> = {
       ],
       matchNote:
         "Kick-off and venue per UEFA. Times can change — check on the day.",
-      uefaLabel: "UEFA Champions League match page",
+      eventLabel: "UEFA Champions League match page",
       threeBarsTitle: "",
       threeBarsIntro: "",
       stadiumTitle: "",
@@ -215,7 +223,7 @@ const COPY: Record<CampaignId, Record<GuideLocale, Copy>> = {
       ],
       matchNote:
         "Datum en aanvang volgens UEFA. Tijden kunnen wijzigen — controleer op de dag zelf.",
-      uefaLabel: "UEFA Champions League wedstrijdpagina",
+      eventLabel: "UEFA Champions League wedstrijdpagina",
       threeBarsTitle: "",
       threeBarsIntro: "",
       stadiumTitle: "",
@@ -244,7 +252,30 @@ const COPY: Record<CampaignId, Record<GuideLocale, Copy>> = {
       matchTitle: "",
       matchBullets: [],
       matchNote: "",
-      uefaLabel: "",
+      eventLabel: "",
+      threeBarsTitle: "",
+      threeBarsIntro: "",
+      stadiumTitle: "",
+      stadiumParas: [],
+      relatedTitle: "",
+      relatedP: "",
+      relatedLinkLabel: "",
+      relatedHref: "",
+      findTitle: "",
+      altLangHref: "",
+      altLangLabel: "",
+      screeningNote: "",
+    },
+    lt: {
+      title: "",
+      description: "",
+      eyebrow: "",
+      h1: "",
+      lead: "",
+      matchTitle: "",
+      matchBullets: [],
+      matchNote: "",
+      eventLabel: "",
       threeBarsTitle: "",
       threeBarsIntro: "",
       stadiumTitle: "",
@@ -277,7 +308,7 @@ const COPY: Record<CampaignId, Record<GuideLocale, Copy>> = {
       ],
       matchNote:
         "Kick-off and venue per UEFA. Times can change — check on the day.",
-      uefaLabel: "UEFA Champions League match page",
+      eventLabel: "UEFA Champions League match page",
       threeBarsTitle: "",
       threeBarsIntro: "",
       stadiumTitle: "",
@@ -310,7 +341,7 @@ const COPY: Record<CampaignId, Record<GuideLocale, Copy>> = {
       ],
       matchNote:
         "Dato og avspark ifølge UEFA. Tider kan endres — sjekk på kampdagen.",
-      uefaLabel: "UEFA Champions League kamp-side",
+      eventLabel: "UEFA Champions League kamp-side",
       threeBarsTitle: "",
       threeBarsIntro: "",
       stadiumTitle: "",
@@ -338,7 +369,148 @@ const COPY: Record<CampaignId, Record<GuideLocale, Copy>> = {
       matchTitle: "",
       matchBullets: [],
       matchNote: "",
-      uefaLabel: "",
+      eventLabel: "",
+      threeBarsTitle: "",
+      threeBarsIntro: "",
+      stadiumTitle: "",
+      stadiumParas: [],
+      relatedTitle: "",
+      relatedP: "",
+      relatedLinkLabel: "",
+      relatedHref: "",
+      findTitle: "",
+      altLangHref: "",
+      altLangLabel: "",
+      screeningNote: "",
+    },
+    lt: {
+      title: "",
+      description: "",
+      eyebrow: "",
+      h1: "",
+      lead: "",
+      matchTitle: "",
+      matchBullets: [],
+      matchNote: "",
+      eventLabel: "",
+      threeBarsTitle: "",
+      threeBarsIntro: "",
+      stadiumTitle: "",
+      stadiumParas: [],
+      relatedTitle: "",
+      relatedP: "",
+      relatedLinkLabel: "",
+      relatedHref: "",
+      findTitle: "",
+      altLangHref: "",
+      altLangLabel: "",
+      screeningNote: "",
+    },
+  },
+  zalgiris: {
+    en: {
+      title:
+        "Žalgiris fans near Sol: three Irish pubs for Real Madrid–Žalgiris, Wed 25 Nov",
+      description:
+        "Real Madrid v Žalgiris Kaunas, Wednesday 25 November 2026, 20:45 at Movistar Arena. Dubliners, O'Connell's and O'Reilly's near Puerta del Sol — meeting points. Live on our screens. No reservations; first come, first served.",
+      eyebrow: "EuroLeague · Wednesday 25 November 2026 · 20:45",
+      h1: "Žalgiris in Madrid: three meeting points near Sol",
+      lead:
+        "Real Madrid host Žalgiris Kaunas on Wednesday 25 November at 20:45 at the Movistar Arena. Live on our screens at Dubliners, O'Connell's and O'Reilly's — three independent Irish venues a short walk from Puerta del Sol. Share one pin before the metro ride to Goya, then pick the same door after the game. No reservations; first come, first served.",
+      matchTitle: "The game",
+      matchBullets: [
+        "Real Madrid v Žalgiris Kaunas, EuroLeague, round 14",
+        "Wednesday 25 November 2026, 20:45 Europe/Madrid",
+        "Movistar Arena, Avenida de Felipe II, Madrid (doors from 19:45)",
+      ],
+      matchNote:
+        "Tip-off and venue per Movistar Arena and EuroLeague game E2026. Times can change — check on the day. We do not name a TV channel on this page.",
+      eventLabel: "Movistar Arena event page",
+      threeBarsTitle: "",
+      threeBarsIntro: "",
+      stadiumTitle: "",
+      stadiumParas: [],
+      fanLine: undefined,
+      relatedTitle: "O'Connell's only",
+      relatedP:
+        "This page covers all three bars. For O'Connell St only (meeting point copy):",
+      relatedLinkLabel: "Real Madrid v Žalgiris: Wednesday night near Sol",
+      relatedHref: ZALGIRIS_CAMPAIGN.oconnellSoloEn,
+      findTitle: "More",
+      altLangHref: ZALGIRIS_CAMPAIGN.paths.lt,
+      altLangLabel: "Lietuvių",
+      screeningNote:
+        "The game is live on our screens at all three venues for this fixture.",
+    },
+    lt: {
+      title:
+        "Žalgirio aistruoliai prie Sol: trys barai prieš Real Madrid–Žalgiris, lapk. 25 d.",
+      description:
+        "Real Madrid–Žalgiris Kaunas, 2026 m. lapkričio 25 d., 20:45, Movistar Arena. Dubliners, O'Connell's ir O'Reilly's prie Puerta del Sol — susitikimo vietos. Vaizdas gyvai mūsų ekranuose. Be rezervacijų.",
+      eyebrow: "Eurolyga · 2026 m. lapkričio 25 d., trečiadienis · 20:45",
+      h1: "Žalgiris Madride: trys susitikimo vietos prie Sol",
+      lead:
+        "Real Madrid lapkričio 25 d., trečiadienį, 20:45 priima Žalgirį Kaunas Movistar Arenoje. Vaizdas gyvai mūsų ekranuose Dubliners, O'Connell's ir O'Reilly's — trys nepriklausomi airiški barai kelios minutės nuo Puerta del Sol. Pasidalykite vienu adresu prieš metro kelionę į Goya ir susitikite po rungtynių tame pačiame bare. Be rezervacijų; pirmas atvykęs — pirmas aptarnaujamas.",
+      matchTitle: "Rungtynės",
+      matchBullets: [
+        "Real Madrid–Žalgiris Kaunas, Eurolyga, 14-as turas",
+        "2026 m. lapkričio 25 d., trečiadienis, 20:45 (Madridas)",
+        "Movistar Arena, Avenida de Felipe II, Madridas (durys nuo 19:45)",
+      ],
+      matchNote:
+        "Data ir laikas pagal Movistar Arena ir Eurolygos E2026. Laikas gali keistis — patikrinkite rungtynių dieną. Čia neįvardijame TV kanalo.",
+      eventLabel: "Movistar Arena renginio puslapis",
+      threeBarsTitle: "",
+      threeBarsIntro: "",
+      stadiumTitle: "",
+      stadiumParas: [],
+      fanLine: {
+        lang: "lt",
+        text: "Sveiki atvykę į Madridą, Žalgirio aistruoliai! Dubliners, O'Connell's ir O'Reilly's prie Sol — susitikimo vieta prieš Real Madrid–Žalgiris.",
+      },
+      relatedTitle: "Tik O'Connell's",
+      relatedP: "Šiame puslapyje — visi trys barai. Tik O'Connell St:",
+      relatedLinkLabel: "Real Madrid–Žalgiris: trečiadienio vakaras prie Sol",
+      relatedHref: ZALGIRIS_CAMPAIGN.oconnellSoloLt,
+      findTitle: "Daugiau",
+      altLangHref: ZALGIRIS_CAMPAIGN.paths.en,
+      altLangLabel: "English",
+      screeningNote:
+        "Rungtynės rodomos gyvai mūsų ekranuose visuose trijuose baruose šiam susitikimui.",
+    },
+    nl: {
+      title: "",
+      description: "",
+      eyebrow: "",
+      h1: "",
+      lead: "",
+      matchTitle: "",
+      matchBullets: [],
+      matchNote: "",
+      eventLabel: "",
+      threeBarsTitle: "",
+      threeBarsIntro: "",
+      stadiumTitle: "",
+      stadiumParas: [],
+      relatedTitle: "",
+      relatedP: "",
+      relatedLinkLabel: "",
+      relatedHref: "",
+      findTitle: "",
+      altLangHref: "",
+      altLangLabel: "",
+      screeningNote: "",
+    },
+    no: {
+      title: "",
+      description: "",
+      eyebrow: "",
+      h1: "",
+      lead: "",
+      matchTitle: "",
+      matchBullets: [],
+      matchNote: "",
+      eventLabel: "",
       threeBarsTitle: "",
       threeBarsIntro: "",
       stadiumTitle: "",
@@ -359,13 +531,17 @@ export function fanCampaignMetadata(
   campaign: CampaignId,
   locale: GuideLocale,
   path: string,
+  opts?: { noindex?: boolean },
 ) {
   const c = COPY[campaign][locale];
+  const htmlLocale =
+    locale === "nl" || locale === "no" || locale === "lt" ? "en" : locale;
   return buildMetadata({
     title: c.title,
     description: c.description,
     path,
-    locale: locale === "nl" || locale === "no" ? "en" : locale,
+    locale: htmlLocale,
+    noindex: opts?.noindex,
   });
 }
 
@@ -381,15 +557,14 @@ export function FanCampaignThreeBarsGuide({
   const c = COPY[campaign][locale];
   const labels = uiLabels(locale);
   const threeBarsTitle = labels.threeBarsTitle;
-  const threeBarsIntro =
-    campaign === "psv" ? labels.threeBarsIntro : labels.threeBarsIntroViking;
-  const uefaUrl =
-    campaign === "psv" ? PSV_CAMPAIGN.uefaUrl : VIKING_CAMPAIGN.uefaUrl;
-  const shellLocale = locale === "no" || locale === "nl" ? "en" : locale;
+  const threeBarsIntro = threeBarsIntroText(campaign, locale);
+  const matchEventUrl = eventUrl(campaign);
+  const shellLocale =
+    locale === "no" || locale === "nl" || locale === "lt" ? "en" : locale;
 
   return (
   <>
-    {locale === "nl" || locale === "no" ? (
+    {locale === "nl" || locale === "no" || locale === "lt" ? (
       <LangAttr lang={locale} />
     ) : null}
     <PageShell locale={shellLocale as "en"} altLangHref={c.altLangHref}>
@@ -407,12 +582,12 @@ export function FanCampaignThreeBarsGuide({
         </ul>
         <p>
           <a
-            href={uefaUrl}
+            href={matchEventUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="text-gold underline"
           >
-            {c.uefaLabel}
+            {c.eventLabel}
           </a>
           . {c.matchNote}
         </p>

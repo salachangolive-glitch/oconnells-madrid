@@ -17,6 +17,8 @@ const UI = {
       "Dubliners, O'Connell's and O'Reilly's are three independent Irish venues the same distance from Sol. Confirmed on the screens at all three for Real Madrid–PSV on Tuesday 24 November. Pick one door for your group.",
     threeBarsIntroViking:
       "Dubliners, O'Connell's and O'Reilly's are three independent Irish venues the same distance from Sol. Confirmed on the screens at all three for Atlético–Viking FK on Wednesday 25 November. Viking FK from Stavanger, not the NFL Minnesota Vikings.",
+    threeBarsIntroZalgiris:
+      "Dubliners, O'Connell's and O'Reilly's are three independent Irish venues the same walk from Puerta del Sol. Live on our screens at all three for Real Madrid v Žalgiris Kaunas on Wednesday 25 November. Pick one door for your group.",
     screening:
       "The match is on the screens at this venue for this fixture. Ask at the bar which feed is on.",
     dublinersFoot:
@@ -40,6 +42,14 @@ const UI = {
     vikingMetro: [
       "From Sol: line 2 to Las Rosas, then about 15 minutes on foot to the stadium (Atlético wayfinding). Line 7 serves Estadio Metropolitano next to the ground.",
       "On match nights EMT bus SE721 runs Canillejas (line 5) ↔ stadium from two hours before kick-off.",
+    ],
+    beforeZalgiris:
+      "Share this address on your group chat and meet here before you leave for the Movistar Arena. Dubliners from 12:00, O'Connell's from 18:00, O'Reilly's from 11:30 on match Wednesday. Doors at the arena from 19:45 for a 20:45 tip-off.",
+    afterZalgiris:
+      "After the final buzzer, take Metro line 2 back to Sol and walk to the bar you chose. O'Connell's stays open until 03:00 Wed night; Dubliners until 02:00; O'Reilly's until 01:30.",
+    zalgirisMetro: [
+      "From Sol station: Metro line 2 direct to Goya — stop beside Movistar Arena (see metromadrid.es).",
+      "Leave the centre in good time for 19:45 doors and 20:45 tip-off.",
     ],
   },
   nl: {
@@ -76,6 +86,10 @@ const UI = {
       "Vertrek op tijd om vóór 21:00 binnen te zijn.",
     ],
     vikingMetro: [],
+    beforeZalgiris: "",
+    afterZalgiris: "",
+    zalgirisMetro: [],
+    threeBarsIntroZalgiris: "",
   },
   no: {
     address: "Adresse",
@@ -111,6 +125,49 @@ const UI = {
       "Fra Sol: linje 2 til Las Rosas, deretter ca. 15 minutter til fots (Atléticos veivisning). Linje 7 stopper ved Estadio Metropolitano.",
       "Kampdager: EMT-buss SE721 Canillejas (linje 5) ↔ stadion fra to timer før avspark.",
     ],
+    beforeZalgiris: "",
+    afterZalgiris: "",
+    zalgirisMetro: [],
+    threeBarsIntroZalgiris: "",
+  },
+  lt: {
+    address: "Adresas",
+    hours: "Darbo laikas",
+    map: "Atidaryti Google Maps",
+    phone: "Telefonas",
+    website: "Svetainė",
+    footSol: "Pėsčiomis nuo Puerta del Sol",
+    metroStadium: "Metro nuo Sol iki arenos",
+    metroLink: "Metro de Madrido linijos ir laikai",
+    before: "Susitikimo vieta prieš rungtynes",
+    after: "Susitikimo vieta po rungtynių",
+    threeBarsTitle: "Trys barai — vienodos susitikimo vietos prie Sol",
+    threeBarsIntro: "",
+    threeBarsIntroViking: "",
+    threeBarsIntroZalgiris:
+      "Dubliners, O'Connell's ir O'Reilly's — trys nepriklausomi airiški barai vienodu atstumu nuo Puerta del Sol. Real Madrid–Žalgiris Kaunas trečiadienį, lapkričio 25 d., vaizdas gyvai mūsų ekranuose visuose trijuose. Pasirinkite vieną adresą grupei.",
+    screening:
+      "Rungtynės rodomos gyvai mūsų ekranuose. Pasiteiraukite bare, kuris transliacijos signalas rodomas.",
+    dublinersFoot:
+      "Nuo Puerta del Sol eikite į Calle de Espoz y Mina 7 — apie dvi minutes. Dubliners įėjimas tame pačiame pastate kaip O'Connell's.",
+    oconnellsFoot:
+      "Nuo Puerta del Sol į Calle de Espoz y Mina 7 — apie dvi minutes. Raudonas fasadas, auksinis O'Connell St užrašas.",
+    oreillysFoot:
+      "Nuo Puerta del Sol į rytus iki Pasaje de Matheu 4 — dengtas praėjimas, apie tris minutes pėsčiomis.",
+    beforePsv: "",
+    beforeViking: "",
+    afterPsv: "",
+    afterViking: "",
+    beforeZalgiris:
+      "Pasidalykite šiuo adresu grupės pokalbyje ir susitikite čia prieš kelionę į Movistar Arena. Dubliners nuo 12:00, O'Connell's nuo 18:00, O'Reilly's nuo 11:30 rungtynių trečiadienį. Arenos durys atidaromos 19:45, startas 20:45.",
+    afterZalgiris:
+      "Po paskutinio švilpuko — metro 2 linija atgal į Sol ir eikite į pasirinktą barą. O'Connell's iki 03:00 trečiadienio naktį; Dubliners iki 02:00; O'Reilly's iki 01:30.",
+    psvMetro: [],
+    vikingMetro: [],
+    zalgirisMetro: [
+      "Nuo Sol stoties: metro 2 linija tiesiai iki Goya — stotelė šalia Movistar Arena (žr. metromadrid.es).",
+      "Išvykite iš centro laiku — durys 19:45, startas 20:45.",
+    ],
   },
 } as const;
 
@@ -124,15 +181,26 @@ export function stadiumMetroLines(
   locale: GuideLocale,
 ): string[] {
   if (campaign === "psv") return [...UI[locale].psvMetro];
-  return [...UI[locale].vikingMetro];
+  if (campaign === "viking") return [...UI[locale].vikingMetro];
+  return [...UI[locale].zalgirisMetro];
 }
 
 export function meetingBefore(campaign: CampaignId, locale: GuideLocale): string {
-  return campaign === "psv" ? UI[locale].beforePsv : UI[locale].beforeViking;
+  if (campaign === "psv") return UI[locale].beforePsv;
+  if (campaign === "viking") return UI[locale].beforeViking;
+  return UI[locale].beforeZalgiris;
 }
 
 export function meetingAfter(campaign: CampaignId, locale: GuideLocale): string {
-  return campaign === "psv" ? UI[locale].afterPsv : UI[locale].afterViking;
+  if (campaign === "psv") return UI[locale].afterPsv;
+  if (campaign === "viking") return UI[locale].afterViking;
+  return UI[locale].afterZalgiris;
+}
+
+export function threeBarsIntro(campaign: CampaignId, locale: GuideLocale): string {
+  if (campaign === "psv") return UI[locale].threeBarsIntro;
+  if (campaign === "viking") return UI[locale].threeBarsIntroViking;
+  return UI[locale].threeBarsIntroZalgiris;
 }
 
 export function uiLabels(locale: GuideLocale) {
@@ -140,12 +208,23 @@ export function uiLabels(locale: GuideLocale) {
 }
 
 const NAMES: Record<BarId, Record<GuideLocale, string>> = {
-  dubliners: { en: "Dubliners", nl: "Dubliners", no: "Dubliners" },
-  oconnells: { en: "O'Connell's", nl: "O'Connell's", no: "O'Connell's" },
+  dubliners: {
+    en: "Dubliners",
+    nl: "Dubliners",
+    no: "Dubliners",
+    lt: "Dubliners",
+  },
+  oconnells: {
+    en: "O'Connell's",
+    nl: "O'Connell's",
+    no: "O'Connell's",
+    lt: "O'Connell's",
+  },
   oreillys: {
     en: "O'Reilly's Restaurant Bar",
     nl: "O'Reilly's Restaurant Bar",
     no: "O'Reilly's Restaurant Bar",
+    lt: "O'Reilly's Restaurant Bar",
   },
 };
 
