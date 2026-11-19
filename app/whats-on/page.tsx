@@ -119,6 +119,15 @@ export default function WhatsOnPage() {
           </Link>
         </p>
       ) : null}
+      {/* Real Madrid v Alavés, LaLiga J14 (laliga.com gameweek-14, read 19 Nov 2026: 2026-11-28T20:00Z = 21:00 Madrid, Bernabéu): build-time date gate. */}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-28" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          LaLiga: Real Madrid v Alavés, Saturday 28 November, 21:00 (Bernabéu). A fans meeting point near Sol before or after; screening to be confirmed, ask at the bar. Open on Saturdays from 15:00.{" "}
+          <Link href="/news/real-madrid-alaves-saturday-night-sol" className="text-gold underline">
+            Real Madrid v Alavés: Saturday night near Sol
+          </Link>
+        </p>
+      ) : null}
       {/* Arsenal v Manchester City, PL MW12 (premierleague.com API fixture 129033: Sun 29 Nov 2026 16:30 GMT = 17:30 Madrid, Emirates; DAZN): build-time date gate. */}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-29" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">

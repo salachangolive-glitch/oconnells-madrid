@@ -80,6 +80,7 @@ const EVENT_LAST_DAY: Record<string, string> = {
   "/news/arsenal-manchester-city-sunday-sol": "2026-11-29",
   "/es/noticias/arsenal-manchester-city-domingo-sol": "2026-11-29",
   "/news/real-madrid-celta-saturday-night-sol": "2026-11-21",
+  "/news/real-madrid-alaves-saturday-night-sol": "2026-11-28",
   "/news/tokio-hotel-madrid-gig-night-sol": "2026-11-23",
   "/news/psv-fans-three-bars-sol": "2026-11-24",
   "/news/psv-fans-drie-bars-sol": "2026-11-24",

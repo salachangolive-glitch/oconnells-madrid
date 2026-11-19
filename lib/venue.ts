@@ -160,6 +160,7 @@ export const EN_PATHS = [
   "/news/liverpool-manchester-united-sunday-sol",
   "/news/arsenal-manchester-city-sunday-sol",
   "/news/real-madrid-celta-saturday-night-sol",
+  "/news/real-madrid-alaves-saturday-night-sol",
   "/news/tokio-hotel-madrid-gig-night-sol",
   "/news/psv-fans-three-bars-sol",
   "/news/psv-fans-drie-bars-sol",
