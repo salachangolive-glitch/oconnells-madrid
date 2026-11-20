@@ -180,7 +180,7 @@ const COPY: Record<CampaignId, Record<GuideLocale, Copy>> = {
       eyebrow: "UEFA Champions League · Tuesday 24 November 2026 · 21:00",
       h1: "PSV in Madrid: three meeting points near Sol",
       lead:
-        "Real Madrid host PSV on Tuesday 24 November at 21:00 at the Santiago Bernabéu. Confirmed on the screens at Dubliners, O'Connell's and O'Reilly's — three independent Irish venues a short walk from Puerta del Sol. Pick one pin, meet your group, then head to the stadium. First come, first served; no reservations.",
+        "Updated Friday 20 November 2026 (four days before kick-off). Real Madrid host PSV on Tuesday 24 November at 21:00 at the Santiago Bernabéu. Live on our screens at Dubliners, O'Connell's and O'Reilly's — three independent Irish venues a short walk from Puerta del Sol. Pick one pin, meet your group, then head to the stadium. First come, first served; no reservations.",
       matchTitle: "The match",
       matchBullets: [
         "Real Madrid v PSV, UEFA Champions League, league phase, matchday 5",
@@ -204,7 +204,7 @@ const COPY: Record<CampaignId, Record<GuideLocale, Copy>> = {
       altLangHref: PSV_CAMPAIGN.paths.nl,
       altLangLabel: "Nederlands",
       screeningNote:
-        "The match is confirmed on the screens at all three venues for this fixture.",
+        "The match is live on our screens at all three venues for this fixture.",
     },
     nl: {
       title:
@@ -214,7 +214,7 @@ const COPY: Record<CampaignId, Record<GuideLocale, Copy>> = {
       eyebrow: "UEFA Champions League · dinsdag 24 november 2026 · 21:00",
       h1: "PSV in Madrid: drie ontmoetingspunten bij Sol",
       lead:
-        "Real Madrid ontvangt PSV op dinsdag 24 november om 21:00 in het Santiago Bernabéu. Bevestigd op de schermen bij Dubliners, O'Connell's en O'Reilly's — drie onafhankelijke Irish pubs op loopafstand van de Puerta del Sol. Kies één adres, spreek af met je groep en ga daarna naar het stadion. Vol = vol; geen reserveringen.",
+        "Bijgewerkt vrijdag 20 november 2026 (vier dagen voor aanvang). Real Madrid ontvangt PSV op dinsdag 24 november om 21:00 in het Santiago Bernabéu. Live op onze schermen bij Dubliners, O'Connell's en O'Reilly's — drie onafhankelijke Irish pubs op loopafstand van de Puerta del Sol. Kies één adres, spreek af met je groep en ga daarna naar het stadion. Vol = vol; geen reserveringen.",
       matchTitle: "De wedstrijd",
       matchBullets: [
         "Real Madrid–PSV, UEFA Champions League, competitiefase, speeldag 5",
@@ -241,7 +241,7 @@ const COPY: Record<CampaignId, Record<GuideLocale, Copy>> = {
       altLangHref: PSV_CAMPAIGN.paths.en,
       altLangLabel: "English",
       screeningNote:
-        "De wedstrijd staat bevestigd op de schermen in alle drie de zalen voor deze wedstrijd.",
+        "De wedstrijd staat live op onze schermen in alle drie de zalen voor deze wedstrijd.",
     },
     no: {
       title: "",
