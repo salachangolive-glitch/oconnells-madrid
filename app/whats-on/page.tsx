@@ -122,7 +122,7 @@ export default function WhatsOnPage() {
       {/* Real Madrid v Alavés, LaLiga J14 (laliga.com gameweek-14, read 19 Nov 2026: 2026-11-28T20:00Z = 21:00 Madrid, Bernabéu): build-time date gate. */}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-28" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">
-          LaLiga: Real Madrid v Alavés, Saturday 28 November, 21:00 (Bernabéu). A fans meeting point near Sol before or after; screening to be confirmed, ask at the bar. Open on Saturdays from 15:00.{" "}
+          LaLiga: Real Madrid v Alavés, Saturday 28 November, 21:00 (Bernabéu), live near Sol. A fans meeting point near Sol before or after. Open on Saturdays from 15:00.{" "}
           <Link href="/news/real-madrid-alaves-saturday-night-sol" className="text-gold underline">
             Real Madrid v Alavés: Saturday night near Sol
           </Link>

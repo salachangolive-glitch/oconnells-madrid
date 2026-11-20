@@ -98,6 +98,14 @@ export default function EsWhatsOnPage() {
           </Link>
         </p>
       ) : null}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-28" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          LaLiga: Real Madrid–Alavés, sábado 28 de noviembre, 21:00 (Bernabéu), en directo junto a Sol. Punto de encuentro junto a Sol antes o después. Los sábados abrimos a las 15:00.{" "}
+          <Link href="/news/real-madrid-alaves-saturday-night-sol" className="text-gold underline">
+            Real Madrid–Alavés: sábado por la noche junto a Sol
+          </Link>
+        </p>
+      ) : null}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-29" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">
           Premier League: Arsenal–Manchester City, domingo 29 de noviembre, 17:30 (Emirates Stadium), en DAZN, en directo junto a Sol. Los domingos abrimos a las 14:00.{" "}

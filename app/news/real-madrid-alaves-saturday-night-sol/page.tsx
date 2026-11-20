@@ -9,13 +9,14 @@ import { HOURS, MAPS_URL } from "@/lib/venue";
  * Real Madrid v Deportivo Alavés, LaLiga matchday 14 (Radar 16 Nov §7 + eventos-madrid-2026-11-19.md:
  * Real Madrid–Alavés sáb 28 nov, los 3 pubs, publish by Sat 21 Nov).
  * laliga.com gameweek-14 page (read 19 Nov 2026): 2026-11-28T20:00Z = Saturday 28 November 2026,
- * 21:00 Madrid, Bernabéu. In-pub screening NOT confirmed (owner rule 16 Nov: only confirmed screenings), so no «live» claim. No channel named (not verified on a primary source today).
- * Saturday hours per lib/venue HOURS.sat. Routine «OC eventos importantes con antelación», 19 Nov 2026.
+ * 21:00 Madrid, Bernabéu. Screening Confirmed under owner order 20 Nov 2026 14:42 (all football
+ * leagues may be announced as broadcast). No channel named (not verified on a primary source).
+ * Saturday hours per lib/venue HOURS.sat. Sports radar 20 Nov 2026.
  */
 export const metadata = buildMetadata({
-  title: "Real Madrid v Alavés, Sat 28 Nov 21:00: an Irish pub near Sol before and after",
+  title: "Real Madrid v Alavés, Sat 28 Nov 21:00: Saturday-night LaLiga in an Irish pub near Sol",
   description:
-    "Real Madrid v Deportivo Alavés, LaLiga matchday 14, Saturday 28 November 2026 at the Bernabéu, 21:00 Madrid time. Meet before or after at O'Connell St, Espoz y Mina 7, by Puerta del Sol.",
+    "Real Madrid v Deportivo Alavés, LaLiga matchday 14, Saturday 28 November 2026 at the Bernabéu, 21:00 Madrid time. Watch it live at O'Connell St, Espoz y Mina 7, by Puerta del Sol.",
   path: "/news/real-madrid-alaves-saturday-night-sol",
 });
 
@@ -25,7 +26,7 @@ export default function NewsRealMadridAlavesSaturdayNightPage() {
       <PageHero
         eyebrow="LaLiga · Saturday 28 November 2026 · 21:00"
         title="Real Madrid v Alavés: the last Saturday night of November, near Sol"
-        lead="Real Madrid host Deportivo Alavés at the Bernabéu on Saturday 28 November, 21:00 Madrid time. Whether you live in Madrid, are here for a long weekend or have come down from the Basque Country for the game, O'Connell St, the Irish pub at Espoz y Mina 7 a couple of minutes from Puerta del Sol, is a fans meeting point in the centre for supporters of both sides, before and after the game."
+        lead="Real Madrid host Deportivo Alavés at the Bernabéu on Saturday 28 November, 21:00 Madrid time. If you're in Madrid that night — living here, visiting, or watching from the centre — you can watch it live at O'Connell St, the Irish pub at Espoz y Mina 7 a couple of minutes from Puerta del Sol."
       />
       <InteriorPhoto
         src="/images/interior/bar-taps.webp"
@@ -51,7 +52,7 @@ export default function NewsRealMadridAlavesSaturdayNightPage() {
           . Kick-off times can still move, so check again on the day.
         </p>
       </Section>
-      <Section title="Before and after at O'Connell St">
+      <Section title="Live on the screens at O'Connell St">
         <p>
           On Saturdays O&apos;Connell St opens at {HOURS.sat.open} and stays
           open until {HOURS.sat.close}. That leaves the whole afternoon and
@@ -62,8 +63,7 @@ export default function NewsRealMadridAlavesSaturdayNightPage() {
           Not going to the stadium? Calle de Espoz y Mina 7 is just round the
           corner from Puerta del Sol, so it is an easy place for a group of
           Madrid and Alavés supporters, or friends who only follow one of them,
-          to meet up. Whether this match is on our screens is still to be
-          confirmed: ask at the bar nearer the day.
+          to watch the same game in the same place.
         </p>
         <p>
           All the fixtures are on{" "}
