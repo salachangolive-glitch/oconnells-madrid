@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { PostMatchBanner } from "@/components/PostMatchBanner";
+import { RugbyHomeBanner } from "@/components/RugbyHomeBanner";
 import { NflSunday15NovWhatsOn } from "@/components/NflSunday15NovWhatsOn";
 import { FixtureList } from "@/components/FixtureList";
 import { PageShell } from "@/components/PageShell";
@@ -26,6 +27,8 @@ export default function EsWhatsOnPage() {
       />
 
       <PostMatchBanner locale="es" />
+      {/* Nations Championship sáb 21 nov: bloque destacado, se oculta solo después del 21 nov (Madrid). */}
+      <RugbyHomeBanner locale="es" />
       {/* España–Chile rugby (ferugby.es 31 ago 2026: sáb 14 nov 17:00 h, Butarque). */}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-14" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">

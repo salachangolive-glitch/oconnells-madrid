@@ -25,15 +25,15 @@ export const RUGBY_SATURDAY_SOL_21_NOV: MatchArticleData = {
   copy: {
     en: {
       title:
-        "Rugby in Madrid Sol: England v All Blacks and a full Saturday of screens",
+        "Rugby in Madrid Sol: England v New Zealand and Ireland v South Africa, Saturday 21 Nov",
       description:
-        "Nations Championship rugby, Saturday 21 November 2026 — England v New Zealand 15:10, Ireland v South Africa 17:40 and four more kick-offs. O'Connell St, Espoz y Mina 7 by Puerta del Sol: live on the screens, meeting point, no reservations.",
+        "Nations Championship rugby, Saturday 21 November 2026 — live on our screens at O'Connell St, Espoz y Mina 7, by Puerta del Sol. England v New Zealand 15:10, Ireland v South Africa 17:40, and four more kick-offs. Meeting point for fans of every country. No reservations, first come first served.",
       eyebrow: "Rugby · Saturday 21 November 2026 · Puerta del Sol",
-      h1: "Rugby Saturday near Sol: England v the All Blacks on the screens",
+      h1: "Saturday rugby near Sol: England v New Zealand and Ireland v South Africa, live on our screens",
       lead:
-        "Six Nations Championship matches stack up on Saturday 21 November, and Puerta del Sol is where many supporters pin the centre first. O'Connell St — an Irish pub at Espoz y Mina 7, red facade with gold O'Connell St lettering on Google Maps — opens at 15:00 and shows all six fixtures live on the screens. Headline tie: England v New Zealand at 15:10, then Ireland v South Africa at 17:40. First come, first served; no reservations.",
+        "Six Nations Championship matches stack up on Saturday 21 November, Madrid time, at O'Connell St — an Irish pub at Espoz y Mina 7, by Puerta del Sol. All six are live on our screens. First and most watched: England v New Zealand at 15:10, then Ireland v South Africa at 17:40. A meeting point for fans of every country. No reservations, first come first served.",
       screeningName:
-        "Nations Championship rugby live on screen at O'Connell St — Saturday 21 November",
+        "Nations Championship rugby live on our screens at O'Connell St — Saturday 21 November",
       sections: [
         {
           title: "Saturday windows (Madrid time)",
@@ -48,16 +48,16 @@ export const RUGBY_SATURDAY_SOL_21_NOV: MatchArticleData = {
           note: "Kick-offs are listed in Madrid time for planning your afternoon and evening. Times can move — check again on matchday.",
         },
         {
-          title: "Live on the screens at O'Connell St",
+          title: "Live on our screens at O'Connell St",
           paras: [
-            "All six fixtures above are confirmed live on the screens at O'Connell St for this Saturday. We do not name a channel or broadcaster on this page — ask at the bar which feed is showing when you arrive.",
-            "Saturday doors open 15:00, open until 03:30. Arrive early for England v New Zealand and Ireland v South Africa if you want a seat near a screen.",
+            "All six fixtures above are live on our screens at O'Connell St this Saturday. We do not name a channel or broadcaster on this page — ask at the bar which feed is showing when you arrive.",
+            "Saturday doors open 15:00, open until 03:30. Arrive early for England v New Zealand and Ireland v South Africa if you want a seat near a screen. No reservations, first come first served.",
           ],
         },
         {
           title: "Meeting point before and after",
           paras: [
-            "Share Calle de Espoz y Mina 7 on your group chat and meet on the square at Sol before the 15:10 wave or the 17:40 double-header. After the late kick-offs, the pub stays open until 03:30 if you want to stay in the centre.",
+            "O'Connell St at Espoz y Mina 7, by Puerta del Sol, is a meeting point for fans of every country — not tied to one team. Share the address on your group chat and meet before the 15:10 wave or the 17:40 double-header. After the late kick-offs, the pub stays open until 03:30 if you want to stay in the centre.",
           ],
         },
         {
@@ -84,15 +84,15 @@ export const RUGBY_SATURDAY_SOL_21_NOV: MatchArticleData = {
     },
     es: {
       title:
-        "Rugby en Sol Madrid: Inglaterra–All Blacks y sábado completo en pantalla",
+        "Rugby en Sol Madrid: Inglaterra–Nueva Zelanda e Irlanda–Sudáfrica, sábado 21 nov",
       description:
-        "Nations Championship, sábado 21 de noviembre de 2026 — Inglaterra–Nueva Zelanda 15:10, Irlanda–Sudáfrica 17:40 y cuatro partidos más. O'Connell St, Espoz y Mina 7 junto a Puerta del Sol: en directo en pantalla, punto de encuentro, sin reservas.",
+        "Nations Championship, sábado 21 de noviembre de 2026 — en directo en nuestras pantallas en O'Connell St, Espoz y Mina 7, junto a Puerta del Sol. Inglaterra–Nueva Zelanda 15:10, Irlanda–Sudáfrica 17:40 y cuatro partidos más. Punto de encuentro para aficionados de todos los países. Sin reservas, por orden de llegada.",
       eyebrow: "Rugby · sábado 21 de noviembre de 2026 · Puerta del Sol",
-      h1: "Rugby el sábado junto a Sol: Inglaterra–All Blacks en pantalla",
+      h1: "Rugby el sábado junto a Sol: Inglaterra–Nueva Zelanda e Irlanda–Sudáfrica, en directo en nuestras pantallas",
       lead:
-        "Seis partidos del Nations Championship concentran el sábado 21 de noviembre, y muchos aficionados fijan primero la Puerta del Sol. O'Connell St — pub irlandés en Espoz y Mina 7, fachada roja con letras doradas O'Connell St en Google Maps — abre a las 15:00 y pone los seis encuentros en directo en pantalla. Partidos destacados: Inglaterra–Nueva Zelanda a las 15:10 e Irlanda–Sudáfrica a las 17:40. Sin reservas; por orden de llegada.",
+        "Seis partidos del Nations Championship concentran el sábado 21 de noviembre, hora de Madrid, en O'Connell St — pub irlandés en Espoz y Mina 7, junto a Puerta del Sol. Los seis van en directo en nuestras pantallas. Primero y más visibles: Inglaterra–Nueva Zelanda a las 15:10 e Irlanda–Sudáfrica a las 17:40. Un punto de encuentro para aficionados de todos los países. Sin reservas, por orden de llegada.",
       screeningName:
-        "Nations Championship rugby en directo en pantalla en O'Connell St — sábado 21 de noviembre",
+        "Nations Championship rugby en directo en nuestras pantallas en O'Connell St — sábado 21 de noviembre",
       sections: [
         {
           title: "Horarios del sábado (hora de Madrid)",
@@ -107,16 +107,16 @@ export const RUGBY_SATURDAY_SOL_21_NOV: MatchArticleData = {
           note: "Horas de Madrid para planificar tarde y noche. Pueden cambiar: compruébalo el mismo día.",
         },
         {
-          title: "En directo en pantalla en O'Connell St",
+          title: "En directo en nuestras pantallas en O'Connell St",
           paras: [
-            "Los seis partidos anteriores están confirmados en pantalla en O'Connell St este sábado. No citamos cadena ni operador en esta página — pregunta en barra qué señal hay al llegar.",
-            "Sábado: apertura 15:00, abierto hasta las 03:30. Ven con tiempo para Inglaterra–Nueva Zelanda e Irlanda–Sudáfrica si quieres sitio cerca de una pantalla.",
+            "Los seis partidos anteriores van en directo en nuestras pantallas en O'Connell St este sábado. No citamos cadena ni operador en esta página — pregunta en barra qué señal hay al llegar.",
+            "Sábado: apertura 15:00, abierto hasta las 03:30. Ven con tiempo para Inglaterra–Nueva Zelanda e Irlanda–Sudáfrica si quieres sitio cerca de una pantalla. Sin reservas, por orden de llegada.",
           ],
         },
         {
           title: "Punto de encuentro antes y después",
           paras: [
-            "Comparte Calle de Espoz y Mina 7 en el chat del grupo y queda en la plaza de Sol antes del bloque de las 15:10 o el doble de las 17:40. Después de los últimos saques el local sigue hasta las 03:30.",
+            "O'Connell St, Espoz y Mina 7, junto a Puerta del Sol, es un punto de encuentro para aficionados de todos los países — no está ligado a un solo equipo. Comparte la dirección en el chat del grupo y queda antes del bloque de las 15:10 o el doble de las 17:40. Después de los últimos saques el local sigue hasta las 03:30.",
           ],
         },
         {
