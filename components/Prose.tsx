@@ -7,7 +7,7 @@ export function PageHero({
 }: {
   eyebrow?: string;
   title: string;
-  lead?: string;
+  lead?: React.ReactNode;
 }) {
   return (
     <header className="mb-8 max-w-3xl">
@@ -32,17 +32,22 @@ export function Section({
   title,
   children,
   featured,
+  id,
 }: {
   title?: string;
   children: React.ReactNode;
   featured?: boolean;
+  id?: string;
 }) {
   return (
     <section
+      id={id}
       className={
         featured
-          ? "mb-10 border-l-2 border-gold pl-4 sm:pl-5"
-          : "mb-10"
+          ? "mb-10 scroll-mt-24 border-l-2 border-gold pl-4 sm:pl-5"
+          : id
+            ? "mb-10 scroll-mt-24"
+            : "mb-10"
       }
     >
       {title ? (

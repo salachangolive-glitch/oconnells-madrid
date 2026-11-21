@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && node scripts/check-indexable.mjs",
+    "build": "node scripts/gen-lastmod.mjs && next build && node scripts/fix-es-lang.mjs && mkdir -p out/news out/es/noticias && cp -f out/news.html out/news/index.html && cp -f out/es/noticias.html out/es/noticias/index.html && cp -f public/_headers out/_headers && node scripts/check-indexable.mjs",
     "start": "next start",
     "lint": "eslint",
     "check:indexable": "node scripts/check-indexable.mjs"
