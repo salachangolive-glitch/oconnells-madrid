@@ -299,7 +299,7 @@ const COPY: Record<CampaignId, Record<GuideLocale, Copy>> = {
       eyebrow: "UEFA Champions League · Wednesday 25 November 2026 · 21:00",
       h1: "Viking FK in Madrid: three meeting points near Sol",
       lead:
-        "Atlético host Viking FK on Wednesday 25 November at 21:00 at the Riyadh Air Metropolitano. Confirmed on the screens at Dubliners, O'Connell's and O'Reilly's near Puerta del Sol — three meeting points before you take the metro east. First come, first served; no reservations. This is Viking FK from Stavanger, not the NFL Minnesota Vikings.",
+        "Updated Saturday 21 November 2026 (four days before kick-off). Atlético host Viking FK on Wednesday 25 November at 21:00 at the Riyadh Air Metropolitano. Live on our screens at Dubliners, O'Connell's and O'Reilly's near Puerta del Sol — three meeting points before you take the metro east. First come, first served; no reservations. This is Viking FK from Stavanger, not the NFL Minnesota Vikings.",
       matchTitle: "The match",
       matchBullets: [
         "Atlético de Madrid v Viking FK, UEFA Champions League, league phase, matchday 5",
@@ -322,7 +322,7 @@ const COPY: Record<CampaignId, Record<GuideLocale, Copy>> = {
       altLangHref: VIKING_CAMPAIGN.paths.no,
       altLangLabel: "Norsk",
       screeningNote:
-        "The match is confirmed on the screens at all three venues for this fixture.",
+        "The match is live on our screens at all three venues for this fixture.",
     },
     no: {
       title:
@@ -332,7 +332,7 @@ const COPY: Record<CampaignId, Record<GuideLocale, Copy>> = {
       eyebrow: "UEFA Champions League · onsdag 25. november 2026 · 21:00",
       h1: "Viking FK i Madrid: tre møtesteder ved Sol",
       lead:
-        "Atlético tar imot Viking FK onsdag 25. november kl. 21:00 på Riyadh Air Metropolitano. Bekreftet på skjermene hos Dubliners, O'Connell's og O'Reilly's ved Puerta del Sol — tre uavhengige irske puber i gangavstand fra torget. Velg ett sted, møt gruppen, ta metro østover. Førstemann til mølla; ingen reservasjoner. Dette er Viking FK fra Stavanger, ikke NFLs Minnesota Vikings.",
+        "Oppdatert lørdag 21. november 2026 (fire dager før avspark). Atlético tar imot Viking FK onsdag 25. november kl. 21:00 på Riyadh Air Metropolitano. Live på våre skjermer hos Dubliners, O'Connell's og O'Reilly's ved Puerta del Sol — tre uavhengige irske puber i gangavstand fra torget. Velg ett sted, møt gruppen, ta metro østover. Førstemann til mølla; ingen reservasjoner. Dette er Viking FK fra Stavanger, ikke NFLs Minnesota Vikings.",
       matchTitle: "Kampen",
       matchBullets: [
         "Atlético–Viking FK, UEFA Champions League, ligafase, runde 5",
@@ -358,7 +358,7 @@ const COPY: Record<CampaignId, Record<GuideLocale, Copy>> = {
       altLangHref: VIKING_CAMPAIGN.paths.en,
       altLangLabel: "English",
       screeningNote:
-        "Kampen er bekreftet på skjermene i alle tre lokaler for denne kampen.",
+        "Kampen står live på våre skjermer i alle tre lokaler for denne kampen.",
     },
     nl: {
       title: "",
