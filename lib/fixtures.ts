@@ -55,6 +55,10 @@ export type Fixture = {
   /**
    * Screening not yet confirmed by the owner: badge shows "To be confirmed" /
    * "Por confirmar" and the "On the screens" line is hidden.
+   * Do not set this on football (any league) or rugby: owner order 20 Nov 2026
+   * 14:42 announces those as broadcast. isScreeningTbc() ignores it for them
+   * so a daily rebuild cannot revert the What's On label. NFL, basketball,
+   * concerts and other sports stay TBC until confirmed.
    */
   tbc?: boolean;
   /** Optional localized title replacing "home vs away" (pub events). */
@@ -439,8 +443,8 @@ export const FIXTURES: Fixture[] = [
   { id: "2026-11-21-chelsea-leeds", competition: "Premier League", homeTeam: "Chelsea", awayTeam: "Leeds", date: "2026-11-21", kickoffMadrid: "16:00", note: "MW11; Premier League API via Radar 15 Nov; DG order 15 Nov (agenda 16-22); channel not named", line: { en: "Chelsea v Leeds on Saturday afternoon: Premier League at an Irish pub near Sol.", es: "Chelsea–Leeds el sábado por la tarde: Premier League en un pub irlandés junto a Sol." } },
   { id: "2026-11-21-tottenham-ipswich", competition: "Premier League", homeTeam: "Tottenham", awayTeam: "Ipswich", date: "2026-11-21", kickoffMadrid: "16:00", note: "MW11; Premier League API via Radar 15 Nov; DG order 15 Nov (agenda 16-22); channel not named", line: { en: "Tottenham v Ipswich on Saturday afternoon: Premier League at an Irish pub near Sol.", es: "Tottenham–Ipswich el sábado por la tarde: Premier League en un pub irlandés junto a Sol." } },
   { id: "2026-11-21-villa-sunderland", competition: "Premier League", homeTeam: "Aston Villa", awayTeam: "Sunderland", date: "2026-11-21", kickoffMadrid: "16:00", note: "MW11; Premier League API via Radar 15 Nov; DG order 15 Nov (agenda 16-22); channel not named", line: { en: "Aston Villa v Sunderland on Saturday afternoon: Premier League at an Irish pub near Sol.", es: "Aston Villa–Sunderland el sábado por la tarde: Premier League en un pub irlandés junto a Sol." } },
-  { id: "2026-11-21-rayo-valencia", competition: "LaLiga", homeTeam: "Rayo Vallecano", awayTeam: "Valencia", date: "2026-11-21", kickoffMadrid: "16:15", note: "J13; laliga.com via Radar 15 Nov; DG refresh Sat 21 Nov; in-pub feed TBC", tbc: true, line: { en: "Rayo v Valencia on Saturday at 16:15: LaLiga at an Irish pub near Sol.", es: "Rayo–Valencia el sábado a las 16:15: LaLiga en un pub irlandés junto a Sol." } },
-  { id: "2026-11-21-sevilla-betis", competition: "LaLiga", homeTeam: "Sevilla", awayTeam: "Betis", date: "2026-11-21", kickoffMadrid: "18:30", note: "J13; laliga.com via Radar 15 Nov; DG refresh Sat 21 Nov; in-pub feed TBC", tbc: true, line: { en: "Seville derby, Sevilla v Betis, Saturday 18:30: LaLiga at an Irish pub near Sol.", es: "Derbi sevillano, Sevilla–Betis, sábado 18:30: LaLiga en un pub irlandés junto a Sol." } },
+  { id: "2026-11-21-rayo-valencia", competition: "LaLiga", homeTeam: "Rayo Vallecano", awayTeam: "Valencia", date: "2026-11-21", kickoffMadrid: "16:15", note: "J13; laliga.com via Radar 15 Nov; DG order 15 Nov (agenda 16-22); channel not named; Confirmed broadcast: owner order 20 Nov 2026 14:42 (all football leagues); DG 21 Nov 14:58", line: { en: "Rayo v Valencia on Saturday afternoon: LaLiga live at an Irish pub near Sol.", es: "Rayo–Valencia el sábado por la tarde: LaLiga en directo en un pub irlandés junto a Sol." } },
+  { id: "2026-11-21-sevilla-betis", competition: "LaLiga", homeTeam: "Sevilla", awayTeam: "Betis", date: "2026-11-21", kickoffMadrid: "18:30", note: "J13; laliga.com via Radar 15 Nov; DG order 15 Nov (agenda 16-22); channel not named; Confirmed broadcast: owner order 20 Nov 2026 14:42 (all football leagues); DG 21 Nov 14:58", line: { en: "The Seville derby, Sevilla v Betis, on Saturday evening: LaLiga live near Sol. Sevilla and Betis fans in Madrid, an Irish pub to meet up.", es: "El derbi sevillano, Sevilla–Betis, el sábado por la tarde: LaLiga en directo junto a Sol. Aficionados de Sevilla y Betis en Madrid, un pub irlandés para quedar." } },
   { id: "2026-11-22-barcelona-villarreal", competition: "LaLiga", homeTeam: "Barcelona", awayTeam: "Villarreal", date: "2026-11-22", kickoffMadrid: "14:00", note: "J13; laliga.com via Radar 15 Nov; Sun doors 14:00; DG order 15 Nov (agenda 16-22); channel not named", line: { en: "Barcelona v Villarreal on Sunday at 14:00: LaLiga live at an Irish pub near Sol.", es: "Barcelona–Villarreal el domingo a las 14:00: LaLiga en directo en un pub irlandés junto a Sol." } },
   { id: "2026-11-22-hull-brighton", competition: "Premier League", homeTeam: "Hull", awayTeam: "Brighton", date: "2026-11-22", kickoffMadrid: "15:00", note: "MW11; Premier League API via Radar 15 Nov; DG order 15 Nov (agenda 16-22); channel not named", line: { en: "Hull v Brighton on Sunday afternoon: Premier League at an Irish pub near Sol.", es: "Hull–Brighton el domingo por la tarde: Premier League en un pub irlandés junto a Sol." } },
   { id: "2026-11-22-racing-realsociedad", competition: "LaLiga", homeTeam: "Racing", awayTeam: "Real Sociedad", date: "2026-11-22", kickoffMadrid: "16:15", note: "J13; laliga.com via Radar 15 Nov; DG order 15 Nov (agenda 16-22); channel not named", line: { en: "Racing v Real Sociedad on Sunday afternoon: LaLiga live at an Irish pub near Sol.", es: "Racing–Real Sociedad el domingo por la tarde: LaLiga en directo en un pub irlandés junto a Sol." } },
@@ -802,6 +806,16 @@ const COMPETITION_SPORT: Record<string, Sport> = {
 
 export function fixtureSport(f: Fixture): Sport {
   return COMPETITION_SPORT[f.competition] ?? "default";
+}
+
+/**
+ * Owner order 20 Nov 2026 14:42: all football leagues and rugby are announced
+ * as broadcast. NFL, basketball and other sports are unchanged (tbc stands).
+ */
+export function isScreeningTbc(f: Fixture): boolean {
+  const sport = fixtureSport(f);
+  if (sport === "football" || sport === "rugby") return false;
+  return Boolean(f.tbc);
 }
 
 export function fixtureEndMs(f: Fixture): number | null {

@@ -10,6 +10,7 @@ import {
   isTodaySlot,
   isWeekSlot,
   madridTodayYmd,
+  isScreeningTbc,
   screenPolicyLine,
   type Fixture,
 } from "@/lib/fixtures";
@@ -61,7 +62,7 @@ function FixtureDetail({ f, locale, visible, onNow }: RowProps) {
         {competition}
         {f.kickoffMadrid ? (
           <span className="ml-2 tracking-[0.12em] text-cream-muted">
-            · {f.tbc ? (isEs ? "Por confirmar" : "To be confirmed") : isEs ? "Confirmado" : "Confirmed"}
+            · {isScreeningTbc(f) ? (isEs ? "Por confirmar" : "To be confirmed") : isEs ? "Confirmado" : "Confirmed"}
           </span>
         ) : null}
         <OnNowBadge locale={locale} onNow={onNow} />
@@ -76,7 +77,7 @@ function FixtureDetail({ f, locale, visible, onNow }: RowProps) {
           : null}
         {f.channel ? ` · ${f.channel}` : null}
       </p>
-      {f.kickoffMadrid && !f.tbc && !f.pubEvent ? (
+      {f.kickoffMadrid && !isScreeningTbc(f) && !f.pubEvent ? (
         <p className="mt-2 text-sm text-cream-muted">{screenPolicyLine(locale)}</p>
       ) : null}
       {f.line?.[locale] ? (
@@ -114,7 +115,7 @@ function ComingUpRow({ f, locale, visible }: RowProps) {
       <strong className="text-cream">{displayCompetition(f.competition)}</strong>
       {f.kickoffMadrid ? (
         <span className="ml-2 text-xs uppercase tracking-[0.14em] text-gold">
-          {f.tbc ? (isEs ? "Por confirmar" : "To be confirmed") : isEs ? "Confirmado" : "Confirmed"}
+          {isScreeningTbc(f) ? (isEs ? "Por confirmar" : "To be confirmed") : isEs ? "Confirmado" : "Confirmed"}
         </span>
       ) : null}
       {" — "}
@@ -123,7 +124,7 @@ function ComingUpRow({ f, locale, visible }: RowProps) {
       {formatFixtureDay(f.date, locale)}
       {f.kickoffMadrid ? ` · ${f.kickoffMadrid}` : null}
       {f.channel ? ` · ${f.channel}` : null}
-      {f.kickoffMadrid && !f.tbc && !f.pubEvent ? (
+      {f.kickoffMadrid && !isScreeningTbc(f) && !f.pubEvent ? (
         <span className="mt-1 block text-sm text-cream-muted">
           {screenPolicyLine(locale)}
         </span>

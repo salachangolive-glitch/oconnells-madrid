@@ -11,6 +11,7 @@ import {
   getUpcomingFixtures,
   isOnNow,
   madridTodayYmd,
+  isScreeningTbc,
   screenPolicyLine,
   type Fixture,
 } from "@/lib/fixtures";
@@ -38,7 +39,7 @@ function FixtureRow({
         {displayCompetition(f.competition)}
         {f.kickoffMadrid ? (
           <span className="ml-2 tracking-[0.12em] text-cream-muted">
-            · {f.tbc ? (isEs ? "Por confirmar" : "To be confirmed") : isEs ? "Confirmado" : "Confirmed"}
+            · {isScreeningTbc(f) ? (isEs ? "Por confirmar" : "To be confirmed") : isEs ? "Confirmado" : "Confirmed"}
           </span>
         ) : null}
         <OnNowBadge locale={locale} onNow={onNow} />
@@ -52,7 +53,7 @@ function FixtureRow({
           ? ` · ${f.kickoffMadrid} ${isEs ? "hora Madrid" : "Madrid"}`
           : null}
       </p>
-      {f.kickoffMadrid && !f.tbc && !f.pubEvent ? (
+      {f.kickoffMadrid && !isScreeningTbc(f) && !f.pubEvent ? (
         <p className="mt-1 text-sm text-cream-muted">{screenPolicyLine(locale)}</p>
       ) : null}
     </article>
