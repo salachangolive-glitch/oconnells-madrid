@@ -78,7 +78,7 @@ export default function WhatsOnPage() {
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-29" &&
       madridTodayYmd(agendaBuildNow()) >= "2026-11-22" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">
-          Nations Championship Finals at Twickenham, Friday 27 – Sunday 29 November (Madrid time): six matches live on our screens at Dubliners, O&apos;Connell&apos;s and O&apos;Reilly&apos;s near Sol — Italy v Fiji 17:40 Fri, Ireland v Australia 21:10 Fri, Wales v Japan 14:10 Sat, England v New Zealand 17:40 Sat, Scotland v Argentina 14:10 Sun, final France v South Africa 17:40 Sun.{" "}
+          Nations Championship Finals at Twickenham, Friday 27 – Sunday 29 November (Madrid time): six matches live on our screens at O&apos;Connell St near Sol — meeting point before and after — Italy v Fiji 17:40 Fri, Ireland v Australia 21:10 Fri, Wales v Japan 14:10 Sat, England v New Zealand 17:40 Sat, Scotland v Argentina 14:10 Sun, final France v South Africa 17:40 Sun.{" "}
           <Link
             href="/news/nations-championship-finals-twickenham-sol"
             className="text-gold underline"

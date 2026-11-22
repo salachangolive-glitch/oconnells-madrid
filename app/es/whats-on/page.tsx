@@ -88,7 +88,7 @@ export default function EsWhatsOnPage() {
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-29" &&
       madridTodayYmd(agendaBuildNow()) >= "2026-11-22" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">
-          Finales del Nations Championship en Twickenham, del viernes 27 al domingo 29 de noviembre (hora de Madrid): seis partidos en directo en nuestras pantallas en Dubliners, O&apos;Connell&apos;s y O&apos;Reilly&apos;s junto a Sol — Italia–Fiyi 17:40 vie, Irlanda–Australia 21:10 vie, Gales–Japón 14:10 sáb, Inglaterra–Nueva Zelanda 17:40 sáb, Escocia–Argentina 14:10 dom, final Francia–Sudáfrica 17:40 dom.{" "}
+          Finales del Nations Championship en Twickenham, del viernes 27 al domingo 29 de noviembre (hora de Madrid): seis partidos en directo en nuestras pantallas en O&apos;Connell St junto a Sol — punto de encuentro antes y después — Italia–Fiyi 17:40 vie, Irlanda–Australia 21:10 vie, Gales–Japón 14:10 sáb, Inglaterra–Nueva Zelanda 17:40 sáb, Escocia–Argentina 14:10 dom, final Francia–Sudáfrica 17:40 dom.{" "}
           <Link
             href="/es/noticias/nations-championship-finals-fin-de-semana-sol"
             className="text-gold underline"

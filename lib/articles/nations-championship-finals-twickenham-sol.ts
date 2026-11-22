@@ -3,80 +3,78 @@ import { OWNER_PHOTOS_17NOV } from "@/lib/owner-photos-17nov";
 
 /**
  * Nations Championship Finals Weekend — Allianz Stadium, Twickenham.
- * Fri 27 – Sun 29 Nov 2026, kick-offs Europe/Madrid (allianzstadiumtwickenham.com).
- * Owner P0 22 Nov 19:40: live on our screens; Dubliners, O'Connell's, O'Reilly's near Sol.
- * No broadcaster named on site.
+ * Fri 27 – Sun 29 Nov 2026, Madrid time (allianzstadiumtwickenham.com).
+ * Owner 22 Nov 19:43: neutral H1/title/meta (meeting point for rugby fans);
+ * all six live on our screens; meeting point before/after at O'Connell St.
  */
 export const NATIONS_FINALS_TWICKENHAM: MatchArticleData = {
   paths: {
     en: "/news/nations-championship-finals-twickenham-sol",
     es: "/es/noticias/nations-championship-finals-fin-de-semana-sol",
   },
-  published: "2026-11-22T19:40:00+01:00",
-  startDate: "2026-11-27T17:40:00+01:00",
+  published: "2026-11-22T19:43:00+01:00",
+  startDate: "2026-11-29T17:40:00+01:00",
   sport: "Rugby",
-  sportsEventName: "Nations Championship Finals Weekend (Twickenham)",
-  homeTeam: "Nations Championship",
-  awayTeam: "Finals Weekend",
+  sportsEventName:
+    "France v South Africa — Nations Championship final (Finals Weekend)",
+  homeTeam: "France",
+  awayTeam: "South Africa",
   venue: "Allianz Stadium",
   venueLocality: "Twickenham",
   interiorSrc: OWNER_PHOTOS_17NOV.pantallasFutbol.src,
   interiorPosition: OWNER_PHOTOS_17NOV.pantallasFutbol.position,
   copy: {
     en: {
-      title:
-        "Nations Championship Finals Weekend: Twickenham rugby live on our screens near Sol",
+      title: "Meeting point for rugby fans in Madrid",
       description:
-        "Nations Championship Finals at Twickenham, 27–29 November 2026, Madrid time. Six kick-offs live on our screens at O'Connell St — Dubliners, O'Connell's and O'Reilly's are meeting points by Puerta del Sol. No channel named on this page.",
+        "Nations Championship Finals Weekend, Twickenham, 27–29 November 2026, Madrid time. Meeting point before and after at O'Connell St, Espoz y Mina 7 near Puerta del Sol. All six matches live on our screens. Every rugby nation welcome; no channel named.",
       eyebrow:
-        "Nations Championship · Finals Weekend · Fri 27 – Sun 29 November 2026",
-      h1: "Twickenham finals weekend in Madrid: Nations Championship rugby live on our screens near Sol",
+        "Nations Championship · Finals Weekend · updated Sun 22 Nov 2026",
+      h1: "Meeting point for rugby fans in Madrid",
       lead:
-        "The Nations Championship closes at the Allianz Stadium in Twickenham with six matches between Friday 27 and Sunday 29 November, all listed in Madrid time. You do not need a flight to London to follow the weekend — Dubliners, O'Connell St and O'Reilly's, three Irish venues a short walk from Puerta del Sol, are meeting points with the ties live on our screens at O'Connell St. Pick one pin, share it in the group chat, and ask at the bar which feed is on when you arrive.",
+        "The Nations Championship ends at Twickenham on Sunday 29 November at 17:40 Madrid time with France v South Africa in the final — the headline window for groups in the centre. All six Finals Weekend matches are live on our screens at O'Connell St, Calle de Espoz y Mina 7, a couple of minutes from Puerta del Sol: meeting point before kick-off, debrief after the final. Dubliners and O'Reilly's are sibling Irish pubs the same walk from Sol if friends name another door; this page is O'Connell St only. No channel named here.",
       screeningName:
-        "Nations Championship Finals Weekend live on our screens at O'Connell St",
+        "Nations Championship Finals live on our screens at O'Connell St",
       sections: [
         {
-          title: "Kick-offs (Madrid time)",
+          title: "All six kick-offs (Madrid time)",
           list: [
-            "Friday 27 November, 17:40 — Italy v Fiji",
-            "Friday 27 November, 21:10 — Ireland v Australia",
-            "Saturday 28 November, 14:10 — Wales v Japan",
-            "Saturday 28 November, 17:40 — England v New Zealand",
-            "Sunday 29 November, 14:10 — Scotland v Argentina",
             "Sunday 29 November, 17:40 — France v South Africa (final)",
+            "Sunday 29 November, 14:10 — Scotland v Argentina",
+            "Saturday 28 November, 17:40 — England v New Zealand",
+            "Saturday 28 November, 14:10 — Wales v Japan",
+            "Friday 27 November, 21:10 — Ireland v Australia",
+            "Friday 27 November, 17:40 — Italy v Fiji",
           ],
           note:
-            "Times follow allianzstadiumtwickenham.com as read 22 November 2026. Kick-offs can move — check again on matchday. We do not name a TV channel on this page.",
+            "Times from allianzstadiumtwickenham.com (read 22 November 2026). Kick-offs can move — check on the day. We do not name a broadcaster on this page.",
         },
         {
-          title: "Three meeting points near Sol",
+          title: "Live on our screens at O'Connell St",
           paras: [
-            "Dubliners, O'Connell St and O'Reilly's sit within a few minutes of Puerta del Sol — same square, different doors. Some groups split by habit; others pick O'Connell St at Espoz y Mina 7 for one address all weekend.",
-            "All six fixtures are live on our screens at O'Connell St. First come, first served; no reservations.",
+            "Owner confirmed 22 November: every Finals Weekend tie is live on our screens at O'Connell St. Ask at the bar which screen when you arrive; no reservations, first come first served.",
+            "Every jersey and every flag is welcome at the same address — a meeting point in the centre, not a seat guarantee.",
           ],
         },
         {
-          title: "Doors this weekend (O'Connell St)",
+          title: "Before and after",
           paras: [
-            "Friday 27 November: open 16:00 until 03:30 — Italy v Fiji and Ireland v Australia.",
-            "Saturday 28 November: open 15:00 until 03:30 — Wales v Japan and England v New Zealand.",
-            "Sunday 29 November: open 14:00 until 03:00 — Scotland v Argentina and the France v South Africa final.",
+            "Meet here before the Friday night double-header or the Saturday afternoon pair, then come back after Scotland v Argentina and the France v South Africa final on Sunday. From Monday to Thursday the pub stays open until 03:00; this weekend follows Friday 16:00–03:30, Saturday 15:00–03:30 and Sunday 14:00–03:00.",
           ],
         },
         {
-          title: "After the final whistle",
+          title: "Other doors near Sol",
           paras: [
-            "When the Sunday final ends, the pub stays open until 03:00 if you want to talk through the weekend in the centre. Premier League and LaLiga may overlap on some screens — ask at the bar.",
+            "Some groups pin Dubliners or O'Reilly's — independent venues we do not run — then regroup at Espoz y Mina 7. Pick one pin for the weekend and stick to it.",
           ],
         },
       ],
       find: "Getting here",
       dir: "Open directions (Google Maps)",
-      more: "More near Sol",
+      more: "More",
       links: [
-        { href: "/whats-on", label: "What's On — all six windows listed" },
-        { href: "/location", label: "Opening hours and location" },
+        { href: "/whats-on", label: "What's On — all six listed" },
+        { href: "/location", label: "Opening hours" },
       ],
       other: {
         href: "/es/noticias/nations-championship-finals-fin-de-semana-sol",
@@ -86,59 +84,56 @@ export const NATIONS_FINALS_TWICKENHAM: MatchArticleData = {
       alt: OWNER_PHOTOS_17NOV.pantallasFutbol.alt.en,
     },
     es: {
-      title:
-        "Nations Championship Finals: rugby en Twickenham en directo en nuestras pantallas junto a Sol",
+      title: "Punto de encuentro en Madrid para los aficionados al rugby",
       description:
-        "Finales del Nations Championship en Twickenham, 27–29 nov 2026, hora de Madrid. Seis partidos en directo en nuestras pantallas en O'Connell St — Dubliners, O'Connell's y O'Reilly's como puntos de encuentro junto a Puerta del Sol.",
+        "Fin de semana de finales del Nations Championship, Twickenham, 27–29 nov 2026, hora de Madrid. Punto de encuentro antes y después en O'Connell St, Espoz y Mina 7 junto a Puerta del Sol. Los seis en directo en nuestras pantallas. Todas las selecciones bienvenidas; sin cadena.",
       eyebrow:
-        "Nations Championship · fin de semana de finales · vie 27 – dom 29 nov 2026",
-      h1: "Fin de semana de finales en Twickenham, visto desde Madrid: Nations Championship en directo en nuestras pantallas junto a Sol",
+        "Nations Championship · fin de semana de finales · actualizado dom 22 nov 2026",
+      h1: "Punto de encuentro en Madrid para los aficionados al rugby",
       lead:
-        "El Nations Championship cierra en el Allianz Stadium de Twickenham con seis partidos entre el viernes 27 y el domingo 29 de noviembre, siempre en hora de Madrid. No hace falta volar a Londres: Dubliners, O'Connell St y O'Reilly's, tres locales irlandeses a pocos minutos de Puerta del Sol, son puntos de encuentro con los encuentros en directo en nuestras pantallas en O'Connell St. Elige un pin, compártelo en el grupo y pregunta en barra qué señal hay al llegar.",
+        "El Nations Championship cierra en Twickenham el domingo 29 de noviembre a las 17:40, hora de Madrid, con la final Francia–Sudáfrica — la ventana que muchos grupos fijan en el centro. Los seis partidos del fin de semana de finales van en directo en nuestras pantallas en O'Connell St, Calle de Espoz y Mina 7, a dos minutos de Puerta del Sol: punto de encuentro antes del saque y charla después del pitido final. Dubliners y O'Reilly's son pubs hermanos en la misma zona si el grupo nombra otra puerta; esta página es solo O'Connell St. Sin cadena en esta página.",
       screeningName:
         "Finales del Nations Championship en directo en nuestras pantallas en O'Connell St",
       sections: [
         {
-          title: "Horarios (hora de Madrid)",
+          title: "Los seis horarios (hora de Madrid)",
           list: [
-            "Viernes 27 de noviembre, 17:40 — Italia–Fiyi",
-            "Viernes 27 de noviembre, 21:10 — Irlanda–Australia",
-            "Sábado 28 de noviembre, 14:10 — Gales–Japón",
-            "Sábado 28 de noviembre, 17:40 — Inglaterra–Nueva Zelanda",
-            "Domingo 29 de noviembre, 14:10 — Escocia–Argentina",
             "Domingo 29 de noviembre, 17:40 — Francia–Sudáfrica (final)",
+            "Domingo 29 de noviembre, 14:10 — Escocia–Argentina",
+            "Sábado 28 de noviembre, 17:40 — Inglaterra–Nueva Zelanda",
+            "Sábado 28 de noviembre, 14:10 — Gales–Japón",
+            "Viernes 27 de noviembre, 21:10 — Irlanda–Australia",
+            "Viernes 27 de noviembre, 17:40 — Italia–Fiyi",
           ],
           note:
-            "Horas según allianzstadiumtwickenham.com (lectura 22 nov 2026). Pueden cambiar — compruébalo el mismo día. No citamos cadena en esta página.",
+            "Horas según allianzstadiumtwickenham.com (lectura 22 nov 2026). Pueden cambiar — comprueba el día. No citamos cadena.",
         },
         {
-          title: "Tres puntos de encuentro junto a Sol",
+          title: "En directo en nuestras pantallas en O'Connell St",
           paras: [
-            "Dubliners, O'Connell St y O'Reilly's quedan a pocos minutos de Puerta del Sol — misma plaza, puertas distintas. Algunos grupos se reparten por costumbre; otros fijan O'Connell St en Espoz y Mina 7 para todo el fin de semana.",
-            "Los seis partidos van en directo en nuestras pantallas en O'Connell St. Por orden de llegada; sin reservas.",
+            "Confirmado 22 de noviembre: los seis partidos del fin de semana de finales van en directo en nuestras pantallas en O'Connell St. Pregunta en barra al llegar; sin reservas, por orden de llegada.",
+            "Todas las camisetas y banderas son bienvenidas en la misma dirección — punto de encuentro en el centro.",
           ],
         },
         {
-          title: "Horario esta semana (O'Connell St)",
+          title: "Antes y después",
           paras: [
-            "Viernes 27: apertura 16:00 hasta las 03:30 — Italia–Fiyi e Irlanda–Australia.",
-            "Sábado 28: apertura 15:00 hasta las 03:30 — Gales–Japón e Inglaterra–Nueva Zelanda.",
-            "Domingo 29: apertura 14:00 hasta las 03:00 — Escocia–Argentina y la final Francia–Sudáfrica.",
+            "Queda aquí antes del doble del viernes o del sábado por la tarde, y vuelve después de Escocia–Argentina y la final Francia–Sudáfrica del domingo. Este fin de semana: viernes 16:00–03:30, sábado 15:00–03:30, domingo 14:00–03:00.",
           ],
         },
         {
-          title: "Después del pitido",
+          title: "Otras puertas junto a Sol",
           paras: [
-            "Cuando termine la final del domingo, el local sigue abierto hasta las 03:00 si quieres comentar el fin de semana en el centro. Puede solaparse Premier y LaLiga — pregunta en barra.",
+            "Algunos grupos fijan Dubliners u O'Reilly's — locales independientes que no gestionamos — y luego vuelven a Espoz y Mina 7. Un solo pin para el fin de semana.",
           ],
         },
       ],
       find: "Cómo llegar",
       dir: "Cómo llegar (Google Maps)",
-      more: "Más junto a Sol",
+      more: "Más",
       links: [
         { href: "/es/whats-on", label: "Agenda — los seis horarios" },
-        { href: "/es/location", label: "Horario y ubicación" },
+        { href: "/es/location", label: "Horario" },
       ],
       other: {
         href: "/news/nations-championship-finals-twickenham-sol",
