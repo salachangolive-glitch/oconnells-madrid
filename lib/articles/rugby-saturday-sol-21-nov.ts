@@ -31,7 +31,7 @@ export const RUGBY_SATURDAY_SOL_21_NOV: MatchArticleData = {
       eyebrow: "Rugby · Saturday 21 November 2026 · Puerta del Sol",
       h1: "Saturday rugby near Sol: England v New Zealand and Ireland v South Africa, live on our screens",
       lead:
-        "Six Nations Championship matches stack up on Saturday 21 November, Madrid time, at O'Connell St — an Irish pub at Espoz y Mina 7, by Puerta del Sol. All six are live on our screens. First and most watched: England v New Zealand at 15:10, then Ireland v South Africa at 17:40. A meeting point for fans of every country. No reservations, first come first served.",
+        "Nations Championship matches stack up on Saturday 21 November, Madrid time, at O'Connell St — an Irish pub at Espoz y Mina 7, by Puerta del Sol. All six are live on our screens. First and most watched: England v New Zealand at 15:10, then Ireland v South Africa at 17:40. A meeting point for fans of every country. No reservations, first come first served.",
       screeningName:
         "Nations Championship rugby live on our screens at O'Connell St — Saturday 21 November",
       sections: [

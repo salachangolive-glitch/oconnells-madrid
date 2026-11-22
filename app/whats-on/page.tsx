@@ -74,6 +74,19 @@ export default function WhatsOnPage() {
           </Link>
         </p>
       ) : null}
+      {/* Nations Championship Finals Weekend, Twickenham (allianzstadiumtwickenham.com; owner P0 22 Nov 19:40). */}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-29" &&
+      madridTodayYmd(agendaBuildNow()) >= "2026-11-22" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          Nations Championship Finals at Twickenham, Friday 27 – Sunday 29 November (Madrid time): six matches live on our screens at Dubliners, O&apos;Connell&apos;s and O&apos;Reilly&apos;s near Sol — Italy v Fiji 17:40 Fri, Ireland v Australia 21:10 Fri, Wales v Japan 14:10 Sat, England v New Zealand 17:40 Sat, Scotland v Argentina 14:10 Sun, final France v South Africa 17:40 Sun.{" "}
+          <Link
+            href="/news/nations-championship-finals-twickenham-sol"
+            className="text-gold underline"
+          >
+            Finals weekend guide near Sol
+          </Link>
+        </p>
+      ) : null}
       {/* Liverpool v Manchester United, PL MW11 (premierleague.com API: Sun 22 Nov 2026 16:30 GMT = 17:30 Madrid, Anfield; DAZN): build-time date gate. */}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-22" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">

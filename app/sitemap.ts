@@ -73,6 +73,8 @@ const EVENT_LAST_DAY: Record<string, string> = {
   "/es/noticias/irlanda-kosovo-martes-sol": "2026-11-17",
   "/news/rugby-saturday-sol-21-nov": "2026-11-21",
   "/es/noticias/rugby-sabado-sol-21-nov": "2026-11-21",
+  "/news/nations-championship-finals-twickenham-sol": "2026-11-29",
+  "/es/noticias/nations-championship-finals-fin-de-semana-sol": "2026-11-29",
   "/news/newcastle-arsenal-saturday-night-sol": "2026-11-21",
   "/es/noticias/newcastle-arsenal-sabado-sol": "2026-11-21",
   "/news/liverpool-manchester-united-sunday-sol": "2026-11-22",
