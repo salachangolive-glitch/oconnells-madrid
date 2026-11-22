@@ -12,7 +12,7 @@ export const LIVERPOOL_MANUNITED: MatchArticleData = {
     en: "/news/liverpool-manchester-united-sunday-sol",
     es: "/es/noticias/liverpool-manchester-united-domingo-sol",
   },
-  published: "2026-11-15T10:00:00+01:00",
+  published: "2026-11-22T10:00:00+01:00",
   startDate: "2026-11-22T17:30:00+01:00",
   sport: "Football",
   sportsEventName: "Liverpool v Manchester United (Premier League)",
@@ -26,7 +26,7 @@ export const LIVERPOOL_MANUNITED: MatchArticleData = {
         "Liverpool v Man United, Sun 22 Nov 17:30: Premier League at an Irish pub near Sol",
       description:
         "Liverpool v Manchester United, Premier League matchweek 11, Sunday 22 November 2026, 17:30 Madrid time at Anfield. Watch it on DAZN at O'Connell St, Espoz y Mina 7, next to Puerta del Sol.",
-      eyebrow: "Premier League · Sunday 22 November 2026 · 17:30",
+      eyebrow: "Premier League · Sunday 22 November 2026 · 17:30 · updated Sun 22 Nov",
       h1: "Liverpool v Manchester United: Sunday afternoon from Anfield, near Sol",
       lead:
         "Liverpool and Manchester United meet at Anfield on Sunday 22 November, 17:30 Madrid time. If you are in Madrid that weekend — on a city break, studying here or living in the centre — O'Connell St, the Irish pub at Espoz y Mina 7 a couple of minutes from Puerta del Sol, has it on the screens: a fans meeting point near Sol for Reds and United supporters alike.",
@@ -83,7 +83,8 @@ export const LIVERPOOL_MANUNITED: MatchArticleData = {
         "Liverpool–Manchester United, dom 22 nov 17:30: Premier en pub junto a Sol",
       description:
         "Liverpool–Manchester United, Premier League jornada 11, domingo 22 de noviembre de 2026, 17:30 hora de Madrid en Anfield. En DAZN en O'Connell St, Espoz y Mina 7, junto a Puerta del Sol.",
-      eyebrow: "Premier League · domingo 22 de noviembre de 2026 · 17:30",
+      eyebrow:
+        "Premier League · domingo 22 de noviembre de 2026 · 17:30 · actualizado dom 22 nov",
       h1: "Liverpool–Manchester United: domingo por la tarde desde Anfield, junto a Sol",
       lead:
         "El Liverpool y el Manchester United se enfrentan en Anfield el domingo 22 de noviembre a las 17:30 hora de Madrid. Si ese fin de semana estás en Madrid, O'Connell St, el pub irlandés de Espoz y Mina 7 a un par de minutos de Puerta del Sol, lo pone en pantalla: punto de encuentro junto a Sol para aficionados de los dos equipos.",

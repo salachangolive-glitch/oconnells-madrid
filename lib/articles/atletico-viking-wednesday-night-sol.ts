@@ -4,14 +4,14 @@ import { VIKING_CAMPAIGN } from "@/lib/fan-campaign-three-bars";
 /**
  * Atlético v Viking FK, UCL MD5 — Wed 25 Nov 2026, 21:00 Metropolitano.
  * Viking FK (Stavanger) — not Minnesota Vikings. Meeting point; no broadcaster.
- * Updated Saturday 21 Nov 2026 (T−4).
+ * Updated Sunday 22 Nov 2026 (T−3).
  */
 export const ATLETICO_VIKING_WEDNESDAY: MatchArticleData = {
   paths: {
     en: "/news/atletico-viking-wednesday-night-sol",
     es: "/es/noticias/atletico-viking-miercoles-sol",
   },
-  published: "2026-11-21T08:00:00+01:00",
+  published: "2026-11-22T08:00:00+01:00",
   startDate: "2026-11-25T21:00:00+01:00",
   sport: "Football",
   sportsEventName: "Atlético de Madrid v Viking FK (UEFA Champions League)",
@@ -25,10 +25,10 @@ export const ATLETICO_VIKING_WEDNESDAY: MatchArticleData = {
       description:
         "Viking FK fans in Madrid: Atlético v Viking, Wed 25 Nov 2026, 21:00, Metropolitano. O'Connell St at Espoz y Mina 7 by Sol — meeting point, metro east from Sol, open until 03:00 on match night.",
       eyebrow:
-        "UEFA Champions League · Wednesday 25 November 2026 · 21:00 · updated Sat 21 Nov",
+        "UEFA Champions League · Wednesday 25 November 2026 · 21:00 · updated Sun 22 Nov",
       h1: "Viking FK in Madrid: a Wednesday Champions League night that starts at Sol",
       lead:
-        "Atlético host Viking FK at the Riyadh Air Metropolitano on Wednesday 25 November, league-phase matchday 5. Four days out on Saturday 21 November, groups from Stavanger or already in Madrid often fix one pin at Puerta del Sol — metro east to the stadium, then the same door after full time. Viking FK from Norway, not the NFL Minnesota Vikings.",
+        "Atlético host Viking FK at the Riyadh Air Metropolitano on Wednesday 25 November, league-phase matchday 5. Three days out on Sunday 22 November, groups from Stavanger or already in Madrid often fix one pin at Puerta del Sol — metro east to the stadium, then the same door after full time. Viking FK from Norway, not the NFL Minnesota Vikings.",
       screeningName:
         "Viking FK fans meeting point at O'Connell St near Puerta del Sol",
       sections: [
@@ -53,7 +53,7 @@ export const ATLETICO_VIKING_WEDNESDAY: MatchArticleData = {
         {
           title: "Hours and atmosphere",
           paras: [
-            "Match Wednesday we open at 18:00 for a quiet meet-up before you go to the Metropolitano. Today Saturday 21 November we open at 15:00 until 03:30 — rugby and Premier League fill the afternoon screens; Wednesday night is about your group and the metro ride east.",
+            "Match Wednesday we open at 18:00 for a quiet meet-up before you go to the Metropolitano. Today Sunday 22 November we open at 14:00 until 03:00 — Premier League and LaLiga on the screens; use the quieter slots to agree the pin and the metro plan for Wednesday.",
             "We do not name a TV channel on this page. If you stay in the centre on Wednesday, this door is your meeting point — not a seat reservation. First come, first served.",
           ],
         },
@@ -96,10 +96,10 @@ export const ATLETICO_VIKING_WEDNESDAY: MatchArticleData = {
       description:
         "Afición del Viking FK en Madrid: Atlético–Viking, mié 25 nov 2026, 21:00, Metropolitano. O'Connell St, Espoz y Mina 7 junto a Sol — punto de encuentro, metro al este, abierto hasta las 03:00 la noche del partido.",
       eyebrow:
-        "UEFA Champions League · miércoles 25 de noviembre de 2026 · 21:00 · actualizado sáb 21 nov",
+        "UEFA Champions League · miércoles 25 de noviembre de 2026 · 21:00 · actualizado dom 22 nov",
       h1: "Viking FK en Madrid: un miércoles de Champions que empieza en Sol",
       lead:
-        "El Atlético recibe al Viking FK en el Riyadh Air Metropolitano el miércoles 25 de noviembre, jornada 5 de la fase de liga. A cuatro días, el sábado 21 de noviembre, muchos grupos fijan un pin en la Puerta del Sol — metro hacia el este y la misma puerta después del pitido final. Viking FK de Stavanger, no los Minnesota Vikings de la NFL.",
+        "El Atlético recibe al Viking FK en el Riyadh Air Metropolitano el miércoles 25 de noviembre, jornada 5 de la fase de liga. A tres días, el domingo 22 de noviembre, muchos grupos fijan un pin en la Puerta del Sol — metro hacia el este y la misma puerta después del pitido final. Viking FK de Stavanger, no los Minnesota Vikings de la NFL.",
       screeningName:
         "Afición del Viking FK: punto de encuentro en O'Connell St junto a Puerta del Sol",
       sections: [
@@ -124,7 +124,7 @@ export const ATLETICO_VIKING_WEDNESDAY: MatchArticleData = {
         {
           title: "Horario y ambiente",
           paras: [
-            "El miércoles del partido abrimos a las 18:00 para quedar antes del estadio. Este sábado 21 de noviembre abrimos a las 15:00 hasta las 03:30.",
+            "El miércoles del partido abrimos a las 18:00 para quedar antes del estadio. Este domingo 22 de noviembre abrimos a las 14:00 hasta las 03:00 — Premier y LaLiga en pantalla; aprovecha para acordar pin y metro del miércoles.",
             "No citamos cadena en esta página. Punto de encuentro, sin reservas; por orden de llegada.",
           ],
         },
