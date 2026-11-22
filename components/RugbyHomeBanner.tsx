@@ -16,7 +16,7 @@ const COPY = {
   en: {
     title: "International Rugby – Saturday 21 November",
     live:
-      "Live on our screens at O'Connell St, Espoz y Mina 7, by Puerta del Sol. Six Nations Championship matches on Saturday 21 November, Madrid time. A meeting point for fans of every country.",
+      "Live on our screens at O'Connell St, Espoz y Mina 7, by Puerta del Sol. Nations Championship matches on Saturday 21 November, Madrid time. A meeting point for fans of every country.",
     priorityLabel: "First up",
     priority: ["15:10 England v New Zealand", "17:40 Ireland v South Africa"],
     alsoLabel: "Also live on our screens",
