@@ -85,6 +85,46 @@ export default function EsWhatsOnPage() {
           </Link>
         </p>
       ) : null}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-22" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          Premier League: Liverpool–Manchester United, domingo 22 de noviembre, 17:30 (Anfield), en DAZN, en directo junto a Sol. Los domingos abrimos a las 14:00.{" "}
+          <Link href="/es/noticias/liverpool-manchester-united-domingo-sol" className="text-gold underline">
+            Liverpool–Man United: domingo de Premier junto a Sol
+          </Link>
+        </p>
+      ) : null}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-23" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          Tokio Hotel en el Palacio Vistalegre, lunes 23 de noviembre, su única fecha en España: queda en O&apos;Connell St, cerca de Sol, antes o después del concierto.{" "}
+          <Link href="/news/tokio-hotel-madrid-gig-night-sol" className="text-gold underline">
+            Noche de concierto Tokio Hotel junto a Sol
+          </Link>
+        </p>
+      ) : null}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-24" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          UEFA Champions League: Real Madrid–PSV, martes 24 de noviembre, 21:00 (Bernabéu). Afición neerlandesa / PSV: punto de encuentro junto a Sol antes o después.{" "}
+          <Link href="/es/noticias/real-madrid-psv-martes-sol" className="text-gold underline">
+            Real Madrid–PSV: martes de Champions junto a Sol
+          </Link>
+        </p>
+      ) : null}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-25" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          Euroliga: Real Madrid–Žalgiris, miércoles 25 de noviembre, 20:45 (Movistar Arena). Afición lituana / Žalgiris: punto de encuentro junto a Sol antes o después.{" "}
+          <Link href="/news/real-madrid-zalgiris-wednesday-night-sol" className="text-gold underline">
+            Real Madrid–Žalgiris: miércoles por la noche junto a Sol
+          </Link>
+        </p>
+      ) : null}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-25" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          UEFA Champions League: Atlético de Madrid–Viking FK, miércoles 25 de noviembre, 21:00 (Riyadh Air Metropolitano). Afición noruega del Viking FK: punto de encuentro junto a Sol antes o después — no los Minnesota Vikings de la NFL.{" "}
+          <Link href="/es/noticias/atletico-viking-miercoles-sol" className="text-gold underline">
+            Atlético–Viking FK: miércoles de Champions junto a Sol
+          </Link>
+        </p>
+      ) : null}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-29" &&
       madridTodayYmd(agendaBuildNow()) >= "2026-11-22" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">
@@ -94,22 +134,6 @@ export default function EsWhatsOnPage() {
             className="text-gold underline"
           >
             Guía del fin de semana de finales junto a Sol
-          </Link>
-        </p>
-      ) : null}
-      {madridTodayYmd(agendaBuildNow()) <= "2026-11-22" ? (
-        <p className="mb-6 text-sm text-cream-muted sm:text-base">
-          Premier League: Liverpool–Manchester United, domingo 22 de noviembre, 17:30 (Anfield), en DAZN, en directo junto a Sol. Los domingos abrimos a las 14:00.{" "}
-          <Link href="/es/noticias/liverpool-manchester-united-domingo-sol" className="text-gold underline">
-            Liverpool–Man United: domingo de Premier junto a Sol
-          </Link>
-        </p>
-      ) : null}
-      {madridTodayYmd(agendaBuildNow()) <= "2026-11-25" ? (
-        <p className="mb-6 text-sm text-cream-muted sm:text-base">
-          UEFA Champions League: Atlético de Madrid–Viking FK, miércoles 25 de noviembre, 21:00 (Riyadh Air Metropolitano). Afición noruega del Viking FK: punto de encuentro junto a Sol antes o después — no los Minnesota Vikings de la NFL.{" "}
-          <Link href="/es/noticias/atletico-viking-miercoles-sol" className="text-gold underline">
-            Atlético–Viking FK: miércoles de Champions junto a Sol
           </Link>
         </p>
       ) : null}
