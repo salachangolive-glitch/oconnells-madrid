@@ -71,5 +71,11 @@ export function isPlayedMatchPage(path: string, now: Date = agendaBuildNow()): b
   if (!iso) return false;
   const start = Date.parse(iso);
   if (Number.isNaN(start)) return false;
+  // Orden del dueño 23 nov 2026 11:02: no se desindexa nada nuevo. Regla congelada:
+  // solo las páginas ya en noindex en f2e36e9 (saque anterior al corte) siguen así.
+  if (start >= NOINDEX_FREEZE_CUTOFF) return false;
   return now.getTime() >= start + MATCH_PLAYED_AFTER_MIN * 60_000;
 }
+
+/** Corte fijo: ninguna página con saque posterior se desindexa nunca. */
+const NOINDEX_FREEZE_CUTOFF = Date.parse("2026-11-23T11:02:00+01:00");
