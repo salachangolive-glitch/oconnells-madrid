@@ -4,14 +4,14 @@ import { PSV_CAMPAIGN } from "@/lib/fan-campaign-three-bars";
 /**
  * Real Madrid v PSV, UCL MD5 — Tue 24 Nov 2026, 21:00 Bernabéu.
  * O'Connell St angle: Dutch/PSV fans, meeting point + metro from Sol.
- * Updated Friday 20 Nov 2026 (T−4). No broadcaster named.
+ * Updated Monday 23 Nov 2026 (T−3). No broadcaster named.
  */
 export const RM_PSV_TUESDAY: MatchArticleData = {
   paths: {
     en: "/news/real-madrid-psv-tuesday-night-sol",
     es: "/es/noticias/real-madrid-psv-martes-sol",
   },
-  published: "2026-11-20T08:00:00+01:00",
+  published: "2026-11-23T08:00:00+01:00",
   startDate: "2026-11-24T21:00:00+01:00",
   sport: "Football",
   sportsEventName: "Real Madrid v PSV (UEFA Champions League)",
@@ -25,10 +25,10 @@ export const RM_PSV_TUESDAY: MatchArticleData = {
       description:
         "PSV fans in Madrid: Real Madrid v PSV, Tue 24 Nov 2026, 21:00, Bernabéu. O'Connell St at Espoz y Mina 7 by Sol — meeting point, metro to the stadium, open until 03:00 on match night.",
       eyebrow:
-        "UEFA Champions League · Tuesday 24 November 2026 · 21:00 · updated Fri 20 Nov",
+        "UEFA Champions League · Tuesday 24 November 2026 · 21:00 · updated Mon 23 Nov",
       h1: "PSV in Madrid: a Tuesday Champions League night that starts at Sol",
       lead:
-        "Real Madrid host PSV at the Santiago Bernabéu on Tuesday 24 November, league-phase matchday 5. Four days out on Friday 20 November, groups travelling from Eindhoven or already in Madrid often pin one address in the centre first — then share the metro ride to the Bernabéu and come back to the same door after the match.",
+        "Real Madrid host PSV at the Santiago Bernabéu on Tuesday 24 November, league-phase matchday 5. Three days out on Monday 23 November, groups travelling from Eindhoven or already in Madrid often pin one address in the centre first — then share the metro ride to the Bernabéu and come back to the same door after the match.",
       screeningName: "PSV fans meeting point at O'Connell St near Puerta del Sol",
       sections: [
         {
@@ -52,7 +52,7 @@ export const RM_PSV_TUESDAY: MatchArticleData = {
         {
           title: "Hours and atmosphere",
           paras: [
-            "Match Tuesday we open at 18:00, so you can meet at the bar before you go to the stadium. Tonight Friday 20 November we open at 16:00 until 03:30 if your group wants a quiet pint in Sol while the week builds.",
+            "Match Tuesday we open at 18:00, so you can meet at the bar before you go to the stadium. Today Monday 23 November we open at 18:00 until 03:00 — lock the pin and the metro plan over a quiet pint in Sol before Bernabéu night.",
             "Expect a mixed room on Tuesday: locals, visitors and Dutch accents once the evening kicks in. We do not name a TV channel on this page; if your friends are staying in the centre, this door is the meeting point — not a seat reservation. First come, first served.",
           ],
         },
@@ -87,10 +87,10 @@ export const RM_PSV_TUESDAY: MatchArticleData = {
       description:
         "Afición del PSV en Madrid: Real Madrid–PSV, mar 24 nov 2026, 21:00, Bernabéu. O'Connell St, Espoz y Mina 7 junto a Sol — punto de encuentro, metro al estadio, abierto hasta las 03:00 la noche del partido.",
       eyebrow:
-        "UEFA Champions League · martes 24 de noviembre de 2026 · 21:00 · actualizado vie 20 nov",
+        "UEFA Champions League · martes 24 de noviembre de 2026 · 21:00 · actualizado lun 23 nov",
       h1: "PSV en Madrid: un martes de Champions que empieza en Sol",
       lead:
-        "El Real Madrid recibe al PSV en el Santiago Bernabéu el martes 24 de noviembre, jornada 5 de la fase de liga. A cuatro días del partido, el viernes 20 de noviembre, muchos grupos fijan primero un pin en el centro — luego comparten el metro hasta el Bernabéu y vuelven a la misma puerta después del pitido.",
+        "El Real Madrid recibe al PSV en el Santiago Bernabéu el martes 24 de noviembre, jornada 5 de la fase de liga. A tres días del partido, el lunes 23 de noviembre, muchos grupos fijan primero un pin en el centro — luego comparten el metro hasta el Bernabéu y vuelven a la misma puerta después del pitido.",
       screeningName:
         "Afición del PSV: punto de encuentro en O'Connell St junto a Puerta del Sol",
       sections: [
@@ -114,7 +114,7 @@ export const RM_PSV_TUESDAY: MatchArticleData = {
         {
           title: "Horario y ambiente",
           paras: [
-            "El martes del partido abrimos a las 18:00 para quedar antes del estadio. Este viernes 20 de noviembre abrimos a las 16:00 hasta las 03:30 si el grupo quiere una pinta tranquila en Sol.",
+            "El martes del partido abrimos a las 18:00 para quedar antes del estadio. Hoy lunes 23 de noviembre abrimos a las 18:00 hasta las 03:00 — fija el pin y el plan de metro con una pinta tranquila en Sol antes de la noche del Bernabéu.",
             "El martes suele mezclarse gente local, visitantes y acentos neerlandeses. No citamos cadena en esta página. Punto de encuentro, sin reservas; por orden de llegada.",
           ],
         },
