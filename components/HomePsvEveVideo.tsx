@@ -1,9 +1,7 @@
 import Link from "next/link";
 import { DirectionsButton } from "@/components/HowToGetHere";
+import { HomePsvEveVideoPlayer } from "@/components/HomePsvEveVideoPlayer";
 import { psvHomeVideoActive, PSV_HOME_VIDEO_UNTIL_MS } from "@/lib/psv-home-video";
-
-const VIDEO_SRC = "/videos/psv-oc-23nov/oc-psv-fans-23nov.mp4";
-const POSTER_WEBP = "/videos/psv-oc-23nov/oc-psv-fans-poster-576.webp";
 
 const COPY = {
   en: {
@@ -14,6 +12,8 @@ const COPY = {
     aria:
       "Real Madrid v PSV: PSV fans meeting point at O'Connell St near Puerta del Sol",
     videoAria: "Video: PSV fans at O'Connell St, 23 November 2026",
+    unmuteOn: "Turn sound on",
+    unmuteOff: "Turn sound off",
   },
   es: {
     copy:
@@ -23,6 +23,8 @@ const COPY = {
     aria:
       "Real Madrid–PSV: punto de encuentro del PSV en O'Connell St junto a Sol",
     videoAria: "Vídeo: aficionados del PSV en O'Connell St, 23 de noviembre de 2026",
+    unmuteOn: "Activar sonido",
+    unmuteOff: "Quitar sonido",
   },
 } as const;
 
@@ -43,19 +45,11 @@ export function HomePsvEveVideo({ locale }: { locale: "en" | "es" }) {
         suppressHydrationWarning
       >
         <div className="w-full max-h-[min(70vh,720px)] aspect-[9/14] overflow-hidden leading-none lg:aspect-video lg:max-h-[min(65vh,680px)]">
-          <video
-            className="block h-full w-full object-cover object-center"
-            controls
-            muted
-            playsInline
-            preload="metadata"
-            poster={POSTER_WEBP}
-            width={576}
-            height={1024}
-            aria-label={c.videoAria}
-          >
-            <source src={VIDEO_SRC} type="video/mp4" />
-          </video>
+          <HomePsvEveVideoPlayer
+            videoAria={c.videoAria}
+            unmuteOnLabel={c.unmuteOn}
+            unmuteOffLabel={c.unmuteOff}
+          />
         </div>
         <div className="mx-auto w-full max-w-5xl px-4 py-3 sm:py-4">
           <p className="text-sm leading-snug text-cream sm:text-base">{c.copy}</p>
