@@ -23,13 +23,13 @@ export const HOME_COMING_UP: ComingUpItem[] = [
       href: "/news/real-madrid-psv-tuesday-night-sol",
       label: "Real Madrid v PSV: Tuesday night near Sol",
       detail:
-        "UEFA Champions League, Tuesday 24 November, 21:00 (Bernabéu). Dutch / PSV fans: a fans meeting point near Sol before or after.",
+        "Real Madrid v PSV, UEFA Champions League, Tuesday 24 November, 21:00 (Bernabéu). O'Connell St, Espoz y Mina 7 — less than a minute from Sol. Meeting point before or after; first come, first served.",
     },
     es: {
       href: "/es/noticias/real-madrid-psv-martes-sol",
       label: "Real Madrid–PSV: martes por la noche junto a Sol",
       detail:
-        "Champions: Real Madrid–PSV, martes 24 de noviembre, 21:00 (Bernabéu). Afición neerlandesa / PSV: punto de encuentro junto a Sol antes o después.",
+        "Real Madrid–PSV, Champions, martes 24 de noviembre, 21:00 (Bernabéu). O'Connell St, Espoz y Mina 7 — a menos de un minuto de Sol. Punto de encuentro antes o después; entrada por orden de llegada.",
     },
   },
   {

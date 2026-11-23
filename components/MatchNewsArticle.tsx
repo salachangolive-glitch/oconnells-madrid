@@ -32,6 +32,16 @@ export type MatchCopy = {
   screeningName: string;
 };
 
+/** Address + Maps + FCFS above the fold on match guides (owner PSV 23 Nov 2026). */
+export type MatchMeetingFold = {
+  address: string;
+  mapsLabel: string;
+  fcfs: string;
+  solProximity: string;
+  /** Optional line for visiting fans (e.g. NL on EN PSV guide). */
+  extraLang?: { lang: string; text: string };
+};
+
 export type MatchArticleData = {
   paths: Record<MatchLocale, string>;
   published: string;
@@ -50,6 +60,8 @@ export type MatchArticleData = {
   /** Owner photo override (path under public/). */
   interiorSrc?: string;
   interiorPosition?: string;
+  /** Renders immediately under the hero (before hero image) for mobile fold. */
+  meetingFold?: Record<MatchLocale, MatchMeetingFold>;
   copy: Record<MatchLocale, MatchCopy>;
 };
 
@@ -122,12 +134,49 @@ function jsonLd(d: MatchArticleData, l: MatchLocale) {
   };
 }
 
+function MatchMeetingFoldBlock({
+  fold,
+  mapsUrl,
+}: {
+  fold: MatchMeetingFold;
+  mapsUrl: string;
+}) {
+  return (
+    <section
+      className="mb-6 rounded-lg border border-gold/40 bg-pub-burgundy-deep/90 p-4 sm:mb-8 sm:p-5"
+      aria-label={fold.mapsLabel}
+    >
+      <p className="text-base font-semibold text-cream">{fold.address}</p>
+      <p className="mt-1 text-sm text-cream-muted">{fold.solProximity}</p>
+      <p className="mt-2 text-sm text-cream-muted">{fold.fcfs}</p>
+      {fold.extraLang ? (
+        <p className="mt-1 text-sm text-cream-muted" lang={fold.extraLang.lang}>
+          {fold.extraLang.text}
+        </p>
+      ) : null}
+      <p className="mt-4">
+        <a
+          href={mapsUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          data-event="directions"
+          className="inline-block rounded border border-gold bg-gold/10 px-4 py-2 text-sm font-semibold text-gold hover:bg-gold/20"
+        >
+          {fold.mapsLabel}
+        </a>
+      </p>
+    </section>
+  );
+}
+
 export function MatchNewsArticle({ data, locale }: { data: MatchArticleData; locale: MatchLocale }) {
   const c = data.copy[locale];
+  const fold = data.meetingFold?.[locale];
   return (
     <PageShell locale={locale} altLangHref={c.other.href}>
       <JsonLd data={jsonLd(data, locale)} />
       <PageHero eyebrow={c.eyebrow} title={c.h1} lead={c.lead} />
+      {fold ? <MatchMeetingFoldBlock fold={fold} mapsUrl={MAPS_URL} /> : null}
       <InteriorPhoto
         src={data.interiorSrc ?? "/images/interior/bar-taps.webp"}
         alt={c.alt}

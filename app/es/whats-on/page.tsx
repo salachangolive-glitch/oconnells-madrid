@@ -98,19 +98,19 @@ export default function EsWhatsOnPage() {
           </Link>
         </p>
       ) : null}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-24" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          <strong className="text-cream">Real Madrid–PSV, martes 24 de noviembre, 21:00</strong> (Bernabéu). Punto de encuentro en O&apos;Connell St, Espoz y Mina 7 — a menos de un minuto de Sol. Entrada por orden de llegada.{" "}
+          <Link href="/es/noticias/real-madrid-psv-martes-sol" className="text-gold underline">
+            Guía Real Madrid–PSV
+          </Link>
+        </p>
+      ) : null}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-23" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">
           Tokio Hotel en el Palacio Vistalegre, lunes 23 de noviembre, su única fecha en España: queda en O&apos;Connell St, cerca de Sol, antes o después del concierto.{" "}
           <Link href="/news/tokio-hotel-madrid-gig-night-sol" className="text-gold underline">
             Noche de concierto Tokio Hotel junto a Sol
-          </Link>
-        </p>
-      ) : null}
-      {madridTodayYmd(agendaBuildNow()) <= "2026-11-24" ? (
-        <p className="mb-6 text-sm text-cream-muted sm:text-base">
-          UEFA Champions League: Real Madrid–PSV, martes 24 de noviembre, 21:00 (Bernabéu). Afición neerlandesa / PSV: punto de encuentro junto a Sol antes o después.{" "}
-          <Link href="/es/noticias/real-madrid-psv-martes-sol" className="text-gold underline">
-            Real Madrid–PSV: martes de Champions junto a Sol
           </Link>
         </p>
       ) : null}

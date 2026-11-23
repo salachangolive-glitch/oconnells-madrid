@@ -88,21 +88,21 @@ export default function WhatsOnPage() {
           </Link>
         </p>
       ) : null}
+      {/* Real Madrid v PSV, UCL MD5 (owner 23 Nov 19:00 — Champions lead). */}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-24" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          <strong className="text-cream">Real Madrid v PSV, Tuesday 24 November, 21:00</strong> (Bernabéu). Meeting point at O&apos;Connell St, Espoz y Mina 7 — less than a minute from Sol. First come, first served.{" "}
+          <Link href="/news/real-madrid-psv-tuesday-night-sol" className="text-gold underline">
+            Real Madrid v PSV guide
+          </Link>
+        </p>
+      ) : null}
       {/* Tokio Hotel gig night (Radar OC14; palaciovistalegre.com: Mon 23 Nov 2026, start time TBC): build-time date gate. */}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-23" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">
           Tokio Hotel at Palacio Vistalegre, Monday 23 November, their only date in Spain: meet at O&apos;Connell St, near Sol, before or after the concert.{" "}
           <Link href="/news/tokio-hotel-madrid-gig-night-sol" className="text-gold underline">
             Tokio Hotel gig night guide
-          </Link>
-        </p>
-      ) : null}
-      {/* Real Madrid v PSV, UCL MD5 (match.uefa.com/v5 id 2049625, 2026-11-24T20:00Z = 21:00 CET): build-time date gate. */}
-      {madridTodayYmd(agendaBuildNow()) <= "2026-11-24" ? (
-        <p className="mb-6 text-sm text-cream-muted sm:text-base">
-          UEFA Champions League: Real Madrid v PSV, Tuesday 24 November, 21:00 (Bernabéu). Dutch / PSV fans: a fans meeting point near Sol before or after.{" "}
-          <Link href="/news/real-madrid-psv-tuesday-night-sol" className="text-gold underline">
-            Real Madrid v PSV: Tuesday night near Sol
           </Link>
         </p>
       ) : null}
