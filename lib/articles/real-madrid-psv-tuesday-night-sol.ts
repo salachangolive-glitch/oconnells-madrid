@@ -35,7 +35,7 @@ export const RM_PSV_TUESDAY: MatchArticleData = {
     es: {
       address: ADDRESS.full,
       mapsLabel: "Cómo llegar",
-      fcfs: "Sin reservas: entrada por orden de llegada.",
+      fcfs: "Por orden de llegada. Sin reservas.",
       solProximity: "A menos de un minuto de Sol (Puerta del Sol).",
     },
   },
