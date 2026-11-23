@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { DirectionsButton, HowToGetHere } from "@/components/HowToGetHere";
 import { InteriorPhoto } from "@/components/InteriorPhoto";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
@@ -25,6 +26,9 @@ export default function NewsSerbiaGermanyFridayNightPage() {
         title="Serbia v Germany: a Friday football night in Sol"
         lead="Serbia host Germany in Belgrade on Friday 13 November. If you're German or Serbian and living in Madrid, here for work or on a weekend away, you can watch it live in the centre of the city at O'Connell St, a couple of minutes from Puerta del Sol."
       />
+      <p className="mb-8">
+        <DirectionsButton locale="en" />
+      </p>
       <InteriorPhoto
         src="/images/interior/bar-taps.webp"
         alt="Beer taps at the bar of O'Connell St Irish pub by Puerta del Sol"
@@ -110,6 +114,7 @@ export default function NewsSerbiaGermanyFridayNightPage() {
           </Link>
         </p>
       </Section>
+      <HowToGetHere locale="en" />
     </PageShell>
   );
 }

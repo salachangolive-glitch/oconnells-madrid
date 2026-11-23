@@ -7,6 +7,8 @@ import { FAN_WEEKEND, PATHS, WEEKEND_HOURS } from "@/lib/fan-weekend";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
+  // Owner order 23 Nov 2026 (GEO): past NFL page, single permanent NFL page is /nfl-madrid.
+  noindex: true,
   title: "Cuatro bares, un fin de semana junto a Sol — evento pasado",
   description:
     "O'Reilly's, Dubliners, O'Connell's y Four Corner: el fin de semana junto a Puerta del Sol, 7–8 de noviembre de 2026, ya ha tenido lugar. Direcciones y Maps. Pubs irlandeses independientes.",

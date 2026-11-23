@@ -10,6 +10,8 @@ import { buildMetadata } from "@/lib/seo";
 import { ADDRESS } from "@/lib/venue";
 
 export const metadata = buildMetadata({
+  // Owner order 23 Nov 2026 (GEO): past NFL page, single permanent NFL page is /nfl-madrid.
+  noindex: true,
   title: "NFL noche y luego Atlético–Barcelona 21:00 desde esta puerta",
   description:
     "Desde O'Connell's, Espoz y Mina 7: NFL RedZone desde las 19:00, luego Atlético–Barcelona a las 21:00. Solo nombres que este sitio ya confirma. Preguntad qué hay en pantalla. La Premier League sigue en el mismo domingo. Four Corner desde las 14:00 con pantallas de deporte.",

@@ -8,6 +8,8 @@ import { buildMetadata } from "@/lib/seo";
 import { ADDRESS } from "@/lib/venue";
 
 export const metadata = buildMetadata({
+  // Owner order 23 Nov 2026 (GEO): past NFL page, single permanent NFL page is /nfl-madrid.
+  noindex: true,
   title: "Sábado 7 nov NFL en O'Connell's — evento pasado",
   description:
     "Sábado 7 de noviembre de 2026 en O'Connell's, Espoz y Mina 7: 15:00–03:30, sin NFL en directo aquel día. Aquel sábado ya ha tenido lugar. Domingos habituales desde las 14:00. Consulta la Agenda.",

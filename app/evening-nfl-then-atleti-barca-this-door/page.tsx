@@ -10,6 +10,8 @@ import { buildMetadata } from "@/lib/seo";
 import { ADDRESS } from "@/lib/venue";
 
 export const metadata = buildMetadata({
+  // Owner order 23 Nov 2026 (GEO): past NFL page, single permanent NFL page is /nfl-madrid.
+  noindex: true,
   title: "Evening NFL then Atlético–Barcelona 21:00 from this door",
   description:
     "From O'Connell's, Espoz y Mina 7: NFL RedZone from 19:00, then Atlético vs Barcelona at 21:00. Named listings only where this site already confirms them. Ask which game is on. Premier League sits alongside. Four Corner from 14:00 with sports screens.",

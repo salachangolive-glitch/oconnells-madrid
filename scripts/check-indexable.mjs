@@ -81,6 +81,23 @@ const NOINDEX_OK_HTML = [
   "zalgiris-fans-three-bars-sol",
   "zalgiris-fans-trys-barai-sol",
   "oktoberfest-madrid-sol",
+  // Past NFL pages, noindex by owner order 23 Nov 2026 (single NFL page: /nfl-madrid).
+  "nfl-fans-saturday-oconnells",
+  "nfl-sunday-8-nov-oconnells",
+  "evening-nfl-then-atleti-barca-this-door",
+  "4-bars-one-fan-weekend",
+  "before-after-bernabeu-nfl-sol",
+  "nfl-meeting-point-sol",
+  "where-to-watch-nfl-madrid-sol",
+  "four-bars-fan-weekend-sol",
+  "fin-de-semana-nfl-oconnells",
+  "nfl-domingo-8-nov-oconnells",
+  "nfl-noche-luego-atleti-barca-esta-puerta",
+  "antes-despues-bernabeu-nfl-sol",
+  "punto-encuentro-nfl-sol",
+  "donde-ver-nfl-madrid-sol",
+  "cuatro-bares-fin-de-semana",
+  "cuatro-bares-finde-sol",
 ];
 
 function isAllowedNoindexPath(filePath) {

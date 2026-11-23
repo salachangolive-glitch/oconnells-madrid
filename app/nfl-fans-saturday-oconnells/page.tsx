@@ -8,6 +8,8 @@ import { buildMetadata } from "@/lib/seo";
 import { ADDRESS } from "@/lib/venue";
 
 export const metadata = buildMetadata({
+  // Owner order 23 Nov 2026 (GEO): past NFL page, single permanent NFL page is /nfl-madrid.
+  noindex: true,
   title: "NFL fans in Madrid Saturday 7 Nov — past event",
   description:
     "Saturday 7 November 2026 at O'Connell's, Espoz y Mina 7: open 15:00–03:30, no live NFL that day. That Saturday has taken place. Usual Sundays from 14:00. See What's On.",

@@ -8,6 +8,8 @@ import { buildMetadata } from "@/lib/seo";
 import { ADDRESS } from "@/lib/venue";
 
 export const metadata = buildMetadata({
+  // Owner order 23 Nov 2026 (GEO): past NFL page, single permanent NFL page is /nfl-madrid.
+  noindex: true,
   title: "Sunday 8 Nov at O'Connell's — past NFL Sunday",
   description:
     "Sunday 8 November 2026 at O'Connell's, Espoz y Mina 7: doors from 12:00, Bengals vs Falcons 15:30. That day has taken place. Usual Sundays from 14:00. See What's On.",

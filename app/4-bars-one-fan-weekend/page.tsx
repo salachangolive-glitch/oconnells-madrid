@@ -7,6 +7,8 @@ import { FAN_WEEKEND, PATHS, WEEKEND_HOURS } from "@/lib/fan-weekend";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
+  // Owner order 23 Nov 2026 (GEO): past NFL page, single permanent NFL page is /nfl-madrid.
+  noindex: true,
   title: "4 bars, one fan weekend near Sol — past event",
   description:
     "O'Reilly's, Dubliners, O'Connell's and Four Corner: the fan weekend near Puerta del Sol, 7–8 November 2026, has taken place. Addresses and Maps. Independent Irish pubs.",

@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { WhatsOnEventsJsonLd } from "@/components/WhatsOnEventsJsonLd";
+import { DirectionsButton, HowToGetHere } from "@/components/HowToGetHere";
 import { PostMatchBanner } from "@/components/PostMatchBanner";
 import { RugbyHomeBanner } from "@/components/RugbyHomeBanner";
 import { NflSunday15NovWhatsOn } from "@/components/NflSunday15NovWhatsOn";
@@ -24,6 +26,9 @@ export default function WhatsOnPage() {
         title={`Next 7 days at ${SITE_NAME}`}
         lead="Live sport at our Irish pub near Puerta del Sol. All times are shown in Madrid time. Events marked ‘Confirmed’ are scheduled to be shown on our screens."
       />
+      <p className="mb-8">
+        <DirectionsButton locale="en" />
+      </p>
 
       <PostMatchBanner locale="en" />
       {/* Nations Championship Sat 21 Nov: featured block, auto-hides after 21 Nov (Madrid). */}
@@ -198,7 +203,9 @@ export default function WhatsOnPage() {
         </Link>
         .
       </p>
+      <WhatsOnEventsJsonLd locale="en" />
       <FixtureList locale="en" />
+      <HowToGetHere locale="en" />
 
       <Section title="Live sports at O'Connell St">
         <p>

@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { WhatsOnEventsJsonLd } from "@/components/WhatsOnEventsJsonLd";
+import { DirectionsButton, HowToGetHere } from "@/components/HowToGetHere";
 import { PostMatchBanner } from "@/components/PostMatchBanner";
 import { RugbyHomeBanner } from "@/components/RugbyHomeBanner";
 import { NflSunday15NovWhatsOn } from "@/components/NflSunday15NovWhatsOn";
@@ -25,6 +27,9 @@ export default function EsWhatsOnPage() {
         title={`Próximos 7 días en ${SITE_NAME}`}
         lead="Deporte en directo en nuestro pub irlandés cerca de Puerta del Sol. Todos los horarios están indicados en hora de Madrid. Los eventos marcados como ‘Confirmado’ tienen prevista su emisión en nuestras pantallas."
       />
+      <p className="mb-8">
+        <DirectionsButton locale="es" />
+      </p>
 
       <PostMatchBanner locale="es" />
       {/* Nations Championship sáb 21 nov: bloque destacado, se oculta solo después del 21 nov (Madrid). */}
@@ -164,7 +169,9 @@ export default function EsWhatsOnPage() {
         </Link>
         .
       </p>
+      <WhatsOnEventsJsonLd locale="es" />
       <FixtureList locale="es" />
+      <HowToGetHere locale="es" />
 
       <Section title="Deportes en directo en O'Connell St">
         <p>

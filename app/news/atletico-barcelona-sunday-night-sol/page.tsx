@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { DirectionsButton, HowToGetHere } from "@/components/HowToGetHere";
 import { FourBarsNearSol } from "@/components/FourBarsNearSol";
 import { InteriorPhoto } from "@/components/InteriorPhoto";
 import { PageShell } from "@/components/PageShell";
@@ -22,6 +23,9 @@ export default function NewsAtleticoBarcelonaSundayNightPage() {
         title="Atlético v Barcelona: a big LaLiga Sunday night in Sol"
         lead="Atlético Madrid hosted Barcelona at the Riyadh Air Metropolitano on Sunday 8 November 2026. O'Connell St, a couple of minutes from Puerta del Sol, was a place to watch it in the centre of Madrid."
       />
+      <p className="mb-8">
+        <DirectionsButton locale="en" />
+      </p>
       <InteriorPhoto
         src="/images/interior/bar-taps.webp"
         alt="Beer taps at the bar of O'Connell St Irish pub by Puerta del Sol"
@@ -105,6 +109,7 @@ export default function NewsAtleticoBarcelonaSundayNightPage() {
           </Link>
         </p>
       </Section>
+      <HowToGetHere locale="en" />
     </PageShell>
   );
 }

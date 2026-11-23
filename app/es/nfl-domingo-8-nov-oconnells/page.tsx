@@ -8,6 +8,8 @@ import { buildMetadata } from "@/lib/seo";
 import { ADDRESS } from "@/lib/venue";
 
 export const metadata = buildMetadata({
+  // Owner order 23 Nov 2026 (GEO): past NFL page, single permanent NFL page is /nfl-madrid.
+  noindex: true,
   title: "Domingo 8 nov en O'Connell's — domingo NFL pasado",
   description:
     "Domingo 8 de noviembre de 2026 en O'Connell's, Espoz y Mina 7: abrimos 12:00, Bengals–Falcons 15:30. Aquel día ya ha tenido lugar. Domingos habituales desde las 14:00. Consulta la Agenda.",

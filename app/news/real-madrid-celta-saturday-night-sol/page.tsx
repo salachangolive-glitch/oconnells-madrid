@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { DirectionsButton, HowToGetHere } from "@/components/HowToGetHere";
 import { InteriorPhoto } from "@/components/InteriorPhoto";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
@@ -26,6 +27,9 @@ export default function NewsRealMadridCeltaSaturdayNightPage() {
         title="Real Madrid v Celta: Saturday-night LaLiga in Sol"
         lead="Real Madrid host Celta at the Santiago Bernabéu on Saturday 21 November. If you're in Madrid that night — living here, visiting, or watching from the centre — you can watch it live at O'Connell St, a couple of minutes from Puerta del Sol."
       />
+      <p className="mb-8">
+        <DirectionsButton locale="en" />
+      </p>
       <InteriorPhoto
         src="/images/interior/bar-taps.webp"
         alt="Beer taps at the bar of O'Connell St Irish pub by Puerta del Sol"
@@ -105,6 +109,7 @@ export default function NewsRealMadridCeltaSaturdayNightPage() {
           </Link>
         </p>
       </Section>
+      <HowToGetHere locale="en" />
     </PageShell>
   );
 }

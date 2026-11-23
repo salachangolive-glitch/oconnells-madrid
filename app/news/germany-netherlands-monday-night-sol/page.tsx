@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { DirectionsButton, HowToGetHere } from "@/components/HowToGetHere";
 import { InteriorPhoto } from "@/components/InteriorPhoto";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
@@ -25,6 +26,9 @@ export default function NewsGermanyNetherlandsMondayNightPage() {
         title="Germany v Netherlands: a Monday football night in Sol"
         lead="Germany host the Netherlands in Berlin on Monday 16 November. If you're German or Dutch and living in Madrid, studying here or just passing through, you can watch it live in the centre of the city at O'Connell St, a couple of minutes from Puerta del Sol."
       />
+      <p className="mb-8">
+        <DirectionsButton locale="en" />
+      </p>
       <InteriorPhoto
         src="/images/interior/bar-taps.webp"
         alt="Beer taps at the bar of O'Connell St Irish pub by Puerta del Sol"
@@ -107,6 +111,7 @@ export default function NewsGermanyNetherlandsMondayNightPage() {
           </Link>
         </p>
       </Section>
+      <HowToGetHere locale="en" />
     </PageShell>
   );
 }

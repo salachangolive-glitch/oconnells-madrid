@@ -2,6 +2,7 @@ import Link from "next/link";
 import { FourBarsNearSol } from "@/components/FourBarsNearSol";
 import { InteriorPhoto } from "@/components/InteriorPhoto";
 import { JsonLd } from "@/components/JsonLd";
+import { DirectionsButton, HowToGetHere } from "@/components/HowToGetHere";
 import { PageShell } from "@/components/PageShell";
 import { PastEventNotice } from "@/components/PastEventNotice";
 import { PageHero, Section } from "@/components/Prose";
@@ -137,6 +138,9 @@ export function MatchNewsArticle({ data, locale }: { data: MatchArticleData; loc
           {c.other.label}
         </a>
       </p>
+      <p className="mb-8">
+        <DirectionsButton locale={locale} />
+      </p>
       {data.fourBars ? <FourBarsNearSol locale={locale} /> : null}
       {c.sections.map((s) => (
         <Section key={s.title} title={s.title}>
@@ -161,6 +165,7 @@ export function MatchNewsArticle({ data, locale }: { data: MatchArticleData; loc
           </a>
         </p>
       </Section>
+      <HowToGetHere locale={locale} />
       <Section title={c.more}>
         <ul className="space-y-1">
           {c.links.map((x) => (

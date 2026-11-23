@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { DirectionsButton, HowToGetHere } from "@/components/HowToGetHere";
 import { PostMatchBanner } from "@/components/PostMatchBanner";
 import { RugbyHomeBanner } from "@/components/RugbyHomeBanner";
 import { HomeComingUp } from "@/components/HomeComingUp";
@@ -56,6 +57,9 @@ export default function EsHomePage() {
           <p className="font-semibold text-gold">Abierto todos los días</p>
           <p>{HOURS.summaryEs}</p>
         </div>
+        <p className="mt-4">
+          <DirectionsButton locale="es" />
+        </p>
       </header>
       <div className="mb-10 border-y border-gold/20 bg-pub-burgundy-deep/80">
         <HomeCtaBand locale="es" />
@@ -97,6 +101,7 @@ export default function EsHomePage() {
         </p>
       </section>
 
+      <HowToGetHere locale="es" />
       <FixtureStrip locale="es" windowOnly />
       <HomeComingUp locale="es" />
       <p className="mb-12 max-w-2xl text-sm text-cream-muted sm:text-base">

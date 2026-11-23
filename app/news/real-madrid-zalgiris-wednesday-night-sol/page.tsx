@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { DirectionsButton, HowToGetHere } from "@/components/HowToGetHere";
 import { InteriorPhoto } from "@/components/InteriorPhoto";
 import { JsonLd } from "@/components/JsonLd";
 import { PageShell } from "@/components/PageShell";
@@ -36,6 +37,9 @@ export default function NewsRealMadridZalgirisWednesdayNightPage() {
         })}
       />
       <PageHero eyebrow={c.eyebrow} title={c.h1} lead={c.lead} />
+      <p className="mb-8">
+        <DirectionsButton locale="en" />
+      </p>
       <InteriorPhoto
         src="/images/interior/bar-taps.webp"
         alt="Beer taps at the bar of O'Connell St Irish pub by Puerta del Sol"
@@ -97,6 +101,7 @@ export default function NewsRealMadridZalgirisWednesdayNightPage() {
           </Link>
         </p>
       </Section>
+      <HowToGetHere locale="en" />
     </PageShell>
   );
 }

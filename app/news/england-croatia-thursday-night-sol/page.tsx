@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { DirectionsButton, HowToGetHere } from "@/components/HowToGetHere";
 import { InteriorPhoto } from "@/components/InteriorPhoto";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
@@ -20,6 +21,9 @@ export default function NewsEnglandCroatiaThursdayNightPage() {
         title="England v Croatia: a Thursday football night in Sol"
         lead="England play Croatia at Wembley on Thursday 12 November. If you're living in Madrid, here for work or just visiting, you can watch it live in the centre of the city at O'Connell St, a couple of minutes from Puerta del Sol."
       />
+      <p className="mb-8">
+        <DirectionsButton locale="en" />
+      </p>
       <InteriorPhoto
         src="/images/interior/bar-taps.webp"
         alt="Beer taps at the bar of O'Connell St Irish pub by Puerta del Sol"
@@ -100,6 +104,7 @@ export default function NewsEnglandCroatiaThursdayNightPage() {
           </Link>
         </p>
       </Section>
+      <HowToGetHere locale="en" />
     </PageShell>
   );
 }

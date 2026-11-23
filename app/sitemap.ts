@@ -103,6 +103,24 @@ const SITEMAP_EXCLUDE = new Set([
   "/oktoberfest-madrid-sol",
   "/es/oktoberfest-madrid-sol",
   "/de/oktoberfest-madrid-sol",
+  // Past NFL pages (Bengals–Falcons weekend, 6–8 Nov 2026): noindex, owner order 23 Nov 2026.
+  // The one permanent NFL page is /nfl-madrid (EN) and /es/nfl-madrid (ES).
+  "/nfl-fans-saturday-oconnells",
+  "/nfl-sunday-8-nov-oconnells",
+  "/evening-nfl-then-atleti-barca-this-door",
+  "/4-bars-one-fan-weekend",
+  "/news/before-after-bernabeu-nfl-sol",
+  "/news/nfl-meeting-point-sol",
+  "/news/where-to-watch-nfl-madrid-sol",
+  "/news/four-bars-fan-weekend-sol",
+  "/es/fin-de-semana-nfl-oconnells",
+  "/es/nfl-domingo-8-nov-oconnells",
+  "/es/nfl-noche-luego-atleti-barca-esta-puerta",
+  "/es/noticias/antes-despues-bernabeu-nfl-sol",
+  "/es/noticias/punto-encuentro-nfl-sol",
+  "/es/noticias/donde-ver-nfl-madrid-sol",
+  "/es/cuatro-bares-fin-de-semana",
+  "/es/noticias/cuatro-bares-finde-sol",
 ]);
 
 function madridYmd(d: Date): string {
