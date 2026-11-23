@@ -1,5 +1,6 @@
 import { SEO_SHORT } from "@/lib/seo-short";
 import type { Metadata } from "next";
+import { isPlayedMatchPage, MATCH_PAGE_LAST_KICKOFF } from "./match-pages";
 import {
   getSiteUrl,
   HREFLANG_GROUPS,
@@ -89,6 +90,9 @@ export function buildMetadata({
       ? long
       : `${base} | ${SITE_NAME}`;
   const preview = shouldNoindex();
+  // Owner order 23 Nov 2026: played match pages go noindex, follow at build time.
+  const played = isPlayedMatchPage(path);
+  if (played) noindex = true;
   const languages = buildLanguages(path);
 
   const ogLocale =
@@ -123,6 +127,9 @@ export function buildMetadata({
       description,
       images: ["/og.jpg"],
     },
+    ...(played
+      ? { other: { "oc-match-played": MATCH_PAGE_LAST_KICKOFF[path] } }
+      : undefined),
     robots: preview
       ? { index: false, follow: false }
       : noindex

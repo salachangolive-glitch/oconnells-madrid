@@ -236,6 +236,8 @@ function checkHtmlNoindex(filePath) {
   if (isAllowedNoindexPath(filePath)) return;
   if (PREVIEW) return; // noindex expected while held / preview
   const html = readFileSync(filePath, "utf8");
+  // Played match pages (lib/match-pages.ts, owner order 23 Nov 2026) carry this marker.
+  if (html.includes('name="oc-match-played"')) return;
   const patterns = [
     /<meta[^>]+name=["']robots["'][^>]*content=["']([^"']+)["'][^>]*>/gi,
     /<meta[^>]+content=["']([^"']+)["'][^>]*name=["']robots["'][^>]*>/gi,
@@ -351,6 +353,7 @@ if (!PREVIEW) {
         continue;
       }
       const text = readFileSync(f, "utf8");
+      if (text.includes("oc-match-played")) continue;
       if (
         /noindex/i.test(text) &&
         /robots/i.test(text) &&

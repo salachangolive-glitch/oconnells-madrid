@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import LASTMOD from "@/lib/lastmod.json";
+import { isPlayedMatchPage } from "@/lib/match-pages";
 import { ALL_CONTENT_PATHS, getSiteUrl, HREFLANG_GROUPS, HREFLANG_PAIRS } from "@/lib/venue";
 
 const HOME_GROUP = HREFLANG_GROUPS["/"];
@@ -134,6 +135,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return ALL_CONTENT_PATHS.filter((path) => {
     if (SITEMAP_EXCLUDE.has(path)) return false;
+    // Owner order 23 Nov 2026: played match pages leave the sitemap at build time.
+    if (isPlayedMatchPage(path)) return false;
     const end = EVENT_LAST_DAY[path];
     return !end || end >= today;
   }).map((path) => ({
