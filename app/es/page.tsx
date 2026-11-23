@@ -11,6 +11,7 @@ import { PageShell } from "@/components/PageShell";
 import { Section } from "@/components/Prose";
 import { ThursdayFeature } from "@/components/ThursdayFeature";
 import { LocaloFindUs } from "@/components/LocaloFindUs";
+import { HomePsvEveVideo } from "@/components/HomePsvEveVideo";
 import { VenueHero } from "@/components/VenueHero";
 import { buildMetadata } from "@/lib/seo";
 import { ownerPhotoAlt, OWNER_PHOTOS_17NOV } from "@/lib/owner-photos-17nov";
@@ -35,10 +36,13 @@ export default function EsHomePage() {
       locale="es"
       altLangHref="/"
       cover={
-        <VenueHero
-          variant="hero"
-          alt="Fachada del pub irlandés O'Connell St, Calle de Espoz y Mina 7, Madrid"
-        />
+        <>
+          <HomePsvEveVideo locale="es" />
+          <VenueHero
+            variant="hero"
+            alt="Fachada del pub irlandés O'Connell St, Calle de Espoz y Mina 7, Madrid"
+          />
+        </>
       }
     >
       <PostMatchBanner locale="es" />

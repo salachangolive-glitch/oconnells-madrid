@@ -1,0 +1,33 @@
+# Rebuild Cloudflare Pages after PSV home eve video expires (Tue 24 Nov 2026 17:00 Europe/Madrid).
+# Build omits HomePsvEveVideo when OCONNELL_BUILD_MS / server clock is past the gate.
+name: Expire PSV home eve video (OC)
+on:
+  schedule:
+    # 16:05 UTC = 17:05 CET on 24 November (margin after client hide at 17:00)
+    - cron: "5 16 24 11 *"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  redeploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: cloudflare-pages-static
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+      - run: npm ci
+      - name: Verify post-expiry build omits PSV home video
+        env:
+          OCONNELL_BUILD_MS: "1795536300000"
+        run: npm run build
+      - name: Trigger Pages deploy on production branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit --allow-empty -m "chore: expire PSV home eve video (redeploy oconnellsmadrid.es)"
+          git push origin cloudflare-pages-static
