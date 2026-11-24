@@ -6,14 +6,14 @@ const CRTM_L10_AVISO =
 
 /**
  * Real Madrid v PSV, UCL MD5 — Tue 24 Nov 2026, 21:00 Bernabéu.
- * O'Connell St only. Owner 23 Nov 2026 19:00 Madrid. No broadcaster named.
+ * O'Connell St only. Owner 24 Nov 2026 08:00 match day in-situ. No broadcaster named.
  */
 export const RM_PSV_TUESDAY: MatchArticleData = {
   paths: {
     en: "/news/real-madrid-psv-tuesday-night-sol",
     es: "/es/noticias/real-madrid-psv-martes-sol",
   },
-  published: "2026-11-23T19:00:00+01:00",
+  published: "2026-11-24T08:00:00+01:00",
   startDate: "2026-11-24T21:00:00+01:00",
   sport: "Football",
   sportsEventName: "Real Madrid v PSV (UEFA Champions League)",
@@ -45,10 +45,10 @@ export const RM_PSV_TUESDAY: MatchArticleData = {
       description:
         "Real Madrid v PSV, UEFA Champions League, Tuesday 24 November 2026, 21:00 Bernabéu. O'Connell St at Espoz y Mina 7 — less than a minute from Sol. Meeting point before and after; first come, first served.",
       eyebrow:
-        "Real Madrid v PSV · UEFA Champions League · Tue 24 Nov 2026 · 21:00 · updated Mon 23 Nov",
+        "Real Madrid v PSV · UEFA Champions League · Tue 24 Nov 2026 · 21:00 · match day Tue 24 Nov",
       h1: "Real Madrid v PSV, Tuesday 24 November, 21:00",
       lead:
-        "Champions League at the Santiago Bernabéu on Tuesday 24 November at 21:00 Madrid time. O'Connell St is your meeting point in the centre — less than a minute from Puerta del Sol — before the metro north and again after full time.",
+        "Champions League tonight at the Santiago Bernabéu, kick-off 21:00 Madrid time. O'Connell St is your meeting point in the centre — less than a minute from Puerta del Sol — before you head north, and again after full time.",
       screeningName: "PSV fans meeting point at O'Connell St near Puerta del Sol",
       sections: [
         {
@@ -59,20 +59,20 @@ export const RM_PSV_TUESDAY: MatchArticleData = {
             "Estadio Santiago Bernabéu, Avenida de Concha Espina 1, Madrid",
           ],
           note:
-            "Kick-off and venue as on the UEFA match page (uefa.com/uefachampionsleague/match/2049625/). Times can move — check again on Tuesday.",
+            "Kick-off and venue as on the UEFA match page (uefa.com/uefachampionsleague/match/2049625/). Times can move — check again before you leave.",
         },
         {
           title: "From Puerta del Sol toward the Bernabéu",
           paras: [
             "O'Connell St is at Calle de Espoz y Mina 7, less than a minute on foot from Puerta del Sol. Share that pin before anyone heads north.",
-            `From Sol: Metro line 1 to Tribunal, then line 10 to Nuevos Ministerios — the open Line 10 stop closest to the stadium while Santiago Bernabéu station stays closed for renovation (CRTM service notice, read 23 November 2026: ${CRTM_L10_AVISO}). Walk about 10–15 minutes up Paseo de la Castellana to the ground, or take the free S10 replacement bus between Nuevos Ministerios and Cuzco, which stops near Plaza de Lima by the stadium.`,
+            `From Sol: Metro line 1 to Tribunal, then line 10 to Nuevos Ministerios — the open Line 10 stop closest to the stadium while Santiago Bernabéu station stays closed for renovation (CRTM service notice, read 24 November 2026: ${CRTM_L10_AVISO}). Walk about 10–15 minutes up Paseo de la Castellana to the ground, or take the free S10 replacement bus between Nuevos Ministerios and Cuzco, which stops near Plaza de Lima by the stadium.`,
             "After the match, head back south on Metro or bus and walk to Espoz y Mina 7. Monday to Thursday we stay open until 03:00.",
           ],
         },
         {
           title: "Hours and atmosphere",
           paras: [
-            "Match Tuesday we open at 18:00 for a meet-up before you leave for the Bernabéu. Tonight Monday 23 November we open at 18:00 until 03:00 — agree the pin and the route from Sol before kick-off night.",
+            "Today, Tuesday 24 November, we open at 18:00 for a meet-up before kick-off at 21:00. After the match we stay open until 03:00 — same door when you come back from the Bernabéu.",
             "Expect a mixed room: locals, visitors and Dutch accents. We do not name a TV channel on this page. This door is a meeting point — not a seat reservation.",
           ],
         },
@@ -96,10 +96,10 @@ export const RM_PSV_TUESDAY: MatchArticleData = {
       description:
         "Real Madrid–PSV, Champions, martes 24 de noviembre de 2026, 21:00 Bernabéu. O'Connell St, Espoz y Mina 7 — a menos de un minuto de Sol. Punto de encuentro antes y después; entrada por orden de llegada.",
       eyebrow:
-        "Real Madrid–PSV · UEFA Champions League · mar 24 nov 2026 · 21:00 · actualizado lun 23 nov",
+        "Real Madrid–PSV · UEFA Champions League · mar 24 nov 2026 · 21:00 · día de partido mar 24 nov",
       h1: "Real Madrid–PSV, martes 24 de noviembre, 21:00",
       lead:
-        "Champions en el Santiago Bernabéu el martes 24 de noviembre a las 21:00, hora de Madrid. O'Connell St es tu punto de encuentro en el centro — a menos de un minuto de Puerta del Sol — antes del metro hacia el norte y después del pitido final.",
+        "Champions esta noche en el Santiago Bernabéu, saque a las 21:00, hora de Madrid. O'Connell St es tu punto de encuentro en el centro — a menos de un minuto de Puerta del Sol — antes de ir al norte y después del pitido final.",
       screeningName:
         "Afición del PSV: punto de encuentro en O'Connell St junto a Puerta del Sol",
       sections: [
@@ -110,20 +110,20 @@ export const RM_PSV_TUESDAY: MatchArticleData = {
             "Martes 24 de noviembre de 2026, 21:00 hora de Madrid",
             "Estadio Santiago Bernabéu, Avenida de Concha Espina 1, Madrid",
           ],
-          note: "Fecha, hora y estadio según la ficha UEFA. Los horarios pueden cambiar — compruébalo el martes.",
+          note: "Fecha, hora y estadio según la ficha UEFA. Los horarios pueden cambiar — compruébalo antes de salir.",
         },
         {
           title: "De Puerta del Sol hacia el Bernabéu",
           paras: [
             "O'Connell St está en Calle de Espoz y Mina 7, a menos de un minuto a pie de Puerta del Sol. Comparte ese pin antes de que alguien salga hacia el norte.",
-            `Desde Sol: Metro línea 1 hasta Tribunal, luego línea 10 hasta Nuevos Ministerios — la parada abierta de la línea 10 más cercana al estadio mientras la estación Santiago Bernabéu sigue cerrada por obras (aviso CRTM, lectura 23 nov 2026: ${CRTM_L10_AVISO}). Unos 10–15 minutos a pie por el Paseo de la Castellana hasta el campo, o el autobús sustitutivo gratuito S10 entre Nuevos Ministerios y Cuzco, con parada en la zona de Plaza de Lima junto al estadio.`,
+            `Desde Sol: Metro línea 1 hasta Tribunal, luego línea 10 hasta Nuevos Ministerios — la parada abierta de la línea 10 más cercana al estadio mientras la estación Santiago Bernabéu sigue cerrada por obras (aviso CRTM, lectura 24 nov 2026: ${CRTM_L10_AVISO}). Unos 10–15 minutos a pie por el Paseo de la Castellana hasta el campo, o el autobús sustitutivo gratuito S10 entre Nuevos Ministerios y Cuzco, con parada en la zona de Plaza de Lima junto al estadio.`,
             "Después del partido, vuelve al sur en Metro o bus y camina hasta Espoz y Mina 7. De lunes a jueves abrimos hasta las 03:00.",
           ],
         },
         {
           title: "Horario y ambiente",
           paras: [
-            "El martes del partido abrimos a las 18:00 para quedar antes del Bernabéu. Hoy lunes 23 de noviembre abrimos a las 18:00 hasta las 03:00 — fija el pin y la ruta desde Sol antes de la noche del partido.",
+            "Hoy martes 24 de noviembre abrimos a las 18:00 para quedar antes del saque a las 21:00. Después del partido seguimos hasta las 03:00 — la misma puerta al volver del Bernabéu.",
             "Suele mezclarse gente local, visitantes y acentos neerlandeses. No citamos cadena en esta página. Esta puerta es punto de encuentro, no reserva de sitio.",
           ],
         },
