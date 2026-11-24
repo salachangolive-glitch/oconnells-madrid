@@ -11,7 +11,6 @@ import { PageShell } from "@/components/PageShell";
 import { Section } from "@/components/Prose";
 import { ThursdayFeature } from "@/components/ThursdayFeature";
 import { LocaloFindUs } from "@/components/LocaloFindUs";
-import { HomePsvEveVideo } from "@/components/HomePsvEveVideo";
 import { VenueHero } from "@/components/VenueHero";
 import { buildMetadata } from "@/lib/seo";
 import { ownerPhotoAlt, OWNER_PHOTOS_17NOV } from "@/lib/owner-photos-17nov";
@@ -34,12 +33,7 @@ export default function HomePage() {
     <PageShell
       locale="en"
       altLangHref="/es"
-      cover={
-        <>
-          <HomePsvEveVideo locale="en" />
-          <VenueHero variant="hero" />
-        </>
-      }
+      cover={<VenueHero variant="hero" />}
     >
       <PostMatchBanner locale="en" />
       <RugbyHomeBanner locale="en" />
