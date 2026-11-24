@@ -51,6 +51,7 @@ export const MATCH_PAGE_LAST_KICKOFF: Record<string, string> = Object.fromEntrie
   ...pair("/news/real-madrid-celta-saturday-night-sol", null, "2026-11-21T21:00:00+01:00"),
   ...pair("/news/real-madrid-zalgiris-wednesday-night-sol", null, "2026-11-25T20:45:00+01:00"),
   ...pair("/news/real-madrid-alaves-saturday-night-sol", null, "2026-11-28T21:00:00+01:00"),
+  ...pair("/de/real-madrid-bayern-basketball-treffpunkt-sol", null, "2026-12-15T20:45:00+01:00"),
   // Visiting-fans match guides (lib/fan-campaign-three-bars.ts eventDay + kickoff).
   ...pair("/news/psv-fans-three-bars-sol", "/news/psv-fans-drie-bars-sol", "2026-11-24T21:00:00+01:00"),
   ...pair("/news/viking-fans-three-bars-sol", "/news/viking-fans-tre-barer-sol", "2026-11-25T21:00:00+01:00"),

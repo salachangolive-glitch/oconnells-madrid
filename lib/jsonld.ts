@@ -105,6 +105,7 @@ export function visitingFansNewsJsonLd(opts: {
   awayTeam: string;
   venue: string;
   venueStreet?: string;
+  inLanguage?: string;
 }): Record<string, unknown> {
   const site = getSiteUrl();
   const url = `${site}${opts.path}`;
@@ -116,7 +117,7 @@ export function visitingFansNewsJsonLd(opts: {
         "@type": "NewsArticle",
         headline: opts.headline,
         description: opts.description,
-        inLanguage: "en",
+        inLanguage: opts.inLanguage ?? "en",
         url,
         mainEntityOfPage: url,
         datePublished: opts.datePublished,

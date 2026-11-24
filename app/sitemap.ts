@@ -93,6 +93,7 @@ const EVENT_LAST_DAY: Record<string, string> = {
   "/es/noticias/real-madrid-psv-martes-sol": "2026-11-24",
   "/news/real-madrid-zalgiris-wednesday-night-sol": "2026-11-25",
   "/news/atletico-viking-wednesday-night-sol": "2026-11-25",
+  "/de/real-madrid-bayern-basketball-treffpunkt-sol": "2026-12-15",
   "/es/noticias/atletico-viking-miercoles-sol": "2026-11-25",
 };
 

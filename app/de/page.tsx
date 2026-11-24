@@ -15,7 +15,13 @@ import { ADDRESS, HOURS, MAPS_URL } from "@/lib/venue";
 type DeItem = { href: string; title: string; text: string };
 
 /** Next German pieces (OC-29, OC-30): add here when the pages are live. */
-const DE_UPCOMING: DeItem[] = [];
+const DE_UPCOMING: DeItem[] = [
+  {
+    href: "/de/real-madrid-bayern-basketball-treffpunkt-sol",
+    title: "Real Madrid–Bayern (EuroLeague), 15. Dezember: Treffpunkt für Bayern-Fans",
+    text: "Dienstag, 15. Dezember 2026, 20:45 Uhr, Movistar Arena: Treffpunkt im O'Connell St, weniger als eine Minute von der Puerta del Sol.",
+  },
+];
 
 export const metadata = buildMetadata({
   title: "O'Connell St Madrid auf Deutsch: Irish Pub an der Puerta del Sol",

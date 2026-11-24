@@ -267,6 +267,7 @@ export const ES_PATHS = [
 
 export const DE_PATHS = [
   "/de",
+  "/de/real-madrid-bayern-basketball-treffpunkt-sol",
 ] as const;
 
 export const ALL_CONTENT_PATHS = [...EN_PATHS, ...ES_PATHS, ...DE_PATHS] as const;

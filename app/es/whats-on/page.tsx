@@ -114,6 +114,14 @@ export default function EsWhatsOnPage() {
           </Link>
         </p>
       ) : null}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-12-15" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          Euroliga: Real Madrid–Bayern Múnich, martes 15 de diciembre, 20:45 (Movistar Arena). Afición alemana / del Bayern: punto de encuentro a menos de un minuto de Sol. Emisión por confirmar.{" "}
+          <Link href="/de/real-madrid-bayern-basketball-treffpunkt-sol" hrefLang="de" className="text-gold underline">
+            Treffpunkt para aficionados del Bayern (alemán)
+          </Link>
+        </p>
+      ) : null}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-25" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">
           Euroliga: Real Madrid–Žalgiris, miércoles 25 de noviembre, 20:45 (Movistar Arena). Afición lituana / Žalgiris: punto de encuentro junto a Sol antes o después.{" "}

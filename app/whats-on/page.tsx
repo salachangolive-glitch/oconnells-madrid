@@ -106,6 +106,14 @@ export default function WhatsOnPage() {
           </Link>
         </p>
       ) : null}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-12-15" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          EuroLeague: Real Madrid v Bayern München, Tuesday 15 December, 20:45 (Movistar Arena). German / Bayern fans: a meeting point less than a minute from Sol. Screening to be confirmed.{" "}
+          <Link href="/de/real-madrid-bayern-basketball-treffpunkt-sol" hrefLang="de" className="text-gold underline">
+            Treffpunkt für Bayern-Fans (Deutsch)
+          </Link>
+        </p>
+      ) : null}
       {/* Real Madrid v Žalgiris, EuroLeague (Movistar Arena 25 Nov 20:45, E2026 game 139, round 14): build-time date gate. */}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-25" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">
