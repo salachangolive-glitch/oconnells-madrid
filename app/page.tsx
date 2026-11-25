@@ -38,10 +38,10 @@ export default function HomePage() {
       altLangHref="/es"
       cover={<VenueHero variant="hero" />}
     >
-      <PostMatchBanner locale="en" />
-      <RugbyHomeBanner locale="en" />
-      <RugbyFinalsWeekendBanner locale="en" />
       <HomeBarcaAtleticoDec2Block locale="en" />
+      <PostMatchBanner locale="en" />
+      <RugbyFinalsWeekendBanner locale="en" />
+      <RugbyHomeBanner locale="en" />
       {/* Hero text + CTAs */}
       <header className="mb-8 max-w-2xl text-center sm:mx-auto">
         <h1 className="font-serif text-2xl font-bold leading-snug text-cream sm:text-3xl lg:text-4xl">

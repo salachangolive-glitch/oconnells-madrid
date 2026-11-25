@@ -44,10 +44,10 @@ export default function EsHomePage() {
         />
       }
     >
-      <PostMatchBanner locale="es" />
-      <RugbyHomeBanner locale="es" />
-      <RugbyFinalsWeekendBanner locale="es" />
       <HomeBarcaAtleticoDec2Block locale="es" />
+      <PostMatchBanner locale="es" />
+      <RugbyFinalsWeekendBanner locale="es" />
+      <RugbyHomeBanner locale="es" />
       <header className="mb-8 max-w-2xl text-center sm:mx-auto">
         <h1 className="font-serif text-2xl font-bold leading-snug text-cream sm:text-3xl lg:text-4xl">
           O&apos;Connell St Madrid{" "}
