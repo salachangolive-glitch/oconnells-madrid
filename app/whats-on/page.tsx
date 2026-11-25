@@ -114,24 +114,25 @@ export default function WhatsOnPage() {
           </Link>
         </p>
       ) : null}
-      {/* Real Madrid v Žalgiris, EuroLeague (Movistar Arena 25 Nov 20:45, E2026 game 139, round 14): build-time date gate. */}
+      {/* Atlético v Viking FK, UCL MD5 (owner 25 Nov 08:00 — Champions lead before EuroLeague and rugby). */}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-25" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">
-          EuroLeague: Real Madrid v Žalgiris, Wednesday 25 November, 20:45 (Movistar Arena). Lithuanian / Žalgiris fans: a fans meeting point near Sol before or after.{" "}
-          <Link href="/news/real-madrid-zalgiris-wednesday-night-sol" className="text-gold underline">
-            Real Madrid v Žalgiris: Wednesday night near Sol
-          </Link>
-        </p>
-      ) : null}
-      {madridTodayYmd(agendaBuildNow()) <= "2026-11-25" ? (
-        <p className="mb-6 text-sm text-cream-muted sm:text-base">
-          UEFA Champions League: Atlético de Madrid v Viking FK, Wednesday 25 November, 21:00 (Riyadh Air Metropolitano). Norwegian / Viking FK fans: a meeting point near Sol before or after — not the NFL Minnesota Vikings.{" "}
+          <strong className="text-cream">Atlético de Madrid v Viking FK, Wednesday 25 November, 21:00</strong> (Riyadh Air Metropolitano). Champions tonight — meeting point at O&apos;Connell St, Espoz y Mina 7, less than a minute from Sol. First come, first served. Not the NFL Minnesota Vikings.{" "}
           <Link href="/news/atletico-viking-wednesday-night-sol" className="text-gold underline">
-            Atlético v Viking FK: Wednesday night near Sol
+            Atlético v Viking FK guide
           </Link>
           {" · "}
           <Link href="/es/noticias/atletico-viking-miercoles-sol" className="text-gold underline">
             En español
+          </Link>
+        </p>
+      ) : null}
+      {/* Real Madrid v Žalgiris, EuroLeague (Movistar Arena 25 Nov 20:45, E2026 game 139, round 14): build-time date gate. */}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-25" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          EuroLeague: Real Madrid v Žalgiris, Wednesday 25 November, 20:45 (Movistar Arena). Lithuanian / Žalgiris fans: meeting point near Sol before or after.{" "}
+          <Link href="/news/real-madrid-zalgiris-wednesday-night-sol" className="text-gold underline">
+            Real Madrid v Žalgiris: Wednesday night near Sol
           </Link>
         </p>
       ) : null}

@@ -124,17 +124,17 @@ export default function EsWhatsOnPage() {
       ) : null}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-25" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">
-          Euroliga: Real Madrid–Žalgiris, miércoles 25 de noviembre, 20:45 (Movistar Arena). Afición lituana / Žalgiris: punto de encuentro junto a Sol antes o después.{" "}
-          <Link href="/news/real-madrid-zalgiris-wednesday-night-sol" className="text-gold underline">
-            Real Madrid–Žalgiris: miércoles por la noche junto a Sol
+          <strong className="text-cream">Atlético de Madrid–Viking FK, miércoles 25 de noviembre, 21:00</strong> (Riyadh Air Metropolitano). Champions esta noche — punto de encuentro en O&apos;Connell St, Espoz y Mina 7, a menos de un minuto de Sol. Entrada por orden de llegada. No los Minnesota Vikings de la NFL.{" "}
+          <Link href="/es/noticias/atletico-viking-miercoles-sol" className="text-gold underline">
+            Guía Atlético–Viking FK
           </Link>
         </p>
       ) : null}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-25" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">
-          UEFA Champions League: Atlético de Madrid–Viking FK, miércoles 25 de noviembre, 21:00 (Riyadh Air Metropolitano). Afición noruega del Viking FK: punto de encuentro junto a Sol antes o después — no los Minnesota Vikings de la NFL.{" "}
-          <Link href="/es/noticias/atletico-viking-miercoles-sol" className="text-gold underline">
-            Atlético–Viking FK: miércoles de Champions junto a Sol
+          Euroliga: Real Madrid–Žalgiris, miércoles 25 de noviembre, 20:45 (Movistar Arena). Afición Žalgiris: punto de encuentro junto a Sol antes o después.{" "}
+          <Link href="/news/real-madrid-zalgiris-wednesday-night-sol" className="text-gold underline">
+            Real Madrid–Žalgiris: miércoles por la noche junto a Sol
           </Link>
         </p>
       ) : null}

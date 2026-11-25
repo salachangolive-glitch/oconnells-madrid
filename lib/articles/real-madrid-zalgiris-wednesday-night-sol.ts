@@ -1,11 +1,11 @@
 /**
  * Real Madrid v Žalgiris Kaunas, EuroLeague R14 — Wed 25 Nov 2026, 20:45 Movistar Arena.
  * Lithuanian / Žalgiris fans meeting point near Sol. No TV on site.
- * Updated Sunday 22 Nov 2026 (T−3). EN solo page (no ES twin).
+ * Owner 25 Nov 2026 08:00 match day in-situ. EN solo page (no ES twin).
  */
 export const RM_ZALGIRIS_WEDNESDAY = {
   path: "/news/real-madrid-zalgiris-wednesday-night-sol",
-  published: "2026-11-22T08:00:00+01:00",
+  published: "2026-11-25T08:00:00+01:00",
   start: "2026-11-25T20:45:00+01:00",
   arenaUrl:
     "https://www.movistararena.es/en/programacion/evento/real-madrid-vs-zalgiris-kaunas-jornada-14-euroliga-26-27/25-11-2026/20:45",
@@ -15,10 +15,11 @@ export const RM_ZALGIRIS_WEDNESDAY = {
         "Real Madrid v Žalgiris, Wed 25 Nov 20:45: an Irish pub near Sol",
       description:
         "Žalgiris fans in Madrid: Real Madrid v Žalgiris, Wed 25 Nov 2026, 20:45, Movistar Arena. O'Connell St at Espoz y Mina 7 by Sol — meeting point, metro line 2 to Goya, open until 03:00 on game night.",
-      eyebrow: "EuroLeague · Wednesday 25 November 2026 · 20:45 · updated Sun 22 Nov",
-      h1: "Žalgiris in Madrid: a Wednesday EuroLeague night that starts at Sol",
+      eyebrow:
+        "Real Madrid v Žalgiris · EuroLeague · Wed 25 Nov 2026 · 20:45 · match day Wed 25 Nov",
+      h1: "Real Madrid v Žalgiris Kaunas, Wednesday 25 November, 20:45",
       lead:
-        "Real Madrid host Žalgiris Kaunas at the Movistar Arena on Wednesday 25 November, round 14. Three days out on Sunday 22 November, groups travelling from Kaunas or already in Madrid often share one pin at Puerta del Sol — Metro line 2 to Goya, doors from 19:45, then back to the same address after the buzzer.",
+        "EuroLeague tonight at the Movistar Arena, tip-off 20:45 Madrid time. O'Connell St is your meeting point in the centre — less than a minute from Puerta del Sol — before Metro line 2 to Goya, and again after the buzzer.",
       sections: {
         game: {
           title: "The game",
@@ -28,7 +29,7 @@ export const RM_ZALGIRIS_WEDNESDAY = {
             "Movistar Arena, Avenida de Felipe II, Madrid (arena lists doors from 19:45)",
           ],
           note:
-            "Tip-off and venue per Movistar Arena and EuroLeague game E2026 / 139. Times can move — check again on Wednesday.",
+            "Tip-off and venue per Movistar Arena and EuroLeague game E2026 / 139. Times can move — check again before you leave.",
         },
         travel: {
           title: "From Puerta del Sol to the Movistar Arena",
@@ -41,7 +42,7 @@ export const RM_ZALGIRIS_WEDNESDAY = {
         hours: {
           title: "Hours and atmosphere",
           paras: [
-            "Game Wednesday we open at 18:00 so your group can meet before the arena. Today Sunday 22 November we open at 14:00 until 03:00 — Liverpool v Manchester United at 17:30 and evening LaLiga fill the screens; Wednesday is when you ride line 2 east.",
+            "Today, Wednesday 25 November, we open at 18:00 for a meet-up before tip-off at 20:45. After the game we stay open until 03:00 — same door when you come back from the Movistar Arena.",
             "We do not name a TV channel on this page. Meeting point only; first come, first served.",
           ],
         },
