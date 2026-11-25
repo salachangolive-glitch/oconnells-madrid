@@ -153,6 +153,7 @@ export const EN_PATHS = [
   "/news/spain-chile-rugby-saturday-sol",
   "/news/rugby-saturday-sol-21-nov",
   "/news/nations-championship-finals-twickenham-sol",
+  "/news/nations-championship-finals-weekend-plan-sol",
   "/news/czechia-spain-thursday-night-sol",
   "/news/england-croatia-thursday-night-sol",
   "/news/germany-netherlands-monday-night-sol",
@@ -171,6 +172,7 @@ export const EN_PATHS = [
   "/news/zalgiris-fans-trys-barai-sol",
   "/news/real-madrid-psv-tuesday-night-sol",
   "/news/real-madrid-zalgiris-wednesday-night-sol",
+  "/news/after-real-madrid-zalgiris-goya-to-sol",
   "/news/atletico-viking-wednesday-night-sol",
   "/news/inter-fans-madrid-womens-champions-league-sol",
   "/news/serbia-germany-friday-night-sol",
@@ -242,6 +244,8 @@ export const ES_PATHS = [
   "/es/noticias/espana-chile-rugby-sabado-sol",
   "/es/noticias/rugby-sabado-sol-21-nov",
   "/es/noticias/nations-championship-finals-fin-de-semana-sol",
+  "/es/noticias/finales-nations-championship-plan-finde-sol",
+  "/es/noticias/despues-real-madrid-zalgiris-goya-a-sol",
   "/es/noticias/chequia-espana-jueves-sol",
   "/es/noticias/espana-inglaterra-domingo-sol",
   "/es/noticias/real-madrid-inter-champions-femenina-sol",
@@ -316,6 +320,10 @@ export const HREFLANG_PAIRS: Record<string, string | undefined> = {
   "/news/rugby-saturday-sol-21-nov": "/es/noticias/rugby-sabado-sol-21-nov",
   "/news/nations-championship-finals-twickenham-sol":
     "/es/noticias/nations-championship-finals-fin-de-semana-sol",
+  "/news/nations-championship-finals-weekend-plan-sol":
+    "/es/noticias/finales-nations-championship-plan-finde-sol",
+  "/news/after-real-madrid-zalgiris-goya-to-sol":
+    "/es/noticias/despues-real-madrid-zalgiris-goya-a-sol",
   "/news/czechia-spain-thursday-night-sol": "/es/noticias/chequia-espana-jueves-sol",
   "/news/spain-england-sunday-night-sol": "/es/noticias/espana-inglaterra-domingo-sol",
   "/news/real-madrid-inter-womens-champions-league-sol": "/es/noticias/real-madrid-inter-champions-femenina-sol",

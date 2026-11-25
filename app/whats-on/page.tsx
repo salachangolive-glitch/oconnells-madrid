@@ -134,6 +134,10 @@ export default function WhatsOnPage() {
           <Link href="/news/real-madrid-zalgiris-wednesday-night-sol" className="text-gold underline">
             Real Madrid v Žalgiris: Wednesday night near Sol
           </Link>
+          {" · "}
+          <Link href="/news/after-real-madrid-zalgiris-goya-to-sol" className="text-gold underline">
+            After the game: Goya to Sol
+          </Link>
         </p>
       ) : null}
       {/* Nations Championship Finals Weekend, Twickenham (additional; owner 22 Nov 19:44 — after near-term football/Champions). */}
@@ -146,6 +150,10 @@ export default function WhatsOnPage() {
             className="text-gold underline"
           >
             Finals weekend guide near Sol
+          </Link>
+          {" · "}
+          <Link href="/news/nations-championship-finals-weekend-plan-sol" className="text-gold underline">
+            Weekend plan: when to arrive
           </Link>
         </p>
       ) : null}

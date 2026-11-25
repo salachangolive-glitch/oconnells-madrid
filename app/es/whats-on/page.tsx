@@ -136,6 +136,10 @@ export default function EsWhatsOnPage() {
           <Link href="/news/real-madrid-zalgiris-wednesday-night-sol" className="text-gold underline">
             Real Madrid–Žalgiris: miércoles por la noche junto a Sol
           </Link>
+          {" · "}
+          <Link href="/es/noticias/despues-real-madrid-zalgiris-goya-a-sol" className="text-gold underline">
+            Después del partido: de Goya a Sol
+          </Link>
         </p>
       ) : null}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-29" &&
@@ -147,6 +151,10 @@ export default function EsWhatsOnPage() {
             className="text-gold underline"
           >
             Guía del fin de semana de finales junto a Sol
+          </Link>
+          {" · "}
+          <Link href="/es/noticias/finales-nations-championship-plan-finde-sol" className="text-gold underline">
+            Plan del finde: a qué hora llegar
           </Link>
         </p>
       ) : null}

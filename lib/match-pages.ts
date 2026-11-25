@@ -50,6 +50,8 @@ export const MATCH_PAGE_LAST_KICKOFF: Record<string, string> = Object.fromEntrie
   ...pair("/news/germany-netherlands-monday-night-sol", null, "2026-11-16T20:45:00+01:00"),
   ...pair("/news/real-madrid-celta-saturday-night-sol", null, "2026-11-21T21:00:00+01:00"),
   ...pair("/news/real-madrid-zalgiris-wednesday-night-sol", null, "2026-11-25T20:45:00+01:00"),
+  ...pair("/news/after-real-madrid-zalgiris-goya-to-sol", "/es/noticias/despues-real-madrid-zalgiris-goya-a-sol", "2026-11-25T20:45:00+01:00"),
+  ...pair("/news/nations-championship-finals-weekend-plan-sol", "/es/noticias/finales-nations-championship-plan-finde-sol", "2026-11-29T17:40:00+01:00"),
   ...pair("/news/real-madrid-alaves-saturday-night-sol", null, "2026-11-28T21:00:00+01:00"),
   ...pair("/de/real-madrid-bayern-basketball-treffpunkt-sol", null, "2026-12-15T20:45:00+01:00"),
   // Visiting-fans match guides (lib/fan-campaign-three-bars.ts eventDay + kickoff).

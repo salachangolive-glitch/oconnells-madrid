@@ -99,6 +99,10 @@ export default function NewsRealMadridZalgirisWednesdayNightPage() {
           <Link href="/location" className="text-cream underline">
             Opening hours
           </Link>
+          {" · "}
+          <Link href="/news/after-real-madrid-zalgiris-goya-to-sol" className="text-cream underline">
+            After the game: Goya to Sol
+          </Link>
         </p>
       </Section>
       <HowToGetHere locale="en" />

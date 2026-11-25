@@ -73,6 +73,7 @@ export const NATIONS_FINALS_TWICKENHAM: MatchArticleData = {
       dir: "Open directions (Google Maps)",
       more: "More",
       links: [
+        { href: "/news/nations-championship-finals-weekend-plan-sol", label: "Weekend plan: when to arrive for each match" },
         { href: "/whats-on", label: "What's On — all six listed" },
         { href: "/location", label: "Opening hours" },
       ],
@@ -132,6 +133,7 @@ export const NATIONS_FINALS_TWICKENHAM: MatchArticleData = {
       dir: "Cómo llegar (Google Maps)",
       more: "Más",
       links: [
+        { href: "/es/noticias/finales-nations-championship-plan-finde-sol", label: "Plan del finde: a qué hora llegar a cada partido" },
         { href: "/es/whats-on", label: "Agenda — los seis horarios" },
         { href: "/es/location", label: "Horario" },
       ],
