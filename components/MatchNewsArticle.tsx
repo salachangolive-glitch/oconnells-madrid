@@ -2,6 +2,7 @@ import Link from "next/link";
 import { FourBarsNearSol } from "@/components/FourBarsNearSol";
 import { InteriorPhoto } from "@/components/InteriorPhoto";
 import { JsonLd } from "@/components/JsonLd";
+import { Saturday28NovOpeningNotice } from "@/components/Saturday28NovOpeningNotice";
 import { DirectionsButton, HowToGetHere } from "@/components/HowToGetHere";
 import { PageShell } from "@/components/PageShell";
 import { PastEventNotice } from "@/components/PastEventNotice";
@@ -62,6 +63,8 @@ export type MatchArticleData = {
   interiorPosition?: string;
   /** Renders immediately under the hero (before hero image) for mobile fold. */
   meetingFold?: Record<MatchLocale, MatchMeetingFold>;
+  /** Owner 25 Nov 2026 — Sat 28 opens 14:00 notice on rugby Finals Weekend guides. */
+  showSat28NovNotice?: boolean;
   copy: Record<MatchLocale, MatchCopy>;
 };
 
@@ -176,6 +179,9 @@ export function MatchNewsArticle({ data, locale }: { data: MatchArticleData; loc
     <PageShell locale={locale} altLangHref={c.other.href}>
       <JsonLd data={jsonLd(data, locale)} />
       <PageHero eyebrow={c.eyebrow} title={c.h1} lead={c.lead} />
+      {data.showSat28NovNotice ? (
+        <Saturday28NovOpeningNotice locale={locale} />
+      ) : null}
       {fold ? <MatchMeetingFoldBlock fold={fold} mapsUrl={MAPS_URL} /> : null}
       <InteriorPhoto
         src={data.interiorSrc ?? "/images/interior/bar-taps.webp"}

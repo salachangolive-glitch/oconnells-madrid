@@ -2,6 +2,7 @@ import Link from "next/link";
 import { WhatsOnEventsJsonLd } from "@/components/WhatsOnEventsJsonLd";
 import { DirectionsButton, HowToGetHere } from "@/components/HowToGetHere";
 import { PostMatchBanner } from "@/components/PostMatchBanner";
+import { RugbyFinalsWeekendBanner } from "@/components/RugbyFinalsWeekendBanner";
 import { RugbyHomeBanner } from "@/components/RugbyHomeBanner";
 import { NflSunday15NovWhatsOn } from "@/components/NflSunday15NovWhatsOn";
 import { FixtureList } from "@/components/FixtureList";
@@ -9,7 +10,8 @@ import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
 import { buildMetadata } from "@/lib/seo";
 import { agendaBuildNow, madridTodayYmd, RECURRING } from "@/lib/fixtures";
-import { SITE_NAME } from "@/lib/venue";
+import { ADDRESS, SITE_NAME } from "@/lib/venue";
+import { sat28Nov14NoticeActive } from "@/lib/hours-exceptions";
 
 export const metadata = buildMetadata({
   title: "What's On — Live Sports | O'Connell St Madrid",
@@ -33,6 +35,7 @@ export default function WhatsOnPage() {
       <PostMatchBanner locale="en" />
       {/* Nations Championship Sat 21 Nov: featured block, auto-hides after 21 Nov (Madrid). */}
       <RugbyHomeBanner locale="en" />
+      <RugbyFinalsWeekendBanner locale="en" />
       {/* Spain v Chile rugby (ferugby.es 31 Aug 2026 calendar: sáb 14 nov 17:00 h, Butarque). */}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-14" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">
@@ -144,7 +147,7 @@ export default function WhatsOnPage() {
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-29" &&
       madridTodayYmd(agendaBuildNow()) >= "2026-11-22" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">
-          Nations Championship Finals at Twickenham, Friday 27 – Sunday 29 November (Madrid time): six matches live on our screens at O&apos;Connell St near Sol — meeting point before and after — Italy v Fiji 17:40 Fri, Ireland v Australia 21:10 Fri, Wales v Japan 14:10 Sat, England v New Zealand 17:40 Sat, Scotland v Argentina 14:10 Sun, final France v South Africa 17:40 Sun.{" "}
+          Nations Championship Finals at Twickenham, Friday 27 – Sunday 29 November (Madrid time): six matches live on our screens at O&apos;Connell St, {ADDRESS.street} — meeting point before and after — Italy v Fiji 17:40 Fri, Ireland v Australia 21:10 Fri, Wales v Japan 14:10 Sat, England v New Zealand 17:40 Sat, Scotland v Argentina 14:10 Sun, <strong className="text-cream">final France v South Africa 17:40 Sun</strong>. Saturday 28 November: doors open exceptionally at 14:00.{" "}
           <Link
             href="/news/nations-championship-finals-twickenham-sol"
             className="text-gold underline"
@@ -160,7 +163,10 @@ export default function WhatsOnPage() {
       {/* Real Madrid v Alavés, LaLiga J14 (laliga.com gameweek-14, read 19 Nov 2026: 2026-11-28T20:00Z = 21:00 Madrid, Bernabéu): build-time date gate. */}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-28" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">
-          LaLiga: Real Madrid v Alavés, Saturday 28 November, 21:00 (Bernabéu), live near Sol. A fans meeting point near Sol before or after. Open on Saturdays from 15:00.{" "}
+          LaLiga: Real Madrid v Alavés, Saturday 28 November, 21:00 (Bernabéu), live near Sol. A fans meeting point near Sol before or after.{" "}
+          {sat28Nov14NoticeActive()
+            ? "Saturday 28 November we open exceptionally at 14:00."
+            : "Open on Saturdays from 15:00."}{" "}
           <Link href="/news/real-madrid-alaves-saturday-night-sol" className="text-gold underline">
             Real Madrid v Alavés: Saturday night near Sol
           </Link>

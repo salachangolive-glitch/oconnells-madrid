@@ -1,5 +1,7 @@
 import type { MatchArticleData } from "@/components/MatchNewsArticle";
+import { SAT_28_NOV_EXCEPTIONAL_OPEN } from "@/lib/hours-exceptions";
 import { OWNER_PHOTOS_17NOV } from "@/lib/owner-photos-17nov";
+import { ADDRESS } from "@/lib/venue";
 
 /**
  * Nations Championship Finals Weekend — Allianz Stadium, Twickenham.
@@ -12,7 +14,7 @@ export const NATIONS_FINALS_TWICKENHAM: MatchArticleData = {
     en: "/news/nations-championship-finals-twickenham-sol",
     es: "/es/noticias/nations-championship-finals-fin-de-semana-sol",
   },
-  published: "2026-11-22T19:43:00+01:00",
+  published: "2026-11-25T19:10:00+01:00",
   startDate: "2026-11-29T17:40:00+01:00",
   sport: "Rugby",
   sportsEventName:
@@ -21,15 +23,30 @@ export const NATIONS_FINALS_TWICKENHAM: MatchArticleData = {
   awayTeam: "South Africa",
   venue: "Allianz Stadium",
   venueLocality: "Twickenham",
+  showSat28NovNotice: true,
   interiorSrc: OWNER_PHOTOS_17NOV.pantallasFutbol.src,
   interiorPosition: OWNER_PHOTOS_17NOV.pantallasFutbol.position,
+  meetingFold: {
+    en: {
+      address: ADDRESS.full,
+      mapsLabel: "Open directions (Google Maps)",
+      fcfs: "No reservations — first come, first served.",
+      solProximity: "Less than a minute on foot from Puerta del Sol.",
+    },
+    es: {
+      address: ADDRESS.full,
+      mapsLabel: "Cómo llegar",
+      fcfs: "Por orden de llegada. Sin reservas.",
+      solProximity: "A menos de un minuto de Sol (Puerta del Sol).",
+    },
+  },
   copy: {
     en: {
       title: "Meeting point for rugby fans in Madrid",
       description:
         "Nations Championship Finals Weekend, Twickenham, 27–29 November 2026, Madrid time. Meeting point before and after at O'Connell St, Espoz y Mina 7 near Puerta del Sol. All six matches live on our screens. Every rugby nation welcome; no channel named.",
       eyebrow:
-        "Nations Championship · Finals Weekend · updated Sun 22 Nov 2026",
+        "Nations Championship · Finals Weekend · Fri 27 – Sun 29 Nov 2026",
       h1: "Meeting point for rugby fans in Madrid",
       lead:
         "The Nations Championship ends at Twickenham on Sunday 29 November at 17:40 Madrid time with France v South Africa in the final — the headline window for groups in the centre. All six Finals Weekend matches are live on our screens at O'Connell St, Calle de Espoz y Mina 7, a couple of minutes from Puerta del Sol: meeting point before kick-off, debrief after the final. Dubliners and O'Reilly's are sibling Irish pubs the same walk from Sol if friends name another door; this page is O'Connell St only. No channel named here.",
@@ -59,7 +76,7 @@ export const NATIONS_FINALS_TWICKENHAM: MatchArticleData = {
         {
           title: "Before and after",
           paras: [
-            "Meet here before the Friday night double-header or the Saturday afternoon pair, then come back after Scotland v Argentina and the France v South Africa final on Sunday. From Monday to Thursday the pub stays open until 03:00; this weekend follows Friday 16:00–03:30, Saturday 15:00–03:30 and Sunday 14:00–03:00.",
+            `Meet here before the Friday night double-header or the Saturday afternoon pair, then come back after Scotland v Argentina and the France v South Africa final on Sunday. This weekend: Friday 16:00–03:30; Saturday 28 November we open exceptionally at ${SAT_28_NOV_EXCEPTIONAL_OPEN} (not the usual 15:00) until 03:30; Sunday 14:00–03:00.`,
           ],
         },
         {
@@ -89,7 +106,7 @@ export const NATIONS_FINALS_TWICKENHAM: MatchArticleData = {
       description:
         "Fin de semana de finales del Nations Championship, Twickenham, 27–29 nov 2026, hora de Madrid. Punto de encuentro antes y después en O'Connell St, Espoz y Mina 7 junto a Puerta del Sol. Los seis en directo en nuestras pantallas. Todas las selecciones bienvenidas; sin cadena.",
       eyebrow:
-        "Nations Championship · fin de semana de finales · actualizado dom 22 nov 2026",
+        "Nations Championship · fin de semana de finales · vie 27 – dom 29 nov 2026",
       h1: "Punto de encuentro en Madrid para los aficionados al rugby",
       lead:
         "El Nations Championship cierra en Twickenham el domingo 29 de noviembre a las 17:40, hora de Madrid, con la final Francia–Sudáfrica — la ventana que muchos grupos fijan en el centro. Los seis partidos del fin de semana de finales van en directo en nuestras pantallas en O'Connell St, Calle de Espoz y Mina 7, a dos minutos de Puerta del Sol: punto de encuentro antes del saque y charla después del pitido final. Dubliners y O'Reilly's son pubs hermanos en la misma zona si el grupo nombra otra puerta; esta página es solo O'Connell St. Sin cadena en esta página.",
@@ -119,7 +136,7 @@ export const NATIONS_FINALS_TWICKENHAM: MatchArticleData = {
         {
           title: "Antes y después",
           paras: [
-            "Queda aquí antes del doble del viernes o del sábado por la tarde, y vuelve después de Escocia–Argentina y la final Francia–Sudáfrica del domingo. Este fin de semana: viernes 16:00–03:30, sábado 15:00–03:30, domingo 14:00–03:00.",
+            `Queda aquí antes del doble del viernes o del sábado por la tarde, y vuelve después de Escocia–Argentina y la final Francia–Sudáfrica del domingo. Este fin de semana: viernes 16:00–03:30; sábado 28 de noviembre abrimos excepcionalmente a las ${SAT_28_NOV_EXCEPTIONAL_OPEN} (no a las 15:00 habituales) hasta las 03:30; domingo 14:00–03:00.`,
           ],
         },
         {

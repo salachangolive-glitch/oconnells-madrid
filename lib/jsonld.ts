@@ -1,4 +1,8 @@
 import {
+  sat28Nov14NoticeActive,
+  sat28Nov14SchemaSpec,
+} from "@/lib/hours-exceptions";
+import {
   ADDRESS,
   FACTS,
   GBP_GEO,
@@ -30,6 +34,33 @@ function description(locale: SchemaLocale): string {
  */
 export function barOrPubJsonLd(locale: SchemaLocale = "en") {
   const site = getSiteUrl();
+  const openingHoursSpecification = [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday"],
+      opens: HOURS.monThu.open,
+      closes: HOURS.monThu.close,
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Friday",
+      opens: HOURS.fri.open,
+      closes: HOURS.fri.close,
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Saturday",
+      opens: HOURS.sat.open,
+      closes: HOURS.sat.close,
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Sunday",
+      opens: HOURS.sun.open,
+      closes: HOURS.sun.close,
+    },
+    ...(sat28Nov14NoticeActive() ? [sat28Nov14SchemaSpec()] : []),
+  ];
   return {
     "@context": "https://schema.org",
     "@type": ["BarOrPub", "LocalBusiness"],
@@ -56,32 +87,7 @@ export function barOrPubJsonLd(locale: SchemaLocale = "en") {
     sameAs: [GBP_MAPS_CID_URL],
     hasMenu: `${site}${locale === "es" ? "/es/menu" : "/menu"}`,
     image: `${site}/images/oconnell-fachada.jpg`,
-    openingHoursSpecification: [
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday"],
-        opens: HOURS.monThu.open,
-        closes: HOURS.monThu.close,
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: "Friday",
-        opens: HOURS.fri.open,
-        closes: HOURS.fri.close,
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: "Saturday",
-        opens: HOURS.sat.open,
-        closes: HOURS.sat.close,
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: "Sunday",
-        opens: HOURS.sun.open,
-        closes: HOURS.sun.close,
-      },
-    ],
+    openingHoursSpecification,
     amenityFeature: [
       {
         "@type": "LocationFeatureSpecification",

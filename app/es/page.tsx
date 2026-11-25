@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { DirectionsButton, HowToGetHere } from "@/components/HowToGetHere";
 import { PostMatchBanner } from "@/components/PostMatchBanner";
+import { RugbyFinalsWeekendBanner } from "@/components/RugbyFinalsWeekendBanner";
 import { RugbyHomeBanner } from "@/components/RugbyHomeBanner";
+import { Saturday28NovOpeningNotice } from "@/components/Saturday28NovOpeningNotice";
 import { HomeComingUp } from "@/components/HomeComingUp";
 import { FixtureStrip } from "@/components/FixtureStrip";
 import { HomeCtaBand } from "@/components/HomeCtaBand";
@@ -43,6 +45,7 @@ export default function EsHomePage() {
     >
       <PostMatchBanner locale="es" />
       <RugbyHomeBanner locale="es" />
+      <RugbyFinalsWeekendBanner locale="es" />
       <header className="mb-8 max-w-2xl text-center sm:mx-auto">
         <h1 className="font-serif text-2xl font-bold leading-snug text-cream sm:text-3xl lg:text-4xl">
           O&apos;Connell St Madrid{" "}
@@ -56,6 +59,7 @@ export default function EsHomePage() {
         <div className="mx-auto mt-4 inline-block rounded border border-gold/30 px-4 py-2 text-sm text-cream sm:text-base">
           <p className="font-semibold text-gold">Abierto todos los días</p>
           <p>{HOURS.summaryEs}</p>
+          <Saturday28NovOpeningNotice locale="es" compact />
         </div>
         <p className="mt-4">
           <DirectionsButton locale="es" />

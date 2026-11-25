@@ -33,6 +33,22 @@ export const HOME_COMING_UP: ComingUpItem[] = [
     },
   },
   {
+    id: "rugby-finals-twickenham",
+    hideAfterYmd: "2026-11-29",
+    en: {
+      href: "/news/nations-championship-finals-twickenham-sol",
+      label: "Meeting point for rugby fans — Finals Weekend",
+      detail:
+        "Nations Championship Finals, Fri 27 – Sun 29 November, Madrid time. All six matches live on our screens — France v South Africa final Sun 17:40. Meeting point at O'Connell St near Sol.",
+    },
+    es: {
+      href: "/es/noticias/nations-championship-finals-fin-de-semana-sol",
+      label: "Punto de encuentro rugby — fin de semana de finales",
+      detail:
+        "Finales del Nations Championship, vie 27 – dom 29 de noviembre, hora de Madrid. Los seis partidos en directo — final Francia–Sudáfrica dom 17:40. Punto de encuentro en O'Connell St junto a Sol.",
+    },
+  },
+  {
     id: "ucl-viking",
     hideAfterYmd: "2026-11-25",
     en: {

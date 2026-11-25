@@ -3,6 +3,7 @@ import { InteriorPhoto } from "@/components/InteriorPhoto";
 import { LocaloFindUs } from "@/components/LocaloFindUs";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
+import { Saturday28NovOpeningNotice } from "@/components/Saturday28NovOpeningNotice";
 import { VenueHero } from "@/components/VenueHero";
 import { BAR_MAPS } from "@/lib/after-game-sunday-8-nov";
 import { LISTING_NUMBER_SEVEN_PATHS } from "@/lib/listing-number-seven-pin";
@@ -55,6 +56,7 @@ export default function LocationPage() {
             <li key={line}>{line}</li>
           ))}
         </ul>
+        <Saturday28NovOpeningNotice locale="en" />
         <p>
           <a
             href={BAR_MAPS.oconnells}

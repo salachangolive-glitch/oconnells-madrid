@@ -2,6 +2,7 @@ import Link from "next/link";
 import { WhatsOnEventsJsonLd } from "@/components/WhatsOnEventsJsonLd";
 import { DirectionsButton, HowToGetHere } from "@/components/HowToGetHere";
 import { PostMatchBanner } from "@/components/PostMatchBanner";
+import { RugbyFinalsWeekendBanner } from "@/components/RugbyFinalsWeekendBanner";
 import { RugbyHomeBanner } from "@/components/RugbyHomeBanner";
 import { NflSunday15NovWhatsOn } from "@/components/NflSunday15NovWhatsOn";
 import { FixtureList } from "@/components/FixtureList";
@@ -9,7 +10,8 @@ import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
 import { buildMetadata } from "@/lib/seo";
 import { agendaBuildNow, madridTodayYmd, RECURRING } from "@/lib/fixtures";
-import { SITE_NAME } from "@/lib/venue";
+import { ADDRESS, SITE_NAME } from "@/lib/venue";
+import { sat28Nov14NoticeActive } from "@/lib/hours-exceptions";
 
 export const metadata = buildMetadata({
   title: "Agenda — Deportes en directo | O'Connell St Madrid",
@@ -34,6 +36,7 @@ export default function EsWhatsOnPage() {
       <PostMatchBanner locale="es" />
       {/* Nations Championship sáb 21 nov: bloque destacado, se oculta solo después del 21 nov (Madrid). */}
       <RugbyHomeBanner locale="es" />
+      <RugbyFinalsWeekendBanner locale="es" />
       {/* España–Chile rugby (ferugby.es 31 ago 2026: sáb 14 nov 17:00 h, Butarque). */}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-14" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">
@@ -145,7 +148,7 @@ export default function EsWhatsOnPage() {
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-29" &&
       madridTodayYmd(agendaBuildNow()) >= "2026-11-22" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">
-          Finales del Nations Championship en Twickenham, del viernes 27 al domingo 29 de noviembre (hora de Madrid): seis partidos en directo en nuestras pantallas en O&apos;Connell St junto a Sol — punto de encuentro antes y después — Italia–Fiyi 17:40 vie, Irlanda–Australia 21:10 vie, Gales–Japón 14:10 sáb, Inglaterra–Nueva Zelanda 17:40 sáb, Escocia–Argentina 14:10 dom, final Francia–Sudáfrica 17:40 dom.{" "}
+          Finales del Nations Championship en Twickenham, del viernes 27 al domingo 29 de noviembre (hora de Madrid): seis partidos en directo en nuestras pantallas en O&apos;Connell St, {ADDRESS.street} — punto de encuentro antes y después — Italia–Fiyi 17:40 vie, Irlanda–Australia 21:10 vie, Gales–Japón 14:10 sáb, Inglaterra–Nueva Zelanda 17:40 sáb, Escocia–Argentina 14:10 dom, <strong className="text-cream">final Francia–Sudáfrica 17:40 dom</strong>. Sábado 28 de noviembre: apertura excepcional a las 14:00.{" "}
           <Link
             href="/es/noticias/nations-championship-finals-fin-de-semana-sol"
             className="text-gold underline"
@@ -160,7 +163,10 @@ export default function EsWhatsOnPage() {
       ) : null}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-28" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">
-          LaLiga: Real Madrid–Alavés, sábado 28 de noviembre, 21:00 (Bernabéu), en directo junto a Sol. Punto de encuentro junto a Sol antes o después. Los sábados abrimos a las 15:00.{" "}
+          LaLiga: Real Madrid–Alavés, sábado 28 de noviembre, 21:00 (Bernabéu), en directo junto a Sol. Punto de encuentro junto a Sol antes o después.{" "}
+          {sat28Nov14NoticeActive()
+            ? "Sábado 28 de noviembre abrimos excepcionalmente a las 14:00."
+            : "Los sábados abrimos a las 15:00."}{" "}
           <Link href="/news/real-madrid-alaves-saturday-night-sol" className="text-gold underline">
             Real Madrid–Alavés: sábado por la noche junto a Sol
           </Link>
