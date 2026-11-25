@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { DirectionsButton, HowToGetHere } from "@/components/HowToGetHere";
 import { PostMatchBanner } from "@/components/PostMatchBanner";
+import { HomeBarcaAtleticoDec2Block } from "@/components/HomeBarcaAtleticoDec2Block";
 import { RugbyFinalsWeekendBanner } from "@/components/RugbyFinalsWeekendBanner";
 import { RugbyHomeBanner } from "@/components/RugbyHomeBanner";
 import { Saturday28NovOpeningNotice } from "@/components/Saturday28NovOpeningNotice";
@@ -46,6 +47,7 @@ export default function EsHomePage() {
       <PostMatchBanner locale="es" />
       <RugbyHomeBanner locale="es" />
       <RugbyFinalsWeekendBanner locale="es" />
+      <HomeBarcaAtleticoDec2Block locale="es" />
       <header className="mb-8 max-w-2xl text-center sm:mx-auto">
         <h1 className="font-serif text-2xl font-bold leading-snug text-cream sm:text-3xl lg:text-4xl">
           O&apos;Connell St Madrid{" "}
