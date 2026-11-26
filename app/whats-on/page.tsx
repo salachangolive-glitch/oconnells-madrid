@@ -85,7 +85,7 @@ export default function WhatsOnPage() {
       {/* Liverpool v Manchester United, PL MW11 (premierleague.com API: Sun 22 Nov 2026 16:30 GMT = 17:30 Madrid, Anfield; DAZN): build-time date gate. */}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-22" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">
-          Premier League: Liverpool v Manchester United, Sunday 22 November, 17:30 (Anfield), on DAZN, live near Sol. Open on Sundays from 14:00.{" "}
+          Premier League: Liverpool v Manchester United, Sunday 22 November, 17:30 (Anfield), live near Sol. Open on Sundays from 14:00.{" "}
           <Link href="/news/liverpool-manchester-united-sunday-sol" className="text-gold underline">
             Liverpool v Man United: Sunday afternoon near Sol
           </Link>
@@ -113,6 +113,21 @@ export default function WhatsOnPage() {
       {madridTodayYmd(agendaBuildNow()) <= "2026-12-06" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">
           <strong className="text-cream">LaLiga: Atlético de Madrid v Real Betis, Sunday 6 December, 21:00</strong> (Riyadh Air Metropolitano). Betis fans travelling up from Sevilla: meet near Sol before the match and come back after the final whistle — live on our screens at Dubliners, O&apos;Connell&apos;s, O&apos;Reilly&apos;s and Four Corner. Open on Sundays from 14:00. First come, first served.{" "}
+          <a
+            href={GBP_MAPS_CID_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-event="directions"
+            className="text-gold underline"
+          >
+            Open directions
+          </a>
+        </p>
+      ) : null}
+      {/* Barcelona v Man City (Tue 8 Dec) + Arsenal v Real Madrid (Wed 9 Dec), UCL league phase: match.uefa.com/v5 ids 2049644 / 2049653, both 20:00Z = 21:00 Madrid. Build-time date gate. */}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-12-09" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          <strong className="text-cream">Champions League, live on our screens:</strong> Barcelona v Manchester City, Tuesday 8 December, 21:00 (Camp Nou), and Arsenal v Real Madrid, Wednesday 9 December, 21:00 (Arsenal Stadium). Meeting point near Sol before and after — first come, first served.{" "}
           <a
             href={GBP_MAPS_CID_URL}
             target="_blank"
@@ -217,7 +232,7 @@ export default function WhatsOnPage() {
       {/* Arsenal v Manchester City, PL MW12 (premierleague.com API fixture 129033: Sun 29 Nov 2026 16:30 GMT = 17:30 Madrid, Emirates; DAZN): build-time date gate. */}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-29" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">
-          Premier League: Arsenal v Manchester City, Sunday 29 November, 17:30 (Emirates Stadium), on DAZN, live near Sol. Open on Sundays from 14:00.{" "}
+          Premier League: Arsenal v Manchester City, Sunday 29 November, 17:30 (Emirates Stadium), live near Sol. Open on Sundays from 14:00.{" "}
           <Link href="/news/arsenal-manchester-city-sunday-sol" className="text-gold underline">
             Arsenal v Man City: Sunday afternoon near Sol
           </Link>
@@ -275,8 +290,8 @@ export default function WhatsOnPage() {
       <Section title="Live sports at O'Connell St">
         <p>
           O&apos;Connell St is an Irish pub by Puerta del Sol — Espoz y Mina 7.
-          We put major live sport on our screens when it&apos;s confirmed:
-          football, NBA, rugby, Formula 1, tennis and more. See Today and the next 7 days on this page, or ask at the bar if you&apos;re
+          We put major live sport on our screens:
+          football, NFL, basketball, rugby, Formula 1, tennis and more. See Today and the next 7 days on this page, or ask at the bar if you&apos;re
           looking for a specific game.
         </p>
         <p>

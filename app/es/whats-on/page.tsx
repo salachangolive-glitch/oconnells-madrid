@@ -95,7 +95,7 @@ export default function EsWhatsOnPage() {
       ) : null}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-22" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">
-          Premier League: Liverpool–Manchester United, domingo 22 de noviembre, 17:30 (Anfield), en DAZN, en directo junto a Sol. Los domingos abrimos a las 14:00.{" "}
+          Premier League: Liverpool–Manchester United, domingo 22 de noviembre, 17:30 (Anfield), en directo junto a Sol. Los domingos abrimos a las 14:00.{" "}
           <Link href="/es/noticias/liverpool-manchester-united-domingo-sol" className="text-gold underline">
             Liverpool–Man United: domingo de Premier junto a Sol
           </Link>
@@ -121,6 +121,21 @@ export default function EsWhatsOnPage() {
       {madridTodayYmd(agendaBuildNow()) <= "2026-12-06" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">
           <strong className="text-cream">LaLiga: Atlético de Madrid–Real Betis, domingo 6 de diciembre, 21:00</strong> (Riyadh Air Metropolitano). Béticos que suben desde Sevilla: quedad junto a Sol antes del partido y volved después del pitido final — en directo en nuestras pantallas en Dubliners, O&apos;Connell&apos;s, O&apos;Reilly&apos;s y Four Corner. Los domingos abrimos desde las 14:00. Por orden de llegada.{" "}
+          <a
+            href={GBP_MAPS_CID_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-event="directions"
+            className="text-gold underline"
+          >
+            Cómo llegar
+          </a>
+        </p>
+      ) : null}
+      {/* Barcelona–Man City (mar 8 dic) + Arsenal–Real Madrid (mié 9 dic), Champions fase liga: match.uefa.com/v5 ids 2049644 / 2049653, ambos 20:00Z = 21:00 Madrid. Build-time date gate. */}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-12-09" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          <strong className="text-cream">Champions, en directo en nuestras pantallas:</strong> Barcelona–Manchester City, martes 8 de diciembre, 21:00 (Camp Nou), y Arsenal–Real Madrid, miércoles 9 de diciembre, 21:00 (Arsenal Stadium). Punto de encuentro junto a Sol antes y después — por orden de llegada.{" "}
           <a
             href={GBP_MAPS_CID_URL}
             target="_blank"
@@ -216,7 +231,7 @@ export default function EsWhatsOnPage() {
       ) : null}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-29" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">
-          Premier League: Arsenal–Manchester City, domingo 29 de noviembre, 17:30 (Emirates Stadium), en DAZN, en directo junto a Sol. Los domingos abrimos a las 14:00.{" "}
+          Premier League: Arsenal–Manchester City, domingo 29 de noviembre, 17:30 (Emirates Stadium), en directo junto a Sol. Los domingos abrimos a las 14:00.{" "}
           <Link href="/es/noticias/arsenal-manchester-city-domingo-sol" className="text-gold underline">
             Arsenal–Man City: domingo de Premier junto a Sol
           </Link>
@@ -241,7 +256,7 @@ export default function EsWhatsOnPage() {
         <p>
           O&apos;Connell St es un pub irlandés junto a Puerta del Sol — Espoz y
           Mina 7. Retransmitimos grandes eventos deportivos en nuestras
-          pantallas cuando están confirmados: fútbol, NBA, rugby, Fórmula 1,
+          pantallas: fútbol, NFL, baloncesto, rugby, Fórmula 1,
           tenis y más. Consulta Hoy y los próximos 7 días, o pregunta en
           la barra si buscas un evento concreto.
         </p>
