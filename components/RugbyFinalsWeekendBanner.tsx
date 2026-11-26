@@ -19,6 +19,7 @@ const COPY = {
     sat: ["14:10 Wales v Japan", "17:40 England v New Zealand"],
     sun: ["14:10 Scotland v Argentina"],
     satOpen: "Saturday 28 November: doors open exceptionally at 14:00.",
+    sunOpen: "Sunday 29 November: doors open at 14:00, ten minutes before Scotland v Argentina, so come at opening.",
     fcfs: "Meeting point before and after — first come, first served.",
     cta: "Finals weekend guide",
     href: "/news/nations-championship-finals-twickenham-sol",
@@ -34,6 +35,7 @@ const COPY = {
     sat: ["14:10 Gales–Japón", "17:40 Inglaterra–Nueva Zelanda"],
     sun: ["14:10 Escocia–Argentina"],
     satOpen: "Sábado 28 de noviembre: apertura excepcional a las 14:00.",
+    sunOpen: "Domingo 29 de noviembre: abrimos a las 14:00, diez minutos antes del Escocia–Argentina, así que venid a la apertura.",
     fcfs: "Punto de encuentro antes y después — por orden de llegada.",
     cta: "Guía del fin de semana de finales",
     href: "/es/noticias/nations-championship-finals-fin-de-semana-sol",
@@ -87,6 +89,7 @@ export function RugbyFinalsWeekendBanner({ locale }: { locale: "en" | "es" }) {
             <li key={m}>{m}</li>
           ))}
         </ul>
+        <p className="mt-2 text-sm text-gold">{c.sunOpen}</p>
         <p className="mt-4 text-sm text-cream-muted">{c.fcfs}</p>
         <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:items-center">
           <Link
