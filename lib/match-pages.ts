@@ -52,6 +52,8 @@ export const MATCH_PAGE_LAST_KICKOFF: Record<string, string> = Object.fromEntrie
   ...pair("/news/real-madrid-zalgiris-wednesday-night-sol", null, "2026-11-25T20:45:00+01:00"),
   ...pair("/news/after-real-madrid-zalgiris-goya-to-sol", "/es/noticias/despues-real-madrid-zalgiris-goya-a-sol", "2026-11-25T20:45:00+01:00"),
   ...pair("/news/nations-championship-finals-weekend-plan-sol", "/es/noticias/finales-nations-championship-plan-finde-sol", "2026-11-29T17:40:00+01:00"),
+  ...pair("/news/ireland-australia-rugby-friday-night-sol", "/es/noticias/irlanda-australia-rugby-viernes-noche-sol", "2026-11-27T21:10:00+01:00"),
+  ...pair("/news/france-south-africa-rugby-final-sunday-sol", "/es/noticias/final-rugby-francia-sudafrica-domingo-sol", "2026-11-29T17:40:00+01:00"),
   ...pair("/news/real-madrid-alaves-saturday-night-sol", null, "2026-11-28T21:00:00+01:00"),
   ...pair("/news/movistar-arena-bayern-fans-bar", null, "2026-12-15T20:45:00+01:00"),
   ...pair("/de/real-madrid-bayern-basketball-treffpunkt-sol", null, "2026-12-15T20:45:00+01:00"),

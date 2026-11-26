@@ -84,6 +84,8 @@ export const NATIONS_FINALS_WEEKEND_PLAN: MatchArticleData = {
       more: "More",
       links: [
         { href: "/news/nations-championship-finals-twickenham-sol", label: "Nations Championship Finals: meeting point for rugby fans" },
+        { href: "/news/ireland-australia-rugby-friday-night-sol", label: "Ireland v Australia: Friday night meeting point" },
+        { href: "/news/france-south-africa-rugby-final-sunday-sol", label: "The final: France v South Africa, Sunday" },
         { href: "/whats-on", label: "What's On" },
         { href: "/location", label: "Opening hours" },
       ],
@@ -153,6 +155,8 @@ export const NATIONS_FINALS_WEEKEND_PLAN: MatchArticleData = {
       more: "Más",
       links: [
         { href: "/es/noticias/nations-championship-finals-fin-de-semana-sol", label: "Finales del Nations Championship: punto de encuentro para el rugby" },
+        { href: "/es/noticias/irlanda-australia-rugby-viernes-noche-sol", label: "Irlanda–Australia: punto de encuentro el viernes" },
+        { href: "/es/noticias/final-rugby-francia-sudafrica-domingo-sol", label: "La final: Francia–Sudáfrica, domingo" },
         { href: "/es/whats-on", label: "Agenda" },
         { href: "/es/location", label: "Horario" },
       ],

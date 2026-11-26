@@ -192,6 +192,14 @@ export default function WhatsOnPage() {
           <Link href="/news/nations-championship-finals-weekend-plan-sol" className="text-gold underline">
             Weekend plan: when to arrive
           </Link>
+          {" · "}
+          <Link href="/news/ireland-australia-rugby-friday-night-sol" className="text-gold underline">
+            Ireland v Australia: Friday night
+          </Link>
+          {" · "}
+          <Link href="/news/france-south-africa-rugby-final-sunday-sol" className="text-gold underline">
+            The final: France v South Africa
+          </Link>
         </p>
       ) : null}
       {/* Real Madrid v Alavés, LaLiga J14 (laliga.com gameweek-14, read 19 Nov 2026: 2026-11-28T20:00Z = 21:00 Madrid, Bernabéu): build-time date gate. */}

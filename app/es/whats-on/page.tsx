@@ -193,6 +193,14 @@ export default function EsWhatsOnPage() {
           <Link href="/es/noticias/finales-nations-championship-plan-finde-sol" className="text-gold underline">
             Plan del finde: a qué hora llegar
           </Link>
+          {" · "}
+          <Link href="/es/noticias/irlanda-australia-rugby-viernes-noche-sol" className="text-gold underline">
+            Irlanda–Australia: viernes noche
+          </Link>
+          {" · "}
+          <Link href="/es/noticias/final-rugby-francia-sudafrica-domingo-sol" className="text-gold underline">
+            La final: Francia–Sudáfrica
+          </Link>
         </p>
       ) : null}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-28" ? (

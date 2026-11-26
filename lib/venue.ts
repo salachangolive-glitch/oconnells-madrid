@@ -154,6 +154,8 @@ export const EN_PATHS = [
   "/news/rugby-saturday-sol-21-nov",
   "/news/nations-championship-finals-twickenham-sol",
   "/news/nations-championship-finals-weekend-plan-sol",
+  "/news/ireland-australia-rugby-friday-night-sol",
+  "/news/france-south-africa-rugby-final-sunday-sol",
   "/news/czechia-spain-thursday-night-sol",
   "/news/england-croatia-thursday-night-sol",
   "/news/germany-netherlands-monday-night-sol",
@@ -246,6 +248,8 @@ export const ES_PATHS = [
   "/es/noticias/rugby-sabado-sol-21-nov",
   "/es/noticias/nations-championship-finals-fin-de-semana-sol",
   "/es/noticias/finales-nations-championship-plan-finde-sol",
+  "/es/noticias/irlanda-australia-rugby-viernes-noche-sol",
+  "/es/noticias/final-rugby-francia-sudafrica-domingo-sol",
   "/es/noticias/despues-real-madrid-zalgiris-goya-a-sol",
   "/es/noticias/chequia-espana-jueves-sol",
   "/es/noticias/espana-inglaterra-domingo-sol",
@@ -323,6 +327,8 @@ export const HREFLANG_PAIRS: Record<string, string | undefined> = {
     "/es/noticias/nations-championship-finals-fin-de-semana-sol",
   "/news/nations-championship-finals-weekend-plan-sol":
     "/es/noticias/finales-nations-championship-plan-finde-sol",
+  "/news/ireland-australia-rugby-friday-night-sol": "/es/noticias/irlanda-australia-rugby-viernes-noche-sol",
+  "/news/france-south-africa-rugby-final-sunday-sol": "/es/noticias/final-rugby-francia-sudafrica-domingo-sol",
   "/news/after-real-madrid-zalgiris-goya-to-sol":
     "/es/noticias/despues-real-madrid-zalgiris-goya-a-sol",
   "/news/czechia-spain-thursday-night-sol": "/es/noticias/chequia-espana-jueves-sol",
