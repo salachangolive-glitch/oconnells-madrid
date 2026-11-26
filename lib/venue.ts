@@ -171,6 +171,7 @@ export const EN_PATHS = [
   "/news/zalgiris-fans-three-bars-sol",
   "/news/zalgiris-fans-trys-barai-sol",
   "/news/real-madrid-psv-tuesday-night-sol",
+  "/news/movistar-arena-bayern-fans-bar",
   "/news/real-madrid-zalgiris-wednesday-night-sol",
   "/news/after-real-madrid-zalgiris-goya-to-sol",
   "/news/atletico-viking-wednesday-night-sol",
@@ -381,6 +382,10 @@ export const HREFLANG_GROUPS: Record<
   "/news/zalgiris-fans-three-bars-sol": {
     en: "/news/zalgiris-fans-three-bars-sol",
     lt: "/news/zalgiris-fans-trys-barai-sol",
+  },
+  "/news/movistar-arena-bayern-fans-bar": {
+    en: "/news/movistar-arena-bayern-fans-bar",
+    de: "/de/real-madrid-bayern-basketball-treffpunkt-sol",
   },
 };
 

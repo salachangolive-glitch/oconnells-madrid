@@ -2,6 +2,7 @@ import Link from "next/link";
 import { DirectionsButton, HowToGetHere } from "@/components/HowToGetHere";
 import { PostMatchBanner } from "@/components/PostMatchBanner";
 import { HomeBarcaAtleticoDec2Block } from "@/components/HomeBarcaAtleticoDec2Block";
+import { HomeBayernBasketDec15Block } from "@/components/HomeBayernBasketDec15Block";
 import { RugbyFinalsWeekendBanner } from "@/components/RugbyFinalsWeekendBanner";
 import { RugbyHomeBanner } from "@/components/RugbyHomeBanner";
 import { Saturday28NovOpeningNotice } from "@/components/Saturday28NovOpeningNotice";
@@ -41,6 +42,7 @@ export default function HomePage() {
       <HomeBarcaAtleticoDec2Block locale="en" />
       <PostMatchBanner locale="en" />
       <RugbyFinalsWeekendBanner locale="en" />
+      <HomeBayernBasketDec15Block locale="en" />
       <RugbyHomeBanner locale="en" />
       {/* Hero text + CTAs */}
       <header className="mb-8 max-w-2xl text-center sm:mx-auto">

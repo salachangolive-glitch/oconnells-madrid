@@ -111,9 +111,13 @@ export default function WhatsOnPage() {
       ) : null}
       {madridTodayYmd(agendaBuildNow()) <= "2026-12-15" ? (
         <p className="mb-6 text-sm text-cream-muted sm:text-base">
-          EuroLeague: Real Madrid v Bayern München, Tuesday 15 December, 20:45 (Movistar Arena). German / Bayern fans: a meeting point less than a minute from Sol. Screening to be confirmed.{" "}
+          EuroLeague: Real Madrid v Bayern München, Tuesday 15 December, 20:45 (Movistar Arena). Bayern fans: meeting point near Sol — live on our screens at all three Irish bars.{" "}
+          <Link href="/news/movistar-arena-bayern-fans-bar" className="text-gold underline">
+            Movistar Arena Bayern Fans Bar
+          </Link>
+          {" · "}
           <Link href="/de/real-madrid-bayern-basketball-treffpunkt-sol" hrefLang="de" className="text-gold underline">
-            Treffpunkt für Bayern-Fans (Deutsch)
+            Bayern Fans Madrid Treffpunkt (Deutsch)
           </Link>
         </p>
       ) : null}

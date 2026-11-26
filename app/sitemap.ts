@@ -97,6 +97,7 @@ const EVENT_LAST_DAY: Record<string, string> = {
   "/news/after-real-madrid-zalgiris-goya-to-sol": "2026-11-25",
   "/es/noticias/despues-real-madrid-zalgiris-goya-a-sol": "2026-11-25",
   "/news/atletico-viking-wednesday-night-sol": "2026-11-25",
+  "/news/movistar-arena-bayern-fans-bar": "2026-12-15",
   "/de/real-madrid-bayern-basketball-treffpunkt-sol": "2026-12-15",
   "/es/noticias/atletico-viking-miercoles-sol": "2026-11-25",
 };

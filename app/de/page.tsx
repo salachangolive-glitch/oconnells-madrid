@@ -18,8 +18,8 @@ type DeItem = { href: string; title: string; text: string };
 const DE_UPCOMING: DeItem[] = [
   {
     href: "/de/real-madrid-bayern-basketball-treffpunkt-sol",
-    title: "Real Madrid–Bayern (EuroLeague), 15. Dezember: Treffpunkt für Bayern-Fans",
-    text: "Dienstag, 15. Dezember 2026, 20:45 Uhr, Movistar Arena: Treffpunkt im O'Connell St, weniger als eine Minute von der Puerta del Sol.",
+    title: "Bayern Fans Madrid Treffpunkt — Real Madrid–Bayern, 15. Dez.",
+    text: "Dienstag, 15. Dezember 2026, 20:45 Uhr, Movistar Arena: Treffpunkt Mo 14. und Di 15. — live auf unseren Screens in allen drei Pubs nahe Sol.",
   },
 ];
 

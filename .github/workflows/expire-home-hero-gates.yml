@@ -1,0 +1,25 @@
+# Redeploy after home hero date gates (Europe/Madrid midnight + margin).
+# Rugby Finals banner: Mon 30 Nov 2026. Barça block: Thu 3 Dec. Bayern block: Wed 16 Dec.
+# Build-time gates in components; client scripts hide before the daily 06:31 rebuild.
+name: Expire home hero gates (OC)
+on:
+  schedule:
+    - cron: "35 5 30 11 *" # 06:35 CET 30 Nov — rugby
+    - cron: "35 5 3 12 *" # 06:35 CET 3 Dec — Barça
+    - cron: "35 5 16 12 *" # 06:35 CET 16 Dec — Bayern
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  redeploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: cloudflare-pages-static
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit --allow-empty -m "chore: home hero date gate redeploy (PR #1)"
+          git push origin cloudflare-pages-static
