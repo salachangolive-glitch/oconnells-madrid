@@ -10,7 +10,7 @@ import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
 import { buildMetadata } from "@/lib/seo";
 import { agendaBuildNow, madridTodayYmd, RECURRING } from "@/lib/fixtures";
-import { ADDRESS, SITE_NAME } from "@/lib/venue";
+import { ADDRESS, GBP_MAPS_CID_URL, SITE_NAME } from "@/lib/venue";
 import { sat28Nov14NoticeActive } from "@/lib/hours-exceptions";
 
 export const metadata = buildMetadata({
@@ -107,6 +107,36 @@ export default function WhatsOnPage() {
           <Link href="/news/tokio-hotel-madrid-gig-night-sol" className="text-gold underline">
             Tokio Hotel gig night guide
           </Link>
+        </p>
+      ) : null}
+      {/* Atlético v Real Betis, LaLiga J15 (laliga.com 2026-12-06T20:00Z = 21:00 Madrid, Metropolitano): build-time date gate. */}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-12-06" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          <strong className="text-cream">LaLiga: Atlético de Madrid v Real Betis, Sunday 6 December, 21:00</strong> (Riyadh Air Metropolitano). Betis fans travelling up from Sevilla: meet near Sol before the match and come back after the final whistle — live on our screens at Dubliners, O&apos;Connell&apos;s, O&apos;Reilly&apos;s and Four Corner. Open on Sundays from 14:00. First come, first served.{" "}
+          <a
+            href={GBP_MAPS_CID_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-event="directions"
+            className="text-gold underline"
+          >
+            Open directions
+          </a>
+        </p>
+      ) : null}
+      {/* Atlético v Valencia 14:00 + Real Madrid v Osasuna 21:00, LaLiga J16 (laliga.com 13:00Z / 20:00Z): build-time date gate. Sun doors 14:00 = Atlético kick-off. */}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-12-13" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          <strong className="text-cream">LaLiga double, Sunday 13 December:</strong> Atlético de Madrid v Valencia at 14:00 (Riyadh Air Metropolitano) and Real Madrid v Osasuna at 21:00 (Bernabéu), both live on our screens at Dubliners, O&apos;Connell&apos;s, O&apos;Reilly&apos;s and Four Corner. On Sundays we open at 14:00, the same time as the Atlético kick-off, so come at opening.{" "}
+          <a
+            href={GBP_MAPS_CID_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-event="directions"
+            className="text-gold underline"
+          >
+            Open directions
+          </a>
         </p>
       ) : null}
       {madridTodayYmd(agendaBuildNow()) <= "2026-12-15" ? (

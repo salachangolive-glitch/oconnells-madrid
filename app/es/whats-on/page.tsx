@@ -10,7 +10,7 @@ import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
 import { buildMetadata } from "@/lib/seo";
 import { agendaBuildNow, madridTodayYmd, RECURRING } from "@/lib/fixtures";
-import { ADDRESS, SITE_NAME } from "@/lib/venue";
+import { ADDRESS, GBP_MAPS_CID_URL, SITE_NAME } from "@/lib/venue";
 import { sat28Nov14NoticeActive } from "@/lib/hours-exceptions";
 
 export const metadata = buildMetadata({
@@ -115,6 +115,36 @@ export default function EsWhatsOnPage() {
           <Link href="/news/tokio-hotel-madrid-gig-night-sol" className="text-gold underline">
             Noche de concierto Tokio Hotel junto a Sol
           </Link>
+        </p>
+      ) : null}
+      {/* Atlético–Real Betis, LaLiga J15 (laliga.com 2026-12-06T20:00Z = 21:00 Madrid, Metropolitano): build-time date gate. */}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-12-06" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          <strong className="text-cream">LaLiga: Atlético de Madrid–Real Betis, domingo 6 de diciembre, 21:00</strong> (Riyadh Air Metropolitano). Béticos que suben desde Sevilla: quedad junto a Sol antes del partido y volved después del pitido final — en directo en nuestras pantallas en Dubliners, O&apos;Connell&apos;s, O&apos;Reilly&apos;s y Four Corner. Los domingos abrimos desde las 14:00. Por orden de llegada.{" "}
+          <a
+            href={GBP_MAPS_CID_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-event="directions"
+            className="text-gold underline"
+          >
+            Cómo llegar
+          </a>
+        </p>
+      ) : null}
+      {/* Atlético–Valencia 14:00 + Real Madrid–Osasuna 21:00, LaLiga J16 (laliga.com 13:00Z / 20:00Z): build-time date gate. Apertura dominical 14:00 = saque del Atlético. */}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-12-13" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          <strong className="text-cream">Doble de LaLiga, domingo 13 de diciembre:</strong> Atlético de Madrid–Valencia a las 14:00 (Riyadh Air Metropolitano) y Real Madrid–Osasuna a las 21:00 (Bernabéu), los dos en directo en nuestras pantallas en Dubliners, O&apos;Connell&apos;s, O&apos;Reilly&apos;s y Four Corner. Los domingos abrimos a las 14:00, la misma hora del saque del Atlético, así que venid a la apertura.{" "}
+          <a
+            href={GBP_MAPS_CID_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-event="directions"
+            className="text-gold underline"
+          >
+            Cómo llegar
+          </a>
         </p>
       ) : null}
       {madridTodayYmd(agendaBuildNow()) <= "2026-12-15" ? (
