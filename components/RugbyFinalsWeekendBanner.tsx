@@ -12,7 +12,7 @@ const COPY = {
   en: {
     title: "Meeting point for rugby fans in Madrid",
     live:
-      "Nations Championship Finals Weekend at Twickenham, 27–29 November, Madrid time — all six matches live on our screens at O'Connell St, less than a minute from Puerta del Sol.",
+      "Nations Championship Finals Weekend at Twickenham, 27–29 November, Madrid time — all six matches live on our screens at O'Connell St, next to Puerta del Sol.",
     finalLabel: "Final — Sunday 29 November",
     final: "17:40 France v South Africa",
     fri: ["17:40 Italy v Fiji", "21:10 Ireland v Australia"],
@@ -28,7 +28,7 @@ const COPY = {
   es: {
     title: "Punto de encuentro en Madrid para los aficionados al rugby",
     live:
-      "Fin de semana de finales del Nations Championship en Twickenham, 27–29 de noviembre, hora de Madrid — los seis partidos en directo en nuestras pantallas en O'Connell St, a menos de un minuto de Puerta del Sol.",
+      "Fin de semana de finales del Nations Championship en Twickenham, 27–29 de noviembre, hora de Madrid — los seis partidos en directo en nuestras pantallas en O'Connell St, junto a la Puerta del Sol.",
     finalLabel: "Final — domingo 29 de noviembre",
     final: "17:40 Francia–Sudáfrica",
     fri: ["17:40 Italia–Fiyi", "21:10 Irlanda–Australia"],
