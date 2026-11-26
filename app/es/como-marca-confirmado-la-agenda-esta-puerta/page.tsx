@@ -8,9 +8,9 @@ import { CONFIRMED_PROCESS_PATHS } from "@/lib/whats-on-confirmed-this-door";
 import { ADDRESS } from "@/lib/venue";
 
 export const metadata = buildMetadata({
-  title: "Confirmado en la Agenda: pregunta qué partido | O'Connell St",
+  title: "Todo el gran deporte en directo en la Agenda | O'Connell St",
   description:
-    "Cómo funciona Confirmado en la Agenda en Espoz y Mina 7: solo hora de Madrid, no todos los partidos en todas las pantallas. Abre la lista o pregunta en la barra. CÓMO LLEGAR.",
+    "Agenda en Espoz y Mina 7: todo el gran deporte en directo — fútbol, rugby, NFL y baloncesto — en hora de Madrid. Ya no hay etiqueta de pendiente. CÓMO LLEGAR.",
   path: CONFIRMED_PROCESS_PATHS.es,
   locale: "es",
 });
@@ -20,8 +20,8 @@ export default function ComoMarcaConfirmadoAgendaPage() {
     <PageShell locale="es" altLangHref={CONFIRMED_PROCESS_PATHS.en}>
       <PageHero
         eyebrow="Esta puerta · Agenda · Confirmado"
-        title="Confirmado significa que lo pondremos en pantalla — y luego pregunta qué partido."
-        lead="Un pub en Sol que promete todos los saques en todas las paredes miente. En esta puerta de Espoz y Mina 7, la honestidad está en la etiqueta: las filas Confirmado en la Agenda van en hora de Madrid y están previstas para la sala. Todo lo demás es conversación de barra."
+        title="Todo el gran deporte, en directo en nuestras pantallas — cada fila dice Confirmado."
+        lead="Decisión del dueño, 26 de noviembre de 2026: en esta puerta de Espoz y Mina 7 emitimos en directo todo el gran deporte — fútbol, rugby, NFL y baloncesto incluidos. Cada fila de la Agenda va marcada Confirmado, en hora de Madrid. Ya no hay etiqueta de pendiente."
       />
       <InteriorPhoto
         src="/images/interior/sports-aisle.webp"
@@ -47,21 +47,20 @@ export default function ComoMarcaConfirmadoAgendaPage() {
           y confía en la lista.
         </p>
       </Section>
-      <Section title="Qué promete Confirmado y qué no">
+      <Section title="Qué significa Confirmado ahora">
         <p>
-          <strong className="text-cream">Confirmado</strong> en una fila
-          significa que tenemos previsto emitir ese partido en este pub
-          irlandés junto a Sol — fútbol primero, y luego otro deporte cuando lo
-          llevamos. No significa todas las ligas del mundo a la vez. No
-          significa un reservado privado. Los saques solapados siguen pasando; el
-          equipo elige qué va a cada pantalla esa noche.
+          Desde el 26 de noviembre de 2026 la regla del dueño es sencilla: todo
+          el gran deporte va en directo a nuestras pantallas en este pub
+          irlandés junto a Sol — fútbol, rugby, NFL y baloncesto, además de
+          Fórmula 1, tenis y más. Cada fila de la Agenda lleva{" "}
+          <strong className="text-cream">Confirmado</strong>; la antigua
+          etiqueta de pendiente ya no existe. Cuando coinciden saques, el equipo
+          elige qué va a cada pantalla esa noche.
         </p>
         <p>
-          Una fila puede decir{" "}
-          <strong className="text-cream">Por confirmar</strong> cuando la hora o
-          los derechos no están cerrados. Trátalo como “no Confirmado.” No
-          nombramos un partido en una página permanente hasta que la Agenda lo
-          marque Confirmado — la misma regla que en{" "}
+          El único límite es el reloj de la puerta: un partido que empieza a
+          menos de una hora del cierre no aparece en la lista. Las páginas de
+          partido siguen a la Agenda — la misma regla que en{" "}
           <Link href="/es/premier-league" className="text-cream underline">
             pub de Premier League en Madrid
           </Link>{" "}

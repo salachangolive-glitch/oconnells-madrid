@@ -8,9 +8,9 @@ import { CONFIRMED_PROCESS_PATHS } from "@/lib/whats-on-confirmed-this-door";
 import { ADDRESS } from "@/lib/venue";
 
 export const metadata = buildMetadata({
-  title: "Confirmed on What's On: ask which game | O'Connell St",
+  title: "Every major sport live on What's On | O'Connell St",
   description:
-    "How Confirmed works on What's On at Espoz y Mina 7: Madrid time only, not every match on every screen. Open the list or ask at the bar. GET DIRECTIONS.",
+    "What's On at Espoz y Mina 7: every major sport shown live — football, rugby, NFL and basketball — in Madrid time. No pending label. GET DIRECTIONS.",
   path: CONFIRMED_PROCESS_PATHS.en,
 });
 
@@ -19,8 +19,8 @@ export default function HowWhatsOnMarksConfirmedPage() {
     <PageShell locale="en" altLangHref={CONFIRMED_PROCESS_PATHS.es}>
       <PageHero
         eyebrow="This door · What's On · Confirmed"
-        title="Confirmed means we plan to put it on the screens — then ask which game."
-        lead="A Sol pub that promises every kickoff on every wall is lying. At this door on Espoz y Mina 7, the honesty is in the label: What's On rows marked Confirmed are in Madrid time and scheduled for the room. Everything else is a bar conversation."
+        title="Every major sport is live on our screens — every row says Confirmed."
+        lead="Owner decision, 26 November 2026: at this door on Espoz y Mina 7 we show every major sport live — football, rugby, NFL and basketball included. Every What's On row is marked Confirmed, in Madrid time. There is no pending label any more."
       />
       <InteriorPhoto
         src="/images/interior/sports-aisle.webp"
@@ -45,20 +45,19 @@ export default function HowWhatsOnMarksConfirmedPage() {
           once, then trust the list.
         </p>
       </Section>
-      <Section title="What Confirmed does and does not promise">
+      <Section title="What Confirmed means now">
         <p>
-          <strong className="text-cream">Confirmed</strong> on a row means we
-          intend to show that screening in this Irish pub near Sol — football
-          first, then other sport when we are carrying it. It does not mean every
-          league in the world at once. It does not mean your stool faces a
-          private box. Overlapping kickoffs still happen; the staff pick what
-          goes on which screen that night.
+          Since 26 November 2026 the owner&apos;s rule is simple: every major
+          sport goes on our screens live in this Irish pub near Sol — football,
+          rugby, NFL and basketball, plus Formula 1, tennis and more. Every row
+          on What&apos;s On carries <strong className="text-cream">Confirmed</strong>;
+          the old pending label is gone. When kickoffs overlap, the
+          staff pick what goes on which screen that night.
         </p>
         <p>
-          A row can say <strong className="text-cream">To be confirmed</strong>{" "}
-          when the time or rights are not settled yet. Treat that as “not
-          Confirmed.” We do not name a match on a permanent article page until
-          What&apos;s On marks it Confirmed — the same rule as{" "}
+          The only limit is the clock on the door: a game that kicks off less
+          than an hour before closing time does not appear on the list. Match
+          pages follow What&apos;s On — the same rule as{" "}
           <Link href="/premier-league" className="text-cream underline">
             Premier League pub Madrid
           </Link>{" "}
