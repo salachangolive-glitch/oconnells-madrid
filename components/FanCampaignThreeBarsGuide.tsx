@@ -180,7 +180,7 @@ const COPY: Record<CampaignId, Record<GuideLocale, Copy>> = {
       eyebrow: "UEFA Champions League · Tuesday 24 November 2026 · 21:00",
       h1: "PSV in Madrid: three meeting points near Sol",
       lead:
-        "Updated Friday 20 November 2026 (four days before kick-off). Real Madrid host PSV on Tuesday 24 November at 21:00 at the Santiago Bernabéu. Live on our screens at Dubliners, O'Connell's and O'Reilly's — three independent Irish venues a short walk from Puerta del Sol. Pick one pin, meet your group, then head to the stadium. First come, first served; no reservations.",
+        "Updated Friday 20 November 2026 (four days before kick-off). Real Madrid host PSV on Tuesday 24 November at 21:00 at the Santiago Bernabéu. Live on our screens at Dubliners, O'Connell's and O'Reilly's — three sibling Irish pubs a short walk from Puerta del Sol. Pick one pin, meet your group, then head to the stadium. First come, first served; no reservations.",
       matchTitle: "The match",
       matchBullets: [
         "Real Madrid v PSV, UEFA Champions League, league phase, matchday 5",
@@ -214,7 +214,7 @@ const COPY: Record<CampaignId, Record<GuideLocale, Copy>> = {
       eyebrow: "UEFA Champions League · dinsdag 24 november 2026 · 21:00",
       h1: "PSV in Madrid: drie ontmoetingspunten bij Sol",
       lead:
-        "Bijgewerkt vrijdag 20 november 2026 (vier dagen voor aanvang). Real Madrid ontvangt PSV op dinsdag 24 november om 21:00 in het Santiago Bernabéu. Live op onze schermen bij Dubliners, O'Connell's en O'Reilly's — drie onafhankelijke Irish pubs op loopafstand van de Puerta del Sol. Kies één adres, spreek af met je groep en ga daarna naar het stadion. Vol = vol; geen reserveringen.",
+        "Bijgewerkt vrijdag 20 november 2026 (vier dagen voor aanvang). Real Madrid ontvangt PSV op dinsdag 24 november om 21:00 in het Santiago Bernabéu. Live op onze schermen bij Dubliners, O'Connell's en O'Reilly's — drie zuster-Irish pubs op loopafstand van de Puerta del Sol. Kies één adres, spreek af met je groep en ga daarna naar het stadion. Vol = vol; geen reserveringen.",
       matchTitle: "De wedstrijd",
       matchBullets: [
         "Real Madrid–PSV, UEFA Champions League, competitiefase, speeldag 5",
@@ -332,7 +332,7 @@ const COPY: Record<CampaignId, Record<GuideLocale, Copy>> = {
       eyebrow: "UEFA Champions League · onsdag 25. november 2026 · 21:00",
       h1: "Viking FK i Madrid: tre møtesteder ved Sol",
       lead:
-        "Oppdatert lørdag 21. november 2026 (fire dager før avspark). Atlético tar imot Viking FK onsdag 25. november kl. 21:00 på Riyadh Air Metropolitano. Live på våre skjermer hos Dubliners, O'Connell's og O'Reilly's ved Puerta del Sol — tre uavhengige irske puber i gangavstand fra torget. Velg ett sted, møt gruppen, ta metro østover. Førstemann til mølla; ingen reservasjoner. Dette er Viking FK fra Stavanger, ikke NFLs Minnesota Vikings.",
+        "Oppdatert lørdag 21. november 2026 (fire dager før avspark). Atlético tar imot Viking FK onsdag 25. november kl. 21:00 på Riyadh Air Metropolitano. Live på våre skjermer hos Dubliners, O'Connell's og O'Reilly's ved Puerta del Sol — tre søster-puber i gangavstand fra torget. Velg ett sted, møt gruppen, ta metro østover. Førstemann til mølla; ingen reservasjoner. Dette er Viking FK fra Stavanger, ikke NFLs Minnesota Vikings.",
       matchTitle: "Kampen",
       matchBullets: [
         "Atlético–Viking FK, UEFA Champions League, ligafase, runde 5",
@@ -416,7 +416,7 @@ const COPY: Record<CampaignId, Record<GuideLocale, Copy>> = {
       eyebrow: "EuroLeague · Wednesday 25 November 2026 · 20:45",
       h1: "Žalgiris in Madrid: three meeting points near Sol",
       lead:
-        "Real Madrid host Žalgiris Kaunas on Wednesday 25 November at 20:45 at the Movistar Arena. Live on our screens at Dubliners, O'Connell's and O'Reilly's — three independent Irish venues a short walk from Puerta del Sol. Share one pin before the metro ride to Goya, then pick the same door after the game. No reservations; first come, first served.",
+        "Real Madrid host Žalgiris Kaunas on Wednesday 25 November at 20:45 at the Movistar Arena. Live on our screens at Dubliners, O'Connell's and O'Reilly's — three sibling Irish pubs a short walk from Puerta del Sol. Share one pin before the metro ride to Goya, then pick the same door after the game. No reservations; first come, first served.",
       matchTitle: "The game",
       matchBullets: [
         "Real Madrid v Žalgiris Kaunas, EuroLeague, round 14",
@@ -450,7 +450,7 @@ const COPY: Record<CampaignId, Record<GuideLocale, Copy>> = {
       eyebrow: "Eurolyga · 2026 m. lapkričio 25 d., trečiadienis · 20:45",
       h1: "Žalgiris Madride: trys susitikimo vietos prie Sol",
       lead:
-        "Real Madrid lapkričio 25 d., trečiadienį, 20:45 priima Žalgirį Kaunas Movistar Arenoje. Vaizdas gyvai mūsų ekranuose Dubliners, O'Connell's ir O'Reilly's — trys nepriklausomi airiški barai kelios minutės nuo Puerta del Sol. Pasidalykite vienu adresu prieš metro kelionę į Goya ir susitikite po rungtynių tame pačiame bare. Be rezervacijų; pirmas atvykęs — pirmas aptarnaujamas.",
+        "Real Madrid lapkričio 25 d., trečiadienį, 20:45 priima Žalgirį Kaunas Movistar Arenoje. Vaizdas gyvai mūsų ekranuose Dubliners, O'Connell's ir O'Reilly's — trys seserų airiški barai kelios minutės nuo Puerta del Sol. Pasidalykite vienu adresu prieš metro kelionę į Goya ir susitikite po rungtynių tame pačiame bare. Be rezervacijų; pirmas atvykęs — pirmas aptarnaujamas.",
       matchTitle: "Rungtynės",
       matchBullets: [
         "Real Madrid–Žalgiris Kaunas, Eurolyga, 14-as turas",

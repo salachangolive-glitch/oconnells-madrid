@@ -77,7 +77,7 @@ export const BAYERN_BASKET_DEC15 = {
           title: "Monday 14 and Tuesday 15 December",
           paras: [
             "This page is for Bayern groups heading to the Movistar Arena on match week — meeting before you go east and when you come back. Share one Maps pin for the night you pick.",
-            "If your group lands earlier in the week, other doors near Sol make their own plans for the night before — we do not copy that pitch here. O'Connell St is open for Treffpunkt on Monday 14 and Tuesday 15, before and after the arena run.",
+            "If your group lands earlier in the week, Dubliners (Calle de Espoz y Mina 7) and O'Reilly's (Pasaje de Matheu 4) are sibling meeting points the same short walk from Sol for the night before — this page is O'Connell St only. O'Connell St is open for Treffpunkt on Monday 14 and Tuesday 15, before and after the arena run.",
           ],
         },
         {
@@ -147,7 +147,7 @@ export const BAYERN_BASKET_DEC15 = {
           title: "Montag, 14., und Dienstag, 15. Dezember",
           paras: [
             "Diese Seite richtet sich an Bayern-Gruppen auf dem Weg zur Movistar Arena — Treffpunkt vor der Fahrt und nach der Rückkehr. Ein Maps-Pin für die Nacht, die ihr wählt.",
-            "Wer schon früher in der Woche landet, plant den Vorabend an anderen Türen nahe Sol selbst — das übernehmen wir hier nicht. Das O'Connell St steht für Treffpunkt am Montag, 14., und Dienstag, 15., vor und nach dem Arena-Besuch.",
+            "Wer schon früher in der Woche landet, trifft sich am Vorabend bei Dubliners (Calle de Espoz y Mina 7) oder O'Reilly's (Pasaje de Matheu 4) — Irish Pubs im gleichen kurzen Weg von Sol; diese Seite ist nur O'Connell St. Das O'Connell St steht für Treffpunkt am Montag, 14., und Dienstag, 15., vor und nach dem Arena-Besuch.",
           ],
         },
         {

@@ -82,7 +82,7 @@ export const NATIONS_FINALS_TWICKENHAM: MatchArticleData = {
         {
           title: "Other doors near Sol",
           paras: [
-            "Some groups pin Dubliners or O'Reilly's — independent venues we do not run — then regroup at Espoz y Mina 7. Pick one pin for the weekend and stick to it.",
+            "Some groups pin Dubliners or O'Reilly's — sibling Irish pubs on the same walk from Sol — then regroup at Espoz y Mina 7. Pick one pin for the weekend and stick to it.",
           ],
         },
       ],
@@ -142,7 +142,7 @@ export const NATIONS_FINALS_TWICKENHAM: MatchArticleData = {
         {
           title: "Otras puertas junto a Sol",
           paras: [
-            "Algunos grupos fijan Dubliners u O'Reilly's — locales independientes que no gestionamos — y luego vuelven a Espoz y Mina 7. Un solo pin para el fin de semana.",
+            "Algunos grupos fijan Dubliners u O'Reilly's — pubs hermanos en el mismo paseo desde Sol — y luego vuelven a Espoz y Mina 7. Un solo pin para el fin de semana.",
           ],
         },
       ],

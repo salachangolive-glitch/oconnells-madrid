@@ -52,9 +52,9 @@ export default function SaturdayFansPage() {
       <Section title="This room, this hour">
         <p>
           {ADDRESS.full}. Red facade, green trim, gold lettering. We open later
-          than the restaurant-bar around the corner: 15:00 today, then we stay
-          until 03:30. If you want lunch and a terrace first, that is
-          O&apos;Reilly&apos;s on Pasaje de Matheu 4 from 11:30. Dubliners is
+          later than O&apos;Reilly&apos;s Restaurant Bar on Pasaje de Matheu 4:
+          15:00 today, then we stay until 03:30. If you want lunch and a terrace
+          first, head to O&apos;Reilly&apos;s. Dubliners is
           already open on this street from 12:00.
         </p>
         <p>

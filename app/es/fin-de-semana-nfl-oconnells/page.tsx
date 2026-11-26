@@ -54,9 +54,9 @@ export default function EsSaturdayFansPage() {
       <Section title="Esta sala, esta hora">
         <p>
           {ADDRESS.full}. Fachada roja, ribete verde, rótulo dorado. Abrimos más
-          tarde que el restaurante-bar de la esquina: 15:00 hoy, y nos quedamos
-          hasta las 03:30. Si queréis comer y terraza primero, eso es
-          O&apos;Reilly&apos;s en Pasaje de Matheu 4 desde las 11:30. Dubliners
+          tarde que O&apos;Reilly&apos;s Restaurant Bar en Pasaje de Matheu 4:
+          15:00 hoy, y nos quedamos hasta las 03:30. Si queréis comer y terraza
+          primero, id a O&apos;Reilly&apos;s. Dubliners
           ya abre en esta calle desde las 12:00.
         </p>
         <p>

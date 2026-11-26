@@ -14,11 +14,11 @@ const UI = {
     after: "Meeting point after the match",
     threeBarsTitle: "Three bars — equal meeting points near Sol",
     threeBarsIntro:
-      "Dubliners, O'Connell's and O'Reilly's are three independent Irish venues the same distance from Sol. Confirmed on the screens at all three for Real Madrid–PSV on Tuesday 24 November. Pick one door for your group.",
+      "Dubliners, O'Connell's and O'Reilly's are three sibling Irish pubs the same distance from Sol. Confirmed on the screens at all three for Real Madrid–PSV on Tuesday 24 November. Pick one door for your group.",
     threeBarsIntroViking:
-      "Dubliners, O'Connell's and O'Reilly's are three independent Irish venues the same distance from Sol. Confirmed on the screens at all three for Atlético–Viking FK on Wednesday 25 November. Viking FK from Stavanger, not the NFL Minnesota Vikings.",
+      "Dubliners, O'Connell's and O'Reilly's are three sibling Irish pubs the same distance from Sol. Confirmed on the screens at all three for Atlético–Viking FK on Wednesday 25 November. Viking FK from Stavanger, not the NFL Minnesota Vikings.",
     threeBarsIntroZalgiris:
-      "Dubliners, O'Connell's and O'Reilly's are three independent Irish venues the same walk from Puerta del Sol. Live on our screens at all three for Real Madrid v Žalgiris Kaunas on Wednesday 25 November. Pick one door for your group.",
+      "Dubliners, O'Connell's and O'Reilly's are three sibling Irish pubs the same walk from Puerta del Sol. Live on our screens at all three for Real Madrid v Žalgiris Kaunas on Wednesday 25 November. Pick one door for your group.",
     screening:
       "The match is on the screens at this venue for this fixture. Ask at the bar which feed is on.",
     dublinersFoot:
@@ -36,7 +36,7 @@ const UI = {
     afterViking:
       "After the final whistle, return to the centre and walk to the bar you chose. O'Connell's until 03:00 Wed night; Dubliners until 02:00; O'Reilly's until 01:30.",
     psvMetro: [
-      "From Sol station: line 1 to Tribunal, change to line 10 to Santiago Bernabéu — station beside the ground (see metromadrid.es).",
+      "From Sol station: Metro line 1 to Tribunal, then line 10 to Nuevos Ministerios — the open Line 10 stop closest to the stadium while Santiago Bernabéu station stays closed for renovation. Walk about 10–15 minutes up Paseo de la Castellana to the ground, or take the free S10 replacement bus between Nuevos Ministerios and Cuzco (see metromadrid.es).",
       "Leave in good time to be inside before 21:00.",
     ],
     vikingMetro: [
@@ -65,7 +65,7 @@ const UI = {
     after: "Ontmoetingspunt na de wedstrijd",
     threeBarsTitle: "Drie bars — gelijke ontmoetingspunten bij Sol",
     threeBarsIntro:
-      "Dubliners, O'Connell's en O'Reilly's zijn drie onafhankelijke Irish pubs op dezelfde afstand van Sol. Bevestigd op de schermen bij alle drie voor Real Madrid–PSV op dinsdag 24 november.",
+      "Dubliners, O'Connell's en O'Reilly's zijn drie zuster-Irish pubs op dezelfde afstand van Sol. Bevestigd op de schermen bij alle drie voor Real Madrid–PSV op dinsdag 24 november.",
     threeBarsIntroViking: "",
     screening:
       "De wedstrijd staat op de schermen in deze zaal. Vraag aan de bar welke zender erop staat.",
@@ -82,7 +82,7 @@ const UI = {
       "Na het laatste fluitsignaal: metro lijn 10 terug naar het centrum en loop naar de bar die je koos. O'Connell's tot 03:00 di–do; Dubliners tot 02:00 dinsdag; O'Reilly's tot 01:30.",
     afterViking: "",
     psvMetro: [
-      "Vanaf metrostation Sol: lijn 1 naar Tribunal, overstap op lijn 10 naar Santiago Bernabéu — naast het stadion (metromadrid.es).",
+      "Vanaf metrostation Sol: metrolijn 1 naar Tribunal, dan lijn 10 naar Nuevos Ministerios — de open lijn-10-halte het dichtst bij het stadion terwijl station Santiago Bernabéu gesloten blijft voor renovatie. Loop circa 10–15 minuten over de Paseo de la Castellana naar het stadion, of neem de gratis S10-vervangbus tussen Nuevos Ministerios en Cuzco (metromadrid.es).",
       "Vertrek op tijd om vóór 21:00 binnen te zijn.",
     ],
     vikingMetro: [],
@@ -105,7 +105,7 @@ const UI = {
     threeBarsTitle: "Tre barer — like møtesteder ved Sol",
     threeBarsIntro: "",
     threeBarsIntroViking:
-      "Dubliners, O'Connell's og O'Reilly's er tre uavhengige irske puber like langt fra Sol. Bekreftet på skjermene hos alle tre for Atlético–Viking FK onsdag 25. november. Viking FK fra Stavanger, ikke NFLs Minnesota Vikings.",
+      "Dubliners, O'Connell's og O'Reilly's er tre søster-puber like langt fra Sol. Bekreftet på skjermene hos alle tre for Atlético–Viking FK onsdag 25. november. Viking FK fra Stavanger, ikke NFLs Minnesota Vikings.",
     screening:
       "Kampen går på skjermene her. Spør i baren hvilken feed som vises.",
     dublinersFoot:
@@ -145,7 +145,7 @@ const UI = {
     threeBarsIntro: "",
     threeBarsIntroViking: "",
     threeBarsIntroZalgiris:
-      "Dubliners, O'Connell's ir O'Reilly's — trys nepriklausomi airiški barai vienodu atstumu nuo Puerta del Sol. Real Madrid–Žalgiris Kaunas trečiadienį, lapkričio 25 d., vaizdas gyvai mūsų ekranuose visuose trijuose. Pasirinkite vieną adresą grupei.",
+      "Dubliners, O'Connell's ir O'Reilly's — trys seserų airiški barai vienodu atstumu nuo Puerta del Sol. Real Madrid–Žalgiris Kaunas trečiadienį, lapkričio 25 d., vaizdas gyvai mūsų ekranuose visuose trijuose. Pasirinkite vieną adresą grupei.",
     screening:
       "Rungtynės rodomos gyvai mūsų ekranuose. Pasiteiraukite bare, kuris transliacijos signalas rodomas.",
     dublinersFoot:
