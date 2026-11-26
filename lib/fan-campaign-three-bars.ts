@@ -2,11 +2,16 @@ import { BAR_MAPS } from "@/lib/after-game-sunday-8-nov";
 import { HOURS } from "@/lib/venue";
 
 /** Equal presentation order on all campaign pages. */
-export const THREE_BARS_ORDER = ["dubliners", "oconnells", "oreillys"] as const;
+export const THREE_BARS_ORDER = [
+  "dubliners",
+  "oconnells",
+  "oreillys",
+  "fourcorner",
+] as const;
 
 export type BarId = (typeof THREE_BARS_ORDER)[number];
 
-/** Owner campaign 17 Nov 2026 — three bars only (no Four Corner). */
+/** Owner campaign — four sibling bars near Sol (incl. Four Corner). */
 export const THREE_BARS_DATA: Record<
   BarId,
   {
@@ -53,6 +58,17 @@ export const THREE_BARS_DATA: Record<
     hoursNl: "Elke dag 11:30–01:30 (volgens O'Reilly's)",
     hoursNo: "Hver dag 11:30–01:30 (ifølge O'Reilly's)",
     hoursLt: "Kasdien 11:30–01:30 (pagal O'Reilly's)",
+  },
+  fourcorner: {
+    maps: BAR_MAPS.fourCorner,
+    phone: "",
+    tel: "",
+    web: "",
+    address: "Calle de la Victoria 6, 28012 Madrid",
+    hoursEn: "",
+    hoursNl: "",
+    hoursNo: "",
+    hoursLt: "",
   },
 };
 

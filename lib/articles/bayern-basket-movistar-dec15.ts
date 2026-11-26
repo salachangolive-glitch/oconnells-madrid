@@ -4,7 +4,7 @@ import { ADDRESS } from "@/lib/venue";
 /**
  * Real Madrid v FC Bayern München, EuroLeague R17 (E2026_166):
  * Tue 15 Dec 2026, 20:45 Madrid, Movistar Arena.
- * Owner 24 Nov 2026: match on screens at all three bars (O'Connell's, Dubliners, O'Reilly's).
+ * Owner 24 Nov 2026: match on screens at all four bars (O'Connell's, Dubliners, O'Reilly's, Four Corner).
  * Owner 26 Nov 2026 T52: EN «Movistar Arena Bayern Fans Bar» + DE Treffpunkt; Mon 14 + Tue 15 meeting.
  * Dubliners covers the eve before — OC copy stays match-day + Movistar Arena.
  */
@@ -46,7 +46,7 @@ export const BAYERN_BASKET_DEC15 = {
     en: {
       title: "Movistar Arena Bayern Fans Bar — Real Madrid v Bayern, 15 Dec",
       description:
-        "Bayern fans in Madrid: Real Madrid v FC Bayern München, EuroLeague, Tuesday 15 December 2026, 20:45, Movistar Arena. Meeting point at O'Connell St — Mon 14 and Tue 15, before and after. Live on our screens at all three Irish bars near Sol. First come, first served.",
+        "Bayern fans in Madrid: Real Madrid v FC Bayern München, EuroLeague, Tuesday 15 December 2026, 20:45, Movistar Arena. Meeting point at O'Connell St — Mon 14 and Tue 15, before and after. Live on our screens at all four Irish bars near Sol. First come, first served.",
       eyebrow:
         "Real Madrid v FC Bayern · EuroLeague · Tue 15 Dec 2026 · 20:45 · match day Tue 15 Dec",
       h1: "Real Madrid v FC Bayern München, Tuesday 15 December, 20:45",
@@ -81,9 +81,9 @@ export const BAYERN_BASKET_DEC15 = {
           ],
         },
         {
-          title: "Three bars near Sol (game on the screens)",
+          title: "Four bars near Sol (game on the screens)",
           paras: [
-            "Real Madrid v Bayern München is live on our screens at Dubliners, O'Connell's and O'Reilly's — three Irish venues the same short walk from Sol. Pick one address for the night; first come, first served at each door.",
+            "Real Madrid v Bayern München is live on our screens at Dubliners, O'Connell's, O'Reilly's and Four Corner (Calle de la Victoria 6) — four sibling Irish pubs the same short walk from Sol. Pick one address for the night; first come, first served at each door.",
           ],
         },
         {
@@ -116,7 +116,7 @@ export const BAYERN_BASKET_DEC15 = {
     de: {
       title: "Bayern Fans Madrid Treffpunkt — Real Madrid–Bayern, 15. Dez.",
       description:
-        "Bayern-Fans in Madrid: Real Madrid v FC Bayern München, EuroLeague, Dienstag 15. Dezember 2026, 20:45, Movistar Arena. Treffpunkt im O'Connell St — Mo 14. und Di 15., vor und nach dem Spiel. Live auf unseren Screens in allen drei Irish Pubs nahe Sol.",
+        "Bayern-Fans in Madrid: Real Madrid v FC Bayern München, EuroLeague, Dienstag 15. Dezember 2026, 20:45, Movistar Arena. Treffpunkt im O'Connell St — Mo 14. und Di 15., vor und nach dem Spiel. Live auf unseren Screens in allen vier Irish Pubs nahe Sol.",
       eyebrow:
         "Real Madrid v FC Bayern · EuroLeague · Di 15. Dez. 2026 · 20:45 · Spieltag Di 15. Dez.",
       h1: "Bayern-Fans in Madrid: Treffpunkt für das EuroLeague-Spiel in der Movistar Arena",
@@ -151,9 +151,9 @@ export const BAYERN_BASKET_DEC15 = {
           ],
         },
         {
-          title: "Drei Pubs nahe Sol (Spiel auf den Screens)",
+          title: "Vier Pubs nahe Sol (Spiel auf den Screens)",
           paras: [
-            "Real Madrid v Bayern München läuft live auf unseren Screens bei Dubliners, O'Connell's und O'Reilly's — drei Irish Pubs im gleichen kurzen Weg von Sol. Wählt eine Adresse für die Nacht; Reihenfolge nach Ankunft an jeder Tür.",
+            "Real Madrid v Bayern München läuft live auf unseren Screens bei Dubliners, O'Connell's, O'Reilly's und Four Corner (Calle de la Victoria 6) — vier Irish Pubs im gleichen kurzen Weg von Sol. Wählt eine Adresse für die Nacht; Reihenfolge nach Ankunft an jeder Tür.",
           ],
         },
         {

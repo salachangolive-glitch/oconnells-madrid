@@ -12,13 +12,13 @@ const UI = {
     metroLink: "Metro de Madrid lines and times",
     before: "Meeting point before the match",
     after: "Meeting point after the match",
-    threeBarsTitle: "Three bars — equal meeting points near Sol",
+    threeBarsTitle: "Four bars — equal meeting points near Sol",
     threeBarsIntro:
-      "Dubliners, O'Connell's and O'Reilly's are three sibling Irish pubs the same distance from Sol. Confirmed on the screens at all three for Real Madrid–PSV on Tuesday 24 November. Pick one door for your group.",
+      "Dubliners, O'Connell's, O'Reilly's and Four Corner are four sibling Irish pubs the same distance from Sol. Confirmed on the screens at all four for Real Madrid–PSV on Tuesday 24 November. Pick one door for your group.",
     threeBarsIntroViking:
-      "Dubliners, O'Connell's and O'Reilly's are three sibling Irish pubs the same distance from Sol. Confirmed on the screens at all three for Atlético–Viking FK on Wednesday 25 November. Viking FK from Stavanger, not the NFL Minnesota Vikings.",
+      "Dubliners, O'Connell's, O'Reilly's and Four Corner are four sibling Irish pubs the same distance from Sol. Confirmed on the screens at all four for Atlético–Viking FK on Wednesday 25 November. Viking FK from Stavanger, not the NFL Minnesota Vikings.",
     threeBarsIntroZalgiris:
-      "Dubliners, O'Connell's and O'Reilly's are three sibling Irish pubs the same walk from Puerta del Sol. Live on our screens at all three for Real Madrid v Žalgiris Kaunas on Wednesday 25 November. Pick one door for your group.",
+      "Dubliners, O'Connell's, O'Reilly's and Four Corner are four sibling Irish pubs the same walk from Puerta del Sol. Live on our screens at all four for Real Madrid v Žalgiris Kaunas on Wednesday 25 November. Pick one door for your group.",
     screening:
       "The match is on the screens at this venue for this fixture. Ask at the bar which feed is on.",
     dublinersFoot:
@@ -27,6 +27,8 @@ const UI = {
       "From Puerta del Sol, walk to Calle de Espoz y Mina 7 — about two minutes. Red facade, gold O'Connell St lettering.",
     oreillysFoot:
       "From Puerta del Sol, walk east to Pasaje de Matheu 4 — covered arcade, about three minutes on foot.",
+    fourcornerFoot:
+      "From Puerta del Sol, walk to Calle de la Victoria 6 — about three minutes. Four Corner is a sibling meeting point near Sol.",
     beforePsv:
       "Share this address on your group chat and meet here before you leave for the Bernabéu. Dubliners opens from 12:00, O'Connell's from 18:00, O'Reilly's from 11:30 on match Tuesday.",
     beforeViking:
@@ -63,9 +65,9 @@ const UI = {
     metroLink: "Metro de Madrid lijnen en tijden",
     before: "Ontmoetingspunt vóór de wedstrijd",
     after: "Ontmoetingspunt na de wedstrijd",
-    threeBarsTitle: "Drie bars — gelijke ontmoetingspunten bij Sol",
+    threeBarsTitle: "Vier bars — gelijke ontmoetingspunten bij Sol",
     threeBarsIntro:
-      "Dubliners, O'Connell's en O'Reilly's zijn drie zuster-Irish pubs op dezelfde afstand van Sol. Bevestigd op de schermen bij alle drie voor Real Madrid–PSV op dinsdag 24 november.",
+      "Dubliners, O'Connell's, O'Reilly's en Four Corner zijn vier zuster-Irish pubs op dezelfde afstand van Sol. Bevestigd op de schermen bij alle vier voor Real Madrid–PSV op dinsdag 24 november.",
     threeBarsIntroViking: "",
     screening:
       "De wedstrijd staat op de schermen in deze zaal. Vraag aan de bar welke zender erop staat.",
@@ -75,6 +77,8 @@ const UI = {
       "Vanaf Puerta del Sol naar Calle de Espoz y Mina 7 — ongeveer twee minuten. Rode gevel, gouden O'Connell St-opschrift.",
     oreillysFoot:
       "Vanaf Puerta del Sol naar Pasaje de Matheu 4 — overdekte passage, ongeveer drie minuten lopen.",
+    fourcornerFoot:
+      "Vanaf Puerta del Sol naar Calle de la Victoria 6 — ongeveer drie minuten. Four Corner is een zuster-ontmoetingspunt bij Sol.",
     beforePsv:
       "Deel dit adres in je groepschat en spreek hier af vóór je naar het Bernabéu gaat. Dubliners open vanaf 12:00, O'Connell's vanaf 18:00, O'Reilly's vanaf 11:30 op wedstrijddinsdag.",
     beforeViking: "",
@@ -102,10 +106,10 @@ const UI = {
     metroLink: "Metro de Madrid linjer og tider",
     before: "Møtested før kampen",
     after: "Møtested etter kampen",
-    threeBarsTitle: "Tre barer — like møtesteder ved Sol",
+    threeBarsTitle: "Fire barer — like møtesteder ved Sol",
     threeBarsIntro: "",
     threeBarsIntroViking:
-      "Dubliners, O'Connell's og O'Reilly's er tre søster-puber like langt fra Sol. Bekreftet på skjermene hos alle tre for Atlético–Viking FK onsdag 25. november. Viking FK fra Stavanger, ikke NFLs Minnesota Vikings.",
+      "Dubliners, O'Connell's, O'Reilly's og Four Corner er fire søster-puber like langt fra Sol. Bekreftet på skjermene hos alle fire for Atlético–Viking FK onsdag 25. november. Viking FK fra Stavanger, ikke NFLs Minnesota Vikings.",
     screening:
       "Kampen går på skjermene her. Spør i baren hvilken feed som vises.",
     dublinersFoot:
@@ -114,6 +118,8 @@ const UI = {
       "Fra Puerta del Sol til Calle de Espoz y Mina 7 — ca. to minutter. Rød fasade, gullskrift O'Connell St.",
     oreillysFoot:
       "Fra Puerta del Sol østover til Pasaje de Matheu 4 — overbygget passasje, ca. tre minutter.",
+    fourcornerFoot:
+      "Fra Puerta del Sol til Calle de la Victoria 6 — ca. tre minutter. Four Corner er et søster-møtested ved Sol.",
     beforePsv: "",
     beforeViking:
       "Del denne adressen i gruppechatten og møt her før du drar til Metropolitano. Dubliners fra 12:00, O'Connell's fra 18:00, O'Reilly's fra 11:30 på kampdagen.",
@@ -141,11 +147,11 @@ const UI = {
     metroLink: "Metro de Madrido linijos ir laikai",
     before: "Susitikimo vieta prieš rungtynes",
     after: "Susitikimo vieta po rungtynių",
-    threeBarsTitle: "Trys barai — vienodos susitikimo vietos prie Sol",
+    threeBarsTitle: "Keturi barai — vienodos susitikimo vietos prie Sol",
     threeBarsIntro: "",
     threeBarsIntroViking: "",
     threeBarsIntroZalgiris:
-      "Dubliners, O'Connell's ir O'Reilly's — trys seserų airiški barai vienodu atstumu nuo Puerta del Sol. Real Madrid–Žalgiris Kaunas trečiadienį, lapkričio 25 d., vaizdas gyvai mūsų ekranuose visuose trijuose. Pasirinkite vieną adresą grupei.",
+      "Dubliners, O'Connell's, O'Reilly's ir Four Corner — keturi seserų airiški barai vienodu atstumu nuo Puerta del Sol. Real Madrid–Žalgiris Kaunas trečiadienį, lapkričio 25 d., vaizdas gyvai mūsų ekranuose visuose keturiuose. Pasirinkite vieną adresą grupei.",
     screening:
       "Rungtynės rodomos gyvai mūsų ekranuose. Pasiteiraukite bare, kuris transliacijos signalas rodomas.",
     dublinersFoot:
@@ -154,6 +160,8 @@ const UI = {
       "Nuo Puerta del Sol į Calle de Espoz y Mina 7 — apie dvi minutes. Raudonas fasadas, auksinis O'Connell St užrašas.",
     oreillysFoot:
       "Nuo Puerta del Sol į rytus iki Pasaje de Matheu 4 — dengtas praėjimas, apie tris minutes pėsčiomis.",
+    fourcornerFoot:
+      "Nuo Puerta del Sol iki Calle de la Victoria 6 — apie tris minutes. Four Corner — seserų susitikimo vieta prie Sol.",
     beforePsv: "",
     beforeViking: "",
     afterPsv: "",
@@ -172,7 +180,11 @@ const UI = {
 } as const;
 
 export function footFromSol(barId: BarId, locale: GuideLocale): string {
-  const key = `${barId}Foot` as "dublinersFoot" | "oconnellsFoot" | "oreillysFoot";
+  const key = `${barId === "fourcorner" ? "fourcorner" : barId}Foot` as
+    | "dublinersFoot"
+    | "oconnellsFoot"
+    | "oreillysFoot"
+    | "fourcornerFoot";
   return UI[locale][key];
 }
 
@@ -225,6 +237,12 @@ const NAMES: Record<BarId, Record<GuideLocale, string>> = {
     nl: "O'Reilly's Restaurant Bar",
     no: "O'Reilly's Restaurant Bar",
     lt: "O'Reilly's Restaurant Bar",
+  },
+  fourcorner: {
+    en: "Four Corner",
+    nl: "Four Corner",
+    no: "Four Corner",
+    lt: "Four Corner",
   },
 };
 
