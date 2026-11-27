@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { HomeWeekendVideo2829 } from "@/components/HomeWeekendVideo2829";
 import { DirectionsButton, HowToGetHere } from "@/components/HowToGetHere";
 import { PostMatchBanner } from "@/components/PostMatchBanner";
 import { HomeBarcaAtleticoDec2Block } from "@/components/HomeBarcaAtleticoDec2Block";
@@ -37,7 +38,12 @@ export default function HomePage() {
     <PageShell
       locale="en"
       altLangHref="/es"
-      cover={<VenueHero variant="hero" />}
+      cover={
+        <>
+          <HomeWeekendVideo2829 locale="en" />
+          <VenueHero variant="hero" />
+        </>
+      }
     >
       <HomeBarcaAtleticoDec2Block locale="en" />
       <PostMatchBanner locale="en" />

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { HomeWeekendVideo2829 } from "@/components/HomeWeekendVideo2829";
 import { DirectionsButton, HowToGetHere } from "@/components/HowToGetHere";
 import { PostMatchBanner } from "@/components/PostMatchBanner";
 import { HomeBarcaAtleticoDec2Block } from "@/components/HomeBarcaAtleticoDec2Block";
@@ -39,10 +40,13 @@ export default function EsHomePage() {
       locale="es"
       altLangHref="/"
       cover={
-        <VenueHero
-          variant="hero"
-          alt="Fachada del pub irlandés O'Connell St, Calle de Espoz y Mina 7, Madrid"
-        />
+        <>
+          <HomeWeekendVideo2829 locale="es" />
+          <VenueHero
+            variant="hero"
+            alt="Fachada del pub irlandés O'Connell St, Calle de Espoz y Mina 7, Madrid"
+          />
+        </>
       }
     >
       <HomeBarcaAtleticoDec2Block locale="es" />
