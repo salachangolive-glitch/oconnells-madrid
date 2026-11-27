@@ -97,7 +97,7 @@ export function CookieBanner({ locale = "en" }: { locale?: Locale }) {
   if (!open) return null;
 
   const btn =
-    "min-h-11 flex-1 rounded-sm border border-gold/60 px-4 py-2 text-sm font-semibold text-cream transition hover:bg-gold hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold sm:flex-none sm:min-w-32";
+    "min-h-10 flex-1 rounded-sm border border-gold/60 px-4 py-1.5 text-sm font-semibold text-cream transition hover:bg-gold hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold sm:min-h-11 sm:py-2 sm:flex-none sm:min-w-32";
 
   return (
     <div
@@ -107,8 +107,8 @@ export function CookieBanner({ locale = "en" }: { locale?: Locale }) {
       data-cookie-banner=""
       className="fixed inset-x-0 bottom-[calc(4.25rem+env(safe-area-inset-bottom,0px))] z-[60] px-3"
     >
-      <div className="mx-auto max-w-3xl rounded-md border border-gold/30 bg-black/95 p-4 text-sm text-cream/85 shadow-lg backdrop-blur-md">
-        <p className="leading-relaxed">
+      <div className="mx-auto max-w-3xl rounded-md border border-gold/30 bg-black/95 px-3 py-2.5 text-xs text-cream/85 sm:p-4 sm:text-sm shadow-lg backdrop-blur-md">
+        <p className="leading-snug sm:leading-relaxed">
           {isEs ? (
             <>
               Usamos cookies de analítica (Google Analytics) solo si las
@@ -130,7 +130,7 @@ export function CookieBanner({ locale = "en" }: { locale?: Locale }) {
             </>
           )}
         </p>
-        <div className="mt-3 flex gap-3">
+        <div className="mt-2 flex gap-2 sm:mt-3 sm:gap-3">
           <button
             type="button"
             data-cookie-choice="denied"
