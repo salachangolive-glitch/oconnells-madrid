@@ -41,6 +41,8 @@ export type MatchMeetingFold = {
   solProximity: string;
   /** Optional line for visiting fans (e.g. NL on EN PSV guide). */
   extraLang?: { lang: string; text: string };
+  /** Overrides the place_id Maps link, e.g. the GBP CID link. */
+  mapsUrl?: string;
 };
 
 export type MatchArticleData = {
@@ -182,7 +184,7 @@ export function MatchNewsArticle({ data, locale }: { data: MatchArticleData; loc
       {data.showSat28NovNotice ? (
         <Saturday28NovOpeningNotice locale={locale} />
       ) : null}
-      {fold ? <MatchMeetingFoldBlock fold={fold} mapsUrl={MAPS_URL} /> : null}
+      {fold ? <MatchMeetingFoldBlock fold={fold} mapsUrl={fold.mapsUrl ?? MAPS_URL} /> : null}
       <InteriorPhoto
         src={data.interiorSrc ?? "/images/interior/bar-taps.webp"}
         alt={c.alt}
