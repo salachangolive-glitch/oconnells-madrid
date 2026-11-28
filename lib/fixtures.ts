@@ -471,6 +471,7 @@ export const FIXTURES: Fixture[] = [
   { id: "2026-12-09-arsenal-realmadrid", competition: "UEFA Champions League", homeTeam: "Arsenal", awayTeam: "Real Madrid", date: "2026-12-09", kickoffMadrid: "21:00", note: "League phase, Arsenal Stadium; match.uefa.com/v5 id 2049653 kickOffTime 2026-12-09T20:00:00Z = 21:00 CET (read 2026-11-26); https://www.uefa.com/uefachampionsleague/match/2049653/; channel not named; DG order 26 Nov 2026 11:13", line: { en: "Arsenal v Real Madrid on Wednesday night: Champions League live on our screens near Sol.", es: "Arsenal–Real Madrid el miércoles por la noche: Champions en directo en nuestras pantallas junto a Sol." } },
   { id: "2026-11-28-madrid-alaves", competition: "LaLiga", homeTeam: "Real Madrid", awayTeam: "Alavés", date: "2026-11-28", kickoffMadrid: "21:00", note: "J14, Bernabéu; laliga.com gameweek-14 2026-11-28T20:00Z = 21:00 CET (read 2026-11-19); channel not named; Confirmed broadcast: owner order 20 Nov 2026 14:42 (all football leagues)", line: { en: "Real Madrid v Alavés on Saturday night at the Bernabéu: watch LaLiga live at an Irish pub near Sol.", es: "Real Madrid–Alavés el sábado por la noche en el Bernabéu: LaLiga en directo en un pub irlandés junto a Sol." } },
   { id: "2026-11-28-palmeiras-estudiantes", competition: "Copa Libertadores", homeTeam: "Palmeiras", awayTeam: "Estudiantes de La Plata", date: "2026-11-28", kickoffMadrid: "21:00", note: "Final, Estadio Centenario (Montevideo); conmebol.com 25 Nov 2026 «17:00h (hora local)» = 21:00 CET, afa.com.ar agenda 17.00; channel not named; DG order 27 Nov 2026 12:06 (LIVE alongside Real Madrid–Alavés)", line: { en: "Copa Libertadores final on Saturday night: Palmeiras v Estudiantes live on our screens near Sol. Both sets of fans welcome, before and after.", es: "Final de la Copa Libertadores el sábado por la noche: Palmeiras–Estudiantes en directo en nuestras pantallas junto a Sol. Las dos aficiones, bienvenidas antes y después." }, fanLine: { lang: "pt", text: "Final da Libertadores ao vivo nas nossas telas, perto da Puerta del Sol." } },
+  { id: "2026-11-28-ucla-usc", competition: "NCAA Football", homeTeam: "UCLA", awayTeam: "USC", date: "2026-11-28", kickoffMadrid: "21:30", note: "College football, Rose Bowl (Pasadena); uclabruins.com + usctrojans.com 2026 schedules Sat Nov 28 12:30 PM PST = 21:30 CET (read 2026-11-28); channel not named; owner confirms LIVE 28 Nov 2026", line: { en: "UCLA v USC, college football from the Rose Bowl, Saturday 28 November, 21:30: live on our screens near Sol.", es: "UCLA–USC, fútbol americano universitario desde el Rose Bowl, sábado 28 de noviembre, 21:30: en directo en nuestras pantallas junto a Sol." } },
   // MotoGP Valencia (season finale), Circuit Ricardo Tormo: https://www.motogp.com/en/news/2026/11/25/time-schedule-motul-grand-prix-of-valencia/1268060
   // (local time UTC+1 = Madrid; read 2026-11-27). Sat 28 doors 14:00 (exception), Sun doors 14:00 = race start.
   { id: "2026-11-28-valencia-gp-sprint", competition: "MotoGP", homeTeam: "Valencia Grand Prix", awayTeam: "", title: { en: "Valencia Grand Prix – Tissot Sprint", es: "Gran Premio de la Comunitat Valenciana – Tissot Sprint" }, date: "2026-11-28", kickoffMadrid: "15:00", note: "Season finale, Ricardo Tormo; motogp.com time schedule Sat 28 Nov 15:00 UTC+1 = 15:00 CET (read 2026-11-27); channel not named; LIVE: owner order 26 Nov 2026 11:13; DG 27 Nov", line: { en: "MotoGP Tissot Sprint from Valencia on Saturday at 15:00: live on our screens near Sol.", es: "Tissot Sprint de MotoGP en Valencia el sábado a las 15:00: en directo en nuestras pantallas junto a Sol." } },
@@ -855,6 +856,7 @@ export const SPORT_DURATION_MIN = {
   football: 120,
   rugby: 120,
   nfl: 210,
+  collegefootball: 225,
   nba: 150,
   baseball: 210,
   hockey: 150,
@@ -891,6 +893,7 @@ const COMPETITION_SPORT: Record<string, Sport> = {
   "World Rugby Nations Cup": "rugby",
   "Nations Championship": "rugby",
   NFL: "nfl",
+  "NCAA Football": "collegefootball",
   NBA: "nba",
   EuroLeague: "basketball",
   "MLB World Series": "baseball",
