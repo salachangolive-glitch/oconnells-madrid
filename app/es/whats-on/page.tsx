@@ -172,6 +172,14 @@ export default function EsWhatsOnPage() {
           <Link href="/de/real-madrid-bayern-basketball-treffpunkt-sol" hrefLang="de" className="text-gold underline">
             Bayern Fans Madrid Treffpunkt (alemán)
           </Link>
+          {" · "}
+          <Link href="/news/real-madrid-bayern-sol-goya-and-back" hrefLang="en" className="text-gold underline">
+            De Sol al Movistar Arena y vuelta (inglés)
+          </Link>
+          {" · "}
+          <Link href="/de/real-madrid-bayern-hin-und-zurueck-sol-goya" hrefLang="de" className="text-gold underline">
+            Hin und zurück: Sol – Goya (alemán)
+          </Link>
         </p>
       ) : null}
       {madridTodayYmd(agendaBuildNow()) <= "2026-11-25" ? (
@@ -215,6 +223,10 @@ export default function EsWhatsOnPage() {
           {" · "}
           <Link href="/es/noticias/final-rugby-francia-sudafrica-domingo-sol" className="text-gold underline">
             La final: Francia–Sudáfrica
+          </Link>
+          {" · "}
+          <Link href="/es/noticias/escocia-argentina-rugby-domingo-sol" className="text-gold underline">
+            Escocia–Argentina: domingo 14:10
           </Link>
         </p>
       ) : null}

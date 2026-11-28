@@ -10,8 +10,56 @@ import { ADDRESS, MAPS_URL } from "@/lib/venue";
 
 type GuideLocale = "en" | "de";
 
-export function BayernBasketMovistarArticle({ locale }: { locale: GuideLocale }) {
-  const d = BAYERN_BASKET_DEC15;
+/** Shape shared by the Bayern EN/DE guides (15 Dec 2026). */
+export type BayernGuideData = {
+  paths: Record<GuideLocale, string>;
+  published: string;
+  start: string;
+  arenaUrl: string;
+  euroleagueUrl: string;
+  meetingFold: Record<
+    GuideLocale,
+    {
+      address: string;
+      mapsLabel: string;
+      fcfs: string;
+      solProximity: string;
+      extraLang: { lang: string; text: string };
+    }
+  >;
+  copy: Record<
+    GuideLocale,
+    {
+      title: string;
+      description: string;
+      eyebrow: string;
+      h1: string;
+      lead: string;
+      screeningName: string;
+      sections: readonly {
+        title: string;
+        paras?: readonly string[];
+        list?: readonly string[];
+        note?: string;
+      }[];
+      find: string;
+      dir: string;
+      more: string;
+      links: readonly { href: string; label: string }[];
+      other: { href: string; label: string; lang: string };
+      alt: string;
+    }
+  >;
+};
+
+export function BayernBasketMovistarArticle({
+  locale,
+  data = BAYERN_BASKET_DEC15,
+}: {
+  locale: GuideLocale;
+  data?: BayernGuideData;
+}) {
+  const d = data;
   const path = d.paths[locale];
   const c = d.copy[locale];
   const fold = d.meetingFold[locale];
@@ -76,18 +124,17 @@ export function BayernBasketMovistarArticle({ locale }: { locale: GuideLocale })
       />
       {c.sections.map((s) => (
         <Section key={s.title} title={s.title}>
-          {"paras" in s &&
-            s.paras.map((p: string) => (
-              <p key={p}>{p}</p>
-            ))}
-          {"list" in s ? (
+          {s.paras?.map((p: string) => (
+            <p key={p}>{p}</p>
+          ))}
+          {s.list ? (
             <ul className="list-disc space-y-1 pl-5">
               {s.list.map((x: string) => (
                 <li key={x}>{x}</li>
               ))}
             </ul>
           ) : null}
-          {"note" in s && s.note ? (
+          {s.note ? (
             <p className="text-sm text-cream-muted">
               {s.note}{" "}
               <a

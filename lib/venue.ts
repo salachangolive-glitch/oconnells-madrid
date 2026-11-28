@@ -156,6 +156,8 @@ export const EN_PATHS = [
   "/news/nations-championship-finals-weekend-plan-sol",
   "/news/ireland-australia-rugby-friday-night-sol",
   "/news/france-south-africa-rugby-final-sunday-sol",
+  "/news/scotland-argentina-rugby-sunday-sol",
+  "/news/real-madrid-bayern-sol-goya-and-back",
   "/news/czechia-spain-thursday-night-sol",
   "/news/england-croatia-thursday-night-sol",
   "/news/germany-netherlands-monday-night-sol",
@@ -250,6 +252,7 @@ export const ES_PATHS = [
   "/es/noticias/finales-nations-championship-plan-finde-sol",
   "/es/noticias/irlanda-australia-rugby-viernes-noche-sol",
   "/es/noticias/final-rugby-francia-sudafrica-domingo-sol",
+  "/es/noticias/escocia-argentina-rugby-domingo-sol",
   "/es/noticias/despues-real-madrid-zalgiris-goya-a-sol",
   "/es/noticias/chequia-espana-jueves-sol",
   "/es/noticias/espana-inglaterra-domingo-sol",
@@ -277,6 +280,7 @@ export const ES_PATHS = [
 export const DE_PATHS = [
   "/de",
   "/de/real-madrid-bayern-basketball-treffpunkt-sol",
+  "/de/real-madrid-bayern-hin-und-zurueck-sol-goya",
 ] as const;
 
 export const ALL_CONTENT_PATHS = [...EN_PATHS, ...ES_PATHS, ...DE_PATHS] as const;
@@ -329,6 +333,7 @@ export const HREFLANG_PAIRS: Record<string, string | undefined> = {
     "/es/noticias/finales-nations-championship-plan-finde-sol",
   "/news/ireland-australia-rugby-friday-night-sol": "/es/noticias/irlanda-australia-rugby-viernes-noche-sol",
   "/news/france-south-africa-rugby-final-sunday-sol": "/es/noticias/final-rugby-francia-sudafrica-domingo-sol",
+  "/news/scotland-argentina-rugby-sunday-sol": "/es/noticias/escocia-argentina-rugby-domingo-sol",
   "/news/after-real-madrid-zalgiris-goya-to-sol":
     "/es/noticias/despues-real-madrid-zalgiris-goya-a-sol",
   "/news/czechia-spain-thursday-night-sol": "/es/noticias/chequia-espana-jueves-sol",
@@ -392,6 +397,10 @@ export const HREFLANG_GROUPS: Record<
   "/news/movistar-arena-bayern-fans-bar": {
     en: "/news/movistar-arena-bayern-fans-bar",
     de: "/de/real-madrid-bayern-basketball-treffpunkt-sol",
+  },
+  "/news/real-madrid-bayern-sol-goya-and-back": {
+    en: "/news/real-madrid-bayern-sol-goya-and-back",
+    de: "/de/real-madrid-bayern-hin-und-zurueck-sol-goya",
   },
 };
 

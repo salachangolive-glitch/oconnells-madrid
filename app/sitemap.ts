@@ -103,6 +103,10 @@ const EVENT_LAST_DAY: Record<string, string> = {
   "/news/atletico-viking-wednesday-night-sol": "2026-11-25",
   "/news/movistar-arena-bayern-fans-bar": "2026-12-15",
   "/de/real-madrid-bayern-basketball-treffpunkt-sol": "2026-12-15",
+  "/news/real-madrid-bayern-sol-goya-and-back": "2026-12-15",
+  "/de/real-madrid-bayern-hin-und-zurueck-sol-goya": "2026-12-15",
+  "/news/scotland-argentina-rugby-sunday-sol": "2026-11-29",
+  "/es/noticias/escocia-argentina-rugby-domingo-sol": "2026-11-29",
   "/es/noticias/atletico-viking-miercoles-sol": "2026-11-25",
 };
 

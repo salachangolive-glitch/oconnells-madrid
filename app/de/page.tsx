@@ -21,6 +21,11 @@ const DE_UPCOMING: DeItem[] = [
     title: "Bayern Fans Madrid Treffpunkt — Real Madrid–Bayern, 15. Dez.",
     text: "Dienstag, 15. Dezember 2026, 20:45 Uhr, Movistar Arena: Treffpunkt Mo 14. und Di 15. — live auf unseren Screens in allen drei Pubs nahe Sol.",
   },
+  {
+    href: "/de/real-madrid-bayern-hin-und-zurueck-sol-goya",
+    title: "Real Madrid–Bayern: Von Sol zur Movistar Arena und zurück",
+    text: "Metro-Linie 2 von Sol nach Goya ohne Umstieg, zurück Richtung Cuatro Caminos — Treffpunkt im O'Connell St vor und nach dem Spiel, Di 15. Dez. bis 03:00 Uhr.",
+  },
 ];
 
 export const metadata = buildMetadata({

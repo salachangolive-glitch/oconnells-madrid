@@ -164,6 +164,14 @@ export default function WhatsOnPage() {
           <Link href="/de/real-madrid-bayern-basketball-treffpunkt-sol" hrefLang="de" className="text-gold underline">
             Bayern Fans Madrid Treffpunkt (Deutsch)
           </Link>
+          {" · "}
+          <Link href="/news/real-madrid-bayern-sol-goya-and-back" className="text-gold underline">
+            Sol to the Movistar Arena and back
+          </Link>
+          {" · "}
+          <Link href="/de/real-madrid-bayern-hin-und-zurueck-sol-goya" hrefLang="de" className="text-gold underline">
+            Hin und zurück: Sol – Goya (Deutsch)
+          </Link>
         </p>
       ) : null}
       {/* Atlético v Viking FK, UCL MD5 (owner 25 Nov 08:00 — Champions lead before EuroLeague and rugby). */}
@@ -214,6 +222,10 @@ export default function WhatsOnPage() {
           {" · "}
           <Link href="/news/france-south-africa-rugby-final-sunday-sol" className="text-gold underline">
             The final: France v South Africa
+          </Link>
+          {" · "}
+          <Link href="/news/scotland-argentina-rugby-sunday-sol" className="text-gold underline">
+            Scotland v Argentina: Sunday 14:10
           </Link>
         </p>
       ) : null}

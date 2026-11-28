@@ -101,6 +101,7 @@ export const BAYERN_BASKET_DEC15 = {
       links: [
         { href: "/whats-on", label: "What's On — Real Madrid v Bayern listed" },
         { href: "/location", label: "Opening hours and location" },
+        { href: "/news/real-madrid-bayern-sol-goya-and-back", label: "Sol to the Movistar Arena and back on match night" },
         {
           href: "/de/real-madrid-bayern-basketball-treffpunkt-sol",
           label: "Bayern Fans Madrid Treffpunkt (Deutsch)",
@@ -171,6 +172,7 @@ export const BAYERN_BASKET_DEC15 = {
       links: [
         { href: "/whats-on", label: "What's On (Englisch)" },
         { href: "/de", label: "O'Connell St auf Deutsch" },
+        { href: "/de/real-madrid-bayern-hin-und-zurueck-sol-goya", label: "Hin und zurück: von Sol zur Movistar Arena" },
         {
           href: "/news/movistar-arena-bayern-fans-bar",
           label: "Movistar Arena Bayern Fans Bar (English)",
