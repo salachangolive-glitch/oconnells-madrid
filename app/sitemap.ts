@@ -1,13 +1,163 @@
 import type { MetadataRoute } from "next";
-import { ALL_CONTENT_PATHS, getSiteUrl } from "@/lib/venue";
+import LASTMOD from "@/lib/lastmod.json";
+import { isPlayedMatchPage } from "@/lib/match-pages";
+import { ALL_CONTENT_PATHS, getSiteUrl, HREFLANG_GROUPS, HREFLANG_PAIRS } from "@/lib/venue";
+
+const HOME_GROUP = HREFLANG_GROUPS["/"];
+
+/** Home EN/ES + German index /de: en/es/de/x-default alternates. */
+function homeAlternates(base: string, path: string) {
+  if (!HOME_GROUP?.es || !HOME_GROUP.de || !["/", "/es", "/de"].includes(path)) return undefined;
+  return {
+    languages: {
+      en: `${base}/`,
+      es: `${base}${HOME_GROUP.es}`,
+      de: `${base}${HOME_GROUP.de}`,
+      "x-default": `${base}/`,
+    },
+  };
+}
+
+/** News pages: sitemap carries en/es/x-default alternates (hreflang). */
+function newsAlternates(base: string, path: string) {
+  const isNews = path.startsWith("/news/") || path.startsWith("/es/noticias/");
+  if (!isNews) return undefined;
+  const en = path.startsWith("/es/")
+    ? Object.entries(HREFLANG_PAIRS).find(([, es]) => es === path)?.[0]
+    : path;
+  const es = en ? HREFLANG_PAIRS[en] : undefined;
+  if (!en || !es) return undefined;
+  return {
+    languages: {
+      en: `${base}${en}`,
+      es: `${base}${es}`,
+      "x-default": `${base}${en}`,
+    },
+  };
+}
+
+export const dynamic = "force-static";
+
+/**
+ * Event pages leave the sitemap once the event day is over (Madrid date).
+ * Pages stay online (they may have traffic); only the sitemap entry goes.
+ */
+const EVENT_LAST_DAY: Record<string, string> = {
+  "/halloween-madrid-sol": "2026-10-31",
+  "/es/halloween-madrid-sol": "2026-10-31",
+  "/news/getafe-brighton-thursday-night-sol": "2026-11-05",
+  "/es/noticias/getafe-brighton-jueves-sol": "2026-11-05",
+  "/news/duran-duran-madrid-gig-night-sol": "2026-11-07",
+  "/liverpool-1500-usual-lock-oconnells": "2026-11-08",
+  "/es/liverpool-1500-cerrojo-habitual-oconnells": "2026-11-08",
+  "/chelsea-1500-same-english-hour": "2026-11-08",
+  "/es/chelsea-1500-misma-hora-inglesa": "2026-11-08",
+  "/united-1730-after-the-pair-oconnells": "2026-11-08",
+  "/es/united-1730-despues-del-par-oconnells": "2026-11-08",
+  "/news/bryan-adams-madrid-gig-night-sol": "2026-11-10",
+  "/news/czechia-spain-thursday-night-sol": "2026-11-12",
+  "/es/noticias/chequia-espana-jueves-sol": "2026-11-12",
+  "/news/england-croatia-thursday-night-sol": "2026-11-12",
+  "/news/real-madrid-crvena-zvezda-thursday-sol": "2026-11-12",
+  "/es/noticias/real-madrid-crvena-zvezda-jueves-sol": "2026-11-12",
+  "/news/serbia-germany-friday-night-sol": "2026-11-13",
+  "/news/spain-chile-rugby-saturday-sol": "2026-11-14",
+  "/es/noticias/espana-chile-rugby-sabado-sol": "2026-11-14",
+  "/news/spain-england-sunday-night-sol": "2026-11-15",
+  "/es/noticias/espana-inglaterra-domingo-sol": "2026-11-15",
+  "/news/germany-netherlands-monday-night-sol": "2026-11-16",
+  "/news/real-madrid-inter-womens-champions-league-sol": "2026-11-18",
+  "/es/noticias/real-madrid-inter-champions-femenina-sol": "2026-11-18",
+  "/news/inter-fans-madrid-womens-champions-league-sol": "2026-11-18",
+  "/es/noticias/aficionados-inter-madrid-champions-femenina-sol": "2026-11-18",
+  "/news/ireland-kosovo-tuesday-night-sol": "2026-11-17",
+  "/es/noticias/irlanda-kosovo-martes-sol": "2026-11-17",
+  "/news/rugby-saturday-sol-21-nov": "2026-11-21",
+  "/es/noticias/rugby-sabado-sol-21-nov": "2026-11-21",
+  "/news/nations-championship-finals-twickenham-sol": "2026-11-29",
+  "/es/noticias/nations-championship-finals-fin-de-semana-sol": "2026-11-29",
+  "/news/nations-championship-finals-weekend-plan-sol": "2026-11-29",
+  "/es/noticias/finales-nations-championship-plan-finde-sol": "2026-11-29",
+  "/news/ireland-australia-rugby-friday-night-sol": "2026-11-29",
+  "/es/noticias/irlanda-australia-rugby-viernes-noche-sol": "2026-11-29",
+  "/news/france-south-africa-rugby-final-sunday-sol": "2026-11-29",
+  "/es/noticias/final-rugby-francia-sudafrica-domingo-sol": "2026-11-29",
+  "/news/newcastle-arsenal-saturday-night-sol": "2026-11-21",
+  "/es/noticias/newcastle-arsenal-sabado-sol": "2026-11-21",
+  "/news/liverpool-manchester-united-sunday-sol": "2026-11-22",
+  "/es/noticias/liverpool-manchester-united-domingo-sol": "2026-11-22",
+  "/news/arsenal-manchester-city-sunday-sol": "2026-11-29",
+  "/es/noticias/arsenal-manchester-city-domingo-sol": "2026-11-29",
+  "/news/real-madrid-celta-saturday-night-sol": "2026-11-21",
+  "/news/real-madrid-alaves-saturday-night-sol": "2026-11-28",
+  "/news/tokio-hotel-madrid-gig-night-sol": "2026-11-23",
+  "/news/psv-fans-three-bars-sol": "2026-11-24",
+  "/news/psv-fans-drie-bars-sol": "2026-11-24",
+  "/news/viking-fans-three-bars-sol": "2026-11-25",
+  "/news/viking-fans-tre-barer-sol": "2026-11-25",
+  "/news/real-madrid-psv-tuesday-night-sol": "2026-11-24",
+  "/es/noticias/real-madrid-psv-martes-sol": "2026-11-24",
+  "/news/real-madrid-zalgiris-wednesday-night-sol": "2026-11-25",
+  "/news/after-real-madrid-zalgiris-goya-to-sol": "2026-11-25",
+  "/es/noticias/despues-real-madrid-zalgiris-goya-a-sol": "2026-11-25",
+  "/news/atletico-viking-wednesday-night-sol": "2026-11-25",
+  "/news/movistar-arena-bayern-fans-bar": "2026-12-15",
+  "/de/real-madrid-bayern-basketball-treffpunkt-sol": "2026-12-15",
+  "/news/real-madrid-bayern-sol-goya-and-back": "2026-12-15",
+  "/de/real-madrid-bayern-hin-und-zurueck-sol-goya": "2026-12-15",
+  "/news/scotland-argentina-rugby-sunday-sol": "2026-11-29",
+  "/es/noticias/escocia-argentina-rugby-domingo-sol": "2026-11-29",
+  "/es/noticias/atletico-viking-miercoles-sol": "2026-11-25",
+};
+
+/** Reachable URLs omitted from the index (noindex pages). */
+const SITEMAP_EXCLUDE = new Set([
+  "/news/zalgiris-fans-three-bars-sol",
+  "/news/zalgiris-fans-trys-barai-sol",
+  // Oktoberfest Madrid 2026 retired 16 Nov 2026 (ended 15 Nov); stubs 301 away.
+  "/oktoberfest-madrid-sol",
+  "/es/oktoberfest-madrid-sol",
+  "/de/oktoberfest-madrid-sol",
+  // Past NFL pages (Bengals–Falcons weekend, 6–8 Nov 2026): noindex, owner order 23 Nov 2026.
+  // The one permanent NFL page is /nfl-madrid (EN) and /es/nfl-madrid (ES).
+  "/nfl-fans-saturday-oconnells",
+  "/nfl-sunday-8-nov-oconnells",
+  "/evening-nfl-then-atleti-barca-this-door",
+  "/4-bars-one-fan-weekend",
+  "/news/before-after-bernabeu-nfl-sol",
+  "/news/nfl-meeting-point-sol",
+  "/news/where-to-watch-nfl-madrid-sol",
+  "/news/four-bars-fan-weekend-sol",
+  "/es/fin-de-semana-nfl-oconnells",
+  "/es/nfl-domingo-8-nov-oconnells",
+  "/es/nfl-noche-luego-atleti-barca-esta-puerta",
+  "/es/noticias/antes-despues-bernabeu-nfl-sol",
+  "/es/noticias/punto-encuentro-nfl-sol",
+  "/es/noticias/donde-ver-nfl-madrid-sol",
+  "/es/cuatro-bares-fin-de-semana",
+  "/es/noticias/cuatro-bares-finde-sol",
+]);
+
+function madridYmd(d: Date): string {
+  return new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Madrid" }).format(d);
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = getSiteUrl();
-  const now = new Date();
+  const today = madridYmd(new Date());
+  const lastmod = LASTMOD as Record<string, string>;
 
-  return ALL_CONTENT_PATHS.map((path) => ({
+  return ALL_CONTENT_PATHS.filter((path) => {
+    if (SITEMAP_EXCLUDE.has(path)) return false;
+    // Owner order 23 Nov 2026: played match pages leave the sitemap at build time.
+    if (isPlayedMatchPage(path)) return false;
+    const end = EVENT_LAST_DAY[path];
+    return !end || end >= today;
+  }).map((path) => ({
     url: path === "/" ? base : `${base}${path}`,
-    lastModified: now,
+    ...(newsAlternates(base, path) ? { alternates: newsAlternates(base, path) } : {}),
+    ...(homeAlternates(base, path) ? { alternates: homeAlternates(base, path) } : {}),
+    ...(lastmod[path] ? { lastModified: lastmod[path] } : {}),
     changeFrequency: path === "/" || path === "/es" ? "weekly" : "monthly",
     priority: path === "/" || path === "/es" ? 1 : path.includes("thursday") ? 0.9 : 0.7,
   }));

@@ -1,7 +1,15 @@
 "use client";
 
-import { useState } from "react";
-import { CONTACT_REASONS } from "@/lib/contact";
+import { useEffect, useRef, useState } from "react";
+import {
+  ATTRIBUTION_KEYS,
+  captureAttribution,
+} from "@/lib/attribution";
+import { trackEvent } from "@/components/TrackClicks";
+import {
+  buildContactSubject,
+  CONTACT_REASONS,
+} from "@/lib/contact";
 
 type Locale = "en" | "es";
 
@@ -9,16 +17,16 @@ const copy = {
   en: {
     name: "Name",
     email: "Email",
-    reason: "Reason for contact",
+    reason: "Reason",
     message: "Message",
     submit: "Send message",
     sending: "Sending…",
     ok: "Thanks — we’ve received your message and will get back to you as soon as possible.",
     fail: "We couldn’t send that just now. Please try again in a moment.",
-    unavailable:
-      "The contact form is being activated. Please try again later or call the pub.",
     privacy:
-      "We use your details only to reply to this enquiry. Full legal entity details will appear here once confirmed.",
+      "We use your name, email, reason and message only to reply to this enquiry. We also record the visit source/campaign data (utm, gclid, landing page, referrer) for measurement only.",
+    privacyHref: "/privacy",
+    privacyLink: "Privacy notice",
     required: "Please fill in all fields.",
   },
   es: {
@@ -30,54 +38,117 @@ const copy = {
     sending: "Enviando…",
     ok: "Gracias — hemos recibido tu mensaje y te responderemos lo antes posible.",
     fail: "No hemos podido enviarlo ahora. Inténtalo de nuevo en un momento.",
-    unavailable:
-      "El formulario se está activando. Prueba más tarde o llama al pub.",
     privacy:
-      "Usamos tus datos solo para responder a esta consulta. Los datos legales completos se añadirán aquí cuando estén confirmados.",
+      "Usamos tu nombre, email, motivo y mensaje solo para responder a esta consulta. También registramos los datos de origen/campaña de la visita (utm, gclid, página de entrada, referrer) solo para medición.",
+    privacyHref: "/es/privacy",
+    privacyLink: "Aviso de privacidad",
     required: "Completa todos los campos.",
   },
 } as const;
 
+const CONTACT_URL = "/api/contact";
+
 export function ContactForm({ locale = "en" }: { locale?: Locale }) {
   const t = copy[locale];
   const [status, setStatus] = useState<
-    "idle" | "sending" | "ok" | "fail" | "unavailable"
+    "idle" | "sending" | "ok" | "fail" | "invalid"
   >("idle");
+  const formRef = useRef<HTMLFormElement>(null);
+
+  // Fill the hidden attribution inputs from sessionStorage (DOM sync only).
+  useEffect(() => {
+    const attr = captureAttribution();
+    const form = formRef.current;
+    if (!form) return;
+    for (const k of ATTRIBUTION_KEYS) {
+      const el = form.elements.namedItem(k);
+      if (el instanceof HTMLInputElement) el.value = attr[k] || "";
+    }
+  }, []);
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
     const fd = new FormData(form);
-    const payload = {
-      name: String(fd.get("name") || ""),
-      email: String(fd.get("email") || ""),
-      reason: String(fd.get("reason") || ""),
-      message: String(fd.get("message") || ""),
-      company: String(fd.get("company") || ""),
-      locale,
-    };
-    if (
-      !payload.name.trim() ||
-      !payload.email.trim() ||
-      !payload.reason ||
-      payload.message.trim().length < 10
-    ) {
-      setStatus("fail");
+    const name = String(fd.get("name") || "").trim();
+    const email = String(fd.get("email") || "").trim();
+    const reason = String(fd.get("reason") || "");
+    const message = String(fd.get("message") || "").trim();
+    const company = String(fd.get("company") || "");
+    const honey = String(fd.get("_honey") || "");
+
+    // Honeypot: bots fill hidden fields — pretend success, do not send.
+    if (company.trim() !== "" || honey.trim() !== "") {
+      setStatus("ok");
+      form.reset();
       return;
     }
+
+    const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    if (
+      !name ||
+      !emailOk ||
+      !reason ||
+      message.length < 10 ||
+      !CONTACT_REASONS.some((r) => r.value === reason)
+    ) {
+      setStatus("invalid");
+      return;
+    }
+
     setStatus("sending");
+
+    const reasonLabel =
+      CONTACT_REASONS.find((r) => r.value === reason)?.[
+        locale === "es" ? "es" : "en"
+      ] || reason;
+    const subject = buildContactSubject(reason, name, locale);
+
+    const attribution: Record<string, string> = {};
+    for (const k of ATTRIBUTION_KEYS) {
+      attribution[k] = String(fd.get(k) || "").slice(0, 500);
+    }
+    const attributionText = ATTRIBUTION_KEYS.map(
+      (k) => `${k}: ${attribution[k] || "-"}`,
+    ).join("\n");
+
+    // Subject is rebuilt server-side (unique per submission); `reason` and
+    // `locale` let the server label it. `subject` kept for compatibility.
+    const payload: Record<string, string> = {
+      ...attribution,
+      subject,
+      reason,
+      locale,
+      _honey: honey,
+      from_name: "O'Connell St Madrid",
+      replyto: email,
+      name,
+      email,
+      message:
+        `Venue: O'Connell St\n` +
+        `Locale: ${locale}\n` +
+        `Reason: ${reasonLabel}\n` +
+        `Name: ${name}\n` +
+        `Reply-To (customer): ${email}\n\n` +
+        `${message}\n\n` +
+        `--- Attribution ---\n` +
+        attributionText,
+    };
+
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch(CONTACT_URL, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
         body: JSON.stringify(payload),
       });
-      if (res.status === 503) {
-        setStatus("unavailable");
-        return;
-      }
-      const data = (await res.json().catch(() => ({}))) as { ok?: boolean };
-      if (res.ok && data.ok) {
+      const data = (await res.json().catch(() => ({}))) as {
+        success?: boolean;
+      };
+      if (res.ok && data.success !== false) {
+        trackEvent("form_submit");
         setStatus("ok");
         form.reset();
         return;
@@ -89,14 +160,29 @@ export function ContactForm({ locale = "en" }: { locale?: Locale }) {
   }
 
   return (
-    <form onSubmit={onSubmit} className="mx-auto max-w-xl space-y-5" noValidate>
+    <form ref={formRef} onSubmit={onSubmit} className="mx-auto max-w-xl space-y-5" noValidate autoComplete="off">
       {/* Honeypot */}
       <div className="absolute -left-[9999px] opacity-0" aria-hidden="true">
         <label>
-          Company
+          {locale === "es" ? "Empresa" : "Company"}
           <input type="text" name="company" tabIndex={-1} autoComplete="off" />
         </label>
       </div>
+      {/* Web3Forms-style honeypot: hidden, not focusable, ignored by AT */}
+      <div style={{ display: "none" }} aria-hidden="true">
+        <input
+          type="text"
+          name="_honey"
+          tabIndex={-1}
+          autoComplete="off"
+          aria-hidden="true"
+          defaultValue=""
+        />
+      </div>
+
+      {ATTRIBUTION_KEYS.map((k) => (
+        <input key={k} type="hidden" name={k} defaultValue="" />
+      ))}
 
       <div>
         <label htmlFor="c-name" className="mb-1.5 block text-xs font-semibold uppercase tracking-[0.16em] text-gold">
@@ -105,6 +191,7 @@ export function ContactForm({ locale = "en" }: { locale?: Locale }) {
         <input
           id="c-name"
           name="name"
+          autoComplete="off"
           required
           maxLength={120}
           className="w-full border border-gold/30 bg-black/40 px-3 py-2.5 text-cream outline-none focus:border-gold"
@@ -119,6 +206,7 @@ export function ContactForm({ locale = "en" }: { locale?: Locale }) {
           id="c-email"
           name="email"
           type="email"
+          autoComplete="off"
           required
           maxLength={200}
           className="w-full border border-gold/30 bg-black/40 px-3 py-2.5 text-cream outline-none focus:border-gold"
@@ -154,6 +242,7 @@ export function ContactForm({ locale = "en" }: { locale?: Locale }) {
         <textarea
           id="c-message"
           name="message"
+          autoComplete="off"
           required
           rows={6}
           minLength={10}
@@ -162,7 +251,16 @@ export function ContactForm({ locale = "en" }: { locale?: Locale }) {
         />
       </div>
 
-      <p className="text-xs leading-relaxed text-cream/55">{t.privacy}</p>
+      <p className="text-xs leading-relaxed text-cream/55">
+        {t.privacy}{" "}
+        <a
+          href={locale === "es" ? "/es/privacy" : "/privacy"}
+          className="text-cream underline"
+        >
+          {locale === "es" ? "Privacidad" : "Privacy"}
+        </a>
+        .
+      </p>
 
       <button
         type="submit"
@@ -177,14 +275,14 @@ export function ContactForm({ locale = "en" }: { locale?: Locale }) {
           {t.ok}
         </p>
       ) : null}
+      {status === "invalid" ? (
+        <p className="text-sm text-cream-muted" role="alert">
+          {t.required}
+        </p>
+      ) : null}
       {status === "fail" ? (
         <p className="text-sm text-cream-muted" role="alert">
           {t.fail}
-        </p>
-      ) : null}
-      {status === "unavailable" ? (
-        <p className="text-sm text-cream-muted" role="alert">
-          {t.unavailable}
         </p>
       ) : null}
     </form>

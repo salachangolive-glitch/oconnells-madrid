@@ -1,107 +1,295 @@
 import Link from "next/link";
+import { WhatsOnEventsJsonLd } from "@/components/WhatsOnEventsJsonLd";
+import { DirectionsButton, HowToGetHere } from "@/components/HowToGetHere";
+import { PostMatchBanner } from "@/components/PostMatchBanner";
+import { RugbyFinalsWeekendBanner } from "@/components/RugbyFinalsWeekendBanner";
+import { RugbyHomeBanner } from "@/components/RugbyHomeBanner";
+import { NflSunday15NovWhatsOn } from "@/components/NflSunday15NovWhatsOn";
+import { FixtureList } from "@/components/FixtureList";
 import { PageShell } from "@/components/PageShell";
 import { PageHero, Section } from "@/components/Prose";
-import {
-  formatFixtureDay,
-  getTonightFixtures,
-  getUpcomingFixtures,
-  RECURRING,
-} from "@/lib/fixtures";
 import { buildMetadata } from "@/lib/seo";
-import { MAPS_URL, SITE_NAME } from "@/lib/venue";
+import { agendaBuildNow, madridTodayYmd, RECURRING } from "@/lib/fixtures";
+import { ADDRESS, GBP_MAPS_CID_URL, SITE_NAME } from "@/lib/venue";
+import { sat28Nov14NoticeActive } from "@/lib/hours-exceptions";
 
 export const metadata = buildMetadata({
-  title: "Partidos — fútbol y jueves chupitos a 1 €",
+  title: "Agenda — Deportes en directo | O'Connell St Madrid",
   description:
-    "Partidos en O'Connell St Madrid cerca de Sol: fútbol confirmado, Premier League / Champions League / LaLiga en pantallas, jueves chupitos a 1 €.",
+    "Agenda de O'Connell St Madrid: deportes en directo confirmados con hora de Madrid. Fútbol primero, y baloncesto, rugby, Fórmula 1, tenis y más cuando aparecen como Confirmado.",
   path: "/es/whats-on",
   locale: "es",
 });
 
 export default function EsWhatsOnPage() {
-  const tonight = getTonightFixtures();
-  const upcoming = getUpcomingFixtures();
-
   return (
     <PageShell locale="es" altLangHref="/whats-on">
       <PageHero
-        eyebrow="Partidos"
-        title={`Esta semana en ${SITE_NAME}`}
-        lead="Partidos confirmados cuando los tenemos, y las noches fijas del pub."
+        eyebrow="Agenda"
+        title={`Próximos 7 días en ${SITE_NAME}`}
+        lead="Deporte en directo en nuestro pub irlandés cerca de Puerta del Sol. Todos los horarios están indicados en hora de Madrid. Los eventos marcados como ‘Confirmado’ tienen prevista su emisión en nuestras pantallas."
       />
+      <p className="mb-8">
+        <DirectionsButton locale="es" />
+      </p>
 
-      <Section title="Hoy">
-        {tonight.length > 0 ? (
-          <ul className="space-y-6">
-            {tonight.map((f) => (
-              <li key={f.id}>
-                <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-gold">
-                  {f.competition}
-                </p>
-                <p className="mt-1 font-serif text-2xl font-bold text-cream">
-                  {f.homeTeam} vs {f.awayTeam}
-                </p>
-                <p className="mt-2 text-cream-muted">
-                  {formatFixtureDay(f.date, "es")}
-                  {f.kickoffMadrid ? ` · ${f.kickoffMadrid} hora Madrid` : null}
-                </p>
-                <p className="mt-4">
-                  <a
-                    href={MAPS_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm text-gold hover:text-cream"
-                  >
-                    Cómo llegar →
-                  </a>
-                </p>
-              </li>
-            ))}
-          </ul>
-        ) : (
-          <p>
-            Aún no hay partido fechado para hoy.{" "}
-            <Link href="/es/contact" className="text-gold underline">
-              Escríbenos
-            </Link>{" "}
-            si necesitas confirmar un partido concreto.
-          </p>
-        )}
+      <PostMatchBanner locale="es" />
+      {/* Nations Championship sáb 21 nov: bloque destacado, se oculta solo después del 21 nov (Madrid). */}
+      <RugbyHomeBanner locale="es" />
+      <RugbyFinalsWeekendBanner locale="es" />
+      {/* España–Chile rugby (ferugby.es 31 ago 2026: sáb 14 nov 17:00 h, Butarque). */}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-14" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          World Rugby Nations Cup: España–Chile, sábado 14 de noviembre, 17:00 (Estadio Ontime Butarque, Leganés), en directo cerca de Sol. Aficionados chilenos: punto de encuentro junto a Sol.
+        </p>
+      ) : null}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-14" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          Nations Championship de rugby: Irlanda–Fiyi, sábado 14 de noviembre, 21:10 hora de Madrid (Aviva Stadium, Dublín), en directo cerca de Sol.
+        </p>
+      ) : null}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-10" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          Bryan Adams «Roll with the Punches» en el Movistar Arena, martes 10 de noviembre, 20:30: queda en O&apos;Connell St, cerca de Sol, antes o después del concierto.
+        </p>
+      ) : null}
+      {/* Getafe–Brighton + Real Madrid–Crvena Zvezda, artículos para la afición visitante (orden del dueño 4 nov 2026 vía DG; uefa.com / euroleague.net): build-time date gates. */}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-05" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          UEFA Conference League: Getafe–Brighton, jueves 5 de noviembre, 21:00 (Coliseum, Getafe), en directo en pantalla grande cerca de Sol. Abrimos a las 18:00.{" "}
+          <Link href="/es/noticias/getafe-brighton-jueves-sol" className="text-gold underline">
+            Getafe–Brighton en Sol
+          </Link>
+        </p>
+      ) : null}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-12" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          Euroliga: Real Madrid–Crvena Zvezda, jueves 12 de noviembre, 21:00 (Movistar Arena), en directo cerca de Sol.{" "}
+          <Link href="/es/noticias/real-madrid-crvena-zvezda-jueves-sol" className="text-gold underline">
+            Real Madrid–Crvena Zvezda en Sol
+          </Link>
+        </p>
+      ) : null}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-13" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          Euroliga: Panathinaikos–FC Barcelona, viernes 13 de noviembre, 20:15, en directo cerca de Sol.
+        </p>
+      ) : null}
+      {/* Serbia–Alemania, Liga de Naciones (match.uefa.com id 2047887, 19:45Z = 20:45 CET; DFB 20:45 +0100; orden dueño 12 nov 14:58): puerta por fecha de build. */}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-13" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          Liga de Naciones: Serbia–Alemania, viernes 13 de noviembre, 20:45 (Belgrado), en directo cerca de Sol. Aficionados alemanes y serbios en Madrid, junto a Sol.
+        </p>
+      ) : null}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-15" ? (
+        <NflSunday15NovWhatsOn locale="es" />
+      ) : null}
+      {/* España–Inglaterra, Liga de Naciones; Radar file verificado UEFA; en La 1. Domingo 14:00–03:00. */}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-15" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          Liga de Naciones: España–Inglaterra, domingo 15 de noviembre, 20:45 (Riyadh Air Metropolitano), en La 1, en directo en pantalla grande cerca de Sol. Los domingos desde las 14:00, abierto hasta las 03:00. Aficionados ingleses: punto de encuentro junto a Sol. Sin reservas: por orden de llegada.{" "}
+          <Link href="/es/noticias/espana-inglaterra-domingo-sol" className="text-gold underline">
+            España–Inglaterra: domingo de fútbol en Sol
+          </Link>
+        </p>
+      ) : null}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-22" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          Premier League: Liverpool–Manchester United, domingo 22 de noviembre, 17:30 (Anfield), en directo junto a Sol. Los domingos abrimos a las 14:00.{" "}
+          <Link href="/es/noticias/liverpool-manchester-united-domingo-sol" className="text-gold underline">
+            Liverpool–Man United: domingo de Premier junto a Sol
+          </Link>
+        </p>
+      ) : null}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-24" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          <strong className="text-cream">Real Madrid–PSV, martes 24 de noviembre, 21:00</strong> (Bernabéu). Punto de encuentro en O&apos;Connell St, Espoz y Mina 7 — a menos de un minuto de Sol. Entrada por orden de llegada.{" "}
+          <Link href="/es/noticias/real-madrid-psv-martes-sol" className="text-gold underline">
+            Guía Real Madrid–PSV
+          </Link>
+        </p>
+      ) : null}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-23" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          Tokio Hotel en el Palacio Vistalegre, lunes 23 de noviembre, su única fecha en España: queda en O&apos;Connell St, cerca de Sol, antes o después del concierto.{" "}
+          <Link href="/news/tokio-hotel-madrid-gig-night-sol" className="text-gold underline">
+            Noche de concierto Tokio Hotel junto a Sol
+          </Link>
+        </p>
+      ) : null}
+      {/* Atlético–Real Betis, LaLiga J15 (laliga.com 2026-12-06T20:00Z = 21:00 Madrid, Metropolitano): build-time date gate. */}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-12-06" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          <strong className="text-cream">LaLiga: Atlético de Madrid–Real Betis, domingo 6 de diciembre, 21:00</strong> (Riyadh Air Metropolitano). Béticos que suben desde Sevilla: quedad junto a Sol antes del partido y volved después del pitido final — en directo en nuestras pantallas en Dubliners, O&apos;Connell&apos;s, O&apos;Reilly&apos;s y Four Corner. Los domingos abrimos desde las 14:00. Por orden de llegada.{" "}
+          <a
+            href={GBP_MAPS_CID_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-event="directions"
+            className="text-gold underline"
+          >
+            Cómo llegar
+          </a>
+        </p>
+      ) : null}
+      {/* Barcelona–Man City (mar 8 dic) + Arsenal–Real Madrid (mié 9 dic), Champions fase liga: match.uefa.com/v5 ids 2049644 / 2049653, ambos 20:00Z = 21:00 Madrid. Build-time date gate. */}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-12-09" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          <strong className="text-cream">Champions, en directo en nuestras pantallas:</strong> Barcelona–Manchester City, martes 8 de diciembre, 21:00 (Camp Nou), y Arsenal–Real Madrid, miércoles 9 de diciembre, 21:00 (Arsenal Stadium). Punto de encuentro junto a Sol antes y después — por orden de llegada.{" "}
+          <a
+            href={GBP_MAPS_CID_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-event="directions"
+            className="text-gold underline"
+          >
+            Cómo llegar
+          </a>
+        </p>
+      ) : null}
+      {/* Atlético–Valencia 14:00 + Real Madrid–Osasuna 21:00, LaLiga J16 (laliga.com 13:00Z / 20:00Z): build-time date gate. Apertura dominical 14:00 = saque del Atlético. */}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-12-13" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          <strong className="text-cream">Doble de LaLiga, domingo 13 de diciembre:</strong> Atlético de Madrid–Valencia a las 14:00 (Riyadh Air Metropolitano) y Real Madrid–Osasuna a las 21:00 (Bernabéu), los dos en directo en nuestras pantallas en Dubliners, O&apos;Connell&apos;s, O&apos;Reilly&apos;s y Four Corner. Los domingos abrimos a las 14:00, la misma hora del saque del Atlético, así que venid a la apertura.{" "}
+          <a
+            href={GBP_MAPS_CID_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-event="directions"
+            className="text-gold underline"
+          >
+            Cómo llegar
+          </a>
+        </p>
+      ) : null}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-12-15" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          Euroliga: Real Madrid–Bayern Múnich, martes 15 de diciembre, 20:45 (Movistar Arena). Afición del Bayern: punto de encuentro junto a Sol — en directo en nuestras pantallas en los tres pubs irlandeses.{" "}
+          <Link href="/news/movistar-arena-bayern-fans-bar" hrefLang="en" className="text-gold underline">
+            Movistar Arena Bayern Fans Bar (inglés)
+          </Link>
+          {" · "}
+          <Link href="/de/real-madrid-bayern-basketball-treffpunkt-sol" hrefLang="de" className="text-gold underline">
+            Bayern Fans Madrid Treffpunkt (alemán)
+          </Link>
+          {" · "}
+          <Link href="/news/real-madrid-bayern-sol-goya-and-back" hrefLang="en" className="text-gold underline">
+            De Sol al Movistar Arena y vuelta (inglés)
+          </Link>
+          {" · "}
+          <Link href="/de/real-madrid-bayern-hin-und-zurueck-sol-goya" hrefLang="de" className="text-gold underline">
+            Hin und zurück: Sol – Goya (alemán)
+          </Link>
+        </p>
+      ) : null}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-25" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          <strong className="text-cream">Atlético de Madrid–Viking FK, miércoles 25 de noviembre, 21:00</strong> (Riyadh Air Metropolitano). Champions esta noche — punto de encuentro en O&apos;Connell St, Espoz y Mina 7, a menos de un minuto de Sol. Entrada por orden de llegada. No los Minnesota Vikings de la NFL.{" "}
+          <Link href="/es/noticias/atletico-viking-miercoles-sol" className="text-gold underline">
+            Guía Atlético–Viking FK
+          </Link>
+        </p>
+      ) : null}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-25" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          Euroliga: Real Madrid–Žalgiris, miércoles 25 de noviembre, 20:45 (Movistar Arena). Afición Žalgiris: punto de encuentro junto a Sol antes o después.{" "}
+          <Link href="/news/real-madrid-zalgiris-wednesday-night-sol" className="text-gold underline">
+            Real Madrid–Žalgiris: miércoles por la noche junto a Sol
+          </Link>
+          {" · "}
+          <Link href="/es/noticias/despues-real-madrid-zalgiris-goya-a-sol" className="text-gold underline">
+            Después del partido: de Goya a Sol
+          </Link>
+        </p>
+      ) : null}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-29" &&
+      madridTodayYmd(agendaBuildNow()) >= "2026-11-22" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          Finales del Nations Championship en Twickenham, del viernes 27 al domingo 29 de noviembre (hora de Madrid): seis partidos en directo en nuestras pantallas en O&apos;Connell St, {ADDRESS.street} — punto de encuentro antes y después — Italia–Fiyi 17:40 vie, Irlanda–Australia 21:10 vie, Gales–Japón 14:10 sáb, Inglaterra–Nueva Zelanda 17:40 sáb, Escocia–Argentina 14:10 dom, <strong className="text-cream">final Francia–Sudáfrica 17:40 dom</strong>. Sábado 28 de noviembre: apertura excepcional a las 14:00.{" "}
+          <Link
+            href="/es/noticias/nations-championship-finals-fin-de-semana-sol"
+            className="text-gold underline"
+          >
+            Guía del fin de semana de finales junto a Sol
+          </Link>
+          {" · "}
+          <Link href="/es/noticias/finales-nations-championship-plan-finde-sol" className="text-gold underline">
+            Plan del finde: a qué hora llegar
+          </Link>
+          {" · "}
+          <Link href="/es/noticias/irlanda-australia-rugby-viernes-noche-sol" className="text-gold underline">
+            Irlanda–Australia: viernes noche
+          </Link>
+          {" · "}
+          <Link href="/es/noticias/final-rugby-francia-sudafrica-domingo-sol" className="text-gold underline">
+            La final: Francia–Sudáfrica
+          </Link>
+          {" · "}
+          <Link href="/es/noticias/escocia-argentina-rugby-domingo-sol" className="text-gold underline">
+            Escocia–Argentina: domingo 14:10
+          </Link>
+        </p>
+      ) : null}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-28" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          LaLiga: Real Madrid–Alavés, sábado 28 de noviembre, 21:00 (Bernabéu), en directo junto a Sol. Punto de encuentro junto a Sol antes o después.{" "}
+          {sat28Nov14NoticeActive()
+            ? "Sábado 28 de noviembre abrimos excepcionalmente a las 14:00."
+            : "Los sábados abrimos a las 15:00."}{" "}
+          <Link href="/news/real-madrid-alaves-saturday-night-sol" className="text-gold underline">
+            Real Madrid–Alavés: sábado por la noche junto a Sol
+          </Link>
+        </p>
+      ) : null}
+      {madridTodayYmd(agendaBuildNow()) <= "2026-11-29" ? (
+        <p className="mb-6 text-sm text-cream-muted sm:text-base">
+          Premier League: Arsenal–Manchester City, domingo 29 de noviembre, 17:30 (Emirates Stadium), en directo junto a Sol. Los domingos abrimos a las 14:00.{" "}
+          <Link href="/es/noticias/arsenal-manchester-city-domingo-sol" className="text-gold underline">
+            Arsenal–Man City: domingo de Premier junto a Sol
+          </Link>
+        </p>
+      ) : null}
+      <p className="mb-6 text-sm text-cream-muted sm:text-base">
+        Cómo funciona la etiqueta Confirmado en esta lista — solo hora de Madrid;
+        pregunta en la barra:{" "}
+        <Link
+          href="/es/como-marca-confirmado-la-agenda-esta-puerta"
+          className="text-gold underline"
+        >
+          cómo marca Confirmado la Agenda en esta puerta
+        </Link>
+        .
+      </p>
+      <WhatsOnEventsJsonLd locale="es" />
+      <FixtureList locale="es" />
+      <HowToGetHere locale="es" />
+
+      <Section title="Deportes en directo en O'Connell St">
+        <p>
+          O&apos;Connell St es un pub irlandés junto a Puerta del Sol — Espoz y
+          Mina 7. Retransmitimos grandes eventos deportivos en nuestras
+          pantallas: fútbol, NFL, baloncesto, rugby, Fórmula 1,
+          tenis y más. Consulta Hoy y los próximos 7 días, o pregunta en
+          la barra si buscas un evento concreto.
+        </p>
+        <p>
+          <Link href="/es/nfl-madrid" className="text-gold underline">
+            NFL en Madrid
+          </Link>
+        </p>
       </Section>
 
-      {upcoming.length > tonight.length ? (
-        <Section title="Próximamente">
-          <ul className="space-y-4">
-            {upcoming
-              .filter((f) => !tonight.some((t) => t.id === f.id))
-              .map((f) => (
-                <li key={f.id}>
-                  <strong className="text-cream">{f.competition}</strong>
-                  {" — "}
-                  {f.homeTeam} vs {f.awayTeam}
-                  {" · "}
-                  {formatFixtureDay(f.date, "es")}
-                  {f.kickoffMadrid ? ` · ${f.kickoffMadrid}` : null}
-                </li>
-              ))}
-          </ul>
-        </Section>
-      ) : null}
 
-      <Section title="Cada semana">
-        <ul className="list-disc space-y-2 pl-5">
-          <li>{RECURRING.football.es}</li>
-          <li>
-            {RECURRING.thursdayShots.es} —{" "}
-            <Link
-              href="/es/thursday-1-euro-shots"
-              className="text-gold underline"
-            >
-              Jueves chupitos a 1 €
-            </Link>
-          </li>
-          <li>{RECURRING.wednesdayShots.es}</li>
-        </ul>
+      <Section title="Chupitos a 1 € los jueves">
+        <p>
+          {RECURRING.thursdayShots.es}{" "}
+          <Link
+            href="/es/thursday-1-euro-shots"
+            className="text-gold underline"
+          >
+            Chupitos a 1 € los jueves
+          </Link>
+        </p>
       </Section>
     </PageShell>
   );
